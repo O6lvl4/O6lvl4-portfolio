@@ -6,8 +6,8 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 
 export const TEXT = {
   ja: {
-    role: "言語と、その周りの道具をつくる",
-    lead: "静的型付けの言語 Almide を書き、その言語で道具を書いています。",
+    role: "開発の道具を、言語からつくる。",
+    lead: "言語設計・コンパイラ・開発ツール・AIの実行基盤",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公開リポジトリ ${n} 件`,
     description: (n) => `O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ ${n} 件。言語 Almide とその周りの道具、エージェント、LLM の土台。`,
@@ -22,11 +22,11 @@ export const TEXT = {
       skip: "本文へ", panel: "索引", status: "更新中",
       families: "系統", open: "開く", allFamilies: "系統の一覧へ",
       catalogue: "すべて", groups: "org", more: "順に見る", showMore: "残りを見る",
-      about: "これまで", work: "仕事", orgs: "org", stack: "言語ごとのリポジトリ", history: "年表",
+      about: "これまで", work: "つくったもの", orgs: "org", stack: "言語ごとのリポジトリ", history: "年表",
       byYear: "年ごとのコミット", byOrg: "org ごとのコミット", breakdown: "何を書いてきたか",
-      allWorks: "全部を一覧で見る", home: "先頭の頁へ",
+      allWorks: "全部を一覧で見る", home: "プロフィールへ",
       briefLead: "系統ごとに、いちばん手を入れているものを一つずつ。残りは一覧で見られます。",
-      listLead: "公開リポジトリの全件。系統と言語で絞り、更新日・コミット数・言語・名前で並べ替えられます。",
+      listLead: "言語をつくり、その上に道具を重ねる。開発ツールからAIの基盤、小さな実験まで、これまでにつくってきたものをまとめました。気になる分野からご覧ください。",
     },
     stats: { commits: "コミット", first: "初回", tag: "版", stars: "星" },
     links: { repo: "リポジトリ", site: "サイト" },
@@ -49,23 +49,62 @@ export const TEXT = {
       "Aid-On": "Aid-On での仕事。LLM を使うための土台（流量制御、統一インターフェース、記憶、ストリーム）と AITuber の部品。",
     },
     about: () => [
-      "静的型付けの言語 Almide をつくっています。言語本体は Rust で、仕様・文法・エディタ支援・実行環境を別のリポジトリに分けて置いています。",
-      "その言語で道具を書きます。コードを構造で読む hew、構文木をつくる gramide、コードの質を測る codopsy、エージェントを閉じ込めて走らせる porta。どれも手元の作業で毎日使うものから始まっています。",
+      "静的型付け言語 Almide を設計・開発しています。Rustによる言語本体の実装から、標準ライブラリ、エディタ支援、実行環境まで。言語を使える形にするところまで取り組んでいます。",
+      "つくった言語を、自分の開発にも使います。構文木を扱うgramide、コードを構造で読むhew、エージェントを隔離して動かすporta。実際に使う道具をつくりながら、言語とツールの両方を磨いています。",
     ],
+    profile: {
+      "role": "言語と開発ツールの設計・実装",
+      "highlights": [
+        {
+          "value": "Rust",
+          "label": "コンパイラ実装"
+        },
+        {
+          "value": "Almide",
+          "label": "言語・ツール開発"
+        },
+        {
+          "value": "AI",
+          "label": "エージェント基盤"
+        }
+      ],
+      "rows": [
+        {
+          "key": "中心となる開発",
+          "value": "Almide — 静的型付け言語"
+        },
+        {
+          "key": "取り組む範囲",
+          "value": "言語設計から、日々使う道具まで"
+        },
+        {
+          "key": "コードを扱う",
+          "value": "gramide / hew / codopsy"
+        },
+        {
+          "key": "実行を支える",
+          "value": "porta / LLMの基盤"
+        },
+        {
+          "key": "設計と実装",
+          "value": "仕様・文法・標準ライブラリ・実行環境"
+        }
+      ]
+    },
     aboutPage: {
-      nav: "この頁について",
-      description: "この頁の作り方と、収録の範囲。",
-      sections: (total) => [
-        { heading: "名前", text: '名は、雄弁と文字の神オグマ（Ogma）に由来します。石に刻んだ切り込みで綴るオガム文字を作った神です。頁の末尾に置いたのは、そのオガムで綴った <span class="cut">᚛ᚑᚌᚋᚐ᚜</span>（OGMA）で、碑文と同じく羽根印で前後を閉じています。節の見出しの刻みは、オガムが1本から5本で一字を数えるのに倣いました。' },
-        { heading: "収録", text: `O6lvl4・Aid-On・almide・almide-graphics・almide-ai・almd-mc の公開リポジトリ ${total} 件（フォークを除く）。非公開のものは載せていません。` },
-        { heading: "図版", text: "公開サイトのあるものはその画面、手元に入っているコマンドはその出力、それ以外は README の要約（何ができるか）です。要約は README の記述だけから作っています。" },
+      nav: "開発で取り組んでいること",
+      description: "言語・開発ツール・AIの実行基盤。",
+      sections: () => [
+        { heading: "言語から道具まで", text: "言語の実装から、その言語で使う道具までをつくっています。Almideを中心に、構文解析・コードの読み書き・エージェントの実行環境を開発しています。" },
+        { heading: "コードを読む道具", text: "Almideで、構文木をつくるgramideと、関数や型を指定してコードを読めるhewを開発しています。コーディングエージェントが必要なコードを取り出すための道具です。" },
+        { heading: "AIを動かす土台", text: "エージェントが道具を使うための接続や実行制御、LLMを使うための流量制御・記憶・ストリーム処理など、アプリケーションを支える部分もつくっています。" },
       ],
       footnote: "数値（コミット数・初回・言語）は手元の clone から測ったものです。コミットは著者日で数え、リポジトリ間で共有している履歴は一度だけ数えています（マージも1件として含みます）。",
     },
   },
   en: {
-    role: "I build a language, and the tools around it",
-    lead: "I write Almide, a statically-typed language, and write my own tools in it.",
+    role: "Building developer tools, from the language up.",
+    lead: "Language design · Compilers · Developer tools · AI infrastructure",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `${n} public repositories`,
     description: (n) => `${n} public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs.`,
@@ -82,9 +121,9 @@ export const TEXT = {
       catalogue: "All", groups: "Orgs", more: "See them one at a time", showMore: "Show the rest",
       about: "About", work: "Work", orgs: "Org", stack: "Repositories by language", history: "Timeline",
       byYear: "Commits by year", byOrg: "Commits by org", breakdown: "What I have written",
-      allWorks: "See the whole list", home: "Front page",
+      allWorks: "See the whole list", home: "Profile",
       briefLead: "One from each family, the one most worked on. The rest are in the list.",
-      listLead: "Every public repository. Narrow by family or language, order by date, commits, language or name.",
+      listLead: "A language, the tools built on it, and the experiments along the way. Explore my work in developer tools, AI infrastructure and more, starting with a field that interests you.",
     },
     stats: { commits: "Commits", first: "Started", tag: "Release", stars: "Stars" },
     links: { repo: "Repository", site: "Site" },
@@ -107,23 +146,62 @@ export const TEXT = {
       "Aid-On": "Work at Aid-On: groundwork for using LLMs (rate limiting, one interface, memory, streams) and the parts of an AITuber.",
     },
     about: () => [
-      "I build Almide, a statically-typed language. The compiler is written in Rust; its specification, grammar, editor support and runtimes each live in their own repository.",
-      "Then I write my tools in it: hew reads code by structure, gramide builds syntax trees, codopsy measures code quality, porta runs agents inside a sandbox. Each one started as something I needed that day.",
+      "I design and develop Almide, a statically typed language. My work spans the implementation in Rust, the standard library, editor support and runtimes: the pieces that make a language usable.",
+      "I use that language in my own development: gramide for syntax trees, hew for reading code by structure, and porta for running agents in isolation. Building tools I use helps me refine both the language and its tools.",
     ],
+    profile: {
+      "role": "Language & developer tooling",
+      "highlights": [
+        {
+          "value": "Rust",
+          "label": "Compiler implementation"
+        },
+        {
+          "value": "Almide",
+          "label": "Language & tools"
+        },
+        {
+          "value": "AI",
+          "label": "Agent infrastructure"
+        }
+      ],
+      "rows": [
+        {
+          "key": "Core project",
+          "value": "Almide — a statically typed language"
+        },
+        {
+          "key": "Scope",
+          "value": "From language design to everyday tools"
+        },
+        {
+          "key": "Code tooling",
+          "value": "gramide / hew / codopsy"
+        },
+        {
+          "key": "Execution",
+          "value": "porta / LLM infrastructure"
+        },
+        {
+          "key": "Design & build",
+          "value": "Specification, grammar, library, runtimes"
+        }
+      ]
+    },
     aboutPage: {
-      nav: "About this page",
-      description: "How this page is built, and what it covers.",
-      sections: (total) => [
-        { heading: "The name", text: 'The name comes from Ogma, the god of eloquence and writing, credited with ogham — an alphabet spelled as notches cut along a stem. The mark that closes the page is that name cut in ogham, <span class="cut">᚛ᚑᚌᚋᚐ᚜</span> (OGMA), between the feather marks an inscription opens and closes with; the notches that open each section count from one to five, the way ogham counts a letter.' },
-        { heading: "Covers", text: `${total} public repositories under O6lvl4, Aid-On, almide, almide-graphics, almide-ai and almd-mc, forks excluded. Nothing private is shown.` },
-        { heading: "Plates", text: "Projects with a site of their own show that site as it renders; projects whose command is installed here show its real output; the rest show a summary of what their README says they do, taken only from the README." },
+      nav: "What I work on",
+      description: "Languages, developer tools and infrastructure for AI.",
+      sections: () => [
+        { heading: "From language to tools", text: "I build both a language and the tools used with it. Around Almide, I develop syntax analysis, tools for reading and editing code, and agent runtimes." },
+        { heading: "Tools for reading code", text: "In Almide, I build gramide for constructing syntax trees and hew for reading code by named functions and types. These tools help coding agents retrieve the code they need." },
+        { heading: "Infrastructure for AI", text: "I also build the foundations applications rely on: tool connections and execution controls for agents, and rate limiting, memory and stream processing for LLMs." },
       ],
       footnote: "The figures — commits, first commit, languages — are measured from the clones. Commits are counted by author date, history shared between repositories is counted once, and a merge counts as one commit.",
     },
   },
   zh: {
-    role: "做一门语言，以及它周围的工具",
-    lead: "我写静态类型语言 Almide，并用它写自己的工具。",
+    role: "从语言开始，构建开发工具。",
+    lead: "语言设计 · 编译器 · 开发工具 · AI运行基础设施",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公开仓库 ${n} 个`,
     description: (n) => `O6lvl4、Aid-On、almide 与 almide-* 组织下的 ${n} 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。`,
@@ -140,9 +218,9 @@ export const TEXT = {
       catalogue: "全部", groups: "组织", more: "逐一浏览", showMore: "显示其余",
       about: "关于", work: "作品", orgs: "org", stack: "各语言的仓库数", history: "年表",
       byYear: "各年提交", byOrg: "各 org 的提交", breakdown: "写过些什么",
-      allWorks: "查看完整列表", home: "回到首页",
+      allWorks: "查看完整列表", home: "个人介绍",
       briefLead: "每个系列各取一个：最常动手的那个。其余都在列表里。",
-      listLead: "全部公开仓库。可按系列与语言筛选，按更新日期、提交数、语言或名称排序。",
+      listLead: "创造语言，再用它构建工具。从开发工具、AI基础设施到小型实验，这里汇集了我一路做过的项目。从感兴趣的领域开始浏览吧。",
     },
     stats: { commits: "提交", first: "首次", tag: "版本", stars: "星标" },
     links: { repo: "仓库", site: "站点" },
@@ -165,16 +243,55 @@ export const TEXT = {
       "Aid-On": "在 Aid-On 的工作：使用 LLM 的基础设施（限流、统一接口、记忆、流）与 AITuber 的零件。",
     },
     about: () => [
-      "我在做静态类型语言 Almide。编译器用 Rust 写，规范、语法、编辑器支持与运行时各自放在独立的仓库。",
-      "然后用它写工具：按结构读代码的 hew、构建语法树的 gramide、衡量代码质量的 codopsy、把智能体关进沙箱运行的 porta。每一个都从当天需要的东西开始。",
+      "我设计并开发静态类型语言Almide。从用Rust实现语言本体，到标准库、编辑器支持与运行时，构建让语言真正可用的各个部分。",
+      "也把这门语言用于自己的开发：处理语法树的gramide、按结构读取代码的hew，以及隔离运行智能体的porta。在构建实际使用的工具时，持续打磨语言与工具。",
     ],
+    profile: {
+      "role": "语言与开发工具的设计及实现",
+      "highlights": [
+        {
+          "value": "Rust",
+          "label": "编译器实现"
+        },
+        {
+          "value": "Almide",
+          "label": "语言与工具"
+        },
+        {
+          "value": "AI",
+          "label": "智能体基础设施"
+        }
+      ],
+      "rows": [
+        {
+          "key": "核心项目",
+          "value": "Almide — 静态类型语言"
+        },
+        {
+          "key": "开发范围",
+          "value": "从语言设计到日常工具"
+        },
+        {
+          "key": "代码工具",
+          "value": "gramide / hew / codopsy"
+        },
+        {
+          "key": "执行支持",
+          "value": "porta / LLM基础设施"
+        },
+        {
+          "key": "设计与实现",
+          "value": "规范、语法、标准库、运行时"
+        }
+      ]
+    },
     aboutPage: {
-      nav: "关于本页",
-      description: "本页的做法与收录范围。",
-      sections: (total) => [
-        { heading: "名字", text: '名字取自雄辩与文字之神奥格玛（Ogma），相传欧甘文字由他所创——以刻在竖线上的刻痕拼写。页面末尾的那个记号就是用欧甘文刻的 <span class="cut">᚛ᚑᚌᚋᚐ᚜</span>（OGMA），两端以碑文起止的羽状符号收束；每节标题前的刻痕以一至五道计数，与欧甘记一个字母的方式相同。' },
-        { heading: "收录", text: `O6lvl4、Aid-On、almide、almide-graphics、almide-ai、almd-mc 的 ${total} 个公开仓库（不含 fork）。不公开的仓库不在此列。` },
-        { heading: "图版", text: "有独立站点的，用站点画面；本机装有命令的，用命令的真实输出；其余用 README 的摘要（能做什么）。摘要只依据 README。" },
+      nav: "开发方向",
+      description: "语言、开发工具与AI基础设施。",
+      sections: () => [
+        { heading: "从语言到工具", text: "既开发语言，也开发使用这门语言的工具。围绕Almide，构建语法分析、代码读写工具与智能体运行环境。" },
+        { heading: "阅读代码的工具", text: "用Almide开发构建语法树的gramide，以及按函数和类型名称读取代码的hew。这些工具帮助编程智能体提取所需的代码。" },
+        { heading: "AI基础设施", text: "也开发支撑应用的基础部分：智能体的工具连接与执行控制，以及LLM的限流、记忆和流式处理。" },
       ],
       footnote: "提交数、首次提交、语言等数字，均由本地克隆测得。提交按作者日期计数，仓库之间共享的历史只计一次，合并提交计为一次。",
     },

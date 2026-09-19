@@ -13,7 +13,7 @@
   "nameEn": "PUBLIC WORK",
   "life": "265 repos",
   "avatar": "assets/avatar.png",
-  "role": "I build a language, and the tools around it",
+  "role": "Building developer tools, from the language up.",
   "ogham": {
    "letters": "᚛ᚑᚌᚋᚐ᚜",
    "reads": "ogma"
@@ -92,9 +92,9 @@
   "byOrg": "Commits by org",
   "breakdown": "What I have written",
   "allWorks": "See the whole list",
-  "home": "Front page",
+  "home": "Profile",
   "briefLead": "One from each family, the one most worked on. The rest are in the list.",
-  "listLead": "Every public repository. Narrow by family or language, order by date, commits, language or name."
+  "listLead": "A language, the tools built on it, and the experiments along the way. Explore my work in developer tools, AI infrastructure and more, starting with a field that interests you."
  },
  "index": {
   "style": "list",
@@ -102,14 +102,14 @@
  },
  "home": {
   "kicker": "265 public repositories",
-  "lead": "I write Almide, a statically-typed language, and write my own tools in it.",
+  "lead": "Language design · Compilers · Developer tools · AI infrastructure",
   "note": "265 public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.",
   "description": "265 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs."
  },
  "landing": {
   "about": [
-   "I build Almide, a statically-typed language. The compiler is written in Rust; its specification, grammar, editor support and runtimes each live in their own repository.",
-   "Then I write my tools in it: hew reads code by structure, gramide builds syntax trees, codopsy measures code quality, porta runs agents inside a sandbox. Each one started as something I needed that day."
+   "I design and develop Almide, a statically typed language. My work spans the implementation in Rust, the standard library, editor support and runtimes: the pieces that make a language usable.",
+   "I use that language in my own development: gramide for syntax trees, hew for reading code by structure, and porta for running agents in isolation. Building tools I use helps me refine both the language and its tools."
   ],
   "stack": [
    {
@@ -10208,33 +10208,33 @@
  ],
  "about": {
   "id": "about",
-  "nav": "About this page",
-  "description": "How this page is built, and what it covers.",
+  "nav": "What I work on",
+  "description": "Languages, developer tools and infrastructure for AI.",
   "sections": [
    {
-    "heading": "The name",
+    "heading": "From language to tools",
     "blocks": [
      {
       "kind": "p",
-      "html": "The name comes from Ogma, the god of eloquence and writing, credited with ogham — an alphabet spelled as notches cut along a stem. The mark that closes the page is that name cut in ogham, <span class=\"cut\">᚛ᚑᚌᚋᚐ᚜</span> (OGMA), between the feather marks an inscription opens and closes with; the notches that open each section count from one to five, the way ogham counts a letter."
+      "html": "I build both a language and the tools used with it. Around Almide, I develop syntax analysis, tools for reading and editing code, and agent runtimes."
      }
     ]
    },
    {
-    "heading": "Covers",
+    "heading": "Tools for reading code",
     "blocks": [
      {
       "kind": "p",
-      "html": "265 public repositories under O6lvl4, Aid-On, almide, almide-graphics, almide-ai and almd-mc, forks excluded. Nothing private is shown."
+      "html": "In Almide, I build gramide for constructing syntax trees and hew for reading code by named functions and types. These tools help coding agents retrieve the code they need."
      }
     ]
    },
    {
-    "heading": "Plates",
+    "heading": "Infrastructure for AI",
     "blocks": [
      {
       "kind": "p",
-      "html": "Projects with a site of their own show that site as it renders; projects whose command is installed here show its real output; the rest show a summary of what their README says they do, taken only from the README."
+      "html": "I also build the foundations applications rely on: tool connections and execution controls for agents, and rate limiting, memory and stream processing for LLMs."
      }
     ]
    }
