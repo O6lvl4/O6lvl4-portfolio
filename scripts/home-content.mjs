@@ -63,5 +63,10 @@ export function updateHomeContent(out, content) {
   const html = readFileSync(path, "utf8");
   const target = /<div class="object-meta-panel"[^>]*>[\s\S]*?(?=\s*<article class="readme-panel")/;
   if (!target.test(html)) throw new Error("Featured project panel not found");
-  writeFileSync(path, updateProfile(html.replace(target, panel), content.lang));
+  const updated = updateProfile(html.replace(target, panel), content.lang)
+    .replace(/[ \t]*<div class="entry-handle">[\s\S]*?<\/div>\n?/, '')
+    .replace('</style>', `
+#entry .entry-title { margin-top: 1rem; font-size: 0.8125rem; line-height: 1.8; letter-spacing: 0; text-transform: none; }
+</style>`);
+  writeFileSync(path, updated);
 }

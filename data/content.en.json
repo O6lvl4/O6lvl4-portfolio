@@ -102,7 +102,7 @@
  },
  "home": {
   "kicker": "265 public repositories",
-  "lead": "Language design · Compilers · Developer tools · AI infrastructure",
+  "lead": "I build Almide and tools for the people and agents writing code.",
   "note": "265 public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.",
   "description": "265 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs."
  },

@@ -7,7 +7,7 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 export const TEXT = {
   ja: {
     role: "開発の道具を、言語からつくる。",
-    lead: "言語設計・コンパイラ・開発ツール・AIの実行基盤",
+    lead: "Almideと、コードを書く人やエージェントのための道具を開発しています。",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公開リポジトリ ${n} 件`,
     description: (n) => `O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ ${n} 件。言語 Almide とその周りの道具、エージェント、LLM の土台。`,
@@ -104,7 +104,7 @@ export const TEXT = {
   },
   en: {
     role: "Building developer tools, from the language up.",
-    lead: "Language design · Compilers · Developer tools · AI infrastructure",
+    lead: "I build Almide and tools for the people and agents writing code.",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `${n} public repositories`,
     description: (n) => `${n} public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs.`,
@@ -201,7 +201,7 @@ export const TEXT = {
   },
   zh: {
     role: "从语言开始，构建开发工具。",
-    lead: "语言设计 · 编译器 · 开发工具 · AI运行基础设施",
+    lead: "我开发Almide，以及供开发者和编程智能体使用的工具。",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公开仓库 ${n} 个`,
     description: (n) => `O6lvl4、Aid-On、almide 与 almide-* 组织下的 ${n} 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。`,
