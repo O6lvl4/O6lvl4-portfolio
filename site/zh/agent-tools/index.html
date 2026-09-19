@@ -218,8 +218,11 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── Scroll-driven entrance ───────────────────────────────────────────── */
 
+/* A section rises as it comes into view, but it never waits at nothing: the floor is a quarter
+   of full opacity, so a section is legible before the scroll reaches it — which is what a
+   printout, a thumbnail and a jump straight to an anchor all get. */
 @keyframes s-enter {
-  from { opacity: 0; translate: 0 20px; }
+  from { opacity: 0.25; translate: 0 14px; }
   to   { opacity: 1; translate: 0 0; }
 }
 
@@ -229,10 +232,14 @@ a { color: inherit; text-decoration: none; }
   animation-range: entry 0% entry 30%;
 }
 
-.section + .section {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 800px;
+/* asked for less motion: the page is simply at rest */
+@media (prefers-reduced-motion: reduce) {
+  .section { animation: none; }
 }
+
+/* The sections used to be skipped until they came near the viewport (`content-visibility: auto`).
+   It saved little on a page of five sections and cost the page its own picture: a printout, a
+   thumbnail and a full-page capture all came out blank below the first screen. */
 
 /* ─── Red dot pulse ─────────────────────────────────────────────────────── */
 
@@ -244,92 +251,12 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── App shell ─────────────────────────────────────────────────────────── */
 
+/* One column. The stem used to stand in a rail down the left edge; it closes the page at the
+   foot now, where an inscription's own end mark goes, and the text has the width back. */
 .app-shell {
   display: grid;
-  grid-template-columns: var(--rail-w) 1fr;
+  grid-template-columns: 1fr;
   min-height: 100svh;
-}
-
-/* ─── Left rail ─────────────────────────────────────────────────────────── */
-
-.rail {
-  grid-row: 1 / -1;
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  background: var(--rail-bg);
-  border-right: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-block: 1.75rem 2rem;
-  overflow: hidden;
-  z-index: 20;
-}
-
-/* Ogham trunk — sideways-lr bottom-to-top, fallback to vertical-rl rotated */
-.ogham-trunk {
-  font-family: var(--font-ogham);
-  font-size: 2.25rem;
-  letter-spacing: 0.04em;
-  color: var(--fg-muted);
-  writing-mode: sideways-lr;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  line-height: 1;
-  transition: color 0.3s;
-}
-
-@supports not (writing-mode: sideways-lr) {
-  .ogham-trunk {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-  }
-}
-
-.ogham-trunk:hover { color: var(--fg); }
-
-/* Year list runs down the rail — each year has a hairline crossing */
-.rail-year-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  align-items: center;
-  margin-bottom: 1.25rem;
-}
-
-.rail-year {
-  font-family: var(--font-mono);
-  font-size: 0.4375rem;
-  letter-spacing: 0.12em;
-  color: var(--fg-faint);
-  writing-mode: sideways-lr;
-  position: relative;
-}
-
-/* The single line crossing the trunk */
-.rail-year::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -300%;
-  right: -300%;
-  height: 1px;
-  background: var(--border);
-}
-
-.rail-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--red);
-  flex-shrink: 0;
-  margin-bottom: 2rem;
-  animation: pulse-ring 2.4s ease-out infinite;
 }
 
 /* ─── Main column ───────────────────────────────────────────────────────── */
@@ -1461,16 +1388,12 @@ h4.readme-h2 {
     --section-gap: 88px;
     --profile-w: 100%;
   }
-  .stage-grid    { grid-template-columns: 1fr 1fr; }
   .lang-dist-grid { grid-template-columns: 1fr; }
   .hdr-nav       { display: none; }
 }
 
 @media (max-width: 640px) {
   :root { --gutter: 20px; --section-gap: 60px; }
-  .app-shell { grid-template-columns: 1fr; }
-  .rail      { display: none; }
-  .stage-grid { grid-template-columns: 1fr; }
   .overview-kpis { grid-template-columns: 1fr 1fr; }
   .stat-panel {
     grid-template-columns: 1fr 1fr;
@@ -1575,35 +1498,20 @@ h4.readme-h2 {
 
 /* ─── the families, and the page each one has ───────────────────────────── */
 
-.fam-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1px;
-  background: var(--border); border: 1px solid var(--border);
+/* One line of links, not fourteen cards: the front page says which families there are and lets a
+   reader open one; the family's own page is where its introduction belongs. */
+.fam-links { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-bottom: 1.5rem; }
+.fam-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.3125rem 0.625rem;
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.04em;
+  color: var(--fg-muted); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  transition: color 0.12s, border-color 0.12s;
 }
-.fam-card {
-  position: relative; display: flex; flex-direction: column; gap: 0.5rem;
-  padding: 1.5rem 1.625rem 1.375rem; background: var(--bg);
-  transition: background 0.12s;
-}
-.fam-card:hover { background: var(--bg-raised); }
-.fam-mark {
-  position: absolute; top: 1.25rem; right: 1.25rem;
-  font-family: var(--font-ogham); font-size: 1.5rem; color: var(--fg-faint);
-}
-.fam-count {
-  font-family: var(--font-mono); font-size: 1.25rem; font-weight: 500;
-  font-variant-numeric: tabular-nums; color: var(--red); line-height: 1;
-}
-.fam-name { font-size: 1rem; font-weight: 600; letter-spacing: 0.01em; line-height: 1.4; }
-.fam-lead {
-  font-size: 0.75rem; line-height: 1.7; color: var(--fg-muted); text-wrap: pretty;
-  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
-}
-.fam-go {
-  margin-top: auto; padding-top: 0.75rem;
-  font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.15em;
-  text-transform: uppercase; color: var(--fg-faint);
-}
-.fam-card:hover .fam-go { color: var(--red); }
+.fam-link:hover { color: var(--fg); border-color: var(--border-mid); }
+.fam-link-mark { font-family: var(--font-ogham); font-size: 0.8125rem; color: var(--fg-faint); }
+.fam-link:hover .fam-link-mark { color: var(--red); }
+.fam-link-count { font-size: 0.5625rem; color: var(--fg-faint); font-variant-numeric: tabular-nums; }
 
 /* a family's own page */
 .fam-hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: var(--item-gap); }
@@ -1623,12 +1531,13 @@ h4.readme-h2 {
 .profile-card { align-self: start; }
 /* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
 .profile-card .stat-panel {
-  border: 0; border-bottom: 1px solid var(--border);
+  border: 0; border-bottom: 1px solid var(--border); border-radius: 0;
   background: transparent; box-shadow: none; margin-bottom: 0.5rem;
 }
 .profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
 .profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
 .profile-card .stat-val { font-size: 1.25rem; }
+
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1641,9 +1550,11 @@ h4.readme-h2 {
 .profile-name { font-family: var(--font-mono); font-size: 1.0625rem; letter-spacing: 0.02em; color: var(--fg); }
 .profile-role { font-size: 0.75rem; line-height: 1.55; color: var(--fg-muted); margin-top: 0.25rem; }
 .profile-ogham { font-family: var(--font-ogham); font-size: 0.9375rem; color: var(--red); margin-top: 0.3rem; }
+/* One separator between two things, not two: the last row above already closes with a hairline,
+   so the links at the foot of the card draw none of their own a few pixels under it. */
 .profile-links {
   display: flex; flex-wrap: wrap; gap: 0.5rem;
-  padding-top: 1.125rem; margin-top: 0.5rem; border-top: 1px solid var(--border);
+  padding-top: 1.125rem;
 }
 
 /* ─── the commits of each org ───────────────────────────────────────────── */
@@ -1668,6 +1579,15 @@ h4.readme-h2 {
 @media (max-width: 1240px) {
   .hdr-readout { display: none; }
 }
+
+/* the foot holds one mark, so it stands in the middle of the page rather than at one end */
+.site-footer { justify-content: center; }
+
+/* The family filter was a strip with a border, and the surfaces layer then gave every chip in it
+   a border of its own — two lines a pixel apart all the way round. The chips are the panels, as
+   the language chips beside them are, so the strip keeps none. */
+.org-rail { border: 0; background: transparent; box-shadow: none; gap: 0.375rem; }
+.org-rail .org-btn { border-radius: var(--radius-sm); border-right: 1px solid var(--border); }
 
 /* the way back, above a page that is one long list: it sits close to the list, not a screen away */
 .list-intro { padding-top: 2.5rem; margin-bottom: calc(var(--section-gap) * -0.6); }
@@ -1788,9 +1708,8 @@ body::after {
 .lang-chip,
 .sort-bar { border-radius: var(--radius-sm); }
 
-/* the bars that stay put are the ground's own colour, so nothing shows through them */
+/* the bar that stays put is the ground's own colour, so nothing shows through it */
 .site-header { background: var(--bg); border-width: 0 0 1px; }
-.rail { background: var(--rail-bg); border-width: 0 1px 0 0; }
 
 /* inside a group, the pieces share one panel rather than each carrying their own */
 .sort-bar,
@@ -1829,7 +1748,6 @@ body::after {
 }
 
 /* the red index mark carries a little light of its own */
-.rail-dot { box-shadow: 0 0 12px 1px color-mix(in oklch, var(--red) 45%, transparent); }
 .hdr-callsign::before { box-shadow: 0 0 10px 1px color-mix(in oklch, var(--red) 50%, transparent); }
 .tl-bar.current { box-shadow: 0 0 20px -6px color-mix(in oklch, var(--red) 60%, transparent); }
 
@@ -1843,16 +1761,6 @@ body::after {
   pointer-events: none;
   background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--red) 70%, transparent) 30%, color-mix(in oklch, var(--red) 70%, transparent) 70%, transparent);
 }
-.rail { position: sticky; }
-.rail::after {
-  content: '';
-  position: absolute;
-  inset: 0 -1px 0 auto;
-  width: 1px;
-  pointer-events: none;
-  background: linear-gradient(180deg, transparent, color-mix(in oklch, var(--red) 55%, transparent) 40%, transparent 85%);
-}
-
 /* code and terminal output sit inside a panel, not on it */
 .readme-code {
   border-radius: var(--radius-sm);
@@ -1869,14 +1777,10 @@ body::after {
 <body>
 <div class="app-shell">
   <a class="skip-link" href="#main-content">跳到正文</a>
-  <aside class="rail" aria-hidden="true">
-    <div class="ogham-trunk" title="ogma">᚛ᚑᚌᚋᚐ᚜</div>
-    <div class="rail-dot"></div>
-  </aside>
   <div class="main-wrap">
     <header class="site-header">
     <a class="hdr-callsign" href="../">O6lvl4</a>
-    <nav class="hdr-nav" aria-label="本页各节"><a href="../#entry">关于</a><a href="../works/">作品</a><a href="../#object">详看一件</a><a href="../#overview">总体</a><a href="../#langs">用什么写的</a><a href="../#families">系列</a></nav>
+    <nav class="hdr-nav" aria-label="本页各节"><a href="../#entry">关于</a><a href="../works/">作品</a><a href="../#object">详看一件</a><a href="../#breakdown">语言与存放处</a></nav>
     <div class="hdr-right">
       <div class="hdr-readout"><span class="hdr-readout-val">265</span><span class="hdr-readout-lbl">仓库</span></div>
       <div class="hdr-readout"><span class="hdr-readout-val">19</span><span class="hdr-readout-lbl">语言</span></div>
@@ -1924,7 +1828,7 @@ body::after {
     </div>
     <div class="object-grid">
       <dl class="object-meta-panel" aria-label="porta">
-      <div class="meta-row"><dt class="meta-key">名称</dt><dd class="meta-val accent">porta</dd></div><div class="meta-row"><dt class="meta-key">存放处</dt><dd class="meta-val">给编码智能体的工具</dd></div><div class="meta-row"><dt class="meta-key">语言</dt><dd class="meta-val">Almide</dd></div><div class="meta-row"><dt class="meta-key">提交</dt><dd class="meta-val">97</dd></div><div class="meta-row"><dt class="meta-key">首次</dt><dd class="meta-val">2026年8月</dd></div><div class="meta-row"><dt class="meta-key">版本</dt><dd class="meta-val">v0.4.0</dd></div><div class="meta-row"><dt class="meta-key">星标</dt><dd class="meta-val">2</dd></div><div class="meta-row"><dt class="meta-key">更新</dt><dd class="meta-val">2026年8月</dd></div>
+      <div class="meta-row"><dt class="meta-key">名称</dt><dd class="meta-val accent">porta</dd></div><div class="meta-row"><dt class="meta-key">系列</dt><dd class="meta-val">给编码智能体的工具</dd></div><div class="meta-row"><dt class="meta-key">存放处</dt><dd class="meta-val">almide</dd></div><div class="meta-row"><dt class="meta-key">语言</dt><dd class="meta-val">Almide</dd></div><div class="meta-row"><dt class="meta-key">提交</dt><dd class="meta-val">97</dd></div><div class="meta-row"><dt class="meta-key">首次</dt><dd class="meta-val">2026年8月</dd></div><div class="meta-row"><dt class="meta-key">版本</dt><dd class="meta-val">v0.4.0</dd></div><div class="meta-row"><dt class="meta-key">星标</dt><dd class="meta-val">2</dd></div><div class="meta-row"><dt class="meta-key">更新</dt><dd class="meta-val">2026年8月</dd></div>
       <div class="meta-row"><dt class="meta-key">话题</dt><dd class="meta-topics"><span class="repo-topic">Almide</span><span class="repo-topic">Rust</span><span class="repo-topic">Shell</span><span class="repo-topic">ai-agent</span></dd></div>
       <div class="meta-row"><dt class="meta-key">去处</dt><dd class="meta-val"><a class="meta-link" href="https://github.com/almide/porta" target="_blank" rel="noopener noreferrer">仓库</a></dd></div>
     </dl>
@@ -2377,10 +2281,7 @@ body::after {
       </div>
     </main>
     <footer class="site-footer">
-    <span class="footer-copy">O6lvl4</span>
-    <nav class="footer-social" aria-label="去处"><a class="footer-social-link" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a><a class="footer-social-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Almide</span></a></nav>
     <span class="footer-ogham" title="ogma">᚛ᚑᚌᚋᚐ᚜</span>
-    <span class="footer-copy">265 仓库 · 14 系列</span>
   </footer>
   </div>
 </div>

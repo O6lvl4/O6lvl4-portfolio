@@ -90,6 +90,7 @@
   "history": "Timeline",
   "byYear": "Commits by year",
   "byOrg": "Commits by org",
+  "breakdown": "Languages and orgs",
   "allWorks": "See the whole list",
   "home": "Front page",
   "briefLead": "One from each family, the one most worked on. The rest are in the list.",
@@ -10217,7 +10218,7 @@
     "blocks": [
      {
       "kind": "p",
-      "html": "The name comes from Ogma, the god of eloquence and writing, credited with ogham — an alphabet spelled as notches cut along a stem. The stem down the left edge reads <span class=\"cut\">ᚑᚌᚋᚐ</span> (OGMA), from the foot up, the way a standing stone is read; the notches that open each section count from one to five, the way ogham counts a letter."
+      "html": "The name comes from Ogma, the god of eloquence and writing, credited with ogham — an alphabet spelled as notches cut along a stem. The mark that closes the page is that name cut in ogham, <span class=\"cut\">᚛ᚑᚌᚋᚐ᚜</span> (OGMA), between the feather marks an inscription opens and closes with; the notches that open each section count from one to five, the way ogham counts a letter."
      }
     ]
    },

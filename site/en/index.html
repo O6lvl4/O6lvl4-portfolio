@@ -218,8 +218,11 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── Scroll-driven entrance ───────────────────────────────────────────── */
 
+/* A section rises as it comes into view, but it never waits at nothing: the floor is a quarter
+   of full opacity, so a section is legible before the scroll reaches it — which is what a
+   printout, a thumbnail and a jump straight to an anchor all get. */
 @keyframes s-enter {
-  from { opacity: 0; translate: 0 20px; }
+  from { opacity: 0.25; translate: 0 14px; }
   to   { opacity: 1; translate: 0 0; }
 }
 
@@ -229,10 +232,14 @@ a { color: inherit; text-decoration: none; }
   animation-range: entry 0% entry 30%;
 }
 
-.section + .section {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 800px;
+/* asked for less motion: the page is simply at rest */
+@media (prefers-reduced-motion: reduce) {
+  .section { animation: none; }
 }
+
+/* The sections used to be skipped until they came near the viewport (`content-visibility: auto`).
+   It saved little on a page of five sections and cost the page its own picture: a printout, a
+   thumbnail and a full-page capture all came out blank below the first screen. */
 
 /* ─── Red dot pulse ─────────────────────────────────────────────────────── */
 
@@ -244,92 +251,12 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── App shell ─────────────────────────────────────────────────────────── */
 
+/* One column. The stem used to stand in a rail down the left edge; it closes the page at the
+   foot now, where an inscription's own end mark goes, and the text has the width back. */
 .app-shell {
   display: grid;
-  grid-template-columns: var(--rail-w) 1fr;
+  grid-template-columns: 1fr;
   min-height: 100svh;
-}
-
-/* ─── Left rail ─────────────────────────────────────────────────────────── */
-
-.rail {
-  grid-row: 1 / -1;
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  background: var(--rail-bg);
-  border-right: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-block: 1.75rem 2rem;
-  overflow: hidden;
-  z-index: 20;
-}
-
-/* Ogham trunk — sideways-lr bottom-to-top, fallback to vertical-rl rotated */
-.ogham-trunk {
-  font-family: var(--font-ogham);
-  font-size: 2.25rem;
-  letter-spacing: 0.04em;
-  color: var(--fg-muted);
-  writing-mode: sideways-lr;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  line-height: 1;
-  transition: color 0.3s;
-}
-
-@supports not (writing-mode: sideways-lr) {
-  .ogham-trunk {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-  }
-}
-
-.ogham-trunk:hover { color: var(--fg); }
-
-/* Year list runs down the rail — each year has a hairline crossing */
-.rail-year-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  align-items: center;
-  margin-bottom: 1.25rem;
-}
-
-.rail-year {
-  font-family: var(--font-mono);
-  font-size: 0.4375rem;
-  letter-spacing: 0.12em;
-  color: var(--fg-faint);
-  writing-mode: sideways-lr;
-  position: relative;
-}
-
-/* The single line crossing the trunk */
-.rail-year::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -300%;
-  right: -300%;
-  height: 1px;
-  background: var(--border);
-}
-
-.rail-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--red);
-  flex-shrink: 0;
-  margin-bottom: 2rem;
-  animation: pulse-ring 2.4s ease-out infinite;
 }
 
 /* ─── Main column ───────────────────────────────────────────────────────── */
@@ -1461,16 +1388,12 @@ h4.readme-h2 {
     --section-gap: 88px;
     --profile-w: 100%;
   }
-  .stage-grid    { grid-template-columns: 1fr 1fr; }
   .lang-dist-grid { grid-template-columns: 1fr; }
   .hdr-nav       { display: none; }
 }
 
 @media (max-width: 640px) {
   :root { --gutter: 20px; --section-gap: 60px; }
-  .app-shell { grid-template-columns: 1fr; }
-  .rail      { display: none; }
-  .stage-grid { grid-template-columns: 1fr; }
   .overview-kpis { grid-template-columns: 1fr 1fr; }
   .stat-panel {
     grid-template-columns: 1fr 1fr;
@@ -1575,35 +1498,20 @@ h4.readme-h2 {
 
 /* ─── the families, and the page each one has ───────────────────────────── */
 
-.fam-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1px;
-  background: var(--border); border: 1px solid var(--border);
+/* One line of links, not fourteen cards: the front page says which families there are and lets a
+   reader open one; the family's own page is where its introduction belongs. */
+.fam-links { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-bottom: 1.5rem; }
+.fam-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.3125rem 0.625rem;
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.04em;
+  color: var(--fg-muted); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  transition: color 0.12s, border-color 0.12s;
 }
-.fam-card {
-  position: relative; display: flex; flex-direction: column; gap: 0.5rem;
-  padding: 1.5rem 1.625rem 1.375rem; background: var(--bg);
-  transition: background 0.12s;
-}
-.fam-card:hover { background: var(--bg-raised); }
-.fam-mark {
-  position: absolute; top: 1.25rem; right: 1.25rem;
-  font-family: var(--font-ogham); font-size: 1.5rem; color: var(--fg-faint);
-}
-.fam-count {
-  font-family: var(--font-mono); font-size: 1.25rem; font-weight: 500;
-  font-variant-numeric: tabular-nums; color: var(--red); line-height: 1;
-}
-.fam-name { font-size: 1rem; font-weight: 600; letter-spacing: 0.01em; line-height: 1.4; }
-.fam-lead {
-  font-size: 0.75rem; line-height: 1.7; color: var(--fg-muted); text-wrap: pretty;
-  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
-}
-.fam-go {
-  margin-top: auto; padding-top: 0.75rem;
-  font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.15em;
-  text-transform: uppercase; color: var(--fg-faint);
-}
-.fam-card:hover .fam-go { color: var(--red); }
+.fam-link:hover { color: var(--fg); border-color: var(--border-mid); }
+.fam-link-mark { font-family: var(--font-ogham); font-size: 0.8125rem; color: var(--fg-faint); }
+.fam-link:hover .fam-link-mark { color: var(--red); }
+.fam-link-count { font-size: 0.5625rem; color: var(--fg-faint); font-variant-numeric: tabular-nums; }
 
 /* a family's own page */
 .fam-hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: var(--item-gap); }
@@ -1623,12 +1531,13 @@ h4.readme-h2 {
 .profile-card { align-self: start; }
 /* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
 .profile-card .stat-panel {
-  border: 0; border-bottom: 1px solid var(--border);
+  border: 0; border-bottom: 1px solid var(--border); border-radius: 0;
   background: transparent; box-shadow: none; margin-bottom: 0.5rem;
 }
 .profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
 .profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
 .profile-card .stat-val { font-size: 1.25rem; }
+
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1641,9 +1550,11 @@ h4.readme-h2 {
 .profile-name { font-family: var(--font-mono); font-size: 1.0625rem; letter-spacing: 0.02em; color: var(--fg); }
 .profile-role { font-size: 0.75rem; line-height: 1.55; color: var(--fg-muted); margin-top: 0.25rem; }
 .profile-ogham { font-family: var(--font-ogham); font-size: 0.9375rem; color: var(--red); margin-top: 0.3rem; }
+/* One separator between two things, not two: the last row above already closes with a hairline,
+   so the links at the foot of the card draw none of their own a few pixels under it. */
 .profile-links {
   display: flex; flex-wrap: wrap; gap: 0.5rem;
-  padding-top: 1.125rem; margin-top: 0.5rem; border-top: 1px solid var(--border);
+  padding-top: 1.125rem;
 }
 
 /* ─── the commits of each org ───────────────────────────────────────────── */
@@ -1668,6 +1579,15 @@ h4.readme-h2 {
 @media (max-width: 1240px) {
   .hdr-readout { display: none; }
 }
+
+/* the foot holds one mark, so it stands in the middle of the page rather than at one end */
+.site-footer { justify-content: center; }
+
+/* The family filter was a strip with a border, and the surfaces layer then gave every chip in it
+   a border of its own — two lines a pixel apart all the way round. The chips are the panels, as
+   the language chips beside them are, so the strip keeps none. */
+.org-rail { border: 0; background: transparent; box-shadow: none; gap: 0.375rem; }
+.org-rail .org-btn { border-radius: var(--radius-sm); border-right: 1px solid var(--border); }
 
 /* the way back, above a page that is one long list: it sits close to the list, not a screen away */
 .list-intro { padding-top: 2.5rem; margin-bottom: calc(var(--section-gap) * -0.6); }
@@ -1788,9 +1708,8 @@ body::after {
 .lang-chip,
 .sort-bar { border-radius: var(--radius-sm); }
 
-/* the bars that stay put are the ground's own colour, so nothing shows through them */
+/* the bar that stays put is the ground's own colour, so nothing shows through it */
 .site-header { background: var(--bg); border-width: 0 0 1px; }
-.rail { background: var(--rail-bg); border-width: 0 1px 0 0; }
 
 /* inside a group, the pieces share one panel rather than each carrying their own */
 .sort-bar,
@@ -1829,7 +1748,6 @@ body::after {
 }
 
 /* the red index mark carries a little light of its own */
-.rail-dot { box-shadow: 0 0 12px 1px color-mix(in oklch, var(--red) 45%, transparent); }
 .hdr-callsign::before { box-shadow: 0 0 10px 1px color-mix(in oklch, var(--red) 50%, transparent); }
 .tl-bar.current { box-shadow: 0 0 20px -6px color-mix(in oklch, var(--red) 60%, transparent); }
 
@@ -1843,16 +1761,6 @@ body::after {
   pointer-events: none;
   background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--red) 70%, transparent) 30%, color-mix(in oklch, var(--red) 70%, transparent) 70%, transparent);
 }
-.rail { position: sticky; }
-.rail::after {
-  content: '';
-  position: absolute;
-  inset: 0 -1px 0 auto;
-  width: 1px;
-  pointer-events: none;
-  background: linear-gradient(180deg, transparent, color-mix(in oklch, var(--red) 55%, transparent) 40%, transparent 85%);
-}
-
 /* code and terminal output sit inside a panel, not on it */
 .readme-code {
   border-radius: var(--radius-sm);
@@ -1869,14 +1777,10 @@ body::after {
 <body>
 <div class="app-shell">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <aside class="rail" aria-hidden="true">
-    <div class="ogham-trunk" title="ogma">᚛ᚑᚌᚋᚐ᚜</div>
-    <div class="rail-dot"></div>
-  </aside>
   <div class="main-wrap">
     <header class="site-header">
     <a class="hdr-callsign" href="./">O6lvl4</a>
-    <nav class="hdr-nav" aria-label="Page sections"><a href="./#entry" aria-current="location">About</a><a href="works/">Work</a><a href="./#object">One in full</a><a href="./#overview">Overview</a><a href="./#langs">What it is written in</a><a href="./#families">Families</a></nav>
+    <nav class="hdr-nav" aria-label="Page sections"><a href="./#entry" aria-current="location">About</a><a href="works/">Work</a><a href="./#object">One in full</a><a href="./#breakdown">Languages and orgs</a></nav>
     <div class="hdr-right">
       <div class="hdr-readout"><span class="hdr-readout-val">265</span><span class="hdr-readout-lbl">repos</span></div>
       <div class="hdr-readout"><span class="hdr-readout-val">19</span><span class="hdr-readout-lbl">langs</span></div>
@@ -1924,6 +1828,35 @@ body::after {
       <span class="section-count">14 / 265</span>
     </div>
     <p class="works-lead">One from each family, the one most worked on. The rest are in the list.</p>
+    <nav class="fam-links" aria-label="Families"><a class="fam-link" href="almide/" title="Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). The other language here is wyve: a static semantics one layer above LLVM IR, where the optimizer has to write down its contracts — written in Racket.">
+        <span class="fam-link-mark" aria-hidden="true">ᚁ</span>Making languages<span class="fam-link-count">18</span>
+      </a><a class="fam-link" href="stdlib/" title="Before writing in the language, the things you write with: pure-Almide parts — encodings (Base64, CSV, TOML, YAML, SVG), ciphers (AES, RSA, SHA-1), arbitrary-precision integers, a set of regular expressions folded into one DFA, and a door to SQLite.">
+        <span class="fam-link-mark" aria-hidden="true">ᚂ</span>Almide&#39;s standard library<span class="fam-link-count">11</span>
+      </a><a class="fam-link" href="agent-tools/" title="What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.">
+        <span class="fam-link-mark" aria-hidden="true">ᚃ</span>Tools for coding agents<span class="fam-link-count">25</span>
+      </a><a class="fam-link" href="llm/" title="What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).">
+        <span class="fam-link-mark" aria-hidden="true">ᚄ</span>Agents, and groundwork for LLMs<span class="fam-link-count">19</span>
+      </a><a class="fam-link" href="fizz/" title="An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.">
+        <span class="fam-link-mark" aria-hidden="true">ᚅ</span>The parts of an AITuber<span class="fam-link-count">52</span>
+      </a><a class="fam-link" href="mc/" title="Minecraft&#39;s protocol implemented in Almide from the bottom up (mc-protocol): authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and bots (mc-bot, craftsman) — replacing the layers of node-minecraft-protocol and prismarine in a typed language.">
+        <span class="fam-link-mark" aria-hidden="true">ᚆ</span>Minecraft, in Almide<span class="fam-link-count">26</span>
+      </a><a class="fam-link" href="graphics/" title="The layer for drawing in Almide: a GPU-native UI (ceangal) and its animation engine (ceangal-anime), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth) with a toolkit for the files themselves (nendo), neural-network primitives (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).">
+        <span class="fam-link-mark" aria-hidden="true">ᚇ</span>Drawing, and the maths under it<span class="fam-link-count">9</span>
+      </a><a class="fam-link" href="web/" title="The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare&#39;s job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).">
+        <span class="fam-link-mark" aria-hidden="true">ᚈ</span>Parts for the edge and the web<span class="fam-link-count">11</span>
+      </a><a class="fam-link" href="toolchain/" title="Having the right version of every language&#39;s toolchain at hand, and only when it is needed: a superposition that collapses on cd (qusp), a Go version manager at uv speed (gv) on the substrate the *v managers share (anyv-core), static PHP binaries that need no apt, brew or Docker (php-build-standalone), and my own tap (homebrew-tap).">
+        <span class="fam-link-mark" aria-hidden="true">ᚉ</span>Getting a toolchain in place<span class="fam-link-count">5</span>
+      </a><a class="fam-link" href="knowledge/" title="The layer for remembering what has been read: an Obsidian vault, Git LFS and all, seen as a graph (O6lvl4-knowledge); a CLI that revises a markdown vault by SM-2 (awen); the same thing as a macOS app (memre); and an Astro integration that turns a vault into a static knowledge base (graph-garden).">
+        <span class="fam-link-mark" aria-hidden="true">ᚊ</span>Keeping what is learnt<span class="fam-link-count">4</span>
+      </a><a class="fam-link" href="sites/" title="Things that open in a browser and are finished there: a sample portfolio for an artist (hokusai-portfolio) and one for a person (kotorody-portfolio), a timeline of chips and world affairs (chip-war-chronicle), agent benchmarks gathered into one table (agent-bench-matrix), a talk&#39;s slides, small apps that look after a body (gulp-coach, environment-health-viewer, tabi-navi), two that play with sound (pitchy, almide-headset-eq), and plain HTML for paperwork (aid-on-contract-generator, aid-on-invoice-generator, aid-on-tax-calculator).">
+        <span class="fam-link-mark" aria-hidden="true">ᚋ</span>Pages made to be looked at<span class="fam-link-count">13</span>
+      </a><a class="fam-link" href="tools/" title="The small binaries written for the day&#39;s work: getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), looking at an environment and a machine (netcheck, igloc, syncenv, macleap, dns-checker), switching accounts (azprofile, chropen), turning what is written into something you can hand over (pagina, premaid, image-catalog-composer), hearing about a supply-chain attack early (tocsin, tocsin-almd), lifting a UI&#39;s structure into a Layout AST (uimodulay), and my own working protocol with the checker that grades against it (O6lvl4-protocol, O6lvl4-vitals).">
+        <span class="fam-link-mark" aria-hidden="true">ᚌ</span>Tools at hand<span class="fam-link-count">25</span>
+      </a><a class="fam-link" href="other-langs/" title="Written outside my own language: lean2ts turns Lean 4 theorems into TypeScript property tests, lean4-rust-backend lowers Lean to Rust, and before either of those comes the practice (hello-lean4, lean-lang-sandbox, lean4-practice, fizzbuzz-lean4-lib, fizzbuzz-lean4-cli); zfp is a zero-cost functional toolkit that disappears into Zig&#39;s types; sashiko watches Ruby&#39;s concurrency boundaries through OpenTelemetry.">
+        <span class="fam-link-mark" aria-hidden="true">ᚍ</span>Writing in other languages<span class="fam-link-count">9</span>
+      </a><a class="fam-link" href="lab/" title="Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), a set of JavaScript exercises (aid-on-js-training), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.">
+        <span class="fam-link-mark" aria-hidden="true">ᚎ</span>Things tried out<span class="fam-link-count">38</span>
+      </a></nav>
     <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-13" data-commits="8502" data-rank="0">
       <a class="repo-row" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">
         <div>
@@ -2173,7 +2106,7 @@ body::after {
     </div>
     <div class="object-grid">
       <dl class="object-meta-panel" aria-label="almide">
-      <div class="meta-row"><dt class="meta-key">Name</dt><dd class="meta-val accent">almide</dd></div><div class="meta-row"><dt class="meta-key">Where it lives</dt><dd class="meta-val">Making languages</dd></div><div class="meta-row"><dt class="meta-key">Language</dt><dd class="meta-val">Rust</dd></div><div class="meta-row"><dt class="meta-key">Commits</dt><dd class="meta-val">8502</dd></div><div class="meta-row"><dt class="meta-key">Started</dt><dd class="meta-val">Sep 2026</dd></div><div class="meta-row"><dt class="meta-key">Release</dt><dd class="meta-val">v0.63.0-rc1</dd></div><div class="meta-row"><dt class="meta-key">Stars</dt><dd class="meta-val">34</dd></div><div class="meta-row"><dt class="meta-key">Updated</dt><dd class="meta-val">Sep 2026</dd></div>
+      <div class="meta-row"><dt class="meta-key">Name</dt><dd class="meta-val accent">almide</dd></div><div class="meta-row"><dt class="meta-key">Families</dt><dd class="meta-val">Making languages</dd></div><div class="meta-row"><dt class="meta-key">Where it lives</dt><dd class="meta-val">almide</dd></div><div class="meta-row"><dt class="meta-key">Language</dt><dd class="meta-val">Rust</dd></div><div class="meta-row"><dt class="meta-key">Commits</dt><dd class="meta-val">8502</dd></div><div class="meta-row"><dt class="meta-key">Started</dt><dd class="meta-val">Sep 2026</dd></div><div class="meta-row"><dt class="meta-key">Release</dt><dd class="meta-val">v0.63.0-rc1</dd></div><div class="meta-row"><dt class="meta-key">Stars</dt><dd class="meta-val">34</dd></div><div class="meta-row"><dt class="meta-key">Updated</dt><dd class="meta-val">Sep 2026</dd></div>
       <div class="meta-row"><dt class="meta-key">Topics</dt><dd class="meta-topics"><span class="repo-topic">Rust</span><span class="repo-topic">Almide</span><span class="repo-topic">Shell</span><span class="repo-topic">code-generation</span></dd></div>
       <div class="meta-row"><dt class="meta-key">Links</dt><dd class="meta-val"><a class="meta-link" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">Repository</a><a class="meta-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer">Site</a></dd></div>
     </dl>
@@ -2185,60 +2118,13 @@ body::after {
     </article>
     </div>
   </section>
-        <section id="overview" class="section" aria-labelledby="heading-overview">
+        <section id="breakdown" class="section" aria-labelledby="heading-breakdown">
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚄ</span>
-      <h2 class="section-title" id="heading-overview">Overview</h2>
+      <h2 class="section-title" id="heading-breakdown">Languages and orgs</h2>
       
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">265</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">13,793</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">19</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">5</div><div class="kpi-label">Years</div></div></div>
-    <div class="org-chart">
-      <div class="timeline-sub">Commits by org</div>
-      <div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/almide" target="_blank" rel="noopener noreferrer">almide<span class="lbr-sub">29</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="10728" aria-valuemin="0" aria-valuemax="10728" aria-label="almide">
-          <div class="lbr-fill" style="width:100.0%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">10,728</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer">O6lvl4<span class="lbr-sub">112</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="1938" aria-valuemin="0" aria-valuemax="10728" aria-label="O6lvl4">
-          <div class="lbr-fill" style="width:18.1%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">1,938</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/Aid-On" target="_blank" rel="noopener noreferrer">Aid-On<span class="lbr-sub">88</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="677" aria-valuemin="0" aria-valuemax="10728" aria-label="Aid-On">
-          <div class="lbr-fill" style="width:6.3%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">677</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/almide-graphics" target="_blank" rel="noopener noreferrer">almide-graphics<span class="lbr-sub">9</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="311" aria-valuemin="0" aria-valuemax="10728" aria-label="almide-graphics">
-          <div class="lbr-fill" style="width:2.9%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">311</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/almd-mc" target="_blank" rel="noopener noreferrer">almd-mc<span class="lbr-sub">24</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="92" aria-valuemin="0" aria-valuemax="10728" aria-label="almd-mc">
-          <div class="lbr-fill" style="width:0.9%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">92</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/almide-ai" target="_blank" rel="noopener noreferrer">almide-ai<span class="lbr-sub">3</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="47" aria-valuemin="0" aria-valuemax="10728" aria-label="almide-ai">
-          <div class="lbr-fill" style="width:0.4%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">47</span>
-      </div>
-    </div>
-  </section>
-        <section class="section" aria-labelledby="heading-langs">
-    <div class="section-head">
-      <span class="ogham-mark" aria-hidden="true">ᚅ</span>
-      <h2 class="section-title" id="heading-langs">What it is written in</h2>
-      <span class="section-count">265 · 19</span>
-    </div>
+    <div class="timeline-sub">What it is written in</div>
     <div class="lang-dist-grid">
       <div><div class="lang-bar-row">
       <span class="lbr-name"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
@@ -2357,108 +2243,56 @@ body::after {
       <span class="lbr-count" aria-hidden="true">1</span>
     </div></div>
     </div>
-  </section>
-        <section id="families" class="section" aria-labelledby="heading-families">
-    <div class="section-head">
-      <span class="ogham-mark" aria-hidden="true">ᚆ</span>
-      <h2 class="section-title" id="heading-families">Families</h2>
-      <span class="section-count">14</span>
+    <div class="org-chart">
+      <div class="timeline-sub">Commits by org</div>
+      <div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/almide" target="_blank" rel="noopener noreferrer">almide<span class="lbr-sub">29</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="10728" aria-valuemin="0" aria-valuemax="10728" aria-label="almide">
+          <div class="lbr-fill" style="width:100.0%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">10,728</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer">O6lvl4<span class="lbr-sub">112</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="1938" aria-valuemin="0" aria-valuemax="10728" aria-label="O6lvl4">
+          <div class="lbr-fill" style="width:18.1%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">1,938</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/Aid-On" target="_blank" rel="noopener noreferrer">Aid-On<span class="lbr-sub">88</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="677" aria-valuemin="0" aria-valuemax="10728" aria-label="Aid-On">
+          <div class="lbr-fill" style="width:6.3%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">677</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/almide-graphics" target="_blank" rel="noopener noreferrer">almide-graphics<span class="lbr-sub">9</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="311" aria-valuemin="0" aria-valuemax="10728" aria-label="almide-graphics">
+          <div class="lbr-fill" style="width:2.9%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">311</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/almd-mc" target="_blank" rel="noopener noreferrer">almd-mc<span class="lbr-sub">24</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="92" aria-valuemin="0" aria-valuemax="10728" aria-label="almd-mc">
+          <div class="lbr-fill" style="width:0.9%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">92</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/almide-ai" target="_blank" rel="noopener noreferrer">almide-ai<span class="lbr-sub">3</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="47" aria-valuemin="0" aria-valuemax="10728" aria-label="almide-ai">
+          <div class="lbr-fill" style="width:0.4%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">47</span>
+      </div>
     </div>
-    <div class="fam-grid"><a class="fam-card" href="almide/">
-        <span class="fam-mark" aria-hidden="true">ᚁ</span>
-        <span class="fam-count">18</span>
-        <h3 class="fam-name">Making languages</h3>
-        <p class="fam-lead">Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). The other language here is wyve: a static semantics one layer above LLVM IR, where the optimizer has to write down its contracts — written in Racket.</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="stdlib/">
-        <span class="fam-mark" aria-hidden="true">ᚂ</span>
-        <span class="fam-count">11</span>
-        <h3 class="fam-name">Almide&#39;s standard library</h3>
-        <p class="fam-lead">Before writing in the language, the things you write with: pure-Almide parts — encodings (Base64, CSV, TOML, YAML, SVG), ciphers (AES, RSA, SHA-1), arbitrary-precision integers, a set of regular expressions folded into one DFA, and a door to SQLite.</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="agent-tools/">
-        <span class="fam-mark" aria-hidden="true">ᚃ</span>
-        <span class="fam-count">25</span>
-        <h3 class="fam-name">Tools for coding agents</h3>
-        <p class="fam-lead">What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="llm/">
-        <span class="fam-mark" aria-hidden="true">ᚄ</span>
-        <span class="fam-count">19</span>
-        <h3 class="fam-name">Agents, and groundwork for LLMs</h3>
-        <p class="fam-lead">What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="fizz/">
-        <span class="fam-mark" aria-hidden="true">ᚅ</span>
-        <span class="fam-count">52</span>
-        <h3 class="fam-name">The parts of an AITuber</h3>
-        <p class="fam-lead">An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="mc/">
-        <span class="fam-mark" aria-hidden="true">ᚆ</span>
-        <span class="fam-count">26</span>
-        <h3 class="fam-name">Minecraft, in Almide</h3>
-        <p class="fam-lead">Minecraft&#39;s protocol implemented in Almide from the bottom up (mc-protocol): authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and bots (mc-bot, craftsman) — replacing the layers of node-minecraft-protocol and prismarine in a typed language.</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="graphics/">
-        <span class="fam-mark" aria-hidden="true">ᚇ</span>
-        <span class="fam-count">9</span>
-        <h3 class="fam-name">Drawing, and the maths under it</h3>
-        <p class="fam-lead">The layer for drawing in Almide: a GPU-native UI (ceangal) and its animation engine (ceangal-anime), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth) with a toolkit for the files themselves (nendo), neural-network primitives (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="web/">
-        <span class="fam-mark" aria-hidden="true">ᚈ</span>
-        <span class="fam-count">11</span>
-        <h3 class="fam-name">Parts for the edge and the web</h3>
-        <p class="fam-lead">The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare&#39;s job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="toolchain/">
-        <span class="fam-mark" aria-hidden="true">ᚉ</span>
-        <span class="fam-count">5</span>
-        <h3 class="fam-name">Getting a toolchain in place</h3>
-        <p class="fam-lead">Having the right version of every language&#39;s toolchain at hand, and only when it is needed: a superposition that collapses on cd (qusp), a Go version manager at uv speed (gv) on the substrate the *v managers share (anyv-core), static PHP binaries that need no apt, brew or Docker (php-build-standalone), and my own tap (homebrew-tap).</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="knowledge/">
-        <span class="fam-mark" aria-hidden="true">ᚊ</span>
-        <span class="fam-count">4</span>
-        <h3 class="fam-name">Keeping what is learnt</h3>
-        <p class="fam-lead">The layer for remembering what has been read: an Obsidian vault, Git LFS and all, seen as a graph (O6lvl4-knowledge); a CLI that revises a markdown vault by SM-2 (awen); the same thing as a macOS app (memre); and an Astro integration that turns a vault into a static knowledge base (graph-garden).</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="sites/">
-        <span class="fam-mark" aria-hidden="true">ᚋ</span>
-        <span class="fam-count">13</span>
-        <h3 class="fam-name">Pages made to be looked at</h3>
-        <p class="fam-lead">Things that open in a browser and are finished there: a sample portfolio for an artist (hokusai-portfolio) and one for a person (kotorody-portfolio), a timeline of chips and world affairs (chip-war-chronicle), agent benchmarks gathered into one table (agent-bench-matrix), a talk&#39;s slides, small apps that look after a body (gulp-coach, environment-health-viewer, tabi-navi), two that play with sound (pitchy, almide-headset-eq), and plain HTML for paperwork (aid-on-contract-generator, aid-on-invoice-generator, aid-on-tax-calculator).</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="tools/">
-        <span class="fam-mark" aria-hidden="true">ᚌ</span>
-        <span class="fam-count">25</span>
-        <h3 class="fam-name">Tools at hand</h3>
-        <p class="fam-lead">The small binaries written for the day&#39;s work: getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), looking at an environment and a machine (netcheck, igloc, syncenv, macleap, dns-checker), switching accounts (azprofile, chropen), turning what is written into something you can hand over (pagina, premaid, image-catalog-composer), hearing about a supply-chain attack early (tocsin, tocsin-almd), lifting a UI&#39;s structure into a Layout AST (uimodulay), and my own working protocol with the checker that grades against it (O6lvl4-protocol, O6lvl4-vitals).</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="other-langs/">
-        <span class="fam-mark" aria-hidden="true">ᚍ</span>
-        <span class="fam-count">9</span>
-        <h3 class="fam-name">Writing in other languages</h3>
-        <p class="fam-lead">Written outside my own language: lean2ts turns Lean 4 theorems into TypeScript property tests, lean4-rust-backend lowers Lean to Rust, and before either of those comes the practice (hello-lean4, lean-lang-sandbox, lean4-practice, fizzbuzz-lean4-lib, fizzbuzz-lean4-cli); zfp is a zero-cost functional toolkit that disappears into Zig&#39;s types; sashiko watches Ruby&#39;s concurrency boundaries through OpenTelemetry.</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a><a class="fam-card" href="lab/">
-        <span class="fam-mark" aria-hidden="true">ᚎ</span>
-        <span class="fam-count">38</span>
-        <h3 class="fam-name">Things tried out</h3>
-        <p class="fam-lead">Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), a set of JavaScript exercises (aid-on-js-training), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.</p>
-        <span class="fam-go" aria-hidden="true">Open →</span>
-      </a></div>
   </section>
         <section id="notes" class="section" aria-labelledby="heading-notes">
     <div class="section-head">
-      <span class="ogham-mark" aria-hidden="true">ᚇ</span>
+      <span class="ogham-mark" aria-hidden="true">ᚅ</span>
       <h2 class="section-title" id="heading-notes">About this page</h2>
       
     </div>
     <div class="notes-grid"><div class="note-row">
         <h3 class="note-key">The name</h3>
-        <div class="note-body"><p class="readme-p">The name comes from Ogma, the god of eloquence and writing, credited with ogham — an alphabet spelled as notches cut along a stem. The stem down the left edge reads <span class="cut">ᚑᚌᚋᚐ</span> (OGMA), from the foot up, the way a standing stone is read; the notches that open each section count from one to five, the way ogham counts a letter.</p></div>
+        <div class="note-body"><p class="readme-p">The name comes from Ogma, the god of eloquence and writing, credited with ogham — an alphabet spelled as notches cut along a stem. The mark that closes the page is that name cut in ogham, <span class="cut">᚛ᚑᚌᚋᚐ᚜</span> (OGMA), between the feather marks an inscription opens and closes with; the notches that open each section count from one to five, the way ogham counts a letter.</p></div>
       </div><div class="note-row">
         <h3 class="note-key">Covers</h3>
         <div class="note-body"><p class="readme-p">265 public repositories under O6lvl4, Aid-On, almide, almide-graphics, almide-ai and almd-mc, forks excluded. Nothing private is shown.</p></div>
@@ -2471,10 +2305,7 @@ body::after {
       </div>
     </main>
     <footer class="site-footer">
-    <span class="footer-copy">O6lvl4</span>
-    <nav class="footer-social" aria-label="Links"><a class="footer-social-link" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a><a class="footer-social-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Almide</span></a></nav>
     <span class="footer-ogham" title="ogma">᚛ᚑᚌᚋᚐ᚜</span>
-    <span class="footer-copy">265 repos · 14 Families</span>
   </footer>
   </div>
 </div>

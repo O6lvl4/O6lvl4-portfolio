@@ -218,8 +218,11 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── Scroll-driven entrance ───────────────────────────────────────────── */
 
+/* A section rises as it comes into view, but it never waits at nothing: the floor is a quarter
+   of full opacity, so a section is legible before the scroll reaches it — which is what a
+   printout, a thumbnail and a jump straight to an anchor all get. */
 @keyframes s-enter {
-  from { opacity: 0; translate: 0 20px; }
+  from { opacity: 0.25; translate: 0 14px; }
   to   { opacity: 1; translate: 0 0; }
 }
 
@@ -229,10 +232,14 @@ a { color: inherit; text-decoration: none; }
   animation-range: entry 0% entry 30%;
 }
 
-.section + .section {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 800px;
+/* asked for less motion: the page is simply at rest */
+@media (prefers-reduced-motion: reduce) {
+  .section { animation: none; }
 }
+
+/* The sections used to be skipped until they came near the viewport (`content-visibility: auto`).
+   It saved little on a page of five sections and cost the page its own picture: a printout, a
+   thumbnail and a full-page capture all came out blank below the first screen. */
 
 /* ─── Red dot pulse ─────────────────────────────────────────────────────── */
 
@@ -244,92 +251,12 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── App shell ─────────────────────────────────────────────────────────── */
 
+/* One column. The stem used to stand in a rail down the left edge; it closes the page at the
+   foot now, where an inscription's own end mark goes, and the text has the width back. */
 .app-shell {
   display: grid;
-  grid-template-columns: var(--rail-w) 1fr;
+  grid-template-columns: 1fr;
   min-height: 100svh;
-}
-
-/* ─── Left rail ─────────────────────────────────────────────────────────── */
-
-.rail {
-  grid-row: 1 / -1;
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  background: var(--rail-bg);
-  border-right: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-block: 1.75rem 2rem;
-  overflow: hidden;
-  z-index: 20;
-}
-
-/* Ogham trunk — sideways-lr bottom-to-top, fallback to vertical-rl rotated */
-.ogham-trunk {
-  font-family: var(--font-ogham);
-  font-size: 2.25rem;
-  letter-spacing: 0.04em;
-  color: var(--fg-muted);
-  writing-mode: sideways-lr;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  line-height: 1;
-  transition: color 0.3s;
-}
-
-@supports not (writing-mode: sideways-lr) {
-  .ogham-trunk {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-  }
-}
-
-.ogham-trunk:hover { color: var(--fg); }
-
-/* Year list runs down the rail — each year has a hairline crossing */
-.rail-year-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  align-items: center;
-  margin-bottom: 1.25rem;
-}
-
-.rail-year {
-  font-family: var(--font-mono);
-  font-size: 0.4375rem;
-  letter-spacing: 0.12em;
-  color: var(--fg-faint);
-  writing-mode: sideways-lr;
-  position: relative;
-}
-
-/* The single line crossing the trunk */
-.rail-year::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -300%;
-  right: -300%;
-  height: 1px;
-  background: var(--border);
-}
-
-.rail-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--red);
-  flex-shrink: 0;
-  margin-bottom: 2rem;
-  animation: pulse-ring 2.4s ease-out infinite;
 }
 
 /* ─── Main column ───────────────────────────────────────────────────────── */
@@ -1461,16 +1388,12 @@ h4.readme-h2 {
     --section-gap: 88px;
     --profile-w: 100%;
   }
-  .stage-grid    { grid-template-columns: 1fr 1fr; }
   .lang-dist-grid { grid-template-columns: 1fr; }
   .hdr-nav       { display: none; }
 }
 
 @media (max-width: 640px) {
   :root { --gutter: 20px; --section-gap: 60px; }
-  .app-shell { grid-template-columns: 1fr; }
-  .rail      { display: none; }
-  .stage-grid { grid-template-columns: 1fr; }
   .overview-kpis { grid-template-columns: 1fr 1fr; }
   .stat-panel {
     grid-template-columns: 1fr 1fr;
@@ -1575,35 +1498,20 @@ h4.readme-h2 {
 
 /* ─── the families, and the page each one has ───────────────────────────── */
 
-.fam-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1px;
-  background: var(--border); border: 1px solid var(--border);
+/* One line of links, not fourteen cards: the front page says which families there are and lets a
+   reader open one; the family's own page is where its introduction belongs. */
+.fam-links { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-bottom: 1.5rem; }
+.fam-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.3125rem 0.625rem;
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.04em;
+  color: var(--fg-muted); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  transition: color 0.12s, border-color 0.12s;
 }
-.fam-card {
-  position: relative; display: flex; flex-direction: column; gap: 0.5rem;
-  padding: 1.5rem 1.625rem 1.375rem; background: var(--bg);
-  transition: background 0.12s;
-}
-.fam-card:hover { background: var(--bg-raised); }
-.fam-mark {
-  position: absolute; top: 1.25rem; right: 1.25rem;
-  font-family: var(--font-ogham); font-size: 1.5rem; color: var(--fg-faint);
-}
-.fam-count {
-  font-family: var(--font-mono); font-size: 1.25rem; font-weight: 500;
-  font-variant-numeric: tabular-nums; color: var(--red); line-height: 1;
-}
-.fam-name { font-size: 1rem; font-weight: 600; letter-spacing: 0.01em; line-height: 1.4; }
-.fam-lead {
-  font-size: 0.75rem; line-height: 1.7; color: var(--fg-muted); text-wrap: pretty;
-  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
-}
-.fam-go {
-  margin-top: auto; padding-top: 0.75rem;
-  font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.15em;
-  text-transform: uppercase; color: var(--fg-faint);
-}
-.fam-card:hover .fam-go { color: var(--red); }
+.fam-link:hover { color: var(--fg); border-color: var(--border-mid); }
+.fam-link-mark { font-family: var(--font-ogham); font-size: 0.8125rem; color: var(--fg-faint); }
+.fam-link:hover .fam-link-mark { color: var(--red); }
+.fam-link-count { font-size: 0.5625rem; color: var(--fg-faint); font-variant-numeric: tabular-nums; }
 
 /* a family's own page */
 .fam-hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: var(--item-gap); }
@@ -1623,12 +1531,13 @@ h4.readme-h2 {
 .profile-card { align-self: start; }
 /* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
 .profile-card .stat-panel {
-  border: 0; border-bottom: 1px solid var(--border);
+  border: 0; border-bottom: 1px solid var(--border); border-radius: 0;
   background: transparent; box-shadow: none; margin-bottom: 0.5rem;
 }
 .profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
 .profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
 .profile-card .stat-val { font-size: 1.25rem; }
+
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1641,9 +1550,11 @@ h4.readme-h2 {
 .profile-name { font-family: var(--font-mono); font-size: 1.0625rem; letter-spacing: 0.02em; color: var(--fg); }
 .profile-role { font-size: 0.75rem; line-height: 1.55; color: var(--fg-muted); margin-top: 0.25rem; }
 .profile-ogham { font-family: var(--font-ogham); font-size: 0.9375rem; color: var(--red); margin-top: 0.3rem; }
+/* One separator between two things, not two: the last row above already closes with a hairline,
+   so the links at the foot of the card draw none of their own a few pixels under it. */
 .profile-links {
   display: flex; flex-wrap: wrap; gap: 0.5rem;
-  padding-top: 1.125rem; margin-top: 0.5rem; border-top: 1px solid var(--border);
+  padding-top: 1.125rem;
 }
 
 /* ─── the commits of each org ───────────────────────────────────────────── */
@@ -1668,6 +1579,15 @@ h4.readme-h2 {
 @media (max-width: 1240px) {
   .hdr-readout { display: none; }
 }
+
+/* the foot holds one mark, so it stands in the middle of the page rather than at one end */
+.site-footer { justify-content: center; }
+
+/* The family filter was a strip with a border, and the surfaces layer then gave every chip in it
+   a border of its own — two lines a pixel apart all the way round. The chips are the panels, as
+   the language chips beside them are, so the strip keeps none. */
+.org-rail { border: 0; background: transparent; box-shadow: none; gap: 0.375rem; }
+.org-rail .org-btn { border-radius: var(--radius-sm); border-right: 1px solid var(--border); }
 
 /* the way back, above a page that is one long list: it sits close to the list, not a screen away */
 .list-intro { padding-top: 2.5rem; margin-bottom: calc(var(--section-gap) * -0.6); }
@@ -1788,9 +1708,8 @@ body::after {
 .lang-chip,
 .sort-bar { border-radius: var(--radius-sm); }
 
-/* the bars that stay put are the ground's own colour, so nothing shows through them */
+/* the bar that stays put is the ground's own colour, so nothing shows through it */
 .site-header { background: var(--bg); border-width: 0 0 1px; }
-.rail { background: var(--rail-bg); border-width: 0 1px 0 0; }
 
 /* inside a group, the pieces share one panel rather than each carrying their own */
 .sort-bar,
@@ -1829,7 +1748,6 @@ body::after {
 }
 
 /* the red index mark carries a little light of its own */
-.rail-dot { box-shadow: 0 0 12px 1px color-mix(in oklch, var(--red) 45%, transparent); }
 .hdr-callsign::before { box-shadow: 0 0 10px 1px color-mix(in oklch, var(--red) 50%, transparent); }
 .tl-bar.current { box-shadow: 0 0 20px -6px color-mix(in oklch, var(--red) 60%, transparent); }
 
@@ -1843,16 +1761,6 @@ body::after {
   pointer-events: none;
   background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--red) 70%, transparent) 30%, color-mix(in oklch, var(--red) 70%, transparent) 70%, transparent);
 }
-.rail { position: sticky; }
-.rail::after {
-  content: '';
-  position: absolute;
-  inset: 0 -1px 0 auto;
-  width: 1px;
-  pointer-events: none;
-  background: linear-gradient(180deg, transparent, color-mix(in oklch, var(--red) 55%, transparent) 40%, transparent 85%);
-}
-
 /* code and terminal output sit inside a panel, not on it */
 .readme-code {
   border-radius: var(--radius-sm);
@@ -1869,14 +1777,10 @@ body::after {
 <body>
 <div class="app-shell">
   <a class="skip-link" href="#main-content">跳到正文</a>
-  <aside class="rail" aria-hidden="true">
-    <div class="ogham-trunk" title="ogma">᚛ᚑᚌᚋᚐ᚜</div>
-    <div class="rail-dot"></div>
-  </aside>
   <div class="main-wrap">
     <header class="site-header">
     <a class="hdr-callsign" href="./">O6lvl4</a>
-    <nav class="hdr-nav" aria-label="本页各节"><a href="./#entry" aria-current="location">关于</a><a href="works/">作品</a><a href="./#object">详看一件</a><a href="./#overview">总体</a><a href="./#langs">用什么写的</a><a href="./#families">系列</a></nav>
+    <nav class="hdr-nav" aria-label="本页各节"><a href="./#entry" aria-current="location">关于</a><a href="works/">作品</a><a href="./#object">详看一件</a><a href="./#breakdown">语言与存放处</a></nav>
     <div class="hdr-right">
       <div class="hdr-readout"><span class="hdr-readout-val">265</span><span class="hdr-readout-lbl">仓库</span></div>
       <div class="hdr-readout"><span class="hdr-readout-val">19</span><span class="hdr-readout-lbl">语言</span></div>
@@ -1924,6 +1828,35 @@ body::after {
       <span class="section-count">14 / 265</span>
     </div>
     <p class="works-lead">每个系列各取一个：最常动手的那个。其余都在列表里。</p>
+    <nav class="fam-links" aria-label="系列"><a class="fam-link" href="almide/" title="静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。另一门语言是 wyve：在 LLVM IR 之上一层放置静态语义，让优化器把契约写下来，用 Racket 写成">
+        <span class="fam-link-mark" aria-hidden="true">ᚁ</span>做语言<span class="fam-link-count">18</span>
+      </a><a class="fam-link" href="stdlib/" title="在用这门语言写东西之前，先备好用它写的零件：纯 Almide 实现的编解码（Base64、CSV、TOML、YAML、SVG）、密码学（AES、RSA、SHA-1）、任意精度整数、把多条正则合成单一 DFA 的库，以及 SQLite 接口">
+        <span class="fam-link-mark" aria-hidden="true">ᚂ</span>Almide 标准库<span class="fam-link-count">11</span>
+      </a><a class="fam-link" href="agent-tools/" title="让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要">
+        <span class="fam-link-mark" aria-hidden="true">ᚃ</span>给编码智能体的工具<span class="fam-link-count">25</span>
+      </a><a class="fam-link" href="llm/" title="真正把模型用起来所需要的：对任何供应商都同一张脸的入口（unillm、almai）与语音入口（unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus）、在终端用同一个口子调多个模型的 CLI（llmine），以及用纯 Almide 写、跑在 WASM 上的模型本身（bonsai-almide）">
+        <span class="fam-link-mark" aria-hidden="true">ᚄ</span>智能体与 LLM 的基础<span class="fam-link-count">19</span>
+      </a><a class="fam-link" href="fizz/" title="把 AITuber「Fizz」拆成可以逐个验证的零件：读取评论（来源、去重、分类、匹配）、组织回应（persona、记忆 L1–L3、历史、断句），以及驱动身体（口型、表情、注视、待机、手势、VRM 骨骼）。零件之间说的是同一套协议（fizz-protocol），整条回应的组装交给 fizz-brain-orchestrator。每个都是单一职责的纯函数，用 Almide 写成">
+        <span class="fam-link-mark" aria-hidden="true">ᚅ</span>AITuber 的零件<span class="fam-link-count">52</span>
+      </a><a class="fam-link" href="mc/" title="用 Almide 自底向上实现 Minecraft 协议（mc-protocol）：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人（mc-bot、craftsman）——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写">
+        <span class="fam-link-mark" aria-hidden="true">ᚆ</span>用 Almide 写 Minecraft<span class="fam-link-count">26</span>
+      </a><a class="fam-link" href="graphics/" title="在 Almide 里作画的那一层：GPU 原生 UI（ceangal）与它的动画引擎（ceangal-anime）、从 WASM 驱动 Canvas 与 WebGL（obsid）、纯数学基元（lumen）、VRM/glTF 角色层（cruth）与文件本身的工具箱（nendo）、神经网络基本部件（nn），以及带反向模式 autograd 的可微编程基础（slabhra）">
+        <span class="fam-link-mark" aria-hidden="true">ᚇ</span>绘制与其下的数学<span class="fam-link-count">9</span>
+      </a><a class="fam-link" href="web/" title="跑在 Cloudflare Workers 与浏览器上的那一层：不做包装、直接让 ReadableStream 具备反应式能力的 nagare 及其之上的桥接（接 Cloudflare 任务队列的 didoq、接 Qwik 的 qwiks）、边缘原生认证（auth、auth-providers-ts）、色彩令牌与主题的设计系统（design-system、aid-on-ui-system）、知识库 API 客户端（outline-api-client-ts）">
+        <span class="fam-link-mark" aria-hidden="true">ᚈ</span>边缘与 Web 的零件<span class="fam-link-count">11</span>
+      </a><a class="fam-link" href="toolchain/" title="让每种语言的工具链在需要时才以需要的版本出现在手边：随 cd 坍缩成一个的叠加态（qusp）、达到 uv 速度的 Go 版本管理器（gv）及 *v 系共用的底座（anyv-core）、不需要 apt/brew/Docker 的静态 PHP（php-build-standalone），以及自己的 formula 仓库（homebrew-tap）">
+        <span class="fam-link-mark" aria-hidden="true">ᚉ</span>把语言环境准备好<span class="fam-link-count">5</span>
+      </a><a class="fam-link" href="knowledge/" title="为了记住读过的东西而做的一层：把 Obsidian 保管库连同 Git LFS 一起以图的方式查看（O6lvl4-knowledge）、用 SM-2 复习 markdown 保管库的 CLI（awen）、把同一件事做成 macOS 应用（memre）、把保管库变成静态知识库的 Astro 集成（graph-garden）">
+        <span class="fam-link-mark" aria-hidden="true">ᚊ</span>把学到的留住<span class="fam-link-count">4</span>
+      </a><a class="fam-link" href="sites/" title="在浏览器里打开、到此为止的东西：画家作品集样例（hokusai-portfolio）与某人的作品集（kotorody-portfolio）、半导体与世界局势的时间线（chip-war-chronicle）、把智能体基准汇成一张表（agent-bench-matrix）、演讲幻灯片、照看身体的小应用（gulp-coach、environment-health-viewer、tabi-navi）、玩声音的两个（pitchy、almide-headset-eq），以及为文书写的纯 HTML（aid-on-contract-generator、aid-on-invoice-generator、aid-on-tax-calculator）">
+        <span class="fam-link-mark" aria-hidden="true">ᚋ</span>给人看的页面<span class="fam-link-count">13</span>
+      </a><a class="fam-link" href="tools/" title="为每天的活儿写的小可执行文件：处理文书（keiri、pdf-burger、resepy、capto、gformiac）、查看环境与机器（netcheck、igloc、syncenv、macleap、dns-checker）、切换账号（azprofile、chropen）、把写好的东西变成能交出去的形态（pagina、premaid、image-catalog-composer）、尽早知道供应链攻击（tocsin、tocsin-almd）、把界面结构提成 Layout AST（uimodulay），以及自己的工作规约与对照它的合规检查器（O6lvl4-protocol、O6lvl4-vitals）">
+        <span class="fam-link-mark" aria-hidden="true">ᚌ</span>手边的工具<span class="fam-link-count">25</span>
+      </a><a class="fam-link" href="other-langs/" title="在自制语言之外写的东西：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、把 Lean 降到 Rust 的后端（lean4-rust-backend）、在这之前的证明练习（hello-lean4、lean-lang-sandbox、lean4-practice、fizzbuzz-lean4-lib、fizzbuzz-lean4-cli）、在 Zig 的类型里消失的零成本函数式工具箱（zfp），以及用 OpenTelemetry 看 Ruby 并发边界的 sashiko">
+        <span class="fam-link-mark" aria-hidden="true">ᚍ</span>用别的语言写<span class="fam-link-count">9</span>
+      </a><a class="fam-link" href="lab/" title="碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide）、JavaScript 习题集（aid-on-js-training），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用">
+        <span class="fam-link-mark" aria-hidden="true">ᚎ</span>试过的东西<span class="fam-link-count">38</span>
+      </a></nav>
     <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-13" data-commits="8502" data-rank="0">
       <a class="repo-row" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">
         <div>
@@ -2173,7 +2106,7 @@ body::after {
     </div>
     <div class="object-grid">
       <dl class="object-meta-panel" aria-label="almide">
-      <div class="meta-row"><dt class="meta-key">名称</dt><dd class="meta-val accent">almide</dd></div><div class="meta-row"><dt class="meta-key">存放处</dt><dd class="meta-val">做语言</dd></div><div class="meta-row"><dt class="meta-key">语言</dt><dd class="meta-val">Rust</dd></div><div class="meta-row"><dt class="meta-key">提交</dt><dd class="meta-val">8502</dd></div><div class="meta-row"><dt class="meta-key">首次</dt><dd class="meta-val">2026年9月</dd></div><div class="meta-row"><dt class="meta-key">版本</dt><dd class="meta-val">v0.63.0-rc1</dd></div><div class="meta-row"><dt class="meta-key">星标</dt><dd class="meta-val">34</dd></div><div class="meta-row"><dt class="meta-key">更新</dt><dd class="meta-val">2026年9月</dd></div>
+      <div class="meta-row"><dt class="meta-key">名称</dt><dd class="meta-val accent">almide</dd></div><div class="meta-row"><dt class="meta-key">系列</dt><dd class="meta-val">做语言</dd></div><div class="meta-row"><dt class="meta-key">存放处</dt><dd class="meta-val">almide</dd></div><div class="meta-row"><dt class="meta-key">语言</dt><dd class="meta-val">Rust</dd></div><div class="meta-row"><dt class="meta-key">提交</dt><dd class="meta-val">8502</dd></div><div class="meta-row"><dt class="meta-key">首次</dt><dd class="meta-val">2026年9月</dd></div><div class="meta-row"><dt class="meta-key">版本</dt><dd class="meta-val">v0.63.0-rc1</dd></div><div class="meta-row"><dt class="meta-key">星标</dt><dd class="meta-val">34</dd></div><div class="meta-row"><dt class="meta-key">更新</dt><dd class="meta-val">2026年9月</dd></div>
       <div class="meta-row"><dt class="meta-key">话题</dt><dd class="meta-topics"><span class="repo-topic">Rust</span><span class="repo-topic">Almide</span><span class="repo-topic">Shell</span><span class="repo-topic">code-generation</span></dd></div>
       <div class="meta-row"><dt class="meta-key">去处</dt><dd class="meta-val"><a class="meta-link" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">仓库</a><a class="meta-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer">站点</a></dd></div>
     </dl>
@@ -2185,60 +2118,13 @@ body::after {
     </article>
     </div>
   </section>
-        <section id="overview" class="section" aria-labelledby="heading-overview">
+        <section id="breakdown" class="section" aria-labelledby="heading-breakdown">
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚄ</span>
-      <h2 class="section-title" id="heading-overview">总体</h2>
+      <h2 class="section-title" id="heading-breakdown">语言与存放处</h2>
       
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">265</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">13,793</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">19</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">5</div><div class="kpi-label">年数</div></div></div>
-    <div class="org-chart">
-      <div class="timeline-sub">各存放处的提交</div>
-      <div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/almide" target="_blank" rel="noopener noreferrer">almide<span class="lbr-sub">29</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="10728" aria-valuemin="0" aria-valuemax="10728" aria-label="almide">
-          <div class="lbr-fill" style="width:100.0%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">10,728</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer">O6lvl4<span class="lbr-sub">112</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="1938" aria-valuemin="0" aria-valuemax="10728" aria-label="O6lvl4">
-          <div class="lbr-fill" style="width:18.1%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">1,938</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/Aid-On" target="_blank" rel="noopener noreferrer">Aid-On<span class="lbr-sub">88</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="677" aria-valuemin="0" aria-valuemax="10728" aria-label="Aid-On">
-          <div class="lbr-fill" style="width:6.3%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">677</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/almide-graphics" target="_blank" rel="noopener noreferrer">almide-graphics<span class="lbr-sub">9</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="311" aria-valuemin="0" aria-valuemax="10728" aria-label="almide-graphics">
-          <div class="lbr-fill" style="width:2.9%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">311</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/almd-mc" target="_blank" rel="noopener noreferrer">almd-mc<span class="lbr-sub">24</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="92" aria-valuemin="0" aria-valuemax="10728" aria-label="almd-mc">
-          <div class="lbr-fill" style="width:0.9%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">92</span>
-      </div><div class="lang-bar-row org-bar-row">
-        <a class="lbr-name" href="https://github.com/almide-ai" target="_blank" rel="noopener noreferrer">almide-ai<span class="lbr-sub">3</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="47" aria-valuemin="0" aria-valuemax="10728" aria-label="almide-ai">
-          <div class="lbr-fill" style="width:0.4%"></div>
-        </div>
-        <span class="lbr-count" aria-hidden="true">47</span>
-      </div>
-    </div>
-  </section>
-        <section class="section" aria-labelledby="heading-langs">
-    <div class="section-head">
-      <span class="ogham-mark" aria-hidden="true">ᚅ</span>
-      <h2 class="section-title" id="heading-langs">用什么写的</h2>
-      <span class="section-count">265 · 19</span>
-    </div>
+    <div class="timeline-sub">用什么写的</div>
     <div class="lang-dist-grid">
       <div><div class="lang-bar-row">
       <span class="lbr-name"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
@@ -2357,108 +2243,56 @@ body::after {
       <span class="lbr-count" aria-hidden="true">1</span>
     </div></div>
     </div>
-  </section>
-        <section id="families" class="section" aria-labelledby="heading-families">
-    <div class="section-head">
-      <span class="ogham-mark" aria-hidden="true">ᚆ</span>
-      <h2 class="section-title" id="heading-families">系列</h2>
-      <span class="section-count">14</span>
+    <div class="org-chart">
+      <div class="timeline-sub">各存放处的提交</div>
+      <div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/almide" target="_blank" rel="noopener noreferrer">almide<span class="lbr-sub">29</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="10728" aria-valuemin="0" aria-valuemax="10728" aria-label="almide">
+          <div class="lbr-fill" style="width:100.0%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">10,728</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer">O6lvl4<span class="lbr-sub">112</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="1938" aria-valuemin="0" aria-valuemax="10728" aria-label="O6lvl4">
+          <div class="lbr-fill" style="width:18.1%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">1,938</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/Aid-On" target="_blank" rel="noopener noreferrer">Aid-On<span class="lbr-sub">88</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="677" aria-valuemin="0" aria-valuemax="10728" aria-label="Aid-On">
+          <div class="lbr-fill" style="width:6.3%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">677</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/almide-graphics" target="_blank" rel="noopener noreferrer">almide-graphics<span class="lbr-sub">9</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="311" aria-valuemin="0" aria-valuemax="10728" aria-label="almide-graphics">
+          <div class="lbr-fill" style="width:2.9%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">311</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/almd-mc" target="_blank" rel="noopener noreferrer">almd-mc<span class="lbr-sub">24</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="92" aria-valuemin="0" aria-valuemax="10728" aria-label="almd-mc">
+          <div class="lbr-fill" style="width:0.9%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">92</span>
+      </div><div class="lang-bar-row org-bar-row">
+        <a class="lbr-name" href="https://github.com/almide-ai" target="_blank" rel="noopener noreferrer">almide-ai<span class="lbr-sub">3</span></a>
+        <div class="lbr-track" role="meter" aria-valuenow="47" aria-valuemin="0" aria-valuemax="10728" aria-label="almide-ai">
+          <div class="lbr-fill" style="width:0.4%"></div>
+        </div>
+        <span class="lbr-count" aria-hidden="true">47</span>
+      </div>
     </div>
-    <div class="fam-grid"><a class="fam-card" href="almide/">
-        <span class="fam-mark" aria-hidden="true">ᚁ</span>
-        <span class="fam-count">18</span>
-        <h3 class="fam-name">做语言</h3>
-        <p class="fam-lead">静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。另一门语言是 wyve：在 LLVM IR 之上一层放置静态语义，让优化器把契约写下来，用 Racket 写成</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="stdlib/">
-        <span class="fam-mark" aria-hidden="true">ᚂ</span>
-        <span class="fam-count">11</span>
-        <h3 class="fam-name">Almide 标准库</h3>
-        <p class="fam-lead">在用这门语言写东西之前，先备好用它写的零件：纯 Almide 实现的编解码（Base64、CSV、TOML、YAML、SVG）、密码学（AES、RSA、SHA-1）、任意精度整数、把多条正则合成单一 DFA 的库，以及 SQLite 接口</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="agent-tools/">
-        <span class="fam-mark" aria-hidden="true">ᚃ</span>
-        <span class="fam-count">25</span>
-        <h3 class="fam-name">给编码智能体的工具</h3>
-        <p class="fam-lead">让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="llm/">
-        <span class="fam-mark" aria-hidden="true">ᚄ</span>
-        <span class="fam-count">19</span>
-        <h3 class="fam-name">智能体与 LLM 的基础</h3>
-        <p class="fam-lead">真正把模型用起来所需要的：对任何供应商都同一张脸的入口（unillm、almai）与语音入口（unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus）、在终端用同一个口子调多个模型的 CLI（llmine），以及用纯 Almide 写、跑在 WASM 上的模型本身（bonsai-almide）</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="fizz/">
-        <span class="fam-mark" aria-hidden="true">ᚅ</span>
-        <span class="fam-count">52</span>
-        <h3 class="fam-name">AITuber 的零件</h3>
-        <p class="fam-lead">把 AITuber「Fizz」拆成可以逐个验证的零件：读取评论（来源、去重、分类、匹配）、组织回应（persona、记忆 L1–L3、历史、断句），以及驱动身体（口型、表情、注视、待机、手势、VRM 骨骼）。零件之间说的是同一套协议（fizz-protocol），整条回应的组装交给 fizz-brain-orchestrator。每个都是单一职责的纯函数，用 Almide 写成</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="mc/">
-        <span class="fam-mark" aria-hidden="true">ᚆ</span>
-        <span class="fam-count">26</span>
-        <h3 class="fam-name">用 Almide 写 Minecraft</h3>
-        <p class="fam-lead">用 Almide 自底向上实现 Minecraft 协议（mc-protocol）：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人（mc-bot、craftsman）——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="graphics/">
-        <span class="fam-mark" aria-hidden="true">ᚇ</span>
-        <span class="fam-count">9</span>
-        <h3 class="fam-name">绘制与其下的数学</h3>
-        <p class="fam-lead">在 Almide 里作画的那一层：GPU 原生 UI（ceangal）与它的动画引擎（ceangal-anime）、从 WASM 驱动 Canvas 与 WebGL（obsid）、纯数学基元（lumen）、VRM/glTF 角色层（cruth）与文件本身的工具箱（nendo）、神经网络基本部件（nn），以及带反向模式 autograd 的可微编程基础（slabhra）</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="web/">
-        <span class="fam-mark" aria-hidden="true">ᚈ</span>
-        <span class="fam-count">11</span>
-        <h3 class="fam-name">边缘与 Web 的零件</h3>
-        <p class="fam-lead">跑在 Cloudflare Workers 与浏览器上的那一层：不做包装、直接让 ReadableStream 具备反应式能力的 nagare 及其之上的桥接（接 Cloudflare 任务队列的 didoq、接 Qwik 的 qwiks）、边缘原生认证（auth、auth-providers-ts）、色彩令牌与主题的设计系统（design-system、aid-on-ui-system）、知识库 API 客户端（outline-api-client-ts）</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="toolchain/">
-        <span class="fam-mark" aria-hidden="true">ᚉ</span>
-        <span class="fam-count">5</span>
-        <h3 class="fam-name">把语言环境准备好</h3>
-        <p class="fam-lead">让每种语言的工具链在需要时才以需要的版本出现在手边：随 cd 坍缩成一个的叠加态（qusp）、达到 uv 速度的 Go 版本管理器（gv）及 *v 系共用的底座（anyv-core）、不需要 apt/brew/Docker 的静态 PHP（php-build-standalone），以及自己的 formula 仓库（homebrew-tap）</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="knowledge/">
-        <span class="fam-mark" aria-hidden="true">ᚊ</span>
-        <span class="fam-count">4</span>
-        <h3 class="fam-name">把学到的留住</h3>
-        <p class="fam-lead">为了记住读过的东西而做的一层：把 Obsidian 保管库连同 Git LFS 一起以图的方式查看（O6lvl4-knowledge）、用 SM-2 复习 markdown 保管库的 CLI（awen）、把同一件事做成 macOS 应用（memre）、把保管库变成静态知识库的 Astro 集成（graph-garden）</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="sites/">
-        <span class="fam-mark" aria-hidden="true">ᚋ</span>
-        <span class="fam-count">13</span>
-        <h3 class="fam-name">给人看的页面</h3>
-        <p class="fam-lead">在浏览器里打开、到此为止的东西：画家作品集样例（hokusai-portfolio）与某人的作品集（kotorody-portfolio）、半导体与世界局势的时间线（chip-war-chronicle）、把智能体基准汇成一张表（agent-bench-matrix）、演讲幻灯片、照看身体的小应用（gulp-coach、environment-health-viewer、tabi-navi）、玩声音的两个（pitchy、almide-headset-eq），以及为文书写的纯 HTML（aid-on-contract-generator、aid-on-invoice-generator、aid-on-tax-calculator）</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="tools/">
-        <span class="fam-mark" aria-hidden="true">ᚌ</span>
-        <span class="fam-count">25</span>
-        <h3 class="fam-name">手边的工具</h3>
-        <p class="fam-lead">为每天的活儿写的小可执行文件：处理文书（keiri、pdf-burger、resepy、capto、gformiac）、查看环境与机器（netcheck、igloc、syncenv、macleap、dns-checker）、切换账号（azprofile、chropen）、把写好的东西变成能交出去的形态（pagina、premaid、image-catalog-composer）、尽早知道供应链攻击（tocsin、tocsin-almd）、把界面结构提成 Layout AST（uimodulay），以及自己的工作规约与对照它的合规检查器（O6lvl4-protocol、O6lvl4-vitals）</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="other-langs/">
-        <span class="fam-mark" aria-hidden="true">ᚍ</span>
-        <span class="fam-count">9</span>
-        <h3 class="fam-name">用别的语言写</h3>
-        <p class="fam-lead">在自制语言之外写的东西：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、把 Lean 降到 Rust 的后端（lean4-rust-backend）、在这之前的证明练习（hello-lean4、lean-lang-sandbox、lean4-practice、fizzbuzz-lean4-lib、fizzbuzz-lean4-cli）、在 Zig 的类型里消失的零成本函数式工具箱（zfp），以及用 OpenTelemetry 看 Ruby 并发边界的 sashiko</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a><a class="fam-card" href="lab/">
-        <span class="fam-mark" aria-hidden="true">ᚎ</span>
-        <span class="fam-count">38</span>
-        <h3 class="fam-name">试过的东西</h3>
-        <p class="fam-lead">碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide）、JavaScript 习题集（aid-on-js-training），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用</p>
-        <span class="fam-go" aria-hidden="true">打开 →</span>
-      </a></div>
   </section>
         <section id="notes" class="section" aria-labelledby="heading-notes">
     <div class="section-head">
-      <span class="ogham-mark" aria-hidden="true">ᚇ</span>
+      <span class="ogham-mark" aria-hidden="true">ᚅ</span>
       <h2 class="section-title" id="heading-notes">关于本页</h2>
       
     </div>
     <div class="notes-grid"><div class="note-row">
         <h3 class="note-key">名字</h3>
-        <div class="note-body"><p class="readme-p">名字取自雄辩与文字之神奥格玛（Ogma），相传欧甘文字由他所创——以刻在竖线上的刻痕拼写。左侧竖线上刻的是 <span class="cut">ᚑᚌᚋᚐ</span>（OGMA），如石碑一般自下而上阅读；每节标题前的刻痕以一至五道计数，与欧甘记一个字母的方式相同。</p></div>
+        <div class="note-body"><p class="readme-p">名字取自雄辩与文字之神奥格玛（Ogma），相传欧甘文字由他所创——以刻在竖线上的刻痕拼写。页面末尾的那个记号就是用欧甘文刻的 <span class="cut">᚛ᚑᚌᚋᚐ᚜</span>（OGMA），两端以碑文起止的羽状符号收束；每节标题前的刻痕以一至五道计数，与欧甘记一个字母的方式相同。</p></div>
       </div><div class="note-row">
         <h3 class="note-key">收录</h3>
         <div class="note-body"><p class="readme-p">O6lvl4、Aid-On、almide、almide-graphics、almide-ai、almd-mc 的 265 个公开仓库（不含 fork）。不公开的仓库不在此列。</p></div>
@@ -2471,10 +2305,7 @@ body::after {
       </div>
     </main>
     <footer class="site-footer">
-    <span class="footer-copy">O6lvl4</span>
-    <nav class="footer-social" aria-label="去处"><a class="footer-social-link" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a><a class="footer-social-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Almide</span></a></nav>
     <span class="footer-ogham" title="ogma">᚛ᚑᚌᚋᚐ᚜</span>
-    <span class="footer-copy">265 仓库 · 14 系列</span>
   </footer>
   </div>
 </div>
