@@ -19,7 +19,7 @@
   },
   "first": "2026-02-08",
   "last": "2026-02-17",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "agent-sdk",
    "claude-ai",
@@ -110,7 +110,7 @@
   "first": "2026-02-21",
   "last": "2026-02-22",
   "tag": "v0.1.0",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "functional-programming",
    "maybe",
@@ -147,7 +147,7 @@
   "first": "2026-09-08",
   "last": "2026-09-18",
   "tag": "v0.2.11",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -216,48 +216,14 @@
   "first": "2026-09-08",
   "last": "2026-09-18",
   "tag": "v0.4.16",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
-  "plate": "terminal",
-  "terminal": {
-   "cmd": "gramide --help",
-   "out": "usage: gramide languages\n       gramide version\n       gramide (parse | tokens | outline | symbols | symbols-recovered | tags) <file>\n       gramide (check | balance) <file>...\n       gramide map <dir> [--budget N] [--task TEXT]\n       gramide reparse <file> --edit START:OLD_END:NEW_END --new <edited file> [--nodes]\n       gramide reparse-bench <file> [--edits N] [--seed S] [--verify K] [--breaking] [--slow N]\n"
-  },
+  "plate": "code",
   "sample": {
    "lang": "",
    "code": "almide install github.com/O6lvl4/gramide-cli --name gramide      # one native binary → ~/.local/bin/gramide"
   },
   "score": 11.7
- },
- {
-  "full": "O6lvl4/gramide-python",
-  "owner": "O6lvl4",
-  "name": "gramide-python",
-  "url": "https://github.com/O6lvl4/gramide-python",
-  "lead": "Python 3.14 for gramide: lexer, grammar, compiled table, symbol rules and edit-time recovery, checked against CPython",
-  "heading": "gramide-python",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "C"
-  ],
-  "stars": 0,
-  "commits": 131,
-  "years": {
-   "2026": 20
-  },
-  "first": "2026-09-08",
-  "last": "2026-09-18",
-  "tag": "v0.1.13",
-  "license": "other",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "almide build cli/main.almd -o gramide_python       # gramide over .py and .pyi alone\n./gramide_python check $(python3.14 -c 'import sysconfig;print(sysconfig.get_path(\"stdlib\"))')/*.py\n./gramide_python outline inspect.py                # `L2-3 method A.m`; nested: `Outer.Inner.method`\n./gramide_python symbols-recovered editing.py      # declarations untouched by the damage, and where the damage is\n./gramide_python gen-table > src/table.almd        # after any change to the grammar"
-  },
-  "score": 11.6
  },
  {
   "full": "O6lvl4/gramide-almide",
@@ -280,42 +246,12 @@
   "first": "2026-09-08",
   "last": "2026-09-18",
   "tag": "v0.1.14",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "",
    "code": "almide build cli/main.almd -o gramide_almide     # gramide over .almd alone\n./gramide_almide check src/*.almd\n./gramide_almide outline src/parser.almd\n./gramide_almide gen-table > src/table.almd      # after any change to the grammar"
-  },
-  "score": 11.6
- },
- {
-  "full": "O6lvl4/gramide-rust",
-  "owner": "O6lvl4",
-  "name": "gramide-rust",
-  "url": "https://github.com/O6lvl4/gramide-rust",
-  "lead": "Rust for gramide: lexer spec, grammar value, compiled table and symbol rules, as one package",
-  "heading": "gramide-rust",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 130,
-  "years": {
-   "2026": 19
-  },
-  "first": "2026-09-08",
-  "last": "2026-09-18",
-  "tag": "v0.1.16",
-  "license": "other",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "almide build cli/main.almd -o gramide_rust     # gramide over .rs alone\n./gramide_rust check src/*.rs\n./gramide_rust outline src/lib.rs              # `L4-4 method S::fmt` under `L3-5 impl fmt::Display for S`\n./gramide_rust gen-table > src/table.almd      # after any change to the grammar"
   },
   "score": 11.6
  },
@@ -340,12 +276,72 @@
   "first": "2026-09-08",
   "last": "2026-09-18",
   "tag": "v0.1.14",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "",
    "code": "almide build cli/main.almd -o gramide_go     # gramide over .go alone\n./gramide_go check $(go env GOROOT)/src/go/parser/*.go\n./gramide_go outline main.go                 # `L5-5 method Shape.Area`: a method named with its receiver\n./gramide_go gen-table > src/table.almd      # after any change to the grammar"
+  },
+  "score": 11.6
+ },
+ {
+  "full": "O6lvl4/gramide-python",
+  "owner": "O6lvl4",
+  "name": "gramide-python",
+  "url": "https://github.com/O6lvl4/gramide-python",
+  "lead": "Python 3.14 for gramide: lexer, grammar, compiled table, symbol rules and edit-time recovery, checked against CPython",
+  "heading": "gramide-python",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "C"
+  ],
+  "stars": 0,
+  "commits": 131,
+  "years": {
+   "2026": 20
+  },
+  "first": "2026-09-08",
+  "last": "2026-09-18",
+  "tag": "v0.1.13",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "almide build cli/main.almd -o gramide_python       # gramide over .py and .pyi alone\n./gramide_python check $(python3.14 -c 'import sysconfig;print(sysconfig.get_path(\"stdlib\"))')/*.py\n./gramide_python outline inspect.py                # `L2-3 method A.m`; nested: `Outer.Inner.method`\n./gramide_python symbols-recovered editing.py      # declarations untouched by the damage, and where the damage is\n./gramide_python gen-table > src/table.almd        # after any change to the grammar"
+  },
+  "score": 11.6
+ },
+ {
+  "full": "O6lvl4/gramide-rust",
+  "owner": "O6lvl4",
+  "name": "gramide-rust",
+  "url": "https://github.com/O6lvl4/gramide-rust",
+  "lead": "Rust for gramide: lexer spec, grammar value, compiled table and symbol rules, as one package",
+  "heading": "gramide-rust",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 130,
+  "years": {
+   "2026": 19
+  },
+  "first": "2026-09-08",
+  "last": "2026-09-18",
+  "tag": "v0.1.16",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "almide build cli/main.almd -o gramide_rust     # gramide over .rs alone\n./gramide_rust check src/*.rs\n./gramide_rust outline src/lib.rs              # `L4-4 method S::fmt` under `L3-5 impl fmt::Display for S`\n./gramide_rust gen-table > src/table.almd      # after any change to the grammar"
   },
   "score": 11.6
  },
@@ -370,26 +366,22 @@
   "first": "2026-04-28",
   "last": "2026-07-07",
   "tag": "v0.32.1",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
+   "asdf",
    "cli",
    "developer-tools",
+   "devtools",
    "mise",
    "multi-language",
    "nix",
    "rust",
+   "toolchain",
    "toolchain-manager",
    "uv",
-   "version-manager",
-   "asdf",
-   "devtools",
-   "toolchain"
+   "version-manager"
   ],
-  "plate": "terminal",
-  "terminal": {
-   "cmd": "qusp --help",
-   "out": "Every language toolchain in superposition. `cd` collapses to one.\n\nUsage: qusp [OPTIONS] <COMMAND>\n\nCommands:\n  backends     List the languages this build of qusp supports\n  install      Install toolchains. With no args, installs everything pinned in qusp.toml (in parallel). With `<lang> <version>`, installs just one\n  sync         Reconcile installs with qusp.toml + qusp.lock. With --frozen, refuses to update qusp.lock and uses lock-as-truth\n  add          Pin and install a tool. Auto-routes to the backend whose registry recognizes the name\n  run          Run a command using the resolved multi-language environment\n  x            Ephemeral run. argv[0]=`quspx` dispatches into this. Resolves, installs (or reuses), executes — without touching qusp.toml/qusp.lock\n  list         List installed toolchains, or remote ones with --remote\n  current      Resolve and report which version applies in the current directory\n  shellenv     Print shell exports (PATH/GOROOT/GEM_HOME/…) for the current project. Source via `eval \"$(qusp shellenv)\"`\n  hook         Print a shell hook that re-applies `qusp shellenv` on every directory change\n  init         Scaffold a starter `qusp.toml` in the current directory\n  outdated     Report toolchains/tools that have newer versions upstream\n  self-update  In-place self-update against the latest GitHub release\n  tree         Show the resolved multi-language environment\n  doctor       Print a gv/uv-style health check\n  dir          Print path of a gv-managed dir (data, cache, …)\n  completions  Generate shell completions\n  setup        One-time system setup: ensure ~/.local/bin is visible to all apps\n  pin          Set, list, or remove the global pin for a language\n  help         Print this message or the help of the given subcommand(s)\n\nOptions:\n  -q, --quiet                          "
-  },
+  "plate": "code",
   "sample": {
    "lang": "bash",
    "code": "brew install O6lvl4/tap/qusp\n```\n\n### Cargo"
@@ -421,40 +413,6 @@
   "score": 10.5
  },
  {
-  "full": "O6lvl4/hew",
-  "owner": "O6lvl4",
-  "name": "hew",
-  "url": "https://github.com/O6lvl4/hew",
-  "lead": "Read code the way a model should: structure-aware cat/grep/sed for coding agents, in Almide",
-  "heading": "hew",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 47,
-  "years": {
-   "2026": 47
-  },
-  "first": "2026-09-06",
-  "last": "2026-09-18",
-  "tag": "v0.4.17",
-  "license": "other",
-  "topics": [],
-  "plate": "terminal",
-  "terminal": {
-   "cmd": "hew --help",
-   "out": "hew 0.4.17 — read code the way a model should\n\n  hew <file> [--lines A-B] [--symbol NAME] [--grep RE] [--around N] [--head N] [--tail N] [--clip N]\n  hew outline <file|dir> [--max N]\n  hew read-json <file> [--max-chars N]\n  hew grep <RE> [path...] [--per-file N] [--max-files N]\n  hew tree <dir> [--depth N]\n  hew init [--global]                 add the note that tells an agent to read code with hew to CLAUDE.md\n\nOutput is numbered so you can come back with --lines; long lines are clipped; gaps are marked.\n--symbol knows Almide, Rust, Go, Python, JavaScript and TypeScript through gramide's grammars, built\nin (a file mid-edit is read through its recovered declarations, and labelled so), and .jsx/.tsx\nthrough declaration heuristics. Set HEW_OUTLINE_BIN to an external outline program (a path in, the\noutline JSON out) for any other language.\n"
-  },
-  "sample": {
-   "lang": "",
-   "code": "hew src/lower.rs --symbol lower_match       one function, found by name\nhew src/lower.rs --grep \"Expr::Match\" --around 4   matches with context, labelled by enclosing fn\nhew src/lower.rs --lines 120-160            a range, numbered\nhew outline src/lower.rs                    the table of contents\nhew grep \"unwrap()\" src                     grep that folds repeats and names the symbol\nhew tree src --depth 2                      a directory, skipping vcs / build / deps"
-  },
-  "score": 9.9
- },
- {
   "full": "O6lvl4/codopsy",
   "owner": "O6lvl4",
   "name": "codopsy",
@@ -475,7 +433,7 @@
   "first": "2026-03-10",
   "last": "2026-08-30",
   "tag": "v2.2.0",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "cli",
    "code-metrics",
@@ -488,14 +446,40 @@
    "static-analysis",
    "tree-sitter"
   ],
-  "plate": "terminal",
-  "terminal": {
-   "cmd": "codopsy --help",
-   "out": "AST-level code quality analyzer for 35 languages\n\nUsage: codopsy <COMMAND>\n\nCommands:\n  analyze  Analyze source files in a directory\n  init     Create a .codopsyrc.json configuration file\n  help     Print this message or the help of the given subcommand(s)\n\nOptions:\n  -h, --help     Print help\n  -V, --version  Print version\n"
-  },
+  "plate": "code",
   "sample": {
    "lang": "console",
    "code": "$ codopsy analyze ./src -v\nAnalyzing ./src ...\nFound 2 source file(s).\n  ✗ ./src/Proof.lean (complexity: 1, cognitive: 0, issues: 1 error)\n      score A (91/100) — complexity 35/35, issues 31/40, structure 25/25\n  ✗ ./src/parser.ts (complexity: 6, cognitive: 11, issues: 1 error, 3 warnings)\n      score B (80/100) — complexity 35/35, issues 20/40, structure 25/25\n\n=== Analysis Summary ===\n  Quality Score:  B (84/100)\n  Files analyzed: 2\n  Total issues:   6\n    Error:   2\n    Warning: 3\n    Info:    1\n  Avg complexity: 2.7\n  Max complexity: 6 (parse in ./src/parser.ts)\n  Scoring thresholds: cyclomatic >10, cognitive >15"
+  },
+  "score": 9.9
+ },
+ {
+  "full": "O6lvl4/hew",
+  "owner": "O6lvl4",
+  "name": "hew",
+  "url": "https://github.com/O6lvl4/hew",
+  "lead": "Read code the way a model should: structure-aware cat/grep/sed for coding agents, in Almide",
+  "heading": "hew",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 47,
+  "years": {
+   "2026": 47
+  },
+  "first": "2026-09-06",
+  "last": "2026-09-18",
+  "tag": "v0.4.17",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "hew src/lower.rs --symbol lower_match       one function, found by name\nhew src/lower.rs --grep \"Expr::Match\" --around 4   matches with context, labelled by enclosing fn\nhew src/lower.rs --lines 120-160            a range, numbered\nhew outline src/lower.rs                    the table of contents\nhew grep \"unwrap()\" src                     grep that folds repeats and names the symbol\nhew tree src --depth 2                      a directory, skipping vcs / build / deps"
   },
   "score": 9.9
  },
@@ -520,7 +504,7 @@
   "first": "2026-09-16",
   "last": "2026-09-18",
   "tag": "v0.3.13",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -550,7 +534,7 @@
   "first": "2026-09-16",
   "last": "2026-09-18",
   "tag": "v0.3.13",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -558,6 +542,40 @@
    "code": "gramide_typescript check   src/*.ts      exit 0 if it parses, else `file:line:col: unexpected X (expected …)`\ngramide_typescript outline app.ts        `L12-40 class Widget`, `  L20-24 method Widget.render`, `L50-61 interface Props`\ngramide_typescript symbols app.ts        versioned JSON names, owners, line and byte ranges\ngramide_typescript tags    app.ts        definitions and references: a repo map's input\ngramide_typescript map .   --budget 1024 --task \"fix the retry\""
   },
   "score": 9.5
+ },
+ {
+  "full": "O6lvl4/onomly",
+  "owner": "O6lvl4",
+  "name": "onomly",
+  "url": "https://github.com/O6lvl4/onomly",
+  "lead": "Product-name due-diligence skill for Claude Code — parallel availability sweep in Almide, bundled as a WASI 0.3 component",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 15,
+  "years": {
+   "2026": 15
+  },
+  "first": "2026-08-30",
+  "last": "2026-09-06",
+  "tag": "v0.4.0",
+  "license": "MIT",
+  "topics": [
+   "almide",
+   "claude-code",
+   "claude-skill",
+   "naming",
+   "wasi",
+   "wasm"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "text",
+   "code": "$ onomly onomly\n=== onomly ===\nnpm ✅  crates.io ✅  RubyGems ✅  Homebrew ✅  GitHub ✅\n.com ✅  .ai ✅  .io ✅  .dev ✅  .org ✅\nonly PyPI taken\n→ verdict: clear on every registry and every domain"
+  },
+  "score": 9.3
  },
  {
   "full": "O6lvl4/lean2ts",
@@ -578,7 +596,7 @@
   },
   "first": "2026-03-01",
   "last": "2026-03-02",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "code-generation",
    "fast-check",
@@ -695,7 +713,7 @@
   "first": "2025-02-26",
   "last": "2025-09-21",
   "tag": "v1.0.6",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -724,7 +742,7 @@
   "first": "2026-04-27",
   "last": "2026-04-28",
   "tag": "v0.6.0",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "cli",
    "developer-tools",
@@ -767,7 +785,7 @@
   "first": "2026-04-26",
   "last": "2026-04-27",
   "tag": "v0.2.0",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "anthropic",
    "claude",
@@ -840,7 +858,7 @@
   "first": "2026-04-29",
   "last": "2026-04-29",
   "tag": "php-8.2.31",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -868,12 +886,40 @@
   "first": "2026-05-04",
   "last": "2026-05-04",
   "tag": "v0.0.5",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "bash",
    "code": "# Install Almide once\ncurl -fsSL https://raw.githubusercontent.com/almide/almide/main/tools/install.sh | sh\n\n# Then install awen\nalmide install github.com/O6lvl4/awen"
+  },
+  "score": 7.2
+ },
+ {
+  "full": "O6lvl4/igloc",
+  "owner": "O6lvl4",
+  "name": "igloc",
+  "url": "https://github.com/O6lvl4/igloc",
+  "lead": "Scan git repos to discover ignored files (.env, secrets). Export/import for machine migration.",
+  "heading": "igloc",
+  "language": "Go",
+  "languages": [
+   "Go"
+  ],
+  "stars": 0,
+  "commits": 10,
+  "years": {
+   "2025": 10
+  },
+  "first": "2025-12-01",
+  "last": "2025-12-01",
+  "tag": "v0.1.0",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "go install github.com/O6lvl4/igloc/cmd/igloc@latest"
   },
   "score": 7.2
  },
@@ -912,34 +958,6 @@
   "score": 7.2
  },
  {
-  "full": "O6lvl4/igloc",
-  "owner": "O6lvl4",
-  "name": "igloc",
-  "url": "https://github.com/O6lvl4/igloc",
-  "lead": "Scan git repos to discover ignored files (.env, secrets). Export/import for machine migration.",
-  "heading": "igloc",
-  "language": "Go",
-  "languages": [
-   "Go"
-  ],
-  "stars": 0,
-  "commits": 10,
-  "years": {
-   "2025": 10
-  },
-  "first": "2025-12-01",
-  "last": "2025-12-01",
-  "tag": "v0.1.0",
-  "license": "mit",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "go install github.com/O6lvl4/igloc/cmd/igloc@latest"
-  },
-  "score": 7.2
- },
- {
   "full": "O6lvl4/anyv-core",
   "owner": "O6lvl4",
   "name": "anyv-core",
@@ -969,6 +987,32 @@
   "sample": {
    "lang": "",
    "code": "nv/\n├── Cargo.toml          # workspace, members = [crates/nv-core, crates/nv-cli]\n└── crates/\n    ├── nv-core/\n    │   ├── Cargo.toml  # depends on anyv-core\n    │   └── src/\n    │       ├── lib.rs\n    │       ├── paths.rs       # 6 lines — see below\n    │       ├── manifest.rs    # parses package.json `engines.node`, .nvmrc\n    │       ├── resolve.rs     # the resolution chain\n    │       ├── install.rs     # downloads from nodejs.org\n    │       ├── registry.rs    # name → npm package map\n    │       ├── npm.rs         # npm registry client\n    │       ├── lock.rs        # nv.lock schema\n    │       └── tool.rs        # global npm-tool installs\n    └── nv-cli/\n        ├── Cargo.toml  # depends on nv-core + anyv-core\n        └── src/main.rs"
+  },
+  "score": 7.1
+ },
+ {
+  "full": "O6lvl4/line-bot-private",
+  "owner": "O6lvl4",
+  "name": "line-bot-private",
+  "url": "https://github.com/O6lvl4/line-bot-private",
+  "lead": "This is a sample template for line-bot-private - Below is a brief explanation of what we have generated for you:",
+  "heading": "line-bot-private",
+  "language": "Go",
+  "languages": [
+   "Go"
+  ],
+  "stars": 1,
+  "commits": 6,
+  "years": {
+   "2022": 6
+  },
+  "first": "2022-10-02",
+  "last": "2022-10-30",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": ".\n├── Makefile                    <-- Make to automate build\n├── README.md                   <-- This instructions file\n├── line-bot-private                 <-- Source code for a lambda function\n│   ├── main.go                 <-- Lambda function code\n│   └── main_test.go            <-- Unit tests\n└── template.yaml"
   },
   "score": 7.1
  },
@@ -1006,32 +1050,6 @@
   "score": 7.1
  },
  {
-  "full": "O6lvl4/line-bot-private",
-  "owner": "O6lvl4",
-  "name": "line-bot-private",
-  "url": "https://github.com/O6lvl4/line-bot-private",
-  "lead": "This is a sample template for line-bot-private - Below is a brief explanation of what we have generated for you:",
-  "heading": "line-bot-private",
-  "language": "Go",
-  "languages": [
-   "Go"
-  ],
-  "stars": 1,
-  "commits": 6,
-  "years": {
-   "2022": 6
-  },
-  "first": "2022-10-02",
-  "last": "2022-10-30",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": ".\n├── Makefile                    <-- Make to automate build\n├── README.md                   <-- This instructions file\n├── line-bot-private                 <-- Source code for a lambda function\n│   ├── main.go                 <-- Lambda function code\n│   └── main_test.go            <-- Unit tests\n└── template.yaml"
-  },
-  "score": 7.1
- },
- {
   "full": "O6lvl4/ClipStash",
   "owner": "O6lvl4",
   "name": "ClipStash",
@@ -1050,7 +1068,7 @@
   "first": "2026-03-15",
   "last": "2026-03-15",
   "tag": "v1.0.0",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "clipboard",
    "cocoa",
@@ -1171,7 +1189,7 @@
   },
   "first": "2026-09-08",
   "last": "2026-09-13",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1216,11 +1234,11 @@
   "url": "https://github.com/O6lvl4/ctxgate",
   "lead": "Agent context firewall for Claude Code: vault tool outputs, show the model a compressed view, pull details on demand. Written in Almide.",
   "heading": "ctxgate",
-  "language": "Rust",
+  "language": "Almide",
   "languages": [
-   "Rust",
    "Almide",
-   "Go"
+   "Rust",
+   "Python"
   ],
   "stars": 0,
   "commits": 34,
@@ -1229,13 +1247,9 @@
   },
   "first": "2026-09-06",
   "last": "2026-09-17",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
-  "plate": "terminal",
-  "terminal": {
-   "cmd": "ctxgate --help",
-   "out": "ctxgate — agent context firewall for Claude Code and Codex\n\nusage:\n  ctxgate hook pre | post | session  Claude Code hook handlers (read JSON on stdin)\n  ctxgate hook codex pre | compact | session  Codex hook handlers\n  ctxgate show <id> [--grep RE] [--around RE [N]] [--lines A-B] [--head N] [--tail N] [--symbol NAME]\n  ctxgate exec [--] <program> [args...]  run a non-interactive command, compress logs, keep exit code\n  ctxgate outline <file>             symbol table (kind, name, line range) of a source file\n  ctxgate summarize \"<command>\"      stdin = that command's output → runner-aware summary (cargo/go/pytest/vitest/jest/tsc)\n  ctxgate list [N]                   last N vault entries (default 20)\n  ctxgate stats                      totals: raw bytes vaulted vs bytes shown\n  ctxgate status                     context budget of the latest session (usage, level, thresholds)\n  ctxgate recall [N]                 recap of the session: files read, timeline of replaced outputs (for after a compaction)\n  ctxgate report                     replacements vs misses, what is softened, and what actually fills the context\n  ctxgate doctor [--codex] [--global] check the selected integration\n  ctxgate init [--codex] [--global]  register Claude Code or Codex hooks and instructions\n  ctxgate gc [--days N] [--dry-run]  drop vault entries older than N days (default CTXGATE_RETAIN_DAYS=14)\n  ctxgate path <id>                  print the raw file path\n\nenv: CTXGATE_HOME, CTXGATE_MAX_BASH/READ/GREP/OTHER, CTXGATE_HEAD, CTXGATE_TAIL,\n     CTXGATE_SALIENT, CTXGATE_LINE_CLIP, CTXGATE_GREP_HEAD_LIMIT, CTXGATE_DEBUG=1\n"
-  },
+  "plate": "code",
   "sample": {
    "lang": "",
    "code": "[ctxgate] cargo test output: 403 lines / 12 KB → vaulted as ctx:9258de38065e (NOT in context).\n  full text: ctxgate show 9258de38065e [--grep RE | --around RE N | --lines A-B | --tail N]\ncargo test: FAILED — 238 passed, 3 failed, 0 ignored\nfailed:\n  parser::match_nested\n  wasm::rc_release\n── parser::match_nested ──\n  thread 'parser::match_nested' panicked at src/parser.rs:412:9:\n  assertion `left == right` failed"
@@ -1265,30 +1279,29 @@
   "score": 5.5
  },
  {
-  "full": "O6lvl4/uimodulay",
+  "full": "O6lvl4/almide-otel-demo",
   "owner": "O6lvl4",
-  "name": "uimodulay",
-  "url": "https://github.com/O6lvl4/uimodulay",
-  "lead": "Semantic UI structure analyzer: URL → Layout AST, hand-drawn wireframes, responsive diff",
-  "language": "HTML",
+  "name": "almide-otel-demo",
+  "url": "https://github.com/O6lvl4/almide-otel-demo",
+  "lead": "A from-scratch OpenTelemetry tracing SDK in pure Almide + a two-service distributed trace in Jaeger",
+  "heading": "almide-otel-demo",
+  "language": "Almide",
   "languages": [
-   "HTML",
-   "TypeScript",
-   "CSS"
+   "Almide"
   ],
   "stars": 0,
-  "commits": 14,
+  "commits": 13,
   "years": {
-   "2026": 14
+   "2026": 13
   },
-  "first": "2026-09-18",
-  "last": "2026-09-18",
-  "license": "mit",
+  "first": "2026-08-03",
+  "last": "2026-08-04",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "",
-   "code": "$ uimodulay https://playwright.dev --ai --depth 2\n\nPage\n├── Header [row 2]\n│   ├── Nav [row 6]\n│   └── Toolbar [row 4]\n├── Hero\n│   ├── Heading \"enables reliable web automation…\"\n│   ├── Paragraph \"One API to drive Chromium, Fire…\"\n│   └── CTA [row 2]\n├── Main\n│   ├── CardGrid [row 3]\n│   ├── Feature\n│   ├── Feature\n│   ├── Feature\n│   ├── BrowserSupport\n│   └── Showcase\n└── Footer\n    ├── LinkColumns [row 3]\n    └── Copyright \"Copyright © 2026 Microsoft\""
+   "code": "almide-checkout    checkout         50.3ms   root\nalmide-checkout    GET /inventory   37.7ms   └─ client span\nalmide-inventory   GET /inventory   30.1ms      └─ server span, linked via traceparent\nalmide-inventory   SELECT items     30.1ms         └─ simulated DB work"
   },
   "score": 5.3
  },
@@ -1321,29 +1334,60 @@
   "score": 5.3
  },
  {
-  "full": "O6lvl4/almide-otel-demo",
+  "full": "O6lvl4/O6lvl4-portfolio",
   "owner": "O6lvl4",
-  "name": "almide-otel-demo",
-  "url": "https://github.com/O6lvl4/almide-otel-demo",
-  "lead": "A from-scratch OpenTelemetry tracing SDK in pure Almide + a two-service distributed trace in Jaeger",
-  "heading": "almide-otel-demo",
-  "language": "Almide",
+  "name": "O6lvl4-portfolio",
+  "url": "https://github.com/O6lvl4/O6lvl4-portfolio",
+  "site": "https://o6lvl4.github.io/O6lvl4-portfolio/",
+  "lead": "265 public repositories across O6lvl4, Aid-On, almide and the almide-* orgs, grouped by what they are, in Japanese, English and Chinese. Named after Ogma.",
+  "heading": "O6lvl4-portfolio",
+  "language": "HTML",
   "languages": [
-   "Almide"
+   "HTML",
+   "JavaScript",
+   "CSS"
   ],
   "stars": 0,
-  "commits": 13,
+  "commits": 16,
   "years": {
-   "2026": 13
+   "2026": 16
   },
-  "first": "2026-08-03",
-  "last": "2026-08-04",
-  "license": "mit",
+  "first": "2026-09-19",
+  "last": "2026-09-20",
+  "license": "MIT",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "bash",
+   "code": "npm ci\nnpx playwright install chromium\nnpm run refresh"
+  },
+  "score": 5.3
+ },
+ {
+  "full": "O6lvl4/uimodulay",
+  "owner": "O6lvl4",
+  "name": "uimodulay",
+  "url": "https://github.com/O6lvl4/uimodulay",
+  "lead": "Semantic UI structure analyzer: URL → Layout AST, hand-drawn wireframes, responsive diff",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "HTML",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 14,
+  "years": {
+   "2026": 14
+  },
+  "first": "2026-09-18",
+  "last": "2026-09-18",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "",
-   "code": "almide-checkout    checkout         50.3ms   root\nalmide-checkout    GET /inventory   37.7ms   └─ client span\nalmide-inventory   GET /inventory   30.1ms      └─ server span, linked via traceparent\nalmide-inventory   SELECT items     30.1ms         └─ simulated DB work"
+   "code": "$ uimodulay https://playwright.dev --ai --depth 2\n\nPage\n├── Header [row 2]\n│   ├── Nav [row 6]\n│   └── Toolbar [row 4]\n├── Hero\n│   ├── Heading \"enables reliable web automation…\"\n│   ├── Paragraph \"One API to drive Chromium, Fire…\"\n│   └── CTA [row 2]\n├── Main\n│   ├── CardGrid [row 3]\n│   ├── Feature\n│   ├── Feature\n│   ├── Feature\n│   ├── BrowserSupport\n│   └── Showcase\n└── Footer\n    ├── LinkColumns [row 3]\n    └── Copyright \"Copyright © 2026 Microsoft\""
   },
   "score": 5.3
  },
@@ -1395,40 +1439,12 @@
   },
   "first": "2026-09-12",
   "last": "2026-09-13",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "",
    "code": "$ emet claims.json\nok  glm-flash    supported     https://huggingface.co/api/models/zai-org/GLM-5.3-Flash\nok  glm-max      supported     https://huggingface.co/api/models/zai-org/GLM-5.3\nMET tsmc-aug     unsupported   裏が取れない数値 1/2: 5148.1\nMET wrong-figures unsupported  裏が取れない数値 2/2: 7785900000, 5272000000\nMET no-figures   unverifiable  検査できる数値がない\nMET no-source    no_citation   出典が付いていない\n\n6 件中 4 件を止めた\n$ echo $?\n1"
-  },
-  "score": 5.2
- },
- {
-  "full": "O6lvl4/onetool",
-  "owner": "O6lvl4",
-  "name": "onetool",
-  "url": "https://github.com/O6lvl4/onetool",
-  "lead": "One MCP server, four tools, any API behind them. A framework for fronting N operations with one tool: policy-gated consent, schema feedback, redaction. Inspired by Strands' use_aws.",
-  "heading": "onetool",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 11,
-  "years": {
-   "2026": 11
-  },
-  "first": "2026-09-02",
-  "last": "2026-09-03",
-  "license": "mit",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "LLM ──toolUse──▶ MCP client ──▶ onetool-mcp ──▶ OneTool ──▶ Provider ──▶ API\n                     ▲               │              │\n                     └─ elicitation ─┘         policy / validate /\n                    (ask the human)            redact / shrink"
   },
   "score": 5.2
  },
@@ -1460,6 +1476,34 @@
   "score": 5.2
  },
  {
+  "full": "O6lvl4/onetool",
+  "owner": "O6lvl4",
+  "name": "onetool",
+  "url": "https://github.com/O6lvl4/onetool",
+  "lead": "One MCP server, four tools, any API behind them. A framework for fronting N operations with one tool: policy-gated consent, schema feedback, redaction. Inspired by Strands' use_aws.",
+  "heading": "onetool",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 11,
+  "years": {
+   "2026": 11
+  },
+  "first": "2026-09-02",
+  "last": "2026-09-03",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "LLM ──toolUse──▶ MCP client ──▶ onetool-mcp ──▶ OneTool ──▶ Provider ──▶ API\n                     ▲               │              │\n                     └─ elicitation ─┘         policy / validate /\n                    (ask the human)            redact / shrink"
+  },
+  "score": 5.2
+ },
+ {
   "full": "O6lvl4/codopsy-almd",
   "owner": "O6lvl4",
   "name": "codopsy-almd",
@@ -1478,7 +1522,7 @@
   },
   "first": "2026-09-11",
   "last": "2026-09-11",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1507,7 +1551,7 @@
   },
   "first": "2026-08-29",
   "last": "2026-08-29",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1563,7 +1607,7 @@
   },
   "first": "2026-05-01",
   "last": "2026-06-22",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1571,75 +1615,6 @@
    "code": "go install github.com/O6lvl4/keiri/cmd/keiri@latest"
   },
   "score": 5.1
- },
- {
-  "full": "O6lvl4/hokusai-portfolio",
-  "owner": "O6lvl4",
-  "name": "hokusai-portfolio",
-  "url": "https://github.com/O6lvl4/hokusai-portfolio",
-  "site": "https://o6lvl4.github.io/hokusai-portfolio/",
-  "lead": "A portfolio site for a Japanese artist, built with Hokusai's public-domain prints (The Met Open Access) on a modified Bridget Hugo theme",
-  "heading": "hokusai-portfolio",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "CSS",
-   "HTML"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-09-18",
-  "last": "2026-09-18",
-  "license": "other",
-  "topics": [
-   "github-pages",
-   "hokusai",
-   "hugo",
-   "portfolio",
-   "ukiyoe"
-  ],
-  "plate": "site",
-  "sample": {
-   "lang": "bash",
-   "code": "hugo server                      # http://localhost:1313/hokusai-portfolio/\nhugo --minify --gc               # into public/"
-  },
-  "score": 5
- },
- {
-  "full": "O6lvl4/onomly",
-  "owner": "O6lvl4",
-  "name": "onomly",
-  "url": "https://github.com/O6lvl4/onomly",
-  "lead": "Product-name due-diligence skill for Claude Code — parallel availability sweep in Almide, bundled as a WASI 0.3 component",
-  "language": "Shell",
-  "languages": [
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-08-30",
-  "last": "2026-08-30",
-  "license": "mit",
-  "topics": [
-   "almide",
-   "claude-code",
-   "claude-skill",
-   "naming",
-   "wasi",
-   "wasm"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "text",
-   "code": "$ onomly onomly\n=== onomly ===\nnpm ✅  crates.io ✅  RubyGems ✅  Homebrew ✅  GitHub ✅\n.com ✅  .ai ✅  .io ✅  .dev ✅  .org ✅\nPyPI だけ taken\n→ 推奨: 全レジストリ・全ドメインでクリア"
-  },
-  "score": 5
  },
  {
   "full": "O6lvl4/almide-audio-poc",
@@ -1670,6 +1645,42 @@
   "score": 5
  },
  {
+  "full": "O6lvl4/hokusai-portfolio",
+  "owner": "O6lvl4",
+  "name": "hokusai-portfolio",
+  "url": "https://github.com/O6lvl4/hokusai-portfolio",
+  "site": "https://o6lvl4.github.io/hokusai-portfolio/",
+  "lead": "A portfolio site for a Japanese artist, built with Hokusai's public-domain prints (The Met Open Access) on a modified Bridget Hugo theme",
+  "heading": "hokusai-portfolio",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "CSS",
+   "HTML"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-09-18",
+  "last": "2026-09-18",
+  "license": "NOASSERTION",
+  "topics": [
+   "github-pages",
+   "hokusai",
+   "hugo",
+   "portfolio",
+   "ukiyoe"
+  ],
+  "plate": "site",
+  "sample": {
+   "lang": "bash",
+   "code": "hugo server                      # http://localhost:1313/hokusai-portfolio/\nhugo --minify --gc               # into public/"
+  },
+  "score": 5
+ },
+ {
   "full": "O6lvl4/ytscribe",
   "owner": "O6lvl4",
   "name": "ytscribe",
@@ -1687,7 +1698,7 @@
   },
   "first": "2026-06-29",
   "last": "2026-06-29",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "cli",
    "python",
@@ -1755,43 +1766,6 @@
   "score": 3.4
  },
  {
-  "full": "O6lvl4/macleap",
-  "owner": "O6lvl4",
-  "name": "macleap",
-  "url": "https://github.com/O6lvl4/macleap",
-  "lead": "Detect your current Mac, find equal-or-better current models, and estimate the real upgrade cost after trade-in.",
-  "heading": "macleap",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "Shell",
-   "Python"
-  ],
-  "stars": 0,
-  "commits": 16,
-  "years": {
-   "2026": 16
-  },
-  "first": "2026-04-26",
-  "last": "2026-06-19",
-  "license": "mit",
-  "topics": [
-   "apple-silicon",
-   "cli",
-   "mac",
-   "macbook",
-   "trade-in",
-   "typescript",
-   "upgrade-advisor"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "npm install\nnpx tsx src/index.ts plan --budget 400000"
-  },
-  "score": 3.3
- },
- {
   "full": "O6lvl4/codopsy-ts",
   "owner": "O6lvl4",
   "name": "codopsy-ts",
@@ -1810,23 +1784,23 @@
   },
   "first": "2026-02-14",
   "last": "2026-02-24",
-  "license": "isc",
+  "license": "ISC",
   "topics": [
    "ast",
+   "baseline",
    "cli",
    "code-quality",
    "cognitive-complexity",
    "cyclomatic-complexity",
-   "linter",
-   "sarif",
-   "static-analysis",
-   "typescript",
-   "baseline",
    "github-action",
    "hotspot-detection",
    "javascript",
+   "linter",
    "plugin",
-   "quality-score"
+   "quality-score",
+   "sarif",
+   "static-analysis",
+   "typescript"
   ],
   "plate": "code",
   "sample": {
@@ -1861,6 +1835,134 @@
    "code": "   npm run install:global\n   ```\n\n   開発用にローカルリンクする場合は"
   },
   "score": 3.3
+ },
+ {
+  "full": "O6lvl4/macleap",
+  "owner": "O6lvl4",
+  "name": "macleap",
+  "url": "https://github.com/O6lvl4/macleap",
+  "lead": "Detect your current Mac, find equal-or-better current models, and estimate the real upgrade cost after trade-in.",
+  "heading": "macleap",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "Shell",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 16,
+  "years": {
+   "2026": 16
+  },
+  "first": "2026-04-26",
+  "last": "2026-06-19",
+  "license": "MIT",
+  "topics": [
+   "apple-silicon",
+   "cli",
+   "mac",
+   "macbook",
+   "trade-in",
+   "typescript",
+   "upgrade-advisor"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "npm install\nnpx tsx src/index.ts plan --budget 400000"
+  },
+  "score": 3.3
+ },
+ {
+  "full": "O6lvl4/codopsy-ts-skill",
+  "owner": "O6lvl4",
+  "name": "codopsy-ts-skill",
+  "url": "https://github.com/O6lvl4/codopsy-ts-skill",
+  "lead": "Claude Code plugin for codopsy-ts — quality scoring (A–F), code analysis, baseline tracking, hotspot detection, and auto-fix with /codopsy",
+  "heading": "Analyze ./src (default)",
+  "language": "",
+  "languages": [],
+  "stars": 0,
+  "commits": 9,
+  "years": {
+   "2026": 9
+  },
+  "first": "2026-02-14",
+  "last": "2026-02-18",
+  "license": "ISC",
+  "topics": [
+   "claude-code",
+   "claude-code-plugin",
+   "claude-code-skill",
+   "code-quality",
+   "linter",
+   "static-analysis",
+   "typescript"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "/plugin marketplace add O6lvl4/codopsy-ts-skill\n/plugin install codopsy-ts"
+  },
+  "score": 3.2
+ },
+ {
+  "full": "O6lvl4/environment-health-viewer",
+  "owner": "O6lvl4",
+  "name": "environment-health-viewer",
+  "url": "https://github.com/O6lvl4/environment-health-viewer",
+  "site": "https://o6lvl4.github.io/environment-health-viewer/",
+  "lead": "気圧/UV/大気質/花粉から偏頭痛・熱中症リスクを表示する環境ヘルスチェック ビューア",
+  "heading": "環境ヘルスチェック (environment-health-viewer)",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "HTML",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 10,
+  "years": {
+   "2026": 10
+  },
+  "first": "2026-04-23",
+  "last": "2026-04-23",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "sh",
+   "code": "npm test           # CI 走行\nnpm run test:watch # 開発時\nnpm run test:cov   # カバレッジ"
+  },
+  "score": 3.2
+ },
+ {
+  "full": "O6lvl4/gulp-coach",
+  "owner": "O6lvl4",
+  "name": "gulp-coach",
+  "url": "https://github.com/O6lvl4/gulp-coach",
+  "site": "https://o6lvl4.github.io/gulp-coach/",
+  "lead": "体重・年齢・性別と直近摂取量から「あと何mL (何ごく) 飲める / 何分待つ」を表示する完全ローカルの水分摂取コーチ",
+  "heading": "Gulp Coach",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "HTML",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 12,
+  "years": {
+   "2026": 12
+  },
+  "first": "2026-04-24",
+  "last": "2026-04-24",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "",
+   "code": "src/\n  domain/        純粋ドメイン (fetch/DOM ゼロ)\n    shared/      Brand, Result, units, Specification, clock\n    profile/     Profile, Sex\n    intake/      IntakeEvent, IntakeLog\n    hydration/   HydrationStatus, HydrationPolicy\n  application/   ports.ts (IntakeRepository / ProfileRepository / Clock / IdGenerator) + use-cases.ts\n  infrastructure/ localStorage 実装\n  presentation/  DOM 描画\n  main.ts        Composition Root"
+  },
+  "score": 3.2
  },
  {
   "full": "O6lvl4/imoduru",
@@ -1916,97 +2018,6 @@
   "score": 3.2
  },
  {
-  "full": "O6lvl4/gulp-coach",
-  "owner": "O6lvl4",
-  "name": "gulp-coach",
-  "url": "https://github.com/O6lvl4/gulp-coach",
-  "site": "https://o6lvl4.github.io/gulp-coach/",
-  "lead": "体重・年齢・性別と直近摂取量から「あと何mL (何ごく) 飲める / 何分待つ」を表示する完全ローカルの水分摂取コーチ",
-  "heading": "Gulp Coach",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "HTML",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 12,
-  "years": {
-   "2026": 12
-  },
-  "first": "2026-04-24",
-  "last": "2026-04-24",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "",
-   "code": "src/\n  domain/        純粋ドメイン (fetch/DOM ゼロ)\n    shared/      Brand, Result, units, Specification, clock\n    profile/     Profile, Sex\n    intake/      IntakeEvent, IntakeLog\n    hydration/   HydrationStatus, HydrationPolicy\n  application/   ports.ts (IntakeRepository / ProfileRepository / Clock / IdGenerator) + use-cases.ts\n  infrastructure/ localStorage 実装\n  presentation/  DOM 描画\n  main.ts        Composition Root"
-  },
-  "score": 3.2
- },
- {
-  "full": "O6lvl4/environment-health-viewer",
-  "owner": "O6lvl4",
-  "name": "environment-health-viewer",
-  "url": "https://github.com/O6lvl4/environment-health-viewer",
-  "site": "https://o6lvl4.github.io/environment-health-viewer/",
-  "lead": "気圧/UV/大気質/花粉から偏頭痛・熱中症リスクを表示する環境ヘルスチェック ビューア",
-  "heading": "環境ヘルスチェック (environment-health-viewer)",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "HTML",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 10,
-  "years": {
-   "2026": 10
-  },
-  "first": "2026-04-23",
-  "last": "2026-04-23",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "sh",
-   "code": "npm test           # CI 走行\nnpm run test:watch # 開発時\nnpm run test:cov   # カバレッジ"
-  },
-  "score": 3.2
- },
- {
-  "full": "O6lvl4/codopsy-ts-skill",
-  "owner": "O6lvl4",
-  "name": "codopsy-ts-skill",
-  "url": "https://github.com/O6lvl4/codopsy-ts-skill",
-  "lead": "Claude Code plugin for codopsy-ts — quality scoring (A–F), code analysis, baseline tracking, hotspot detection, and auto-fix with /codopsy",
-  "heading": "Analyze ./src (default)",
-  "language": "",
-  "languages": [],
-  "stars": 0,
-  "commits": 9,
-  "years": {
-   "2026": 9
-  },
-  "first": "2026-02-14",
-  "last": "2026-02-18",
-  "license": "isc",
-  "topics": [
-   "claude-code",
-   "claude-code-plugin",
-   "claude-code-skill",
-   "code-quality",
-   "linter",
-   "static-analysis",
-   "typescript"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "/plugin marketplace add O6lvl4/codopsy-ts-skill\n/plugin install codopsy-ts"
-  },
-  "score": 3.2
- },
- {
   "full": "O6lvl4/syncenv",
   "owner": "O6lvl4",
   "name": "syncenv",
@@ -2025,7 +2036,7 @@
   },
   "first": "2025-10-28",
   "last": "2025-10-28",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -2035,23 +2046,32 @@
   "score": 3.2
  },
  {
-  "full": "O6lvl4/O6lvl4-protocol",
+  "full": "O6lvl4/dns-checker",
   "owner": "O6lvl4",
-  "name": "O6lvl4-protocol",
-  "url": "https://github.com/O6lvl4/O6lvl4-protocol",
-  "lead": "Operational protocols for maximizing intellectual work output",
-  "heading": "O6lvl4 Protocol",
-  "language": "",
+  "name": "dns-checker",
+  "url": "https://github.com/O6lvl4/dns-checker",
+  "lead": "MoonBit製DNSレコードチェッカー (TXT/SPF/DMARC/DKIM)",
+  "heading": "dns-checker",
+  "language": "MoonBit",
   "languages": [],
   "stars": 0,
   "commits": 7,
   "years": {
    "2026": 7
   },
-  "first": "2026-05-07",
-  "last": "2026-05-07",
-  "topics": [],
+  "first": "2026-01-16",
+  "last": "2026-01-16",
+  "license": "Apache-2.0",
+  "topics": [
+   "cli",
+   "dns",
+   "moonbit"
+  ],
   "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "git clone git@github.com:O6lvl4/dns-checker.git\ncd dns-checker\nmake install"
+  },
   "score": 3.1
  },
  {
@@ -2072,7 +2092,7 @@
   },
   "first": "2026-05-01",
   "last": "2026-05-01",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -2099,7 +2119,7 @@
   },
   "first": "2026-04-24",
   "last": "2026-04-24",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -2142,33 +2162,126 @@
   "score": 3.1
  },
  {
-  "full": "O6lvl4/dns-checker",
+  "full": "O6lvl4/O6lvl4-protocol",
   "owner": "O6lvl4",
-  "name": "dns-checker",
-  "url": "https://github.com/O6lvl4/dns-checker",
-  "lead": "MoonBit製DNSレコードチェッカー (TXT/SPF/DMARC/DKIM)",
-  "heading": "dns-checker",
-  "language": "MoonBit",
+  "name": "O6lvl4-protocol",
+  "url": "https://github.com/O6lvl4/O6lvl4-protocol",
+  "lead": "Operational protocols for maximizing intellectual work output",
+  "heading": "O6lvl4 Protocol",
+  "language": "",
   "languages": [],
   "stars": 0,
   "commits": 7,
   "years": {
    "2026": 7
   },
-  "first": "2026-01-16",
-  "last": "2026-01-16",
-  "license": "apache-2.0",
-  "topics": [
-   "cli",
-   "dns",
-   "moonbit"
+  "first": "2026-05-07",
+  "last": "2026-05-07",
+  "topics": [],
+  "plate": "code",
+  "score": 3.1
+ },
+ {
+  "full": "O6lvl4/almide-examples",
+  "owner": "O6lvl4",
+  "name": "almide-examples",
+  "url": "https://github.com/O6lvl4/almide-examples",
+  "lead": "Almide language examples and mini-git benchmark",
+  "heading": "almide-examples",
+  "language": "Shell",
+  "languages": [
+   "Shell",
+   "Almide"
   ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-03-07",
+  "last": "2026-03-07",
+  "topics": [],
   "plate": "code",
   "sample": {
    "lang": "bash",
-   "code": "git clone git@github.com:O6lvl4/dns-checker.git\ncd dns-checker\nmake install"
+   "code": "# Requires: Almide transpiler (llm-lang-spec repo) + Deno\n\ncd minigit-bench\nbash build.sh          # Transpile .almd → .ts\nbash test-v1.sh        # Run v1 tests (11 tests)\nbash test-v2.sh        # Run v2 tests (30 tests)"
   },
-  "score": 3.1
+  "score": 3
+ },
+ {
+  "full": "O6lvl4/chropen",
+  "owner": "O6lvl4",
+  "name": "chropen",
+  "url": "https://github.com/O6lvl4/chropen",
+  "lead": "Open URLs in a specific Chrome profile, by email",
+  "heading": "chropen",
+  "language": "Go",
+  "languages": [
+   "Go"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-05-01",
+  "last": "2026-05-01",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "chropen alice@example.com https://gmail.com\nchropen admin@example.com https://admin.google.com\nchropen --list                                  # see all detected profiles"
+  },
+  "score": 3
+ },
+ {
+  "full": "O6lvl4/fizzbuzz-lean4-cli",
+  "owner": "O6lvl4",
+  "name": "fizzbuzz-lean4-cli",
+  "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
+  "lead": "Lean 4 で書かれた FizzBuzz CLI アプリ。[fizzbuzz-lean4-lib](https://github.com/o6lvl4/fizzbuzz-lean4-lib) を使用。",
+  "heading": "fizzbuzz-lean4-cli",
+  "language": "Lean",
+  "languages": [
+   "Lean"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-03-07",
+  "last": "2026-03-07",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "# デフォルト (1〜15)\nfizzbuzzcli\n\n# 範囲を指定\nfizzbuzzcli 30"
+  },
+  "score": 3
+ },
+ {
+  "full": "O6lvl4/lean4-rust-backend",
+  "owner": "O6lvl4",
+  "name": "lean4-rust-backend",
+  "url": "https://github.com/O6lvl4/lean4-rust-backend",
+  "lead": "Lean 4 → Rust backend: IR-based code generation with runtime, WASM cross-compilation support",
+  "language": "Rust",
+  "languages": [
+   "Rust",
+   "Lean"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-03-07",
+  "last": "2026-03-07",
+  "topics": [],
+  "plate": "code",
+  "score": 3
  },
  {
   "full": "O6lvl4/netcheck",
@@ -2191,32 +2304,6 @@
   "sample": {
    "lang": "sh",
    "code": "netcheck        # フル診断(約1分)\nnetcheck -q     # 高速版(約12秒、スループット測定とWi-Fiスキャンを省略)\nnetcheck -h     # ヘルプ"
-  },
-  "score": 3
- },
- {
-  "full": "O6lvl4/tabi-navi",
-  "owner": "O6lvl4",
-  "name": "tabi-navi",
-  "url": "https://github.com/O6lvl4/tabi-navi",
-  "lead": "旅程の制約（「この日のこの時刻以降に出発」「レビュー★3.5以上」など）と分岐案（「最終便で帰る vs もう1泊」など）を `trip.config.json` に書くと、制約を満たす最安のフライト×ホテルの組み合わせを探索して、案ごとの比較と推奨案を提示するCLI。",
-  "heading": "たびナビ",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-11",
-  "last": "2026-06-11",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "✈ たびナビ — 旅程最適化\n■ 東京カンファレンス出張\n  A案: 2日目の最終便で帰る  ¥58,300 ◎ 推奨\n    ✈ 8/7(金) KMI→HND  6J54  09:10→10:45  ¥15,200 (ソラシドエア)\n    ...\n  B案: もう1泊して翌朝帰り  ¥71,800 ＋¥13,500\n    ..."
   },
   "score": 3
  },
@@ -2248,6 +2335,32 @@
   "score": 3
  },
  {
+  "full": "O6lvl4/tabi-navi",
+  "owner": "O6lvl4",
+  "name": "tabi-navi",
+  "url": "https://github.com/O6lvl4/tabi-navi",
+  "lead": "旅程の制約（「この日のこの時刻以降に出発」「レビュー★3.5以上」など）と分岐案（「最終便で帰る vs もう1泊」など）を `trip.config.json` に書くと、制約を満たす最安のフライト×ホテルの組み合わせを探索して、案ごとの比較と推奨案を提示するCLI。",
+  "heading": "たびナビ",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-11",
+  "last": "2026-06-11",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "✈ たびナビ — 旅程最適化\n■ 東京カンファレンス出張\n  A案: 2日目の最終便で帰る  ¥58,300 ◎ 推奨\n    ✈ 8/7(金) KMI→HND  6J54  09:10→10:45  ¥15,200 (ソラシドエア)\n    ...\n  B案: もう1泊して翌朝帰り  ¥71,800 ＋¥13,500\n    ..."
+  },
+  "score": 3
+ },
+ {
   "full": "O6lvl4/tocsin-almd",
   "owner": "O6lvl4",
   "name": "tocsin-almd",
@@ -2266,108 +2379,6 @@
   "last": "2026-05-12",
   "topics": [],
   "plate": "code",
-  "score": 3
- },
- {
-  "full": "O6lvl4/chropen",
-  "owner": "O6lvl4",
-  "name": "chropen",
-  "url": "https://github.com/O6lvl4/chropen",
-  "lead": "Open URLs in a specific Chrome profile, by email",
-  "heading": "chropen",
-  "language": "Go",
-  "languages": [
-   "Go"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-05-01",
-  "last": "2026-05-01",
-  "license": "mit",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "chropen alice@example.com https://gmail.com\nchropen admin@example.com https://admin.google.com\nchropen --list                                  # see all detected profiles"
-  },
-  "score": 3
- },
- {
-  "full": "O6lvl4/lean4-rust-backend",
-  "owner": "O6lvl4",
-  "name": "lean4-rust-backend",
-  "url": "https://github.com/O6lvl4/lean4-rust-backend",
-  "lead": "Lean 4 → Rust backend: IR-based code generation with runtime, WASM cross-compilation support",
-  "language": "Rust",
-  "languages": [
-   "Rust",
-   "Lean"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-03-07",
-  "last": "2026-03-07",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
-  "full": "O6lvl4/almide-examples",
-  "owner": "O6lvl4",
-  "name": "almide-examples",
-  "url": "https://github.com/O6lvl4/almide-examples",
-  "lead": "Almide language examples and mini-git benchmark",
-  "heading": "almide-examples",
-  "language": "Shell",
-  "languages": [
-   "Shell",
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-03-07",
-  "last": "2026-03-07",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "# Requires: Almide transpiler (llm-lang-spec repo) + Deno\n\ncd minigit-bench\nbash build.sh          # Transpile .almd → .ts\nbash test-v1.sh        # Run v1 tests (11 tests)\nbash test-v2.sh        # Run v2 tests (30 tests)"
-  },
-  "score": 3
- },
- {
-  "full": "O6lvl4/fizzbuzz-lean4-cli",
-  "owner": "O6lvl4",
-  "name": "fizzbuzz-lean4-cli",
-  "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
-  "lead": "Lean 4 で書かれた FizzBuzz CLI アプリ。[fizzbuzz-lean4-lib](https://github.com/o6lvl4/fizzbuzz-lean4-lib) を使用。",
-  "heading": "fizzbuzz-lean4-cli",
-  "language": "Lean",
-  "languages": [
-   "Lean"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-03-07",
-  "last": "2026-03-07",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "# デフォルト (1〜15)\nfizzbuzzcli\n\n# 範囲を指定\nfizzbuzzcli 30"
-  },
   "score": 3
  },
  {
@@ -2472,6 +2483,108 @@
   "score": 2.1
  },
  {
+  "full": "O6lvl4/capto",
+  "owner": "O6lvl4",
+  "name": "capto",
+  "url": "https://github.com/O6lvl4/capto",
+  "lead": "Capto captures the structure of directories and the content of files into a beautiful PDF document. It displays not only text files but also image files, respects `.gitignore` rules, and automatically detects binary files. The output is in a format optimized for multi-modal LLM consumption.",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript"
+  ],
+  "stars": 0,
+  "commits": 5,
+  "years": {
+   "2025": 5
+  },
+  "first": "2025-03-31",
+  "last": "2025-04-01",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "npm install -g capto\n```\n\nAlternatively, use it temporarily without installation:"
+  },
+  "score": 2.1
+ },
+ {
+  "full": "O6lvl4/line-bot-sandbox",
+  "owner": "O6lvl4",
+  "name": "line-bot-sandbox",
+  "url": "https://github.com/O6lvl4/line-bot-sandbox",
+  "lead": "This is a sample template for line-bot-sandbox - Below is a brief explanation of what we have generated for you:",
+  "heading": "line-bot-sandbox",
+  "language": "Go",
+  "languages": [
+   "Go"
+  ],
+  "stars": 0,
+  "commits": 4,
+  "years": {
+   "2022": 4
+  },
+  "first": "2022-10-01",
+  "last": "2022-10-01",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": ".\n├── Makefile                    <-- Make to automate build\n├── README.md                   <-- This instructions file\n├── line-bot-sandbox                 <-- Source code for a lambda function\n│   ├── main.go                 <-- Lambda function code\n│   └── main_test.go            <-- Unit tests\n└── template.yaml"
+  },
+  "score": 2.1
+ },
+ {
+  "full": "O6lvl4/sandbox-gcp",
+  "owner": "O6lvl4",
+  "name": "sandbox-gcp",
+  "url": "https://github.com/O6lvl4/sandbox-gcp",
+  "lead": "このドキュメントでは、Google Cloud Platform (GCP) 上でTerraformを使用して環境を構築するための手順を説明します。",
+  "heading": "Terraform GCP 環境構築手順書",
+  "language": "Makefile",
+  "languages": [],
+  "stars": 0,
+  "commits": 5,
+  "years": {
+   "2023": 5
+  },
+  "first": "2023-11-18",
+  "last": "2023-11-19",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "export TF_VAR_gcp_credentials_file=\"path/to/your/service-account-key.json\"\nexport TF_VAR_gcp_project_id=\"your-gcp-project-id\"\nexport TF_VAR_gcp_region=\"your-gcp-region\"  # 例：asia-northeast1（東京）"
+  },
+  "score": 2.1
+ },
+ {
+  "full": "O6lvl4/sandbox-golang-cli",
+  "owner": "O6lvl4",
+  "name": "sandbox-golang-cli",
+  "url": "https://github.com/O6lvl4/sandbox-golang-cli",
+  "lead": "This project leverages the powerful Cobra library in Go to build a CLI (Command Line Interface) application. Cobra simplifies the design and implementation of command-line interfaces, providing a robust framework for developing comprehensive CLI applications.",
+  "heading": "sandbox-golang-cli",
+  "language": "Go",
+  "languages": [
+   "Go"
+  ],
+  "stars": 0,
+  "commits": 3,
+  "years": {
+   "2024": 3
+  },
+  "first": "2024-02-05",
+  "last": "2024-02-05",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "go install github.com/spf13/cobra-cli@latest"
+  },
+  "score": 2.1
+ },
+ {
   "full": "O6lvl4/sandbox-next-firebase-app-hosting-line-auth",
   "owner": "O6lvl4",
   "name": "sandbox-next-firebase-app-hosting-line-auth",
@@ -2491,7 +2604,7 @@
   },
   "first": "2025-08-23",
   "last": "2025-08-23",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -2529,27 +2642,30 @@
   "score": 2.1
  },
  {
-  "full": "O6lvl4/capto",
+  "full": "O6lvl4/ts-react-tailwindcss-sandbox",
   "owner": "O6lvl4",
-  "name": "capto",
-  "url": "https://github.com/O6lvl4/capto",
-  "lead": "Capto captures the structure of directories and the content of files into a beautiful PDF document. It displays not only text files but also image files, respects `.gitignore` rules, and automatically detects binary files. The output is in a format optimized for multi-modal LLM consumption.",
+  "name": "ts-react-tailwindcss-sandbox",
+  "url": "https://github.com/O6lvl4/ts-react-tailwindcss-sandbox",
+  "lead": "このリポジトリは、React と Tailwind CSS を使用して効果的にレスポンシブデザインを実装する方法を示すデモです。React プロジェクトにおける Tailwind CSS ブレイクポイントの活用に関する包括的なガイドの補足資料として機能します。",
+  "heading": "React Tailwind レスポンシブデザインデモ",
   "language": "TypeScript",
   "languages": [
-   "TypeScript"
+   "TypeScript",
+   "JavaScript",
+   "Shell"
   ],
   "stars": 0,
   "commits": 5,
   "years": {
-   "2025": 5
+   "2024": 5
   },
-  "first": "2025-03-31",
-  "last": "2025-04-01",
+  "first": "2024-09-10",
+  "last": "2024-09-11",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "bash",
-   "code": "npm install -g capto\n```\n\nAlternatively, use it temporarily without installation:"
+   "lang": "",
+   "code": "   git clone https://github.com/O6lvl4/ts-react-tailwindcss-sandbox.git"
   },
   "score": 2.1
  },
@@ -2581,31 +2697,26 @@
   "score": 2.1
  },
  {
-  "full": "O6lvl4/ts-react-tailwindcss-sandbox",
+  "full": "O6lvl4/tz-clocks",
   "owner": "O6lvl4",
-  "name": "ts-react-tailwindcss-sandbox",
-  "url": "https://github.com/O6lvl4/ts-react-tailwindcss-sandbox",
-  "lead": "このリポジトリは、React と Tailwind CSS を使用して効果的にレスポンシブデザインを実装する方法を示すデモです。React プロジェクトにおける Tailwind CSS ブレイクポイントの活用に関する包括的なガイドの補足資料として機能します。",
-  "heading": "React Tailwind レスポンシブデザインデモ",
+  "name": "tz-clocks",
+  "url": "https://github.com/O6lvl4/tz-clocks",
+  "lead": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "heading": "Getting Started with Create React App",
   "language": "TypeScript",
   "languages": [
    "TypeScript",
-   "JavaScript",
-   "Shell"
+   "CSS"
   ],
   "stars": 0,
-  "commits": 5,
+  "commits": 3,
   "years": {
-   "2024": 5
+   "2023": 3
   },
-  "first": "2024-09-10",
-  "last": "2024-09-11",
+  "first": "2023-06-21",
+  "last": "2023-06-21",
   "topics": [],
   "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "   git clone https://github.com/O6lvl4/ts-react-tailwindcss-sandbox.git"
-  },
   "score": 2.1
  },
  {
@@ -2636,133 +2747,6 @@
   "score": 2.1
  },
  {
-  "full": "O6lvl4/sandbox-golang-cli",
-  "owner": "O6lvl4",
-  "name": "sandbox-golang-cli",
-  "url": "https://github.com/O6lvl4/sandbox-golang-cli",
-  "lead": "This project leverages the powerful Cobra library in Go to build a CLI (Command Line Interface) application. Cobra simplifies the design and implementation of command-line interfaces, providing a robust framework for developing comprehensive CLI applications.",
-  "heading": "sandbox-golang-cli",
-  "language": "Go",
-  "languages": [
-   "Go"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2024": 3
-  },
-  "first": "2024-02-05",
-  "last": "2024-02-05",
-  "license": "other",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "go install github.com/spf13/cobra-cli@latest"
-  },
-  "score": 2.1
- },
- {
-  "full": "O6lvl4/sandbox-gcp",
-  "owner": "O6lvl4",
-  "name": "sandbox-gcp",
-  "url": "https://github.com/O6lvl4/sandbox-gcp",
-  "lead": "このドキュメントでは、Google Cloud Platform (GCP) 上でTerraformを使用して環境を構築するための手順を説明します。",
-  "heading": "Terraform GCP 環境構築手順書",
-  "language": "Makefile",
-  "languages": [],
-  "stars": 0,
-  "commits": 5,
-  "years": {
-   "2023": 5
-  },
-  "first": "2023-11-18",
-  "last": "2023-11-19",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "export TF_VAR_gcp_credentials_file=\"path/to/your/service-account-key.json\"\nexport TF_VAR_gcp_project_id=\"your-gcp-project-id\"\nexport TF_VAR_gcp_region=\"your-gcp-region\"  # 例：asia-northeast1（東京）"
-  },
-  "score": 2.1
- },
- {
-  "full": "O6lvl4/tz-clocks",
-  "owner": "O6lvl4",
-  "name": "tz-clocks",
-  "url": "https://github.com/O6lvl4/tz-clocks",
-  "lead": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "heading": "Getting Started with Create React App",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2023": 3
-  },
-  "first": "2023-06-21",
-  "last": "2023-06-21",
-  "topics": [],
-  "plate": "code",
-  "score": 2.1
- },
- {
-  "full": "O6lvl4/line-bot-sandbox",
-  "owner": "O6lvl4",
-  "name": "line-bot-sandbox",
-  "url": "https://github.com/O6lvl4/line-bot-sandbox",
-  "lead": "This is a sample template for line-bot-sandbox - Below is a brief explanation of what we have generated for you:",
-  "heading": "line-bot-sandbox",
-  "language": "Go",
-  "languages": [
-   "Go"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2022": 4
-  },
-  "first": "2022-10-01",
-  "last": "2022-10-01",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": ".\n├── Makefile                    <-- Make to automate build\n├── README.md                   <-- This instructions file\n├── line-bot-sandbox                 <-- Source code for a lambda function\n│   ├── main.go                 <-- Lambda function code\n│   └── main_test.go            <-- Unit tests\n└── template.yaml"
-  },
-  "score": 2.1
- },
- {
-  "full": "O6lvl4/cdev",
-  "owner": "O6lvl4",
-  "name": "cdev",
-  "url": "https://github.com/O6lvl4/cdev",
-  "lead": "🚀 **Autonomous project builder using Claude Code with bypass permissions**",
-  "heading": "cdev - Claude Development CLI Tool",
-  "language": "Shell",
-  "languages": [
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2025": 2
-  },
-  "first": "2025-08-25",
-  "last": "2025-08-25",
-  "license": "mit",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "# Method 1: One-line install (recommended)\ncurl -sSL https://raw.githubusercontent.com/yourusername/cdev/main/install.sh | bash\n\n# Method 2: Manual install\ngit clone https://github.com/yourusername/cdev.git\ncd cdev\n./cdev install"
-  },
-  "score": 2
- },
- {
   "full": "O6lvl4/aws-py-s3-sandbox",
   "owner": "O6lvl4",
   "name": "aws-py-s3-sandbox",
@@ -2785,6 +2769,33 @@
   "sample": {
    "lang": "bash",
    "code": "sam build --use-container\nsam deploy --guided"
+  },
+  "score": 2
+ },
+ {
+  "full": "O6lvl4/cdev",
+  "owner": "O6lvl4",
+  "name": "cdev",
+  "url": "https://github.com/O6lvl4/cdev",
+  "lead": "🚀 **Autonomous project builder using Claude Code with bypass permissions**",
+  "heading": "cdev - Claude Development CLI Tool",
+  "language": "Shell",
+  "languages": [
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2025": 2
+  },
+  "first": "2025-08-25",
+  "last": "2025-08-25",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "# Method 1: One-line install (recommended)\ncurl -sSL https://raw.githubusercontent.com/yourusername/cdev/main/install.sh | bash\n\n# Method 2: Manual install\ngit clone https://github.com/yourusername/cdev.git\ncd cdev\n./cdev install"
   },
   "score": 2
  },
@@ -2892,28 +2903,6 @@
   "score": 1
  },
  {
-  "full": "O6lvl4/mastra-sandbox",
-  "owner": "O6lvl4",
-  "name": "mastra-sandbox",
-  "url": "https://github.com/O6lvl4/mastra-sandbox",
-  "lead": "",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2025": 3
-  },
-  "first": "2025-03-31",
-  "last": "2025-04-02",
-  "topics": [],
-  "plate": "code",
-  "score": 0.1
- },
- {
   "full": "O6lvl4/golang-cp-solve-sandbox",
   "owner": "O6lvl4",
   "name": "golang-cp-solve-sandbox",
@@ -2931,6 +2920,27 @@
   },
   "first": "2022-10-29",
   "last": "2023-02-05",
+  "topics": [],
+  "plate": "code",
+  "score": 0.1
+ },
+ {
+  "full": "O6lvl4/golang-lib-lo-sandbox",
+  "owner": "O6lvl4",
+  "name": "golang-lib-lo-sandbox",
+  "url": "https://github.com/O6lvl4/golang-lib-lo-sandbox",
+  "lead": "",
+  "language": "Go",
+  "languages": [
+   "Go"
+  ],
+  "stars": 0,
+  "commits": 3,
+  "years": {
+   "2022": 3
+  },
+  "first": "2022-08-21",
+  "last": "2022-08-21",
   "topics": [],
   "plate": "code",
   "score": 0.1
@@ -2958,22 +2968,23 @@
   "score": 0.1
  },
  {
-  "full": "O6lvl4/golang-lib-lo-sandbox",
+  "full": "O6lvl4/mastra-sandbox",
   "owner": "O6lvl4",
-  "name": "golang-lib-lo-sandbox",
-  "url": "https://github.com/O6lvl4/golang-lib-lo-sandbox",
+  "name": "mastra-sandbox",
+  "url": "https://github.com/O6lvl4/mastra-sandbox",
   "lead": "",
-  "language": "Go",
+  "language": "TypeScript",
   "languages": [
-   "Go"
+   "TypeScript",
+   "JavaScript"
   ],
   "stars": 0,
   "commits": 3,
   "years": {
-   "2022": 3
+   "2025": 3
   },
-  "first": "2022-08-21",
-  "last": "2022-08-21",
+  "first": "2025-03-31",
+  "last": "2025-04-02",
   "topics": [],
   "plate": "code",
   "score": 0.1
@@ -2996,31 +3007,28 @@
   },
   "first": "2022-05-06",
   "last": "2022-05-08",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "score": 0.1
  },
  {
-  "full": "O6lvl4/tyrano-sandbox",
+  "full": "O6lvl4/ebitengine-sandbox",
   "owner": "O6lvl4",
-  "name": "tyrano-sandbox",
-  "url": "https://github.com/O6lvl4/tyrano-sandbox",
+  "name": "ebitengine-sandbox",
+  "url": "https://github.com/O6lvl4/ebitengine-sandbox",
   "lead": "",
-  "language": "HTML",
+  "language": "Go",
   "languages": [
-   "HTML",
-   "JavaScript",
-   "CSS"
+   "Go"
   ],
   "stars": 0,
   "commits": 2,
   "years": {
-   "2025": 2
+   "2023": 2
   },
-  "first": "2025-03-02",
-  "last": "2025-03-03",
-  "license": "other",
+  "first": "2023-03-10",
+  "last": "2023-03-10",
   "topics": [],
   "plate": "code",
   "score": 0
@@ -3042,86 +3050,6 @@
   },
   "first": "2024-04-05",
   "last": "2024-04-05",
-  "topics": [],
-  "plate": "code",
-  "score": 0
- },
- {
-  "full": "O6lvl4/sandbox-discord-bot",
-  "owner": "O6lvl4",
-  "name": "sandbox-discord-bot",
-  "url": "https://github.com/O6lvl4/sandbox-discord-bot",
-  "lead": "",
-  "heading": "sandbox-discord-bot",
-  "language": "",
-  "languages": [],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2024": 1
-  },
-  "first": "2024-02-03",
-  "last": "2024-02-03",
-  "license": "mit",
-  "topics": [],
-  "plate": "code",
-  "score": 0
- },
- {
-  "full": "O6lvl4/sandbox-langchaingo",
-  "owner": "O6lvl4",
-  "name": "sandbox-langchaingo",
-  "url": "https://github.com/O6lvl4/sandbox-langchaingo",
-  "lead": "",
-  "heading": "sandbox-langchaingo",
-  "language": "",
-  "languages": [],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2024": 1
-  },
-  "first": "2024-02-02",
-  "last": "2024-02-02",
-  "license": "mit",
-  "topics": [],
-  "plate": "code",
-  "score": 0
- },
- {
-  "full": "O6lvl4/sandbox-chatgpt-talk",
-  "owner": "O6lvl4",
-  "name": "sandbox-chatgpt-talk",
-  "url": "https://github.com/O6lvl4/sandbox-chatgpt-talk",
-  "lead": "",
-  "language": "",
-  "languages": [],
-  "stars": 0,
-  "commits": 0,
-  "years": {},
-  "first": "",
-  "last": "",
-  "topics": [],
-  "plate": "code",
-  "score": 0
- },
- {
-  "full": "O6lvl4/ebitengine-sandbox",
-  "owner": "O6lvl4",
-  "name": "ebitengine-sandbox",
-  "url": "https://github.com/O6lvl4/ebitengine-sandbox",
-  "lead": "",
-  "language": "Go",
-  "languages": [
-   "Go"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2023": 2
-  },
-  "first": "2023-03-10",
-  "last": "2023-03-10",
   "topics": [],
   "plate": "code",
   "score": 0
@@ -3170,7 +3098,90 @@
   },
   "first": "2022-02-25",
   "last": "2022-02-25",
-  "license": "mit",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "score": 0
+ },
+ {
+  "full": "O6lvl4/sandbox-chatgpt-talk",
+  "owner": "O6lvl4",
+  "name": "sandbox-chatgpt-talk",
+  "url": "https://github.com/O6lvl4/sandbox-chatgpt-talk",
+  "lead": "",
+  "language": "",
+  "languages": [],
+  "stars": 0,
+  "commits": 0,
+  "years": {},
+  "first": "",
+  "last": "",
+  "topics": [],
+  "plate": "code",
+  "score": 0
+ },
+ {
+  "full": "O6lvl4/sandbox-discord-bot",
+  "owner": "O6lvl4",
+  "name": "sandbox-discord-bot",
+  "url": "https://github.com/O6lvl4/sandbox-discord-bot",
+  "lead": "",
+  "heading": "sandbox-discord-bot",
+  "language": "",
+  "languages": [],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2024": 1
+  },
+  "first": "2024-02-03",
+  "last": "2024-02-03",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "score": 0
+ },
+ {
+  "full": "O6lvl4/sandbox-langchaingo",
+  "owner": "O6lvl4",
+  "name": "sandbox-langchaingo",
+  "url": "https://github.com/O6lvl4/sandbox-langchaingo",
+  "lead": "",
+  "heading": "sandbox-langchaingo",
+  "language": "",
+  "languages": [],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2024": 1
+  },
+  "first": "2024-02-02",
+  "last": "2024-02-02",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "score": 0
+ },
+ {
+  "full": "O6lvl4/tyrano-sandbox",
+  "owner": "O6lvl4",
+  "name": "tyrano-sandbox",
+  "url": "https://github.com/O6lvl4/tyrano-sandbox",
+  "lead": "",
+  "language": "HTML",
+  "languages": [
+   "HTML",
+   "JavaScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2025": 2
+  },
+  "first": "2025-03-02",
+  "last": "2025-03-03",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "score": 0
@@ -3189,28 +3200,24 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 8502,
+  "commits": 8896,
   "years": {
-   "2026": 8502
+   "2026": 8896
   },
   "first": "2026-03-07",
-  "last": "2026-09-13",
-  "tag": "v0.63.0-rc1",
-  "license": "other",
+  "last": "2026-09-19",
+  "tag": "v0.60.0-rc3",
+  "license": "NOASSERTION",
   "topics": [
    "code-generation",
    "compiler",
    "llm",
    "programming-language",
    "rust",
-   "webassembly",
-   "statically-typed"
+   "statically-typed",
+   "webassembly"
   ],
-  "plate": "terminal",
-  "terminal": {
-   "cmd": "almide --help",
-   "out": "Usage: almide [OPTIONS] [COMMAND]\n\nCommands:\n  init         Create a new Almide project\n  run          Compile and execute\n  bench        Benchmark a program: verify-then-time, median headline (#1490)\n  build        Build a binary\n  test         Run tests\n  check        Type check only\n  lsp          Start the Language Server Protocol server (for editor integration)\n  mcp          Start the Model Context Protocol server on stdio (for agent/LLM clients). Exposes check / test / API-outline / explain / fmt-check as typed tools with JSON results — the same answers as the CLI, minus the step where a model has to parse human-formatted text\n  explain      Explain a diagnostic code (e.g., almide explain E001)\n  fmt          Format source files\n  compile      Compile source to .almdi (module interface + IR artifact)\n  update       Advance a locked git dependency to its ref's current remote head\n  clean        Clear dependency cache\n  add          Add a dependency\n  deps         List dependencies\n  dep-path     Print the cached source directory of a dependency\n  install      Install an Almide CLI from a git repo into ~/.local/bin (or $ALMIDE_INSTALL). Like `go install`: clone, build --release, drop the binary on PATH\n  self-update  Update almide to the latest version\n  ide          Agent/LLM semantic queries (outline, doc, stdlib-snapshot)\n  fix          Apply mechanically-safe fixes to a file (auto-import; reports remaining try: snippets for manual application)\n  docs-gen     Check canonical docs (llms.txt, etc.) against source-of-truth inputs (Cargo version, diagnostic code inventory, stdlib auto-import list). Fails CI when drift is detected\n  help         Print this message or the help of the given subcommand(s)\n\nOptions:\n  -v, --verbose  Show internal pipeline notes (e.g. which codegen path built the binary)"
-  },
+  "plate": "site",
   "sample": {
    "lang": "almd",
    "code": "type Shape =\n  | Circle(Float)\n  | Square(Float)\n  | Triangle(Float, Float)   // the edit\n\nfn area(s: Shape) -> Float =\n  match s {\n    Circle(r) => 3.14159 * r * r\n    Square(w) => w * w\n  }"
@@ -3238,7 +3245,7 @@
   "first": "2026-04-07",
   "last": "2026-08-06",
   "tag": "v0.4.0",
-  "license": "apache-2.0",
+  "license": "Apache-2.0",
   "topics": [
    "ai-agent",
    "claude-code",
@@ -3271,14 +3278,14 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 1418,
+  "commits": 1441,
   "years": {
-   "2026": 1418
+   "2026": 1441
   },
   "first": "2026-03-07",
-  "last": "2026-09-07",
+  "last": "2026-09-20",
   "tag": "v1.0.0",
-  "license": "other",
+  "license": "NOASSERTION",
   "topics": [
    "almide",
    "conformance",
@@ -3307,12 +3314,12 @@
    "Almide"
   ],
   "stars": 1,
-  "commits": 63,
+  "commits": 64,
   "years": {
-   "2026": 63
+   "2026": 64
   },
   "first": "2026-03-27",
-  "last": "2026-08-15",
+  "last": "2026-09-07",
   "topics": [
    "almide",
    "documentation"
@@ -3323,39 +3330,6 @@
    "code": "---\ntitle: Some page\n---\n\nimport Playground from '../../../components/Playground.astro';\n\n<Playground sample=\"hello-basic\" />\n<Playground sample=\"modules-two-files\" height={560} hide={['fixtures.almd']} />"
   },
   "score": 11.3
- },
- {
-  "full": "almide/vscode-almide",
-  "owner": "almide",
-  "name": "vscode-almide",
-  "url": "https://github.com/almide/vscode-almide",
-  "lead": "VS Code extension for the Almide programming language",
-  "heading": "almide-editors",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 23,
-  "years": {
-   "2026": 23
-  },
-  "first": "2026-03-09",
-  "last": "2026-07-25",
-  "tag": "v0.3.0",
-  "topics": [
-   "programming-language",
-   "syntax-highlighting",
-   "vscode",
-   "vscode-extension",
-   "almide"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "cd vscode\nnpx vsce package\ncode --install-extension almide-lang-*.vsix"
-  },
-  "score": 9.5
  },
  {
   "full": "almide/almide-grammar",
@@ -3369,12 +3343,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 27,
+  "commits": 29,
   "years": {
-   "2026": 27
+   "2026": 29
   },
   "first": "2026-03-13",
-  "last": "2026-07-29",
+  "last": "2026-09-07",
   "tag": "v0.1.0",
   "topics": [
    "almide",
@@ -3385,6 +3359,39 @@
   "sample": {
    "lang": "toml",
    "code": "[dependencies]\nalmide-grammar = { git = \"https://github.com/almide/almide-grammar\" }"
+  },
+  "score": 9.6
+ },
+ {
+  "full": "almide/vscode-almide",
+  "owner": "almide",
+  "name": "vscode-almide",
+  "url": "https://github.com/almide/vscode-almide",
+  "lead": "VS Code extension for the Almide programming language",
+  "heading": "almide-editors",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 25,
+  "years": {
+   "2026": 25
+  },
+  "first": "2026-03-09",
+  "last": "2026-09-07",
+  "tag": "v0.4.0",
+  "topics": [
+   "almide",
+   "programming-language",
+   "syntax-highlighting",
+   "vscode",
+   "vscode-extension"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "cd vscode\nnpx vsce package\ncode --install-extension almide-lang-*.vsix"
   },
   "score": 9.5
  },
@@ -3402,9 +3409,9 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 21,
+  "commits": 22,
   "years": {
-   "2026": 21
+   "2026": 22
   },
   "first": "2026-03-10",
   "last": "2026-09-07",
@@ -3435,9 +3442,9 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 7,
+  "commits": 6,
   "years": {
-   "2026": 7
+   "2026": 6
   },
   "first": "2026-08-16",
   "last": "2026-08-17",
@@ -3470,7 +3477,7 @@
   },
   "first": "2026-04-12",
   "last": "2026-08-17",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "almide",
    "benchmark",
@@ -3483,6 +3490,38 @@
    "code": "almide.toml          Package manifest (the harness itself is an Almide package)\nsrc/main.almd        Harness — written in Almide, of course\ntasks/               Task bank (prompts + tests + metadata)\nruns/                Per-day results, committed to git\ndashboards/          Static site for visualizing trends (GitHub Pages)\nalmide-pin.toml      Which Almide compiler commit we evaluate against\nmalicious-hints.md   Incident log of hint texts that misled models"
   },
   "score": 9
+ },
+ {
+  "full": "almide/almide-bindgen",
+  "owner": "almide",
+  "name": "almide-bindgen",
+  "url": "https://github.com/almide/almide-bindgen",
+  "lead": "Universal FFI binding generator for Almide — 20 language targets, written in Almide",
+  "heading": "almide-bindgen",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 1,
+  "commits": 33,
+  "years": {
+   "2026": 33
+  },
+  "first": "2026-03-28",
+  "last": "2026-04-12",
+  "license": "MIT",
+  "topics": [
+   "almide",
+   "bindgen",
+   "code-generation",
+   "ffi"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import bindgen\n\n// Version + supported languages\nbindgen.version()                    // \"0.1.0\"\nbindgen.supported_languages()        // [\"python\", \"go\", ..., \"powershell\"]\n\n// Generate Rust FFI scaffolding\nlet lib_rs = bindgen.scaffolding.generate(iface_json, rust_source)\nlet cargo  = bindgen.scaffolding.generate_cargo(iface_json)\n\n// Generate language bindings (all return String)\nlet py_code = bindgen.bindings.python.generate(iface_json)\nlet go_code = bindgen.bindings.go.generate(iface_json)\n// ... 20 languages"
+  },
+  "score": 8.7
  },
  {
   "full": "almide/bonsai-almide",
@@ -3513,38 +3552,6 @@
   "score": 8.7
  },
  {
-  "full": "almide/almide-bindgen",
-  "owner": "almide",
-  "name": "almide-bindgen",
-  "url": "https://github.com/almide/almide-bindgen",
-  "lead": "Universal FFI binding generator for Almide — 20 language targets, written in Almide",
-  "heading": "almide-bindgen",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 1,
-  "commits": 33,
-  "years": {
-   "2026": 33
-  },
-  "first": "2026-03-28",
-  "last": "2026-04-12",
-  "license": "mit",
-  "topics": [
-   "almide",
-   "bindgen",
-   "code-generation",
-   "ffi"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "almide",
-   "code": "import bindgen\n\n// Version + supported languages\nbindgen.version()                    // \"0.1.0\"\nbindgen.supported_languages()        // [\"python\", \"go\", ..., \"powershell\"]\n\n// Generate Rust FFI scaffolding\nlet lib_rs = bindgen.scaffolding.generate(iface_json, rust_source)\nlet cargo  = bindgen.scaffolding.generate_cargo(iface_json)\n\n// Generate language bindings (all return String)\nlet py_code = bindgen.bindings.python.generate(iface_json)\nlet go_code = bindgen.bindings.go.generate(iface_json)\n// ... 20 languages"
-  },
-  "score": 8.7
- },
- {
   "full": "almide/playground",
   "owner": "almide",
   "name": "playground",
@@ -3559,12 +3566,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 148,
+  "commits": 151,
   "years": {
-   "2026": 148
+   "2026": 151
   },
   "first": "2026-03-08",
-  "last": "2026-08-21",
+  "last": "2026-09-08",
   "topics": [
    "almide",
    "playground",
@@ -3715,7 +3722,7 @@
   },
   "first": "2026-03-28",
   "last": "2026-07-25",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "almide",
    "code-generation",
@@ -3739,42 +3746,19 @@
   "language": "",
   "languages": [],
   "stars": 0,
-  "commits": 6,
+  "commits": 7,
   "years": {
-   "2026": 6
+   "2026": 7
   },
   "first": "2026-07-24",
-  "last": "2026-07-29",
-  "license": "other",
+  "last": "2026-09-07",
+  "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "bash",
    "code": "# macOS / Linux\ncurl -fsSL https://raw.githubusercontent.com/almide/almide/main/tools/install.sh | sh"
   },
-  "score": 5.1
- },
- {
-  "full": "almide/parsegen",
-  "owner": "almide",
-  "name": "parsegen",
-  "url": "https://github.com/almide/parsegen",
-  "lead": "tree-sitter compatible parser generator for Almide. Reads grammar.json — no C, no dynamic loading, runs in WASM.",
-  "heading": "almide/parsegen",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-08-16",
-  "last": "2026-08-17",
-  "topics": [],
-  "plate": "code",
   "score": 5.1
  },
  {
@@ -3801,6 +3785,34 @@
   "sample": {
    "lang": "bash",
    "code": "almide add almide-sqlite@v0.1.0\n```\n\n## Usage"
+  },
+  "score": 5.1
+ },
+ {
+  "full": "almide/almide-web",
+  "owner": "almide",
+  "name": "almide-web",
+  "url": "https://github.com/almide/almide-web",
+  "lead": "Browser API bindings for Almide WASM (DOM, fetch, storage, timer, console)",
+  "heading": "almide-web",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "Almide",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 3,
+  "years": {
+   "2026": 3
+  },
+  "first": "2026-05-16",
+  "last": "2026-07-25",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import almide-web.dom as dom\nimport almide-web.fetch as fetch\n\nlet url = dom.str(\"https://api.example.com/data\")\nlet req_id = fetch.get(url)"
   },
   "score": 5.1
  },
@@ -3835,15 +3847,14 @@
   "score": 5.1
  },
  {
-  "full": "almide/almide-web",
+  "full": "almide/parsegen",
   "owner": "almide",
-  "name": "almide-web",
-  "url": "https://github.com/almide/almide-web",
-  "lead": "Browser API bindings for Almide WASM (DOM, fetch, storage, timer, console)",
-  "heading": "almide-web",
-  "language": "JavaScript",
+  "name": "parsegen",
+  "url": "https://github.com/almide/parsegen",
+  "lead": "tree-sitter compatible parser generator for Almide. Reads grammar.json — no C, no dynamic loading, runs in WASM.",
+  "heading": "almide/parsegen",
+  "language": "Almide",
   "languages": [
-   "JavaScript",
    "Almide",
    "Shell"
   ],
@@ -3852,14 +3863,10 @@
   "years": {
    "2026": 3
   },
-  "first": "2026-05-16",
-  "last": "2026-07-25",
+  "first": "2026-08-16",
+  "last": "2026-08-17",
   "topics": [],
   "plate": "code",
-  "sample": {
-   "lang": "almide",
-   "code": "import almide-web.dom as dom\nimport almide-web.fetch as fetch\n\nlet url = dom.str(\"https://api.example.com/data\")\nlet req_id = fetch.get(url)"
-  },
   "score": 5.1
  },
  {
@@ -3921,27 +3928,6 @@
   "score": 3.2
  },
  {
-  "full": "almide/rsa",
-  "owner": "almide",
-  "name": "rsa",
-  "url": "https://github.com/almide/rsa",
-  "lead": "RSA PKCS1v15 encryption with DER key parsing for Almide",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-05-21",
-  "last": "2026-05-21",
-  "topics": [],
-  "plate": "code",
-  "score": 3.1
- },
- {
   "full": "almide/bigint",
   "owner": "almide",
   "name": "bigint",
@@ -3993,6 +3979,48 @@
   "score": 3.1
  },
  {
+  "full": "almide/rsa",
+  "owner": "almide",
+  "name": "rsa",
+  "url": "https://github.com/almide/rsa",
+  "lead": "RSA PKCS1v15 encryption with DER key parsing for Almide",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 4,
+  "years": {
+   "2026": 4
+  },
+  "first": "2026-05-21",
+  "last": "2026-05-21",
+  "topics": [],
+  "plate": "code",
+  "score": 3.1
+ },
+ {
+  "full": "almide/.github",
+  "owner": "almide",
+  "name": ".github",
+  "url": "https://github.com/almide/.github",
+  "lead": "Organization profile and community health files",
+  "language": "",
+  "languages": [],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-03-30",
+  "last": "2026-03-30",
+  "topics": [
+   "almide"
+  ],
+  "plate": "code",
+  "score": 3
+ },
+ {
   "full": "almide/almide-js",
   "owner": "almide",
   "name": "almide-js",
@@ -4018,27 +4046,6 @@
    "lang": "bash",
    "code": "# Install almide (once)\ncurl -fsSL https://almide.dev/install.sh | sh\n\n# Write a matrix library in Almide\ncat > mylib.almd <<'EOF'\npub fn axpy(a: Matrix, b: Matrix, ka: Float, kb: Float) -> Matrix =\n  matrix.add(matrix.scale(a, ka), matrix.scale(b, kb))\nEOF\n\n# One command to .wasm + ESM + .d.ts + .wit + package.json, wasm-opt'd\nalmide run src/main.almd -- --target wasm --outdir dist mylib.almd  # from almide-lander"
   },
-  "score": 3
- },
- {
-  "full": "almide/.github",
-  "owner": "almide",
-  "name": ".github",
-  "url": "https://github.com/almide/.github",
-  "lead": "Organization profile and community health files",
-  "language": "",
-  "languages": [],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-03-30",
-  "last": "2026-03-30",
-  "topics": [
-   "almide"
-  ],
-  "plate": "code",
   "score": 3
  },
  {
@@ -4194,7 +4201,7 @@
   },
   "first": "2026-05-13",
   "last": "2026-07-25",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -4231,29 +4238,28 @@
   "score": 5
  },
  {
-  "full": "almide-graphics/slabhra",
+  "full": "almide-graphics/ceangal-anime",
   "owner": "almide-graphics",
-  "name": "slabhra",
-  "url": "https://github.com/almide-graphics/slabhra",
-  "lead": "Differentiable programming for Almide — reverse-mode autograd, tensors, optimizers. Named for the chain rule (slabhra = chain, Irish).",
-  "heading": "slabhra",
+  "name": "ceangal-anime",
+  "url": "https://github.com/almide-graphics/ceangal-anime",
+  "lead": "Animation engine for Almide — anime.js-inspired tween/easing/timeline/stagger",
   "language": "Almide",
   "languages": [
    "Almide",
-   "Python"
+   "HTML"
   ],
   "stars": 0,
-  "commits": 7,
+  "commits": 6,
   "years": {
-   "2026": 7
+   "2026": 6
   },
-  "first": "2026-06-15",
-  "last": "2026-06-16",
+  "first": "2026-05-18",
+  "last": "2026-05-18",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "",
-   "code": "slabhra/\n  src/\n    tape.almd     reverse-mode autograd tape (flat, in-place O(1) append, depth-ordered backward)\n    ops.almd      ops + their vjp (gradients delegate to the same forward kernels)\n    optim.almd    SGD, Adam\n    nn.almd       layers / modules            (later)\n  examples/\n    mlp/          tiny MLP, verified against PyTorch\n    dlgn/         differentiable logic-gate networks (gate-count / depth Pareto)"
+   "lang": "almide",
+   "code": "import ceangal_anime.easing as ease\nimport ceangal_anime.tween as tw\nimport ceangal_anime.timeline as tl\nimport ceangal_anime.stagger as stag\n\n// Single tween\nlet t0 = tw.create(0.0, 100.0, 800.0)\nlet t1 = tw.with_easing(t0, ease.OUT_ELASTIC)\nlet t2 = tw.with_delay(t1, 200.0)\n\n// Tick each frame\nlet t3 = tw.tick(t2, 16.0)\nlet value = tw.value(t3)  // → current interpolated value\n\n// Timeline\nlet timeline = tl.create()\n  |> tl.add(tw.create(0.0, 1.0, 500.0), 0.0)\n  |> tl.sequence(tw.create(0.0, 1.0, 500.0))\n\n// Stagger delays\nlet delay = stag.from_center(index, total, 60.0)"
   },
   "score": 3.1
  },
@@ -4279,28 +4285,29 @@
   "score": 3.1
  },
  {
-  "full": "almide-graphics/ceangal-anime",
+  "full": "almide-graphics/slabhra",
   "owner": "almide-graphics",
-  "name": "ceangal-anime",
-  "url": "https://github.com/almide-graphics/ceangal-anime",
-  "lead": "Animation engine for Almide — anime.js-inspired tween/easing/timeline/stagger",
+  "name": "slabhra",
+  "url": "https://github.com/almide-graphics/slabhra",
+  "lead": "Differentiable programming for Almide — reverse-mode autograd, tensors, optimizers. Named for the chain rule (slabhra = chain, Irish).",
+  "heading": "slabhra",
   "language": "Almide",
   "languages": [
    "Almide",
-   "HTML"
+   "Python"
   ],
   "stars": 0,
-  "commits": 6,
+  "commits": 7,
   "years": {
-   "2026": 6
+   "2026": 7
   },
-  "first": "2026-05-18",
-  "last": "2026-05-18",
+  "first": "2026-06-15",
+  "last": "2026-06-16",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "almide",
-   "code": "import ceangal_anime.easing as ease\nimport ceangal_anime.tween as tw\nimport ceangal_anime.timeline as tl\nimport ceangal_anime.stagger as stag\n\n// Single tween\nlet t0 = tw.create(0.0, 100.0, 800.0)\nlet t1 = tw.with_easing(t0, ease.OUT_ELASTIC)\nlet t2 = tw.with_delay(t1, 200.0)\n\n// Tick each frame\nlet t3 = tw.tick(t2, 16.0)\nlet value = tw.value(t3)  // → current interpolated value\n\n// Timeline\nlet timeline = tl.create()\n  |> tl.add(tw.create(0.0, 1.0, 500.0), 0.0)\n  |> tl.sequence(tw.create(0.0, 1.0, 500.0))\n\n// Stagger delays\nlet delay = stag.from_center(index, total, 60.0)"
+   "lang": "",
+   "code": "slabhra/\n  src/\n    tape.almd     reverse-mode autograd tape (flat, in-place O(1) append, depth-ordered backward)\n    ops.almd      ops + their vjp (gradients delegate to the same forward kernels)\n    optim.almd    SGD, Adam\n    nn.almd       layers / modules            (later)\n  examples/\n    mlp/          tiny MLP, verified against PyTorch\n    dlgn/         differentiable logic-gate networks (gate-count / depth Pareto)"
   },
   "score": 3.1
  },
@@ -4332,6 +4339,39 @@
   "score": 7.6
  },
  {
+  "full": "almide-ai/almai",
+  "owner": "almide-ai",
+  "name": "almai",
+  "url": "https://github.com/almide-ai/almai",
+  "lead": "Multi-provider LLM client for Almide — one interface, every provider",
+  "heading": "almai",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 19,
+  "years": {
+   "2026": 19
+  },
+  "first": "2026-04-12",
+  "last": "2026-08-04",
+  "topics": [
+   "ai",
+   "almide",
+   "anthropic",
+   "llm",
+   "openai",
+   "openrouter"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "# almide.toml\n[dependencies]\nalmai = { git = \"https://github.com/almide/almai.git\" }"
+  },
+  "score": 5.4
+ },
+ {
   "full": "almide-ai/manus",
   "owner": "almide-ai",
   "name": "manus",
@@ -4349,7 +4389,7 @@
   },
   "first": "2026-07-07",
   "last": "2026-07-07",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -4357,39 +4397,6 @@
    "code": "almide build src/main.almd -o manus     # compile to a native binary\nexport ANTHROPIC_API_KEY=sk-ant-...\n./manus \"open Safari and search for the Almide language\""
   },
   "score": 5
- },
- {
-  "full": "almide-ai/almai",
-  "owner": "almide-ai",
-  "name": "almai",
-  "url": "https://github.com/almide-ai/almai",
-  "lead": "Multi-provider LLM client for Almide — one interface, every provider",
-  "heading": "almai",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 18,
-  "years": {
-   "2026": 18
-  },
-  "first": "2026-04-12",
-  "last": "2026-05-01",
-  "topics": [
-   "ai",
-   "almide",
-   "anthropic",
-   "llm",
-   "openai",
-   "openrouter"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "# almide.toml\n[dependencies]\nalmai = { git = \"https://github.com/almide/almai.git\" }"
-  },
-  "score": 3.4
  },
  {
   "full": "almd-mc/mc-protocol",
@@ -4472,54 +4479,12 @@
   "score": 3.2
  },
  {
-  "full": "almd-mc/mc-bot-ai",
+  "full": "almd-mc/mc-auth",
   "owner": "almd-mc",
-  "name": "mc-bot-ai",
-  "url": "https://github.com/almd-mc/mc-bot-ai",
-  "lead": "AI integration layer for Minecraft bots — Phase 5 Intelligence with almai",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-25",
-  "topics": [],
-  "plate": "code",
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-pathfinder",
-  "owner": "almd-mc",
-  "name": "mc-pathfinder",
-  "url": "https://github.com/almd-mc/mc-pathfinder",
-  "lead": "A* pathfinding for Minecraft bots — Almide implementation of mineflayer-pathfinder",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-world",
-  "owner": "almd-mc",
-  "name": "mc-world",
-  "url": "https://github.com/almd-mc/mc-world",
-  "lead": "Minecraft world module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-world",
+  "name": "mc-auth",
+  "url": "https://github.com/almd-mc/mc-auth",
+  "lead": "Microsoft authentication for Minecraft Java Edition (Almide)",
+  "heading": "almd-mc/mc-auth",
   "language": "Almide",
   "languages": [
    "Almide"
@@ -4529,13 +4494,13 @@
   "years": {
    "2026": 4
   },
-  "first": "2026-05-23",
-  "last": "2026-05-24",
+  "first": "2026-05-21",
+  "last": "2026-05-23",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "[dependencies]\nmc-world = { git = \"https://github.com/almd-mc/mc-world\" }"
+   "code": "[dependencies]\nmc-auth = { git = \"https://github.com/almd-mc/mc-auth\" }"
   },
   "score": 3.1
  },
@@ -4566,28 +4531,49 @@
   "score": 3.1
  },
  {
-  "full": "almd-mc/mc-item",
+  "full": "almd-mc/mc-bot-ai",
   "owner": "almd-mc",
-  "name": "mc-item",
-  "url": "https://github.com/almd-mc/mc-item",
-  "lead": "Minecraft item module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-item",
+  "name": "mc-bot-ai",
+  "url": "https://github.com/almd-mc/mc-bot-ai",
+  "lead": "AI integration layer for Minecraft bots — Phase 5 Intelligence with almai",
   "language": "Almide",
   "languages": [
    "Almide"
   ],
   "stars": 0,
-  "commits": 4,
+  "commits": 3,
   "years": {
-   "2026": 4
+   "2026": 3
   },
-  "first": "2026-05-23",
+  "first": "2026-05-24",
+  "last": "2026-05-25",
+  "topics": [],
+  "plate": "code",
+  "score": 3.1
+ },
+ {
+  "full": "almd-mc/mc-chat",
+  "owner": "almd-mc",
+  "name": "mc-chat",
+  "url": "https://github.com/almd-mc/mc-chat",
+  "lead": "Minecraft chat module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-chat",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 5,
+  "years": {
+   "2026": 5
+  },
+  "first": "2026-05-22",
   "last": "2026-05-24",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "[dependencies]\nmc-item = { git = \"https://github.com/almd-mc/mc-item\" }"
+   "code": "[dependencies]\nmc-chat = { git = \"https://github.com/almd-mc/mc-chat\" }"
   },
   "score": 3.1
  },
@@ -4644,28 +4630,28 @@
   "score": 3.1
  },
  {
-  "full": "almd-mc/mc-chat",
+  "full": "almd-mc/mc-item",
   "owner": "almd-mc",
-  "name": "mc-chat",
-  "url": "https://github.com/almd-mc/mc-chat",
-  "lead": "Minecraft chat module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-chat",
+  "name": "mc-item",
+  "url": "https://github.com/almd-mc/mc-item",
+  "lead": "Minecraft item module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-item",
   "language": "Almide",
   "languages": [
    "Almide"
   ],
   "stars": 0,
-  "commits": 5,
+  "commits": 4,
   "years": {
-   "2026": 5
+   "2026": 4
   },
-  "first": "2026-05-22",
+  "first": "2026-05-23",
   "last": "2026-05-24",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "[dependencies]\nmc-chat = { git = \"https://github.com/almd-mc/mc-chat\" }"
+   "code": "[dependencies]\nmc-item = { git = \"https://github.com/almd-mc/mc-item\" }"
   },
   "score": 3.1
  },
@@ -4696,12 +4682,59 @@
   "score": 3.1
  },
  {
-  "full": "almd-mc/mc-auth",
+  "full": "almd-mc/mc-pathfinder",
   "owner": "almd-mc",
-  "name": "mc-auth",
-  "url": "https://github.com/almd-mc/mc-auth",
-  "lead": "Microsoft authentication for Minecraft Java Edition (Almide)",
-  "heading": "almd-mc/mc-auth",
+  "name": "mc-pathfinder",
+  "url": "https://github.com/almd-mc/mc-pathfinder",
+  "lead": "A* pathfinding for Minecraft bots — Almide implementation of mineflayer-pathfinder",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 3,
+  "years": {
+   "2026": 3
+  },
+  "first": "2026-05-24",
+  "last": "2026-05-24",
+  "topics": [],
+  "plate": "code",
+  "score": 3.1
+ },
+ {
+  "full": "almd-mc/mc-registry",
+  "owner": "almd-mc",
+  "name": "mc-registry",
+  "url": "https://github.com/almd-mc/mc-registry",
+  "lead": "Minecraft registry module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-registry",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 3,
+  "years": {
+   "2026": 3
+  },
+  "first": "2026-05-22",
+  "last": "2026-05-23",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nmc-registry = { git = \"https://github.com/almd-mc/mc-registry\" }"
+  },
+  "score": 3.1
+ },
+ {
+  "full": "almd-mc/mc-world",
+  "owner": "almd-mc",
+  "name": "mc-world",
+  "url": "https://github.com/almd-mc/mc-world",
+  "lead": "Minecraft world module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-world",
   "language": "Almide",
   "languages": [
    "Almide"
@@ -4711,13 +4744,13 @@
   "years": {
    "2026": 4
   },
-  "first": "2026-05-21",
-  "last": "2026-05-23",
+  "first": "2026-05-23",
+  "last": "2026-05-24",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "[dependencies]\nmc-auth = { git = \"https://github.com/almd-mc/mc-auth\" }"
+   "code": "[dependencies]\nmc-world = { git = \"https://github.com/almd-mc/mc-world\" }"
   },
   "score": 3.1
  },
@@ -4748,37 +4781,11 @@
   "score": 3.1
  },
  {
-  "full": "almd-mc/mc-registry",
+  "full": "almd-mc/mc-collect",
   "owner": "almd-mc",
-  "name": "mc-registry",
-  "url": "https://github.com/almd-mc/mc-registry",
-  "lead": "Minecraft registry module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-registry",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-05-22",
-  "last": "2026-05-23",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nmc-registry = { git = \"https://github.com/almd-mc/mc-registry\" }"
-  },
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-server-impl",
-  "owner": "almd-mc",
-  "name": "mc-server-impl",
-  "url": "https://github.com/almd-mc/mc-server-impl",
-  "lead": "Lightweight Minecraft server implementation — Almide implementation of flying-squid",
+  "name": "mc-collect",
+  "url": "https://github.com/almd-mc/mc-collect",
+  "lead": "Block collection automation for Minecraft bots — Almide implementation of mineflayer-collectblock",
   "language": "Almide",
   "languages": [
    "Almide"
@@ -4795,40 +4802,19 @@
   "score": 3
  },
  {
-  "full": "almd-mc/mc-proxy",
+  "full": "almd-mc/mc-data",
   "owner": "almd-mc",
-  "name": "mc-proxy",
-  "url": "https://github.com/almd-mc/mc-proxy",
-  "lead": "Minecraft proxy foundation — Almide implementation of prismarine-proxy",
+  "name": "mc-data",
+  "url": "https://github.com/almd-mc/mc-data",
+  "lead": "Minecraft data definitions for Almide (blocks, entities, game modes)",
   "language": "Almide",
   "languages": [
    "Almide"
   ],
   "stars": 0,
-  "commits": 2,
+  "commits": 1,
   "years": {
-   "2026": 2
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
-  "full": "almd-mc/mc-server",
-  "owner": "almd-mc",
-  "name": "mc-server",
-  "url": "https://github.com/almd-mc/mc-server",
-  "lead": "Server protocol foundation for Minecraft — Almide implementation of node-minecraft-protocol server mode",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
+   "2026": 1
   },
   "first": "2026-05-24",
   "last": "2026-05-24",
@@ -4842,48 +4828,6 @@
   "name": "mc-inventory",
   "url": "https://github.com/almd-mc/mc-inventory",
   "lead": "Inventory window management for Minecraft bots — Almide implementation of prismarine-windows",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
-  "full": "almd-mc/mc-pvp",
-  "owner": "almd-mc",
-  "name": "mc-pvp",
-  "url": "https://github.com/almd-mc/mc-pvp",
-  "lead": "PvP combat utilities for Minecraft bots — Almide implementation of mineflayer-pvp",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
-  "full": "almd-mc/mc-collect",
-  "owner": "almd-mc",
-  "name": "mc-collect",
-  "url": "https://github.com/almd-mc/mc-collect",
-  "lead": "Block collection automation for Minecraft bots — Almide implementation of mineflayer-collectblock",
   "language": "Almide",
   "languages": [
    "Almide"
@@ -4921,6 +4865,48 @@
   "score": 3
  },
  {
+  "full": "almd-mc/mc-proxy",
+  "owner": "almd-mc",
+  "name": "mc-proxy",
+  "url": "https://github.com/almd-mc/mc-proxy",
+  "lead": "Minecraft proxy foundation — Almide implementation of prismarine-proxy",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-05-24",
+  "last": "2026-05-24",
+  "topics": [],
+  "plate": "code",
+  "score": 3
+ },
+ {
+  "full": "almd-mc/mc-pvp",
+  "owner": "almd-mc",
+  "name": "mc-pvp",
+  "url": "https://github.com/almd-mc/mc-pvp",
+  "lead": "PvP combat utilities for Minecraft bots — Almide implementation of mineflayer-pvp",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-05-24",
+  "last": "2026-05-24",
+  "topics": [],
+  "plate": "code",
+  "score": 3
+ },
+ {
   "full": "almd-mc/mc-recipe",
   "owner": "almd-mc",
   "name": "mc-recipe",
@@ -4942,25 +4928,80 @@
   "score": 3
  },
  {
-  "full": "almd-mc/mc-data",
+  "full": "almd-mc/mc-server",
   "owner": "almd-mc",
-  "name": "mc-data",
-  "url": "https://github.com/almd-mc/mc-data",
-  "lead": "Minecraft data definitions for Almide (blocks, entities, game modes)",
+  "name": "mc-server",
+  "url": "https://github.com/almd-mc/mc-server",
+  "lead": "Server protocol foundation for Minecraft — Almide implementation of node-minecraft-protocol server mode",
   "language": "Almide",
   "languages": [
    "Almide"
   ],
   "stars": 0,
-  "commits": 1,
+  "commits": 2,
   "years": {
-   "2026": 1
+   "2026": 2
   },
   "first": "2026-05-24",
   "last": "2026-05-24",
   "topics": [],
   "plate": "code",
   "score": 3
+ },
+ {
+  "full": "almd-mc/mc-server-impl",
+  "owner": "almd-mc",
+  "name": "mc-server-impl",
+  "url": "https://github.com/almd-mc/mc-server-impl",
+  "lead": "Lightweight Minecraft server implementation — Almide implementation of flying-squid",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-05-24",
+  "last": "2026-05-24",
+  "topics": [],
+  "plate": "code",
+  "score": 3
+ },
+ {
+  "full": "Aid-On/llm-queue-dispatcher",
+  "owner": "Aid-On",
+  "name": "llm-queue-dispatcher",
+  "url": "https://github.com/Aid-On/llm-queue-dispatcher",
+  "lead": "LLM Queue Dispatcher for LLM requests with advanced scoring algorithms and rate-limit awareness",
+  "heading": "@aid-on/llm-queue-dispatcher",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript",
+   "HTML"
+  ],
+  "stars": 1,
+  "commits": 10,
+  "years": {
+   "2025": 10
+  },
+  "first": "2025-08-02",
+  "last": "2025-08-03",
+  "tag": "v1.0.2",
+  "license": "MIT",
+  "topics": [
+   "aid-on-libs",
+   "llm",
+   "npm-packages"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "npm install @aid-on/llm-queue-dispatcher"
+  },
+  "score": 11.2
  },
  {
   "full": "Aid-On/llm-throttle",
@@ -4986,48 +5027,14 @@
   "tag": "v1.0.1",
   "topics": [
    "aid-on-libs",
-   "typescript",
+   "llm",
    "npm-package",
-   "llm"
+   "typescript"
   ],
   "plate": "site",
   "sample": {
    "lang": "bash",
    "code": "npm install @aid-on/llm-throttle\n```\n\n## Basic Usage"
-  },
-  "score": 11.2
- },
- {
-  "full": "Aid-On/llm-queue-dispatcher",
-  "owner": "Aid-On",
-  "name": "llm-queue-dispatcher",
-  "url": "https://github.com/Aid-On/llm-queue-dispatcher",
-  "lead": "LLM Queue Dispatcher for LLM requests with advanced scoring algorithms and rate-limit awareness",
-  "heading": "@aid-on/llm-queue-dispatcher",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript",
-   "HTML"
-  ],
-  "stars": 1,
-  "commits": 10,
-  "years": {
-   "2025": 10
-  },
-  "first": "2025-08-02",
-  "last": "2025-08-03",
-  "tag": "v1.0.2",
-  "license": "mit",
-  "topics": [
-   "aid-on-libs",
-   "npm-packages",
-   "llm"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "npm install @aid-on/llm-queue-dispatcher"
   },
   "score": 11.2
  },
@@ -5058,52 +5065,6 @@
   "score": 7.8
  },
  {
-  "full": "Aid-On/unillm",
-  "owner": "Aid-On",
-  "name": "unillm",
-  "url": "https://github.com/Aid-On/unillm",
-  "lead": "Edge-native unified LLM interface - 48 models across Anthropic, OpenAI, Groq, Gemini, Cloudflare with Web Streams API",
-  "heading": "@aid-on/unillm",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript"
-  ],
-  "stars": 0,
-  "commits": 29,
-  "years": {
-   "2025": 20,
-   "2026": 9
-  },
-  "first": "2025-12-26",
-  "last": "2026-06-11",
-  "tag": "v0.5.1",
-  "license": "mit",
-  "topics": [
-   "ai",
-   "cloudflare-workers",
-   "edge-computing",
-   "gemini",
-   "groq",
-   "llm",
-   "streaming",
-   "typescript",
-   "anthropic",
-   "claude",
-   "edge-native",
-   "gpt-4",
-   "nagare",
-   "openai",
-   "unified-api",
-   "web-streams"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "npm install @aid-on/unillm\n```\n\n```bash\nyarn add @aid-on/unillm"
-  },
-  "score": 7.6
- },
- {
   "full": "Aid-On/whenm",
   "owner": "Aid-On",
   "name": "whenm",
@@ -5125,7 +5086,7 @@
   "first": "2025-12-30",
   "last": "2026-02-20",
   "tag": "v0.3.5",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "ai-memory",
    "cloudflare-workers",
@@ -5166,7 +5127,7 @@
   "first": "2025-12-31",
   "last": "2026-06-12",
   "tag": "v0.2.2",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "ai",
    "article-generation",
@@ -5184,6 +5145,45 @@
    "code": "npm install @aid-on/templex\n```\n\n## Quick Start\n\n### 1. Extract a template from existing content"
   },
   "score": 7.5
+ },
+ {
+  "full": "Aid-On/fractop",
+  "owner": "Aid-On",
+  "name": "fractop",
+  "url": "https://github.com/Aid-On/fractop",
+  "lead": "FractoP - Fractal Processor for infinite-length text processing with LLMs using fractal architecture",
+  "heading": "@aid-on/fractop",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 19,
+  "years": {
+   "2025": 13,
+   "2026": 6
+  },
+  "first": "2025-12-26",
+  "last": "2026-06-10",
+  "tag": "v0.6.2",
+  "license": "MIT",
+  "topics": [
+   "ai",
+   "chunking",
+   "fractal",
+   "llm",
+   "long-context",
+   "stream-processing",
+   "text-processing",
+   "typescript"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "typescript",
+   "code": "// ❌ This fails\nconst summary = await llm.process(entire500PagePDF);\n// Error: Context length exceeded (400,000 tokens > 128,000 limit)"
+  },
+  "score": 7.4
  },
  {
   "full": "Aid-On/iteratop",
@@ -5205,7 +5205,7 @@
   "first": "2025-12-26",
   "last": "2026-06-11",
   "tag": "v0.3.1",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "agent",
    "ai",
@@ -5250,7 +5250,7 @@
   "first": "2025-12-25",
   "last": "2026-06-11",
   "tag": "v0.2.1",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "edge-computing",
    "readablestream",
@@ -5264,149 +5264,29 @@
   "score": 7.4
  },
  {
-  "full": "Aid-On/fractop",
+  "full": "Aid-On/fizz-brain-orchestrator",
   "owner": "Aid-On",
-  "name": "fractop",
-  "url": "https://github.com/Aid-On/fractop",
-  "lead": "FractoP - Fractal Processor for infinite-length text processing with LLMs using fractal architecture",
-  "heading": "@aid-on/fractop",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 19,
-  "years": {
-   "2025": 13,
-   "2026": 6
-  },
-  "first": "2025-12-26",
-  "last": "2026-06-10",
-  "tag": "v0.6.2",
-  "license": "mit",
-  "topics": [
-   "ai",
-   "chunking",
-   "fractal",
-   "llm",
-   "long-context",
-   "stream-processing",
-   "text-processing",
-   "typescript"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "typescript",
-   "code": "// ❌ This fails\nconst summary = await llm.process(entire500PagePDF);\n// Error: Context length exceeded (400,000 tokens > 128,000 limit)"
-  },
-  "score": 7.4
- },
- {
-  "full": "Aid-On/fizz-protocol",
-  "owner": "Aid-On",
-  "name": "fizz-protocol",
-  "url": "https://github.com/Aid-On/fizz-protocol",
-  "lead": "Fizz AITuber system — shared wire contracts in Almide (commands, comments, speech, emotion-tag grammar, memory)",
-  "heading": "fizz-protocol",
+  "name": "fizz-brain-orchestrator",
+  "url": "https://github.com/Aid-On/fizz-brain-orchestrator",
+  "lead": "Fizz brain — compose comment -> sentence-fragment pipeline (classify, few-shot, prompt, LLM, parse) [Almide]",
+  "heading": "fizz-brain-orchestrator",
   "language": "Almide",
   "languages": [
    "Almide"
   ],
   "stars": 0,
-  "commits": 7,
+  "commits": 4,
   "years": {
-   "2026": 7
-  },
-  "first": "2026-06-07",
-  "last": "2026-06-15",
-  "tag": "v0.2.1",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "# almide.toml\n[dependencies]\nfizz_protocol = { git = \"https://github.com/Aid-On/fizz-protocol\", tag = \"v0.2.0\" }"
-  },
-  "score": 7.1
- },
- {
-  "full": "Aid-On/fizz-llm-client",
-  "owner": "Aid-On",
-  "name": "fizz-llm-client",
-  "url": "https://github.com/Aid-On/fizz-llm-client",
-  "lead": "Fizz brain — multi-provider LLM client, almai-shape interface over stdlib http.request [Almide]",
-  "heading": "fizz-llm-client",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
+   "2026": 4
   },
   "first": "2026-06-08",
   "last": "2026-06-14",
-  "tag": "v0.2.0",
+  "tag": "v0.1.0",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "almide",
-   "code": "let resp = fizz_llm_client.call_streaming(\n  \"anthropic/claude-haiku-4-5\",\n  [fizz_llm_client.user(\"こんにちは\")],\n  (delta) => { print(delta) },   // トークンが届くたび\n)!"
-  },
-  "score": 7.1
- },
- {
-  "full": "Aid-On/fizz-prompt-builder",
-  "owner": "Aid-On",
-  "name": "fizz-prompt-builder",
-  "url": "https://github.com/Aid-On/fizz-prompt-builder",
-  "lead": "Fizz brain — assemble LLM messages from persona + recall + few-shot + history + comment [Almide]",
-  "heading": "fizz-prompt-builder",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-06-08",
-  "last": "2026-06-14",
-  "tag": "v0.1.1",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nfizz_prompt_builder = { git = \"https://github.com/Aid-On/fizz-prompt-builder\", tag = \"v0.1.0\" }"
-  },
-  "score": 7.1
- },
- {
-  "full": "Aid-On/fizz-persona",
-  "owner": "Aid-On",
-  "name": "fizz-persona",
-  "url": "https://github.com/Aid-On/fizz-persona",
-  "lead": "Fizz AITuber system — persona on-disk format contract in Almide (spec / voice / world / transforms / triggers / few-shot examples)",
-  "heading": "fizz-persona",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-06-07",
-  "last": "2026-06-14",
-  "tag": "v0.2.0",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "# almide.toml\n[dependencies]\nfizz_persona = { git = \"https://github.com/Aid-On/fizz-persona\", tag = \"v0.1.0\" }"
+   "lang": "",
+   "code": "comment → classify(参考ログ) → few-shot 検索 → prompt 構築\n        → LLM 呼び出し (fizz-llm-client) → 文 + タグ切り出し\n        → thinking 注釈 → SentenceFragment を NDJSON で stdout へ"
   },
   "score": 7.1
  },
@@ -5438,93 +5318,120 @@
   "score": 7.1
  },
  {
-  "full": "Aid-On/fizz-brain-orchestrator",
+  "full": "Aid-On/fizz-llm-client",
   "owner": "Aid-On",
-  "name": "fizz-brain-orchestrator",
-  "url": "https://github.com/Aid-On/fizz-brain-orchestrator",
-  "lead": "Fizz brain — compose comment -> sentence-fragment pipeline (classify, few-shot, prompt, LLM, parse) [Almide]",
-  "heading": "fizz-brain-orchestrator",
+  "name": "fizz-llm-client",
+  "url": "https://github.com/Aid-On/fizz-llm-client",
+  "lead": "Fizz brain — multi-provider LLM client, almai-shape interface over stdlib http.request [Almide]",
+  "heading": "fizz-llm-client",
   "language": "Almide",
   "languages": [
    "Almide"
   ],
   "stars": 0,
-  "commits": 4,
+  "commits": 3,
   "years": {
-   "2026": 4
+   "2026": 3
   },
   "first": "2026-06-08",
   "last": "2026-06-14",
-  "tag": "v0.1.0",
+  "tag": "v0.2.0",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "",
-   "code": "comment → classify(参考ログ) → few-shot 検索 → prompt 構築\n        → LLM 呼び出し (fizz-llm-client) → 文 + タグ切り出し\n        → thinking 注釈 → SentenceFragment を NDJSON で stdout へ"
+   "lang": "almide",
+   "code": "let resp = fizz_llm_client.call_streaming(\n  \"anthropic/claude-haiku-4-5\",\n  [fizz_llm_client.user(\"こんにちは\")],\n  (delta) => { print(delta) },   // トークンが届くたび\n)!"
   },
   "score": 7.1
  },
  {
-  "full": "Aid-On/fizz-thinking-cue-detector",
+  "full": "Aid-On/fizz-persona",
   "owner": "Aid-On",
-  "name": "fizz-thinking-cue-detector",
-  "url": "https://github.com/Aid-On/fizz-thinking-cue-detector",
-  "lead": "Fizz brain — decide if a spoken sentence triggers the thinking motion (speech-only) [Almide]",
-  "heading": "fizz-thinking-cue-detector",
+  "name": "fizz-persona",
+  "url": "https://github.com/Aid-On/fizz-persona",
+  "lead": "Fizz AITuber system — persona on-disk format contract in Almide (spec / voice / world / transforms / triggers / few-shot examples)",
+  "heading": "fizz-persona",
   "language": "Almide",
   "languages": [
    "Almide"
   ],
   "stars": 0,
-  "commits": 2,
+  "commits": 3,
   "years": {
-   "2026": 2
+   "2026": 3
   },
-  "first": "2026-06-08",
+  "first": "2026-06-07",
   "last": "2026-06-14",
-  "tag": "v0.1.0",
+  "tag": "v0.2.0",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "[dependencies]\nfizz_thinking_cue_detector = { git = \"https://github.com/Aid-On/fizz-thinking-cue-detector\", tag = \"v0.1.0\" }"
+   "code": "# almide.toml\n[dependencies]\nfizz_persona = { git = \"https://github.com/Aid-On/fizz-persona\", tag = \"v0.1.0\" }"
   },
-  "score": 7
+  "score": 7.1
  },
  {
-  "full": "Aid-On/fizz-stream-sentence-parser",
+  "full": "Aid-On/fizz-prompt-builder",
   "owner": "Aid-On",
-  "name": "fizz-stream-sentence-parser",
-  "url": "https://github.com/Aid-On/fizz-stream-sentence-parser",
-  "lead": "Fizz brain — split LLM output into sentence fragments + parse inline emotion/fx/hair tags [Almide]",
-  "heading": "fizz-stream-sentence-parser",
+  "name": "fizz-prompt-builder",
+  "url": "https://github.com/Aid-On/fizz-prompt-builder",
+  "lead": "Fizz brain — assemble LLM messages from persona + recall + few-shot + history + comment [Almide]",
+  "heading": "fizz-prompt-builder",
   "language": "Almide",
   "languages": [
    "Almide"
   ],
   "stars": 0,
-  "commits": 2,
+  "commits": 3,
   "years": {
-   "2026": 2
+   "2026": 3
   },
   "first": "2026-06-08",
   "last": "2026-06-14",
-  "tag": "v0.1.0",
+  "tag": "v0.1.1",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "[dependencies]\nfizz_stream_sentence_parser = { git = \"https://github.com/Aid-On/fizz-stream-sentence-parser\", tag = \"v0.1.0\" }"
+   "code": "[dependencies]\nfizz_prompt_builder = { git = \"https://github.com/Aid-On/fizz-prompt-builder\", tag = \"v0.1.0\" }"
   },
-  "score": 7
+  "score": 7.1
  },
  {
-  "full": "Aid-On/fizz-first-time-greeter",
+  "full": "Aid-On/fizz-protocol",
   "owner": "Aid-On",
-  "name": "fizz-first-time-greeter",
-  "url": "https://github.com/Aid-On/fizz-first-time-greeter",
-  "lead": "Fizz brain — deterministic one-time self-intro for first-time viewers [Almide]",
-  "heading": "fizz-first-time-greeter",
+  "name": "fizz-protocol",
+  "url": "https://github.com/Aid-On/fizz-protocol",
+  "lead": "Fizz AITuber system — shared wire contracts in Almide (commands, comments, speech, emotion-tag grammar, memory)",
+  "heading": "fizz-protocol",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 7,
+  "years": {
+   "2026": 7
+  },
+  "first": "2026-06-07",
+  "last": "2026-06-15",
+  "tag": "v0.2.1",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "# almide.toml\n[dependencies]\nfizz_protocol = { git = \"https://github.com/Aid-On/fizz-protocol\", tag = \"v0.2.0\" }"
+  },
+  "score": 7.1
+ },
+ {
+  "full": "Aid-On/fizz-comment-classifier",
+  "owner": "Aid-On",
+  "name": "fizz-comment-classifier",
+  "url": "https://github.com/Aid-On/fizz-comment-classifier",
+  "lead": "Fizz brain — classify a comment into a reaction Emotion (keyword rules) [Almide]",
+  "heading": "fizz-comment-classifier",
   "language": "Almide",
   "languages": [
    "Almide"
@@ -5541,7 +5448,7 @@
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "[dependencies]\nfizz_first_time_greeter = { git = \"https://github.com/Aid-On/fizz-first-time-greeter\", tag = \"v0.1.0\" }"
+   "code": "[dependencies]\nfizz_comment_classifier = { git = \"https://github.com/Aid-On/fizz-comment-classifier\", tag = \"v0.1.0\" }"
   },
   "score": 7
  },
@@ -5573,12 +5480,12 @@
   "score": 7
  },
  {
-  "full": "Aid-On/fizz-comment-classifier",
+  "full": "Aid-On/fizz-first-time-greeter",
   "owner": "Aid-On",
-  "name": "fizz-comment-classifier",
-  "url": "https://github.com/Aid-On/fizz-comment-classifier",
-  "lead": "Fizz brain — classify a comment into a reaction Emotion (keyword rules) [Almide]",
-  "heading": "fizz-comment-classifier",
+  "name": "fizz-first-time-greeter",
+  "url": "https://github.com/Aid-On/fizz-first-time-greeter",
+  "lead": "Fizz brain — deterministic one-time self-intro for first-time viewers [Almide]",
+  "heading": "fizz-first-time-greeter",
   "language": "Almide",
   "languages": [
    "Almide"
@@ -5595,7 +5502,61 @@
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "[dependencies]\nfizz_comment_classifier = { git = \"https://github.com/Aid-On/fizz-comment-classifier\", tag = \"v0.1.0\" }"
+   "code": "[dependencies]\nfizz_first_time_greeter = { git = \"https://github.com/Aid-On/fizz-first-time-greeter\", tag = \"v0.1.0\" }"
+  },
+  "score": 7
+ },
+ {
+  "full": "Aid-On/fizz-stream-sentence-parser",
+  "owner": "Aid-On",
+  "name": "fizz-stream-sentence-parser",
+  "url": "https://github.com/Aid-On/fizz-stream-sentence-parser",
+  "lead": "Fizz brain — split LLM output into sentence fragments + parse inline emotion/fx/hair tags [Almide]",
+  "heading": "fizz-stream-sentence-parser",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-06-08",
+  "last": "2026-06-14",
+  "tag": "v0.1.0",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nfizz_stream_sentence_parser = { git = \"https://github.com/Aid-On/fizz-stream-sentence-parser\", tag = \"v0.1.0\" }"
+  },
+  "score": 7
+ },
+ {
+  "full": "Aid-On/fizz-thinking-cue-detector",
+  "owner": "Aid-On",
+  "name": "fizz-thinking-cue-detector",
+  "url": "https://github.com/Aid-On/fizz-thinking-cue-detector",
+  "lead": "Fizz brain — decide if a spoken sentence triggers the thinking motion (speech-only) [Almide]",
+  "heading": "fizz-thinking-cue-detector",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-06-08",
+  "last": "2026-06-14",
+  "tag": "v0.1.0",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nfizz_thinking_cue_detector = { git = \"https://github.com/Aid-On/fizz-thinking-cue-detector\", tag = \"v0.1.0\" }"
   },
   "score": 7
  },
@@ -5622,11 +5583,11 @@
   "last": "2025-08-03",
   "tag": "v1.0.0",
   "topics": [
+   "aid-on-libs",
+   "llm",
    "npm-package",
    "token-estimation",
-   "typescript",
-   "aid-on-libs",
-   "llm"
+   "typescript"
   ],
   "plate": "site",
   "sample": {
@@ -5656,7 +5617,7 @@
   "first": "2025-08-09",
   "last": "2025-08-10",
   "tag": "v1.0.0",
-  "license": "mit",
+  "license": "MIT",
   "topics": [
    "aid-on-libs",
    "npm-package"
@@ -5693,6 +5654,37 @@
    "code": "// Use nagare Streams directly in Qwik components\nconst aiResponse = useStreamText(() =>\n  unilmp.stream(\"Hello AI\")  // Returns nagare Stream<string>\n);\n\n// Automatically converted to Qwik Signals\nreturn <div>{aiResponse.text}</div>  // Reactively updates"
   },
   "score": 5.2
+ },
+ {
+  "full": "Aid-On/outline-api-client-ts",
+  "owner": "Aid-On",
+  "name": "outline-api-client-ts",
+  "url": "https://github.com/Aid-On/outline-api-client-ts",
+  "site": "https://aid-on.github.io/outline-api-client-ts/",
+  "lead": "A TypeScript client library for the Outline knowledge base API",
+  "heading": "Outline API Client",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "Shell",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 7,
+  "years": {
+   "2025": 6,
+   "2026": 1
+  },
+  "first": "2025-08-05",
+  "last": "2026-09-06",
+  "license": "MIT",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "bash",
+   "code": "npm install outline-api-client\n```\n\n## 🚀 Quick Start"
+  },
+  "score": 5.1
  },
  {
   "full": "Aid-On/unillm-vercel-ai-sdk",
@@ -5743,37 +5735,6 @@
   "sample": {
    "lang": "bash",
    "code": "npm install @aid-on/vad\n```\n\n**Note:** This package is browser-only. It requires WebAssembly support and access to `navigator.mediaDevices.getUserMedia`.\n\n## Quick Start"
-  },
-  "score": 5.1
- },
- {
-  "full": "Aid-On/outline-api-client-ts",
-  "owner": "Aid-On",
-  "name": "outline-api-client-ts",
-  "url": "https://github.com/Aid-On/outline-api-client-ts",
-  "site": "https://aid-on.github.io/outline-api-client-ts/",
-  "lead": "A TypeScript client library for the Outline knowledge base API",
-  "heading": "Outline API Client",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "Shell",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 7,
-  "years": {
-   "2025": 6,
-   "2026": 1
-  },
-  "first": "2025-08-05",
-  "last": "2026-09-06",
-  "license": "mit",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "bash",
-   "code": "npm install outline-api-client\n```\n\n## 🚀 Quick Start"
   },
   "score": 5.1
  },
@@ -5835,6 +5796,51 @@
   "score": 4.4
  },
  {
+  "full": "Aid-On/unillm",
+  "owner": "Aid-On",
+  "name": "unillm",
+  "url": "https://github.com/Aid-On/unillm",
+  "lead": "Edge-native unified LLM interface - 48 models across Anthropic, OpenAI, Groq, Gemini, Cloudflare with Web Streams API",
+  "heading": "@aid-on/unillm",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript"
+  ],
+  "stars": 0,
+  "commits": 29,
+  "years": {
+   "2025": 20,
+   "2026": 9
+  },
+  "first": "2025-12-26",
+  "last": "2026-06-11",
+  "license": "MIT",
+  "topics": [
+   "ai",
+   "anthropic",
+   "claude",
+   "cloudflare-workers",
+   "edge-computing",
+   "edge-native",
+   "gemini",
+   "gpt-4",
+   "groq",
+   "llm",
+   "nagare",
+   "openai",
+   "streaming",
+   "typescript",
+   "unified-api",
+   "web-streams"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "npm install @aid-on/unillm\n```\n\n```bash\nyarn add @aid-on/unillm"
+  },
+  "score": 3.6
+ },
+ {
   "full": "Aid-On/design-system",
   "owner": "Aid-On",
   "name": "design-system",
@@ -5890,29 +5896,134 @@
   "score": 3.2
  },
  {
-  "full": "Aid-On/fizz-tweet-validator",
+  "full": "Aid-On/auth",
   "owner": "Aid-On",
-  "name": "fizz-tweet-validator",
-  "url": "https://github.com/Aid-On/fizz-tweet-validator",
-  "lead": "Fizz tweet validator — X (twitter-text) weighted character count + 280-limit validation. One Almide core, native + wasm.",
-  "heading": "fizz-tweet-validator",
-  "language": "Almide",
+  "name": "auth",
+  "url": "https://github.com/Aid-On/auth",
+  "lead": "Edge-native authentication with Fluent API. Sessions, OAuth, Guests, Audit logs. Zero Node.js dependencies.",
+  "heading": "@aid-on/auth",
+  "language": "TypeScript",
   "languages": [
-   "Almide",
-   "JavaScript"
+   "TypeScript"
   ],
   "stars": 0,
   "commits": 3,
   "years": {
    "2026": 3
   },
-  "first": "2026-06-14",
+  "first": "2026-02-18",
+  "last": "2026-06-11",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "typescript",
+   "code": "// Fluent API - Simple, Type-safe, Powerful\nawait SessionBuilder.create(user).withSecret(secret).withDuration('7d').build()\nawait GuestBuilder.create().withSessionDuration('24h').build()\nawait OAuthFlow.google().withClientId(id).buildAuthUrl()\nawait AuditBuilder.login(userId).fromRequest(request).build()"
+  },
+  "score": 3.1
+ },
+ {
+  "full": "Aid-On/embersm",
+  "owner": "Aid-On",
+  "name": "embersm",
+  "url": "https://github.com/Aid-On/embersm",
+  "lead": "EmbersM - Cloudflare Native Memory System with 5-Layer Architecture",
+  "heading": "@aid-on/embersm",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-02-18",
+  "last": "2026-06-11",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "Semantic Search (50 results) + Episode Keyword (15) + Recent (10)"
+  },
+  "score": 3.1
+ },
+ {
+  "full": "Aid-On/fizz-comment-dedupe",
+  "owner": "Aid-On",
+  "name": "fizz-comment-dedupe",
+  "url": "https://github.com/Aid-On/fizz-comment-dedupe",
+  "lead": "Fizz comment filter — drop duplicate Comments by id (FIFO-capped), NDJSON in/out [Almide]",
+  "heading": "fizz-comment-dedupe",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 4,
+  "years": {
+   "2026": 4
+  },
+  "first": "2026-06-07",
   "last": "2026-06-14",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-tweet-validator\nprintf 'こんにちは、世界！\\n' | ./build/fizz-tweet-validator\n# 18/280\tok\tこんにちは、世界！   (9 文字 × 2)"
+   "lang": "bash",
+   "code": "almide build src/main.almd -o fizz-comment-dedupe\n\nfizz-youtube-chat-source | ./fizz-comment-dedupe | ...\n\n# 複数ソースの合流にも (シェルの process substitution などで)\ncat <(fizz-youtube-chat-source) <(fizz-twitch-chat-source) | ./fizz-comment-dedupe"
+  },
+  "score": 3.1
+ },
+ {
+  "full": "Aid-On/fizz-lipsync",
+  "owner": "Aid-On",
+  "name": "fizz-lipsync",
+  "url": "https://github.com/Aid-On/fizz-lipsync",
+  "lead": "Fizz lipsync DSP — audio RMS -> envelope-followed mouth value. One Almide core, native (precompute CLI) + wasm (AudioWorklet).",
+  "heading": "fizz-lipsync",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 4,
+  "years": {
+   "2026": 4
+  },
+  "first": "2026-06-09",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "            ┌─────────────────────────┐\naudio  ──▶  │  fizz_lipsync DSP core   │  ──▶  mouth value [0,1]\nsamples     │  (src/mod.almd, 純 Almide) │\n            └─────────────────────────┘\n                 ▲                  ▲\n        native (Rust)          wasm (AudioWorklet)\n   オフライン precompute CLI    1 quantum ごとに呼ぶ\n   (src/main.almd)             (worklet/lipsync-processor.js)"
+  },
+  "score": 3.1
+ },
+ {
+  "full": "Aid-On/fizz-manual-comment-input",
+  "owner": "Aid-On",
+  "name": "fizz-manual-comment-input",
+  "url": "https://github.com/Aid-On/fizz-manual-comment-input",
+  "lead": "Fizz comment source — operator manual input (stdin) → normalized Comment NDJSON [Almide]",
+  "heading": "fizz-manual-comment-input",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 4,
+  "years": {
+   "2026": 4
+  },
+  "first": "2026-06-07",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide build src/main.almd -o fizz-manual-comment-input\n\n# 対話的に\n./fizz-manual-comment-input | fizz-comment-dedupe | ...\n\n# ワンショット注入\necho \"こんにちは\" | ./fizz-manual-comment-input\necho \"常連さん\tまた来たよ\" | ./fizz-manual-comment-input   # TAB 区切りで user 指定"
   },
   "score": 3.1
  },
@@ -5969,54 +6080,29 @@
   "score": 3.1
  },
  {
-  "full": "Aid-On/fizz-youtube-chat-source",
+  "full": "Aid-On/fizz-tweet-validator",
   "owner": "Aid-On",
-  "name": "fizz-youtube-chat-source",
-  "url": "https://github.com/Aid-On/fizz-youtube-chat-source",
-  "lead": "Fizz comment source — YouTube Live Chat (Data API v3, read-only) → normalized Comment NDJSON [Almide]",
-  "heading": "fizz-youtube-chat-source",
+  "name": "fizz-tweet-validator",
+  "url": "https://github.com/Aid-On/fizz-tweet-validator",
+  "lead": "Fizz tweet validator — X (twitter-text) weighted character count + 280-limit validation. One Almide core, native + wasm.",
+  "heading": "fizz-tweet-validator",
   "language": "Almide",
   "languages": [
-   "Almide"
+   "Almide",
+   "JavaScript"
   ],
   "stars": 0,
-  "commits": 4,
+  "commits": 3,
   "years": {
-   "2026": 4
+   "2026": 3
   },
-  "first": "2026-06-07",
+  "first": "2026-06-14",
   "last": "2026-06-14",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "bash",
-   "code": "almide build src/main.almd -o fizz-youtube-chat-source\n\nYOUTUBE_API_KEY=... YOUTUBE_VIDEO_ID=... ./fizz-youtube-chat-source \\\n  | fizz-comment-dedupe \\\n  | ..."
-  },
-  "score": 3.1
- },
- {
-  "full": "Aid-On/fizz-x-mention-source",
-  "owner": "Aid-On",
-  "name": "fizz-x-mention-source",
-  "url": "https://github.com/Aid-On/fizz-x-mention-source",
-  "lead": "Fizz comment source — X (Twitter) mentions via XAPI proxy → normalized Comment NDJSON [Almide]",
-  "heading": "fizz-x-mention-source",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-06-07",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "GET {XAPI_BASE_URL}/api/mentions?xUserId=...&sinceId=...\n→ {\"mentions\": [{\"id\", \"text\", \"createdAt\",\n                  \"author\": {\"id\", \"handle\", \"displayName\"}}, ...]}"
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-tweet-validator\nprintf 'こんにちは、世界！\\n' | ./build/fizz-tweet-validator\n# 18/280\tok\tこんにちは、世界！   (9 文字 × 2)"
   },
   "score": 3.1
  },
@@ -6047,12 +6133,12 @@
   "score": 3.1
  },
  {
-  "full": "Aid-On/fizz-manual-comment-input",
+  "full": "Aid-On/fizz-x-mention-source",
   "owner": "Aid-On",
-  "name": "fizz-manual-comment-input",
-  "url": "https://github.com/Aid-On/fizz-manual-comment-input",
-  "lead": "Fizz comment source — operator manual input (stdin) → normalized Comment NDJSON [Almide]",
-  "heading": "fizz-manual-comment-input",
+  "name": "fizz-x-mention-source",
+  "url": "https://github.com/Aid-On/fizz-x-mention-source",
+  "lead": "Fizz comment source — X (Twitter) mentions via XAPI proxy → normalized Comment NDJSON [Almide]",
+  "heading": "fizz-x-mention-source",
   "language": "Almide",
   "languages": [
    "Almide"
@@ -6063,49 +6149,22 @@
    "2026": 4
   },
   "first": "2026-06-07",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide build src/main.almd -o fizz-manual-comment-input\n\n# 対話的に\n./fizz-manual-comment-input | fizz-comment-dedupe | ...\n\n# ワンショット注入\necho \"こんにちは\" | ./fizz-manual-comment-input\necho \"常連さん\tまた来たよ\" | ./fizz-manual-comment-input   # TAB 区切りで user 指定"
-  },
-  "score": 3.1
- },
- {
-  "full": "Aid-On/fizz-lipsync",
-  "owner": "Aid-On",
-  "name": "fizz-lipsync",
-  "url": "https://github.com/Aid-On/fizz-lipsync",
-  "lead": "Fizz lipsync DSP — audio RMS -> envelope-followed mouth value. One Almide core, native (precompute CLI) + wasm (AudioWorklet).",
-  "heading": "fizz-lipsync",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-06-09",
   "last": "2026-06-14",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "",
-   "code": "            ┌─────────────────────────┐\naudio  ──▶  │  fizz_lipsync DSP core   │  ──▶  mouth value [0,1]\nsamples     │  (src/mod.almd, 純 Almide) │\n            └─────────────────────────┘\n                 ▲                  ▲\n        native (Rust)          wasm (AudioWorklet)\n   オフライン precompute CLI    1 quantum ごとに呼ぶ\n   (src/main.almd)             (worklet/lipsync-processor.js)"
+   "code": "GET {XAPI_BASE_URL}/api/mentions?xUserId=...&sinceId=...\n→ {\"mentions\": [{\"id\", \"text\", \"createdAt\",\n                  \"author\": {\"id\", \"handle\", \"displayName\"}}, ...]}"
   },
   "score": 3.1
  },
  {
-  "full": "Aid-On/fizz-comment-dedupe",
+  "full": "Aid-On/fizz-youtube-chat-source",
   "owner": "Aid-On",
-  "name": "fizz-comment-dedupe",
-  "url": "https://github.com/Aid-On/fizz-comment-dedupe",
-  "lead": "Fizz comment filter — drop duplicate Comments by id (FIFO-capped), NDJSON in/out [Almide]",
-  "heading": "fizz-comment-dedupe",
+  "name": "fizz-youtube-chat-source",
+  "url": "https://github.com/Aid-On/fizz-youtube-chat-source",
+  "lead": "Fizz comment source — YouTube Live Chat (Data API v3, read-only) → normalized Comment NDJSON [Almide]",
+  "heading": "fizz-youtube-chat-source",
   "language": "Almide",
   "languages": [
    "Almide"
@@ -6121,8 +6180,29 @@
   "plate": "code",
   "sample": {
    "lang": "bash",
-   "code": "almide build src/main.almd -o fizz-comment-dedupe\n\nfizz-youtube-chat-source | ./fizz-comment-dedupe | ...\n\n# 複数ソースの合流にも (シェルの process substitution などで)\ncat <(fizz-youtube-chat-source) <(fizz-twitch-chat-source) | ./fizz-comment-dedupe"
+   "code": "almide build src/main.almd -o fizz-youtube-chat-source\n\nYOUTUBE_API_KEY=... YOUTUBE_VIDEO_ID=... ./fizz-youtube-chat-source \\\n  | fizz-comment-dedupe \\\n  | ..."
   },
+  "score": 3.1
+ },
+ {
+  "full": "Aid-On/kotorody-portfolio",
+  "owner": "Aid-On",
+  "name": "kotorody-portfolio",
+  "url": "https://github.com/Aid-On/kotorody-portfolio",
+  "lead": "kotorody's portfolio — Aid-On Frontend Engineer",
+  "language": "HTML",
+  "languages": [
+   "HTML"
+  ],
+  "stars": 0,
+  "commits": 7,
+  "years": {
+   "2026": 7
+  },
+  "first": "2026-05-18",
+  "last": "2026-05-18",
+  "topics": [],
+  "plate": "code",
   "score": 3.1
  },
  {
@@ -6148,59 +6228,6 @@
   "sample": {
    "lang": "",
    "code": "Stimulus → Synapse → Response → Signal\n(Input)    (LLM Decision)  (Tool Execution)  (UI Output)"
-  },
-  "score": 3.1
- },
- {
-  "full": "Aid-On/embersm",
-  "owner": "Aid-On",
-  "name": "embersm",
-  "url": "https://github.com/Aid-On/embersm",
-  "lead": "EmbersM - Cloudflare Native Memory System with 5-Layer Architecture",
-  "heading": "@aid-on/embersm",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 6,
-  "years": {
-   "2026": 6
-  },
-  "first": "2026-02-18",
-  "last": "2026-06-11",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "Semantic Search (50 results) + Episode Keyword (15) + Recent (10)"
-  },
-  "score": 3.1
- },
- {
-  "full": "Aid-On/auth",
-  "owner": "Aid-On",
-  "name": "auth",
-  "url": "https://github.com/Aid-On/auth",
-  "lead": "Edge-native authentication with Fluent API. Sessions, OAuth, Guests, Audit logs. Zero Node.js dependencies.",
-  "heading": "@aid-on/auth",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-02-18",
-  "last": "2026-06-11",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "typescript",
-   "code": "// Fluent API - Simple, Type-safe, Powerful\nawait SessionBuilder.create(user).withSecret(secret).withDuration('7d').build()\nawait GuestBuilder.create().withSessionDuration('24h').build()\nawait OAuthFlow.google().withClientId(id).buildAuthUrl()\nawait AuditBuilder.login(userId).fromRequest(request).build()"
   },
   "score": 3.1
  },
@@ -6231,535 +6258,29 @@
   "score": 3.1
  },
  {
-  "full": "Aid-On/kotorody-portfolio",
+  "full": "Aid-On/animula",
   "owner": "Aid-On",
-  "name": "kotorody-portfolio",
-  "url": "https://github.com/Aid-On/kotorody-portfolio",
-  "lead": "kotorody's portfolio — Aid-On Frontend Engineer",
-  "language": "HTML",
-  "languages": [
-   "HTML"
-  ],
-  "stars": 0,
-  "commits": 7,
-  "years": {
-   "2026": 7
-  },
-  "first": "2026-05-18",
-  "last": "2026-05-18",
-  "topics": [],
-  "plate": "code",
-  "score": 3.1
- },
- {
-  "full": "Aid-On/fizz-speak-queue",
-  "owner": "Aid-On",
-  "name": "fizz-speak-queue",
-  "url": "https://github.com/Aid-On/fizz-speak-queue",
-  "lead": "Sequential speak-item playback state machine + boundary event derivation (emotion/hair/fx/reply ordering, drain re-entrancy). Async playback host-side (Almide, native + wasm)",
-  "heading": "fizz-speak-queue",
+  "name": "animula",
+  "url": "https://github.com/Aid-On/animula",
+  "lead": "AI VTuber framework in Almide — the little soul that inhabits the character",
+  "heading": "animula",
   "language": "Almide",
   "languages": [
    "Almide",
-   "JavaScript"
+   "Rust"
   ],
   "stars": 0,
-  "commits": 1,
+  "commits": 2,
   "years": {
-   "2026": 1
+   "2026": 2
   },
-  "first": "2026-06-15",
-  "last": "2026-06-15",
+  "first": "2026-04-17",
+  "last": "2026-04-17",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "",
-   "code": "emotion  →  (hair if 非空)  →  (fx if 非空)  →  reply  →  playAudio"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-effect-checker",
-  "owner": "Aid-On",
-  "name": "fizz-effect-checker",
-  "url": "https://github.com/Aid-On/fizz-effect-checker",
-  "lead": "kotodama effect checker — verify a plan's used effects ⊆ persona allowed set (+ runtime llm.<model>) (Almide, native + wasm)",
-  "heading": "fizz-effect-checker",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-15",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test spec/effect_checker_test.almd\nalmide build src/main.almd -o build/fizz-effect-checker\nalmide build src/bridge.almd --target wasm -o build/ec.wasm\nnode test/wasm-smoke.mjs"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-response-transformer",
-  "owner": "Aid-On",
-  "name": "fizz-response-transformer",
-  "url": "https://github.com/Aid-On/fizz-response-transformer",
-  "lead": "kotodama response transformer — transforms.json catalog + weighted selection from trigger candidates (Almide, native + wasm)",
-  "heading": "fizz-response-transformer",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-15",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test spec/response_transformer_test.almd\nalmide build src/main.almd -o build/fizz-response-transformer\nalmide build src/bridge.almd --target wasm -o build/rt.wasm\nnode test/wasm-smoke.mjs"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-trigger-matcher",
-  "owner": "Aid-On",
-  "name": "fizz-trigger-matcher",
-  "url": "https://github.com/Aid-On/fizz-trigger-matcher",
-  "lead": "kotodama trigger matcher — substring-match input → suggested transform priors (Almide, native + wasm)",
-  "heading": "fizz-trigger-matcher",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-15",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test spec/trigger_matcher_test.almd\nalmide build src/main.almd -o build/fizz-trigger-matcher\nalmide build src/bridge.almd --target wasm -o build/tm.wasm\nnode test/wasm-smoke.mjs"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-eval-dataset",
-  "owner": "Aid-On",
-  "name": "fizz-eval-dataset",
-  "url": "https://github.com/Aid-On/fizz-eval-dataset",
-  "lead": "kotodama-eval comment/reply TSV schema + row validation (Almide, native + wasm)",
-  "heading": "fizz-eval-dataset",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-06-15",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test spec/eval_dataset_test.almd\nalmide build src/main.almd -o build/fizz-eval-dataset\nalmide build src/bridge.almd --target wasm -o build/ds.wasm\nnode test/wasm-smoke.mjs"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-eval-score",
-  "owner": "Aid-On",
-  "name": "fizz-eval-score",
-  "url": "https://github.com/Aid-On/fizz-eval-score",
-  "lead": "kotodama-eval score aggregation — 7-axis composite, Likert→percent, cross-episode mean/min/max (Almide, native + wasm)",
-  "heading": "fizz-eval-score",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-15",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test spec/eval_score_test.almd\nalmide build src/main.almd -o build/fizz-eval-score\nalmide build src/bridge.almd --target wasm -o build/sc.wasm\nnode test/wasm-smoke.mjs"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-eval-rubric",
-  "owner": "Aid-On",
-  "name": "fizz-eval-rubric",
-  "url": "https://github.com/Aid-On/fizz-eval-rubric",
-  "lead": "kotodama-eval 7-axis rubric (BEL/ENG/TEX/INI/EMO/TEM/CON) — axis metadata & composite weights (Almide, native + wasm)",
-  "heading": "fizz-eval-rubric",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-15",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test spec/eval_rubric_test.almd\nalmide build src/main.almd -o build/fizz-eval-rubric\nalmide build src/bridge.almd --target wasm -o build/rb.wasm\nnode test/wasm-smoke.mjs"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-glb-container",
-  "owner": "Aid-On",
-  "name": "fizz-glb-container",
-  "url": "https://github.com/Aid-On/fizz-glb-container",
-  "lead": "Parse glTF binary (GLB/VRM) container header — chunk offsets & lengths (Almide, native + wasm)",
-  "heading": "fizz-glb-container",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-15",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "[ header 12B ] magic(4)=glTF / version(4) / length(4)\n[ chunk 0    ] length(4) / type(4)=JSON / data...   ← JSON(offset 20 から)\n[ chunk 1    ] length(4) / type(4)=BIN\\0 / data...   ← BIN(20 + jsonLen から)"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-color-tint",
-  "owner": "Aid-On",
-  "name": "fizz-color-tint",
-  "url": "https://github.com/Aid-On/fizz-color-tint",
-  "lead": "Pure RGB/HSV color math for PSD eye-texture recoloring (Almide, native + wasm)",
-  "heading": "fizz-color-tint",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-15",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test spec/color_tint_test.almd\nalmide build src/main.almd -o build/fizz-color-tint     # native CLI\nalmide build src/bridge.almd --target wasm -o build/ct.wasm\nnode test/wasm-smoke.mjs                                 # wasm == native を検証"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-idle-motion",
-  "owner": "Aid-On",
-  "name": "fizz-idle-motion",
-  "url": "https://github.com/Aid-On/fizz-idle-motion",
-  "lead": "Fizz idle motion — wall-clock-synced auto blink/breath/sway DSP. One Almide core, native + wasm (requestAnimationFrame).",
-  "heading": "fizz-idle-motion",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "          ┌──────────────────────────┐\nwall t ─▶ │ fizz_idle_motion (純 Almide) │ ─▶ blink / breath / head_x,y / body_z\n          └──────────────────────────┘\n               ▲                    ▲\n        native (Rust)        wasm (requestAnimationFrame)\n   曲線の precompute/テスト    毎フレーム呼び VRM に適用\n   (src/main.almd)            (browser/idle-driver.js)"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-weather-codes",
-  "owner": "Aid-On",
-  "name": "fizz-weather-codes",
-  "url": "https://github.com/Aid-On/fizz-weather-codes",
-  "lead": "Fizz weather codes — WMO weather code to Japanese label + weather-query keyword detection. One Almide core, native + wasm.",
-  "heading": "fizz-weather-codes",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-weather-codes\n./build/fizz-weather-codes\n# {\"c0\":\"快晴\",\"c63\":\"雨\",\"c95\":\"雷雨\",\"q1\":true,\"q2\":false}"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-x-dummy-feed",
-  "owner": "Aid-On",
-  "name": "fizz-x-dummy-feed",
-  "url": "https://github.com/Aid-On/fizz-x-dummy-feed",
-  "lead": "Fizz X dummy feed — pure simulation logic of the in-memory mention simulator (zero-padded ids, template cycling, since-filtering). One Almide core, native + wasm.",
-  "heading": "fizz-x-dummy-feed",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-x-dummy-feed\n./build/fizz-x-dummy-feed\n# {\"id1\":\"dum-00000001\",\"parse\":42,\"tmpl\":1,\"newer\":true,...}"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-layout-scope",
-  "owner": "Aid-On",
-  "name": "fizz-layout-scope",
-  "url": "https://github.com/Aid-On/fizz-layout-scope",
-  "lead": "Fizz layout scope — resolve landscape/portrait scope for position-config key namespacing. One Almide core, native + wasm.",
-  "heading": "fizz-layout-scope",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-layout-scope\n./build/fizz-layout-scope\n# {\"mode_vertical\":1,\"mode_landscape\":0,\"query_vertical\":1,\"default\":0}"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-bgm-player",
-  "owner": "Aid-On",
-  "name": "fizz-bgm-player",
-  "url": "https://github.com/Aid-On/fizz-bgm-player",
-  "lead": "Fizz BGM player — playlist navigation (next/prev/wrap/shuffle) by track index. One Almide core, native + wasm.",
-  "heading": "fizz-bgm-player",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-bgm-player\n./build/fizz-bgm-player\n# {\"next_wrap\":0,\"next_nowrap\":2,\"prev_wrap\":2,...}"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-reply-paginator",
-  "owner": "Aid-On",
-  "name": "fizz-reply-paginator",
-  "url": "https://github.com/Aid-On/fizz-reply-paginator",
-  "lead": "Fizz reply paginator — split reply text into chunks at sentence/clause boundaries. One Almide core, native + wasm (cut positions).",
-  "heading": "fizz-reply-paginator",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-reply-paginator\nprintf 'あいうえお。かきくけこさしすせそ\\n' | ./build/fizz-reply-paginator\n# 2\tあいうえお。   (chunk数 TAB 先頭chunk)"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-ws-reconnect",
-  "owner": "Aid-On",
-  "name": "fizz-ws-reconnect",
-  "url": "https://github.com/Aid-On/fizz-ws-reconnect",
-  "lead": "Fizz WS reconnect — exponential backoff + equal jitter for auto-reconnect delay. One Almide core, native + wasm.",
-  "heading": "fizz-ws-reconnect",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-ws-reconnect\n./build/fizz-ws-reconnect\n# {\"attempt\":0,\"delay_ms\":500,...} {\"attempt\":2,\"delay_ms\":2000,...} ... cap 30000"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-liveness-monitor",
-  "owner": "Aid-On",
-  "name": "fizz-liveness-monitor",
-  "url": "https://github.com/Aid-On/fizz-liveness-monitor",
-  "lead": "Fizz liveness monitor — ping/pong death detection for WS connections. One Almide core, native + wasm.",
-  "heading": "fizz-liveness-monitor",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-liveness-monitor\n./build/fizz-liveness-monitor\n# {\"alive_tick\":0,\"dead_tick\":1,\"interval_ms\":5000,\"dead_at_11s\":true,...}"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-env-loader",
-  "owner": "Aid-On",
-  "name": "fizz-env-loader",
-  "url": "https://github.com/Aid-On/fizz-env-loader",
-  "lead": "Fizz .env loader — parse KEY=VALUE pairs (trim, # comments, quote strip). One Almide core, native + wasm.",
-  "heading": "fizz-env-loader",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-env-loader\nprintf 'FOO=bar\\n# c\\nAPI_KEY=\"sk-1\"\\n\\n\\n' | ./build/fizz-env-loader\n# FOO\tbar / API_KEY\tsk-1"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-http-router",
-  "owner": "Aid-On",
-  "name": "fizz-http-router",
-  "url": "https://github.com/Aid-On/fizz-http-router",
-  "lead": "Fizz HTTP router — (method, path) → route id via ordered method+prefix matching. One Almide core, native + wasm.",
-  "heading": "fizz-http-router",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-http-router\nprintf 'POST /api/tts/voicevox\\nGET /api/health\\n' | ./build/fizz-http-router\n# POST /api/tts/voicevox\ttts_voicevox"
+   "code": "src/              Almide application (main.almd)\nhost/             Rust native host — composes obsid + (future) audio / http / ai"
   },
   "score": 3
  },
@@ -6791,12 +6312,12 @@
   "score": 3
  },
  {
-  "full": "Aid-On/fizz-expression-applier",
+  "full": "Aid-On/fizz-bgm-player",
   "owner": "Aid-On",
-  "name": "fizz-expression-applier",
-  "url": "https://github.com/Aid-On/fizz-expression-applier",
-  "lead": "Fizz expression applier — emotion → VRM expression/morph channels + value clamp. One Almide core, native + wasm.",
-  "heading": "fizz-expression-applier",
+  "name": "fizz-bgm-player",
+  "url": "https://github.com/Aid-On/fizz-bgm-player",
+  "lead": "Fizz BGM player — playlist navigation (next/prev/wrap/shuffle) by track index. One Almide core, native + wasm.",
+  "heading": "fizz-bgm-player",
   "language": "Almide",
   "languages": [
    "Almide",
@@ -6813,88 +6334,7 @@
   "plate": "code",
   "sample": {
    "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-expression-applier\nprintf 'happy\\njitome\\n' | ./build/fizz-expression-applier\n# happy\t[{\"n\":\"happy\",\"w\":1.0},{\"n\":\"Joy\",\"w\":1.0},...]"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-command-applier",
-  "owner": "Aid-On",
-  "name": "fizz-command-applier",
-  "url": "https://github.com/Aid-On/fizz-command-applier",
-  "lead": "Fizz command applier — classify wire-protocol avatar Command into its subsystem. One Almide core, native + wasm.",
-  "heading": "fizz-command-applier",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-command-applier\nprintf 'setEmotion\\nplayProc\\nspeak\\n' | ./build/fizz-command-applier\n# setEmotion\tface / playProc\tmotion / speak\tspeech"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-mixamo-retargeter",
-  "owner": "Aid-On",
-  "name": "fizz-mixamo-retargeter",
-  "url": "https://github.com/Aid-On/fizz-mixamo-retargeter",
-  "lead": "Fizz Mixamo retargeter — quaternion rotation remap + VRM0 flip + Hips scale. One Almide core, native + wasm.",
-  "heading": "fizz-mixamo-retargeter",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "q' = parentRestWorld · q · restWorld⁻¹\n```\n\nで変換し(親の rest world 回転で前から、自身の rest world 回転の逆で後ろから挟む)、\nVRM 0.x なら軸フリップ(x,z 反転)。Hips の position はリグ身長比でスケール + 同じ\nフリップ。**計算は純 Almide、FBX clip の読み出し / rest world 回転取得 / AnimationClip\n構築(Three.js の I/O)は JS グルー**。移植元: openaituber `src/vrm/mixamo.ts`。\n\n## API(計算コア)\n\n| 関数 | 説明 |\n|---|---|\n| `mul(a, b)` / `inverse(q)` | 四元数の Hamilton 積 / 逆 |\n| `remap(parent, q, rest_inv)` | `parent · q · rest_inv` |\n| `vrm0_flip(q)` | VRM0 軸フリップ(x,z 反転) |\n| `retarget(parent, q, rest_inv, vrm0)` | remap + (VRM0 なら) フリップ |\n| `hips_component(idx, x,y,z, scale, vrm0)` | Hips position 成分(スケール + フリップ) |\n\n## ① native — 確認 / オフライン検証"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-fbx-rig-normalizer",
-  "owner": "Aid-On",
-  "name": "fizz-fbx-rig-normalizer",
-  "url": "https://github.com/Aid-On/fizz-fbx-rig-normalizer",
-  "lead": "Fizz FBX rig normalizer — raw bone names (Mixamo/Unity/Maya/Blender) → VRM humanoid slots. One Almide core, native CLI + wasm.",
-  "heading": "fizz-fbx-rig-normalizer",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-06-14",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build src/main.almd -o build/fizz-fbx-rig-normalizer\nprintf 'mixamorigLeftUpperArm\\nHips\\nUpperArm.R\\n' | ./build/fizz-fbx-rig-normalizer\n# mixamorigLeftUpperArm\tleftUpperArm\n# Hips\thips\n# UpperArm.R\trightUpperArm"
+   "code": "almide build src/main.almd -o build/fizz-bgm-player\n./build/fizz-bgm-player\n# {\"next_wrap\":0,\"next_nowrap\":2,\"prev_wrap\":2,...}"
   },
   "score": 3
  },
@@ -6926,6 +6366,248 @@
   "score": 3
  },
  {
+  "full": "Aid-On/fizz-color-tint",
+  "owner": "Aid-On",
+  "name": "fizz-color-tint",
+  "url": "https://github.com/Aid-On/fizz-color-tint",
+  "lead": "Pure RGB/HSV color math for PSD eye-texture recoloring (Almide, native + wasm)",
+  "heading": "fizz-color-tint",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-15",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test spec/color_tint_test.almd\nalmide build src/main.almd -o build/fizz-color-tint     # native CLI\nalmide build src/bridge.almd --target wasm -o build/ct.wasm\nnode test/wasm-smoke.mjs                                 # wasm == native を検証"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-command-applier",
+  "owner": "Aid-On",
+  "name": "fizz-command-applier",
+  "url": "https://github.com/Aid-On/fizz-command-applier",
+  "lead": "Fizz command applier — classify wire-protocol avatar Command into its subsystem. One Almide core, native + wasm.",
+  "heading": "fizz-command-applier",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-command-applier\nprintf 'setEmotion\\nplayProc\\nspeak\\n' | ./build/fizz-command-applier\n# setEmotion\tface / playProc\tmotion / speak\tspeech"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-effect-checker",
+  "owner": "Aid-On",
+  "name": "fizz-effect-checker",
+  "url": "https://github.com/Aid-On/fizz-effect-checker",
+  "lead": "kotodama effect checker — verify a plan's used effects ⊆ persona allowed set (+ runtime llm.<model>) (Almide, native + wasm)",
+  "heading": "fizz-effect-checker",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-15",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test spec/effect_checker_test.almd\nalmide build src/main.almd -o build/fizz-effect-checker\nalmide build src/bridge.almd --target wasm -o build/ec.wasm\nnode test/wasm-smoke.mjs"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-env-loader",
+  "owner": "Aid-On",
+  "name": "fizz-env-loader",
+  "url": "https://github.com/Aid-On/fizz-env-loader",
+  "lead": "Fizz .env loader — parse KEY=VALUE pairs (trim, # comments, quote strip). One Almide core, native + wasm.",
+  "heading": "fizz-env-loader",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-env-loader\nprintf 'FOO=bar\\n# c\\nAPI_KEY=\"sk-1\"\\n\\n\\n' | ./build/fizz-env-loader\n# FOO\tbar / API_KEY\tsk-1"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-eval-dataset",
+  "owner": "Aid-On",
+  "name": "fizz-eval-dataset",
+  "url": "https://github.com/Aid-On/fizz-eval-dataset",
+  "lead": "kotodama-eval comment/reply TSV schema + row validation (Almide, native + wasm)",
+  "heading": "fizz-eval-dataset",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-06-15",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test spec/eval_dataset_test.almd\nalmide build src/main.almd -o build/fizz-eval-dataset\nalmide build src/bridge.almd --target wasm -o build/ds.wasm\nnode test/wasm-smoke.mjs"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-eval-rubric",
+  "owner": "Aid-On",
+  "name": "fizz-eval-rubric",
+  "url": "https://github.com/Aid-On/fizz-eval-rubric",
+  "lead": "kotodama-eval 7-axis rubric (BEL/ENG/TEX/INI/EMO/TEM/CON) — axis metadata & composite weights (Almide, native + wasm)",
+  "heading": "fizz-eval-rubric",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-15",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test spec/eval_rubric_test.almd\nalmide build src/main.almd -o build/fizz-eval-rubric\nalmide build src/bridge.almd --target wasm -o build/rb.wasm\nnode test/wasm-smoke.mjs"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-eval-score",
+  "owner": "Aid-On",
+  "name": "fizz-eval-score",
+  "url": "https://github.com/Aid-On/fizz-eval-score",
+  "lead": "kotodama-eval score aggregation — 7-axis composite, Likert→percent, cross-episode mean/min/max (Almide, native + wasm)",
+  "heading": "fizz-eval-score",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-15",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test spec/eval_score_test.almd\nalmide build src/main.almd -o build/fizz-eval-score\nalmide build src/bridge.almd --target wasm -o build/sc.wasm\nnode test/wasm-smoke.mjs"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-expression-applier",
+  "owner": "Aid-On",
+  "name": "fizz-expression-applier",
+  "url": "https://github.com/Aid-On/fizz-expression-applier",
+  "lead": "Fizz expression applier — emotion → VRM expression/morph channels + value clamp. One Almide core, native + wasm.",
+  "heading": "fizz-expression-applier",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-expression-applier\nprintf 'happy\\njitome\\n' | ./build/fizz-expression-applier\n# happy\t[{\"n\":\"happy\",\"w\":1.0},{\"n\":\"Joy\",\"w\":1.0},...]"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-fbx-rig-normalizer",
+  "owner": "Aid-On",
+  "name": "fizz-fbx-rig-normalizer",
+  "url": "https://github.com/Aid-On/fizz-fbx-rig-normalizer",
+  "lead": "Fizz FBX rig normalizer — raw bone names (Mixamo/Unity/Maya/Blender) → VRM humanoid slots. One Almide core, native CLI + wasm.",
+  "heading": "fizz-fbx-rig-normalizer",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-fbx-rig-normalizer\nprintf 'mixamorigLeftUpperArm\\nHips\\nUpperArm.R\\n' | ./build/fizz-fbx-rig-normalizer\n# mixamorigLeftUpperArm\tleftUpperArm\n# Hips\thips\n# UpperArm.R\trightUpperArm"
+  },
+  "score": 3
+ },
+ {
   "full": "Aid-On/fizz-gesture-player",
   "owner": "Aid-On",
   "name": "fizz-gesture-player",
@@ -6953,106 +6635,137 @@
   "score": 3
  },
  {
-  "full": "Aid-On/fizz-session-tracker",
+  "full": "Aid-On/fizz-glb-container",
   "owner": "Aid-On",
-  "name": "fizz-session-tracker",
-  "url": "https://github.com/Aid-On/fizz-session-tracker",
-  "lead": "Fizz session tracker — stream boundaries (start/end) + per-user participation",
-  "heading": "fizz-session-tracker",
+  "name": "fizz-glb-container",
+  "url": "https://github.com/Aid-On/fizz-glb-container",
+  "lead": "Parse glTF binary (GLB/VRM) container header — chunk offsets & lengths (Almide, native + wasm)",
+  "heading": "fizz-glb-container",
   "language": "Almide",
   "languages": [
-   "Almide"
+   "Almide",
+   "JavaScript"
   ],
   "stars": 0,
-  "commits": 2,
+  "commits": 1,
   "years": {
-   "2026": 2
+   "2026": 1
   },
-  "first": "2026-06-09",
-  "last": "2026-06-14",
+  "first": "2026-06-15",
+  "last": "2026-06-15",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "jsonc",
-   "code": "{\"op\":\"start\",\"persona\":\"lime\",\"title\":\"雑談枠\",\"ts\":1000}\n{\"op\":\"participate\",\"user_id\":7,\"ts\":1010}\n{\"op\":\"current\"}\n{\"op\":\"end\",\"summary\":\"楽しかった\",\"ts\":2000}"
+   "lang": "",
+   "code": "[ header 12B ] magic(4)=glTF / version(4) / length(4)\n[ chunk 0    ] length(4) / type(4)=JSON / data...   ← JSON(offset 20 から)\n[ chunk 1    ] length(4) / type(4)=BIN\\0 / data...   ← BIN(20 + jsonLen から)"
   },
   "score": 3
  },
  {
-  "full": "Aid-On/fizz-recall-gate",
+  "full": "Aid-On/fizz-http-router",
   "owner": "Aid-On",
-  "name": "fizz-recall-gate",
-  "url": "https://github.com/Aid-On/fizz-recall-gate",
-  "lead": "Fizz recall gate — trim RecallResult to the brain budget + memory-less fallback",
-  "heading": "fizz-recall-gate",
+  "name": "fizz-http-router",
+  "url": "https://github.com/Aid-On/fizz-http-router",
+  "lead": "Fizz HTTP router — (method, path) → route id via ordered method+prefix matching. One Almide core, native + wasm.",
+  "heading": "fizz-http-router",
   "language": "Almide",
   "languages": [
-   "Almide"
+   "Almide",
+   "JavaScript"
   ],
   "stars": 0,
   "commits": 2,
   "years": {
    "2026": 2
   },
-  "first": "2026-06-09",
-  "last": "2026-06-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "jsonc",
-   "code": "{\"op\":\"gate\",\"result\":{...RecallResult...},\"cap\":4}\n{\"op\":\"empty\",\"user\":{...MemoryUser...}}\n{\"op\":\"empty_new\",\"user_id\":7,\"name\":\"ねこ\",\"ts\":100}"
-  },
-  "score": 3
- },
- {
-  "full": "Aid-On/fizz-reading-corrector",
-  "owner": "Aid-On",
-  "name": "fizz-reading-corrector",
-  "url": "https://github.com/Aid-On/fizz-reading-corrector",
-  "lead": "Fizz reading corrector — pre-TTS kanji->kana reading fixes via an ordered rule list",
-  "heading": "fizz-reading-corrector",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-06-09",
+  "first": "2026-06-14",
   "last": "2026-06-14",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "sh",
-   "code": "echo '空澄ちゃん、配信好き?' | fizz-reading-corrector\n# → そらすみちゃん、配信すき?"
+   "code": "almide build src/main.almd -o build/fizz-http-router\nprintf 'POST /api/tts/voicevox\\nGET /api/health\\n' | ./build/fizz-http-router\n# POST /api/tts/voicevox\ttts_voicevox"
   },
   "score": 3
  },
  {
-  "full": "Aid-On/fizz-memory-l2-events",
+  "full": "Aid-On/fizz-idle-motion",
   "owner": "Aid-On",
-  "name": "fizz-memory-l2-events",
-  "url": "https://github.com/Aid-On/fizz-memory-l2-events",
-  "lead": "Fizz memory L2 — append-only NDJSON event log on disk with per-user query",
-  "heading": "fizz-memory-l2-events",
+  "name": "fizz-idle-motion",
+  "url": "https://github.com/Aid-On/fizz-idle-motion",
+  "lead": "Fizz idle motion — wall-clock-synced auto blink/breath/sway DSP. One Almide core, native + wasm (requestAnimationFrame).",
+  "heading": "fizz-idle-motion",
   "language": "Almide",
   "languages": [
-   "Almide"
+   "Almide",
+   "JavaScript"
   ],
   "stars": 0,
   "commits": 2,
   "years": {
    "2026": 2
   },
-  "first": "2026-06-09",
+  "first": "2026-06-14",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "          ┌──────────────────────────┐\nwall t ─▶ │ fizz_idle_motion (純 Almide) │ ─▶ blink / breath / head_x,y / body_z\n          └──────────────────────────┘\n               ▲                    ▲\n        native (Rust)        wasm (requestAnimationFrame)\n   曲線の precompute/テスト    毎フレーム呼び VRM に適用\n   (src/main.almd)            (browser/idle-driver.js)"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-layout-scope",
+  "owner": "Aid-On",
+  "name": "fizz-layout-scope",
+  "url": "https://github.com/Aid-On/fizz-layout-scope",
+  "lead": "Fizz layout scope — resolve landscape/portrait scope for position-config key namespacing. One Almide core, native + wasm.",
+  "heading": "fizz-layout-scope",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-14",
   "last": "2026-06-14",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "jsonc",
-   "code": "{\"op\":\"append\",\"event\":{\"id\":0,\"user_id\":7,\"session_id\":null,\"role\":\"user\",\"content\":\"こんにちは\",\"ts\":100,\"tags\":[]}}\n{\"op\":\"query\",\"user_id\":7,\"limit\":10}\n{\"op\":\"wipe\"}"
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-layout-scope\n./build/fizz-layout-scope\n# {\"mode_vertical\":1,\"mode_landscape\":0,\"query_vertical\":1,\"default\":0}"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-liveness-monitor",
+  "owner": "Aid-On",
+  "name": "fizz-liveness-monitor",
+  "url": "https://github.com/Aid-On/fizz-liveness-monitor",
+  "lead": "Fizz liveness monitor — ping/pong death detection for WS connections. One Almide core, native + wasm.",
+  "heading": "fizz-liveness-monitor",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-liveness-monitor\n./build/fizz-liveness-monitor\n# {\"alive_tick\":0,\"dead_tick\":1,\"interval_ms\":5000,\"dead_at_11s\":true,...}"
   },
   "score": 3
  },
@@ -7083,29 +6796,322 @@
   "score": 3
  },
  {
-  "full": "Aid-On/animula",
+  "full": "Aid-On/fizz-memory-l2-events",
   "owner": "Aid-On",
-  "name": "animula",
-  "url": "https://github.com/Aid-On/animula",
-  "lead": "AI VTuber framework in Almide — the little soul that inhabits the character",
-  "heading": "animula",
+  "name": "fizz-memory-l2-events",
+  "url": "https://github.com/Aid-On/fizz-memory-l2-events",
+  "lead": "Fizz memory L2 — append-only NDJSON event log on disk with per-user query",
+  "heading": "fizz-memory-l2-events",
   "language": "Almide",
   "languages": [
-   "Almide",
-   "Rust"
+   "Almide"
   ],
   "stars": 0,
   "commits": 2,
   "years": {
    "2026": 2
   },
-  "first": "2026-04-17",
-  "last": "2026-04-17",
+  "first": "2026-06-09",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "jsonc",
+   "code": "{\"op\":\"append\",\"event\":{\"id\":0,\"user_id\":7,\"session_id\":null,\"role\":\"user\",\"content\":\"こんにちは\",\"ts\":100,\"tags\":[]}}\n{\"op\":\"query\",\"user_id\":7,\"limit\":10}\n{\"op\":\"wipe\"}"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-mixamo-retargeter",
+  "owner": "Aid-On",
+  "name": "fizz-mixamo-retargeter",
+  "url": "https://github.com/Aid-On/fizz-mixamo-retargeter",
+  "lead": "Fizz Mixamo retargeter — quaternion rotation remap + VRM0 flip + Hips scale. One Almide core, native + wasm.",
+  "heading": "fizz-mixamo-retargeter",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-14",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "",
-   "code": "src/              Almide application (main.almd)\nhost/             Rust native host — composes obsid + (future) audio / http / ai"
+   "code": "q' = parentRestWorld · q · restWorld⁻¹\n```\n\nで変換し(親の rest world 回転で前から、自身の rest world 回転の逆で後ろから挟む)、\nVRM 0.x なら軸フリップ(x,z 反転)。Hips の position はリグ身長比でスケール + 同じ\nフリップ。**計算は純 Almide、FBX clip の読み出し / rest world 回転取得 / AnimationClip\n構築(Three.js の I/O)は JS グルー**。移植元: openaituber `src/vrm/mixamo.ts`。\n\n## API(計算コア)\n\n| 関数 | 説明 |\n|---|---|\n| `mul(a, b)` / `inverse(q)` | 四元数の Hamilton 積 / 逆 |\n| `remap(parent, q, rest_inv)` | `parent · q · rest_inv` |\n| `vrm0_flip(q)` | VRM0 軸フリップ(x,z 反転) |\n| `retarget(parent, q, rest_inv, vrm0)` | remap + (VRM0 なら) フリップ |\n| `hips_component(idx, x,y,z, scale, vrm0)` | Hips position 成分(スケール + フリップ) |\n\n## ① native — 確認 / オフライン検証"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-reading-corrector",
+  "owner": "Aid-On",
+  "name": "fizz-reading-corrector",
+  "url": "https://github.com/Aid-On/fizz-reading-corrector",
+  "lead": "Fizz reading corrector — pre-TTS kanji->kana reading fixes via an ordered rule list",
+  "heading": "fizz-reading-corrector",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-06-09",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "echo '空澄ちゃん、配信好き?' | fizz-reading-corrector\n# → そらすみちゃん、配信すき?"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-recall-gate",
+  "owner": "Aid-On",
+  "name": "fizz-recall-gate",
+  "url": "https://github.com/Aid-On/fizz-recall-gate",
+  "lead": "Fizz recall gate — trim RecallResult to the brain budget + memory-less fallback",
+  "heading": "fizz-recall-gate",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-06-09",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "jsonc",
+   "code": "{\"op\":\"gate\",\"result\":{...RecallResult...},\"cap\":4}\n{\"op\":\"empty\",\"user\":{...MemoryUser...}}\n{\"op\":\"empty_new\",\"user_id\":7,\"name\":\"ねこ\",\"ts\":100}"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-reply-paginator",
+  "owner": "Aid-On",
+  "name": "fizz-reply-paginator",
+  "url": "https://github.com/Aid-On/fizz-reply-paginator",
+  "lead": "Fizz reply paginator — split reply text into chunks at sentence/clause boundaries. One Almide core, native + wasm (cut positions).",
+  "heading": "fizz-reply-paginator",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-reply-paginator\nprintf 'あいうえお。かきくけこさしすせそ\\n' | ./build/fizz-reply-paginator\n# 2\tあいうえお。   (chunk数 TAB 先頭chunk)"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-response-transformer",
+  "owner": "Aid-On",
+  "name": "fizz-response-transformer",
+  "url": "https://github.com/Aid-On/fizz-response-transformer",
+  "lead": "kotodama response transformer — transforms.json catalog + weighted selection from trigger candidates (Almide, native + wasm)",
+  "heading": "fizz-response-transformer",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-15",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test spec/response_transformer_test.almd\nalmide build src/main.almd -o build/fizz-response-transformer\nalmide build src/bridge.almd --target wasm -o build/rt.wasm\nnode test/wasm-smoke.mjs"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-session-tracker",
+  "owner": "Aid-On",
+  "name": "fizz-session-tracker",
+  "url": "https://github.com/Aid-On/fizz-session-tracker",
+  "lead": "Fizz session tracker — stream boundaries (start/end) + per-user participation",
+  "heading": "fizz-session-tracker",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-06-09",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "jsonc",
+   "code": "{\"op\":\"start\",\"persona\":\"lime\",\"title\":\"雑談枠\",\"ts\":1000}\n{\"op\":\"participate\",\"user_id\":7,\"ts\":1010}\n{\"op\":\"current\"}\n{\"op\":\"end\",\"summary\":\"楽しかった\",\"ts\":2000}"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-speak-queue",
+  "owner": "Aid-On",
+  "name": "fizz-speak-queue",
+  "url": "https://github.com/Aid-On/fizz-speak-queue",
+  "lead": "Sequential speak-item playback state machine + boundary event derivation (emotion/hair/fx/reply ordering, drain re-entrancy). Async playback host-side (Almide, native + wasm)",
+  "heading": "fizz-speak-queue",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-15",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "emotion  →  (hair if 非空)  →  (fx if 非空)  →  reply  →  playAudio"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-trigger-matcher",
+  "owner": "Aid-On",
+  "name": "fizz-trigger-matcher",
+  "url": "https://github.com/Aid-On/fizz-trigger-matcher",
+  "lead": "kotodama trigger matcher — substring-match input → suggested transform priors (Almide, native + wasm)",
+  "heading": "fizz-trigger-matcher",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-15",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test spec/trigger_matcher_test.almd\nalmide build src/main.almd -o build/fizz-trigger-matcher\nalmide build src/bridge.almd --target wasm -o build/tm.wasm\nnode test/wasm-smoke.mjs"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-weather-codes",
+  "owner": "Aid-On",
+  "name": "fizz-weather-codes",
+  "url": "https://github.com/Aid-On/fizz-weather-codes",
+  "lead": "Fizz weather codes — WMO weather code to Japanese label + weather-query keyword detection. One Almide core, native + wasm.",
+  "heading": "fizz-weather-codes",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-15",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-weather-codes\n./build/fizz-weather-codes\n# {\"c0\":\"快晴\",\"c63\":\"雨\",\"c95\":\"雷雨\",\"q1\":true,\"q2\":false}"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-ws-reconnect",
+  "owner": "Aid-On",
+  "name": "fizz-ws-reconnect",
+  "url": "https://github.com/Aid-On/fizz-ws-reconnect",
+  "lead": "Fizz WS reconnect — exponential backoff + equal jitter for auto-reconnect delay. One Almide core, native + wasm.",
+  "heading": "fizz-ws-reconnect",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-ws-reconnect\n./build/fizz-ws-reconnect\n# {\"attempt\":0,\"delay_ms\":500,...} {\"attempt\":2,\"delay_ms\":2000,...} ... cap 30000"
+  },
+  "score": 3
+ },
+ {
+  "full": "Aid-On/fizz-x-dummy-feed",
+  "owner": "Aid-On",
+  "name": "fizz-x-dummy-feed",
+  "url": "https://github.com/Aid-On/fizz-x-dummy-feed",
+  "lead": "Fizz X dummy feed — pure simulation logic of the in-memory mention simulator (zero-padded ids, template cycling, since-filtering). One Almide core, native + wasm.",
+  "heading": "fizz-x-dummy-feed",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-06-14",
+  "last": "2026-06-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o build/fizz-x-dummy-feed\n./build/fizz-x-dummy-feed\n# {\"id1\":\"dum-00000001\",\"parse\":42,\"tmpl\":1,\"newer\":true,...}"
   },
   "score": 3
  },
@@ -7127,7 +7133,7 @@
   },
   "first": "2025-10-12",
   "last": "2025-10-12",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -7182,7 +7188,7 @@
   },
   "first": "2025-08-23",
   "last": "2025-08-23",
-  "license": "mit",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -7190,33 +7196,6 @@
    "code": "npm install @aid-on/auth-providers\n# or\nyarn add @aid-on/auth-providers"
   },
   "score": 2.1
- },
- {
-  "full": "Aid-On/next-auth-providers",
-  "owner": "Aid-On",
-  "name": "next-auth-providers",
-  "url": "https://github.com/Aid-On/next-auth-providers",
-  "lead": "1. Create a LINE Login channel at [LINE Developers Console](https://developers.line.biz/) 2. Set the callback URL: `https://your-domain.com/api/auth/callback/line` 3. Get your Channel ID and Channel Secret",
-  "heading": "@aid-on/nextauth-providers",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2025": 1
-  },
-  "first": "2025-08-23",
-  "last": "2025-08-23",
-  "license": "mit",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "npm install @aid-on/nextauth-providers\n```\n\n## Usage"
-  },
-  "score": 2
  },
  {
   "full": "Aid-On/aid-on-contract-generator",
@@ -7269,6 +7248,33 @@
   "sample": {
    "lang": "bash",
    "code": "git clone https://github.com/your-repo/tax-calculator-cli.git\ncd tax-calculator-cli"
+  },
+  "score": 2
+ },
+ {
+  "full": "Aid-On/next-auth-providers",
+  "owner": "Aid-On",
+  "name": "next-auth-providers",
+  "url": "https://github.com/Aid-On/next-auth-providers",
+  "lead": "1. Create a LINE Login channel at [LINE Developers Console](https://developers.line.biz/) 2. Set the callback URL: `https://your-domain.com/api/auth/callback/line` 3. Get your Channel ID and Channel Secret",
+  "heading": "@aid-on/nextauth-providers",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2025": 1
+  },
+  "first": "2025-08-23",
+  "last": "2025-08-23",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "npm install @aid-on/nextauth-providers\n```\n\n## Usage"
   },
   "score": 2
  },

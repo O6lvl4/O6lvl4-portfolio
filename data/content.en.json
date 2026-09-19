@@ -3,7 +3,7 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/en/",
  "root": "..",
  "title": "O6lvl4",
- "description": "265 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs.",
+ "description": "266 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs.",
  "share": {
   "image": "og.en.jpg",
   "alt": "O6lvl4 — Building developer tools, from the language up."
@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "265 repos",
+  "life": "266 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -101,10 +101,10 @@
   "first": true
  },
  "home": {
-  "kicker": "265 public repositories",
+  "kicker": "266 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "265 public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.",
-  "description": "265 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs."
+  "note": "266 public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.",
+  "description": "266 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs."
  },
  "landing": {
   "about": [
@@ -115,11 +115,11 @@
    {
     "heading": "Most written",
     "items": [
-     "Almide（136）",
-     "JavaScript（74）",
+     "Almide（137）",
+     "JavaScript（76）",
      "TypeScript（57）",
-     "Shell（31）",
-     "HTML（29）"
+     "HTML（30）",
+     "Shell（30）"
     ]
    },
    {
@@ -138,8 +138,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "202 started",
-    "lead": "almide, porta, als, ccgrid and 198 more",
+    "title": "203 started",
+    "lead": "almide, porta, als, ccgrid and 199 more",
     "tags": [
      "Rust",
      "Almide",
@@ -149,19 +149,20 @@
    {
     "period": "2025",
     "title": "38 started",
-    "lead": "llm-throttle, llm-queue-dispatcher, unillm, whenm and 34 more",
+    "lead": "llm-queue-dispatcher, llm-throttle, whenm, llmine and 34 more",
     "tags": [
-     "JavaScript",
-     "TypeScript"
+     "TypeScript",
+     "JavaScript"
     ]
    },
    {
     "period": "2024",
     "title": "10 started",
-    "lead": "aid-on-ui-system, aid-on-js-training, ts-tsnode-sandbox, ts-react-tailwindcss-sandbox and 6 more",
+    "lead": "aid-on-ui-system, aid-on-js-training, sandbox-golang-cli, ts-react-tailwindcss-sandbox and 6 more",
     "tags": [
      "TypeScript",
-     "JavaScript"
+     "JavaScript",
+     "Go"
     ]
    },
    {
@@ -205,12 +206,12 @@
    },
    {
     "key": "Last touched",
-    "value": "gramide · Sep 2026"
+    "value": "O6lvl4-portfolio · Sep 2026"
    },
    {
     "key": "Written in Almide",
-    "value": "45%",
-    "fill": 0.45
+    "value": "46%",
+    "fill": 0.46
    },
    {
     "key": "Commits in 2026",
@@ -220,11 +221,11 @@
   ],
   "figures": [
    {
-    "value": "265",
+    "value": "266",
     "label": "Repositories"
    },
    {
-    "value": "13,793",
+    "value": "14,249",
     "label": "Commits"
    },
    {
@@ -239,12 +240,12 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 120,
+    "count": 122,
     "color": "currentColor"
    },
    {
     "name": "TypeScript",
-    "count": 47,
+    "count": 48,
     "color": "#3178c6"
    },
    {
@@ -258,14 +259,14 @@
     "color": "#00add8"
    },
    {
-    "name": "Rust",
-    "count": 11,
-    "color": "#dea584"
-   },
-   {
     "name": "HTML",
     "count": 11,
     "color": "#e34c26"
+   },
+   {
+    "name": "Rust",
+    "count": 10,
+    "color": "#dea584"
    },
    {
     "name": "Python",
@@ -274,7 +275,7 @@
    },
    {
     "name": "Shell",
-    "count": 6,
+    "count": 5,
     "color": "#89e051"
    },
    {
@@ -334,7 +335,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 112
+    "count": 113
    },
    {
     "name": "almide",
@@ -360,13 +361,13 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 10728,
+    "count": 11154,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 1938,
-    "of": 112
+    "count": 1967,
+    "of": 113
    },
    {
     "name": "Aid-On",
@@ -385,7 +386,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 47,
+    "count": 48,
     "of": 3
    }
   ],
@@ -408,7 +409,7 @@
    },
    {
     "name": "2026",
-    "count": 13083
+    "count": 13539
    }
   ]
  },
@@ -424,7 +425,7 @@
      "label": "Repositories"
     },
     {
-     "value": "10,640",
+     "value": "11,067",
      "label": "Commits"
     },
     {
@@ -439,7 +440,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 10640
+     "count": 11067
     }
    ],
    "works": [
@@ -469,7 +470,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "8,502"
+       "value": "8,896"
       },
       {
        "label": "Started",
@@ -477,7 +478,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.63.0-rc1"
+       "value": "v0.60.0-rc3"
       },
       {
        "label": "Stars",
@@ -495,7 +496,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-13"
+      "date": "2026-09-19"
      }
     },
     {
@@ -516,7 +517,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,418"
+       "value": "1,441"
       },
       {
        "label": "Started",
@@ -534,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
+      "date": "2026-09-20"
      }
     },
     {
@@ -584,7 +585,7 @@
      "id": "almide/docs",
      "title": "docs",
      "titleEn": "Astro + Starlight documentation site for Almide, with code samples runnable in the browser.",
-     "date": "Aug 2026",
+     "date": "Sep 2026",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/docs",
@@ -597,7 +598,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "63"
+       "value": "64"
       },
       {
        "label": "Started",
@@ -619,46 +620,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/vscode-almide",
-     "title": "vscode-almide",
-     "titleEn": "VS Code extension for Almide (.almd files), with a TextMate grammar generated from Almide source",
-     "date": "Jul 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/vscode-almide",
-     "tags": [
-      "Almide",
-      "programming-language",
-      "syntax-highlighting",
-      "vscode"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "23"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.3.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/vscode-almide"
-      }
-     ],
-     "order": {
-      "date": "2026-07-25"
+      "date": "2026-09-07"
      }
     },
     {
@@ -666,7 +628,7 @@
      "id": "almide/almide-grammar",
      "title": "almide-grammar",
      "titleEn": "Single source of truth for Almide syntax: keywords, operators, precedence and TextMate scopes.",
-     "date": "Jul 2026",
+     "date": "Sep 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-grammar",
@@ -679,7 +641,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "27"
+       "value": "29"
       },
       {
        "label": "Started",
@@ -697,7 +659,46 @@
       }
      ],
      "order": {
-      "date": "2026-07-29"
+      "date": "2026-09-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/vscode-almide",
+     "title": "vscode-almide",
+     "titleEn": "VS Code extension for Almide (.almd files), with a TextMate grammar generated from Almide source",
+     "date": "Sep 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/vscode-almide",
+     "tags": [
+      "Almide",
+      "almide",
+      "programming-language",
+      "syntax-highlighting"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "25"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.4.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/vscode-almide"
+      }
+     ],
+     "order": {
+      "date": "2026-09-07"
      }
     },
     {
@@ -718,7 +719,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "21"
+       "value": "22"
       },
       {
        "label": "Started",
@@ -822,7 +823,7 @@
      "id": "almide/playground",
      "title": "playground",
      "titleEn": "Online playground to write and run Almide .almd code in the browser via WASM, no install needed",
-     "date": "Aug 2026",
+     "date": "Sep 2026",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/playground",
@@ -835,7 +836,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "148"
+       "value": "151"
       },
       {
        "label": "Started",
@@ -853,7 +854,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-21"
+      "date": "2026-09-08"
      }
     },
     {
@@ -896,14 +897,14 @@
      "id": "almide/almide-agents",
      "title": "almide-agents",
      "titleEn": "Drop-in AGENTS.md and Claude Code skill that teach coding agents to write Almide correctly",
-     "date": "Jul 2026",
+     "date": "Sep 2026",
      "credit": "almide",
      "url": "https://github.com/almide/almide-agents",
      "tags": [],
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "7"
       },
       {
        "label": "Started",
@@ -917,40 +918,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/parsegen",
-     "title": "parsegen",
-     "titleEn": "Pure-Almide, tree-sitter compatible parser generator that reads grammar.json to build syntax trees",
-     "date": "Aug 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/parsegen",
-     "tags": [
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/parsegen"
-      }
-     ],
-     "order": {
-      "date": "2026-08-17"
+      "date": "2026-09-07"
      }
     },
     {
@@ -985,6 +953,39 @@
      ],
      "order": {
       "date": "2026-07-25"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/parsegen",
+     "title": "parsegen",
+     "titleEn": "Pure-Almide, tree-sitter compatible parser generator that reads grammar.json to build syntax trees",
+     "date": "Aug 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/parsegen",
+     "tags": [
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/parsegen"
+      }
+     ],
+     "order": {
+      "date": "2026-08-17"
      }
     },
     {
@@ -1056,6 +1057,37 @@
     },
     {
      "image": "",
+     "id": "almide/.github",
+     "title": ".github",
+     "titleEn": "Repository holding the almide organization's profile and community health files",
+     "date": "Mar 2026",
+     "credit": "almide",
+     "url": "https://github.com/almide/.github",
+     "tags": [
+      "almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/.github"
+      }
+     ],
+     "order": {
+      "date": "2026-03-30"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/almide-js",
      "title": "almide-js",
      "titleEn": "Progress log and benchmarks for Almide's JS/TS-friendly WASM SDK and its binding generator.",
@@ -1087,37 +1119,6 @@
      "order": {
       "date": "2026-04-15"
      }
-    },
-    {
-     "image": "",
-     "id": "almide/.github",
-     "title": ".github",
-     "titleEn": "Repository holding the almide organization's profile and community health files",
-     "date": "Mar 2026",
-     "credit": "almide",
-     "url": "https://github.com/almide/.github",
-     "tags": [
-      "almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/.github"
-      }
-     ],
-     "order": {
-      "date": "2026-03-30"
-     }
     }
    ]
   },
@@ -1132,7 +1133,7 @@
      "label": "Repositories"
     },
     {
-     "value": "66",
+     "value": "65",
      "label": "Commits"
     },
     {
@@ -1147,7 +1148,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 66
+     "count": 65
     }
    ],
    "works": [
@@ -1175,7 +1176,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "7"
+       "value": "6"
       },
       {
        "label": "Started",
@@ -1453,38 +1454,6 @@
     },
     {
      "image": "",
-     "id": "almide/rsa",
-     "title": "rsa",
-     "titleEn": "An Almide library for RSA PKCS1v15 encryption with DER key parsing.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/rsa",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/rsa"
-      }
-     ],
-     "order": {
-      "date": "2026-05-21"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/bigint",
      "title": "bigint",
      "titleEn": "Arbitrary-precision unsigned integer arithmetic library for the Almide language",
@@ -1549,6 +1518,38 @@
      "order": {
       "date": "2026-04-12"
      }
+    },
+    {
+     "image": "",
+     "id": "almide/rsa",
+     "title": "rsa",
+     "titleEn": "An Almide library for RSA PKCS1v15 encryption with DER key parsing.",
+     "date": "May 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/rsa",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "4"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/rsa"
+      }
+     ],
+     "order": {
+      "date": "2026-05-21"
+     }
     }
    ]
   },
@@ -1563,7 +1564,7 @@
      "label": "Repositories"
     },
     {
-     "value": "773",
+     "value": "786",
      "label": "Commits"
     },
     {
@@ -1582,7 +1583,7 @@
     },
     {
      "name": "2026",
-     "count": 757
+     "count": 770
     }
    ],
    "works": [
@@ -1762,44 +1763,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/gramide-python",
-     "title": "gramide-python",
-     "titleEn": "Python 3.14 support for gramide-cli: lexer, grammar, symbol rules and edit-time recovery, checked against CPython",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-python",
-     "tags": [
-      "Almide",
-      "Python",
-      "C"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "131"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.13"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/gramide-python"
-      }
-     ],
-     "order": {
-      "date": "2026-09-18"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/gramide-almide",
      "title": "gramide-almide",
      "titleEn": "Almide package for gramide-cli: lexer spec, grammar, compiled table and symbol rules",
@@ -1830,44 +1793,6 @@
       {
        "label": "Repository",
        "href": "https://github.com/O6lvl4/gramide-almide"
-      }
-     ],
-     "order": {
-      "date": "2026-09-18"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-rust",
-     "title": "gramide-rust",
-     "titleEn": "Almide package giving gramide-cli its Rust lexer spec, grammar, compiled table and symbol rules",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-rust",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "130"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.16"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/gramide-rust"
       }
      ],
      "order": {
@@ -1913,22 +1838,52 @@
      }
     },
     {
-     "image": "plates/shared/O6lvl4/hew.jpg",
-     "readme": {
-      "lead": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
-      "points": [
-       "--symbol cuts out a function or type by name",
-       "Numbered lines, clipping, gap markers",
-       "grep folds repeats, names enclosing symbol"
-      ]
-     },
-     "id": "O6lvl4/hew",
-     "title": "hew",
-     "titleEn": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
+     "image": "",
+     "id": "O6lvl4/gramide-python",
+     "title": "gramide-python",
+     "titleEn": "Python 3.14 support for gramide-cli: lexer, grammar, symbol rules and edit-time recovery, checked against CPython",
      "date": "Sep 2026",
      "format": "Almide",
      "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/hew",
+     "url": "https://github.com/O6lvl4/gramide-python",
+     "tags": [
+      "Almide",
+      "Python",
+      "C"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "131"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.1.13"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-python"
+      }
+     ],
+     "order": {
+      "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-rust",
+     "title": "gramide-rust",
+     "titleEn": "Almide package giving gramide-cli its Rust lexer spec, grammar, compiled table and symbol rules",
+     "date": "Sep 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-rust",
      "tags": [
       "Almide",
       "Python",
@@ -1937,7 +1892,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "47"
+       "value": "130"
       },
       {
        "label": "Started",
@@ -1945,13 +1900,13 @@
       },
       {
        "label": "Release",
-       "value": "v0.4.17"
+       "value": "v0.1.16"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/O6lvl4/hew"
+       "href": "https://github.com/O6lvl4/gramide-rust"
       }
      ],
      "order": {
@@ -1959,7 +1914,7 @@
      }
     },
     {
-     "image": "plates/shared/O6lvl4/codopsy.jpg",
+     "image": "plates/en/O6lvl4/codopsy.jpg",
      "readme": {
       "lead": "AST-level code quality analyzer using tree-sitter for 35 languages, without executing code",
       "points": [
@@ -2003,6 +1958,52 @@
      ],
      "order": {
       "date": "2026-08-30"
+     }
+    },
+    {
+     "image": "plates/en/O6lvl4/hew.jpg",
+     "readme": {
+      "lead": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
+      "points": [
+       "--symbol cuts out a function or type by name",
+       "Numbered lines, clipping, gap markers",
+       "grep folds repeats, names enclosing symbol"
+      ]
+     },
+     "id": "O6lvl4/hew",
+     "title": "hew",
+     "titleEn": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
+     "date": "Sep 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/hew",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "47"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.4.17"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/hew"
+      }
+     ],
+     "order": {
+      "date": "2026-09-18"
      }
     },
     {
@@ -2079,6 +2080,45 @@
      ],
      "order": {
       "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/onomly",
+     "title": "onomly",
+     "titleEn": "Claude Code skill that runs due diligence on product-name candidates and returns a verdict report",
+     "date": "Sep 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onomly",
+     "tags": [
+      "Almide",
+      "almide",
+      "claude-code",
+      "claude-skill"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "15"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.4.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/onomly"
+      }
+     ],
+     "order": {
+      "date": "2026-09-06"
      }
     },
     {
@@ -2193,13 +2233,13 @@
      "title": "ctxgate",
      "titleEn": "Context firewall for Claude Code and Codex CLI that vaults tool outputs and shows the model compressed views",
      "date": "Sep 2026",
-     "format": "Rust",
+     "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/ctxgate",
      "tags": [
-      "Rust",
       "Almide",
-      "Go"
+      "Rust",
+      "Python"
      ],
      "stats": [
       {
@@ -2356,41 +2396,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/onomly",
-     "title": "onomly",
-     "titleEn": "Claude Code skill that runs due diligence on product-name candidates and returns a verdict report",
-     "date": "Aug 2026",
-     "format": "Shell",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onomly",
-     "tags": [
-      "Shell",
-      "almide",
-      "claude-code",
-      "claude-skill"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/onomly"
-      }
-     ],
-     "order": {
-      "date": "2026-08-30"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/codopsy-ts",
      "title": "codopsy-ts",
      "titleEn": "Zero-config AST-level code quality analyzer for TypeScript and JavaScript, run from one CLI command",
@@ -2402,7 +2407,7 @@
       "TypeScript",
       "HTML",
       "ast",
-      "cli"
+      "baseline"
      ],
      "stats": [
       {
@@ -2422,39 +2427,6 @@
      ],
      "order": {
       "date": "2026-02-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/imoduru",
-     "title": "imoduru",
-     "titleEn": "Recursive Rust + Playwright web crawler that serves collected text to AI agents via MCP",
-     "date": "May 2026",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/imoduru",
-     "tags": [
-      "Rust",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "12"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/imoduru"
-      }
-     ],
-     "order": {
-      "date": "2026-05-09"
      }
     },
     {
@@ -2489,6 +2461,39 @@
      ],
      "order": {
       "date": "2026-02-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/imoduru",
+     "title": "imoduru",
+     "titleEn": "Recursive Rust + Playwright web crawler that serves collected text to AI agents via MCP",
+     "date": "May 2026",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/imoduru",
+     "tags": [
+      "Rust",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "12"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/imoduru"
+      }
+     ],
+     "order": {
+      "date": "2026-05-09"
      }
     },
     {
@@ -2536,7 +2541,7 @@
      "label": "Repositories"
     },
     {
-     "value": "296",
+     "value": "297",
      "label": "Commits"
     },
     {
@@ -2555,20 +2560,63 @@
     },
     {
      "name": "2026",
-     "count": 148
+     "count": 149
     }
    ],
    "works": [
     {
-     "image": "plates/shared/Aid-On/llm-throttle.jpg",
+     "image": "plates/en/Aid-On/llm-queue-dispatcher.jpg",
      "readme": {
-      "lead": "A TypeScript rate limiting library that controls both RPM and TPM for LLM API calls",
+      "lead": "A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.",
       "points": [
-       "Dual RPM and TPM limiting",
-       "Token bucket with burst limits",
-       "Post-adjustment by actual token usage"
+       "Multi-dimensional request scoring",
+       "@aid-on/llm-throttle rate limiter integration",
+       "Pluggable storage adapters, in-memory included"
       ]
      },
+     "id": "Aid-On/llm-queue-dispatcher",
+     "title": "llm-queue-dispatcher",
+     "titleEn": "A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.",
+     "date": "Aug 2025",
+     "format": "TypeScript",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/llm-queue-dispatcher",
+     "tags": [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "aid-on-libs"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "10"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2025"
+      },
+      {
+       "label": "Release",
+       "value": "v1.0.2"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/llm-queue-dispatcher"
+      }
+     ],
+     "order": {
+      "date": "2025-08-03"
+     }
+    },
+    {
+     "image": "",
      "id": "Aid-On/llm-throttle",
      "title": "llm-throttle",
      "titleEn": "A TypeScript rate limiting library that controls both RPM and TPM for LLM API calls",
@@ -2608,49 +2656,6 @@
       {
        "label": "Site",
        "href": "https://aid-on.github.io/llm-throttle/"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/llm-queue-dispatcher",
-     "title": "llm-queue-dispatcher",
-     "titleEn": "A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.",
-     "date": "Aug 2025",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/llm-queue-dispatcher",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "10"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v1.0.2"
-      },
-      {
-       "label": "Stars",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/llm-queue-dispatcher"
       }
      ],
      "order": {
@@ -2729,45 +2734,6 @@
      ],
      "order": {
       "date": "2026-05-18"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unillm",
-     "title": "unillm",
-     "titleEn": "Unified, type-safe TypeScript LLM interface for edge runtimes across multiple providers",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unillm",
-     "tags": [
-      "TypeScript",
-      "ai",
-      "cloudflare-workers",
-      "edge-computing"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "29"
-      },
-      {
-       "label": "Started",
-       "value": "Dec 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v0.5.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/unillm"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
      }
     },
     {
@@ -2886,45 +2852,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/iteratop",
-     "title": "iteratop",
-     "titleEn": "TypeScript library for convergent iteration loops with LLMs, inspired by Scrum and OODA loops",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/iteratop",
-     "tags": [
-      "TypeScript",
-      "agent",
-      "ai",
-      "builder-pattern"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "18"
-      },
-      {
-       "label": "Started",
-       "value": "Dec 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v0.3.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/iteratop"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
      "id": "Aid-On/fractop",
      "title": "fractop",
      "titleEn": "TypeScript library that chunks, processes and merges text too long for an LLM's context limit.",
@@ -2964,6 +2891,45 @@
     },
     {
      "image": "",
+     "id": "Aid-On/iteratop",
+     "title": "iteratop",
+     "titleEn": "TypeScript library for convergent iteration loops with LLMs, inspired by Scrum and OODA loops",
+     "date": "Jun 2026",
+     "format": "TypeScript",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/iteratop",
+     "tags": [
+      "TypeScript",
+      "agent",
+      "ai",
+      "builder-pattern"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "18"
+      },
+      {
+       "label": "Started",
+       "value": "Dec 2025"
+      },
+      {
+       "label": "Release",
+       "value": "v0.3.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/iteratop"
+      }
+     ],
+     "order": {
+      "date": "2026-06-11"
+     }
+    },
+    {
+     "image": "",
      "id": "Aid-On/fuzztok",
      "title": "fuzztok",
      "titleEn": "Fast, lightweight fuzzy token estimation library for LLM text, with CJK support",
@@ -2975,7 +2941,7 @@
       "JavaScript",
       "TypeScript",
       "HTML",
-      "npm-package"
+      "aid-on-libs"
      ],
      "stats": [
       {
@@ -3042,6 +3008,41 @@
      ],
      "order": {
       "date": "2025-08-10"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-ai/almai",
+     "title": "almai",
+     "titleEn": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
+     "date": "Aug 2026",
+     "format": "Almide",
+     "credit": "almide-ai",
+     "url": "https://github.com/almide-ai/almai",
+     "tags": [
+      "Almide",
+      "ai",
+      "almide",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "19"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide-ai/almai"
+      }
+     ],
+     "order": {
+      "date": "2026-08-04"
      }
     },
     {
@@ -3142,65 +3143,33 @@
     },
     {
      "image": "",
-     "id": "almide-ai/almai",
-     "title": "almai",
-     "titleEn": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almide-ai",
-     "url": "https://github.com/almide-ai/almai",
-     "tags": [
-      "Almide",
-      "ai",
-      "almide",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "18"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide-ai/almai"
-      }
-     ],
-     "order": {
-      "date": "2026-05-01"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/synapser",
-     "title": "synapser",
-     "titleEn": "Type-safe TypeScript 4-phase pipeline that separates concerns in LLM agent processing",
+     "id": "Aid-On/unillm",
+     "title": "unillm",
+     "titleEn": "Unified, type-safe TypeScript LLM interface for edge runtimes across multiple providers",
      "date": "Jun 2026",
      "format": "TypeScript",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/synapser",
+     "url": "https://github.com/Aid-On/unillm",
      "tags": [
-      "TypeScript"
+      "TypeScript",
+      "ai",
+      "anthropic",
+      "claude"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "5"
+       "value": "29"
       },
       {
        "label": "Started",
-       "value": "Feb 2026"
+       "value": "Dec 2025"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/synapser"
+       "href": "https://github.com/Aid-On/unillm"
       }
      ],
      "order": {
@@ -3234,6 +3203,38 @@
       {
        "label": "Repository",
        "href": "https://github.com/Aid-On/embersm"
+      }
+     ],
+     "order": {
+      "date": "2026-06-11"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/synapser",
+     "title": "synapser",
+     "titleEn": "Type-safe TypeScript 4-phase pipeline that separates concerns in LLM agent processing",
+     "date": "Jun 2026",
+     "format": "TypeScript",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/synapser",
+     "tags": [
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "5"
+      },
+      {
+       "label": "Started",
+       "value": "Feb 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/synapser"
       }
      ],
      "order": {
@@ -3305,29 +3306,29 @@
    ],
    "works": [
     {
-     "image": "plates/en/Aid-On/fizz-protocol.jpg",
+     "image": "plates/en/Aid-On/fizz-brain-orchestrator.jpg",
      "readme": {
-      "lead": "Shared wire contracts for Fizz, an AITuber system in Almide, used by all its components",
+      "lead": "Fizz brain CLI that composes the pipeline turning each comment into sentence fragments on stdout",
       "points": [
-       "Emotion vocabulary (21 canonical) and inline tag grammar",
-       "Wire commands in 5 domains plus Response",
-       "Hand-written codecs over flat JSON wire format"
+       "Classify, few-shot search, prompt build",
+       "LLM call via fizz-llm-client",
+       "SentenceFragment output as NDJSON"
       ]
      },
-     "id": "Aid-On/fizz-protocol",
-     "title": "fizz-protocol",
-     "titleEn": "Shared wire contracts for Fizz, an AITuber system in Almide, used by all its components",
+     "id": "Aid-On/fizz-brain-orchestrator",
+     "title": "fizz-brain-orchestrator",
+     "titleEn": "Fizz brain CLI that composes the pipeline turning each comment into sentence fragments on stdout",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-protocol",
+     "url": "https://github.com/Aid-On/fizz-brain-orchestrator",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "7"
+       "value": "4"
       },
       {
        "label": "Started",
@@ -3335,121 +3336,13 @@
       },
       {
        "label": "Release",
-       "value": "v0.2.1"
+       "value": "v0.1.0"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-protocol"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-llm-client",
-     "title": "fizz-llm-client",
-     "titleEn": "Multi-provider LLM client in Almide for the Fizz AITuber system's brain component.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-llm-client",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-llm-client"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-prompt-builder",
-     "title": "fizz-prompt-builder",
-     "titleEn": "Almide library for Fizz that assembles LLM messages from persona, recall, few-shot, history and a comment",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-prompt-builder",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-prompt-builder"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-persona",
-     "title": "fizz-persona",
-     "titleEn": "Almide package defining the on-disk persona format contract for the Fizz AITuber system",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-persona",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-persona"
+       "href": "https://github.com/Aid-On/fizz-brain-orchestrator"
       }
      ],
      "order": {
@@ -3494,20 +3387,20 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-brain-orchestrator",
-     "title": "fizz-brain-orchestrator",
-     "titleEn": "Fizz brain CLI that composes the pipeline turning each comment into sentence fragments on stdout",
+     "id": "Aid-On/fizz-llm-client",
+     "title": "fizz-llm-client",
+     "titleEn": "Multi-provider LLM client in Almide for the Fizz AITuber system's brain component.",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-brain-orchestrator",
+     "url": "https://github.com/Aid-On/fizz-llm-client",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "4"
+       "value": "3"
       },
       {
        "label": "Started",
@@ -3515,13 +3408,13 @@
       },
       {
        "label": "Release",
-       "value": "v0.1.0"
+       "value": "v0.2.0"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-brain-orchestrator"
+       "href": "https://github.com/Aid-On/fizz-llm-client"
       }
      ],
      "order": {
@@ -3530,13 +3423,121 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-thinking-cue-detector",
-     "title": "fizz-thinking-cue-detector",
-     "titleEn": "Fizz brain component in Almide that decides whether a spoken sentence triggers thinking motion",
+     "id": "Aid-On/fizz-persona",
+     "title": "fizz-persona",
+     "titleEn": "Almide package defining the on-disk persona format contract for the Fizz AITuber system",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-thinking-cue-detector",
+     "url": "https://github.com/Aid-On/fizz-persona",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-persona"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-prompt-builder",
+     "title": "fizz-prompt-builder",
+     "titleEn": "Almide library for Fizz that assembles LLM messages from persona, recall, few-shot, history and a comment",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-prompt-builder",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-prompt-builder"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-protocol",
+     "title": "fizz-protocol",
+     "titleEn": "Shared wire contracts for Fizz, an AITuber system in Almide, used by all its components",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-protocol",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "7"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.2.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-protocol"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-comment-classifier",
+     "title": "fizz-comment-classifier",
+     "titleEn": "Almide library for Fizz that classifies a comment into a reaction Emotion by keyword rules",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-comment-classifier",
      "tags": [
       "Almide"
      ],
@@ -3557,79 +3558,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-thinking-cue-detector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-stream-sentence-parser",
-     "title": "fizz-stream-sentence-parser",
-     "titleEn": "Fizz brain component in Almide that splits LLM output into sentences and inline tags.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-stream-sentence-parser",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-stream-sentence-parser"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-first-time-greeter",
-     "title": "fizz-first-time-greeter",
-     "titleEn": "Deterministic Almide brain component for Fizz, the AITuber, giving first-time viewers a one-time self-intro",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-first-time-greeter",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-first-time-greeter"
+       "href": "https://github.com/Aid-On/fizz-comment-classifier"
       }
      ],
      "order": {
@@ -3674,13 +3603,13 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-comment-classifier",
-     "title": "fizz-comment-classifier",
-     "titleEn": "Almide library for Fizz that classifies a comment into a reaction Emotion by keyword rules",
+     "id": "Aid-On/fizz-first-time-greeter",
+     "title": "fizz-first-time-greeter",
+     "titleEn": "Deterministic Almide brain component for Fizz, the AITuber, giving first-time viewers a one-time self-intro",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-comment-classifier",
+     "url": "https://github.com/Aid-On/fizz-first-time-greeter",
      "tags": [
       "Almide"
      ],
@@ -3701,7 +3630,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-comment-classifier"
+       "href": "https://github.com/Aid-On/fizz-first-time-greeter"
       }
      ],
      "order": {
@@ -3710,21 +3639,92 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-tweet-validator",
-     "title": "fizz-tweet-validator",
-     "titleEn": "Counts X (twitter-text) weighted characters and checks tweets against the 280 limit.",
+     "id": "Aid-On/fizz-stream-sentence-parser",
+     "title": "fizz-stream-sentence-parser",
+     "titleEn": "Fizz brain component in Almide that splits LLM output into sentences and inline tags.",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-tweet-validator",
+     "url": "https://github.com/Aid-On/fizz-stream-sentence-parser",
      "tags": [
-      "Almide",
-      "JavaScript"
+      "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "3"
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-stream-sentence-parser"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-thinking-cue-detector",
+     "title": "fizz-thinking-cue-detector",
+     "titleEn": "Fizz brain component in Almide that decides whether a spoken sentence triggers thinking motion",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-thinking-cue-detector",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-thinking-cue-detector"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-comment-dedupe",
+     "title": "fizz-comment-dedupe",
+     "titleEn": "A pure NDJSON pipe filter for Fizz that drops already-seen comment IDs from a comment stream.",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-comment-dedupe",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "4"
       },
       {
        "label": "Started",
@@ -3734,7 +3734,72 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-tweet-validator"
+       "href": "https://github.com/Aid-On/fizz-comment-dedupe"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-lipsync",
+     "title": "fizz-lipsync",
+     "titleEn": "Lipsync DSP core for Fizz: turns audio RMS into a smooth mouth-open value in [0,1].",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-lipsync",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "4"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-lipsync"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-manual-comment-input",
+     "title": "fizz-manual-comment-input",
+     "titleEn": "Fizz comment source that turns operator stdin lines into normalized Manual Comment NDJSON",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-manual-comment-input",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "4"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-manual-comment-input"
       }
      ],
      "order": {
@@ -3807,20 +3872,21 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-youtube-chat-source",
-     "title": "fizz-youtube-chat-source",
-     "titleEn": "Read-only Fizz component that polls YouTube Live Chat and streams normalized Comment NDJSON to stdout",
+     "id": "Aid-On/fizz-tweet-validator",
+     "title": "fizz-tweet-validator",
+     "titleEn": "Counts X (twitter-text) weighted characters and checks tweets against the 280 limit.",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-youtube-chat-source",
+     "url": "https://github.com/Aid-On/fizz-tweet-validator",
      "tags": [
-      "Almide"
+      "Almide",
+      "JavaScript"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "4"
+       "value": "3"
       },
       {
        "label": "Started",
@@ -3830,39 +3896,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-youtube-chat-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-x-mention-source",
-     "title": "fizz-x-mention-source",
-     "titleEn": "Fizz input component that polls X mentions via an XAPI proxy and streams Comment NDJSON to stdout",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-x-mention-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-x-mention-source"
+       "href": "https://github.com/Aid-On/fizz-tweet-validator"
       }
      ],
      "order": {
@@ -3903,13 +3937,13 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-manual-comment-input",
-     "title": "fizz-manual-comment-input",
-     "titleEn": "Fizz comment source that turns operator stdin lines into normalized Manual Comment NDJSON",
+     "id": "Aid-On/fizz-x-mention-source",
+     "title": "fizz-x-mention-source",
+     "titleEn": "Fizz input component that polls X mentions via an XAPI proxy and streams Comment NDJSON to stdout",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-manual-comment-input",
+     "url": "https://github.com/Aid-On/fizz-x-mention-source",
      "tags": [
       "Almide"
      ],
@@ -3926,7 +3960,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-manual-comment-input"
+       "href": "https://github.com/Aid-On/fizz-x-mention-source"
       }
      ],
      "order": {
@@ -3935,46 +3969,13 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-lipsync",
-     "title": "fizz-lipsync",
-     "titleEn": "Lipsync DSP core for Fizz: turns audio RMS into a smooth mouth-open value in [0,1].",
+     "id": "Aid-On/fizz-youtube-chat-source",
+     "title": "fizz-youtube-chat-source",
+     "titleEn": "Read-only Fizz component that polls YouTube Live Chat and streams normalized Comment NDJSON to stdout",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-lipsync",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-lipsync"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-comment-dedupe",
-     "title": "fizz-comment-dedupe",
-     "titleEn": "A pure NDJSON pipe filter for Fizz that drops already-seen comment IDs from a comment stream.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-comment-dedupe",
+     "url": "https://github.com/Aid-On/fizz-youtube-chat-source",
      "tags": [
       "Almide"
      ],
@@ -3991,7 +3992,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-comment-dedupe"
+       "href": "https://github.com/Aid-On/fizz-youtube-chat-source"
       }
      ],
      "order": {
@@ -4000,148 +4001,16 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-speak-queue",
-     "title": "fizz-speak-queue",
-     "titleEn": "Almide state machine and boundary-event logic for sequential playback of LLM-streamed TTS clips",
-     "date": "Jun 2026",
+     "id": "Aid-On/animula",
+     "title": "animula",
+     "titleEn": "AI VTuber framework written in Almide, with a single native Rust host for rendering and I/O",
+     "date": "Apr 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-speak-queue",
+     "url": "https://github.com/Aid-On/animula",
      "tags": [
       "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-speak-queue"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-effect-checker",
-     "title": "fizz-effect-checker",
-     "titleEn": "Static checker verifying a plan's used effects fall within a persona's allowed effect set.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-effect-checker",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-effect-checker"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-response-transformer",
-     "title": "fizz-response-transformer",
-     "titleEn": "Catalog lookup and weighted selection of kotodama response transforms, in Almide (native + wasm)",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-response-transformer",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-response-transformer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-trigger-matcher",
-     "title": "fizz-trigger-matcher",
-     "titleEn": "Substring-match engine that picks suggested transform priors from a persona's triggers for an input.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-trigger-matcher",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-trigger-matcher"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-dataset",
-     "title": "fizz-eval-dataset",
-     "titleEn": "Schema and row validation for comment/reply eval-set TSVs, written in Almide for native and wasm.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-dataset",
-     "tags": [
-      "Almide",
-      "JavaScript"
+      "Rust"
      ],
      "stats": [
       {
@@ -4150,28 +4019,28 @@
       },
       {
        "label": "Started",
-       "value": "Jun 2026"
+       "value": "Apr 2026"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-eval-dataset"
+       "href": "https://github.com/Aid-On/animula"
       }
      ],
      "order": {
-      "date": "2026-06-15"
+      "date": "2026-04-17"
      }
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-eval-score",
-     "title": "fizz-eval-score",
-     "titleEn": "Almide arithmetic core for kotodama-eval score aggregation, built for native and wasm",
+     "id": "Aid-On/fizz-audio-leader-elector",
+     "title": "fizz-audio-leader-elector",
+     "titleEn": "Audio-leader election core that picks one playback leader among multiple viewer tabs.",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-score",
+     "url": "https://github.com/Aid-On/fizz-audio-leader-elector",
      "tags": [
       "Almide",
       "JavaScript"
@@ -4189,238 +4058,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-eval-score"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-rubric",
-     "title": "fizz-eval-rubric",
-     "titleEn": "Canonical 7-axis kotodama-eval rubric: axis metadata and composite weights, in Almide.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-rubric",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-eval-rubric"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-glb-container",
-     "title": "fizz-glb-container",
-     "titleEn": "Almide core that parses GLB/VRM container headers into chunk offsets and lengths.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-glb-container",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-glb-container"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-color-tint",
-     "title": "fizz-color-tint",
-     "titleEn": "Pure color-conversion core for recoloring irises in PSD eye textures, built for native and wasm",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-color-tint",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-color-tint"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-idle-motion",
-     "title": "fizz-idle-motion",
-     "titleEn": "Idle-motion core computing avatar blink, breath and sway as pure functions of wall-clock time t",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-idle-motion",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-idle-motion"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-weather-codes",
-     "title": "fizz-weather-codes",
-     "titleEn": "Almide library mapping Open-Meteo WMO weather codes to Japanese TTS labels and detecting weather queries",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-weather-codes",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-weather-codes"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-x-dummy-feed",
-     "title": "fizz-x-dummy-feed",
-     "titleEn": "Pure simulation logic of Fizz's dummy X mention feed, written in Almide for native and wasm.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-x-dummy-feed",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-x-dummy-feed"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-layout-scope",
-     "title": "fizz-layout-scope",
-     "titleEn": "Almide library resolving Fizz landscape/portrait scope to namespace position-config keys",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-layout-scope",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-layout-scope"
+       "href": "https://github.com/Aid-On/fizz-audio-leader-elector"
       }
      ],
      "order": {
@@ -4462,13 +4100,13 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-reply-paginator",
-     "title": "fizz-reply-paginator",
-     "titleEn": "Almide core that splits AI reply text into display chunks at sentence and clause boundaries.",
+     "id": "Aid-On/fizz-camera-presets",
+     "title": "fizz-camera-presets",
+     "titleEn": "Camera preset core for Fizz: computes face/upper/full camera position and look-at, plus easing.",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-reply-paginator",
+     "url": "https://github.com/Aid-On/fizz-camera-presets",
      "tags": [
       "Almide",
       "JavaScript"
@@ -4486,7 +4124,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-reply-paginator"
+       "href": "https://github.com/Aid-On/fizz-camera-presets"
       }
      ],
      "order": {
@@ -4495,13 +4133,13 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-ws-reconnect",
-     "title": "fizz-ws-reconnect",
-     "titleEn": "Computes Fizz WebSocket reconnect delays using exponential backoff, a cap and equal jitter.",
+     "id": "Aid-On/fizz-color-tint",
+     "title": "fizz-color-tint",
+     "titleEn": "Pure color-conversion core for recoloring irises in PSD eye textures, built for native and wasm",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-ws-reconnect",
+     "url": "https://github.com/Aid-On/fizz-color-tint",
      "tags": [
       "Almide",
       "JavaScript"
@@ -4519,175 +4157,11 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-ws-reconnect"
+       "href": "https://github.com/Aid-On/fizz-color-tint"
       }
      ],
      "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-liveness-monitor",
-     "title": "fizz-liveness-monitor",
-     "titleEn": "Fizz's liveness core that judges WS connection ping/pong death on every tick, in Almide.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-liveness-monitor",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-liveness-monitor"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-env-loader",
-     "title": "fizz-env-loader",
-     "titleEn": "Almide core for Fizz that parses .env text into KEY=VALUE pairs, built as a native binary",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-env-loader",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-env-loader"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-http-router",
-     "title": "fizz-http-router",
-     "titleEn": "Fizz HTTP dispatch core mapping (method, path) to a route id via ordered method+prefix matching",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-http-router",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-http-router"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-audio-leader-elector",
-     "title": "fizz-audio-leader-elector",
-     "titleEn": "Audio-leader election core that picks one playback leader among multiple viewer tabs.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-audio-leader-elector",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-audio-leader-elector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-expression-applier",
-     "title": "fizz-expression-applier",
-     "titleEn": "Expression-applier core for Fizz: maps emotion names to VRM channels and weights, clamped to [0,1].",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-expression-applier",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-expression-applier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
+      "date": "2026-06-15"
      }
     },
     {
@@ -4725,13 +4199,13 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-mixamo-retargeter",
-     "title": "fizz-mixamo-retargeter",
-     "titleEn": "Quaternion retargeting core in Almide that maps Mixamo animation onto VRM bones, native and wasm.",
+     "id": "Aid-On/fizz-effect-checker",
+     "title": "fizz-effect-checker",
+     "titleEn": "Static checker verifying a plan's used effects fall within a persona's allowed effect set.",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-mixamo-retargeter",
+     "url": "https://github.com/Aid-On/fizz-effect-checker",
      "tags": [
       "Almide",
       "JavaScript"
@@ -4749,7 +4223,171 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-mixamo-retargeter"
+       "href": "https://github.com/Aid-On/fizz-effect-checker"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-env-loader",
+     "title": "fizz-env-loader",
+     "titleEn": "Almide core for Fizz that parses .env text into KEY=VALUE pairs, built as a native binary",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-env-loader",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-env-loader"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-eval-dataset",
+     "title": "fizz-eval-dataset",
+     "titleEn": "Schema and row validation for comment/reply eval-set TSVs, written in Almide for native and wasm.",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-eval-dataset",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-eval-dataset"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-eval-rubric",
+     "title": "fizz-eval-rubric",
+     "titleEn": "Canonical 7-axis kotodama-eval rubric: axis metadata and composite weights, in Almide.",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-eval-rubric",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-eval-rubric"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-eval-score",
+     "title": "fizz-eval-score",
+     "titleEn": "Almide arithmetic core for kotodama-eval score aggregation, built for native and wasm",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-eval-score",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-eval-score"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-expression-applier",
+     "title": "fizz-expression-applier",
+     "titleEn": "Expression-applier core for Fizz: maps emotion names to VRM channels and weights, clamped to [0,1].",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-expression-applier",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-expression-applier"
       }
      ],
      "order": {
@@ -4791,39 +4429,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-camera-presets",
-     "title": "fizz-camera-presets",
-     "titleEn": "Camera preset core for Fizz: computes face/upper/full camera position and look-at, plus easing.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-camera-presets",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-camera-presets"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
      "id": "Aid-On/fizz-gesture-player",
      "title": "fizz-gesture-player",
      "titleEn": "Fizz's DSP core that computes bone offsets for one-shot gestures from a gesture ID and progress u.",
@@ -4857,15 +4462,49 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-session-tracker",
-     "title": "fizz-session-tracker",
-     "titleEn": "Fizz stream session tracker that marks start/end boundaries and counts per-user participation.",
+     "id": "Aid-On/fizz-glb-container",
+     "title": "fizz-glb-container",
+     "titleEn": "Almide core that parses GLB/VRM container headers into chunk offsets and lengths.",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-session-tracker",
+     "url": "https://github.com/Aid-On/fizz-glb-container",
      "tags": [
-      "Almide"
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-glb-container"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-http-router",
+     "title": "fizz-http-router",
+     "titleEn": "Fizz HTTP dispatch core mapping (method, path) to a route id via ordered method+prefix matching",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-http-router",
+     "tags": [
+      "Almide",
+      "JavaScript"
      ],
      "stats": [
       {
@@ -4880,7 +4519,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-session-tracker"
+       "href": "https://github.com/Aid-On/fizz-http-router"
       }
      ],
      "order": {
@@ -4889,15 +4528,16 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-recall-gate",
-     "title": "fizz-recall-gate",
-     "titleEn": "Fizz recall gate that trims RecallResult to the brain's budget and supplies a memory-less fallback",
+     "id": "Aid-On/fizz-idle-motion",
+     "title": "fizz-idle-motion",
+     "titleEn": "Idle-motion core computing avatar blink, breath and sway as pure functions of wall-clock time t",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-recall-gate",
+     "url": "https://github.com/Aid-On/fizz-idle-motion",
      "tags": [
-      "Almide"
+      "Almide",
+      "JavaScript"
      ],
      "stats": [
       {
@@ -4912,7 +4552,40 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-recall-gate"
+       "href": "https://github.com/Aid-On/fizz-idle-motion"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-layout-scope",
+     "title": "fizz-layout-scope",
+     "titleEn": "Almide library resolving Fizz landscape/portrait scope to namespace position-config keys",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-layout-scope",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-layout-scope"
       }
      ],
      "order": {
@@ -4921,20 +4594,21 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fizz-reading-corrector",
-     "title": "fizz-reading-corrector",
-     "titleEn": "Pre-TTS filter for Fizz that replaces kanji with kana to fix readings of names and tricky words",
+     "id": "Aid-On/fizz-liveness-monitor",
+     "title": "fizz-liveness-monitor",
+     "titleEn": "Fizz's liveness core that judges WS connection ping/pong death on every tick, in Almide.",
      "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-reading-corrector",
+     "url": "https://github.com/Aid-On/fizz-liveness-monitor",
      "tags": [
-      "Almide"
+      "Almide",
+      "JavaScript"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "2"
+       "value": "1"
       },
       {
        "label": "Started",
@@ -4944,39 +4618,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-reading-corrector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l2-events",
-     "title": "fizz-memory-l2-events",
-     "titleEn": "L2 persistence layer of Fizz memory: append-only NDJSON event log queryable per user_id",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l2-events",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-memory-l2-events"
+       "href": "https://github.com/Aid-On/fizz-liveness-monitor"
       }
      ],
      "order": {
@@ -5017,16 +4659,15 @@
     },
     {
      "image": "",
-     "id": "Aid-On/animula",
-     "title": "animula",
-     "titleEn": "AI VTuber framework written in Almide, with a single native Rust host for rendering and I/O",
-     "date": "Apr 2026",
+     "id": "Aid-On/fizz-memory-l2-events",
+     "title": "fizz-memory-l2-events",
+     "titleEn": "L2 persistence layer of Fizz memory: append-only NDJSON event log queryable per user_id",
+     "date": "Jun 2026",
      "format": "Almide",
      "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/animula",
+     "url": "https://github.com/Aid-On/fizz-memory-l2-events",
      "tags": [
-      "Almide",
-      "Rust"
+      "Almide"
      ],
      "stats": [
       {
@@ -5035,17 +4676,377 @@
       },
       {
        "label": "Started",
-       "value": "Apr 2026"
+       "value": "Jun 2026"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/Aid-On/animula"
+       "href": "https://github.com/Aid-On/fizz-memory-l2-events"
       }
      ],
      "order": {
-      "date": "2026-04-17"
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-mixamo-retargeter",
+     "title": "fizz-mixamo-retargeter",
+     "titleEn": "Quaternion retargeting core in Almide that maps Mixamo animation onto VRM bones, native and wasm.",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-mixamo-retargeter",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-mixamo-retargeter"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-reading-corrector",
+     "title": "fizz-reading-corrector",
+     "titleEn": "Pre-TTS filter for Fizz that replaces kanji with kana to fix readings of names and tricky words",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-reading-corrector",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-reading-corrector"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-recall-gate",
+     "title": "fizz-recall-gate",
+     "titleEn": "Fizz recall gate that trims RecallResult to the brain's budget and supplies a memory-less fallback",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-recall-gate",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-recall-gate"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-reply-paginator",
+     "title": "fizz-reply-paginator",
+     "titleEn": "Almide core that splits AI reply text into display chunks at sentence and clause boundaries.",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-reply-paginator",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-reply-paginator"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-response-transformer",
+     "title": "fizz-response-transformer",
+     "titleEn": "Catalog lookup and weighted selection of kotodama response transforms, in Almide (native + wasm)",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-response-transformer",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-response-transformer"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-session-tracker",
+     "title": "fizz-session-tracker",
+     "titleEn": "Fizz stream session tracker that marks start/end boundaries and counts per-user participation.",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-session-tracker",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-session-tracker"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-speak-queue",
+     "title": "fizz-speak-queue",
+     "titleEn": "Almide state machine and boundary-event logic for sequential playback of LLM-streamed TTS clips",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-speak-queue",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-speak-queue"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-trigger-matcher",
+     "title": "fizz-trigger-matcher",
+     "titleEn": "Substring-match engine that picks suggested transform priors from a persona's triggers for an input.",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-trigger-matcher",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-trigger-matcher"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-weather-codes",
+     "title": "fizz-weather-codes",
+     "titleEn": "Almide library mapping Open-Meteo WMO weather codes to Japanese TTS labels and detecting weather queries",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-weather-codes",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-weather-codes"
+      }
+     ],
+     "order": {
+      "date": "2026-06-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-ws-reconnect",
+     "title": "fizz-ws-reconnect",
+     "titleEn": "Computes Fizz WebSocket reconnect delays using exponential backoff, a cap and equal jitter.",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-ws-reconnect",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-ws-reconnect"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/fizz-x-dummy-feed",
+     "title": "fizz-x-dummy-feed",
+     "titleEn": "Pure simulation logic of Fizz's dummy X mention feed, written in Almide for native and wasm.",
+     "date": "Jun 2026",
+     "format": "Almide",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/fizz-x-dummy-feed",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/fizz-x-dummy-feed"
+      }
+     ],
+     "order": {
+      "date": "2026-06-14"
      }
     }
    ]
@@ -5265,77 +5266,13 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-bot-ai",
-     "title": "mc-bot-ai",
-     "titleEn": "AI integration layer for Minecraft bots, covering Phase 5 Intelligence with almai",
+     "id": "almd-mc/mc-auth",
+     "title": "mc-auth",
+     "titleEn": "Minecraft auth module for the Almide language, installed as a git dependency",
      "date": "May 2026",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-bot-ai",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-bot-ai"
-      }
-     ],
-     "order": {
-      "date": "2026-05-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-pathfinder",
-     "title": "mc-pathfinder",
-     "titleEn": "An Almide implementation of mineflayer-pathfinder: A* pathfinding for Minecraft bots",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-pathfinder",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-pathfinder"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-world",
-     "title": "mc-world",
-     "titleEn": "A Minecraft world module for the Almide programming language.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-world",
+     "url": "https://github.com/almd-mc/mc-auth",
      "tags": [
       "Almide"
      ],
@@ -5352,11 +5289,11 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-world"
+       "href": "https://github.com/almd-mc/mc-auth"
       }
      ],
      "order": {
-      "date": "2026-05-24"
+      "date": "2026-05-23"
      }
     },
     {
@@ -5393,20 +5330,20 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-item",
-     "title": "mc-item",
-     "titleEn": "A Minecraft item module for the Almide programming language.",
+     "id": "almd-mc/mc-bot-ai",
+     "title": "mc-bot-ai",
+     "titleEn": "AI integration layer for Minecraft bots, covering Phase 5 Intelligence with almai",
      "date": "May 2026",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-item",
+     "url": "https://github.com/almd-mc/mc-bot-ai",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "4"
+       "value": "3"
       },
       {
        "label": "Started",
@@ -5416,7 +5353,39 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-item"
+       "href": "https://github.com/almd-mc/mc-bot-ai"
+      }
+     ],
+     "order": {
+      "date": "2026-05-25"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-chat",
+     "title": "mc-chat",
+     "titleEn": "A Minecraft chat module for the Almide language, installed as a git dependency.",
+     "date": "May 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-chat",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "5"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-chat"
       }
      ],
      "order": {
@@ -5489,20 +5458,20 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-chat",
-     "title": "mc-chat",
-     "titleEn": "A Minecraft chat module for the Almide language, installed as a git dependency.",
+     "id": "almd-mc/mc-item",
+     "title": "mc-item",
+     "titleEn": "A Minecraft item module for the Almide programming language.",
      "date": "May 2026",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-chat",
+     "url": "https://github.com/almd-mc/mc-item",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "5"
+       "value": "4"
       },
       {
        "label": "Started",
@@ -5512,7 +5481,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-chat"
+       "href": "https://github.com/almd-mc/mc-item"
       }
      ],
      "order": {
@@ -5553,20 +5522,20 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-auth",
-     "title": "mc-auth",
-     "titleEn": "Minecraft auth module for the Almide language, installed as a git dependency",
+     "id": "almd-mc/mc-pathfinder",
+     "title": "mc-pathfinder",
+     "titleEn": "An Almide implementation of mineflayer-pathfinder: A* pathfinding for Minecraft bots",
      "date": "May 2026",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-auth",
+     "url": "https://github.com/almd-mc/mc-pathfinder",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "4"
+       "value": "3"
       },
       {
        "label": "Started",
@@ -5576,43 +5545,11 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-auth"
+       "href": "https://github.com/almd-mc/mc-pathfinder"
       }
      ],
      "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/neoforge",
-     "title": "neoforge",
-     "titleEn": "A Minecraft neoforge module for the Almide language, installed as a git dependency.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/neoforge",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "5"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/neoforge"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
+      "date": "2026-05-24"
      }
     },
     {
@@ -5649,20 +5586,20 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-server-impl",
-     "title": "mc-server-impl",
-     "titleEn": "A lightweight Minecraft server implementation, an Almide implementation of flying-squid",
+     "id": "almd-mc/mc-world",
+     "title": "mc-world",
+     "titleEn": "A Minecraft world module for the Almide programming language.",
      "date": "May 2026",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-server-impl",
+     "url": "https://github.com/almd-mc/mc-world",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "2"
+       "value": "4"
       },
       {
        "label": "Started",
@@ -5672,7 +5609,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-server-impl"
+       "href": "https://github.com/almd-mc/mc-world"
       }
      ],
      "order": {
@@ -5681,13 +5618,45 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-proxy",
-     "title": "mc-proxy",
-     "titleEn": "Minecraft proxy foundation, an Almide implementation of prismarine-proxy.",
+     "id": "almd-mc/neoforge",
+     "title": "neoforge",
+     "titleEn": "A Minecraft neoforge module for the Almide language, installed as a git dependency.",
      "date": "May 2026",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-proxy",
+     "url": "https://github.com/almd-mc/neoforge",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "5"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/neoforge"
+      }
+     ],
+     "order": {
+      "date": "2026-05-23"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-collect",
+     "title": "mc-collect",
+     "titleEn": "Block collection automation for Minecraft bots, an Almide implementation of mineflayer-collectblock",
+     "date": "May 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-collect",
      "tags": [
       "Almide"
      ],
@@ -5704,7 +5673,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-proxy"
+       "href": "https://github.com/almd-mc/mc-collect"
       }
      ],
      "order": {
@@ -5713,20 +5682,20 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-server",
-     "title": "mc-server",
-     "titleEn": "Almide implementation of node-minecraft-protocol's server mode, a Minecraft server protocol base",
+     "id": "almd-mc/mc-data",
+     "title": "mc-data",
+     "titleEn": "Minecraft data definitions for Almide, covering blocks, entities and game modes",
      "date": "May 2026",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-server",
+     "url": "https://github.com/almd-mc/mc-data",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "2"
+       "value": "1"
       },
       {
        "label": "Started",
@@ -5736,7 +5705,7 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-server"
+       "href": "https://github.com/almd-mc/mc-data"
       }
      ],
      "order": {
@@ -5777,70 +5746,6 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-pvp",
-     "title": "mc-pvp",
-     "titleEn": "PvP combat utilities for Minecraft bots, an Almide implementation of mineflayer-pvp",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-pvp",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-pvp"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-collect",
-     "title": "mc-collect",
-     "titleEn": "Block collection automation for Minecraft bots, an Almide implementation of mineflayer-collectblock",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-collect",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-collect"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
      "id": "almd-mc/mc-physics",
      "title": "mc-physics",
      "titleEn": "Minecraft physics simulation library for Almide, equivalent to prismarine-physics.",
@@ -5865,6 +5770,70 @@
       {
        "label": "Repository",
        "href": "https://github.com/almd-mc/mc-physics"
+      }
+     ],
+     "order": {
+      "date": "2026-05-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-proxy",
+     "title": "mc-proxy",
+     "titleEn": "Minecraft proxy foundation, an Almide implementation of prismarine-proxy.",
+     "date": "May 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-proxy",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-proxy"
+      }
+     ],
+     "order": {
+      "date": "2026-05-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-pvp",
+     "title": "mc-pvp",
+     "titleEn": "PvP combat utilities for Minecraft bots, an Almide implementation of mineflayer-pvp",
+     "date": "May 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-pvp",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-pvp"
       }
      ],
      "order": {
@@ -5905,20 +5874,20 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-data",
-     "title": "mc-data",
-     "titleEn": "Minecraft data definitions for Almide, covering blocks, entities and game modes",
+     "id": "almd-mc/mc-server",
+     "title": "mc-server",
+     "titleEn": "Almide implementation of node-minecraft-protocol's server mode, a Minecraft server protocol base",
      "date": "May 2026",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-data",
+     "url": "https://github.com/almd-mc/mc-server",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "1"
+       "value": "2"
       },
       {
        "label": "Started",
@@ -5928,7 +5897,39 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-data"
+       "href": "https://github.com/almd-mc/mc-server"
+      }
+     ],
+     "order": {
+      "date": "2026-05-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-server-impl",
+     "title": "mc-server-impl",
+     "titleEn": "A lightweight Minecraft server implementation, an Almide implementation of flying-squid",
+     "date": "May 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-server-impl",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-server-impl"
       }
      ],
      "order": {
@@ -6207,35 +6208,35 @@
     },
     {
      "image": "",
-     "id": "almide-graphics/slabhra",
-     "title": "slabhra",
-     "titleEn": "Differentiable programming library for Almide: reverse-mode autograd, tensors and optimizers",
-     "date": "Jun 2026",
+     "id": "almide-graphics/ceangal-anime",
+     "title": "ceangal-anime",
+     "titleEn": "Pure-WASM animation engine for Almide with anime.js-inspired tween, easing, timeline and stagger",
+     "date": "May 2026",
      "format": "Almide",
      "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/slabhra",
+     "url": "https://github.com/almide-graphics/ceangal-anime",
      "tags": [
       "Almide",
-      "Python"
+      "HTML"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "7"
+       "value": "6"
       },
       {
        "label": "Started",
-       "value": "Jun 2026"
+       "value": "May 2026"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almide-graphics/slabhra"
+       "href": "https://github.com/almide-graphics/ceangal-anime"
       }
      ],
      "order": {
-      "date": "2026-06-16"
+      "date": "2026-05-18"
      }
     },
     {
@@ -6272,35 +6273,35 @@
     },
     {
      "image": "",
-     "id": "almide-graphics/ceangal-anime",
-     "title": "ceangal-anime",
-     "titleEn": "Pure-WASM animation engine for Almide with anime.js-inspired tween, easing, timeline and stagger",
-     "date": "May 2026",
+     "id": "almide-graphics/slabhra",
+     "title": "slabhra",
+     "titleEn": "Differentiable programming library for Almide: reverse-mode autograd, tensors and optimizers",
+     "date": "Jun 2026",
      "format": "Almide",
      "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/ceangal-anime",
+     "url": "https://github.com/almide-graphics/slabhra",
      "tags": [
       "Almide",
-      "HTML"
+      "Python"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "7"
       },
       {
        "label": "Started",
-       "value": "May 2026"
+       "value": "Jun 2026"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almide-graphics/ceangal-anime"
+       "href": "https://github.com/almide-graphics/slabhra"
       }
      ],
      "order": {
-      "date": "2026-05-18"
+      "date": "2026-06-16"
      }
     }
    ]
@@ -6764,7 +6765,7 @@
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/qusp.jpg",
+     "image": "plates/en/O6lvl4/qusp.jpg",
      "readme": {
       "lead": "A native-Rust multi-language toolchain manager driven by qusp.toml, locked in qusp.lock.",
       "points": [
@@ -6784,7 +6785,7 @@
       "Rust",
       "Shell",
       "Python",
-      "cli"
+      "asdf"
      ],
      "stats": [
       {
@@ -7372,44 +7373,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/gulp-coach",
-     "title": "gulp-coach",
-     "titleEn": "A fully local hydration coach that shows how much more you can drink or how long to wait, from your profile and recent intake.",
-     "date": "Apr 2026",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gulp-coach",
-     "tags": [
-      "TypeScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "12"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/gulp-coach"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/gulp-coach/"
-      }
-     ],
-     "order": {
-      "date": "2026-04-24"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/environment-health-viewer",
      "title": "environment-health-viewer",
      "titleEn": "Static dashboard showing local health risks, JMA warnings, weather and sun cycle on one screen",
@@ -7448,6 +7411,44 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/gulp-coach",
+     "title": "gulp-coach",
+     "titleEn": "A fully local hydration coach that shows how much more you can drink or how long to wait, from your profile and recent intake.",
+     "date": "Apr 2026",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gulp-coach",
+     "tags": [
+      "TypeScript",
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "12"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gulp-coach"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/gulp-coach/"
+      }
+     ],
+     "order": {
+      "date": "2026-04-24"
+     }
+    },
+    {
+     "image": "",
      "id": "Aid-On/kotorody-portfolio",
      "title": "kotorody-portfolio",
      "titleEn": "Portfolio site of kotorody, a Frontend Engineer at Aid-On, written in HTML.",
@@ -7476,38 +7477,6 @@
      ],
      "order": {
       "date": "2026-05-18"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/tabi-navi",
-     "title": "tabi-navi",
-     "titleEn": "CLI that finds the cheapest flight×hotel combos for trip constraints and compares variants.",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/tabi-navi",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/tabi-navi"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
      }
     },
     {
@@ -7541,6 +7510,38 @@
      ],
      "order": {
       "date": "2026-05-12"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/tabi-navi",
+     "title": "tabi-navi",
+     "titleEn": "CLI that finds the cheapest flight×hotel combos for trip constraints and compares variants.",
+     "date": "Jun 2026",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/tabi-navi",
+     "tags": [
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/tabi-navi"
+      }
+     ],
+     "order": {
+      "date": "2026-06-11"
      }
     },
     {
@@ -7650,11 +7651,11 @@
    "intro": "The small binaries written for the day's work: getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), looking at an environment and a machine (netcheck, igloc, syncenv, macleap, dns-checker), switching accounts (azprofile, chropen), turning what is written into something you can hand over (pagina, premaid, image-catalog-composer), hearing about a supply-chain attack early (tocsin, tocsin-almd), lifting a UI's structure into a Layout AST (uimodulay), and my own working protocol with the checker that grades against it (O6lvl4-protocol, O6lvl4-vitals).",
    "figures": [
     {
-     "value": "25",
+     "value": "26",
      "label": "Repositories"
     },
     {
-     "value": "198",
+     "value": "214",
      "label": "Commits"
     },
     {
@@ -7673,7 +7674,7 @@
     },
     {
      "name": "2026",
-     "count": 165
+     "count": 181
     }
    ],
    "works": [
@@ -7801,6 +7802,42 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/igloc",
+     "title": "igloc",
+     "titleEn": "A Go CLI that scans git repos for gitignored files like .env and secrets, and migrates them between machines.",
+     "date": "Dec 2025",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/igloc",
+     "tags": [
+      "Go"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "10"
+      },
+      {
+       "label": "Started",
+       "value": "Dec 2025"
+      },
+      {
+       "label": "Release",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/igloc"
+      }
+     ],
+     "order": {
+      "date": "2025-12-01"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/resepy",
      "title": "resepy",
      "titleEn": "CLI and Python module to convert and merge delimiter-separated files: CSV, TSV, any DSV",
@@ -7836,42 +7873,6 @@
      ],
      "order": {
       "date": "2026-03-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/igloc",
-     "title": "igloc",
-     "titleEn": "A Go CLI that scans git repos for gitignored files like .env and secrets, and migrates them between machines.",
-     "date": "Dec 2025",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/igloc",
-     "tags": [
-      "Go"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "10"
-      },
-      {
-       "label": "Started",
-       "value": "Dec 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/igloc"
-      }
-     ],
-     "order": {
-      "date": "2025-12-01"
      }
     },
     {
@@ -7953,6 +7954,44 @@
      }
     },
     {
+     "image": "",
+     "id": "O6lvl4/O6lvl4-portfolio",
+     "title": "O6lvl4-portfolio",
+     "titleEn": "265 public repositories across O6lvl4, Aid-On, almide and the almide-* orgs, grouped by what they are, in Japanese, English and Chinese. Named after Ogma.",
+     "date": "Sep 2026",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-portfolio",
+     "tags": [
+      "HTML",
+      "JavaScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "16"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/O6lvl4-portfolio"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/O6lvl4-portfolio/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-20"
+     }
+    },
+    {
      "image": "plates/en/O6lvl4/uimodulay.jpg",
      "readme": {
       "lead": "Semantic UI structure analyzer that turns a URL into the modules a designer would draw, not the DOM",
@@ -7966,13 +8005,13 @@
      "title": "uimodulay",
      "titleEn": "Semantic UI structure analyzer that turns a URL into the modules a designer would draw, not the DOM",
      "date": "Sep 2026",
-     "format": "HTML",
+     "format": "TypeScript",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/uimodulay",
      "tags": [
-      "HTML",
       "TypeScript",
-      "CSS"
+      "HTML",
+      "JavaScript"
      ],
      "stats": [
       {
@@ -8232,13 +8271,18 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/O6lvl4-protocol",
-     "title": "O6lvl4-protocol",
-     "titleEn": "A set of operational protocols for sleep, diet, exercise and cognition to maximize intellectual work.",
-     "date": "May 2026",
+     "id": "O6lvl4/dns-checker",
+     "title": "dns-checker",
+     "titleEn": "DNS record checker written in MoonBit for verifying email-sending domain setup.",
+     "date": "Jan 2026",
+     "format": "MoonBit",
      "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-protocol",
-     "tags": [],
+     "url": "https://github.com/O6lvl4/dns-checker",
+     "tags": [
+      "cli",
+      "dns",
+      "moonbit"
+     ],
      "stats": [
       {
        "label": "Commits",
@@ -8246,17 +8290,17 @@
       },
       {
        "label": "Started",
-       "value": "May 2026"
+       "value": "Jan 2026"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/O6lvl4/O6lvl4-protocol"
+       "href": "https://github.com/O6lvl4/dns-checker"
       }
      ],
      "order": {
-      "date": "2026-05-07"
+      "date": "2026-01-16"
      }
     },
     {
@@ -8325,18 +8369,13 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/dns-checker",
-     "title": "dns-checker",
-     "titleEn": "DNS record checker written in MoonBit for verifying email-sending domain setup.",
-     "date": "Jan 2026",
-     "format": "MoonBit",
+     "id": "O6lvl4/O6lvl4-protocol",
+     "title": "O6lvl4-protocol",
+     "titleEn": "A set of operational protocols for sleep, diet, exercise and cognition to maximize intellectual work.",
+     "date": "May 2026",
      "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/dns-checker",
-     "tags": [
-      "cli",
-      "dns",
-      "moonbit"
-     ],
+     "url": "https://github.com/O6lvl4/O6lvl4-protocol",
+     "tags": [],
      "stats": [
       {
        "label": "Commits",
@@ -8344,17 +8383,49 @@
       },
       {
        "label": "Started",
-       "value": "Jan 2026"
+       "value": "May 2026"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/O6lvl4/dns-checker"
+       "href": "https://github.com/O6lvl4/O6lvl4-protocol"
       }
      ],
      "order": {
-      "date": "2026-01-16"
+      "date": "2026-05-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/chropen",
+     "title": "chropen",
+     "titleEn": "A Go CLI that opens URLs in a specific Chrome profile, chosen by its account email.",
+     "date": "May 2026",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/chropen",
+     "tags": [
+      "Go"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/chropen"
+      }
+     ],
+     "order": {
+      "date": "2026-05-01"
      }
     },
     {
@@ -8417,38 +8488,6 @@
      ],
      "order": {
       "date": "2026-05-12"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/chropen",
-     "title": "chropen",
-     "titleEn": "A Go CLI that opens URLs in a specific Chrome profile, chosen by its account email.",
-     "date": "May 2026",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/chropen",
-     "tags": [
-      "Go"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/chropen"
-      }
-     ],
-     "order": {
-      "date": "2026-05-01"
      }
     },
     {
@@ -8791,6 +8830,38 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/fizzbuzz-lean4-cli",
+     "title": "fizzbuzz-lean4-cli",
+     "titleEn": "A FizzBuzz command-line app written in Lean 4, built on fizzbuzz-lean4-lib",
+     "date": "Mar 2026",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
+     "tags": [
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-cli"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/lean4-rust-backend",
      "title": "lean4-rust-backend",
      "titleEn": "A Lean 4 to Rust backend that generates Rust code from Lean's IR, with a runtime and WASM support.",
@@ -8816,38 +8887,6 @@
       {
        "label": "Repository",
        "href": "https://github.com/O6lvl4/lean4-rust-backend"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/fizzbuzz-lean4-cli",
-     "title": "fizzbuzz-lean4-cli",
-     "titleEn": "A FizzBuzz command-line app written in Lean 4, built on fizzbuzz-lean4-lib",
-     "date": "Mar 2026",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
-     "tags": [
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-cli"
       }
      ],
      "order": {
@@ -9342,6 +9381,100 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/line-bot-sandbox",
+     "title": "line-bot-sandbox",
+     "titleEn": "A Go sample template for an AWS Lambda function behind API Gateway, built and deployed with SAM.",
+     "date": "Oct 2022",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/line-bot-sandbox",
+     "tags": [
+      "Go"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "4"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2022"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/line-bot-sandbox"
+      }
+     ],
+     "order": {
+      "date": "2022-10-01"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/sandbox-gcp",
+     "title": "sandbox-gcp",
+     "titleEn": "A Japanese guide to building environments on Google Cloud Platform using Terraform.",
+     "date": "Nov 2023",
+     "format": "Makefile",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/sandbox-gcp",
+     "tags": [],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "5"
+      },
+      {
+       "label": "Started",
+       "value": "Nov 2023"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/sandbox-gcp"
+      }
+     ],
+     "order": {
+      "date": "2023-11-19"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/sandbox-golang-cli",
+     "title": "sandbox-golang-cli",
+     "titleEn": "A Go CLI application built with the Cobra library, with setup steps using cobra-cli.",
+     "date": "Feb 2024",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/sandbox-golang-cli",
+     "tags": [
+      "Go"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Feb 2024"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/sandbox-golang-cli"
+      }
+     ],
+     "order": {
+      "date": "2024-02-05"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/sandbox-next-firebase-app-hosting-line-auth",
      "title": "sandbox-next-firebase-app-hosting-line-auth",
      "titleEn": "Reference architecture for LINE login in Next.js App Router, deployed to Firebase with CDKTF infrastructure.",
@@ -9410,39 +9543,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/ts-tsnode-sandbox",
-     "title": "ts-tsnode-sandbox",
-     "titleEn": "A demo project showing how to build Node.js apps with TypeScript and ts-node, from setup to advanced use.",
-     "date": "Sep 2024",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/ts-tsnode-sandbox",
-     "tags": [
-      "TypeScript",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "7"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2024"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/ts-tsnode-sandbox"
-      }
-     ],
-     "order": {
-      "date": "2024-09-13"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/ts-react-tailwindcss-sandbox",
      "title": "ts-react-tailwindcss-sandbox",
      "titleEn": "Demo of responsive design with React and Tailwind CSS breakpoints, companion to a Zenn guide",
@@ -9477,64 +9577,35 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/sandbox-golang-cli",
-     "title": "sandbox-golang-cli",
-     "titleEn": "A Go CLI application built with the Cobra library, with setup steps using cobra-cli.",
-     "date": "Feb 2024",
-     "format": "Go",
+     "id": "O6lvl4/ts-tsnode-sandbox",
+     "title": "ts-tsnode-sandbox",
+     "titleEn": "A demo project showing how to build Node.js apps with TypeScript and ts-node, from setup to advanced use.",
+     "date": "Sep 2024",
+     "format": "TypeScript",
      "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/sandbox-golang-cli",
+     "url": "https://github.com/O6lvl4/ts-tsnode-sandbox",
      "tags": [
-      "Go"
+      "TypeScript",
+      "Shell"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "3"
+       "value": "7"
       },
       {
        "label": "Started",
-       "value": "Feb 2024"
+       "value": "Sep 2024"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/O6lvl4/sandbox-golang-cli"
+       "href": "https://github.com/O6lvl4/ts-tsnode-sandbox"
       }
      ],
      "order": {
-      "date": "2024-02-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/sandbox-gcp",
-     "title": "sandbox-gcp",
-     "titleEn": "A Japanese guide to building environments on Google Cloud Platform using Terraform.",
-     "date": "Nov 2023",
-     "format": "Makefile",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/sandbox-gcp",
-     "tags": [],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "5"
-      },
-      {
-       "label": "Started",
-       "value": "Nov 2023"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/sandbox-gcp"
-      }
-     ],
-     "order": {
-      "date": "2023-11-19"
+      "date": "2024-09-13"
      }
     },
     {
@@ -9568,38 +9639,6 @@
      ],
      "order": {
       "date": "2023-06-21"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/line-bot-sandbox",
-     "title": "line-bot-sandbox",
-     "titleEn": "A Go sample template for an AWS Lambda function behind API Gateway, built and deployed with SAM.",
-     "date": "Oct 2022",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/line-bot-sandbox",
-     "tags": [
-      "Go"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2022"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/line-bot-sandbox"
-      }
-     ],
-     "order": {
-      "date": "2022-10-01"
      }
     },
     {
@@ -9729,39 +9768,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/mastra-sandbox",
-     "title": "mastra-sandbox",
-     "titleEn": "A repository named mastra-sandbox; it has no README, so its purpose is not documented.",
-     "date": "Apr 2025",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/mastra-sandbox",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/mastra-sandbox"
-      }
-     ],
-     "order": {
-      "date": "2025-04-02"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/golang-cp-solve-sandbox",
      "title": "golang-cp-solve-sandbox",
      "titleEn": "No README; a Go repository whose name suggests a sandbox for competitive programming solutions",
@@ -9790,6 +9796,38 @@
      ],
      "order": {
       "date": "2023-02-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/golang-lib-lo-sandbox",
+     "title": "golang-lib-lo-sandbox",
+     "titleEn": "No README; a Go repository whose name suggests a sandbox for the lo library.",
+     "date": "Aug 2022",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/golang-lib-lo-sandbox",
+     "tags": [
+      "Go"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2022"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/golang-lib-lo-sandbox"
+      }
+     ],
+     "order": {
+      "date": "2022-08-21"
      }
     },
     {
@@ -9827,15 +9865,16 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/golang-lib-lo-sandbox",
-     "title": "golang-lib-lo-sandbox",
-     "titleEn": "No README; a Go repository whose name suggests a sandbox for the lo library.",
-     "date": "Aug 2022",
-     "format": "Go",
+     "id": "O6lvl4/mastra-sandbox",
+     "title": "mastra-sandbox",
+     "titleEn": "A repository named mastra-sandbox; it has no README, so its purpose is not documented.",
+     "date": "Apr 2025",
+     "format": "TypeScript",
      "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/golang-lib-lo-sandbox",
+     "url": "https://github.com/O6lvl4/mastra-sandbox",
      "tags": [
-      "Go"
+      "TypeScript",
+      "JavaScript"
      ],
      "stats": [
       {
@@ -9844,17 +9883,17 @@
       },
       {
        "label": "Started",
-       "value": "Aug 2022"
+       "value": "Mar 2025"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/O6lvl4/golang-lib-lo-sandbox"
+       "href": "https://github.com/O6lvl4/mastra-sandbox"
       }
      ],
      "order": {
-      "date": "2022-08-21"
+      "date": "2025-04-02"
      }
     },
     {
@@ -9957,17 +9996,15 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/tyrano-sandbox",
-     "title": "tyrano-sandbox",
-     "titleEn": "A sandbox repository for Tyrano experiments; it has no README describing it.",
-     "date": "Mar 2025",
-     "format": "HTML",
+     "id": "O6lvl4/ebitengine-sandbox",
+     "title": "ebitengine-sandbox",
+     "titleEn": "A Go sandbox repository for Ebitengine; the repo has no README describing it further.",
+     "date": "Mar 2023",
+     "format": "Go",
      "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/tyrano-sandbox",
+     "url": "https://github.com/O6lvl4/ebitengine-sandbox",
      "tags": [
-      "HTML",
-      "JavaScript",
-      "CSS"
+      "Go"
      ],
      "stats": [
       {
@@ -9976,17 +10013,17 @@
       },
       {
        "label": "Started",
-       "value": "Mar 2025"
+       "value": "Mar 2023"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/O6lvl4/tyrano-sandbox"
+       "href": "https://github.com/O6lvl4/ebitengine-sandbox"
       }
      ],
      "order": {
-      "date": "2025-03-03"
+      "date": "2023-03-10"
      }
     },
     {
@@ -10019,120 +10056,6 @@
      ],
      "order": {
       "date": "2024-04-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/sandbox-discord-bot",
-     "title": "sandbox-discord-bot",
-     "titleEn": "A sandbox repository for a Discord bot; the README gives only the project name.",
-     "date": "Feb 2024",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/sandbox-discord-bot",
-     "tags": [],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2024"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/sandbox-discord-bot"
-      }
-     ],
-     "order": {
-      "date": "2024-02-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/sandbox-langchaingo",
-     "title": "sandbox-langchaingo",
-     "titleEn": "A sandbox repository named sandbox-langchaingo, apparently for trying out langchaingo.",
-     "date": "Feb 2024",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/sandbox-langchaingo",
-     "tags": [],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2024"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/sandbox-langchaingo"
-      }
-     ],
-     "order": {
-      "date": "2024-02-02"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/sandbox-chatgpt-talk",
-     "title": "sandbox-chatgpt-talk",
-     "titleEn": "A sandbox repository with no README, so its purpose is not documented",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/sandbox-chatgpt-talk",
-     "tags": [],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/sandbox-chatgpt-talk"
-      }
-     ],
-     "order": {
-      "date": ""
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/ebitengine-sandbox",
-     "title": "ebitengine-sandbox",
-     "titleEn": "A Go sandbox repository for Ebitengine; the repo has no README describing it further.",
-     "date": "Mar 2023",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/ebitengine-sandbox",
-     "tags": [
-      "Go"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2023"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/ebitengine-sandbox"
-      }
-     ],
-     "order": {
-      "date": "2023-03-10"
      }
     },
     {
@@ -10201,6 +10124,122 @@
      ],
      "order": {
       "date": "2022-02-25"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/sandbox-chatgpt-talk",
+     "title": "sandbox-chatgpt-talk",
+     "titleEn": "A sandbox repository with no README, so its purpose is not documented",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/sandbox-chatgpt-talk",
+     "tags": [],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/sandbox-chatgpt-talk"
+      }
+     ],
+     "order": {
+      "date": ""
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/sandbox-discord-bot",
+     "title": "sandbox-discord-bot",
+     "titleEn": "A sandbox repository for a Discord bot; the README gives only the project name.",
+     "date": "Feb 2024",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/sandbox-discord-bot",
+     "tags": [],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Feb 2024"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/sandbox-discord-bot"
+      }
+     ],
+     "order": {
+      "date": "2024-02-03"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/sandbox-langchaingo",
+     "title": "sandbox-langchaingo",
+     "titleEn": "A sandbox repository named sandbox-langchaingo, apparently for trying out langchaingo.",
+     "date": "Feb 2024",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/sandbox-langchaingo",
+     "tags": [],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Feb 2024"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/sandbox-langchaingo"
+      }
+     ],
+     "order": {
+      "date": "2024-02-02"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/tyrano-sandbox",
+     "title": "tyrano-sandbox",
+     "titleEn": "A sandbox repository for Tyrano experiments; it has no README describing it.",
+     "date": "Mar 2025",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/tyrano-sandbox",
+     "tags": [
+      "HTML",
+      "JavaScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2025"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/tyrano-sandbox"
+      }
+     ],
+     "order": {
+      "date": "2025-03-03"
      }
     }
    ]
