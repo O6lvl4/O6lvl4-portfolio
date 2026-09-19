@@ -92,6 +92,9 @@ npm run refresh
 ```
 
 This rebuilds `data/`, `plates/` and `site/`; it never updates your working clones.
+The plates are screenshots, so a local render differs byte for byte from the runner's
+even when nothing changed: committing a local refresh rewrites every image, and the
+next scheduled run rewrites them back. Leave the images to the schedule.
 Temporary clones are written under the OS temporary directory. GitHub runners remove
 them when the job ends; local runs print the directory so it can be removed afterwards.
 
