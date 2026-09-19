@@ -22,11 +22,17 @@ O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ265件を、一つ
   the foot up, with a hairline for each year; the sections are marked ᚁ ᚂ ᚃ ᚄ ᚅ, the ogham letters
   that count one to five.
 - **White, obsidian, and one red.** Both themes are complete — OKLCH through `light-dark()`, with a
-  toggle that remembers — and the red marks only what is chosen, current or counted. Fraunces for
-  the headings, Source Sans 3 for prose, DM Mono for numbers and commands, Noto Sans Ogham for the
-  stem, Noto Sans/Serif JP and SC for Japanese and Chinese — all OFL.
-- **Every figure comes from the repositories.** The languages, the commits, the years and the
-  counts are measured from the local clones; the year chart is drawn on a log scale, and says so.
+  toggle that remembers — and the red marks only what is chosen, current or counted. The panels are
+  solid instruments on a lit ground: no blur anywhere, because a translucent pane costs a backdrop
+  snapshot per frame on a page that scrolls hundreds of lines. Everything Latin is set in JetBrains
+  Mono, the face code is written in, with Noto Sans Ogham for the stem and Noto Sans JP and SC for
+  Japanese and Chinese — all OFL.
+- **Ten families, each with its own page.** The work is grouped by what kind of thing it is —
+  languages, the standard library, an agent's tools, graphics, and so on — and every family has its
+  own page with its own figures, its own years and all of its repositories.
+- **Every figure comes from the repositories.** The languages, the commits, the years and the counts
+  are measured from the local clones. The year chart is linear and prints each year's number, and
+  history shared between repositories is counted once — the page says so in its own footnote.
 - **Plates from the projects' own material.** The work opened in full shows its own plate: its site
   as it renders, its command as it answers, or a summary of what its README says it does — taken
   from that README alone, in each of the three languages. Nothing is drawn or mocked up.
