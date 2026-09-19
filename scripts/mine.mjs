@@ -86,24 +86,30 @@ function readme(dir) {
 }
 
 /**
- * Every commit of this repository as "<hash> <year>", so the years can be counted later over the
- * repositories that are actually shown — repositories split from a common history share commits,
- * and a commit should be counted once.
+ * Every commit of this repository as "<hash> <author date>", so the years can be counted later
+ * over the repositories that are actually shown — repositories split from a common history share
+ * commits, and a commit should be counted once — and so the first and last dates can be read off
+ * the same list rather than trusted to the order git prints.
  */
 function log(dir) {
-  return git(dir, ["log", "--format=%h %ad", "--date=format:%Y"])
+  return git(dir, ["log", "--format=%h %aI"])
     .split("\n")
     .filter(Boolean);
 }
 
 function project(owner, name) {
   const dir = join(ROOT, owner, name);
-  const first = git(dir, ["log", "--reverse", "--max-count=1", "--format=%aI"]);
-  const last = git(dir, ["log", "--max-count=1", "--format=%aI"]);
   const commits = git(dir, ["rev-list", "--count", "HEAD"]);
   const tag = git(dir, ["tag", "--sort=-creatordate"]).split("\n")[0];
+  // The dates come from the commits themselves, sorted. `git log --reverse --max-count=1` looks
+  // like the first commit and is the last one — git takes the count before it reverses — and an
+  // author date is not monotonic along the history anyway, so both ends are read off the list.
+  const lines = log(dir);
+  const dates = lines.map((l) => l.slice(l.indexOf(" ") + 1)).sort();
+  const first = dates[0] ?? "";
+  const last = dates[dates.length - 1] ?? "";
   return {
-    log: log(dir),
+    log: lines,
     full: `${owner}/${name}`,
     owner,
     name,

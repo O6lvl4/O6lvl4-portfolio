@@ -532,40 +532,9 @@ a { color: inherit; text-decoration: none; }
   transition: opacity 0.4s 0.15s;
 }
 
-.panel-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-}
 
-.panel-title {
-  font-family: var(--font-mono);
-  font-size: 0.4375rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--fg-faint);
-}
 
-.panel-status {
-  font-family: var(--font-mono);
-  font-size: 0.4375rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--red);
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-}
 
-.panel-status::before {
-  content: '';
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--red);
-  animation: pulse-ring 2.4s ease-out infinite;
-}
 
 .panel-row {
   display: grid;
@@ -770,14 +739,6 @@ a { color: inherit; text-decoration: none; }
   gap: 0.3rem;
 }
 
-.repo-pinned-mark {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--red);
-  flex-shrink: 0;
-  display: inline-block;
-}
 
 .repo-desc {
   font-size: 0.8125rem;
@@ -824,7 +785,6 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
 }
 
-.star-icon { width: 8px; height: 8px; opacity: 0.4; }
 
 .repo-date {
   font-family: var(--font-mono);
@@ -849,87 +809,8 @@ a { color: inherit; text-decoration: none; }
 }
 .show-more-btn:hover { color: var(--fg); border-color: var(--border-mid); }
 
-/* ─── §3 Stage ──────────────────────────────────────────────────────────── */
-
-.stage-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--col-gap);
-}
-
-.stage-plate {
-  height: var(--plate-h);
-  border: 1px solid var(--border);
-  padding: 1.375rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.18s;
-  cursor: default;
-}
-
-/* The single red stripe — the only decoration */
-.stage-plate::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 2px;
-  height: 100%;
-  background: var(--red);
-}
-
-.stage-plate:hover { border-color: var(--border-mid); }
-
-.plate-label {
-  font-family: var(--font-mono);
-  font-size: 0.4375rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--red);
-}
-
-.plate-name {
-  font-family: var(--font-mono);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  color: var(--fg);
-  line-height: 1.3;
-  margin-top: auto;
-}
-
-.plate-desc {
-  font-size: 0.75rem;
-  color: var(--fg-muted);
-  line-height: 1.55;
-  text-wrap: pretty;
-  margin-top: 0.375rem;
-}
-
-.plate-foot {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 0.875rem;
-}
-
-.plate-lang {
-  font-family: var(--font-mono);
-  font-size: 0.5rem;
-  letter-spacing: 0.1em;
-  color: var(--fg-muted);
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-}
-
-.plate-stars {
-  font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  font-variant-numeric: tabular-nums;
-  color: var(--fg-muted);
-}
+/* The work opened in full: what it is made of on one side, what it says on the other.
+   The plates of a "put forward" row used to live here; no page shows them now. */
 
 /* ─── §4 Object ─────────────────────────────────────────────────────────── */
 
@@ -940,41 +821,121 @@ a { color: inherit; text-decoration: none; }
   align-items: start;
 }
 
+/* The plate of the work: a label line, the name, the line you would type to fetch it, the figures
+   set large enough to be read as figures, and then the topics and the two places to go. */
 .object-meta-panel {
   border: 1px solid var(--border);
   position: sticky;
   top: calc(var(--head-h) + 2rem);
-}
-
-.meta-row {
+  padding: 1.75rem 1.75rem 1.5rem;
   display: flex;
-  align-items: flex-start;
-  padding: 0.9375rem 1.25rem;
-  border-bottom: 1px solid var(--border);
+  flex-direction: column;
   gap: 1rem;
 }
-.meta-row:last-child { border-bottom: none; }
 
-.meta-key {
+.om-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.om-head .om-family { color: var(--red); }
+.om-lang { display: inline-flex; align-items: center; gap: 0.375rem; }
+
+.om-name {
+  font-family: var(--font-mono);
+  font-size: 1.625rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--fg);
+  margin-top: -0.25rem;
+}
+
+.om-path {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-faint);
+  margin-top: -0.625rem;
+}
+.om-slash { color: var(--red); padding-inline: 0.15em; }
+
+/* the figures: two by two, each its own cell, divided by the panel's own hairlines */
+.om-figures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  margin-inline: -1.75rem;
+  padding-inline: 1.75rem;
+  border-inline: 0;
+}
+.om-fig {
+  padding: 0.875rem 1rem 0.9375rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.om-fig:nth-child(odd) { border-right: 1px solid var(--border); padding-right: 1rem; }
+.om-fig:nth-child(even) { padding-left: 1rem; }
+.om-fig:nth-last-child(-n+2):nth-child(odd) { border-bottom: 0; }
+.om-fig:last-child { border-bottom: 0; }
+.om-fig-val {
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--fg);
+}
+.om-fig-key {
   font-family: var(--font-mono);
   font-size: 0.4375rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--fg-muted);
-  flex: 0 0 80px;
-  padding-top: 0.125em;
+  margin-top: 0.3125rem;
 }
 
-.meta-val {
+.om-updated {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
   font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.om-updated-val {
   font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
   color: var(--fg);
   font-variant-numeric: tabular-nums;
-  line-height: 1.5;
 }
-.meta-val.accent { color: var(--red); }
 
-.meta-topics { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.om-topics { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+.om-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
+.om-link {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.875rem;
+  transition: color 0.12s, border-color 0.12s;
+}
+.om-link:hover { color: var(--fg); border-color: var(--red); }
 
 /* Readme */
 .readme-panel {
@@ -990,17 +951,6 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 1rem;
 }
 
-.readme-code {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  background: var(--bg-raised);
-  border: 1px solid var(--border);
-  padding: 0.875rem 1.125rem;
-  margin: 0.75rem 0;
-  overflow-x: auto;
-  line-height: 1.75;
-  color: var(--fg);
-}
 
 /* ─── §5 Overview ───────────────────────────────────────────────────────── */
 
@@ -1142,28 +1092,10 @@ a { color: inherit; text-decoration: none; }
 /* ─── Footer ────────────────────────────────────────────────────────────── */
 
 .site-footer {
-  border-top: 1px solid var(--border);
   padding: 2rem var(--gutter);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.footer-copy {
-  font-family: var(--font-mono);
-  font-size: 0.4375rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--fg-faint);
-}
-
-.footer-ogham {
-  font-family: var(--font-ogham);
-  font-size: 1rem;
-  color: var(--fg-faint);
-  letter-spacing: 0.04em;
 }
 
 /* ─── Skip link ─────────────────────────────────────────────────────────── */
@@ -1187,15 +1119,6 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── Visually hidden (screen-reader only) ──────────────────────────────── */
 
-.visually-hidden {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border: 0;
-}
 
 /* ─── h2 reset (section-title) ──────────────────────────────────────────── */
 
@@ -1237,14 +1160,6 @@ h2.section-title {
 .locale-btn:hover:not(.active) { color: var(--fg); }
 
 /* Entry section social links */
-.entry-social {
-  display: flex;
-  gap: 0;
-  margin-bottom: 2rem;
-  border: 1px solid var(--border);
-  align-self: flex-start;
-  width: fit-content;
-}
 
 .entry-social-link {
   font-family: var(--font-mono);
@@ -1263,46 +1178,12 @@ h2.section-title {
 .entry-social-link:hover { color: var(--fg); }
 
 /* Footer social nav */
-.footer-social {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
 
-.footer-social-link {
-  font-family: var(--font-mono);
-  font-size: 0.4375rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--fg-faint);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: color 0.12s;
-}
-.footer-social-link:hover { color: var(--fg-muted); }
 
 /* ─── Org card (overview) ─────────────────────────────────────────────── */
 
-.org-card { position: relative; }
 
-.org-card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: opacity 0.12s;
-}
-.org-card-link:hover { opacity: 0.75; }
-.org-card-link:hover .kpi-val { text-decoration: underline; text-underline-offset: 3px; }
 
-.org-card-desc {
-  font-family: var(--font-mono);
-  font-size: 0.4rem;
-  letter-spacing: 0.04em;
-  color: var(--fg-faint);
-  line-height: 1.55;
-  margin-top: 0.5rem;
-}
 
 /* ─── Hdr callsign as link ────────────────────────────────────────────── */
 
@@ -1329,15 +1210,9 @@ h2.section-title {
   flex-shrink: 0;
 }
 
-/* ─── dt/dd in meta-row — flex children, not block ────────────────────── */
+/* ─── the figures of a work: a dl whose dd carries no browser margin ────── */
 
-.meta-row {
-  /* already display:flex from base rule; dt/dd participate as flex items */
-}
-dt.meta-key, dd.meta-val, dd.meta-topics {
-  display: block; /* override browser default for dd margin */
-  margin: 0;
-}
+dd.om-fig-val, dt.om-fig-key { display: block; margin: 0; }
 
 /* ─── h3/h4 reset in readme ───────────────────────────────────────────── */
 
@@ -1421,18 +1296,8 @@ h4.readme-h2 {
 .repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
-/* the plate: the project's own screen, its command's answer, or what its README says */
-.plate-shot {
-  display: block; margin: -1.25rem -1.25rem 0.25rem; border-bottom: 1px solid var(--border);
-  background: var(--bg-subtle);
-}
-.plate-shot img { width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; object-position: top center; }
-
 /* the figure a row carries, with its unit small */
 .repo-meta-unit { color: var(--fg-faint); }
-
-/* the count on an org card, a size down from a headline figure */
-.kpi-val-sm { font-size: 1.25rem; }
 
 /* what a work says it does, as its own lines */
 .readme-points { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin: 0 0 1.25rem; }
@@ -1443,13 +1308,6 @@ h4.readme-h2 {
 .readme-points li::before {
   content: ''; position: absolute; left: 0; top: 0.6em; width: 2px; height: 0.7em; background: var(--red);
 }
-
-.meta-link {
-  font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.04em;
-  color: var(--fg); border-bottom: 1px solid var(--border-mid); margin-right: 0.75rem;
-  transition: color 0.12s, border-color 0.12s;
-}
-.meta-link:hover { color: var(--red); border-color: var(--red); }
 
 /* how the page was made, in the words of the content's own text page */
 .notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 2rem 3rem; }
@@ -1549,7 +1407,6 @@ h4.readme-h2 {
 }
 .profile-name { font-family: var(--font-mono); font-size: 1.0625rem; letter-spacing: 0.02em; color: var(--fg); }
 .profile-role { font-size: 0.75rem; line-height: 1.55; color: var(--fg-muted); margin-top: 0.25rem; }
-.profile-ogham { font-family: var(--font-ogham); font-size: 0.9375rem; color: var(--red); margin-top: 0.3rem; }
 /* One separator between two things, not two: the last row above already closes with a hairline,
    so the links at the foot of the card draw none of their own a few pixels under it. */
 .profile-links {
@@ -1580,8 +1437,35 @@ h4.readme-h2 {
   .hdr-readout { display: none; }
 }
 
-/* the foot holds one mark, so it stands in the middle of the page rather than at one end */
-.site-footer { justify-content: center; }
+/* ─── the cut that closes the page ──────────────────────────────────────── */
+/* The one mark the page ends on, and the only place the name is cut in ogham: the feather marks
+   that open and close an inscription in red, the name in ink between them, and a hairline running
+   out of each side like the stem running out of the stone. It opens a little under the pointer. */
+.site-footer { justify-content: center; padding-block: 4.5rem 5rem; border-top: 0; }
+.footer-mark {
+  display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.25rem);
+  width: 100%; max-width: 44rem; cursor: default;
+}
+.fm-rule { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--border-mid)); }
+.fm-rule + .fm-cut + .fm-rule { background: linear-gradient(90deg, var(--border-mid), transparent); }
+.fm-cut {
+  font-family: var(--font-ogham);
+  font-size: clamp(1.375rem, 3.4vw, 2.125rem);
+  line-height: 1;
+  /* letter-spacing leaves a gap after the last glyph too; it is taken back so the two hairlines
+     sit the same distance from the cut */
+  letter-spacing: 0.3em;
+  margin-right: -0.3em;
+  color: var(--fg-muted);
+  display: inline-flex;
+  align-items: center;
+  transition: letter-spacing 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.4s;
+}
+.fm-feather { color: var(--red); text-shadow: 0 0 14px color-mix(in oklch, var(--red) 30%, transparent); }
+.footer-mark:hover .fm-cut { letter-spacing: 0.46em; color: var(--fg); }
+@media (prefers-reduced-motion: reduce) {
+  .fm-cut { transition: none; }
+}
 
 /* The family filter was a strip with a border, and the surfaces layer then gave every chip in it
    a border of its own — two lines a pixel apart all the way round. The chips are the panels, as
@@ -1596,20 +1480,9 @@ h4.readme-h2 {
 /* the link to the whole list reads as a control, the way the button it replaced did */
 a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; text-decoration: none; }
 
-.org-pill {
-  display: inline-flex; align-items: baseline; gap: 0.4rem;
-  padding: 0.25rem 0.625rem; border: 1px solid var(--border);
-  font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.04em; color: var(--fg-muted);
-  transition: color 0.12s, border-color 0.12s;
-}
-.org-pill:hover { color: var(--fg); border-color: var(--border-mid); }
-.org-pill-count { font-size: 0.625rem; color: var(--fg-faint); font-variant-numeric: tabular-nums; }
-
-/* Nothing may widen the page: a grid track's automatic floor is its content's smallest width,
-   and a block of pre-formatted output has no small width — so the tracks are told they may be
-   narrow, and the output scrolls inside its own box. */
-.object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
-.readme-code { overflow-x: auto; }
+/* Nothing may widen the page: a grid track's automatic floor is its content's smallest width, so
+   every track is told it may be narrow. */
+.object-grid > *, .entry-grid > *, .lang-dist-grid > *, .overview-kpis > * { min-width: 0; }
 .repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
@@ -1621,12 +1494,6 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
   .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
-}
-
-/* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
-.readme-code, .readme-code code {
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
 }
 
 /* fit: oghma surfaces — the panels sit as solid instruments on a lit ground. There is no blur
@@ -1675,15 +1542,12 @@ body::after {
 
 .instrument-panel,
 .stat-panel,
-.stage-plate,
 .kpi-card,
-.fam-card,
 .object-meta-panel,
 .readme-panel,
 .repo-list,
 .theme-toggle,
 .locale-switcher,
-.org-pill,
 .show-more-btn,
 .lang-chip,
 .sort-bar,
@@ -1694,16 +1558,13 @@ body::after {
 }
 
 .instrument-panel,
-.stage-plate,
 .kpi-card,
-.fam-card,
 .object-meta-panel,
 .readme-panel,
 .repo-list,
 .stat-panel { border-radius: var(--radius); }
 .theme-toggle,
 .locale-switcher,
-.org-pill,
 .show-more-btn,
 .lang-chip,
 .sort-bar { border-radius: var(--radius-sm); }
@@ -1729,18 +1590,13 @@ body::after {
 .theme-icon-btn.active,
 .locale-btn.active { background: var(--bg-subtle); }
 
-/* the grid of panes in the families keeps its hairlines, each pane its own panel */
-.fam-grid { background: transparent; border: 0; gap: var(--col-gap); }
-
 .repo-item { border-radius: var(--radius-sm); }
 .repo-item:hover { background: var(--bg-subtle); }
 
 /* ── where the light catches ─────────────────────────────────────────────── */
 
 .kpi-card:hover,
-.fam-card:hover,
-.stage-plate:hover,
-.org-pill:hover,
+.fam-link:hover,
 .show-more-btn:hover,
 .lang-chip:hover {
   border-color: var(--border-mid);
@@ -1761,16 +1617,8 @@ body::after {
   pointer-events: none;
   background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--red) 70%, transparent) 30%, color-mix(in oklch, var(--red) 70%, transparent) 70%, transparent);
 }
-/* code and terminal output sit inside a panel, not on it */
-.readme-code {
-  border-radius: var(--radius-sm);
-  background: var(--bg-subtle);
-  border: 1px solid var(--border);
-}
-
 /* the plate of a work opened in full keeps the panel's rounded corner */
 .readme-shot { border-radius: var(--radius) var(--radius) 0 0; overflow: hidden; }
-.stage-plate { overflow: hidden; }
 
 </style>
 </head>
@@ -1820,7 +1668,7 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">8502<span class="repo-meta-unit"> 提交</span></span>
+          <span class="repo-stars">8,502<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-09-13">2026年9月</time>
           <span class="repo-go" aria-hidden="true">→</span>
         </div>
@@ -1837,7 +1685,7 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Python</li><li class="repo-topic">almide</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">1418<span class="repo-meta-unit"> 提交</span></span>
+          <span class="repo-stars">1,418<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-09-07">2026年9月</time>
           <span class="repo-go" aria-hidden="true">→</span>
         </div>
@@ -6318,7 +6166,11 @@ body::after {
       </div>
     </main>
     <footer class="site-footer">
-    <span class="footer-ogham" title="ogma">᚛ᚑᚌᚋᚐ᚜</span>
+    <div class="footer-mark" role="img" aria-label="ogma" title="ogma">
+      <span class="fm-rule" aria-hidden="true"></span>
+      <span class="fm-cut" aria-hidden="true"><span class="fm-feather">᚛</span><span class="fm-letters">ᚑᚌᚋᚐ</span><span class="fm-feather">᚜</span></span>
+      <span class="fm-rule" aria-hidden="true"></span>
+    </div>
   </footer>
   </div>
 </div>

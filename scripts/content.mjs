@@ -75,7 +75,7 @@ function readmeOf(p) {
 function work(p) {
   const s = summaries[p.full]?.[lang];
   const stats = [
-    { label: t.stats.commits, value: String(p.commits) },
+    { label: t.stats.commits, value: p.commits.toLocaleString("en-US") },
     p.first ? { label: t.stats.first, value: t.date(p.first) } : undefined,
     p.tag ? { label: t.stats.tag, value: p.tag } : undefined,
     p.stars ? { label: t.stats.stars, value: String(p.stars) } : undefined,

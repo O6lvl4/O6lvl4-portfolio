@@ -82,8 +82,9 @@ const counted = new Set();
 function byYear(log) {
   const years = {};
   for (const line of log) {
-    const [hash, year] = line.split(" ");
-    if (!year || counted.has(hash)) continue;
+    const [hash, date] = line.split(" ");
+    const year = (date ?? "").slice(0, 4);
+    if (!/^\d{4}$/.test(year) || counted.has(hash)) continue;
     counted.add(hash);
     years[year] = (years[year] ?? 0) + 1;
   }
