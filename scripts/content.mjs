@@ -61,15 +61,15 @@ function imageOf(p) {
   return OPENED.has(p.full) ? plateOf(p) : "";
 }
 
-/** The work in its own words, for the works a page opens in full. */
+/**
+ * The work in its own words, for the works a page opens in full. The command's own output is not
+ * repeated here: for the projects that have one it is already the plate, and a screenful of
+ * `--help` reads as filler beside the summary.
+ */
 function readmeOf(p) {
   const s = summaries[p.full]?.[lang];
   if (!OPENED.has(p.full) || !s) return undefined;
-  return {
-    lead: s.what,
-    points: s.points ?? [],
-    code: p.terminal ? { cmd: p.terminal.cmd, out: p.terminal.out } : undefined,
-  };
+  return { lead: s.what, points: s.points ?? [] };
 }
 
 function work(p) {
@@ -201,8 +201,18 @@ const figures = [
   { value: String(yearBars.length), label: t.figures.years },
 ];
 
+// the commits each org holds, and over how many repositories: where the work actually went
+const orgCommits = ORGS.map((o) => {
+  const list = projects.filter((p) => p.owner === o.owner);
+  return {
+    name: o.owner,
+    count: list.reduce((n, p) => n + Object.values(p.years ?? {}).reduce((m, k) => m + k, 0), 0),
+    of: list.length,
+  };
+}).sort((a, b) => b.count - a.count);
+
+// The card carries the name and the face, so the rows are only what has to be counted.
 const panel = [
-  { key: t.panel.handle, value: "O6lvl4" },
   { key: t.panel.orgs, value: String(ORGS.length) },
   { key: t.panel.first, value: t.date(firstCommit) },
   { key: t.panel.last, value: `${lastRepo.name} · ${t.date(lastRepo.last)}` },
@@ -246,6 +256,7 @@ const content = {
     figures,
     langs: langBars,
     orgs: ORGS.map((o) => ({ name: o.owner, count: projects.filter((p) => p.owner === o.owner).length })),
+    orgCommits,
     years: yearBars,
   },
   series,

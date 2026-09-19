@@ -60,8 +60,7 @@
   "sort_format": "言語順",
   "sort_name": "名前順",
   "all": "すべて",
-  "stage": "主なもの",
-  "object": "ひとつ開く",
+  "object": "代表作",
   "overview": "全体",
   "points": "できること",
   "topics": "話題",
@@ -87,9 +86,14 @@
   "about": "これまで",
   "work": "仕事",
   "orgs": "置き場所",
-  "stack": "道具",
+  "stack": "書いている言語",
   "history": "年表",
-  "byYear": "年ごとのコミット"
+  "byYear": "年ごとのコミット",
+  "byOrg": "置き場所ごとのコミット",
+  "allWorks": "全部を一覧で見る",
+  "home": "先頭の頁へ",
+  "briefLead": "系統ごとに、いちばん手を入れているものを一つずつ。残りは一覧で見られます。",
+  "listLead": "公開リポジトリの全件。系統と言語で絞り、更新日・コミット数・言語・名前で並べ替えられます。"
  },
  "index": {
   "style": "list",
@@ -193,10 +197,6 @@
    "O6lvl4/uimodulay"
   ],
   "panel": [
-   {
-    "key": "名前",
-    "value": "O6lvl4"
-   },
    {
     "key": "置き場所",
     "value": "6"
@@ -367,6 +367,38 @@
     "count": 88
    }
   ],
+  "orgCommits": [
+   {
+    "name": "almide",
+    "count": 10728,
+    "of": 29
+   },
+   {
+    "name": "O6lvl4",
+    "count": 1938,
+    "of": 112
+   },
+   {
+    "name": "Aid-On",
+    "count": 677,
+    "of": 88
+   },
+   {
+    "name": "almide-graphics",
+    "count": 311,
+    "of": 9
+   },
+   {
+    "name": "almd-mc",
+    "count": 92,
+    "of": 24
+   },
+   {
+    "name": "almide-ai",
+    "count": 47,
+    "of": 3
+   }
+  ],
   "years": [
    {
     "name": "2022",
@@ -429,11 +461,7 @@
        "Rust経由のネイティブとWebAssemblyへコンパイル",
        "修正案を示す網羅性チェックの診断",
        "ネイティブとwasmで出力がバイト単位で一致"
-      ],
-      "code": {
-       "cmd": "almide --help",
-       "out": "Usage: almide [OPTIONS] [COMMAND]\n\nCommands:\n  init         Create a new Almide project\n  run          Compile and execute\n  bench        Benchmark a program: verify-then-time, median headline (#1490)\n  build        Build a binary\n  test         Run tests\n  check        Type check only\n  lsp          Start the Language Server Protocol server (for editor integration)\n  mcp          Start the Model Context Protocol server on stdio (for agent/LLM clients). Exposes check / test / API-outline / explain / fmt-check as typed tools with JSON results — the same answers as the CLI, minus the step where a model has to parse human-formatted text\n  explain      Explain a diagnostic code (e.g., almide explain E001)\n  fmt          Format source files\n  compile      Compile source to .almdi (module interface + IR artifact)\n  update       Advance a locked git dependency to its ref's current remote head\n  clean        Clear dependency cache\n  add          Add a dependency\n  deps         List dependencies\n  dep-path     Print the cached source directory of a dependency\n  install      Install an Almide CLI from a git repo into ~/.local/bin (or $ALMIDE_INSTALL). Like `go install`: clone, build --release, drop the binary on PATH\n  self-update  Update almide to the latest version\n  ide          Agent/LLM semantic queries (outline, doc, stdlib-snapshot)\n  fix          Apply mechanically-safe fixes to a file (auto-import; reports remaining try: snippets for manual application)\n  docs-gen     Check canonical docs (llms.txt, etc.) against source-of-truth inputs (Cargo version, diagnostic code inventory, stdlib auto-import list). Fails CI when drift is detected\n  help         Print this message or the help of the given subcommand(s)\n\nOptions:\n  -v, --verbose  Show internal pipeline notes (e.g. which codegen path built the binary)"
-      }
+      ]
      },
      "id": "almide/almide",
      "title": "almide",
@@ -1902,11 +1930,7 @@
        "--symbolで関数や型を名前指定",
        "行番号付き出力とgrepの折り畳み",
        "6言語をgramide文法で解析"
-      ],
-      "code": {
-       "cmd": "hew --help",
-       "out": "hew 0.4.17 — read code the way a model should\n\n  hew <file> [--lines A-B] [--symbol NAME] [--grep RE] [--around N] [--head N] [--tail N] [--clip N]\n  hew outline <file|dir> [--max N]\n  hew read-json <file> [--max-chars N]\n  hew grep <RE> [path...] [--per-file N] [--max-files N]\n  hew tree <dir> [--depth N]\n  hew init [--global]                 add the note that tells an agent to read code with hew to CLAUDE.md\n\nOutput is numbered so you can come back with --lines; long lines are clipped; gaps are marked.\n--symbol knows Almide, Rust, Go, Python, JavaScript and TypeScript through gramide's grammars, built\nin (a file mid-edit is read through its recovered declarations, and labelled so), and .jsx/.tsx\nthrough declaration heuristics. Set HEW_OUTLINE_BIN to an external outline program (a path in, the\noutline JSON out) for any other language.\n"
-      }
+      ]
      },
      "id": "O6lvl4/hew",
      "title": "hew",
@@ -1952,11 +1976,7 @@
        "182のlintルールと複雑度計測",
        "JSONレポートとA〜Fのスコア",
        "--diffやCI向けの失敗条件指定"
-      ],
-      "code": {
-       "cmd": "codopsy --help",
-       "out": "AST-level code quality analyzer for 35 languages\n\nUsage: codopsy <COMMAND>\n\nCommands:\n  analyze  Analyze source files in a directory\n  init     Create a .codopsyrc.json configuration file\n  help     Print this message or the help of the given subcommand(s)\n\nOptions:\n  -h, --help     Print help\n  -V, --version  Print version\n"
-      }
+      ]
      },
      "id": "O6lvl4/codopsy",
      "title": "codopsy",
@@ -6761,11 +6781,7 @@
        "qusp.lockによる再現性の固定",
        "シンボリックリンク群・qusp run・シェルフック",
        "sha256等による全インストール検証"
-      ],
-      "code": {
-       "cmd": "qusp --help",
-       "out": "Every language toolchain in superposition. `cd` collapses to one.\n\nUsage: qusp [OPTIONS] <COMMAND>\n\nCommands:\n  backends     List the languages this build of qusp supports\n  install      Install toolchains. With no args, installs everything pinned in qusp.toml (in parallel). With `<lang> <version>`, installs just one\n  sync         Reconcile installs with qusp.toml + qusp.lock. With --frozen, refuses to update qusp.lock and uses lock-as-truth\n  add          Pin and install a tool. Auto-routes to the backend whose registry recognizes the name\n  run          Run a command using the resolved multi-language environment\n  x            Ephemeral run. argv[0]=`quspx` dispatches into this. Resolves, installs (or reuses), executes — without touching qusp.toml/qusp.lock\n  list         List installed toolchains, or remote ones with --remote\n  current      Resolve and report which version applies in the current directory\n  shellenv     Print shell exports (PATH/GOROOT/GEM_HOME/…) for the current project. Source via `eval \"$(qusp shellenv)\"`\n  hook         Print a shell hook that re-applies `qusp shellenv` on every directory change\n  init         Scaffold a starter `qusp.toml` in the current directory\n  outdated     Report toolchains/tools that have newer versions upstream\n  self-update  In-place self-update against the latest GitHub release\n  tree         Show the resolved multi-language environment\n  doctor       Print a gv/uv-style health check\n  dir          Print path of a gv-managed dir (data, cache, …)\n  completions  Generate shell completions\n  setup        One-time system setup: ensure ~/.local/bin is visible to all apps\n  pin          Set, list, or remove the global pin for a language\n  help         Print this message or the help of the given subcommand(s)\n\nOptions:\n  -q, --quiet                          "
-      }
+      ]
      },
      "id": "O6lvl4/qusp",
      "title": "qusp",
@@ -10229,15 +10245,6 @@
      {
       "kind": "p",
       "html": "公開サイトのあるものはその画面、手元に入っているコマンドはその出力、それ以外は README の要約（何ができるか）です。要約は README の記述だけから作っています。"
-     }
-    ]
-   },
-   {
-    "heading": "作り",
-    "blocks": [
-     {
-      "kind": "p",
-      "html": "骨格は <a href=\"https://github.com/O6lvl4/uimodulay\" target=\"_blank\" rel=\"noopener\">uimodulay</a> の fit で当て込んでいます。プロフィール列と節の比率は実在のポートフォリオの Layout AST から測り、作品の見せ方は <a href=\"https://github.com/O6lvl4/hokusai-portfolio\" target=\"_blank\" rel=\"noopener\">hokusai-portfolio</a> の部品を使っています。"
      }
     ]
    }

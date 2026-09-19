@@ -1193,6 +1193,8 @@ a { color: inherit; text-decoration: none; }
   top: -1px;
   left: 0;
   height: 3px;
+  /* a bar whose subject has no colour of its own is still a bar, and has to be visible */
+  background: var(--fg-muted);
   transition: width 0.8s cubic-bezier(0.22, 0.9, 0.36, 1) 0.1s;
 }
 
@@ -1599,12 +1601,58 @@ h4.readme-h2 {
 }
 .fam-back:hover { color: var(--red); border-color: var(--red); }
 
-/* where the work lives, as one line of places */
-.org-pills { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin-top: var(--item-gap); }
-.org-pills-key {
-  font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--fg-faint); margin-right: 0.25rem;
+/* ─── the profile card ──────────────────────────────────────────────────── */
+/* A portfolio is read from a card: a face, a name, what this person does, and then the few
+   figures a reader would otherwise have to count for themselves. */
+/* the card is as tall as what it holds, not as tall as the column beside it */
+.profile-card { align-self: start; }
+.profile-head {
+  display: flex; align-items: center; gap: 1rem;
+  padding-bottom: 1.25rem; margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
 }
+.profile-avatar {
+  width: 68px; height: 68px; flex: none; border-radius: 50%;
+  border: 1px solid var(--border); object-fit: cover;
+}
+.profile-name { font-family: var(--font-mono); font-size: 1.0625rem; letter-spacing: 0.02em; color: var(--fg); }
+.profile-role { font-size: 0.75rem; line-height: 1.55; color: var(--fg-muted); margin-top: 0.25rem; }
+.profile-ogham { font-family: var(--font-ogham); font-size: 0.9375rem; color: var(--red); margin-top: 0.3rem; }
+.profile-links {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  padding-top: 1.125rem; margin-top: 0.5rem; border-top: 1px solid var(--border);
+}
+
+/* ─── the commits of each org ───────────────────────────────────────────── */
+/* The same row as a language's: a name, a length from zero, and its own number. */
+.org-chart { margin-top: var(--item-gap); }
+/* an org's name is longer than a language's, and its number is a thousand times bigger */
+.org-bar-row { grid-template-columns: 136px 1fr 56px; }
+.org-bar-row .lbr-name { display: flex; align-items: baseline; gap: 0.4rem; color: var(--fg-muted); }
+.org-bar-row .lbr-name:hover { color: var(--fg); }
+.lbr-sub { font-size: 0.5625rem; color: var(--fg-faint); font-variant-numeric: tabular-nums; }
+
+/* the line under a section's title that says what the section is for */
+.works-lead { font-size: 0.8125rem; line-height: 1.7; color: var(--fg-muted); margin-bottom: 1.25rem; max-width: 62ch; }
+
+/* The bar carries a name, six links and the readouts, and a language whose words are longer than
+   Japanese's runs out of room before the page does. The nav gives way first — it scrolls inside
+   its own box rather than widening the page — and the two readouts, whose numbers are also in the
+   profile card, step out below the width where they would push the controls off the edge. */
+.hdr-nav { min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.hdr-nav::-webkit-scrollbar { display: none; }
+.hdr-right { flex: none; }
+@media (max-width: 1240px) {
+  .hdr-readout { display: none; }
+}
+
+/* the way back, above a page that is one long list: it sits close to the list, not a screen away */
+.list-intro { padding-top: 2.5rem; margin-bottom: calc(var(--section-gap) * -0.6); }
+.list-intro .fam-back { display: inline-block; margin-bottom: 0.75rem; }
+
+/* the link to the whole list reads as a control, the way the button it replaced did */
+a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; text-decoration: none; }
+
 .org-pill {
   display: inline-flex; align-items: baseline; gap: 0.4rem;
   padding: 0.25rem 0.625rem; border: 1px solid var(--border);
@@ -1800,13 +1848,12 @@ body::after {
   <a class="skip-link" href="#main-content">跳到正文</a>
   <aside class="rail" aria-hidden="true">
     <div class="ogham-trunk" title="ogma">᚛ᚑᚌᚋᚐ᚜</div>
-    <div class="rail-year-list"><span class="rail-year">2026</span><span class="rail-year">2025</span><span class="rail-year">2024</span><span class="rail-year">2023</span><span class="rail-year">2022</span></div>
     <div class="rail-dot"></div>
   </aside>
   <div class="main-wrap">
     <header class="site-header">
     <a class="hdr-callsign" href="../">O6lvl4</a>
-    <nav class="hdr-nav" aria-label="本页各节"><a href="../#entry">关于</a><a href="../#works">作品</a><a href="../#stage">主要作品</a><a href="../#object">细看一个</a><a href="../#overview">总体</a><a href="../#families">系列</a></nav>
+    <nav class="hdr-nav" aria-label="本页各节"><a href="../#entry">关于</a><a href="../works/">作品</a><a href="../#object">详看一件</a><a href="../#overview">总体</a><a href="../#langs">用什么写的</a><a href="../#families">系列</a></nav>
     <div class="hdr-right">
       <div class="hdr-readout"><span class="hdr-readout-val">265</span><span class="hdr-readout-lbl">仓库</span></div>
       <div class="hdr-readout"><span class="hdr-readout-val">19</span><span class="hdr-readout-lbl">语言</span></div>
@@ -1849,7 +1896,7 @@ body::after {
         <section id="object" class="section" aria-labelledby="heading-object">
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚄ</span>
-      <h2 class="section-title" id="heading-object">细看一个</h2>
+      <h2 class="section-title" id="heading-object">详看一件</h2>
       
     </div>
     <div class="object-grid">
@@ -1863,7 +1910,6 @@ body::after {
       <h3 class="readme-h1">porta</h3>
       <p class="readme-p">限制AI智能体文件与网络访问的安全MCP桥</p>
       <h4 class="readme-h2">功能</h4><ul class="readme-points"><li>基于wasmtime的WASM沙箱</li><li>macOS sandbox-exec系统级限制</li><li>porta.toml声明式配置</li></ul>
-      
     </article>
     </div>
   </section>
@@ -1878,7 +1924,7 @@ body::after {
       <div class="sort-bar" role="group" aria-label="排序"><button type="button" class="sort-btn active" data-sort="date" aria-pressed="true">按更新</button><button type="button" class="sort-btn" data-sort="commits" aria-pressed="false">按提交</button><button type="button" class="sort-btn" data-sort="format" aria-pressed="false">按语言</button><button type="button" class="sort-btn" data-sort="name" aria-pressed="false">按名称</button></div>
       <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="Python" aria-pressed="false"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Go" aria-pressed="false"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button></div>
     </div>
-    <ul class="repo-list" role="list" data-shown="28" aria-label="作品"><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="porta" data-date="2026-08-06" data-commits="97" data-rank="0">
+    <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="porta" data-date="2026-08-06" data-commits="97" data-rank="0">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/porta" target="_blank" rel="noopener noreferrer">porta</a>
@@ -2229,7 +2275,6 @@ body::after {
         <time class="repo-date" datetime="2025-08-25">2025年8月</time>
       </div>
     </li></ul>
-    
   </section>
       </div>
     </main>
@@ -2292,8 +2337,13 @@ function theme()       {
 
 /** Which section the reader is in, marked in the header. */
 function spy()       {
-  const links = Array.from(document.querySelectorAll                   (".hdr-nav a"));
-  const sections = links.map((a) => document.querySelector             (a.hash)).filter((s)                   => Boolean(s));
+  // Only the anchors: one of the bar's links goes to a page of its own and has no section here.
+  const pairs = Array.from(document.querySelectorAll                   (".hdr-nav a"))
+    .filter((a) => a.hash.length > 1)
+    .map((a) => ({ a, s: document.querySelector             (a.hash) }))
+    .filter((p)                                                => Boolean(p.s));
+  const links = pairs.map((p) => p.a);
+  const sections = pairs.map((p) => p.s);
   if (sections.length === 0) return;
   const io = new IntersectionObserver(
     (entries) =>
@@ -2320,9 +2370,7 @@ function spy()       {
                 
                    
               
-                
               
-               
                
                
  
@@ -2362,38 +2410,22 @@ function apply(list      )       {
   keep.sort((a, b) => compare(a, b, list.sort));
   keep.forEach((r) => list.box.append(r.el));
   list.rows.forEach((r) => (r.el.hidden = true));
-  const limit = list.all ? keep.length : Math.min(list.shown, keep.length);
-  keep.slice(0, limit).forEach((r) => (r.el.hidden = false));
+  keep.forEach((r) => (r.el.hidden = false));
 
-  const count = document.querySelector(".section-count");
+  const count = document.querySelector("#works .section-count");
   if (count) count.textContent = `${keep.length} / ${list.rows.length}`;
-  const more = document.querySelector                   (".show-more-btn");
-  const rest = keep.length - limit;
-  if (more) {
-    more.hidden = rest <= 0;
-    const tail = more.querySelector(".show-more-count");
-    if (tail) tail.textContent = ` (${rest})`;
-  }
 }
 
 function listing()       {
   const box = document.querySelector             (".repo-list");
-  if (!box) return;
-  const list       = {
-    box,
-    rows: readRows(box),
-    shown: Number(box.dataset.shown ?? 28),
-    org: "",
-    lang: "",
-    sort: "date",
-    all: false,
-  };
+  // The front page shows one line per family and no controls; there is nothing to narrow there.
+  if (!box || !document.querySelector(".works-toolbar")) return;
+  const list       = { box, rows: readRows(box), org: "", lang: "", sort: "date" };
   apply(list);
 
   document.querySelectorAll                   ("[data-org]").forEach((b) =>
     on(b, "click", () => {
       list.org = list.org === b.dataset.org ? "" : (b.dataset.org ?? "");
-      list.all = false;
       press("org", "org", list.org);
       apply(list);
     }),
@@ -2401,7 +2433,6 @@ function listing()       {
   document.querySelectorAll                   ("[data-lang]").forEach((b) =>
     on(b, "click", () => {
       list.lang = list.lang === b.dataset.lang ? "" : (b.dataset.lang ?? "");
-      list.all = false;
       press("lang", "lang", list.lang);
       apply(list);
     }),
@@ -2413,10 +2444,6 @@ function listing()       {
       apply(list);
     }),
   );
-  on(document.querySelector                   (".show-more-btn"), "click", () => {
-    list.all = true;
-    apply(list);
-  });
 }
 
 theme();
