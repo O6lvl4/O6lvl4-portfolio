@@ -69,6 +69,10 @@ which reads the public repository inventory and, in the build job alone, writes 
 refreshed `data/` and `site/` back to `main`. Existing translations in
 `data/summaries.json` are maintained editorially; new projects use their GitHub
 description or README excerpt in all languages until translations are added.
+Nothing writes a summary automatically: a scheduled run keeps one issue, **Projects
+without a summary**, listing the projects still waiting for one, and closes it when
+none are left (`scripts/summaries-issue.mjs`). The portfolio itself is left off that
+list on purpose. Write the summaries with `npm run summarize -- --only <owner/name>`.
 Automatic builds render website screenshots or summary cards without executing
 commands from the collected projects. They reuse the checked-in logo and share cards.
 

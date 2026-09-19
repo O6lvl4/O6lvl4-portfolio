@@ -46,6 +46,7 @@ jobs:
     timeout-minutes: 60
     permissions:
       contents: write
+      issues: write
       pages: write
       id-token: write
     steps:
@@ -99,6 +100,14 @@ jobs:
           done
           echo 'Could not record the refresh on main; the published site is unaffected'
           exit 1
+      # Summaries stay handwritten, so the refresh only says which new projects are waiting for
+      # one. Like the record above, this never holds up a deployment.
+      - name: Say which projects still have no summary
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: node scripts/summaries-issue.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   deploy:
     needs: build
