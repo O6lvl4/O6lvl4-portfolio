@@ -1,0 +1,138 @@
+/* ─── App shell ─────────────────────────────────────────────────────────── */
+
+/* One column. The stem used to stand in a rail down the left edge; it closes the page at the
+   foot now, where an inscription's own end mark goes, and the text has the width back. */
+.app-shell {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100svh;
+}
+
+/* ─── Main column ───────────────────────────────────────────────────────── */
+
+.main-wrap {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Site header ───────────────────────────────────────────────────────── */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: var(--head-h);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding-inline: var(--gutter);
+  gap: 2rem;
+}
+
+/* Username / callsign */
+.hdr-callsign {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--fg);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hdr-callsign::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+.hdr-nav {
+  display: flex;
+  border-left: 1px solid var(--border);
+}
+
+.hdr-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding: 0.3125rem 0.9375rem;
+  border-right: 1px solid var(--border);
+  transition: color 0.12s, background 0.12s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.hdr-nav a:hover,
+.hdr-nav a[aria-current] {
+  color: var(--fg);
+  background: var(--bg-subtle);
+}
+
+.hdr-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hdr-readout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1875rem;
+}
+
+.hdr-readout-val {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.hdr-readout-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.theme-toggle {
+  display: flex;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.theme-icon-btn {
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  color: var(--fg-faint);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+}
+.theme-icon-btn:last-child { border-right: none; }
+.theme-icon-btn.active {
+  color: var(--fg);
+  background: var(--bg-subtle);
+}
+.theme-icon-btn:hover:not(.active) { color: var(--fg-muted); }

@@ -1,0 +1,247 @@
+/* ─── Responsive ────────────────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .entry-grid  { grid-template-columns: 1fr; }
+  .object-grid { grid-template-columns: 1fr; }
+  .object-meta-panel { position: static; }
+  .overview-kpis { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --gutter: 28px;
+    --section-gap: 88px;
+    --profile-w: 100%;
+  }
+  .lang-dist-grid { grid-template-columns: 1fr; }
+  .hdr-nav       { display: none; }
+}
+
+@media (max-width: 640px) {
+  :root { --gutter: 20px; --section-gap: 60px; }
+  .overview-kpis { grid-template-columns: 1fr 1fr; }
+  .stat-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stat-cell:nth-child(2) { border-right: none; }
+  .stat-cell:nth-child(3) {
+    grid-column: span 2;
+    border-top: 1px solid var(--border);
+  }
+  .hdr-right > .hdr-readout:first-child { display: none; }
+}
+
+/* ─── fit: what the content needs beyond the design ─────────────────────── */
+
+/* a row the reader has filtered out, or has not asked to see yet */
+.repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
+.show-more-btn[hidden] { display: none; }
+
+/* the figure a row carries, with its unit small */
+.repo-meta-unit { color: var(--fg-faint); }
+
+/* what a work says it does, as its own lines */
+.readme-points { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin: 0 0 1.25rem; }
+.readme-points li {
+  position: relative; padding-left: 1rem;
+  font-family: var(--font-body); font-size: 0.8125rem; line-height: 1.7; color: var(--fg-muted);
+}
+.readme-points li::before {
+  content: ''; position: absolute; left: 0; top: 0.6em; width: 2px; height: 0.7em; background: var(--red);
+}
+
+/* how the page was made, in the words of the content's own text page */
+.notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 2rem 3rem; }
+.note-row { display: flex; flex-direction: column; gap: 0.625rem; }
+.note-key {
+  font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--fg-faint); font-weight: 400;
+}
+.note-body .readme-p { margin-bottom: 0; }
+.note-body a { border-bottom: 1px solid var(--border-mid); }
+.note-body a:hover { color: var(--red); border-color: var(--red); }
+.note-foot {
+  margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border);
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.06em; color: var(--fg-faint);
+}
+
+/* letters quoted as themselves inside a line (ogham) */
+.cut { font-family: var(--font-ogham); font-size: 1.15em; }
+
+/* the head of the entry section is the page's own heading, so it is set in the display face */
+.entry-name { text-wrap: balance; }
+
+/* the work opened in full shows its own plate: its site as it renders, its command as it
+   answers, or what its README says it does — above the words, at the measured ratio */
+.readme-shot {
+  margin: -2rem -2.25rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+/* the plate keeps its own proportions, whatever they are: a mark, a screen and a card are
+   not the same shape, and none of them is improved by being cropped to another one */
+.readme-shot img { width: 100%; height: auto; }
+
+/* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
+.timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
+.tl-count {
+  font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums; color: var(--fg-faint);
+  margin-bottom: 0.25rem; white-space: nowrap;
+}
+
+/* ─── the families, and the page each one has ───────────────────────────── */
+
+/* One line of links, not fourteen cards: the front page says which families there are and lets a
+   reader open one; the family's own page is where its introduction belongs. */
+.fam-links { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-bottom: 1.5rem; }
+.fam-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.3125rem 0.625rem;
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.04em;
+  color: var(--fg-muted); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  transition: color 0.12s, border-color 0.12s;
+}
+.fam-link:hover { color: var(--fg); border-color: var(--border-mid); }
+.fam-link-mark { font-family: var(--font-ogham); font-size: 0.8125rem; color: var(--fg-faint); }
+.fam-link:hover .fam-link-mark { color: var(--red); }
+.fam-link-count { font-size: 0.5625rem; color: var(--fg-faint); font-variant-numeric: tabular-nums; }
+
+/* a family's own page */
+.fam-hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: var(--item-gap); }
+.fam-intro { max-width: 46em; margin-top: 1.25rem; font-size: 0.9375rem; line-height: 1.85; color: var(--fg-muted); text-wrap: pretty; }
+.fam-hero-mark { font-family: var(--font-ogham); font-size: 3.5rem; color: var(--border-mid); line-height: 1; flex: none; }
+.fam-back {
+  display: inline-block; margin-top: 1.5rem;
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--fg-muted); border-bottom: 1px solid var(--border);
+}
+.fam-back:hover { color: var(--red); border-color: var(--red); }
+
+/* ─── the profile card ──────────────────────────────────────────────────── */
+/* A portfolio is read from a card: a face, a name, what this person does, and then the few
+   figures a reader would otherwise have to count for themselves. */
+/* the card is as tall as what it holds, not as tall as the column beside it */
+.profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border); border-radius: 0;
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
+
+.profile-head {
+  display: flex; align-items: center; gap: 1rem;
+  padding-bottom: 1.25rem; margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.profile-avatar {
+  width: 68px; height: 68px; flex: none; border-radius: 50%;
+  border: 1px solid var(--border); object-fit: cover;
+}
+.profile-name { font-family: var(--font-mono); font-size: 1.0625rem; letter-spacing: 0.02em; color: var(--fg); }
+.profile-role { font-size: 0.75rem; line-height: 1.55; color: var(--fg-muted); margin-top: 0.25rem; }
+/* One separator between two things, not two: the last row above already closes with a hairline,
+   so the links at the foot of the card draw none of their own a few pixels under it. */
+.profile-links {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  padding-top: 1.125rem;
+}
+
+/* ─── the commits of each org ───────────────────────────────────────────── */
+/* The same row as a language's: a name, a length from zero, and its own number. */
+.org-chart { margin-top: var(--item-gap); }
+/* an org's name is longer than a language's, and its number is a thousand times bigger */
+.org-bar-row { grid-template-columns: 136px 1fr 56px; }
+.org-bar-row .lbr-name { display: flex; align-items: baseline; gap: 0.4rem; color: var(--fg-muted); }
+.org-bar-row .lbr-name:hover { color: var(--fg); }
+.lbr-sub { font-size: 0.5625rem; color: var(--fg-faint); font-variant-numeric: tabular-nums; }
+
+/* the line under a section's title that says what the section is for */
+.works-lead { font-size: 0.8125rem; line-height: 1.7; color: var(--fg-muted); margin-bottom: 1.25rem; max-width: 62ch; }
+
+/* The bar carries a name, six links and the readouts, and a language whose words are longer than
+   Japanese's runs out of room before the page does. The nav gives way first — it scrolls inside
+   its own box rather than widening the page — and the two readouts, whose numbers are also in the
+   profile card, step out below the width where they would push the controls off the edge. */
+.hdr-nav { min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.hdr-nav::-webkit-scrollbar { display: none; }
+.hdr-right { flex: none; }
+@media (max-width: 1240px) {
+  .hdr-readout { display: none; }
+}
+
+/* ─── the cut that closes the page ──────────────────────────────────────── */
+/* The one mark the page ends on, and the only place the name is cut in ogham: the feather marks
+   that open and close an inscription in red, the name in ink between them, and a hairline running
+   out of each side like the stem running out of the stone. It opens a little under the pointer. */
+.site-footer { justify-content: center; padding-block: 4.5rem 5rem; border-top: 0; }
+.footer-mark {
+  display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.25rem);
+  width: 100%; max-width: 44rem; cursor: default;
+}
+.fm-rule { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--border-mid)); }
+.fm-rule + .fm-cut + .fm-rule { background: linear-gradient(90deg, var(--border-mid), transparent); }
+.fm-cut {
+  font-family: var(--font-ogham);
+  font-size: clamp(1.375rem, 3.4vw, 2.125rem);
+  line-height: 1;
+  /* letter-spacing leaves a gap after the last glyph too; it is taken back so the two hairlines
+     sit the same distance from the cut */
+  letter-spacing: 0.3em;
+  margin-right: -0.3em;
+  color: var(--fg-muted);
+  display: inline-flex;
+  align-items: center;
+  transition: letter-spacing 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.4s;
+}
+.fm-feather { color: var(--red); text-shadow: 0 0 14px color-mix(in oklch, var(--red) 30%, transparent); }
+.footer-mark:hover .fm-cut { letter-spacing: 0.46em; color: var(--fg); }
+@media (prefers-reduced-motion: reduce) {
+  .fm-cut { transition: none; }
+}
+
+/* The family filter was a strip with a border, and the surfaces layer then gave every chip in it
+   a border of its own — two lines a pixel apart all the way round. The chips are the panels, as
+   the language chips beside them are, so the strip keeps none. */
+.org-rail { border: 0; background: transparent; box-shadow: none; gap: 0.375rem; }
+.org-rail .org-btn { border-radius: var(--radius-sm); border-right: 1px solid var(--border); }
+
+/* the way back, above a page that is one long list: it sits close to the list, not a screen away */
+.list-intro { padding-top: 2.5rem; margin-bottom: calc(var(--section-gap) * -0.6); }
+.list-intro .fam-back { display: inline-block; margin-bottom: 0.75rem; }
+
+/* the link to the whole list reads as a control, the way the button it replaced did */
+a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; text-decoration: none; }
+
+/* Nothing may widen the page: a grid track's automatic floor is its content's smallest width, so
+   every track is told it may be narrow. */
+.object-grid > *, .entry-grid > *, .lang-dist-grid > *, .overview-kpis > * { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
+
+/* The list is one pane, and a line of it is a thing you point at: it gets room inside that
+   pane rather than running up against the edge of the page. */
+.repo-list { padding: 0.5rem 1.5rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-item:first-child { border-top: 0; }
+.repo-item:last-child { border-bottom: 0; }
+@media (max-width: 640px) {
+  .repo-list { padding: 0.25rem 0.875rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+}

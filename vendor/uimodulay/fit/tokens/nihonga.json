@@ -1,0 +1,25 @@
+{
+  "name": "nihonga",
+  "title": "日本画 — stone ground, sumi ink, Prussian blue for what is selected, vermilion for the seal alone",
+  "color": {
+    "ground": "#eeece7",
+    "ink": "#1b1a18",
+    "ink-2": "#6d685f",
+    "ink-3": "#9b958a",
+    "rule": "#d5d0c6",
+    "accent": "#213f6b",
+    "seal": "#b3392b",
+    "seal-ink": "#f7f0e6"
+  },
+  "font": {
+    "text": "'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif",
+    "latin": "'Cormorant Garamond', 'Shippori Mincho', Georgia, serif"
+  },
+  "fonts": {
+    "href": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap",
+    "faces": [
+      { "family": "Shippori Mincho", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/shipporimincho" },
+      { "family": "Cormorant Garamond", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/cormorantgaramond" }
+    ]
+  }
+}

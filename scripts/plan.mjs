@@ -47,6 +47,7 @@ function siteOf(full) {
 }
 
 function help(full) {
+  if (process.env.PORTFOLIO_AUTOMATED === "1") return undefined;
   const c = COMMANDS[full];
   if (!c) return undefined;
   try {

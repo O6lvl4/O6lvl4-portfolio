@@ -4,6 +4,9 @@
   "type": "module",
   "description": "A portfolio of the public work under O6lvl4, Aid-On, almide and the almide-* orgs.",
   "scripts": {
+    "refresh": "node scripts/refresh.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "node scripts/verify-site.mjs",
     "mine": "node scripts/mine.mjs > data/repos.json",
     "summarize": "node scripts/summarize.mjs",
     "plates": "node scripts/plates.mjs",

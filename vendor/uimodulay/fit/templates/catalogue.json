@@ -1,0 +1,58 @@
+{
+  "name": "catalogue",
+  "title": "作品カタログ型",
+  "summary": "The works are the front page: a name bar, a row of sections, and every work in a close grid; each work has a page of its own with its label. For a large body of work to browse.",
+  "references": [
+    { "page": "home", "url": "https://www.yoshitomonara.org/ja/", "ast": "../../../uimodulay-corpus/sites/www.yoshitomonara.org/ja/1440.ast.json" }
+  ],
+  "measures": {
+    "ref":         { "page": "home", "find": "",                      "take": "width",     "fallback": 1440 },
+    "brandBar":    { "page": "home", "find": "/Nav",                  "take": "height",    "fallback": 116 },
+    "brandTop":    { "page": "home", "find": "/Nav",                  "take": "padTop",    "fallback": 41 },
+    "brandLeft":   { "page": "home", "find": "/Nav>Brand",            "take": "x",         "fallback": 42 },
+    "sectionBar":  { "page": "home", "find": "/Nav#2",                "take": "height",    "fallback": 51 },
+    "sectionLeft": { "page": "home", "find": "/Nav#2>Link",           "take": "x",         "fallback": 30 },
+    "mainTop":     { "page": "home", "find": "/Main",                 "take": "padTop",    "fallback": 50 },
+    "mainBottom":  { "page": "home", "find": "/Main",                 "take": "padBottom", "fallback": 112 },
+    "gridColumns": { "page": "home", "find": "/Main>Gallery",         "take": "columns",   "fallback": 7 },
+    "gridGap":     { "page": "home", "find": "/Main>Gallery",         "take": "gap",       "fallback": 0 },
+    "gridRowGap":  { "page": "home", "find": "/Main>Gallery",         "take": "rowGap",    "fallback": 24 },
+    "gridSide":    { "page": "home", "find": "/Main>Gallery",         "take": "padLeft",   "fallback": 18 },
+    "cellHeight":  { "page": "home", "find": "/Main>Gallery>Image",   "take": "height",    "fallback": 177 },
+    "roundButton": { "page": "home", "find": "/Main>Icon",            "take": "width",     "fallback": 68 },
+    "footerTop":   { "page": "home", "find": "/Footer",               "take": "padTop",    "fallback": 40 },
+    "footerGap":   { "page": "home", "find": "/Footer",               "take": "gap",       "fallback": 61 },
+    "footerText":  { "page": "home", "find": "/Footer>TextBlock",     "take": "width",     "fallback": 900 },
+    "essayLabel":  { "page": "home", "find": "-",                     "take": "width",     "fallback": 180 },
+    "essayText":   { "page": "home", "find": "-",                     "take": "width",     "fallback": 540 },
+    "essayTextX":  { "page": "home", "find": "-",                     "take": "x",         "fallback": 262 },
+    "contentLeft": { "page": "home", "find": "-",                     "take": "x",         "fallback": 18 }
+  },
+  "needs": { "series": [1, 20], "worksPerSeries": [1, 1000] },
+  "prefers": { "captionFields": [1, 3], "totalWorks": [40, 5000], "worksPerSeries": [8, 1000] },
+  "pages": [
+    { "id": "home", "path": "", "regions": [
+      { "type": "Nav", "pattern": "brand-bar" },
+      { "type": "Nav", "pattern": "section-nav" },
+      { "type": "Main", "pattern": "works-grid" },
+      { "type": "Footer", "pattern": "site-footer" }
+    ] },
+    { "id": "series", "path": "{series}/", "each": "series", "regions": [
+      { "type": "Nav", "pattern": "brand-bar" },
+      { "type": "Nav", "pattern": "section-nav" },
+      { "type": "Main", "pattern": "works-grid" },
+      { "type": "Footer", "pattern": "site-footer" }
+    ] },
+    { "id": "work", "path": "{series}/{work}/", "each": "work", "regions": [
+      { "type": "Nav", "pattern": "brand-bar" },
+      { "type": "Nav", "pattern": "section-nav" },
+      { "type": "Main", "pattern": "work-view" }
+    ] },
+    { "id": "about", "path": "{about}/", "regions": [
+      { "type": "Nav", "pattern": "brand-bar" },
+      { "type": "Nav", "pattern": "section-nav" },
+      { "type": "Article", "pattern": "essay" },
+      { "type": "Footer", "pattern": "site-footer" }
+    ] }
+  ]
+}

@@ -1,0 +1,57 @@
+/* fit: series nav — on a desktop the series index across the top right (the artist is on the
+   rail); on a phone the name and the index share one bar. */
+:root { --head: calc(var(--g-head) * 1px); }
+.topNav {
+  position: fixed; top: 0; left: var(--rail); right: 0; z-index: 800;
+  height: var(--head);
+  padding: 0 var(--gutter);
+  background: var(--ground);
+  display: flex; justify-content: flex-end; align-items: center; gap: 24px;
+}
+.navArtist { display: none; }
+/* one line, always: a bar that wraps would be taller than the head the layout is measured to */
+.links {
+  display: flex; align-items: baseline; justify-content: flex-end; flex-wrap: nowrap; gap: 32px;
+  min-width: 0; overflow-x: auto; scrollbar-width: none;
+}
+.links::-webkit-scrollbar { display: none; }
+.link { flex: none; }
+.link {
+  position: relative; padding: 6px 0;
+  font-size: 14px; letter-spacing: 0.14em; color: var(--ink-2); transition: color 0.3s;
+}
+.link:hover { color: var(--ink); }
+.link .short { display: none; }
+.link .count {
+  margin-left: 0.4em; font-family: var(--font-latin); font-size: 13px; letter-spacing: 0.02em;
+  color: var(--ink-3); vertical-align: 0.35em;
+}
+.link.current { color: var(--ink); }
+.link.current::after {
+  content: ""; position: absolute; left: 0; right: 0.14em; bottom: -2px; height: 1px; background: var(--accent);
+}
+@media (max-width: 767px), (hover: none) {
+  .topNav { left: 0; justify-content: space-between; height: var(--phone-bar); padding: 0 18px; }
+  .navArtist { display: inline-flex; align-items: center; gap: 10px; }
+  .navArtist .seal { width: 22px; height: 22px; }
+  .navArtist .seal i { font-size: 8.5px; }
+  .navArtist .ja { font-size: 16px; font-weight: 600; letter-spacing: 0.22em; }
+  /* the index scrolls sideways rather than wrapping out of a one-line bar */
+  .links { gap: 14px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .links::-webkit-scrollbar { display: none; }
+  .link { font-size: 13px; letter-spacing: 0.08em; }
+  .link .full, .link .count { display: none; }
+  .link .short { display: inline; }
+}
+
+/* the same site in other languages */
+.navLangs { display: flex; gap: 14px; padding-left: 8px; border-left: 1px solid var(--rule); }
+.navLangs a, .navLangs .current {
+  font-family: var(--font-mono, inherit); font-size: 11.5px; letter-spacing: 0.14em; color: var(--ink-3);
+  transition: color 0.3s;
+}
+.navLangs a:hover { color: var(--ink); }
+.navLangs .current { color: var(--ink); }
+@media (max-width: 767px), (hover: none) {
+  .navLangs { display: none; }
+}

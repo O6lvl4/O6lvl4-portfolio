@@ -1,0 +1,85 @@
+/* fit: index sheet — every work of the series on one sheet, over the stage. */
+/* below the index bar, so you can still see where you are and move on from here */
+.catalogue {
+  --sheet-pad: 40px;
+  position: fixed; top: var(--head); left: var(--rail); right: 0; bottom: 0; z-index: 900;
+  overflow-y: auto; overscroll-behavior: contain;
+  padding: var(--sheet-pad) var(--gutter) 96px;
+  background: var(--ground);
+  opacity: 0; visibility: hidden; transform: translate3d(0, 12px, 0);
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0s linear 0.45s;
+}
+.catalogue.open {
+  opacity: 1; visibility: visible; transform: none;
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.catHead {
+  display: grid; grid-template-columns: auto minmax(0, 34em) auto; justify-content: space-between; align-items: end; gap: 48px;
+  padding-bottom: 28px; margin-bottom: 40px; border-bottom: 1px solid var(--rule);
+}
+.catCount { font-family: var(--font-latin); font-size: 15px; color: var(--ink-3); margin-bottom: 6px; }
+.catSeries { word-break: auto-phrase; font-size: 32px; font-weight: 500; letter-spacing: 0.08em; line-height: 1.3; }
+.catEn { font-family: var(--font-latin); font-style: italic; font-size: 17px; color: var(--ink-2); }
+.catIntro { font-size: 14px; line-height: 2; letter-spacing: 0.04em; color: var(--ink-2); }
+.catClose { font-size: 13px; letter-spacing: 0.14em; border-bottom: 1px solid var(--ink-3); padding: 0 2px; }
+.catClose:hover { color: var(--accent); border-color: var(--accent); }
+.catGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(176px, 1fr)); gap: 44px 28px; }
+.work { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%; text-align: left; }
+.work .wImg { width: 100%; height: 164px; display: flex; align-items: flex-end; }
+.work img { max-width: 100%; max-height: 100%; width: auto; height: auto; transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.work .wNo { margin-top: 6px; font-family: var(--font-latin); font-size: 13px; color: var(--ink-3); font-variant-numeric: lining-nums; }
+.work .wTitle { font-size: 13px; letter-spacing: 0.04em; line-height: 1.6; }
+.work:hover img { transform: translate3d(0, -4px, 0); }
+.work[aria-current="true"] .wTitle { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 0.45em; }
+@media (max-width: 767px), (hover: none) {
+  .catalogue { display: none; }
+}
+
+/* the index as a list: one line per work, its own line of text carrying it, in any order */
+.catalogue { --cat-cols: 3.4em minmax(8em, 15em) minmax(0, 1fr) 8.5em 6.5em; }
+.catList { display: flex; flex-direction: column; }
+.catSort,
+.catList .work {
+  display: grid; grid-template-columns: var(--cat-cols);
+  align-items: baseline; gap: 6px 24px;
+  padding: 16px 2px;
+}
+/* The headings stay at the top as you read down. Their box reaches up over the sheet's own top
+   padding, so nothing scrolls into view above them. */
+.catSort {
+  position: sticky; top: calc(-1 * var(--sheet-pad)); z-index: 2;
+  padding-top: var(--sheet-pad); padding-bottom: 10px; margin-top: calc(-1 * var(--sheet-pad)); margin-bottom: 2px;
+  background: var(--ground); border-bottom: 1px solid var(--ink);
+}
+.catSort > * {
+  font-family: var(--font-latin); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-3); text-align: left; white-space: nowrap;
+}
+.catSortBtn { display: inline-flex; align-items: baseline; gap: 6px; }
+.catSortBtn:hover { color: var(--accent); }
+.catSortBtn[aria-pressed="true"] { color: var(--ink); }
+.catSortBtn .dir::after { content: "↕"; opacity: 0.4; }
+.catSortBtn[data-dir="up"] .dir::after { content: "↑"; color: var(--accent); opacity: 1; }
+.catSortBtn[data-dir="down"] .dir::after { content: "↓"; color: var(--accent); opacity: 1; }
+.catList .work { width: 100%; text-align: left; border-bottom: 1px solid var(--rule); }
+.catList .work:hover { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.catList .wNo { font-family: var(--font-latin); font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.catList .wTitle { font-size: 15px; letter-spacing: 0.02em; color: var(--ink); transition: color 0.3s; word-break: break-word; }
+.catList .work:hover .wTitle { color: var(--accent); }
+.catList .wLead { font-size: 13px; line-height: 1.75; letter-spacing: 0.02em; color: var(--ink-2); }
+.catList .wFormat,
+.catList .wDate { font-family: var(--font-latin); font-size: 11.5px; letter-spacing: 0.06em; color: var(--ink-3); white-space: nowrap; }
+.catList .work[aria-current="true"] .wTitle {
+  text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 0.4em; color: var(--accent);
+}
+/* narrow: the summary drops to its own line under the name, the columns stay lined up */
+@media (max-width: 1240px) {
+  .catalogue { --cat-cols: 3.4em minmax(0, 1fr) 7.5em 6em; }
+  .catSort .wLead { display: none; }
+  .catList .work { grid-template-areas: "no title format date" ". lead lead lead"; }
+  .catList .wNo { grid-area: no; }
+  .catList .wTitle { grid-area: title; }
+  .catList .wFormat { grid-area: format; }
+  .catList .wDate { grid-area: date; }
+  .catList .wLead { grid-area: lead; }
+}

@@ -1,0 +1,28 @@
+/* fit: a work on its own page — the work as large as the screen allows, its label under it, and
+   the previous and next work a key away. It clears whatever fixed bar the template puts on top
+   (--head is 0 when there is none). */
+.workView {
+  padding: calc(var(--head) + 28px) var(--gutter) 48px;
+  display: grid; justify-items: center; gap: 28px;
+}
+.workImg { width: 100%; height: max(340px, calc(100dvh - var(--head) - 300px)); display: flex; justify-content: center; }
+.workImg img { width: auto; height: 100%; max-width: 100%; object-fit: contain; }
+.workPlate {
+  width: min(100%, 1180px);
+  padding-top: 22px; border-top: 1px solid var(--rule);
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 40px;
+}
+.workPlate .caption .series a { transition: color 0.3s; }
+.workPlate .caption .series a:hover { color: var(--accent); }
+.steps a { font-size: 13px; letter-spacing: 0.12em; color: var(--ink-2); transition: color 0.3s; }
+.steps a:hover { color: var(--accent); }
+.steps a.toIndex { padding: 0 2px; color: var(--ink); border-bottom: 1px solid var(--ink-3); }
+@media (max-width: 767px), (hover: none) {
+  .workView { padding: calc(var(--phone-bar) + 20px) 16px 36px; gap: 22px; }
+  .workImg { height: auto; }
+  .workImg img { width: 100%; height: auto; }
+  .workPlate { grid-template-columns: 1fr; gap: 22px; }
+  .workPlate .caption .title { white-space: normal; font-size: 24px; }
+  .workPlate .counter { align-items: flex-start; }
+  .workPlate .counter .track { width: 100%; }
+}

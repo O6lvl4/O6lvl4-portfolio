@@ -1,0 +1,32 @@
+{
+  "name": "ogma",
+  "title": "オグマ — after the god credited with ogham, the alphabet cut as notches along a stem and read from the foot of the stone up. A white ground, cut-stone ink, one ochre red for whatever is chosen; Cinzel for the name (letters made to be carved), Noto Sans Ogham for the stem, Chakra Petch for labels and figures, M PLUS 2 with Noto Sans SC for words, Share Tech Mono for commands",
+  "color": {
+    "ground": "#ffffff",
+    "ink": "#131311",
+    "ink-2": "#57544c",
+    "ink-3": "#9a958a",
+    "rule": "#e2dfd7",
+    "accent": "#c0102a",
+    "seal": "#c0102a",
+    "seal-ink": "#ffffff"
+  },
+  "font": {
+    "text": "'M PLUS 2', 'Noto Sans SC', system-ui, sans-serif",
+    "latin": "'Chakra Petch', 'M PLUS 2', system-ui, sans-serif",
+    "mono": "'Share Tech Mono', 'M PLUS 2', 'Noto Sans SC', ui-monospace, SFMono-Regular, Menlo, monospace",
+    "name": "'Cinzel', 'Chakra Petch', Georgia, serif",
+    "ogham": "'Noto Sans Ogham', 'Segoe UI Historic', serif"
+  },
+  "fonts": {
+    "href": "https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&family=Cinzel:wght@400;600&family=M+PLUS+2:wght@400;500;700&family=Noto+Sans+Ogham&family=Noto+Sans+SC:wght@400;500&family=Share+Tech+Mono&display=swap",
+    "faces": [
+      { "family": "Cinzel", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/cinzel" },
+      { "family": "Noto Sans Ogham", "license": "OFL-1.1", "source": "https://github.com/notofonts/ogham" },
+      { "family": "Chakra Petch", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/chakrapetch" },
+      { "family": "M PLUS 2", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/mplus2" },
+      { "family": "Noto Sans SC", "license": "OFL-1.1", "source": "https://github.com/notofonts/noto-cjk" },
+      { "family": "Share Tech Mono", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/sharetechmono" }
+    ]
+  }
+}

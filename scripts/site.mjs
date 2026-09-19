@@ -4,7 +4,7 @@
 
 import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { build } from "../../uimodulay/src/fit/build.ts";
+import { build } from "../vendor/uimodulay/src/fit/build.ts";
 
 import { updateHomeContent } from "./home-content.mjs";
 import { finishInterface } from "./interface-copy.mjs";

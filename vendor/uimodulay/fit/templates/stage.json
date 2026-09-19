@@ -1,0 +1,44 @@
+{
+  "name": "stage",
+  "title": "一点ステージ型",
+  "summary": "A way in with the series as chapters, then one work at a time with a full label under it, and the whole series on a sheet. For work that asks to be looked at, not browsed.",
+  "references": [
+    { "page": "home", "url": "https://o6lvl4.github.io/hokusai-portfolio/", "ast": "../references/hokusai-portfolio/home.1440.ast.json" },
+    { "page": "series", "url": "https://o6lvl4.github.io/hokusai-portfolio/fuji/", "ast": "../references/hokusai-portfolio/series.1440.ast.json" },
+    { "page": "about", "url": "https://o6lvl4.github.io/hokusai-portfolio/info/", "ast": "../references/hokusai-portfolio/about.1440.ast.json" }
+  ],
+  "measures": {
+    "ref":            { "page": "home",   "find": "",                       "take": "width",    "fallback": 1440 },
+    "rail":           { "page": "home",   "find": "/Sidebar",               "take": "width",    "fallback": 92 },
+    "head":           { "page": "home",   "find": "/Header",                "take": "height",   "fallback": 88 },
+    "contentLeft":    { "page": "home",   "find": "/Main>Header",           "take": "x",        "fallback": 138 },
+    "gutter":         { "page": "home",   "find": "/Main>List",             "take": "rightGap", "fallback": 46 },
+    "leadWidth":      { "page": "home",   "find": "/Main>Header",           "take": "width",    "fallback": 660 },
+    "chapterColumns": { "page": "home",   "find": "/Main>List",             "take": "columns",  "fallback": 3 },
+    "chapterGap":     { "page": "home",   "find": "/Main>List",             "take": "gap",      "fallback": 44 },
+    "chapterImage":   { "page": "home",   "find": "/Main>List>Item>Image",  "take": "height",   "fallback": 360 },
+    "plate":          { "page": "series", "find": "/Footer",                "take": "height",   "fallback": 156 },
+    "essayLabel":     { "page": "about",  "find": "/Article>Heading",       "take": "width",    "fallback": 180 },
+    "essayText":      { "page": "about",  "find": "/Article>Text",          "take": "width",    "fallback": 540 },
+    "essayTextX":     { "page": "about",  "find": "/Article>Text",          "take": "x",        "fallback": 382 }
+  },
+  "needs": { "series": [1, 8], "worksPerSeries": [3, 200] },
+  "prefers": { "captionFields": [4, 5], "totalWorks": [6, 400], "worksPerSeries": [3, 60] },
+  "pages": [
+    { "id": "home", "path": "", "regions": [
+      { "type": "Main", "pattern": "lead-chapters" },
+      { "type": "Sidebar", "pattern": "rail" },
+      { "type": "Header", "pattern": "series-nav" }
+    ] },
+    { "id": "series", "path": "{series}/", "each": "series", "regions": [
+      { "type": "Sidebar", "pattern": "rail" },
+      { "type": "Header", "pattern": "series-nav" },
+      { "type": "Main", "pattern": "stage" }
+    ] },
+    { "id": "about", "path": "{about}/", "regions": [
+      { "type": "Article", "pattern": "essay" },
+      { "type": "Sidebar", "pattern": "rail" },
+      { "type": "Header", "pattern": "series-nav" }
+    ] }
+  ]
+}

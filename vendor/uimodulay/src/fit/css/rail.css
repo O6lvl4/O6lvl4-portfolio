@@ -1,0 +1,50 @@
+/* fit: rail — the artist's name set vertically on the left edge, sealed below: the one thing on
+   the page that says who made the work, the way a signature and seal do on a painting. */
+:root {
+  --rail: calc(var(--g-rail) * 1px);
+  --gutter: clamp(20px, calc(var(--g-gutter) / var(--g-ref) * 100vw), calc(var(--g-gutter) * 1.15px));
+  --content-left: calc(var(--rail) + var(--gutter));
+}
+.rail {
+  position: fixed; top: 0; left: 0; bottom: 0; z-index: 800;
+  width: var(--rail);
+  padding: 44px 0 34px;
+  border-right: 1px solid var(--rule);
+  background: var(--ground);
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+}
+.railName .ja {
+  display: block;
+  writing-mode: vertical-rl;
+  /* a Latin handle stands upright on the rail, the way a spine label does */
+  text-orientation: upright;
+  font-family: var(--font-name, inherit);
+  font-size: 23px; font-weight: 600; letter-spacing: 0.42em; line-height: 1;
+}
+/* the name cut in ogham, down the stem the rail already is. `sideways-lr` reads from the foot up,
+   the way a standing stone does; where it is not understood, the vertical mode above still gives a
+   stem, read downwards. */
+.ogham {
+  flex: none;
+  writing-mode: vertical-rl;
+  writing-mode: sideways-lr;
+  font-family: var(--font-ogham, inherit);
+  font-size: 27px; line-height: 1; letter-spacing: 0;
+  color: var(--ink-2);
+}
+/* a short window has no room for the stone: the name and the mark come first */
+@media (max-height: 720px) {
+  .ogham { display: none; }
+}
+.railEn {
+  margin-top: auto;
+  writing-mode: vertical-rl;
+  font-family: var(--font-latin); font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--ink-2); white-space: nowrap;
+}
+.railEn .life { margin-top: 1.2em; letter-spacing: 0.12em; }
+.railContact { display: flex; flex-direction: column; gap: 14px; padding-top: 6px; }
+@media (max-width: 767px), (hover: none) {
+  :root { --rail: 0px; }
+  .rail { display: none; }
+}

@@ -1,0 +1,43 @@
+/* fit: phone — the works stack as you scroll; a tap opens them one by one, label underneath. */
+.collection, .viewer { display: none; }
+@media (max-width: 767px), (hover: none) {
+  .collection {
+    display: flex; flex-direction: column; gap: 20vh;
+    padding: calc(40dvh) 0 0;
+  }
+  .collection li { display: flex; justify-content: center; position: sticky; top: 40dvh; transform: translate3d(0, -50%, 0); }
+  .collection li:last-child { margin-bottom: 35dvh; }
+  .cItem img { width: 60vw; height: 20vh; object-fit: contain; }
+  .viewer:not([hidden]) {
+    display: flex; flex-direction: column;
+    position: fixed; inset: var(--phone-bar) 0 0; z-index: 700;
+    background: var(--ground);
+  }
+  /* the name and index stay on top; the place in the series and the way out sit at the bottom */
+  .viewerBar {
+    order: 2;
+    height: var(--phone-bar); padding: 0 18px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .galleryCount { font-family: var(--font-latin); font-variant-numeric: lining-nums tabular-nums; }
+  .galleryCount .now { font-size: 22px; }
+  .galleryCount .of { font-size: 14px; color: var(--ink-2); }
+  .viewerClose { font-size: 14px; letter-spacing: 0.14em; }
+  .viewerTrack {
+    flex: 1; display: flex; overflow-x: auto; overflow-y: hidden;
+    scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior: contain;
+  }
+  .viewerTrack::-webkit-scrollbar { display: none; }
+  .slide {
+    flex: 0 0 100%; scroll-snap-align: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+    padding: 0 18px calc(var(--phone-bar) * 0.5);
+  }
+  .slide img { width: auto; max-width: 100%; height: auto; max-height: calc(100dvh - 2 * var(--phone-bar) - 128px); object-fit: contain; }
+  .slideCaption { word-break: auto-phrase; display: flex; flex-direction: column; align-items: center; gap: 3px; text-align: center; }
+  .slideCaption .series { font-size: 11px; letter-spacing: 0.22em; color: var(--ink-2); }
+  .slideCaption .title { font-size: 18px; font-weight: 500; letter-spacing: 0.06em; }
+  .slideCaption .en { font-family: var(--font-latin); font-style: italic; font-size: 15px; color: var(--ink-2); }
+  .slideCaption .meta { font-size: 11px; letter-spacing: 0.06em; color: var(--ink-3); }
+  body.locked { overflow: hidden; }
+}

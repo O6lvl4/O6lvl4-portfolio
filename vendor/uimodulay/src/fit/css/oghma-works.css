@@ -1,0 +1,194 @@
+/* ─── §2 Works ──────────────────────────────────────────────────────────── */
+
+.works-toolbar {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.sort-bar {
+  display: flex;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.sort-btn {
+  font-family: var(--font-mono);
+  font-size: 0.4875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  padding: 0.5rem 0.875rem;
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+}
+.sort-btn:last-child { border-right: none; }
+.sort-btn.active { color: var(--fg); background: var(--bg-subtle); }
+.sort-btn:hover:not(.active) { color: var(--fg); }
+
+.lang-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.lang-chip {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg-muted);
+  padding: 0.3125rem 0.625rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.12s, border-color 0.12s;
+}
+.lang-chip.active { color: var(--fg); border-color: var(--border-mid); background: var(--bg-subtle); }
+.lang-chip:hover:not(.active) { color: var(--fg); }
+
+/* Lang dot: still uses language color in data-viz contexts */
+.lang-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  /* Fallback to neutral when used outside data-viz */
+}
+
+/* ─── Repo list ─────────────────────────────────────────────────────────── */
+
+.repo-list { display: flex; flex-direction: column; }
+
+.repo-item {
+  border-top: 1px solid var(--border);
+  @starting-style { opacity: 0; translate: 0 6px; }
+  transition: opacity 0.2s, translate 0.2s;
+}
+.repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
+
+.repo-top-line {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3125rem;
+}
+
+.repo-name {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+}
+.repo-name:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.repo-org-tag {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  border: 1px solid var(--border);
+  padding: 0.1875rem 0.4375rem;
+}
+
+.repo-lang-tag {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+
+.repo-desc {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--fg-muted);
+  text-wrap: pretty;
+  max-width: 68ch;
+  margin-bottom: 0.4375rem;
+}
+
+.repo-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.repo-topic {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.07em;
+  color: var(--fg-faint);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 0.125rem 0.5rem;
+}
+
+.repo-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  flex-shrink: 0;
+  padding-top: 0.0625rem;
+}
+
+.repo-stars {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+
+.repo-date {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  color: var(--fg-faint);
+  letter-spacing: 0.06em;
+}
+
+.show-more-btn {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg-muted);
+  padding: 0.625rem 1.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: color 0.12s, border-color 0.12s;
+  display: block;
+}
+.show-more-btn:hover { color: var(--fg); border-color: var(--border-mid); }

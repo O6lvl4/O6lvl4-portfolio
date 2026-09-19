@@ -1,0 +1,28 @@
+{
+  "name": "sumi",
+  "title": "墨と鋼 — paper ground, sumi ink, indigo for what is selected, vermilion for the seal; mincho for words, mono for names and figures",
+  "color": {
+    "ground": "#f4f3ef",
+    "ink": "#1a1918",
+    "ink-2": "#6a655c",
+    "ink-3": "#99938a",
+    "rule": "#dcd7cc",
+    "accent": "#1f4d6b",
+    "seal": "#b3392b",
+    "seal-ink": "#f6f1e6"
+  },
+  "font": {
+    "text": "'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif",
+    "latin": "'Inter', system-ui, sans-serif",
+    "mono": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+    "name": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+  },
+  "fonts": {
+    "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Shippori+Mincho:wght@400;500;600&display=swap",
+    "faces": [
+      { "family": "Shippori Mincho", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/shipporimincho" },
+      { "family": "Inter", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/inter" },
+      { "family": "JetBrains Mono", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/jetbrainsmono" }
+    ]
+  }
+}

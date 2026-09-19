@@ -49,6 +49,45 @@ behaviour, rendered from this repository's data in three languages.
 
 ## How it is built
 
+### Automatic updates
+
+GitHub Actions refreshes and deploys the portfolio every day at **06:23 JST**
+(21:23 UTC), on pushes to `main`, and via **Actions → Deploy to GitHub Pages →
+Run workflow**. Scheduled runs can start later when GitHub is busy.
+
+The build lists public, non-fork repositories for all six owners, clones their
+default-branch histories into a fresh temporary directory, and updates the project
+list, descriptions, languages, stars, tags and deduplicated commit statistics.
+It renders the featured images and all three languages, checks repository coverage
+and local links/assets, and deploys only after every step succeeds. A failed refresh
+leaves the last successful deployment online. Removed or newly private repositories
+disappear on the next successful build. `updated.json` on the published site records
+the last successful build's time and repository count.
+
+No personal token or AI key is required: the workflow uses its read-only
+`GITHUB_TOKEN` for the public repository inventory. Existing translations in
+`data/summaries.json` are maintained editorially; new projects use their GitHub
+description or README excerpt in all languages until translations are added.
+Automatic builds render website screenshots or summary cards without executing
+commands from the collected projects. They reuse the checked-in logo and share cards.
+
+The exact renderer is included in `vendor/uimodulay`, including the previously local
+fit implementation. A sibling checkout is no longer required to build the site.
+Generated updates are deployed as a Pages artifact and are not committed back to Git.
+
+To run the same refresh locally (requires Node 22.23.1+, Git, authenticated `gh`,
+and enough temporary disk space for the repositories):
+
+```bash
+npm ci
+npx playwright install chromium
+npm run refresh
+```
+
+This rebuilds `data/`, `plates/` and `site/`; it never updates your working clones.
+Temporary clones are written under the OS temporary directory. GitHub runners remove
+them when the job ends; local runs print the directory so it can be removed afterwards.
+
 The site is fitted together by [uimodulay](https://github.com/O6lvl4/uimodulay)'s `fit`: the content
 is this repository's data, the layout's proportions are measured from Layout ASTs, and the look
 comes from hand-made patterns and tokens. `docs/FIT.ja.md` in uimodulay describes the method.
@@ -72,9 +111,10 @@ node ../uimodulay/src/cli.ts fit check site/ja -o check
 login (no tools, one turn per project); the result is kept in `data/summaries.json`, and projects
 already there are skipped, so the run can be stopped and picked up again.
 
-`scripts/mine.mjs`, `scripts/summarize.mjs` and `scripts/plates.mjs` read the clones under
-`~/workspace/github.com/<org>/<repo>` and run the commands that are installed here, so they only
-work on this machine; `site/` is therefore committed, and GitHub Pages only uploads it. `plates/`
+The manual workflow above can still read clones under `~/workspace/github.com/<org>/<repo>`
+and use locally installed project commands and the local Claude login. `mine.mjs` also
+accepts `PORTFOLIO_CLONES` to select an isolated clone directory, as automatic refreshes do.
+`site/` is a checked-in snapshot; Pages publishes the freshly built artifact. `plates/`
 is not committed — it is derived.
 
 The two tab-separated inputs to `scripts/plan.mjs` come from the GitHub API:

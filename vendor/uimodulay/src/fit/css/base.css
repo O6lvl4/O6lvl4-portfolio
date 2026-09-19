@@ -1,0 +1,53 @@
+/* fit: base — a light reset, the ground and ink, and focus as an underline (a box drawn round a
+   link reads as a stray rectangle once a click is followed by an arrow key). */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: none; text-size-adjust: none; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+}
+h1, h2, h3, p, ol, ul, figure { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+img { display: block; max-width: 100%; }
+a:focus-visible, button:focus-visible {
+  outline: none;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.45em;
+}
+.visuallyHidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+:root {
+  --ref: calc(var(--g-ref) * 1px);
+  --phone-bar: 56px;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+/* letters quoted as themselves inside a line, in whichever face can draw them (ogham, runes) */
+.cut { font-family: var(--font-ogham, inherit); font-size: 1.2em; letter-spacing: 0; }
+/* the frame's defaults; the rail pattern replaces them */
+:root { --rail: 0px; --gutter: clamp(18px, 2.4vw, 40px); --content-left: calc(var(--rail) + var(--gutter)); --head: 0px; }
+/* marks every template shares: the seal, and Instagram and mail */
+.seal {
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 3px;
+  background: var(--seal);
+  box-shadow: inset 0 0 0 2px var(--seal), inset 0 0 0 3px color-mix(in srgb, var(--seal-ink) 75%, transparent);
+  color: var(--seal-ink);
+}
+.seal i { font-style: normal; font-size: 10.5px; font-weight: 600; line-height: 1.05; }
+.contact a { display: inline-flex; align-items: center; gap: 12px; color: var(--ink-2); transition: color 0.3s; }
+.contact a:hover { color: var(--accent); }
+.contact svg { flex: none; }
+/* the maker's mark: their own picture, where the seal would be */
+.mark { width: 28px; height: 28px; border-radius: 3px; object-fit: cover; flex: none; }

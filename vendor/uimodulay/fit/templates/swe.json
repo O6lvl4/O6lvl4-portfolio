@@ -1,0 +1,51 @@
+{
+  "name": "swe",
+  "title": "プロフィールと仕事型",
+  "summary": "How a maker of software is usually introduced — a profile that stays put, then what they wrote about themselves, the work they put forward, where it lives, what it is made with and when it happened — with the work itself shown one at a time, as any other body of work.",
+  "references": [
+    { "page": "landing", "url": "https://brittanychiang.com/", "ast": "../../../uimodulay-corpus/sites/brittanychiang.com/index/1440.ast.json" },
+    { "page": "home", "url": "https://o6lvl4.github.io/hokusai-portfolio/", "ast": "../references/hokusai-portfolio/home.1440.ast.json" },
+    { "page": "series", "url": "https://o6lvl4.github.io/hokusai-portfolio/fuji/", "ast": "../references/hokusai-portfolio/series.1440.ast.json" },
+    { "page": "about", "url": "https://o6lvl4.github.io/hokusai-portfolio/info/", "ast": "../references/hokusai-portfolio/about.1440.ast.json" }
+  ],
+  "measures": {
+    "ref":           { "page": "home",    "find": "",                          "take": "width",    "fallback": 1440 },
+    "rail":          { "page": "home",    "find": "/Sidebar",                  "take": "width",    "fallback": 92 },
+    "head":          { "page": "home",    "find": "/Header",                   "take": "height",   "fallback": 88 },
+    "contentLeft":   { "page": "home",    "find": "/Main>Header",              "take": "x",        "fallback": 138 },
+    "gutter":        { "page": "home",    "find": "/Main>List",                "take": "rightGap", "fallback": 46 },
+    "plate":         { "page": "series",  "find": "/Footer",                   "take": "height",   "fallback": 156 },
+    "essayLabel":    { "page": "about",   "find": "/Article>Heading",          "take": "width",    "fallback": 180 },
+    "essayText":     { "page": "about",   "find": "/Article>Text",             "take": "width",    "fallback": 540 },
+    "essayTextX":    { "page": "about",   "find": "/Article>Text",             "take": "x",        "fallback": 382 },
+    "swContent":     { "page": "landing", "find": "/Section>Section",          "take": "width",    "fallback": 1280 },
+    "swProfile":     { "page": "landing", "find": "/Section>Sidebar",          "take": "width",    "fallback": 561 },
+    "swMain":        { "page": "landing", "find": "/Section>Main",             "take": "width",    "fallback": 607 },
+    "swColGap":      { "page": "landing", "find": "/Section>Section",          "take": "gap",      "fallback": 16 },
+    "swSectionGap":  { "page": "landing", "find": "/Section>Main",             "take": "gap",      "fallback": 143 },
+    "swItemGap":     { "page": "landing", "find": "/Section>CardGrid",         "take": "gap",      "fallback": 48 }
+  },
+  "needs": { "series": [1, 20], "worksPerSeries": [1, 1000] },
+  "prefers": { "captionFields": [2, 5], "totalWorks": [10, 2000], "worksPerSeries": [1, 400] },
+  "pages": [
+    { "id": "home", "path": "", "regions": [
+      { "type": "Main", "pattern": "profile-hero" },
+      { "type": "Header", "pattern": "series-nav" }
+    ] },
+    { "id": "series", "path": "{series}/", "each": "series", "regions": [
+      { "type": "Sidebar", "pattern": "rail" },
+      { "type": "Header", "pattern": "series-nav" },
+      { "type": "Main", "pattern": "stage" }
+    ] },
+    { "id": "work", "path": "{series}/{work}/", "each": "work", "regions": [
+      { "type": "Sidebar", "pattern": "rail" },
+      { "type": "Header", "pattern": "series-nav" },
+      { "type": "Main", "pattern": "work-view" }
+    ] },
+    { "id": "about", "path": "{about}/", "regions": [
+      { "type": "Sidebar", "pattern": "rail" },
+      { "type": "Header", "pattern": "series-nav" },
+      { "type": "Article", "pattern": "essay" }
+    ] }
+  ]
+}

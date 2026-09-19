@@ -1,0 +1,44 @@
+/* fit: stage — the work hangs in the space right of the rail, between the index and the plate.
+   The mat is part of the image, so no shadow: the paler mat against the ground is the edge. */
+:root {
+  --plate: calc(var(--g-plate) * 1px);
+  --stage-h: calc(100dvh - var(--head) - var(--plate));
+}
+.stage { position: relative; width: 100vw; height: 100dvh; overflow: hidden; }
+.stageImg {
+  position: absolute;
+  top: calc(var(--head) + 4px); left: var(--content-left);
+  width: calc(100vw - var(--rail) - 2 * var(--gutter)); height: calc(var(--stage-h) - 40px);
+  max-width: none; object-fit: contain;
+  opacity: 0; pointer-events: none;
+  transition: none;
+}
+.stageImg.on { opacity: 1; }
+.stageImg.fade { transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+/* the way in: the first work grows into place once the page is ready */
+.js .stageWrap:not(.ready) .stageImg.on { opacity: 0; transform: scale(0.6); }
+.js .stageWrap .stageImg.enter {
+  transition: opacity 0.6s ease 0.2s, transform 1.1s cubic-bezier(0.65, 0, 0.35, 1) 0.2s;
+}
+.halves {
+  position: fixed; top: var(--head); left: var(--rail); z-index: 500;
+  width: calc(100vw - var(--rail)); height: var(--stage-h);
+  display: flex; cursor: none;
+}
+.half { flex: 1; }
+.cursorLabel {
+  position: fixed; top: 0; left: 0; z-index: 600;
+  pointer-events: none; white-space: nowrap;
+  color: #fff; mix-blend-mode: difference;
+  font-size: 14px; letter-spacing: 0.24em;
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 0; transition: opacity 0.2s;
+}
+.cursorLabel.show { opacity: 1; }
+@media (max-width: 767px), (hover: none) {
+  .stage, .halves, .cursorLabel { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stageImg.fade, .js .stageWrap .stageImg.enter { transition: none; }
+  .js .stageWrap:not(.ready) .stageImg.on { transform: none; }
+}

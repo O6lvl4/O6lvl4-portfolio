@@ -1,0 +1,46 @@
+/* fit: lead and chapters — the way in: a line about the artist, then the series as chapters. */
+.landing {
+  min-height: 100dvh;
+  padding: calc(var(--head) + 12px) var(--gutter) 56px var(--content-left);
+  display: grid; grid-template-rows: auto 1fr auto; gap: 44px;
+}
+.lead { max-width: calc(var(--g-leadWidth) * 1px); }
+.lead .kicker { font-size: 12px; letter-spacing: 0.26em; color: var(--ink-2); margin-bottom: 14px; }
+.lead .leadTitle {
+  word-break: auto-phrase;
+  font-size: 34px; font-weight: 500; letter-spacing: 0.06em; line-height: 1.5; text-wrap: balance;
+}
+.lead .leadText {
+  margin-top: 16px; max-width: 38em;
+  font-size: 15px; line-height: 2.05; letter-spacing: 0.04em; color: var(--ink-2);
+}
+.chapters {
+  display: grid; align-items: end;
+  grid-template-columns: repeat(var(--g-chapterColumns), minmax(0, 1fr));
+  gap: calc(var(--g-chapterGap) * 1px);
+}
+.chapter a { display: flex; flex-direction: column; gap: 18px; }
+.chImg {
+  height: calc(var(--g-chapterImage) / 900 * 100dvh); max-height: calc(var(--g-chapterImage) * 1.1px);
+  display: flex; align-items: flex-end;
+}
+.chImg img { max-width: 100%; max-height: 100%; width: auto; height: auto; transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.chapter a:hover img { transform: translate3d(0, -6px, 0); }
+.chText { display: flex; flex-direction: column; gap: 4px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.chTitle { font-size: 21px; font-weight: 500; letter-spacing: 0.08em; transition: color 0.3s; }
+.chapter a:hover .chTitle { color: var(--accent); }
+.chEn { font-family: var(--font-latin); font-style: italic; font-size: 15px; color: var(--ink-2); }
+.chMeta { margin-top: 4px; font-size: 12px; letter-spacing: 0.08em; color: var(--ink-3); }
+.landingNote { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-3); }
+.landingNote a { margin-left: 1em; color: var(--ink-2); border-bottom: 1px solid var(--rule); }
+.landingNote a:hover { color: var(--accent); border-color: var(--accent); }
+@media (max-width: 767px), (hover: none) {
+  .landing { min-height: 0; padding: calc(var(--phone-bar) + 28px) 20px 64px; gap: 40px; }
+  .lead .leadTitle { font-size: 25px; }
+  .chapters { grid-template-columns: 1fr; gap: 48px; }
+  .chImg { height: auto; max-height: none; }
+  .chImg img { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chImg img { transition: none; }
+}

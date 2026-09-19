@@ -8,13 +8,14 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-const ROOT = join(homedir(), "workspace", "github.com");
+const ROOT = process.env.PORTFOLIO_CLONES ?? join(homedir(), "workspace", "github.com");
 const OWNERS = ["O6lvl4", "Aid-On", "almide", "almide-graphics", "almide-ai", "almd-mc"];
 
-const git = (dir, args) => {
+const git = (dir, args, emptyHead = false) => {
   try {
-    return execFileSync("git", ["-C", dir, ...args], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
-  } catch {
+    return execFileSync("git", ["-C", dir, ...args], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024, stdio: ["ignore", "pipe", "ignore"] }).trim();
+  } catch (error) {
+    if (process.env.PORTFOLIO_AUTOMATED === "1" && !(emptyHead && error.status === 1)) throw error;
     return "";
   }
 };
@@ -92,19 +93,20 @@ function readme(dir) {
  * the same list rather than trusted to the order git prints.
  */
 function log(dir) {
-  return git(dir, ["log", "--format=%h %aI"])
+  return git(dir, ["log", "--format=%H %aI"])
     .split("\n")
     .filter(Boolean);
 }
 
 function project(owner, name) {
   const dir = join(ROOT, owner, name);
-  const commits = git(dir, ["rev-list", "--count", "HEAD"]);
+  const head = git(dir, ["rev-parse", "--verify", "--quiet", "HEAD"], true);
+  const commits = head ? git(dir, ["rev-list", "--count", "HEAD"]) : "0";
   const tag = git(dir, ["tag", "--sort=-creatordate"]).split("\n")[0];
   // The dates come from the commits themselves, sorted. `git log --reverse --max-count=1` looks
   // like the first commit and is the last one — git takes the count before it reverses — and an
   // author date is not monotonic along the history anyway, so both ends are read off the list.
-  const lines = log(dir);
+  const lines = head ? log(dir) : [];
   const dates = lines.map((l) => l.slice(l.indexOf(" ") + 1)).sort();
   const first = dates[0] ?? "";
   const last = dates[dates.length - 1] ?? "";

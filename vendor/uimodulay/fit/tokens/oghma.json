@@ -1,0 +1,63 @@
+{
+  "name": "oghma",
+  "title": "オグマ（計器盤） — white, obsidian and one red: an instrument panel cut along an ogham stem. Everything Latin is set in JetBrains Mono, the face code is written in, with Noto Sans/Serif JP and SC carrying Japanese and Chinese and Noto Sans Ogham the stem. Both themes are complete; `light-dark()` picks one",
+  "color": {
+    "bg": "light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))",
+    "bg-raised": "light-dark(oklch(1 0 0), oklch(0.125 0.005 260))",
+    "bg-subtle": "light-dark(oklch(0.95 0.003 250), oklch(0.15 0.006 260))",
+    "rail-bg": "light-dark(oklch(0.97 0.003 250), oklch(0.075 0.004 260))",
+    "fg": "light-dark(oklch(0.04 0 0), oklch(0.96 0.002 250))",
+    "fg-muted": "light-dark(oklch(0.46 0.008 250), oklch(0.63 0.008 250))",
+    "fg-faint": "light-dark(oklch(0.68 0.008 250), oklch(0.42 0.008 250))",
+    "border": "light-dark(oklch(0.88 0.004 250), oklch(0.22 0.006 260))",
+    "border-mid": "light-dark(oklch(0.73 0.006 250), oklch(0.33 0.008 260))",
+    "ground": "light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))",
+    "ink": "light-dark(oklch(0.04 0 0), oklch(0.96 0.002 250))",
+    "ink-2": "light-dark(oklch(0.46 0.008 250), oklch(0.63 0.008 250))",
+    "ink-3": "light-dark(oklch(0.68 0.008 250), oklch(0.42 0.008 250))",
+    "rule": "light-dark(oklch(0.88 0.004 250), oklch(0.22 0.006 260))",
+    "accent": "light-dark(oklch(0.5 0.22 25), oklch(0.64 0.23 25))",
+    "seal": "light-dark(oklch(0.5 0.22 25), oklch(0.64 0.23 25))",
+    "seal-ink": "light-dark(oklch(1 0 0), oklch(0.09 0.004 260))",
+    "bloom-1": "light-dark(oklch(0.5 0.22 25 / 0.1), oklch(0.64 0.23 25 / 0.3))",
+    "bloom-2": "light-dark(oklch(0.62 0.17 245 / 0.09), oklch(0.62 0.17 245 / 0.26))",
+    "bloom-3": "light-dark(oklch(0.72 0.13 190 / 0.08), oklch(0.72 0.13 190 / 0.18))",
+    "grid-line": "light-dark(oklch(0.04 0 0 / 0.045), oklch(0.96 0 0 / 0.07))",
+    "panel-shadow": "light-dark(oklch(0.3 0.02 260 / 0.07), oklch(0 0 0 / 0.4))"
+  },
+  "font": {
+    "ogham": "'Noto Sans Ogham', serif",
+    "display": "'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace",
+    "body": "'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace",
+    "ui": "'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace",
+    "mono": "'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, SFMono-Regular, monospace",
+    "text": "'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace",
+    "latin": "'JetBrains Mono', ui-monospace, monospace",
+    "name": "'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace"
+  },
+  "fonts": {
+    "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Ogham&family=Noto+Sans+SC:wght@400;500;700&display=swap",
+    "faces": [
+      {
+        "family": "JetBrains Mono",
+        "license": "OFL-1.1",
+        "source": "https://github.com/JetBrains/JetBrainsMono"
+      },
+      {
+        "family": "Noto Sans Ogham",
+        "license": "OFL-1.1",
+        "source": "https://github.com/notofonts/ogham"
+      },
+      {
+        "family": "Noto Sans JP",
+        "license": "OFL-1.1",
+        "source": "https://github.com/notofonts/noto-cjk"
+      },
+      {
+        "family": "Noto Sans SC",
+        "license": "OFL-1.1",
+        "source": "https://github.com/notofonts/noto-cjk"
+      }
+    ]
+  }
+}

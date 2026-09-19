@@ -1,0 +1,30 @@
+{
+  "name": "shu",
+  "title": "白黒朱 — a white ground, near-black ink cooled slightly, and one red for whatever is chosen; Orbitron for the name, Chakra Petch for labels and figures, M PLUS 2 for words in three languages",
+  "color": {
+    "ground": "#ffffff",
+    "ink": "#0a0a0b",
+    "ink-2": "#4a4d55",
+    "ink-3": "#9aa0aa",
+    "rule": "#e3e5e9",
+    "accent": "#e10600",
+    "seal": "#e10600",
+    "seal-ink": "#ffffff"
+  },
+  "font": {
+    "text": "'M PLUS 2', 'Noto Sans SC', system-ui, sans-serif",
+    "latin": "'Chakra Petch', 'M PLUS 2', system-ui, sans-serif",
+    "mono": "'Share Tech Mono', 'M PLUS 2', 'Noto Sans SC', ui-monospace, SFMono-Regular, Menlo, monospace",
+    "name": "'Orbitron', 'Chakra Petch', system-ui, sans-serif"
+  },
+  "fonts": {
+    "href": "https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&family=M+PLUS+2:wght@400;500;700&family=Noto+Sans+SC:wght@400;500&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap",
+    "faces": [
+      { "family": "Orbitron", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/orbitron" },
+      { "family": "Chakra Petch", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/chakrapetch" },
+      { "family": "M PLUS 2", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/mplus2" },
+      { "family": "Noto Sans SC", "license": "OFL-1.1", "source": "https://github.com/notofonts/noto-cjk" },
+      { "family": "Share Tech Mono", "license": "OFL-1.1", "source": "https://github.com/google/fonts/tree/main/ofl/sharetechmono" }
+    ]
+  }
+}

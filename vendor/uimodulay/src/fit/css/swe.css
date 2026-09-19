@@ -1,0 +1,143 @@
+/* fit: profile and work — a profile that stays put on the left, the work scrolling past it.
+   The proportions are measured from a portfolio in the corpus. */
+:root {
+  --sw-content: calc(var(--g-swContent) * 1px);
+  --sw-profile: calc(var(--g-swProfile) * 1px);
+  --sw-main: calc(var(--g-swMain) * 1px);
+  --sw-colgap: calc(var(--g-swColGap) * 1px);
+  --sw-section: calc(var(--g-swSectionGap) * 1px);
+  --sw-item: calc(var(--g-swItemGap) * 1px);
+}
+.swe { padding: calc(var(--head) + 52px) var(--gutter) 120px var(--content-left); }
+.swInner {
+  display: grid;
+  grid-template-columns: minmax(0, var(--sw-profile)) minmax(0, var(--sw-main));
+  gap: var(--sw-colgap);
+  justify-content: start;
+  max-width: var(--sw-content);
+  margin: 0 auto;
+}
+
+/* the profile */
+/* the profile stays in view while the work scrolls past it */
+.swProfile {
+  position: sticky; top: calc(var(--head) + 32px); align-self: start;
+  padding-bottom: 48px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.swHead { display: flex; align-items: center; gap: 16px; }
+/* the maker's own name is set in the name face, as it is on the rail */
+.swName { font-family: var(--font-name, var(--font-mono)); font-size: 40px; font-weight: 500; letter-spacing: 0.06em; line-height: 1.1; }
+.swRole { font-size: 21px; font-weight: 500; letter-spacing: 0.1em; }
+.swLead { max-width: 30em; font-size: 15px; line-height: 2; letter-spacing: 0.03em; color: var(--ink-2); }
+.swSections { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
+.swSections a {
+  width: max-content; padding-bottom: 2px;
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.22em; color: var(--ink-3);
+  border-bottom: 1px solid transparent; transition: color 0.3s, border-color 0.3s;
+}
+.swSections a:hover { color: var(--ink); border-color: var(--accent); }
+.swLinks { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: auto; padding-top: 32px; }
+.swLinks a { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.1em; color: var(--ink-2); border-bottom: 1px solid var(--rule); transition: color 0.3s, border-color 0.3s; }
+.swLinks a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* the column that scrolls */
+.swMain { display: flex; flex-direction: column; gap: var(--sw-section); }
+.swSection { scroll-margin-top: calc(var(--head) + 24px); }
+/* Each section is opened by a stem with as many notches as its place in the page — one to five,
+   the way ogham counts a letter (B L F S N). The eye finds the sections while scrolling, and the
+   number of strokes says which one this is. */
+.swSection h2 {
+  display: flex; align-items: center; gap: 13px;
+  margin-bottom: 28px; padding-bottom: 12px; border-bottom: 1px solid var(--rule);
+  font-size: 13px; font-weight: 500; letter-spacing: 0.3em; color: var(--ink-2);
+}
+.swSection h2::before {
+  content: ""; flex: none; align-self: flex-end;
+  --notch: 3;
+  width: 38px; height: 13px;
+  background:
+    linear-gradient(var(--accent), var(--accent)) left bottom / 38px 1.5px no-repeat,
+    repeating-linear-gradient(90deg, var(--accent) 0 2px, transparent 2px 7px) left top / calc(var(--notch) * 7px) 11px no-repeat;
+}
+.swMain > .swSection:nth-of-type(1) h2::before { --notch: 1; }
+.swMain > .swSection:nth-of-type(2) h2::before { --notch: 2; }
+.swMain > .swSection:nth-of-type(3) h2::before { --notch: 3; }
+.swMain > .swSection:nth-of-type(4) h2::before { --notch: 4; }
+.swMain > .swSection:nth-of-type(5) h2::before { --notch: 5; }
+.swAbout p { margin-bottom: 1.5em; max-width: 36em; font-size: 16px; line-height: 2.1; letter-spacing: 0.04em; text-align: justify; }
+.swAbout p:last-child { margin-bottom: 0; }
+
+/* the work put forward */
+.swCards { display: flex; flex-direction: column; gap: var(--sw-item); }
+.swCard a { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 22px; align-items: start; }
+.swThumb { display: flex; align-items: flex-start; }
+.swThumb img { width: 100%; height: auto; border: 1px solid var(--rule); transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.swCard a:hover .swThumb img { transform: translate3d(0, -4px, 0); }
+.swCardText { display: flex; flex-direction: column; gap: 8px; }
+.swCardTitle { font-family: var(--font-mono); font-size: 18px; letter-spacing: 0.04em; transition: color 0.3s; }
+.swCard a:hover .swCardTitle { color: var(--accent); }
+.swCardLead { font-size: 14px; line-height: 1.9; letter-spacing: 0.02em; color: var(--ink-2); }
+.swTags { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-top: 2px; }
+.swTags li {
+  padding: 2px 8px; border: 1px solid var(--rule); border-radius: 2px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--ink-3);
+}
+.swMore, .swNote a { display: inline-block; margin-top: 32px; font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.14em; color: var(--ink); border-bottom: 1px solid var(--ink-3); }
+.swMore:hover, .swNote a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* where the work lives */
+.swOrgs ol { display: flex; flex-direction: column; }
+.swOrgs li a {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 4px 20px;
+  padding: 18px 0; border-bottom: 1px solid var(--rule);
+}
+.swOrgName { font-family: var(--font-mono); font-size: 16px; letter-spacing: 0.04em; transition: color 0.3s; }
+.swOrgs li a:hover .swOrgName { color: var(--accent); }
+.swOrgCount { font-family: var(--font-mono); font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.swOrgLead { grid-column: 1 / -1; font-size: 13px; line-height: 1.8; color: var(--ink-2); }
+
+/* what it is made with */
+.swStack dl { display: flex; flex-direction: column; }
+.swStackRow { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 4px 24px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.swStack dt { font-size: 13px; letter-spacing: 0.14em; color: var(--ink-2); }
+.swStack dd { font-family: var(--font-mono); font-size: 13px; line-height: 1.9; letter-spacing: 0.02em; }
+
+/* when it happened */
+.swTimeline ol { display: flex; flex-direction: column; gap: var(--sw-item); }
+.swTimeline li { display: grid; grid-template-columns: 7em minmax(0, 1fr); gap: 8px 24px; }
+.swWhen {
+  display: flex; align-items: baseline; gap: 9px;
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; color: var(--ink-3); padding-top: 4px; font-variant-numeric: tabular-nums;
+}
+/* one stroke across the stem for each year, as a year would be cut */
+.swWhen::before { content: ""; flex: none; width: 2px; height: 10px; background: var(--accent); }
+.swWhat { display: flex; flex-direction: column; gap: 8px; }
+.swWhatTitle { font-size: 17px; font-weight: 500; letter-spacing: 0.06em; }
+.swWhatLead { font-size: 14px; line-height: 1.95; letter-spacing: 0.02em; color: var(--ink-2); }
+.swNote { font-size: 12px; line-height: 1.9; letter-spacing: 0.03em; color: var(--ink-3); }
+
+@media (max-width: 1100px) {
+  .swInner { grid-template-columns: minmax(0, 1fr); gap: 56px; }
+  .swProfile { position: static; padding-bottom: 0; }
+  .swMain { gap: 72px; padding-top: 0; }
+}
+@media (max-width: 767px), (hover: none) {
+  .swe { padding: calc(var(--phone-bar) + 28px) 20px 80px; }
+  .swProfile { padding-top: 0; }
+  .swName { font-size: 30px; }
+  .swRole { font-size: 18px; }
+  .swCard a { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .swThumb img { width: 100%; }
+  .swTimeline li, .swStackRow { grid-template-columns: minmax(0, 1fr); }
+  .swSection h2 { letter-spacing: 0.22em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .swThumb img { transition: none; }
+}
+
+/* the same site in other languages, under the profile */
+.swLangs { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 14px; }
+.swLangs a, .swLangs .current { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.14em; color: var(--ink-3); transition: color 0.3s; }
+.swLangs a:hover { color: var(--accent); }
+.swLangs .current { color: var(--ink); border-bottom: 1px solid var(--ink-3); }
