@@ -54,9 +54,9 @@ export const FAMILIES = [
     short: { ja: "LLM の土台", en: "LLM groundwork", zh: "LLM 基础" },
     name: { ja: "エージェントと LLM の土台", en: "Agents, and groundwork for LLMs", zh: "智能体与 LLM 的基础" },
     intro: {
-      ja: "モデルを実際に使うために要るもの。統一の窓口（unillm・almai・unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、Almide で書いたエージェントの実行環境（homullus）、そして端末から複数のモデルを同じ口で叩く CLI（llmine）と、Mac を操作する手。",
-      en: "What it takes to actually use a model: one door to many providers (unillm, almai, unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus), a CLI that reaches many models through one mouth (llmine), and a hand that works a Mac.",
-      zh: "真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus），以及在终端用同一个口子调多个模型的 CLI（llmine）和操作 Mac 的手",
+      ja: "モデルを実際に使うために要るもの。どのプロバイダにも同じ顔で当たる窓口（unillm・almai）と音声入力の窓口（unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、Almide で書いたエージェントの実行環境（homullus）と Mac を操作する手（manus）、そして端末から複数のモデルを同じ口で叩く CLI（llmine）。",
+      en: "What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), and a CLI that reaches many models through one mouth (llmine).",
+      zh: "真正把模型用起来所需要的：对任何供应商都同一张脸的入口（unillm、almai）与语音入口（unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus），以及在终端用同一个口子调多个模型的 CLI（llmine）",
     },
     test: (p) =>
       p.owner === "almide-ai" ||

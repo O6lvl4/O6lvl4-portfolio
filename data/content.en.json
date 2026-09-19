@@ -2506,7 +2506,7 @@
    "id": "llm",
    "title": "Agents, and groundwork for LLMs",
    "short": "LLM groundwork",
-   "intro": "What it takes to actually use a model: one door to many providers (unillm, almai, unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus), a CLI that reaches many models through one mouth (llmine), and a hand that works a Mac.",
+   "intro": "What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), and a CLI that reaches many models through one mouth (llmine).",
    "figures": [
     {
      "value": "18",

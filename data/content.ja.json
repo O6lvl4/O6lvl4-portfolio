@@ -2506,7 +2506,7 @@
    "id": "llm",
    "title": "エージェントと LLM の土台",
    "short": "LLM の土台",
-   "intro": "モデルを実際に使うために要るもの。統一の窓口（unillm・almai・unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、Almide で書いたエージェントの実行環境（homullus）、そして端末から複数のモデルを同じ口で叩く CLI（llmine）と、Mac を操作する手。",
+   "intro": "モデルを実際に使うために要るもの。どのプロバイダにも同じ顔で当たる窓口（unillm・almai）と音声入力の窓口（unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、Almide で書いたエージェントの実行環境（homullus）と Mac を操作する手（manus）、そして端末から複数のモデルを同じ口で叩く CLI（llmine）。",
    "figures": [
     {
      "value": "18",

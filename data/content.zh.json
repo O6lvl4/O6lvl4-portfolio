@@ -2506,7 +2506,7 @@
    "id": "llm",
    "title": "智能体与 LLM 的基础",
    "short": "LLM 基础",
-   "intro": "真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus），以及在终端用同一个口子调多个模型的 CLI（llmine）和操作 Mac 的手",
+   "intro": "真正把模型用起来所需要的：对任何供应商都同一张脸的入口（unillm、almai）与语音入口（unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus），以及在终端用同一个口子调多个模型的 CLI（llmine）",
    "figures": [
     {
      "value": "18",
