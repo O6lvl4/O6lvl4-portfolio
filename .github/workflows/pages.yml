@@ -44,6 +44,10 @@ jobs:
     needs: quality
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
@@ -62,6 +66,39 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site
+      # The daily refresh keeps what it published: data/ and site/ in the repository stay the
+      # pages that are live, and the commit is the repository activity that keeps GitHub from
+      # disabling a schedule after 60 quiet days. A commit made with GITHUB_TOKEN never starts
+      # another workflow run, so recording the build cannot trigger a build. A push already
+      # carries its own change, and the deployment above is never held up by this record.
+      - name: Record the refreshed portfolio on main
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A data site
+          if git diff --cached --quiet; then
+            echo 'The refresh produced no change'
+            exit 0
+          fi
+          changed=$(git diff --cached --name-only | wc -l | tr -d ' ')
+          repositories=$(node -p 'require("./site/updated.json").repositories')
+          git commit -q \
+            -m "Refresh the portfolio from ${repositories} public repositories" \
+            -m "${changed} generated files, rebuilt and checked by ${GITHUB_WORKFLOW} run ${GITHUB_RUN_ID}."
+          for attempt in 1 2 3; do
+            if git push --quiet origin HEAD:main; then
+              echo "Recorded ${changed} files on main"
+              exit 0
+            fi
+            echo "main moved while this build ran (attempt ${attempt}); rebasing the record onto it"
+            git fetch --quiet origin main
+            git rebase -X theirs FETCH_HEAD || git rebase --abort || true
+            sleep 5
+          done
+          echo 'Could not record the refresh on main; the published site is unaffected'
+          exit 1
 
   deploy:
     needs: build

@@ -64,8 +64,9 @@ leaves the last successful deployment online. Removed or newly private repositor
 disappear on the next successful build. `updated.json` on the published site records
 the last successful build's time and repository count.
 
-No personal token or AI key is required: the workflow uses its read-only
-`GITHUB_TOKEN` for the public repository inventory. Existing translations in
+No personal token or AI key is required: the workflow uses its own `GITHUB_TOKEN`,
+which reads the public repository inventory and, in the build job alone, writes the
+refreshed `data/` and `site/` back to `main`. Existing translations in
 `data/summaries.json` are maintained editorially; new projects use their GitHub
 description or README excerpt in all languages until translations are added.
 Automatic builds render website screenshots or summary cards without executing
@@ -73,7 +74,13 @@ commands from the collected projects. They reuse the checked-in logo and share c
 
 The exact renderer is included in `vendor/uimodulay`, including the previously local
 fit implementation. A sibling checkout is no longer required to build the site.
-Generated updates are deployed as a Pages artifact and are not committed back to Git.
+Generated updates are deployed as a Pages artifact. A scheduled or manually started
+run also commits the `data/` and `site/` it published back to `main`, so the repository
+holds what is online and the daily activity keeps GitHub from disabling the schedule
+after 60 quiet days. Pushes deploy without such a commit, and a commit made with
+`GITHUB_TOKEN` starts no further run, so builds cannot chase their own commits.
+Recording is the last step: if `main` moved meanwhile the record is rebased onto it,
+and if it still cannot be pushed the deployment stands regardless.
 
 To run the same refresh locally (requires Node 22.23.1+, Git, authenticated `gh`,
 and enough temporary disk space for the repositories):
@@ -114,8 +121,8 @@ already there are skipped, so the run can be stopped and picked up again.
 The manual workflow above can still read clones under `~/workspace/github.com/<org>/<repo>`
 and use locally installed project commands and the local Claude login. `mine.mjs` also
 accepts `PORTFOLIO_CLONES` to select an isolated clone directory, as automatic refreshes do.
-`site/` is a checked-in snapshot; Pages publishes the freshly built artifact. `plates/`
-is not committed — it is derived.
+`site/` is a checked-in snapshot, kept current by the scheduled refresh; Pages publishes
+the freshly built artifact either way. `plates/` is not committed — it is derived.
 
 The two tab-separated inputs to `scripts/plan.mjs` come from the GitHub API:
 
