@@ -31,11 +31,6 @@
   --fg-faint: light-dark(oklch(0.68 0.008 250), oklch(0.42 0.008 250));
   --border: light-dark(oklch(0.88 0.004 250), oklch(0.22 0.006 260));
   --border-mid: light-dark(oklch(0.73 0.006 250), oklch(0.33 0.008 260));
-  --glass: light-dark(oklch(1 0 0 / 0.5), oklch(0.16 0.006 260 / 0.5));
-  --glass-thick: light-dark(oklch(1 0 0 / 0.7), oklch(0.13 0.006 260 / 0.7));
-  --glass-line: light-dark(oklch(0.04 0 0 / 0.08), oklch(1 0 0 / 0.1));
-  --glass-shine: light-dark(oklch(1 0 0 / 0.9), oklch(1 0 0 / 0.14));
-  --glass-shadow: light-dark(oklch(0.3 0.02 260 / 0.1), oklch(0 0 0 / 0.5));
   --ground: light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260));
   --ink: light-dark(oklch(0.04 0 0), oklch(0.96 0.002 250));
   --ink-2: light-dark(oklch(0.46 0.008 250), oklch(0.63 0.008 250));
@@ -48,6 +43,7 @@
   --bloom-2: light-dark(oklch(0.62 0.17 245 / 0.09), oklch(0.62 0.17 245 / 0.26));
   --bloom-3: light-dark(oklch(0.72 0.13 190 / 0.08), oklch(0.72 0.13 190 / 0.18));
   --grid-line: light-dark(oklch(0.04 0 0 / 0.045), oklch(0.96 0 0 / 0.07));
+  --panel-shadow: light-dark(oklch(0.3 0.02 260 / 0.07), oklch(0 0 0 / 0.4));
   --font-ogham: 'Noto Sans Ogham', serif;
   --font-display: 'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace;
   --font-body: 'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace;
@@ -1622,15 +1618,7 @@ h4.readme-h2 {
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
-.repo-list {
-  padding: 0.5rem 1.5rem;
-  border: 1px solid var(--glass-line);
-  border-radius: var(--radius);
-  background: var(--glass);
-  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
-  box-shadow: inset 0 1px 0 var(--glass-shine), 0 1px 2px var(--glass-shadow), 0 12px 32px -18px var(--glass-shadow);
-}
+.repo-list { padding: 0.5rem 1.5rem; }
 .repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
@@ -1645,22 +1633,21 @@ h4.readme-h2 {
   overflow-wrap: anywhere;
 }
 
-/* fit: oghma glass — the panels read as layers of glass over a lit ground, the way a system does
-   when its windows are translucent. It lies over the ported design and changes only surfaces:
-   what the glass is made of, what sits behind it to be blurred, and where the light catches. */
+/* fit: oghma surfaces — the panels sit as solid instruments on a lit ground. There is no blur
+   anywhere: a translucent pane costs a backdrop snapshot per frame, and the page is a list of
+   hundreds of lines that has to scroll. What is left is what the light was for — the field behind
+   the page, the hairline grid it is set out on, and the red that marks what is chosen. */
 
 :root {
-  --glass-blur: 22px;
   --radius: 14px;
   --radius-sm: 10px;
 }
 
-/* ── the ground the glass has something to blur ─────────────────────────── */
-/* The lit field is painted by the body's own layers, so the body itself must not paint over
-   them: the ground colour stays on `html`, where the canvas takes it from. */
+/* ── the lit ground ─────────────────────────────────────────────────────── */
+/* The field is painted by the body's own layers, so the body itself must not paint over them:
+   the ground colour stays on `html`, where the canvas takes it from. */
 body { background: transparent; }
 
-/* fixed, so every panel blurs the same lit field wherever the page is scrolled to */
 body::before {
   content: '';
   position: fixed;
@@ -1688,27 +1675,8 @@ body::after {
   mask-image: radial-gradient(150% 120% at 50% -10%, black, transparent 90%);
 }
 
-/* the hairline that says a bar is live, the way an instrument's own edge is lit */
-.site-header { position: sticky; }
-.site-header::after,
-.rail::after {
-  content: '';
-  position: absolute;
-  background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--red) 70%, transparent) 30%, color-mix(in oklch, var(--red) 70%, transparent) 70%, transparent);
-  pointer-events: none;
-}
-.site-header::after { inset: auto 0 -1px; height: 1px; }
-.rail { position: sticky; }
-.rail::after {
-  inset: 0 -1px 0 auto;
-  width: 1px;
-  background: linear-gradient(180deg, transparent, color-mix(in oklch, var(--red) 55%, transparent) 40%, transparent 85%);
-}
+/* ── the panels ─────────────────────────────────────────────────────────── */
 
-/* ── what glass is made of ──────────────────────────────────────────────── */
-
-.rail,
-.site-header,
 .instrument-panel,
 .stat-panel,
 .stage-plate,
@@ -1716,6 +1684,7 @@ body::after {
 .fam-card,
 .object-meta-panel,
 .readme-panel,
+.repo-list,
 .theme-toggle,
 .locale-switcher,
 .org-pill,
@@ -1723,14 +1692,9 @@ body::after {
 .lang-chip,
 .sort-bar,
 .org-rail .org-btn {
-  background: var(--glass);
-  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
-  border: 1px solid var(--glass-line);
-  box-shadow:
-    inset 0 1px 0 var(--glass-shine),
-    0 1px 2px var(--glass-shadow),
-    0 12px 32px -18px var(--glass-shadow);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px var(--panel-shadow);
 }
 
 .instrument-panel,
@@ -1739,6 +1703,7 @@ body::after {
 .fam-card,
 .object-meta-panel,
 .readme-panel,
+.repo-list,
 .stat-panel { border-radius: var(--radius); }
 .theme-toggle,
 .locale-switcher,
@@ -1747,18 +1712,11 @@ body::after {
 .lang-chip,
 .sort-bar { border-radius: var(--radius-sm); }
 
-/* the bars that stay put are thicker glass, because everything passes under them */
-.site-header,
-.rail {
-  background: var(--glass-thick);
-  backdrop-filter: blur(calc(var(--glass-blur) * 1.4)) saturate(200%);
-  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 1.4)) saturate(200%);
-  border-radius: 0;
-}
-.site-header { border-width: 0 0 1px; }
-.rail { border-width: 0 1px 0 0; }
+/* the bars that stay put are the ground's own colour, so nothing shows through them */
+.site-header { background: var(--bg); border-width: 0 0 1px; }
+.rail { background: var(--rail-bg); border-width: 0 1px 0 0; }
 
-/* inside a group, the pieces share one pane rather than each carrying their own */
+/* inside a group, the pieces share one panel rather than each carrying their own */
 .sort-bar,
 .theme-toggle,
 .locale-switcher { overflow: hidden; }
@@ -1768,22 +1726,19 @@ body::after {
   background: transparent;
   border: 0;
   box-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
 }
 .sort-bar .sort-btn + .sort-btn,
 .theme-toggle .theme-icon-btn + .theme-icon-btn,
-.locale-switcher .locale-btn + .locale-btn { border-left: 1px solid var(--glass-line); }
+.locale-switcher .locale-btn + .locale-btn { border-left: 1px solid var(--border); }
 .sort-btn.active,
 .theme-icon-btn.active,
-.locale-btn.active { background: color-mix(in oklch, var(--fg) 8%, transparent); }
+.locale-btn.active { background: var(--bg-subtle); }
 
-/* the grid of panes in the families keeps its hairlines, but each pane is glass */
+/* the grid of panes in the families keeps its hairlines, each pane its own panel */
 .fam-grid { background: transparent; border: 0; gap: var(--col-gap); }
 
-/* a row of the list is not glass — two hundred panes of it would cost more than it says */
 .repo-item { border-radius: var(--radius-sm); }
-.repo-item:hover { background: color-mix(in oklch, var(--bg-raised) 70%, transparent); }
+.repo-item:hover { background: var(--bg-subtle); }
 
 /* ── where the light catches ─────────────────────────────────────────────── */
 
@@ -1793,56 +1748,45 @@ body::after {
 .org-pill:hover,
 .show-more-btn:hover,
 .lang-chip:hover {
-  border-color: color-mix(in oklch, var(--fg) 18%, transparent);
-  box-shadow:
-    inset 0 1px 0 var(--glass-shine),
-    0 2px 4px var(--glass-shadow),
-    0 18px 40px -20px var(--glass-shadow);
+  border-color: var(--border-mid);
+  box-shadow: 0 2px 6px var(--panel-shadow);
 }
 
 /* the red index mark carries a little light of its own */
-.rail-dot {
-  box-shadow: 0 0 0 0 color-mix(in oklch, var(--red) 40%, transparent), 0 0 14px 2px color-mix(in oklch, var(--red) 55%, transparent);
-}
-.hdr-callsign::before { box-shadow: 0 0 12px 1px color-mix(in oklch, var(--red) 60%, transparent); }
-.tl-bar.current { box-shadow: 0 0 24px -4px color-mix(in oklch, var(--red) 70%, transparent); }
-.stage-plate::before { box-shadow: 0 0 18px -2px color-mix(in oklch, var(--red) 65%, transparent); }
+.rail-dot { box-shadow: 0 0 12px 1px color-mix(in oklch, var(--red) 45%, transparent); }
+.hdr-callsign::before { box-shadow: 0 0 10px 1px color-mix(in oklch, var(--red) 50%, transparent); }
+.tl-bar.current { box-shadow: 0 0 20px -6px color-mix(in oklch, var(--red) 60%, transparent); }
 
-/* code and terminal output sit under the glass, not on it */
+/* the hairline that says a bar is live, the way an instrument's own edge is lit */
+.site-header { position: sticky; }
+.site-header::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--red) 70%, transparent) 30%, color-mix(in oklch, var(--red) 70%, transparent) 70%, transparent);
+}
+.rail { position: sticky; }
+.rail::after {
+  content: '';
+  position: absolute;
+  inset: 0 -1px 0 auto;
+  width: 1px;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, color-mix(in oklch, var(--red) 55%, transparent) 40%, transparent 85%);
+}
+
+/* code and terminal output sit inside a panel, not on it */
 .readme-code {
   border-radius: var(--radius-sm);
-  background: color-mix(in oklch, var(--fg) 6%, transparent);
-  border: 1px solid var(--glass-line);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
 }
 
-/* the plate of a work opened in full keeps the pane's rounded corner */
+/* the plate of a work opened in full keeps the panel's rounded corner */
 .readme-shot { border-radius: var(--radius) var(--radius) 0 0; overflow: hidden; }
-
-/* a card lifted onto glass no longer needs the section's own paint */
 .stage-plate { overflow: hidden; }
-
-@media (prefers-reduced-transparency: reduce) {
-  .rail,
-  .site-header,
-  .instrument-panel,
-  .stat-panel,
-  .stage-plate,
-  .kpi-card,
-  .fam-card,
-  .object-meta-panel,
-  .readme-panel,
-  .theme-toggle,
-  .locale-switcher,
-  .org-pill,
-  .show-more-btn,
-  .lang-chip,
-  .sort-bar {
-    background: var(--bg-raised);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-  body::after { display: none; }
-}
 
 </style>
 </head>
