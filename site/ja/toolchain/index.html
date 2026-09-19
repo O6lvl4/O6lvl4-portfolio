@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1915,75 +1938,90 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="言語"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">すべて</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Python" aria-pressed="false"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="仕事"><li class="repo-item" data-org="toolchain" data-lang="Rust" data-name="qusp" data-date="2026-07-07" data-commits="95" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/qusp" target="_blank" rel="noopener noreferrer">qusp</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/qusp" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">qusp</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">qusp.tomlで23言語のツールチェーンを並列導入するRust製マネージャ</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li><li class="repo-topic">cli</li></ul>
         </div>
-        <p class="repo-desc">qusp.tomlで23言語のツールチェーンを並列導入するRust製マネージャ</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li><li class="repo-topic">cli</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">95<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-07-07">2026年7月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">95<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-07-07">2026年7月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="toolchain" data-lang="Rust" data-name="gv" data-date="2026-04-28" data-commits="18" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gv" target="_blank" rel="noopener noreferrer">gv</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gv" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gv</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">uv級の速度でGoの版とツールを管理するRust製シングルバイナリ</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">cli</li><li class="repo-topic">developer-tools</li></ul>
         </div>
-        <p class="repo-desc">uv級の速度でGoの版とツールを管理するRust製シングルバイナリ</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">cli</li><li class="repo-topic">developer-tools</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">18<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-04-28">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">18<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-04-28">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="toolchain" data-lang="" data-name="php-build-standalone" data-date="2026-04-29" data-commits="13" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/php-build-standalone" target="_blank" rel="noopener noreferrer">php-build-standalone</a>
-          <span class="repo-org-tag">O6lvl4</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/php-build-standalone" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">php-build-standalone</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            
+          </div>
+          <p class="repo-desc">静的リンク済みPHPバイナリを各プラットフォーム向けに配布するプロジェクト</p>
           
         </div>
-        <p class="repo-desc">静的リンク済みPHPバイナリを各プラットフォーム向けに配布するプロジェクト</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">13<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-04-29">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">13<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-04-29">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="toolchain" data-lang="Rust" data-name="anyv-core" data-date="2026-05-09" data-commits="4" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/anyv-core" target="_blank" rel="noopener noreferrer">anyv-core</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/anyv-core" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">anyv-core</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">gv・rvなど*v系ツールチェーン管理の共通基盤Rustクレート</p>
+          <ul class="repo-topics"><li class="repo-topic">developer-tools</li><li class="repo-topic">library</li><li class="repo-topic">rust</li></ul>
         </div>
-        <p class="repo-desc">gv・rvなど*v系ツールチェーン管理の共通基盤Rustクレート</p>
-        <ul class="repo-topics"><li class="repo-topic">developer-tools</li><li class="repo-topic">library</li><li class="repo-topic">rust</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-09">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-09">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="toolchain" data-lang="Python" data-name="homebrew-tap" data-date="2026-08-08" data-commits="56" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/homebrew-tap" target="_blank" rel="noopener noreferrer">homebrew-tap</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/homebrew-tap" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">homebrew-tap</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+          </div>
+          <p class="repo-desc">@O6lvl4のHomebrewフォーミュラを配布するtap</p>
+          <ul class="repo-topics"><li class="repo-topic">Ruby</li><li class="repo-topic">developer-tools</li><li class="repo-topic">golang</li></ul>
         </div>
-        <p class="repo-desc">@O6lvl4のHomebrewフォーミュラを配布するtap</p>
-        <ul class="repo-topics"><li class="repo-topic">Ruby</li><li class="repo-topic">developer-tools</li><li class="repo-topic">golang</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">56<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-08-08">2026年8月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">56<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-08-08">2026年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

@@ -108,8 +108,7 @@
  "landing": {
   "about": [
    "I build Almide, a statically-typed language. The compiler is written in Rust; its specification, grammar, editor support and runtimes each live in their own repository.",
-   "Then I write my tools in it: hew reads code by structure, gramide builds syntax trees, codopsy measures code quality, porta runs agents inside a sandbox. Each one started as something I needed that day.",
-   "265 repositories are public, 13,793 commits in all."
+   "Then I write my tools in it: hew reads code by structure, gramide builds syntax trees, codopsy measures code quality, porta runs agents inside a sandbox. Each one started as something I needed that day."
   ],
   "stack": [
    {
@@ -208,14 +207,6 @@
    {
     "key": "Last touched",
     "value": "gramide · Sep 2026"
-   },
-   {
-    "key": "Public repos",
-    "value": "265"
-   },
-   {
-    "key": "Commits total",
-    "value": "13,793"
    },
    {
     "key": "Written in Almide",

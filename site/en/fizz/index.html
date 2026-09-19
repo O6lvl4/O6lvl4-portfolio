@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1915,733 +1938,889 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="Language"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">All</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-protocol" data-date="2026-06-15" data-commits="7" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-protocol" target="_blank" rel="noopener noreferrer">fizz-protocol</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-protocol" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-protocol</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Shared wire contracts for Fizz, an AITuber system in Almide, used by all its components</p>
+          
         </div>
-        <p class="repo-desc">Shared wire contracts for Fizz, an AITuber system in Almide, used by all its components</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-llm-client" data-date="2026-06-14" data-commits="3" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-llm-client" target="_blank" rel="noopener noreferrer">fizz-llm-client</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-llm-client" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-llm-client</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Multi-provider LLM client in Almide for the Fizz AITuber system&#39;s brain component.</p>
+          
         </div>
-        <p class="repo-desc">Multi-provider LLM client in Almide for the Fizz AITuber system&#39;s brain component.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-prompt-builder" data-date="2026-06-14" data-commits="3" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-prompt-builder" target="_blank" rel="noopener noreferrer">fizz-prompt-builder</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-prompt-builder" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-prompt-builder</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide library for Fizz that assembles LLM messages from persona, recall, few-shot, history and a comment</p>
+          
         </div>
-        <p class="repo-desc">Almide library for Fizz that assembles LLM messages from persona, recall, few-shot, history and a comment</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-persona" data-date="2026-06-14" data-commits="3" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-persona" target="_blank" rel="noopener noreferrer">fizz-persona</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-persona" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-persona</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide package defining the on-disk persona format contract for the Fizz AITuber system</p>
+          
         </div>
-        <p class="repo-desc">Almide package defining the on-disk persona format contract for the Fizz AITuber system</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-conversation-history" data-date="2026-06-14" data-commits="3" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-conversation-history" target="_blank" rel="noopener noreferrer">fizz-conversation-history</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-conversation-history" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-conversation-history</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz AITuber brain component in Almide: windowed in-memory history of the last N turns</p>
+          
         </div>
-        <p class="repo-desc">Fizz AITuber brain component in Almide: windowed in-memory history of the last N turns</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-brain-orchestrator" data-date="2026-06-14" data-commits="4" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-brain-orchestrator" target="_blank" rel="noopener noreferrer">fizz-brain-orchestrator</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-brain-orchestrator" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-brain-orchestrator</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz brain CLI that composes the pipeline turning each comment into sentence fragments on stdout</p>
+          
         </div>
-        <p class="repo-desc">Fizz brain CLI that composes the pipeline turning each comment into sentence fragments on stdout</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-thinking-cue-detector" data-date="2026-06-14" data-commits="2" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-thinking-cue-detector" target="_blank" rel="noopener noreferrer">fizz-thinking-cue-detector</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-thinking-cue-detector" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-thinking-cue-detector</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz brain component in Almide that decides whether a spoken sentence triggers thinking motion</p>
+          
         </div>
-        <p class="repo-desc">Fizz brain component in Almide that decides whether a spoken sentence triggers thinking motion</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-stream-sentence-parser" data-date="2026-06-14" data-commits="2" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-stream-sentence-parser" target="_blank" rel="noopener noreferrer">fizz-stream-sentence-parser</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-stream-sentence-parser" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-stream-sentence-parser</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz brain component in Almide that splits LLM output into sentences and inline tags.</p>
+          
         </div>
-        <p class="repo-desc">Fizz brain component in Almide that splits LLM output into sentences and inline tags.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-first-time-greeter" data-date="2026-06-14" data-commits="2" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-first-time-greeter" target="_blank" rel="noopener noreferrer">fizz-first-time-greeter</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-first-time-greeter" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-first-time-greeter</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Deterministic Almide brain component for Fizz, the AITuber, giving first-time viewers a one-time self-intro</p>
+          
         </div>
-        <p class="repo-desc">Deterministic Almide brain component for Fizz, the AITuber, giving first-time viewers a one-time self-intro</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-few-shot-retriever" data-date="2026-06-14" data-commits="2" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-few-shot-retriever" target="_blank" rel="noopener noreferrer">fizz-few-shot-retriever</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-few-shot-retriever" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-few-shot-retriever</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide library for Fizz that retrieves the top-k past Q/A examples similar to an incoming comment</p>
+          
         </div>
-        <p class="repo-desc">Almide library for Fizz that retrieves the top-k past Q/A examples similar to an incoming comment</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-comment-classifier" data-date="2026-06-14" data-commits="2" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-comment-classifier" target="_blank" rel="noopener noreferrer">fizz-comment-classifier</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-comment-classifier" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-comment-classifier</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide library for Fizz that classifies a comment into a reaction Emotion by keyword rules</p>
+          
         </div>
-        <p class="repo-desc">Almide library for Fizz that classifies a comment into a reaction Emotion by keyword rules</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-tweet-validator" data-date="2026-06-14" data-commits="3" data-rank="11">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-tweet-validator" target="_blank" rel="noopener noreferrer">fizz-tweet-validator</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-tweet-validator" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-tweet-validator</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Counts X (twitter-text) weighted characters and checks tweets against the 280 limit.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Counts X (twitter-text) weighted characters and checks tweets against the 280 limit.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-api" data-date="2026-06-14" data-commits="3" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-api" target="_blank" rel="noopener noreferrer">fizz-memory-api</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-memory-api" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-memory-api</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz&#39;s memory HTTP service exposing note, recall, search, wipe and users over a JSONL log</p>
+          
         </div>
-        <p class="repo-desc">Fizz&#39;s memory HTTP service exposing note, recall, search, wipe and users over a JSONL log</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l3-summarizer" data-date="2026-06-14" data-commits="3" data-rank="13">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-l3-summarizer" target="_blank" rel="noopener noreferrer">fizz-memory-l3-summarizer</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-memory-l3-summarizer" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-memory-l3-summarizer</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz memory layer L3 that rolls a per-user summary via an LLM once events pass a threshold</p>
+          
         </div>
-        <p class="repo-desc">Fizz memory layer L3 that rolls a per-user summary via an LLM once events pass a threshold</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-youtube-chat-source" data-date="2026-06-14" data-commits="4" data-rank="14">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-youtube-chat-source" target="_blank" rel="noopener noreferrer">fizz-youtube-chat-source</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-youtube-chat-source" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-youtube-chat-source</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Read-only Fizz component that polls YouTube Live Chat and streams normalized Comment NDJSON to stdout</p>
+          
         </div>
-        <p class="repo-desc">Read-only Fizz component that polls YouTube Live Chat and streams normalized Comment NDJSON to stdout</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-x-mention-source" data-date="2026-06-14" data-commits="4" data-rank="15">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-x-mention-source" target="_blank" rel="noopener noreferrer">fizz-x-mention-source</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-x-mention-source" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-x-mention-source</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz input component that polls X mentions via an XAPI proxy and streams Comment NDJSON to stdout</p>
+          
         </div>
-        <p class="repo-desc">Fizz input component that polls X mentions via an XAPI proxy and streams Comment NDJSON to stdout</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-twitch-chat-source" data-date="2026-06-14" data-commits="4" data-rank="16">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-twitch-chat-source" target="_blank" rel="noopener noreferrer">fizz-twitch-chat-source</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-twitch-chat-source" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-twitch-chat-source</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz input component that reads Twitch chat anonymously and streams normalized Comment NDJSON to stdout</p>
+          
         </div>
-        <p class="repo-desc">Fizz input component that reads Twitch chat anonymously and streams normalized Comment NDJSON to stdout</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-manual-comment-input" data-date="2026-06-14" data-commits="4" data-rank="17">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-manual-comment-input" target="_blank" rel="noopener noreferrer">fizz-manual-comment-input</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-manual-comment-input" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-manual-comment-input</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz comment source that turns operator stdin lines into normalized Manual Comment NDJSON</p>
+          
         </div>
-        <p class="repo-desc">Fizz comment source that turns operator stdin lines into normalized Manual Comment NDJSON</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-lipsync" data-date="2026-06-14" data-commits="4" data-rank="18">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-lipsync" target="_blank" rel="noopener noreferrer">fizz-lipsync</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-lipsync" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-lipsync</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Lipsync DSP core for Fizz: turns audio RMS into a smooth mouth-open value in [0,1].</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Lipsync DSP core for Fizz: turns audio RMS into a smooth mouth-open value in [0,1].</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-comment-dedupe" data-date="2026-06-14" data-commits="4" data-rank="19">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-comment-dedupe" target="_blank" rel="noopener noreferrer">fizz-comment-dedupe</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-comment-dedupe" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-comment-dedupe</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">A pure NDJSON pipe filter for Fizz that drops already-seen comment IDs from a comment stream.</p>
+          
         </div>
-        <p class="repo-desc">A pure NDJSON pipe filter for Fizz that drops already-seen comment IDs from a comment stream.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-speak-queue" data-date="2026-06-15" data-commits="1" data-rank="20">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-speak-queue" target="_blank" rel="noopener noreferrer">fizz-speak-queue</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-speak-queue" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-speak-queue</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide state machine and boundary-event logic for sequential playback of LLM-streamed TTS clips</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Almide state machine and boundary-event logic for sequential playback of LLM-streamed TTS clips</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-effect-checker" data-date="2026-06-15" data-commits="1" data-rank="21">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-effect-checker" target="_blank" rel="noopener noreferrer">fizz-effect-checker</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-effect-checker" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-effect-checker</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Static checker verifying a plan&#39;s used effects fall within a persona&#39;s allowed effect set.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Static checker verifying a plan&#39;s used effects fall within a persona&#39;s allowed effect set.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-response-transformer" data-date="2026-06-15" data-commits="1" data-rank="22">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-response-transformer" target="_blank" rel="noopener noreferrer">fizz-response-transformer</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-response-transformer" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-response-transformer</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Catalog lookup and weighted selection of kotodama response transforms, in Almide (native + wasm)</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Catalog lookup and weighted selection of kotodama response transforms, in Almide (native + wasm)</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-trigger-matcher" data-date="2026-06-15" data-commits="1" data-rank="23">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-trigger-matcher" target="_blank" rel="noopener noreferrer">fizz-trigger-matcher</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-trigger-matcher" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-trigger-matcher</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Substring-match engine that picks suggested transform priors from a persona&#39;s triggers for an input.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Substring-match engine that picks suggested transform priors from a persona&#39;s triggers for an input.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-dataset" data-date="2026-06-15" data-commits="2" data-rank="24">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-eval-dataset" target="_blank" rel="noopener noreferrer">fizz-eval-dataset</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-eval-dataset" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-eval-dataset</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Schema and row validation for comment/reply eval-set TSVs, written in Almide for native and wasm.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Schema and row validation for comment/reply eval-set TSVs, written in Almide for native and wasm.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-score" data-date="2026-06-15" data-commits="1" data-rank="25">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-eval-score" target="_blank" rel="noopener noreferrer">fizz-eval-score</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-eval-score" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-eval-score</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide arithmetic core for kotodama-eval score aggregation, built for native and wasm</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Almide arithmetic core for kotodama-eval score aggregation, built for native and wasm</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-rubric" data-date="2026-06-15" data-commits="1" data-rank="26">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-eval-rubric" target="_blank" rel="noopener noreferrer">fizz-eval-rubric</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-eval-rubric" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-eval-rubric</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Canonical 7-axis kotodama-eval rubric: axis metadata and composite weights, in Almide.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Canonical 7-axis kotodama-eval rubric: axis metadata and composite weights, in Almide.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-glb-container" data-date="2026-06-15" data-commits="1" data-rank="27">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-glb-container" target="_blank" rel="noopener noreferrer">fizz-glb-container</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-glb-container" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-glb-container</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide core that parses GLB/VRM container headers into chunk offsets and lengths.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Almide core that parses GLB/VRM container headers into chunk offsets and lengths.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-color-tint" data-date="2026-06-15" data-commits="1" data-rank="28">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-color-tint" target="_blank" rel="noopener noreferrer">fizz-color-tint</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-color-tint" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-color-tint</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Pure color-conversion core for recoloring irises in PSD eye textures, built for native and wasm</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Pure color-conversion core for recoloring irises in PSD eye textures, built for native and wasm</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-idle-motion" data-date="2026-06-15" data-commits="2" data-rank="29">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-idle-motion" target="_blank" rel="noopener noreferrer">fizz-idle-motion</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-idle-motion" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-idle-motion</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Idle-motion core computing avatar blink, breath and sway as pure functions of wall-clock time t</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Idle-motion core computing avatar blink, breath and sway as pure functions of wall-clock time t</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-weather-codes" data-date="2026-06-15" data-commits="2" data-rank="30">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-weather-codes" target="_blank" rel="noopener noreferrer">fizz-weather-codes</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-weather-codes" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-weather-codes</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide library mapping Open-Meteo WMO weather codes to Japanese TTS labels and detecting weather queries</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Almide library mapping Open-Meteo WMO weather codes to Japanese TTS labels and detecting weather queries</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-x-dummy-feed" data-date="2026-06-14" data-commits="1" data-rank="31">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-x-dummy-feed" target="_blank" rel="noopener noreferrer">fizz-x-dummy-feed</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-x-dummy-feed" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-x-dummy-feed</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Pure simulation logic of Fizz&#39;s dummy X mention feed, written in Almide for native and wasm.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Pure simulation logic of Fizz&#39;s dummy X mention feed, written in Almide for native and wasm.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-layout-scope" data-date="2026-06-14" data-commits="1" data-rank="32">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-layout-scope" target="_blank" rel="noopener noreferrer">fizz-layout-scope</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-layout-scope" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-layout-scope</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide library resolving Fizz landscape/portrait scope to namespace position-config keys</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Almide library resolving Fizz landscape/portrait scope to namespace position-config keys</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-bgm-player" data-date="2026-06-14" data-commits="1" data-rank="33">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-bgm-player" target="_blank" rel="noopener noreferrer">fizz-bgm-player</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-bgm-player" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-bgm-player</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Playlist navigation for Fizz BGM: picks the next, previous or shuffled track index from a count.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Playlist navigation for Fizz BGM: picks the next, previous or shuffled track index from a count.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-reply-paginator" data-date="2026-06-14" data-commits="1" data-rank="34">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-reply-paginator" target="_blank" rel="noopener noreferrer">fizz-reply-paginator</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-reply-paginator" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-reply-paginator</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide core that splits AI reply text into display chunks at sentence and clause boundaries.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Almide core that splits AI reply text into display chunks at sentence and clause boundaries.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-ws-reconnect" data-date="2026-06-14" data-commits="1" data-rank="35">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-ws-reconnect" target="_blank" rel="noopener noreferrer">fizz-ws-reconnect</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-ws-reconnect" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-ws-reconnect</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Computes Fizz WebSocket reconnect delays using exponential backoff, a cap and equal jitter.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Computes Fizz WebSocket reconnect delays using exponential backoff, a cap and equal jitter.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-liveness-monitor" data-date="2026-06-14" data-commits="1" data-rank="36">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-liveness-monitor" target="_blank" rel="noopener noreferrer">fizz-liveness-monitor</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-liveness-monitor" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-liveness-monitor</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz&#39;s liveness core that judges WS connection ping/pong death on every tick, in Almide.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz&#39;s liveness core that judges WS connection ping/pong death on every tick, in Almide.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-env-loader" data-date="2026-06-14" data-commits="2" data-rank="37">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-env-loader" target="_blank" rel="noopener noreferrer">fizz-env-loader</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-env-loader" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-env-loader</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide core for Fizz that parses .env text into KEY=VALUE pairs, built as a native binary</p>
+          
         </div>
-        <p class="repo-desc">Almide core for Fizz that parses .env text into KEY=VALUE pairs, built as a native binary</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-http-router" data-date="2026-06-14" data-commits="2" data-rank="38">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-http-router" target="_blank" rel="noopener noreferrer">fizz-http-router</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-http-router" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-http-router</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz HTTP dispatch core mapping (method, path) to a route id via ordered method+prefix matching</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz HTTP dispatch core mapping (method, path) to a route id via ordered method+prefix matching</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-audio-leader-elector" data-date="2026-06-14" data-commits="1" data-rank="39">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-audio-leader-elector" target="_blank" rel="noopener noreferrer">fizz-audio-leader-elector</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-audio-leader-elector" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-audio-leader-elector</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Audio-leader election core that picks one playback leader among multiple viewer tabs.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Audio-leader election core that picks one playback leader among multiple viewer tabs.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-expression-applier" data-date="2026-06-14" data-commits="1" data-rank="40">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-expression-applier" target="_blank" rel="noopener noreferrer">fizz-expression-applier</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-expression-applier" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-expression-applier</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Expression-applier core for Fizz: maps emotion names to VRM channels and weights, clamped to [0,1].</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Expression-applier core for Fizz: maps emotion names to VRM channels and weights, clamped to [0,1].</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-command-applier" data-date="2026-06-14" data-commits="1" data-rank="41">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-command-applier" target="_blank" rel="noopener noreferrer">fizz-command-applier</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-command-applier" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-command-applier</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Routing core that maps wire-protocol avatar Command types to their handling subsystem, in Almide</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Routing core that maps wire-protocol avatar Command types to their handling subsystem, in Almide</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-mixamo-retargeter" data-date="2026-06-14" data-commits="1" data-rank="42">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-mixamo-retargeter" target="_blank" rel="noopener noreferrer">fizz-mixamo-retargeter</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-mixamo-retargeter" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-mixamo-retargeter</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Quaternion retargeting core in Almide that maps Mixamo animation onto VRM bones, native and wasm.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Quaternion retargeting core in Almide that maps Mixamo animation onto VRM bones, native and wasm.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-fbx-rig-normalizer" data-date="2026-06-14" data-commits="1" data-rank="43">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-fbx-rig-normalizer" target="_blank" rel="noopener noreferrer">fizz-fbx-rig-normalizer</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-fbx-rig-normalizer" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-fbx-rig-normalizer</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Rig normalizer core that maps raw FBX bone names to VRM humanoid slots, native and wasm.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Rig normalizer core that maps raw FBX bone names to VRM humanoid slots, native and wasm.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-camera-presets" data-date="2026-06-14" data-commits="1" data-rank="44">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-camera-presets" target="_blank" rel="noopener noreferrer">fizz-camera-presets</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-camera-presets" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-camera-presets</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Camera preset core for Fizz: computes face/upper/full camera position and look-at, plus easing.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Camera preset core for Fizz: computes face/upper/full camera position and look-at, plus easing.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-gesture-player" data-date="2026-06-14" data-commits="1" data-rank="45">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-gesture-player" target="_blank" rel="noopener noreferrer">fizz-gesture-player</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-gesture-player" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-gesture-player</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz&#39;s DSP core that computes bone offsets for one-shot gestures from a gesture ID and progress u.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz&#39;s DSP core that computes bone offsets for one-shot gestures from a gesture ID and progress u.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-session-tracker" data-date="2026-06-14" data-commits="2" data-rank="46">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-session-tracker" target="_blank" rel="noopener noreferrer">fizz-session-tracker</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-session-tracker" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-session-tracker</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz stream session tracker that marks start/end boundaries and counts per-user participation.</p>
+          
         </div>
-        <p class="repo-desc">Fizz stream session tracker that marks start/end boundaries and counts per-user participation.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-recall-gate" data-date="2026-06-14" data-commits="2" data-rank="47">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-recall-gate" target="_blank" rel="noopener noreferrer">fizz-recall-gate</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-recall-gate" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-recall-gate</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz recall gate that trims RecallResult to the brain&#39;s budget and supplies a memory-less fallback</p>
+          
         </div>
-        <p class="repo-desc">Fizz recall gate that trims RecallResult to the brain&#39;s budget and supplies a memory-less fallback</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-reading-corrector" data-date="2026-06-14" data-commits="2" data-rank="48">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-reading-corrector" target="_blank" rel="noopener noreferrer">fizz-reading-corrector</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-reading-corrector" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-reading-corrector</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Pre-TTS filter for Fizz that replaces kanji with kana to fix readings of names and tricky words</p>
+          
         </div>
-        <p class="repo-desc">Pre-TTS filter for Fizz that replaces kanji with kana to fix readings of names and tricky words</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l2-events" data-date="2026-06-14" data-commits="2" data-rank="49">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-l2-events" target="_blank" rel="noopener noreferrer">fizz-memory-l2-events</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-memory-l2-events" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-memory-l2-events</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">L2 persistence layer of Fizz memory: append-only NDJSON event log queryable per user_id</p>
+          
         </div>
-        <p class="repo-desc">L2 persistence layer of Fizz memory: append-only NDJSON event log queryable per user_id</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l1-ring" data-date="2026-06-14" data-commits="2" data-rank="50">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-l1-ring" target="_blank" rel="noopener noreferrer">fizz-memory-l1-ring</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-memory-l1-ring" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-memory-l1-ring</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz&#39;s L1 memory: an in-memory per-user ring of recent MemoryEvents that answers recall instantly.</p>
+          
         </div>
-        <p class="repo-desc">Fizz&#39;s L1 memory: an in-memory per-user ring of recent MemoryEvents that answers recall instantly.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="animula" data-date="2026-04-17" data-commits="2" data-rank="51">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/animula" target="_blank" rel="noopener noreferrer">animula</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/animula" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">animula</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">AI VTuber framework written in Almide, with a single native Rust host for rendering and I/O</p>
+          <ul class="repo-topics"><li class="repo-topic">Rust</li></ul>
         </div>
-        <p class="repo-desc">AI VTuber framework written in Almide, with a single native Rust host for rendering and I/O</p>
-        <ul class="repo-topics"><li class="repo-topic">Rust</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-04-17">Apr 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-04-17">Apr 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

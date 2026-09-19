@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1928,159 +1951,192 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="Language"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">All</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="aid-on-ui-system" data-date="2026-09-06" data-commits="42" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/aid-on-ui-system" target="_blank" rel="noopener noreferrer">aid-on-ui-system</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/aid-on-ui-system" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">aid-on-ui-system</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A repository named aid-on-ui-system2, apparently a UI system; its README gives no details</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">A repository named aid-on-ui-system2, apparently a UI system; its README gives no details</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">42<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">42<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="nagare" data-date="2026-06-11" data-commits="22" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/nagare" target="_blank" rel="noopener noreferrer">nagare</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/nagare" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">nagare</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A TypeScript stream library where Stream&lt;T&gt; is a ReadableStream, with reactive operators for the edge</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">edge-computing</li><li class="repo-topic">readablestream</li></ul>
         </div>
-        <p class="repo-desc">A TypeScript stream library where Stream&lt;T&gt; is a ReadableStream, with reactive operators for the edge</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">edge-computing</li><li class="repo-topic">readablestream</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">22<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">22<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="qwiks" data-date="2026-09-06" data-commits="8" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/qwiks" target="_blank" rel="noopener noreferrer">qwiks</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/qwiks" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">qwiks</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Hook library that bridges nagare Stream&lt;T&gt; to Qwik Signals for reactive stream handling.</p>
+          
         </div>
-        <p class="repo-desc">Hook library that bridges nagare Stream&lt;T&gt; to Qwik Signals for reactive stream handling.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="outline-api-client-ts" data-date="2026-09-06" data-commits="7" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/outline-api-client-ts" target="_blank" rel="noopener noreferrer">outline-api-client-ts</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/outline-api-client-ts" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">outline-api-client-ts</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A type-safe TypeScript client library for the Outline knowledge base API, built for Node.js.</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">CSS</li></ul>
         </div>
-        <p class="repo-desc">A type-safe TypeScript client library for the Outline knowledge base API, built for Node.js.</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="design-system" data-date="2026-06-11" data-commits="8" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/design-system" target="_blank" rel="noopener noreferrer">design-system</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/design-system" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">design-system</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A type-safe color token system with light/dark theming for Qwik applications.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">A type-safe color token system with light/dark theming for Qwik applications.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="didoq" data-date="2026-06-10" data-commits="8" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/didoq" target="_blank" rel="noopener noreferrer">didoq</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/didoq" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">didoq</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Distributed job queue for Cloudflare Workers, D1 and Durable Objects with a fluent API and nagare Stream.</p>
+          <ul class="repo-topics"><li class="repo-topic">SQL</li><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Distributed job queue for Cloudflare Workers, D1 and Durable Objects with a fluent API and nagare Stream.</p>
-        <ul class="repo-topics"><li class="repo-topic">SQL</li><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-10">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-10">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="auth" data-date="2026-06-11" data-commits="3" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/auth" target="_blank" rel="noopener noreferrer">auth</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/auth" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">auth</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Edge-native auth library for Cloudflare Workers with a Fluent API, using only Web Crypto.</p>
+          
         </div>
-        <p class="repo-desc">Edge-native auth library for Cloudflare Workers with a Fluent API, using only Web Crypto.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="JavaScript" data-name="zod-to-markdown" data-date="2024-03-26" data-commits="6" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/zod-to-markdown" target="_blank" rel="noopener noreferrer">zod-to-markdown</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/zod-to-markdown" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">zod-to-markdown</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">A utility function that converts Zod schemas into Markdown documentation.</p>
+          <ul class="repo-topics"><li class="repo-topic">TypeScript</li></ul>
         </div>
-        <p class="repo-desc">A utility function that converts Zod schemas into Markdown documentation.</p>
-        <ul class="repo-topics"><li class="repo-topic">TypeScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2024-03-26">Mar 2024</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2024-03-26">Mar 2024</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="auth-providers-ts" data-date="2025-08-23" data-commits="3" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/auth-providers-ts" target="_blank" rel="noopener noreferrer">auth-providers-ts</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/auth-providers-ts" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">auth-providers-ts</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Framework-agnostic OAuth 2.0 authentication providers for cloud, edge and server runtimes.</p>
+          
         </div>
-        <p class="repo-desc">Framework-agnostic OAuth 2.0 authentication providers for cloud, edge and server runtimes.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-08-23">Aug 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-08-23">Aug 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="next-auth-providers" data-date="2025-08-23" data-commits="1" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/next-auth-providers" target="_blank" rel="noopener noreferrer">next-auth-providers</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/next-auth-providers" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">next-auth-providers</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">NextAuth.js authentication providers by Aid-On, with LINE Login OAuth 2.0 support</p>
+          
         </div>
-        <p class="repo-desc">NextAuth.js authentication providers by Aid-On, with LINE Login OAuth 2.0 support</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-08-23">Aug 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-08-23">Aug 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="web" data-lang="JavaScript" data-name="aid-on-draft-ui" data-date="2024-09-01" data-commits="14" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/aid-on-draft-ui" target="_blank" rel="noopener noreferrer">aid-on-draft-ui</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/aid-on-draft-ui" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">aid-on-draft-ui</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">A project named aid-on-draft-ui; its README gives only the title and no description</p>
+          <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li></ul>
         </div>
-        <p class="repo-desc">A project named aid-on-draft-ui; its README gives only the title and no description</p>
-        <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">14<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2024-09-01">Sep 2024</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">14<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2024-09-01">Sep 2024</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

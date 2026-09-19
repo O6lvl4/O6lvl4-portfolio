@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1915,131 +1938,158 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="Language"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">All</button><button type="button" class="lang-chip" data-lang="HTML" aria-pressed="false"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="graphics" data-lang="HTML" data-name="nendo" data-date="2026-07-27" data-commits="95" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-graphics/nendo" target="_blank" rel="noopener noreferrer">nendo</a>
-          <span class="repo-org-tag">almide-graphics</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+      <a class="repo-row" href="https://github.com/almide-graphics/nendo" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">nendo</span>
+            <span class="repo-org-tag">almide-graphics</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">Avatar sculpting toolkit to inspect, edit and visually customize VRM 3D avatar files</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Python</li></ul>
         </div>
-        <p class="repo-desc">Avatar sculpting toolkit to inspect, edit and visually customize VRM 3D avatar files</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Python</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">95<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-07-27">Jul 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">95<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-07-27">Jul 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="nn" data-date="2026-06-28" data-commits="74" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-graphics/nn" target="_blank" rel="noopener noreferrer">nn</a>
-          <span class="repo-org-tag">almide-graphics</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide-graphics/nn" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">nn</span>
+            <span class="repo-org-tag">almide-graphics</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Transformer and signal-processing library in Almide, built on the matrix stdlib, with Whisper inference</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Rust</li><li class="repo-topic">almide</li></ul>
         </div>
-        <p class="repo-desc">Transformer and signal-processing library in Almide, built on the matrix stdlib, with Whisper inference</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Rust</li><li class="repo-topic">almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">74<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-28">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">74<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-28">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="graphics" data-lang="JavaScript" data-name="obsid" data-date="2026-07-25" data-commits="48" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-graphics/obsid" target="_blank" rel="noopener noreferrer">obsid</a>
-          <span class="repo-org-tag">almide-graphics</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/almide-graphics/obsid" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">obsid</span>
+            <span class="repo-org-tag">almide-graphics</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">Graphics runtime for Almide providing Canvas 2D, WebGL and 3D mesh rendering via WASM</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Rust</li><li class="repo-topic">3d</li></ul>
         </div>
-        <p class="repo-desc">Graphics runtime for Almide providing Canvas 2D, WebGL and 3D mesh rendering via WASM</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Rust</li><li class="repo-topic">3d</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">48<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-07-25">Jul 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">48<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-07-25">Jul 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="lumen" data-date="2026-04-12" data-commits="2" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-graphics/lumen" target="_blank" rel="noopener noreferrer">lumen</a>
-          <span class="repo-org-tag">almide-graphics</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide-graphics/lumen" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">lumen</span>
+            <span class="repo-org-tag">almide-graphics</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Pure graphics math primitives for Almide that use no @extern(wasm) and run on every target</p>
+          <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">graphics</li><li class="repo-topic">math</li></ul>
         </div>
-        <p class="repo-desc">Pure graphics math primitives for Almide that use no @extern(wasm) and run on every target</p>
-        <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">graphics</li><li class="repo-topic">math</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-04-12">Apr 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-04-12">Apr 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="ceangal" data-date="2026-07-25" data-commits="72" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-graphics/ceangal" target="_blank" rel="noopener noreferrer">ceangal</a>
-          <span class="repo-org-tag">almide-graphics</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide-graphics/ceangal" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ceangal</span>
+            <span class="repo-org-tag">almide-graphics</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">GPU-native UI framework for Almide: layout, widgets and interaction on top of snaidhm</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
         </div>
-        <p class="repo-desc">GPU-native UI framework for Almide: layout, widgets and interaction on top of snaidhm</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">72<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-07-25">Jul 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">72<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-07-25">Jul 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="cruth" data-date="2026-07-28" data-commits="2" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-graphics/cruth" target="_blank" rel="noopener noreferrer">cruth</a>
-          <span class="repo-org-tag">almide-graphics</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide-graphics/cruth" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">cruth</span>
+            <span class="repo-org-tag">almide-graphics</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Renderer-agnostic VRM/glTF character layer for Almide: parsing, geometry, morphs, expressions</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Renderer-agnostic VRM/glTF character layer for Almide: parsing, geometry, morphs, expressions</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-07-28">Jul 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-07-28">Jul 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="slabhra" data-date="2026-06-16" data-commits="7" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-graphics/slabhra" target="_blank" rel="noopener noreferrer">slabhra</a>
-          <span class="repo-org-tag">almide-graphics</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide-graphics/slabhra" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">slabhra</span>
+            <span class="repo-org-tag">almide-graphics</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Differentiable programming library for Almide: reverse-mode autograd, tensors and optimizers</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li></ul>
         </div>
-        <p class="repo-desc">Differentiable programming library for Almide: reverse-mode autograd, tensors and optimizers</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-16">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-16">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Rust" data-name="ceangal-native" data-date="2026-05-19" data-commits="5" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-graphics/ceangal-native" target="_blank" rel="noopener noreferrer">ceangal-native</a>
-          <span class="repo-org-tag">almide-graphics</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+      <a class="repo-row" href="https://github.com/almide-graphics/ceangal-native" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ceangal-native</span>
+            <span class="repo-org-tag">almide-graphics</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">Proof-of-concept native wgpu backend for ceangal, written in Rust</p>
+          
         </div>
-        <p class="repo-desc">Proof-of-concept native wgpu backend for ceangal, written in Rust</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-05-19">May 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-05-19">May 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="ceangal-anime" data-date="2026-05-18" data-commits="6" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-graphics/ceangal-anime" target="_blank" rel="noopener noreferrer">ceangal-anime</a>
-          <span class="repo-org-tag">almide-graphics</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide-graphics/ceangal-anime" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ceangal-anime</span>
+            <span class="repo-org-tag">almide-graphics</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Pure-WASM animation engine for Almide with anime.js-inspired tween, easing, timeline and stagger</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
         </div>
-        <p class="repo-desc">Pure-WASM animation engine for Almide with anime.js-inspired tween, easing, timeline and stagger</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-05-18">May 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-05-18">May 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1925,369 +1948,447 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="言語"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">すべて</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="仕事"><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-protocol" data-date="2026-05-23" data-commits="15" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-protocol" target="_blank" rel="noopener noreferrer">mc-protocol</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-protocol" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-protocol</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">AlmideでMinecraftプロトコルを実装したライブラリ</p>
+          
         </div>
-        <p class="repo-desc">AlmideでMinecraftプロトコルを実装したライブラリ</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">15<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">15<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-cli" data-date="2026-05-23" data-commits="5" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-bot-cli" target="_blank" rel="noopener noreferrer">mc-bot-cli</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-bot-cli" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-bot-cli</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide製Minecraftボット用のCLI</p>
+          
         </div>
-        <p class="repo-desc">Almide製Minecraftボット用のCLI</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="JavaScript" data-name="mine-rabbit-bots" data-date="2025-11-21" data-commits="79" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/mine-rabbit-bots" target="_blank" rel="noopener noreferrer">mine-rabbit-bots</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/mine-rabbit-bots" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mine-rabbit-bots</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">Paper サーバー上で Mineflyer の Bot を検証する、Craftsman 独立のサンドボックス</p>
+          <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">Paper サーバー上で Mineflyer の Bot を検証する、Craftsman 独立のサンドボックス</p>
-        <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">79<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2025-11-21">2025年11月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">79<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2025-11-21">2025年11月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="TypeScript" data-name="craftsman" data-date="2025-10-14" data-commits="16" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/craftsman" target="_blank" rel="noopener noreferrer">craftsman</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/craftsman" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">craftsman</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Docker上のMinecraftサーバーをPak単位で管理する堅牢なCLI</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Docker上のMinecraftサーバーをPak単位で管理する堅牢なCLI</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">16<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2025-10-14">2025年10月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">16<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2025-10-14">2025年10月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot" data-date="2026-05-23" data-commits="9" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-bot" target="_blank" rel="noopener noreferrer">mc-bot</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-bot" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-bot</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almideで書かれたMinecraftボットのフレームワーク</p>
+          
         </div>
-        <p class="repo-desc">Almideで書かれたMinecraftボットのフレームワーク</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">9<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">9<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-ai" data-date="2026-05-25" data-commits="3" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-bot-ai" target="_blank" rel="noopener noreferrer">mc-bot-ai</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-bot-ai" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-bot-ai</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">almaiを用いたMinecraftボット向けAI統合レイヤー(Phase 5 Intelligence)</p>
+          
         </div>
-        <p class="repo-desc">almaiを用いたMinecraftボット向けAI統合レイヤー(Phase 5 Intelligence)</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-25">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-25">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pathfinder" data-date="2026-05-24" data-commits="3" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-pathfinder" target="_blank" rel="noopener noreferrer">mc-pathfinder</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-pathfinder" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-pathfinder</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">mineflayer-pathfinderのAlmide実装で、Minecraftボット向けA*経路探索</p>
+          
         </div>
-        <p class="repo-desc">mineflayer-pathfinderのAlmide実装で、Minecraftボット向けA*経路探索</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-world" data-date="2026-05-24" data-commits="4" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-world" target="_blank" rel="noopener noreferrer">mc-world</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-world" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-world</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraftワールドモジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraftワールドモジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-block" data-date="2026-05-24" data-commits="4" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-block" target="_blank" rel="noopener noreferrer">mc-block</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-block" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-block</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraftブロックモジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraftブロックモジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-item" data-date="2026-05-24" data-commits="4" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-item" target="_blank" rel="noopener noreferrer">mc-item</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-item" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-item</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraftアイテムモジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraftアイテムモジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chunk" data-date="2026-05-24" data-commits="4" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-chunk" target="_blank" rel="noopener noreferrer">mc-chunk</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-chunk" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-chunk</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraftチャンク用モジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraftチャンク用モジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-entity" data-date="2026-05-24" data-commits="4" data-rank="11">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-entity" target="_blank" rel="noopener noreferrer">mc-entity</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-entity" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-entity</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraftエンティティモジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraftエンティティモジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chat" data-date="2026-05-24" data-commits="5" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-chat" target="_blank" rel="noopener noreferrer">mc-chat</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-chat" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-chat</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraftチャットモジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraftチャットモジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-nbt" data-date="2026-05-24" data-commits="5" data-rank="13">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-nbt" target="_blank" rel="noopener noreferrer">mc-nbt</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-nbt" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-nbt</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraft NBTモジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraft NBTモジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-auth" data-date="2026-05-23" data-commits="4" data-rank="14">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-auth" target="_blank" rel="noopener noreferrer">mc-auth</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-auth" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-auth</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraft認証モジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraft認証モジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="neoforge" data-date="2026-05-23" data-commits="5" data-rank="15">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/neoforge" target="_blank" rel="noopener noreferrer">neoforge</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/neoforge" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">neoforge</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けMinecraft neoforgeモジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けMinecraft neoforgeモジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-registry" data-date="2026-05-23" data-commits="3" data-rank="16">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-registry" target="_blank" rel="noopener noreferrer">mc-registry</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-registry" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-registry</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraftレジストリモジュール</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraftレジストリモジュール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server-impl" data-date="2026-05-24" data-commits="2" data-rank="17">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-server-impl" target="_blank" rel="noopener noreferrer">mc-server-impl</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-server-impl" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-server-impl</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">flying-squidをAlmideで実装した軽量Minecraftサーバー</p>
+          
         </div>
-        <p class="repo-desc">flying-squidをAlmideで実装した軽量Minecraftサーバー</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-proxy" data-date="2026-05-24" data-commits="2" data-rank="18">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-proxy" target="_blank" rel="noopener noreferrer">mc-proxy</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-proxy" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-proxy</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">prismarine-proxyをAlmideで実装したMinecraftプロキシの基盤</p>
+          
         </div>
-        <p class="repo-desc">prismarine-proxyをAlmideで実装したMinecraftプロキシの基盤</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server" data-date="2026-05-24" data-commits="2" data-rank="19">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-server" target="_blank" rel="noopener noreferrer">mc-server</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-server" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-server</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">node-minecraft-protocolのサーバーモードをAlmideで実装したMinecraftサーバー基盤</p>
+          
         </div>
-        <p class="repo-desc">node-minecraft-protocolのサーバーモードをAlmideで実装したMinecraftサーバー基盤</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-inventory" data-date="2026-05-24" data-commits="2" data-rank="20">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-inventory" target="_blank" rel="noopener noreferrer">mc-inventory</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-inventory" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-inventory</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Minecraftボット向けのインベントリウィンドウ管理。prismarine-windowsのAlmide実装</p>
+          
         </div>
-        <p class="repo-desc">Minecraftボット向けのインベントリウィンドウ管理。prismarine-windowsのAlmide実装</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pvp" data-date="2026-05-24" data-commits="2" data-rank="21">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-pvp" target="_blank" rel="noopener noreferrer">mc-pvp</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-pvp" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-pvp</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">mineflayer-pvpをAlmideで実装した、Minecraftボット向けPvP戦闘ユーティリティ</p>
+          
         </div>
-        <p class="repo-desc">mineflayer-pvpをAlmideで実装した、Minecraftボット向けPvP戦闘ユーティリティ</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-collect" data-date="2026-05-24" data-commits="2" data-rank="22">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-collect" target="_blank" rel="noopener noreferrer">mc-collect</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-collect" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-collect</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Minecraft bot向けブロック収集自動化。mineflayer-collectblockのAlmide実装</p>
+          
         </div>
-        <p class="repo-desc">Minecraft bot向けブロック収集自動化。mineflayer-collectblockのAlmide実装</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-physics" data-date="2026-05-24" data-commits="1" data-rank="23">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-physics" target="_blank" rel="noopener noreferrer">mc-physics</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-physics" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-physics</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraft物理シミュレーション(prismarine-physics相当)</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraft物理シミュレーション(prismarine-physics相当)</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-recipe" data-date="2026-05-24" data-commits="1" data-rank="24">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-recipe" target="_blank" rel="noopener noreferrer">mc-recipe</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-recipe" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-recipe</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraftクラフトレシピライブラリ(prismarine-recipe相当)</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraftクラフトレシピライブラリ(prismarine-recipe相当)</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-data" data-date="2026-05-24" data-commits="1" data-rank="25">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almd-mc/mc-data" target="_blank" rel="noopener noreferrer">mc-data</a>
-          <span class="repo-org-tag">almd-mc</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almd-mc/mc-data" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mc-data</span>
+            <span class="repo-org-tag">almd-mc</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide向けのMinecraftデータ定義集</p>
+          
         </div>
-        <p class="repo-desc">Almide向けのMinecraftデータ定義集</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

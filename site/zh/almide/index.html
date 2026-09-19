@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1915,257 +1938,311 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="Racket" aria-pressed="false"><span class="lang-dot" style="background:#3c5caa;width:5px;height:5px" aria-hidden="true"></span>Racket</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="C" aria-pressed="false"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</button><button type="button" class="lang-chip" data-lang="HTML" aria-pressed="false"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-13" data-commits="8502" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">almide</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+      <a class="repo-row" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">为LLM编辑后代码仍可用而设计的静态类型语言</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
         </div>
-        <p class="repo-desc">为LLM编辑后代码仍可用而设计的静态类型语言</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">8502<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-13">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">8502<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-13">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="als" data-date="2026-09-07" data-commits="1418" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/als" target="_blank" rel="noopener noreferrer">als</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide/als" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">als</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide语言规范与一致性语料库，可评判任意almide二进制</p>
+          <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Python</li><li class="repo-topic">almide</li></ul>
         </div>
-        <p class="repo-desc">Almide语言规范与一致性语料库，可评判任意almide二进制</p>
-        <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Python</li><li class="repo-topic">almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1418<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-07">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1418<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-07">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="Racket" data-name="wyve" data-date="2026-06-09" data-commits="109" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/wyve" target="_blank" rel="noopener noreferrer">wyve</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3c5caa;width:5px;height:5px" aria-hidden="true"></span>Racket</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/wyve" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">wyve</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3c5caa;width:5px;height:5px" aria-hidden="true"></span>Racket</span>
+          </div>
+          <p class="repo-desc">LLVM IR之上、为优化器编写契约的静态语义语言</p>
+          <ul class="repo-topics"><li class="repo-topic">C</li><li class="repo-topic">Lean</li></ul>
         </div>
-        <p class="repo-desc">LLVM IR之上、为优化器编写契约的静态语义语言</p>
-        <ul class="repo-topics"><li class="repo-topic">C</li><li class="repo-topic">Lean</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">109<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-09">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">109<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-09">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="docs" data-date="2026-08-15" data-commits="63" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/docs" target="_blank" rel="noopener noreferrer">docs</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/almide/docs" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">docs</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">Almide语言文档站,示例可在浏览器运行</p>
+          <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">Almide</li><li class="repo-topic">almide</li></ul>
         </div>
-        <p class="repo-desc">Almide语言文档站,示例可在浏览器运行</p>
-        <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">Almide</li><li class="repo-topic">almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">63<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-08-15">2026年8月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">63<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-08-15">2026年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="vscode-almide" data-date="2026-07-25" data-commits="23" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/vscode-almide" target="_blank" rel="noopener noreferrer">vscode-almide</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide/vscode-almide" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">vscode-almide</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">面向Almide语言.almd文件的VS Code扩展</p>
+          <ul class="repo-topics"><li class="repo-topic">programming-language</li><li class="repo-topic">syntax-highlighting</li><li class="repo-topic">vscode</li></ul>
         </div>
-        <p class="repo-desc">面向Almide语言.almd文件的VS Code扩展</p>
-        <ul class="repo-topics"><li class="repo-topic">programming-language</li><li class="repo-topic">syntax-highlighting</li><li class="repo-topic">vscode</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">23<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-07-25">2026年7月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">23<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-07-25">2026年7月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-grammar" data-date="2026-07-29" data-commits="27" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/almide-grammar" target="_blank" rel="noopener noreferrer">almide-grammar</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide/almide-grammar" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-grammar</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide语法定义的唯一来源模块</p>
+          <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">grammar</li><li class="repo-topic">syntax-highlighting</li></ul>
         </div>
-        <p class="repo-desc">Almide语法定义的唯一来源模块</p>
-        <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">grammar</li><li class="repo-topic">syntax-highlighting</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">27<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-07-29">2026年7月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">27<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-07-29">2026年7月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="C" data-name="tree-sitter-almide" data-date="2026-09-07" data-commits="21" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/tree-sitter-almide" target="_blank" rel="noopener noreferrer">tree-sitter-almide</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</span>
+      <a class="repo-row" href="https://github.com/almide/tree-sitter-almide" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">tree-sitter-almide</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</span>
+          </div>
+          <p class="repo-desc">Almide语言的Tree-sitter语法</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Rust</li><li class="repo-topic">almide</li></ul>
         </div>
-        <p class="repo-desc">Almide语言的Tree-sitter语法</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Rust</li><li class="repo-topic">almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">21<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-07">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">21<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-07">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="HTML" data-name="almide-dojo" data-date="2026-08-17" data-commits="202" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/almide-dojo" target="_blank" rel="noopener noreferrer">almide-dojo</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+      <a class="repo-row" href="https://github.com/almide/almide-dojo" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-dojo</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">每日测量Almide中LLM代码的修改存活率</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">almide</li><li class="repo-topic">benchmark</li></ul>
         </div>
-        <p class="repo-desc">每日测量Almide中LLM代码的修改存活率</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">almide</li><li class="repo-topic">benchmark</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">202<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-08-17">2026年8月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">202<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-08-17">2026年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-bindgen" data-date="2026-04-12" data-commits="33" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/almide-bindgen" target="_blank" rel="noopener noreferrer">almide-bindgen</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide/almide-bindgen" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-bindgen</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">用Almide编写的通用FFI绑定生成库</p>
+          <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">bindgen</li><li class="repo-topic">code-generation</li></ul>
         </div>
-        <p class="repo-desc">用Almide编写的通用FFI绑定生成库</p>
-        <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">bindgen</li><li class="repo-topic">code-generation</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">33<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-04-12">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">33<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-04-12">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="playground" data-date="2026-08-21" data-commits="148" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/playground" target="_blank" rel="noopener noreferrer">playground</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/almide/playground" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">playground</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">在浏览器中编写并运行Almide代码的在线playground</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Rust</li><li class="repo-topic">almide</li></ul>
         </div>
-        <p class="repo-desc">在浏览器中编写并运行Almide代码的在线playground</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Rust</li><li class="repo-topic">almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">148<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-08-21">2026年8月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">148<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-08-21">2026年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-lander" data-date="2026-07-25" data-commits="54" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/almide-lander" target="_blank" rel="noopener noreferrer">almide-lander</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide/almide-lander" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-lander</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">将Almide模块导出为21种语言原生包的工具</p>
+          <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">code-generation</li><li class="repo-topic">ffi</li></ul>
         </div>
-        <p class="repo-desc">将Almide模块导出为21种语言原生包的工具</p>
-        <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">code-generation</li><li class="repo-topic">ffi</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">54<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-07-25">2026年7月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">54<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-07-25">2026年7月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="" data-name="almide-agents" data-date="2026-07-29" data-commits="6" data-rank="11">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/almide-agents" target="_blank" rel="noopener noreferrer">almide-agents</a>
-          <span class="repo-org-tag">almide</span>
+      <a class="repo-row" href="https://github.com/almide/almide-agents" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-agents</span>
+            <span class="repo-org-tag">almide</span>
+            
+          </div>
+          <p class="repo-desc">教编码智能体正确编写Almide的AGENTS.md与技能包</p>
           
         </div>
-        <p class="repo-desc">教编码智能体正确编写Almide的AGENTS.md与技能包</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">6<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-07-29">2026年7月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">6<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-07-29">2026年7月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="parsegen" data-date="2026-08-17" data-commits="3" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/parsegen" target="_blank" rel="noopener noreferrer">parsegen</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide/parsegen" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">parsegen</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide编写的tree-sitter兼容解析器生成器</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">Almide编写的tree-sitter兼容解析器生成器</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-08-17">2026年8月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-08-17">2026年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-web" data-date="2026-07-25" data-commits="3" data-rank="13">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/almide-web" target="_blank" rel="noopener noreferrer">almide-web</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/almide/almide-web" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-web</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">面向Almide WASM应用的浏览器API绑定</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">面向Almide WASM应用的浏览器API绑定</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-07-25">2026年7月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-07-25">2026年7月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-wasm-bindgen" data-date="2026-04-15" data-commits="24" data-rank="14">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/almide-wasm-bindgen" target="_blank" rel="noopener noreferrer">almide-wasm-bindgen</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide/almide-wasm-bindgen" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-wasm-bindgen</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">为Almide生成WASM与JS/TS绑定的库</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
         </div>
-        <p class="repo-desc">为Almide生成WASM与JS/TS绑定的库</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">24<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-04-15">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">24<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-04-15">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="Shell" data-name="almide-examples" data-date="2026-03-07" data-commits="1" data-rank="15">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/almide-examples" target="_blank" rel="noopener noreferrer">almide-examples</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/almide-examples" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-examples</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+          </div>
+          <p class="repo-desc">Almide语言的示例程序与mini-git基准实现</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li></ul>
         </div>
-        <p class="repo-desc">Almide语言的示例程序与mini-git基准实现</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-03-07">2026年3月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-03-07">2026年3月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-js" data-date="2026-04-15" data-commits="1" data-rank="16">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/almide-js" target="_blank" rel="noopener noreferrer">almide-js</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/almide/almide-js" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-js</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">Almide的JS/TS向WASM SDK进度与基准记录</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Almide</li></ul>
         </div>
-        <p class="repo-desc">Almide的JS/TS向WASM SDK进度与基准记录</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-04-15">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-04-15">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="almide" data-lang="" data-name=".github" data-date="2026-03-30" data-commits="2" data-rank="17">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/.github" target="_blank" rel="noopener noreferrer">.github</a>
-          <span class="repo-org-tag">almide</span>
-          
+      <a class="repo-row" href="https://github.com/almide/.github" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">.github</span>
+            <span class="repo-org-tag">almide</span>
+            
+          </div>
+          <p class="repo-desc">almide组织的主页与社区规范文件仓库</p>
+          <ul class="repo-topics"><li class="repo-topic">almide</li></ul>
         </div>
-        <p class="repo-desc">almide组织的主页与社区规范文件仓库</p>
-        <ul class="repo-topics"><li class="repo-topic">almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-03-30">2026年3月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-03-30">2026年3月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

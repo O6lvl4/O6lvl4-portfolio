@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1915,733 +1938,889 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-protocol" data-date="2026-06-15" data-commits="7" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-protocol" target="_blank" rel="noopener noreferrer">fizz-protocol</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-protocol" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-protocol</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide编写的AITuber系统Fizz的共享通信契约</p>
+          
         </div>
-        <p class="repo-desc">Almide编写的AITuber系统Fizz的共享通信契约</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-llm-client" data-date="2026-06-14" data-commits="3" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-llm-client" target="_blank" rel="noopener noreferrer">fizz-llm-client</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-llm-client" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-llm-client</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide编写的Fizz AITuber多提供商LLM客户端</p>
+          
         </div>
-        <p class="repo-desc">Almide编写的Fizz AITuber多提供商LLM客户端</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-prompt-builder" data-date="2026-06-14" data-commits="3" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-prompt-builder" target="_blank" rel="noopener noreferrer">fizz-prompt-builder</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-prompt-builder" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-prompt-builder</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">将人设、回忆、历史与评论组装为LLM消息列的库</p>
+          
         </div>
-        <p class="repo-desc">将人设、回忆、历史与评论组装为LLM消息列的库</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-persona" data-date="2026-06-14" data-commits="3" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-persona" target="_blank" rel="noopener noreferrer">fizz-persona</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-persona" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-persona</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz AITuber的persona磁盘格式契约(Almide)</p>
+          
         </div>
-        <p class="repo-desc">Fizz AITuber的persona磁盘格式契约(Almide)</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-conversation-history" data-date="2026-06-14" data-commits="3" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-conversation-history" target="_blank" rel="noopener noreferrer">fizz-conversation-history</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-conversation-history" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-conversation-history</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Almide 写的 Fizz 部件，保留最近 N 轮对话窗口</p>
+          
         </div>
-        <p class="repo-desc">Almide 写的 Fizz 部件，保留最近 N 轮对话窗口</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-brain-orchestrator" data-date="2026-06-14" data-commits="4" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-brain-orchestrator" target="_blank" rel="noopener noreferrer">fizz-brain-orchestrator</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-brain-orchestrator" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-brain-orchestrator</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz 的 brain 合成 CLI,把评论转为句子片段流</p>
+          
         </div>
-        <p class="repo-desc">Fizz 的 brain 合成 CLI,把评论转为句子片段流</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-thinking-cue-detector" data-date="2026-06-14" data-commits="2" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-thinking-cue-detector" target="_blank" rel="noopener noreferrer">fizz-thinking-cue-detector</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-thinking-cue-detector" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-thinking-cue-detector</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz大脑部件,判断发话句是否触发思考动作</p>
+          
         </div>
-        <p class="repo-desc">Fizz大脑部件,判断发话句是否触发思考动作</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-stream-sentence-parser" data-date="2026-06-14" data-commits="2" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-stream-sentence-parser" target="_blank" rel="noopener noreferrer">fizz-stream-sentence-parser</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-stream-sentence-parser" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-stream-sentence-parser</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz大脑部件,切分LLM输出为句子与标签</p>
+          
         </div>
-        <p class="repo-desc">Fizz大脑部件,切分LLM输出为句子与标签</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-first-time-greeter" data-date="2026-06-14" data-commits="2" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-first-time-greeter" target="_blank" rel="noopener noreferrer">fizz-first-time-greeter</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-first-time-greeter" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-first-time-greeter</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的大脑部件,仅向首次观众确定性地自我介绍一次</p>
+          
         </div>
-        <p class="repo-desc">Fizz的大脑部件,仅向首次观众确定性地自我介绍一次</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-few-shot-retriever" data-date="2026-06-14" data-commits="2" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-few-shot-retriever" target="_blank" rel="noopener noreferrer">fizz-few-shot-retriever</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-few-shot-retriever" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-few-shot-retriever</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的Almide组件,检索与来信评论相似的前k条问答</p>
+          
         </div>
-        <p class="repo-desc">Fizz的Almide组件,检索与来信评论相似的前k条问答</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-comment-classifier" data-date="2026-06-14" data-commits="2" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-comment-classifier" target="_blank" rel="noopener noreferrer">fizz-comment-classifier</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-comment-classifier" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-comment-classifier</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">按关键词规则把评论判定为反应情感的Almide库</p>
+          
         </div>
-        <p class="repo-desc">按关键词规则把评论判定为反应情感的Almide库</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-tweet-validator" data-date="2026-06-14" data-commits="3" data-rank="11">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-tweet-validator" target="_blank" rel="noopener noreferrer">fizz-tweet-validator</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-tweet-validator" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-tweet-validator</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">按X加权字数统计并校验280上限</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">按X加权字数统计并校验280上限</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-api" data-date="2026-06-14" data-commits="3" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-api" target="_blank" rel="noopener noreferrer">fizz-memory-api</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-memory-api" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-memory-api</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz 的 memory HTTP 服务,公开记忆操作接口</p>
+          
         </div>
-        <p class="repo-desc">Fizz 的 memory HTTP 服务,公开记忆操作接口</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l3-summarizer" data-date="2026-06-14" data-commits="3" data-rank="13">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-l3-summarizer" target="_blank" rel="noopener noreferrer">fizz-memory-l3-summarizer</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-memory-l3-summarizer" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-memory-l3-summarizer</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">事件超阈值时用LLM滚动更新用户摘要的Fizz记忆L3层</p>
+          
         </div>
-        <p class="repo-desc">事件超阈值时用LLM滚动更新用户摘要的Fizz记忆L3层</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-youtube-chat-source" data-date="2026-06-14" data-commits="4" data-rank="14">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-youtube-chat-source" target="_blank" rel="noopener noreferrer">fizz-youtube-chat-source</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-youtube-chat-source" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-youtube-chat-source</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">轮询YouTube直播聊天并输出Comment NDJSON的只读组件</p>
+          
         </div>
-        <p class="repo-desc">轮询YouTube直播聊天并输出Comment NDJSON的只读组件</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-x-mention-source" data-date="2026-06-14" data-commits="4" data-rank="15">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-x-mention-source" target="_blank" rel="noopener noreferrer">fizz-x-mention-source</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-x-mention-source" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-x-mention-source</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">经XAPI代理轮询X提及并输出评论NDJSON</p>
+          
         </div>
-        <p class="repo-desc">经XAPI代理轮询X提及并输出评论NDJSON</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-twitch-chat-source" data-date="2026-06-14" data-commits="4" data-rank="16">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-twitch-chat-source" target="_blank" rel="noopener noreferrer">fizz-twitch-chat-source</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-twitch-chat-source" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-twitch-chat-source</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">匿名订阅Twitch聊天并输出标准化Comment的部件</p>
+          
         </div>
-        <p class="repo-desc">匿名订阅Twitch聊天并输出标准化Comment的部件</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-manual-comment-input" data-date="2026-06-14" data-commits="4" data-rank="17">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-manual-comment-input" target="_blank" rel="noopener noreferrer">fizz-manual-comment-input</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-manual-comment-input" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-manual-comment-input</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">将运维手动输入转为Comment NDJSON的Fizz组件</p>
+          
         </div>
-        <p class="repo-desc">将运维手动输入转为Comment NDJSON的Fizz组件</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-lipsync" data-date="2026-06-14" data-commits="4" data-rank="18">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-lipsync" target="_blank" rel="noopener noreferrer">fizz-lipsync</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-lipsync" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-lipsync</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz 口型同步 DSP 核心,将音频 RMS 转为口型开合值</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz 口型同步 DSP 核心,将音频 RMS 转为口型开合值</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-comment-dedupe" data-date="2026-06-14" data-commits="4" data-rank="19">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-comment-dedupe" target="_blank" rel="noopener noreferrer">fizz-comment-dedupe</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-comment-dedupe" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-comment-dedupe</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz评论流的NDJSON管道过滤器,去除重复ID</p>
+          
         </div>
-        <p class="repo-desc">Fizz评论流的NDJSON管道过滤器,去除重复ID</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-speak-queue" data-date="2026-06-15" data-commits="1" data-rank="20">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-speak-queue" target="_blank" rel="noopener noreferrer">fizz-speak-queue</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-speak-queue" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-speak-queue</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">逐次播放TTS片段的状态机与边界事件推导组件</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">逐次播放TTS片段的状态机与边界事件推导组件</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-effect-checker" data-date="2026-06-15" data-commits="1" data-rank="21">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-effect-checker" target="_blank" rel="noopener noreferrer">fizz-effect-checker</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-effect-checker" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-effect-checker</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">校验响应计划的effect是否在许可集合内</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">校验响应计划的effect是否在许可集合内</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-response-transformer" data-date="2026-06-15" data-commits="1" data-rank="22">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-response-transformer" target="_blank" rel="noopener noreferrer">fizz-response-transformer</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-response-transformer" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-response-transformer</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">kotodama应答变换的目录匹配与加权选择</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">kotodama应答变换的目录匹配与加权选择</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-trigger-matcher" data-date="2026-06-15" data-commits="1" data-rank="23">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-trigger-matcher" target="_blank" rel="noopener noreferrer">fizz-trigger-matcher</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-trigger-matcher" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-trigger-matcher</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">按子串匹配输入并推荐 transform 先验的引擎</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">按子串匹配输入并推荐 transform 先验的引擎</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-dataset" data-date="2026-06-15" data-commits="2" data-rank="24">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-eval-dataset" target="_blank" rel="noopener noreferrer">fizz-eval-dataset</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-eval-dataset" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-eval-dataset</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">评论/回复评测集TSV的模式与行校验</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">评论/回复评测集TSV的模式与行校验</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-score" data-date="2026-06-15" data-commits="1" data-rank="25">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-eval-score" target="_blank" rel="noopener noreferrer">fizz-eval-score</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-eval-score" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-eval-score</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">kotodama-eval 评分聚合的 Almide 算术核心</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">kotodama-eval 评分聚合的 Almide 算术核心</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-rubric" data-date="2026-06-15" data-commits="1" data-rank="26">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-eval-rubric" target="_blank" rel="noopener noreferrer">fizz-eval-rubric</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-eval-rubric" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-eval-rubric</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">kotodama-eval七轴评分标准的轴定义与权重</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">kotodama-eval七轴评分标准的轴定义与权重</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-glb-container" data-date="2026-06-15" data-commits="1" data-rank="27">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-glb-container" target="_blank" rel="noopener noreferrer">fizz-glb-container</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-glb-container" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-glb-container</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">解析GLB/VRM头部的Almide核心库</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">解析GLB/VRM头部的Almide核心库</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-color-tint" data-date="2026-06-15" data-commits="1" data-rank="28">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-color-tint" target="_blank" rel="noopener noreferrer">fizz-color-tint</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-color-tint" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-color-tint</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">用于虹膜再着色的纯色彩转换核心</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">用于虹膜再着色的纯色彩转换核心</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-idle-motion" data-date="2026-06-15" data-commits="2" data-rank="29">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-idle-motion" target="_blank" rel="noopener noreferrer">fizz-idle-motion</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-idle-motion" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-idle-motion</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">以墙钟秒t纯函数计算眨眼、呼吸、微摆的idle动作核心</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">以墙钟秒t纯函数计算眨眼、呼吸、微摆的idle动作核心</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-weather-codes" data-date="2026-06-15" data-commits="2" data-rank="30">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-weather-codes" target="_blank" rel="noopener noreferrer">fizz-weather-codes</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-weather-codes" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-weather-codes</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">将WMO天气码转为日语标签并识别天气提问的Almide库</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">将WMO天气码转为日语标签并识别天气提问的Almide库</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-15">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-x-dummy-feed" data-date="2026-06-14" data-commits="1" data-rank="31">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-x-dummy-feed" target="_blank" rel="noopener noreferrer">fizz-x-dummy-feed</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-x-dummy-feed" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-x-dummy-feed</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的X擬似mention信息流纯逻辑,用Almide编写</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz的X擬似mention信息流纯逻辑,用Almide编写</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-layout-scope" data-date="2026-06-14" data-commits="1" data-rank="32">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-layout-scope" target="_blank" rel="noopener noreferrer">fizz-layout-scope</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-layout-scope" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-layout-scope</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">用Almide解析Fizz横/竖屏scope的位置配置库</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">用Almide解析Fizz横/竖屏scope的位置配置库</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-bgm-player" data-date="2026-06-14" data-commits="1" data-rank="33">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-bgm-player" target="_blank" rel="noopener noreferrer">fizz-bgm-player</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-bgm-player" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-bgm-player</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的BGM播放列表导航,按索引决定曲目</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz的BGM播放列表导航,按索引决定曲目</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-reply-paginator" data-date="2026-06-14" data-commits="1" data-rank="34">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-reply-paginator" target="_blank" rel="noopener noreferrer">fizz-reply-paginator</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-reply-paginator" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-reply-paginator</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">按句子边界拆分AI回复文本的Almide核心</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">按句子边界拆分AI回复文本的Almide核心</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-ws-reconnect" data-date="2026-06-14" data-commits="1" data-rank="35">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-ws-reconnect" target="_blank" rel="noopener noreferrer">fizz-ws-reconnect</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-ws-reconnect" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-ws-reconnect</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">用指数退避加抖动计算Fizz WS重连延迟</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">用指数退避加抖动计算Fizz WS重连延迟</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-liveness-monitor" data-date="2026-06-14" data-commits="1" data-rank="36">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-liveness-monitor" target="_blank" rel="noopener noreferrer">fizz-liveness-monitor</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-liveness-monitor" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-liveness-monitor</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的WS连接ping/pong死活判定核心</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz的WS连接ping/pong死活判定核心</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-env-loader" data-date="2026-06-14" data-commits="2" data-rank="37">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-env-loader" target="_blank" rel="noopener noreferrer">fizz-env-loader</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-env-loader" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-env-loader</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz 的 .env 解析核心,将文本转为 KEY=VALUE</p>
+          
         </div>
-        <p class="repo-desc">Fizz 的 .env 解析核心,将文本转为 KEY=VALUE</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-http-router" data-date="2026-06-14" data-commits="2" data-rank="38">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-http-router" target="_blank" rel="noopener noreferrer">fizz-http-router</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-http-router" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-http-router</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的HTTP分发核心,将(method, path)映射为route id</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz的HTTP分发核心,将(method, path)映射为route id</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-audio-leader-elector" data-date="2026-06-14" data-commits="1" data-rank="39">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-audio-leader-elector" target="_blank" rel="noopener noreferrer">fizz-audio-leader-elector</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-audio-leader-elector" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-audio-leader-elector</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">从多个viewer标签页选出一个音频播放领导者</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">从多个viewer标签页选出一个音频播放领导者</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-expression-applier" data-date="2026-06-14" data-commits="1" data-rank="40">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-expression-applier" target="_blank" rel="noopener noreferrer">fizz-expression-applier</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-expression-applier" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-expression-applier</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz表情适用核心,按emotion返回通道与权重</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz表情适用核心,按emotion返回通道与权重</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-command-applier" data-date="2026-06-14" data-commits="1" data-rank="41">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-command-applier" target="_blank" rel="noopener noreferrer">fizz-command-applier</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-command-applier" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-command-applier</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">将 avatar Command 类型映射到子系统的分发核心</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">将 avatar Command 类型映射到子系统的分发核心</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-mixamo-retargeter" data-date="2026-06-14" data-commits="1" data-rank="42">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-mixamo-retargeter" target="_blank" rel="noopener noreferrer">fizz-mixamo-retargeter</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-mixamo-retargeter" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-mixamo-retargeter</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">将Mixamo动画重定向到VRM骨骼的四元数计算核心</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">将Mixamo动画重定向到VRM骨骼的四元数计算核心</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-fbx-rig-normalizer" data-date="2026-06-14" data-commits="1" data-rank="43">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-fbx-rig-normalizer" target="_blank" rel="noopener noreferrer">fizz-fbx-rig-normalizer</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-fbx-rig-normalizer" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-fbx-rig-normalizer</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">将原始骨骼名映射到VRM humanoid插槽的规范化核心</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">将原始骨骼名映射到VRM humanoid插槽的规范化核心</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-camera-presets" data-date="2026-06-14" data-commits="1" data-rank="44">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-camera-presets" target="_blank" rel="noopener noreferrer">fizz-camera-presets</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-camera-presets" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-camera-presets</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz相机预设计算核心,求目标位置与注视点</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz相机预设计算核心,求目标位置与注视点</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-gesture-player" data-date="2026-06-14" data-commits="1" data-rank="45">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-gesture-player" target="_blank" rel="noopener noreferrer">fizz-gesture-player</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-gesture-player" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-gesture-player</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的手势计算核心，输出骨骼偏移</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Fizz的手势计算核心，输出骨骼偏移</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-session-tracker" data-date="2026-06-14" data-commits="2" data-rank="46">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-session-tracker" target="_blank" rel="noopener noreferrer">fizz-session-tracker</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-session-tracker" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-session-tracker</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">记录直播起止并统计每位用户发言的追踪器</p>
+          
         </div>
-        <p class="repo-desc">记录直播起止并统计每位用户发言的追踪器</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-recall-gate" data-date="2026-06-14" data-commits="2" data-rank="47">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-recall-gate" target="_blank" rel="noopener noreferrer">fizz-recall-gate</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-recall-gate" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-recall-gate</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的recall网关,裁剪结果并提供无记忆回退</p>
+          
         </div>
-        <p class="repo-desc">Fizz的recall网关,裁剪结果并提供无记忆回退</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-reading-corrector" data-date="2026-06-14" data-commits="2" data-rank="48">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-reading-corrector" target="_blank" rel="noopener noreferrer">fizz-reading-corrector</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-reading-corrector" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-reading-corrector</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的TTS前读音校正过滤器,将汉字替换为假名</p>
+          
         </div>
-        <p class="repo-desc">Fizz的TTS前读音校正过滤器,将汉字替换为假名</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l2-events" data-date="2026-06-14" data-commits="2" data-rank="49">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-l2-events" target="_blank" rel="noopener noreferrer">fizz-memory-l2-events</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-memory-l2-events" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-memory-l2-events</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz记忆L2层,以NDJSON追加保存事件并按user_id查询</p>
+          
         </div>
-        <p class="repo-desc">Fizz记忆L2层,以NDJSON追加保存事件并按user_id查询</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l1-ring" data-date="2026-06-14" data-commits="2" data-rank="50">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-l1-ring" target="_blank" rel="noopener noreferrer">fizz-memory-l1-ring</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fizz-memory-l1-ring" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fizz-memory-l1-ring</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Fizz的L1记忆,按用户在内存中保存近期事件</p>
+          
         </div>
-        <p class="repo-desc">Fizz的L1记忆,按用户在内存中保存近期事件</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-14">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-14">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="animula" data-date="2026-04-17" data-commits="2" data-rank="51">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/animula" target="_blank" rel="noopener noreferrer">animula</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/Aid-On/animula" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">animula</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">用Almide编写的AI VTuber框架</p>
+          <ul class="repo-topics"><li class="repo-topic">Rust</li></ul>
         </div>
-        <p class="repo-desc">用Almide编写的AI VTuber框架</p>
-        <ul class="repo-topics"><li class="repo-topic">Rust</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-04-17">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-04-17">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

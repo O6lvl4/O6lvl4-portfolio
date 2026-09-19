@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1925,355 +1948,430 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="Python" aria-pressed="false"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Go" aria-pressed="false"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="porta" data-date="2026-08-06" data-commits="97" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/porta" target="_blank" rel="noopener noreferrer">porta</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide/porta" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">porta</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">限制AI智能体文件与网络访问的安全MCP桥</p>
+          <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Shell</li><li class="repo-topic">ai-agent</li></ul>
         </div>
-        <p class="repo-desc">限制AI智能体文件与网络访问的安全MCP桥</p>
-        <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Shell</li><li class="repo-topic">ai-agent</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">97<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-08-06">2026年8月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">97<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-08-06">2026年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="ccgrid" data-date="2026-02-17" data-commits="69" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/ccgrid" target="_blank" rel="noopener noreferrer">ccgrid</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/ccgrid" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ccgrid</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">基于Claude Agent SDK的团队开发管理工具</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li><li class="repo-topic">agent-sdk</li></ul>
         </div>
-        <p class="repo-desc">基于Claude Agent SDK的团队开发管理工具</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li><li class="repo-topic">agent-sdk</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">69<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-02-17">2026年2月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">69<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-02-17">2026年2月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide" data-date="2026-09-18" data-commits="174" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gramide" target="_blank" rel="noopener noreferrer">gramide</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gramide" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gramide</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">面向编码智能体的Almide语法树引擎</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">面向编码智能体的Almide语法树引擎</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">174<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">174<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Python" data-name="gramide-cli" data-date="2026-09-18" data-commits="136" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gramide-cli" target="_blank" rel="noopener noreferrer">gramide-cli</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gramide-cli" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gramide-cli</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+          </div>
+          <p class="repo-desc">面向编码智能体的语法树命令行工具gramide</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">面向编码智能体的语法树命令行工具gramide</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">136<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">136<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-python" data-date="2026-09-18" data-commits="131" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gramide-python" target="_blank" rel="noopener noreferrer">gramide-python</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gramide-python" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gramide-python</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">gramide-cli的Python 3.14支持,含词法、文法与编辑恢复</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">C</li></ul>
         </div>
-        <p class="repo-desc">gramide-cli的Python 3.14支持,含词法、文法与编辑恢复</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">C</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">131<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">131<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-almide" data-date="2026-09-18" data-commits="128" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gramide-almide" target="_blank" rel="noopener noreferrer">gramide-almide</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gramide-almide" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gramide-almide</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">gramide 的 Almide 包：词法、文法与符号规则</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">gramide 的 Almide 包：词法、文法与符号规则</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">128<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">128<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-rust" data-date="2026-09-18" data-commits="130" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gramide-rust" target="_blank" rel="noopener noreferrer">gramide-rust</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gramide-rust" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gramide-rust</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">为gramide-cli提供Rust词法与文法的Almide包</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">为gramide-cli提供Rust词法与文法的Almide包</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">130<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">130<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-go" data-date="2026-09-18" data-commits="129" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gramide-go" target="_blank" rel="noopener noreferrer">gramide-go</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gramide-go" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gramide-go</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">为gramide提供Go词法、文法与符号规则的Almide包</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">C</li></ul>
         </div>
-        <p class="repo-desc">为gramide提供Go词法、文法与符号规则的Almide包</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">C</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">129<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">129<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="hew" data-date="2026-09-18" data-commits="47" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/hew" target="_blank" rel="noopener noreferrer">hew</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/hew" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">hew</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">面向编码代理的结构感知cat/grep/sed替代工具</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">面向编码代理的结构感知cat/grep/sed替代工具</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">47<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">47<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Rust" data-name="codopsy" data-date="2026-08-30" data-commits="47" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/codopsy" target="_blank" rel="noopener noreferrer">codopsy</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/codopsy" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">codopsy</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">基于tree-sitter的35种语言AST代码质量分析器</p>
+          <ul class="repo-topics"><li class="repo-topic">Lean</li><li class="repo-topic">Java</li><li class="repo-topic">cli</li></ul>
         </div>
-        <p class="repo-desc">基于tree-sitter的35种语言AST代码质量分析器</p>
-        <ul class="repo-topics"><li class="repo-topic">Lean</li><li class="repo-topic">Java</li><li class="repo-topic">cli</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">47<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-08-30">2026年8月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">47<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-08-30">2026年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-javascript" data-date="2026-09-18" data-commits="31" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gramide-javascript" target="_blank" rel="noopener noreferrer">gramide-javascript</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gramide-javascript" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gramide-javascript</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">gramide的JavaScript语言包，含扫描器与语法表</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">C</li></ul>
         </div>
-        <p class="repo-desc">gramide的JavaScript语言包，含扫描器与语法表</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">C</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">31<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">31<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-typescript" data-date="2026-09-18" data-commits="24" data-rank="11">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gramide-typescript" target="_blank" rel="noopener noreferrer">gramide-typescript</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gramide-typescript" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gramide-typescript</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">gramide的TypeScript语言包，对照官方解析器验证</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">gramide的TypeScript语言包，对照官方解析器验证</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">24<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">24<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Go" data-name="ccp" data-date="2026-05-28" data-commits="5" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/ccp" target="_blank" rel="noopener noreferrer">ccp</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
-        </div>
-        <p class="repo-desc">用符号链接叠加切换Claude Code配置的工具</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-05-28">2026年5月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="treesrc" data-date="2025-04-01" data-commits="14" data-rank="13">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/treesrc" target="_blank" rel="noopener noreferrer">treesrc</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-        </div>
-        <p class="repo-desc">遵循.gitignore显示目录结构与文件内容的CLI</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">14<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2025-04-01">2025年4月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="golemide" data-date="2026-09-13" data-commits="48" data-rank="14">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/golemide" target="_blank" rel="noopener noreferrer">golemide</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
-        </div>
-        <p class="repo-desc">用Almide编写的编码代理，先观察再编辑并验证</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">48<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-13">2026年9月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Rust" data-name="ctxgate" data-date="2026-09-17" data-commits="34" data-rank="15">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/ctxgate" target="_blank" rel="noopener noreferrer">ctxgate</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
-        </div>
-        <p class="repo-desc">Claude Code的上下文防火墙,存档工具输出并压缩展示</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Go</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">34<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-17">2026年9月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Python" data-name="assay" data-date="2026-09-13" data-commits="17" data-rank="16">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/assay" target="_blank" rel="noopener noreferrer">assay</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
-        </div>
-        <p class="repo-desc">保留限定条件的编码智能体基准数据及测评工具</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">17<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-13">2026年9月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="emet" data-date="2026-09-13" data-commits="11" data-rank="17">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/emet" target="_blank" rel="noopener noreferrer">emet</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
-        </div>
-        <p class="repo-desc">核对主张数字、引文与名称的引用闸门</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">11<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-13">2026年9月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="onetool" data-date="2026-09-03" data-commits="11" data-rank="18">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/onetool" target="_blank" rel="noopener noreferrer">onetool</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-        </div>
-        <p class="repo-desc">用四个通用工具封装任意API的MCP框架</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">11<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-03">2026年9月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="codopsy-almd" data-date="2026-09-11" data-commits="4" data-rank="19">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/codopsy-almd" target="_blank" rel="noopener noreferrer">codopsy-almd</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
-        </div>
-        <p class="repo-desc">基于gramide解析度量Almide复杂度</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-11">2026年9月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Shell" data-name="onomly" data-date="2026-08-30" data-commits="2" data-rank="20">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/onomly" target="_blank" rel="noopener noreferrer">onomly</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
-        </div>
-        <p class="repo-desc">检验产品名候选的Claude Code技能</p>
-        <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">claude-code</li><li class="repo-topic">claude-skill</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-08-30">2026年8月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="codopsy-ts" data-date="2026-02-24" data-commits="16" data-rank="21">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/codopsy-ts" target="_blank" rel="noopener noreferrer">codopsy-ts</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-        </div>
-        <p class="repo-desc">面向TypeScript/JavaScript的AST代码质量分析器</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">ast</li><li class="repo-topic">cli</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">16<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-02-24">2026年2月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Rust" data-name="imoduru" data-date="2026-05-09" data-commits="12" data-rank="22">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/imoduru" target="_blank" rel="noopener noreferrer">imoduru</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
-        </div>
-        <p class="repo-desc">Rust与Playwright递归爬虫,经MCP提供数据</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">12<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-05-09">2026年5月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="" data-name="codopsy-ts-skill" data-date="2026-02-18" data-commits="9" data-rank="23">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/codopsy-ts-skill" target="_blank" rel="noopener noreferrer">codopsy-ts-skill</a>
-          <span class="repo-org-tag">O6lvl4</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/ccp" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ccp</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">用符号链接叠加切换Claude Code配置的工具</p>
           
         </div>
-        <p class="repo-desc">用于代码质量评分与自动修复的Claude Code插件</p>
-        <ul class="repo-topics"><li class="repo-topic">claude-code</li><li class="repo-topic">claude-code-plugin</li><li class="repo-topic">claude-code-skill</li><li class="repo-topic">code-quality</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">9<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-02-18">2026年2月</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Shell" data-name="cdev" data-date="2025-08-25" data-commits="2" data-rank="24">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/cdev" target="_blank" rel="noopener noreferrer">cdev</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-05-28">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
         </div>
-        <p class="repo-desc">用Claude Code根据描述自动构建项目的CLI</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2025-08-25">2025年8月</time>
-      </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="treesrc" data-date="2025-04-01" data-commits="14" data-rank="13">
+      <a class="repo-row" href="https://github.com/O6lvl4/treesrc" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">treesrc</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">遵循.gitignore显示目录结构与文件内容的CLI</p>
+          
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">14<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2025-04-01">2025年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="golemide" data-date="2026-09-13" data-commits="48" data-rank="14">
+      <a class="repo-row" href="https://github.com/O6lvl4/golemide" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">golemide</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">用Almide编写的编码代理，先观察再编辑并验证</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">48<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-13">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Rust" data-name="ctxgate" data-date="2026-09-17" data-commits="34" data-rank="15">
+      <a class="repo-row" href="https://github.com/O6lvl4/ctxgate" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ctxgate</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">Claude Code的上下文防火墙,存档工具输出并压缩展示</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Go</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">34<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-17">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Python" data-name="assay" data-date="2026-09-13" data-commits="17" data-rank="16">
+      <a class="repo-row" href="https://github.com/O6lvl4/assay" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">assay</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+          </div>
+          <p class="repo-desc">保留限定条件的编码智能体基准数据及测评工具</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">17<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-13">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="emet" data-date="2026-09-13" data-commits="11" data-rank="17">
+      <a class="repo-row" href="https://github.com/O6lvl4/emet" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">emet</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">核对主张数字、引文与名称的引用闸门</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">11<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-13">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="onetool" data-date="2026-09-03" data-commits="11" data-rank="18">
+      <a class="repo-row" href="https://github.com/O6lvl4/onetool" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">onetool</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">用四个通用工具封装任意API的MCP框架</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">11<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-03">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="codopsy-almd" data-date="2026-09-11" data-commits="4" data-rank="19">
+      <a class="repo-row" href="https://github.com/O6lvl4/codopsy-almd" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">codopsy-almd</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">基于gramide解析度量Almide复杂度</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-11">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Shell" data-name="onomly" data-date="2026-08-30" data-commits="2" data-rank="20">
+      <a class="repo-row" href="https://github.com/O6lvl4/onomly" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">onomly</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+          </div>
+          <p class="repo-desc">检验产品名候选的Claude Code技能</p>
+          <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">claude-code</li><li class="repo-topic">claude-skill</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-08-30">2026年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="codopsy-ts" data-date="2026-02-24" data-commits="16" data-rank="21">
+      <a class="repo-row" href="https://github.com/O6lvl4/codopsy-ts" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">codopsy-ts</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">面向TypeScript/JavaScript的AST代码质量分析器</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">ast</li><li class="repo-topic">cli</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">16<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-02-24">2026年2月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Rust" data-name="imoduru" data-date="2026-05-09" data-commits="12" data-rank="22">
+      <a class="repo-row" href="https://github.com/O6lvl4/imoduru" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">imoduru</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">Rust与Playwright递归爬虫,经MCP提供数据</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">12<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-05-09">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="" data-name="codopsy-ts-skill" data-date="2026-02-18" data-commits="9" data-rank="23">
+      <a class="repo-row" href="https://github.com/O6lvl4/codopsy-ts-skill" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">codopsy-ts-skill</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            
+          </div>
+          <p class="repo-desc">用于代码质量评分与自动修复的Claude Code插件</p>
+          <ul class="repo-topics"><li class="repo-topic">claude-code</li><li class="repo-topic">claude-code-plugin</li><li class="repo-topic">claude-code-skill</li><li class="repo-topic">code-quality</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">9<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-02-18">2026年2月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Shell" data-name="cdev" data-date="2025-08-25" data-commits="2" data-rank="24">
+      <a class="repo-row" href="https://github.com/O6lvl4/cdev" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">cdev</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+          </div>
+          <p class="repo-desc">用Claude Code根据描述自动构建项目的CLI</p>
+          
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2025-08-25">2025年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

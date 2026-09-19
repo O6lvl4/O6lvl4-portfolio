@@ -48,10 +48,9 @@ export const TEXT = {
       "almd-mc": "Almide で Minecraft のプロトコルを実装した一式。認証、チャンク、NBT、ボット。",
       "Aid-On": "Aid-On での仕事。LLM を使うための土台（流量制御、統一インターフェース、記憶、ストリーム）と AITuber の部品。",
     },
-    about: (total, commits) => [
+    about: () => [
       "静的型付けの言語 Almide をつくっています。言語本体は Rust で、仕様・文法・エディタ支援・実行環境を別のリポジトリに分けて置いています。",
       "その言語で道具を書きます。コードを構造で読む hew、構文木をつくる gramide、コードの質を測る codopsy、エージェントを閉じ込めて走らせる porta。どれも手元の作業で毎日使うものから始まっています。",
-      `公開しているのは ${total} 件、コミットは合わせて ${commits.toLocaleString("en-US")} 件です。`,
     ],
     aboutPage: {
       nav: "この頁について",
@@ -107,10 +106,9 @@ export const TEXT = {
       "almd-mc": "Minecraft's protocol implemented in Almide: authentication, chunks, NBT, and a bot.",
       "Aid-On": "Work at Aid-On: groundwork for using LLMs (rate limiting, one interface, memory, streams) and the parts of an AITuber.",
     },
-    about: (total, commits) => [
+    about: () => [
       "I build Almide, a statically-typed language. The compiler is written in Rust; its specification, grammar, editor support and runtimes each live in their own repository.",
       "Then I write my tools in it: hew reads code by structure, gramide builds syntax trees, codopsy measures code quality, porta runs agents inside a sandbox. Each one started as something I needed that day.",
-      `${total} repositories are public, ${commits.toLocaleString("en-US")} commits in all.`,
     ],
     aboutPage: {
       nav: "About this page",
@@ -166,10 +164,9 @@ export const TEXT = {
       "almd-mc": "用 Almide 实现的 Minecraft 协议：认证、区块、NBT 与机器人。",
       "Aid-On": "在 Aid-On 的工作：使用 LLM 的基础设施（限流、统一接口、记忆、流）与 AITuber 的零件。",
     },
-    about: (total, commits) => [
+    about: () => [
       "我在做静态类型语言 Almide。编译器用 Rust 写，规范、语法、编辑器支持与运行时各自放在独立的仓库。",
       "然后用它写工具：按结构读代码的 hew、构建语法树的 gramide、衡量代码质量的 codopsy、把智能体关进沙箱运行的 porta。每一个都从当天需要的东西开始。",
-      `公开的有 ${total} 个，提交合计 ${commits.toLocaleString("en-US")} 次。`,
     ],
     aboutPage: {
       nav: "关于本页",

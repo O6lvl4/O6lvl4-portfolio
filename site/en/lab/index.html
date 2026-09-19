@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1934,537 +1957,651 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="Language"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">All</button><button type="button" class="lang-chip" data-lang="Go" aria-pressed="false"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="Swift" aria-pressed="false"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="Lua" aria-pressed="false"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</button><button type="button" class="lang-chip" data-lang="Dart" aria-pressed="false"><span class="lang-dot" style="background:#00b4ab;width:5px;height:5px" aria-hidden="true"></span>Dart</button><button type="button" class="lang-chip" data-lang="CSS" aria-pressed="false"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</button><button type="button" class="lang-chip" data-lang="Makefile" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Makefile</button><button type="button" class="lang-chip" data-lang="Python" aria-pressed="false"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="lab" data-lang="Go" data-name="line-bot-private" data-date="2022-10-30" data-commits="6" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/line-bot-private" target="_blank" rel="noopener noreferrer">line-bot-private</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/line-bot-private" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">line-bot-private</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.</p>
+          
         </div>
-        <p class="repo-desc">A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2022-10-30">Oct 2022</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2022-10-30">Oct 2022</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Almide" data-name="almide-otel-demo" data-date="2026-08-04" data-commits="13" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/almide-otel-demo" target="_blank" rel="noopener noreferrer">almide-otel-demo</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/almide-otel-demo" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-otel-demo</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">A from-scratch OpenTelemetry tracing SDK in pure Almide, with a two-service trace demo in Jaeger</p>
+          
         </div>
-        <p class="repo-desc">A from-scratch OpenTelemetry tracing SDK in pure Almide, with a two-service trace demo in Jaeger</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">13<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-08-04">Aug 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">13<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-08-04">Aug 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="go1.26-vs-go1.27" data-date="2026-07-31" data-commits="8" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/go1.26-vs-go1.27" target="_blank" rel="noopener noreferrer">go1.26-vs-go1.27</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/go1.26-vs-go1.27" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">go1.26-vs-go1.27</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">Runnable before/after pairs comparing how code is written in Go 1.26 versus Go 1.27</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">Runnable before/after pairs comparing how code is written in Go 1.26 versus Go 1.27</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-07-31">Jul 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-07-31">Jul 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="go1.27-vs-almide" data-date="2026-07-31" data-commits="4" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/go1.27-vs-almide" target="_blank" rel="noopener noreferrer">go1.27-vs-almide</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/go1.27-vs-almide" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">go1.27-vs-almide</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">Notes comparing Go 1.27 new features with the almide 0.41 language, for a Miyazaki.go meetup</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">Notes comparing Go 1.27 new features with the almide 0.41 language, for a Miyazaki.go meetup</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-07-31">Jul 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-07-31">Jul 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="almide-audio-poc" data-date="2026-07-25" data-commits="2" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/almide-audio-poc" target="_blank" rel="noopener noreferrer">almide-audio-poc</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/almide-audio-poc" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-audio-poc</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">Minimal demo running Almide-compiled WASM in an AudioWorklet as an 8-harmonic additive synth</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">Almide</li></ul>
         </div>
-        <p class="repo-desc">Minimal demo running Almide-compiled WASM in an AudioWorklet as an 8-harmonic additive synth</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">Almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-07-25">Jul 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-07-25">Jul 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="aid-on-js-training" data-date="2025-08-28" data-commits="122" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/aid-on-js-training" target="_blank" rel="noopener noreferrer">aid-on-js-training</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/aid-on-js-training" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">aid-on-js-training</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">A beginner JavaScript exercise set with bundled tests that automatically check your answers</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
         </div>
-        <p class="repo-desc">A beginner JavaScript exercise set with bundled tests that automatically check your answers</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">122<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-08-28">Aug 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">122<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-08-28">Aug 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Swift" data-name="sandbox-ios-app" data-date="2025-10-12" data-commits="2" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/sandbox-ios-app" target="_blank" rel="noopener noreferrer">sandbox-ios-app</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</span>
+      <a class="repo-row" href="https://github.com/Aid-On/sandbox-ios-app" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sandbox-ios-app</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</span>
+          </div>
+          <p class="repo-desc">A SwiftUI iOS app template with architectural linting, automated CI/CD and TestFlight deployment</p>
+          
         </div>
-        <p class="repo-desc">A SwiftUI iOS app template with architectural linting, automated CI/CD and TestFlight deployment</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-10-12">Oct 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-10-12">Oct 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="next-pet-diary" data-date="2025-08-31" data-commits="25" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/next-pet-diary" target="_blank" rel="noopener noreferrer">next-pet-diary</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/next-pet-diary" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">next-pet-diary</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A Next.js project bootstrapped with create-next-app, named next-pet-diary.</p>
+          <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">A Next.js project bootstrapped with create-next-app, named next-pet-diary.</p>
-        <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">25<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-08-31">Aug 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">25<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-08-31">Aug 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Lua" data-name="cct-fennel-sandbox" data-date="2025-09-16" data-commits="17" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/cct-fennel-sandbox" target="_blank" rel="noopener noreferrer">cct-fennel-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/cct-fennel-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">cct-fennel-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</span>
+          </div>
+          <p class="repo-desc">A Fennel project template for the Minecraft CC:Tweaked mod, compiled to a single Lua file.</p>
+          
         </div>
-        <p class="repo-desc">A Fennel project template for the Minecraft CC:Tweaked mod, compiled to a single Lua file.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">17<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-09-16">Sep 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">17<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-09-16">Sep 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Dart" data-name="stock-counter-app" data-date="2022-03-13" data-commits="14" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/stock-counter-app" target="_blank" rel="noopener noreferrer">stock-counter-app</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00b4ab;width:5px;height:5px" aria-hidden="true"></span>Dart</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/stock-counter-app" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">stock-counter-app</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00b4ab;width:5px;height:5px" aria-hidden="true"></span>Dart</span>
+          </div>
+          <p class="repo-desc">A Flutter project named stock_counter_app, still at the default starter-template stage.</p>
+          <ul class="repo-topics"><li class="repo-topic">C++</li><li class="repo-topic">C</li></ul>
         </div>
-        <p class="repo-desc">A Flutter project named stock_counter_app, still at the default starter-template stage.</p>
-        <ul class="repo-topics"><li class="repo-topic">C++</li><li class="repo-topic">C</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">14<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2022-03-13">Mar 2022</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">14<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2022-03-13">Mar 2022</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="CSS" data-name="sandbox-next-ghpage" data-date="2023-11-18" data-commits="8" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sandbox-next-ghpage" target="_blank" rel="noopener noreferrer">sandbox-next-ghpage</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/sandbox-next-ghpage" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sandbox-next-ghpage</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
+          </div>
+          <p class="repo-desc">A sandbox documenting how to deploy a TypeScript Next.js app to GitHub Pages step by step</p>
+          <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">A sandbox documenting how to deploy a TypeScript Next.js app to GitHub Pages step by step</p>
-        <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2023-11-18">Nov 2023</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2023-11-18">Nov 2023</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="sandbox-next-firebase-app-hosting-line-auth" data-date="2025-08-23" data-commits="5" data-rank="11">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sandbox-next-firebase-app-hosting-line-auth" target="_blank" rel="noopener noreferrer">sandbox-next-firebase-app-hosting-line-auth</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/sandbox-next-firebase-app-hosting-line-auth" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sandbox-next-firebase-app-hosting-line-auth</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Reference architecture for LINE login in Next.js App Router, deployed to Firebase with CDKTF infrastructure.</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">CSS</li></ul>
         </div>
-        <p class="repo-desc">Reference architecture for LINE login in Next.js App Router, deployed to Firebase with CDKTF infrastructure.</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-08-23">Aug 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-08-23">Aug 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="sandbox-next-ts-gh-page" data-date="2025-04-11" data-commits="3" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sandbox-next-ts-gh-page" target="_blank" rel="noopener noreferrer">sandbox-next-ts-gh-page</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/sandbox-next-ts-gh-page" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sandbox-next-ts-gh-page</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A Next.js project bootstrapped with create-next-app, per the standard starter template</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">CSS</li></ul>
         </div>
-        <p class="repo-desc">A Next.js project bootstrapped with create-next-app, per the standard starter template</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-04-11">Apr 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-04-11">Apr 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="ts-tsnode-sandbox" data-date="2024-09-13" data-commits="7" data-rank="13">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/ts-tsnode-sandbox" target="_blank" rel="noopener noreferrer">ts-tsnode-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/ts-tsnode-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ts-tsnode-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A demo project showing how to build Node.js apps with TypeScript and ts-node, from setup to advanced use.</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">A demo project showing how to build Node.js apps with TypeScript and ts-node, from setup to advanced use.</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2024-09-13">Sep 2024</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2024-09-13">Sep 2024</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="ts-react-tailwindcss-sandbox" data-date="2024-09-11" data-commits="5" data-rank="14">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/ts-react-tailwindcss-sandbox" target="_blank" rel="noopener noreferrer">ts-react-tailwindcss-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/ts-react-tailwindcss-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ts-react-tailwindcss-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Demo of responsive design with React and Tailwind CSS breakpoints, companion to a Zenn guide</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Shell</li></ul>
         </div>
-        <p class="repo-desc">Demo of responsive design with React and Tailwind CSS breakpoints, companion to a Zenn guide</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2024-09-11">Sep 2024</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2024-09-11">Sep 2024</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="sandbox-golang-cli" data-date="2024-02-05" data-commits="3" data-rank="15">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sandbox-golang-cli" target="_blank" rel="noopener noreferrer">sandbox-golang-cli</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/sandbox-golang-cli" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sandbox-golang-cli</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">A Go CLI application built with the Cobra library, with setup steps using cobra-cli.</p>
+          
         </div>
-        <p class="repo-desc">A Go CLI application built with the Cobra library, with setup steps using cobra-cli.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2024-02-05">Feb 2024</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2024-02-05">Feb 2024</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Makefile" data-name="sandbox-gcp" data-date="2023-11-19" data-commits="5" data-rank="16">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sandbox-gcp" target="_blank" rel="noopener noreferrer">sandbox-gcp</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Makefile</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/sandbox-gcp" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sandbox-gcp</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Makefile</span>
+          </div>
+          <p class="repo-desc">A Japanese guide to building environments on Google Cloud Platform using Terraform.</p>
+          
         </div>
-        <p class="repo-desc">A Japanese guide to building environments on Google Cloud Platform using Terraform.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2023-11-19">Nov 2023</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2023-11-19">Nov 2023</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="tz-clocks" data-date="2023-06-21" data-commits="3" data-rank="17">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/tz-clocks" target="_blank" rel="noopener noreferrer">tz-clocks</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/tz-clocks" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">tz-clocks</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A React app bootstrapped with Create React App; the README describes no tz-clocks-specific features</p>
+          <ul class="repo-topics"><li class="repo-topic">CSS</li></ul>
         </div>
-        <p class="repo-desc">A React app bootstrapped with Create React App; the README describes no tz-clocks-specific features</p>
-        <ul class="repo-topics"><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2023-06-21">Jun 2023</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2023-06-21">Jun 2023</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="line-bot-sandbox" data-date="2022-10-01" data-commits="4" data-rank="18">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/line-bot-sandbox" target="_blank" rel="noopener noreferrer">line-bot-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/line-bot-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">line-bot-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">A Go sample template for an AWS Lambda function behind API Gateway, built and deployed with SAM.</p>
+          
         </div>
-        <p class="repo-desc">A Go sample template for an AWS Lambda function behind API Gateway, built and deployed with SAM.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2022-10-01">Oct 2022</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2022-10-01">Oct 2022</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Python" data-name="aws-py-s3-sandbox" data-date="2022-03-10" data-commits="2" data-rank="19">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/aws-py-s3-sandbox" target="_blank" rel="noopener noreferrer">aws-py-s3-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/aws-py-s3-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">aws-py-s3-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+          </div>
+          <p class="repo-desc">A Python serverless sample app deployed with the SAM CLI, using Lambda and API Gateway</p>
+          
         </div>
-        <p class="repo-desc">A Python serverless sample app deployed with the SAM CLI, using Lambda and API Gateway</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2022-03-10">Mar 2022</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2022-03-10">Mar 2022</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Lua" data-name="cctweaked-fennel-landfill" data-date="2025-10-25" data-commits="42" data-rank="20">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/cctweaked-fennel-landfill" target="_blank" rel="noopener noreferrer">cctweaked-fennel-landfill</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/cctweaked-fennel-landfill" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">cctweaked-fennel-landfill</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</span>
+          </div>
+          <p class="repo-desc">Automatic landfill and land-leveling system for Ender Turtles in CC:Tweaked, written in Lua and Fennel</p>
+          
         </div>
-        <p class="repo-desc">Automatic landfill and land-leveling system for Ender Turtles in CC:Tweaked, written in Lua and Fennel</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">42<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-10-25">Oct 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">42<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-10-25">Oct 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="" data-name=".github" data-date="2025-12-30" data-commits="7" data-rank="21">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/.github" target="_blank" rel="noopener noreferrer">.github</a>
-          <span class="repo-org-tag">Aid-On</span>
+      <a class="repo-row" href="https://github.com/Aid-On/.github" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">.github</span>
+            <span class="repo-org-tag">Aid-On</span>
+            
+          </div>
+          <p class="repo-desc">Aid-On&#39;s .github repository, which has no README, so its purpose is not stated</p>
           
         </div>
-        <p class="repo-desc">Aid-On&#39;s .github repository, which has no README, so its purpose is not stated</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-12-30">Dec 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-12-30">Dec 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Swift" data-name="aichatpractice" data-date="2025-09-05" data-commits="8" data-rank="22">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/AIChatPractice" target="_blank" rel="noopener noreferrer">AIChatPractice</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</span>
+      <a class="repo-row" href="https://github.com/Aid-On/AIChatPractice" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">AIChatPractice</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</span>
+          </div>
+          <p class="repo-desc">A Swift repository named AIChatPractice, apparently for AI chat practice; it has no README.</p>
+          
         </div>
-        <p class="repo-desc">A Swift repository named AIChatPractice, apparently for AI chat practice; it has no README.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-09-05">Sep 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-09-05">Sep 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="mastra-sandbox" data-date="2025-04-02" data-commits="3" data-rank="23">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/mastra-sandbox" target="_blank" rel="noopener noreferrer">mastra-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/mastra-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">mastra-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A repository named mastra-sandbox; it has no README, so its purpose is not documented.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">A repository named mastra-sandbox; it has no README, so its purpose is not documented.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-04-02">Apr 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-04-02">Apr 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="golang-cp-solve-sandbox" data-date="2023-02-05" data-commits="4" data-rank="24">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/golang-cp-solve-sandbox" target="_blank" rel="noopener noreferrer">golang-cp-solve-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/golang-cp-solve-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">golang-cp-solve-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">No README; a Go repository whose name suggests a sandbox for competitive programming solutions</p>
+          
         </div>
-        <p class="repo-desc">No README; a Go repository whose name suggests a sandbox for competitive programming solutions</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2023-02-05">Feb 2023</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2023-02-05">Feb 2023</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="CSS" data-name="golang-lib-vecty-sandbox" data-date="2022-09-04" data-commits="3" data-rank="25">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/golang-lib-vecty-sandbox" target="_blank" rel="noopener noreferrer">golang-lib-vecty-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/golang-lib-vecty-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">golang-lib-vecty-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
+          </div>
+          <p class="repo-desc">A sandbox repository written in Go and CSS, apparently for trying the vecty library; no README</p>
+          <ul class="repo-topics"><li class="repo-topic">Go</li></ul>
         </div>
-        <p class="repo-desc">A sandbox repository written in Go and CSS, apparently for trying the vecty library; no README</p>
-        <ul class="repo-topics"><li class="repo-topic">Go</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2022-09-04">Sep 2022</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2022-09-04">Sep 2022</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="golang-lib-lo-sandbox" data-date="2022-08-21" data-commits="3" data-rank="26">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/golang-lib-lo-sandbox" target="_blank" rel="noopener noreferrer">golang-lib-lo-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/golang-lib-lo-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">golang-lib-lo-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">No README; a Go repository whose name suggests a sandbox for the lo library.</p>
+          
         </div>
-        <p class="repo-desc">No README; a Go repository whose name suggests a sandbox for the lo library.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2022-08-21">Aug 2022</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2022-08-21">Aug 2022</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Rust" data-name="rust-cli-sandbox" data-date="2022-05-08" data-commits="5" data-rank="27">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/rust-cli-sandbox" target="_blank" rel="noopener noreferrer">rust-cli-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/rust-cli-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">rust-cli-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">A Rust repository named rust-cli-sandbox, apparently a sandbox for CLI experiments.</p>
+          
         </div>
-        <p class="repo-desc">A Rust repository named rust-cli-sandbox, apparently a sandbox for CLI experiments.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2022-05-08">May 2022</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2022-05-08">May 2022</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="reporting-page-by-calendar-days" data-date="2025-02-02" data-commits="4" data-rank="28">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/reporting-page-by-calendar-days" target="_blank" rel="noopener noreferrer">reporting-page-by-calendar-days</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/reporting-page-by-calendar-days" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">reporting-page-by-calendar-days</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">A JavaScript and HTML project for reporting pages by calendar day; the README gives no details.</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
         </div>
-        <p class="repo-desc">A JavaScript and HTML project for reporting pages by calendar day; the README gives no details.</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-02-02">Feb 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-02-02">Feb 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="reporting-page-by-working-days" data-date="2025-02-02" data-commits="3" data-rank="29">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/reporting-page-by-working-days" target="_blank" rel="noopener noreferrer">reporting-page-by-working-days</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/reporting-page-by-working-days" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">reporting-page-by-working-days</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">A JavaScript and HTML page for reporting by working days; the README gives no details</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
         </div>
-        <p class="repo-desc">A JavaScript and HTML page for reporting by working days; the README gives no details</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-02-02">Feb 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-02-02">Feb 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="HTML" data-name="tyrano-sandbox" data-date="2025-03-03" data-commits="2" data-rank="30">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/tyrano-sandbox" target="_blank" rel="noopener noreferrer">tyrano-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/tyrano-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">tyrano-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">A sandbox repository for Tyrano experiments; it has no README describing it.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">CSS</li></ul>
         </div>
-        <p class="repo-desc">A sandbox repository for Tyrano experiments; it has no README describing it.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-03-03">Mar 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-03-03">Mar 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="langchain-translate-chain" data-date="2024-04-05" data-commits="1" data-rank="31">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/langchain-translate-chain" target="_blank" rel="noopener noreferrer">langchain-translate-chain</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/langchain-translate-chain" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">langchain-translate-chain</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A TypeScript repository with no README, so its purpose is not documented.</p>
+          
         </div>
-        <p class="repo-desc">A TypeScript repository with no README, so its purpose is not documented.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2024-04-05">Apr 2024</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2024-04-05">Apr 2024</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-discord-bot" data-date="2024-02-03" data-commits="1" data-rank="32">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sandbox-discord-bot" target="_blank" rel="noopener noreferrer">sandbox-discord-bot</a>
-          <span class="repo-org-tag">O6lvl4</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/sandbox-discord-bot" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sandbox-discord-bot</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            
+          </div>
+          <p class="repo-desc">A sandbox repository for a Discord bot; the README gives only the project name.</p>
           
         </div>
-        <p class="repo-desc">A sandbox repository for a Discord bot; the README gives only the project name.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2024-02-03">Feb 2024</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2024-02-03">Feb 2024</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-langchaingo" data-date="2024-02-02" data-commits="1" data-rank="33">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sandbox-langchaingo" target="_blank" rel="noopener noreferrer">sandbox-langchaingo</a>
-          <span class="repo-org-tag">O6lvl4</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/sandbox-langchaingo" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sandbox-langchaingo</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            
+          </div>
+          <p class="repo-desc">A sandbox repository named sandbox-langchaingo, apparently for trying out langchaingo.</p>
           
         </div>
-        <p class="repo-desc">A sandbox repository named sandbox-langchaingo, apparently for trying out langchaingo.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2024-02-02">Feb 2024</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2024-02-02">Feb 2024</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-chatgpt-talk" data-date="" data-commits="0" data-rank="34">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sandbox-chatgpt-talk" target="_blank" rel="noopener noreferrer">sandbox-chatgpt-talk</a>
-          <span class="repo-org-tag">O6lvl4</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/sandbox-chatgpt-talk" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sandbox-chatgpt-talk</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            
+          </div>
+          <p class="repo-desc">A sandbox repository with no README, so its purpose is not documented</p>
           
         </div>
-        <p class="repo-desc">A sandbox repository with no README, so its purpose is not documented</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">0<span class="repo-meta-unit"> Commits</span></span>
-        
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">0<span class="repo-meta-unit"> Commits</span></span>
+          
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="ebitengine-sandbox" data-date="2023-03-10" data-commits="2" data-rank="35">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/ebitengine-sandbox" target="_blank" rel="noopener noreferrer">ebitengine-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/ebitengine-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ebitengine-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">A Go sandbox repository for Ebitengine; the repo has no README describing it further.</p>
+          
         </div>
-        <p class="repo-desc">A Go sandbox repository for Ebitengine; the repo has no README describing it further.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2023-03-10">Mar 2023</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2023-03-10">Mar 2023</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="react-native-ts-boilerplate" data-date="2022-03-26" data-commits="2" data-rank="36">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/react-native-ts-boilerplate" target="_blank" rel="noopener noreferrer">react-native-ts-boilerplate</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/react-native-ts-boilerplate" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">react-native-ts-boilerplate</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A React Native boilerplate project written in TypeScript; the README gives only its name.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">C</li></ul>
         </div>
-        <p class="repo-desc">A React Native boilerplate project written in TypeScript; the README gives only its name.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">C</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2022-03-26">Mar 2022</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2022-03-26">Mar 2022</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="sam-swagger-api-sandbox" data-date="2022-02-25" data-commits="2" data-rank="37">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sam-swagger-api-sandbox" target="_blank" rel="noopener noreferrer">sam-swagger-api-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/sam-swagger-api-sandbox" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">sam-swagger-api-sandbox</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">A sandbox project combining AWS SAM with OpenAPI (Swagger).</p>
+          <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Ruby</li></ul>
         </div>
-        <p class="repo-desc">A sandbox project combining AWS SAM with OpenAPI (Swagger).</p>
-        <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Ruby</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2022-02-25">Feb 2022</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2022-02-25">Feb 2022</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1925,187 +1948,226 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="HTML" aria-pressed="false"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="Python" aria-pressed="false"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="sites" data-lang="HTML" data-name="almide-headset-eq" data-date="2026-06-19" data-commits="4" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/almide-headset-eq" target="_blank" rel="noopener noreferrer">almide-headset-eq</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/almide-headset-eq" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almide-headset-eq</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">用Almide编写的级联biquad参量均衡器,校正CYBER耳机</p>
+          <ul class="repo-topics"><li class="repo-topic">Almide</li></ul>
         </div>
-        <p class="repo-desc">用Almide编写的级联biquad参量均衡器,校正CYBER耳机</p>
-        <ul class="repo-topics"><li class="repo-topic">Almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-19">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-19">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="TypeScript" data-name="chip-war-chronicle" data-date="2026-09-15" data-commits="42" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/chip-war-chronicle" target="_blank" rel="noopener noreferrer">chip-war-chronicle</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/chip-war-chronicle" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">chip-war-chronicle</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">半导体与世界局势的泳道时间线</p>
+          <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">半导体与世界局势的泳道时间线</p>
-        <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">42<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-15">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">42<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-15">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="o6lvl4-webnight-miyazaki-20260703-slide" data-date="2026-07-06" data-commits="27" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide" target="_blank" rel="noopener noreferrer">O6lvl4-webnight-miyazaki-20260703-slide</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">O6lvl4-webnight-miyazaki-20260703-slide</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">用Almide讲述WebAssembly现状的演讲幻灯片</p>
+          
         </div>
-        <p class="repo-desc">用Almide讲述WebAssembly现状的演讲幻灯片</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">27<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-07-06">2026年7月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">27<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-07-06">2026年7月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="agent-bench-matrix" data-date="2026-09-14" data-commits="9" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/agent-bench-matrix" target="_blank" rel="noopener noreferrer">agent-bench-matrix</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/agent-bench-matrix" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">agent-bench-matrix</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">把智能体基准公开榜单按模型汇成一张表</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Almide</li></ul>
         </div>
-        <p class="repo-desc">把智能体基准公开榜单按模型汇成一张表</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Almide</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">9<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-14">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">9<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-14">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="JavaScript" data-name="hokusai-portfolio" data-date="2026-09-18" data-commits="2" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/hokusai-portfolio" target="_blank" rel="noopener noreferrer">hokusai-portfolio</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/hokusai-portfolio" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">hokusai-portfolio</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">以北斋64幅风景版画制作的日本艺术家作品集示例</p>
+          <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">HTML</li><li class="repo-topic">github-pages</li></ul>
         </div>
-        <p class="repo-desc">以北斋64幅风景版画制作的日本艺术家作品集示例</p>
-        <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">HTML</li><li class="repo-topic">github-pages</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="TypeScript" data-name="gulp-coach" data-date="2026-04-24" data-commits="12" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gulp-coach" target="_blank" rel="noopener noreferrer">gulp-coach</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gulp-coach" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gulp-coach</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">完全本地运行的饮水教练,提示还能喝多少或需等待多久</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
         </div>
-        <p class="repo-desc">完全本地运行的饮水教练,提示还能喝多少或需等待多久</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">12<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-04-24">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">12<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-04-24">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="TypeScript" data-name="environment-health-viewer" data-date="2026-04-23" data-commits="10" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/environment-health-viewer" target="_blank" rel="noopener noreferrer">environment-health-viewer</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/environment-health-viewer" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">environment-health-viewer</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">一屏展示所在地环境健康风险与气象警报的静态看板</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
         </div>
-        <p class="repo-desc">一屏展示所在地环境健康风险与气象警报的静态看板</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">10<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-04-23">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">10<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-04-23">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="kotorody-portfolio" data-date="2026-05-18" data-commits="7" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/kotorody-portfolio" target="_blank" rel="noopener noreferrer">kotorody-portfolio</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+      <a class="repo-row" href="https://github.com/Aid-On/kotorody-portfolio" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">kotorody-portfolio</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">Aid-On前端工程师kotorody的作品集网站</p>
+          
         </div>
-        <p class="repo-desc">Aid-On前端工程师kotorody的作品集网站</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-05-18">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-05-18">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="TypeScript" data-name="tabi-navi" data-date="2026-06-11" data-commits="1" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/tabi-navi" target="_blank" rel="noopener noreferrer">tabi-navi</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/tabi-navi" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">tabi-navi</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">按行程约束搜索最便宜机票加酒店组合的CLI</p>
+          
         </div>
-        <p class="repo-desc">按行程约束搜索最便宜机票加酒店组合的CLI</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-11">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-06-11">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="pitchy" data-date="2026-05-12" data-commits="2" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/pitchy" target="_blank" rel="noopener noreferrer">pitchy</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/pitchy" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">pitchy</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">口哨音高检测工具,显示和弦并含节奏游戏</p>
+          <ul class="repo-topics"><li class="repo-topic">Rust</li></ul>
         </div>
-        <p class="repo-desc">口哨音高检测工具,显示和弦并含节奏游戏</p>
-        <ul class="repo-topics"><li class="repo-topic">Rust</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-05-12">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-05-12">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="JavaScript" data-name="aid-on-contract-generator" data-date="2025-06-29" data-commits="2" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/aid-on-contract-generator" target="_blank" rel="noopener noreferrer">aid-on-contract-generator</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/aid-on-contract-generator" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">aid-on-contract-generator</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">纯HTML/CSS/JS的浏览器合同生成应用</p>
+          <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">HTML</li></ul>
         </div>
-        <p class="repo-desc">纯HTML/CSS/JS的浏览器合同生成应用</p>
-        <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">HTML</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2025-06-29">2025年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2025-06-29">2025年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="Python" data-name="aid-on-tax-calculator" data-date="2025-03-06" data-commits="2" data-rank="11">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/aid-on-tax-calculator" target="_blank" rel="noopener noreferrer">aid-on-tax-calculator</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+      <a class="repo-row" href="https://github.com/Aid-On/aid-on-tax-calculator" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">aid-on-tax-calculator</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+          </div>
+          <p class="repo-desc">按日本10%消费税换算含税与不含税价格的Python命令行工具</p>
+          
         </div>
-        <p class="repo-desc">按日本10%消费税换算含税与不含税价格的Python命令行工具</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2025-03-06">2025年3月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2025-03-06">2025年3月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="aid-on-invoice-generator" data-date="2025-06-02" data-commits="4" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/aid-on-invoice-generator" target="_blank" rel="noopener noreferrer">aid-on-invoice-generator</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+      <a class="repo-row" href="https://github.com/Aid-On/aid-on-invoice-generator" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">aid-on-invoice-generator</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">发票生成项目,README仅有名称</p>
+          
         </div>
-        <p class="repo-desc">发票生成项目,README仅有名称</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2025-06-02">2025年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2025-06-02">2025年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1925,271 +1948,328 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="Language"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">All</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="llm" data-lang="JavaScript" data-name="llm-throttle" data-date="2025-08-03" data-commits="12" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/llm-throttle" target="_blank" rel="noopener noreferrer">llm-throttle</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/llm-throttle" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">llm-throttle</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">A TypeScript rate limiting library that controls both RPM and TPM for LLM API calls</p>
+          <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li><li class="repo-topic">aid-on-libs</li></ul>
         </div>
-        <p class="repo-desc">A TypeScript rate limiting library that controls both RPM and TPM for LLM API calls</p>
-        <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li><li class="repo-topic">aid-on-libs</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">12<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">12<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llm-queue-dispatcher" data-date="2025-08-03" data-commits="10" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/llm-queue-dispatcher" target="_blank" rel="noopener noreferrer">llm-queue-dispatcher</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/llm-queue-dispatcher" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">llm-queue-dispatcher</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li><li class="repo-topic">aid-on-libs</li></ul>
         </div>
-        <p class="repo-desc">A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li><li class="repo-topic">aid-on-libs</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">10<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">10<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="bonsai-almide" data-date="2026-04-22" data-commits="35" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/bonsai-almide" target="_blank" rel="noopener noreferrer">bonsai-almide</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide/bonsai-almide" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">bonsai-almide</span>
+            <span class="repo-org-tag">almide</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
         </div>
-        <p class="repo-desc">Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">35<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-04-22">Apr 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">35<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-04-22">Apr 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="homullus" data-date="2026-05-18" data-commits="28" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-ai/homullus" target="_blank" rel="noopener noreferrer">homullus</a>
-          <span class="repo-org-tag">almide-ai</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide-ai/homullus" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">homullus</span>
+            <span class="repo-org-tag">almide-ai</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Modular AI agent CLI runtime written in Almide, built on almai for multiple LLM providers</p>
+          
         </div>
-        <p class="repo-desc">Modular AI agent CLI runtime written in Almide, built on almai for multiple LLM providers</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">28<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-05-18">May 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">28<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-05-18">May 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unillm" data-date="2026-06-11" data-commits="29" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/unillm" target="_blank" rel="noopener noreferrer">unillm</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/unillm" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">unillm</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Unified, type-safe TypeScript LLM interface for edge runtimes across multiple providers</p>
+          <ul class="repo-topics"><li class="repo-topic">ai</li><li class="repo-topic">cloudflare-workers</li><li class="repo-topic">edge-computing</li></ul>
         </div>
-        <p class="repo-desc">Unified, type-safe TypeScript LLM interface for edge runtimes across multiple providers</p>
-        <ul class="repo-topics"><li class="repo-topic">ai</li><li class="repo-topic">cloudflare-workers</li><li class="repo-topic">edge-computing</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">29<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">29<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="whenm" data-date="2026-02-20" data-commits="32" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/whenm" target="_blank" rel="noopener noreferrer">whenm</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/whenm" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">whenm</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Schemaless temporal memory for AI apps that tracks state changes and answers time-based questions</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Shell</li><li class="repo-topic">ai-memory</li></ul>
         </div>
-        <p class="repo-desc">Schemaless temporal memory for AI apps that tracks state changes and answers time-based questions</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Shell</li><li class="repo-topic">ai-memory</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">32<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-02-20">Feb 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">32<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-02-20">Feb 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llmine" data-date="2025-09-21" data-commits="27" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/llmine" target="_blank" rel="noopener noreferrer">llmine</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/llmine" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">llmine</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A CLI tool giving unified terminal access to OpenAI, Azure, Claude, Bedrock and Ollama LLMs</p>
+          
         </div>
-        <p class="repo-desc">A CLI tool giving unified terminal access to OpenAI, Azure, Claude, Bedrock and Ollama LLMs</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">27<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-09-21">Sep 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">27<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-09-21">Sep 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="templex" data-date="2026-06-12" data-commits="24" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/templex" target="_blank" rel="noopener noreferrer">templex</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/templex" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">templex</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">TypeScript library that extracts reusable writing templates from text with LLMs and generates new articles</p>
+          <ul class="repo-topics"><li class="repo-topic">ai</li><li class="repo-topic">article-generation</li><li class="repo-topic">document-analysis</li></ul>
         </div>
-        <p class="repo-desc">TypeScript library that extracts reusable writing templates from text with LLMs and generates new articles</p>
-        <ul class="repo-topics"><li class="repo-topic">ai</li><li class="repo-topic">article-generation</li><li class="repo-topic">document-analysis</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">24<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-12">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">24<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-12">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="iteratop" data-date="2026-06-11" data-commits="18" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/iteratop" target="_blank" rel="noopener noreferrer">iteratop</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/iteratop" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">iteratop</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">TypeScript library for convergent iteration loops with LLMs, inspired by Scrum and OODA loops</p>
+          <ul class="repo-topics"><li class="repo-topic">agent</li><li class="repo-topic">ai</li><li class="repo-topic">builder-pattern</li></ul>
         </div>
-        <p class="repo-desc">TypeScript library for convergent iteration loops with LLMs, inspired by Scrum and OODA loops</p>
-        <ul class="repo-topics"><li class="repo-topic">agent</li><li class="repo-topic">ai</li><li class="repo-topic">builder-pattern</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">18<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">18<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="fractop" data-date="2026-06-10" data-commits="19" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fractop" target="_blank" rel="noopener noreferrer">fractop</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fractop" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fractop</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">TypeScript library that chunks, processes and merges text too long for an LLM&#39;s context limit.</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">ai</li><li class="repo-topic">chunking</li></ul>
         </div>
-        <p class="repo-desc">TypeScript library that chunks, processes and merges text too long for an LLM&#39;s context limit.</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">ai</li><li class="repo-topic">chunking</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">19<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-10">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">19<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-10">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="JavaScript" data-name="fuzztok" data-date="2025-08-03" data-commits="8" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/fuzztok" target="_blank" rel="noopener noreferrer">fuzztok</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/fuzztok" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">fuzztok</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+          </div>
+          <p class="repo-desc">Fast, lightweight fuzzy token estimation library for LLM text, with CJK support</p>
+          <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">HTML</li><li class="repo-topic">npm-package</li></ul>
         </div>
-        <p class="repo-desc">Fast, lightweight fuzzy token estimation library for LLM text, with CJK support</p>
-        <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">HTML</li><li class="repo-topic">npm-package</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="memory-rag" data-date="2025-08-10" data-commits="7" data-rank="11">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/memory-rag" target="_blank" rel="noopener noreferrer">memory-rag</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/memory-rag" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">memory-rag</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">A lightweight, provider-agnostic in-memory RAG library with Vercel AI SDK integration</p>
+          <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li><li class="repo-topic">aid-on-libs</li></ul>
         </div>
-        <p class="repo-desc">A lightweight, provider-agnostic in-memory RAG library with Vercel AI SDK integration</p>
-        <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li><li class="repo-topic">aid-on-libs</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-08-10">Aug 2025</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-08-10">Aug 2025</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unillm-vercel-ai-sdk" data-date="2026-09-06" data-commits="7" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/unillm-vercel-ai-sdk" target="_blank" rel="noopener noreferrer">unillm-vercel-ai-sdk</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/unillm-vercel-ai-sdk" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">unillm-vercel-ai-sdk</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Vercel AI SDK wrapper for @aid-on/unillm giving LanguageModelV1 compatibility for existing AI SDK code</p>
+          
         </div>
-        <p class="repo-desc">Vercel AI SDK wrapper for @aid-on/unillm giving LanguageModelV1 compatibility for existing AI SDK code</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="vad" data-date="2026-09-06" data-commits="6" data-rank="13">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/vad" target="_blank" rel="noopener noreferrer">vad</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/vad" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">vad</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Browser voice activity detection using Silero VAD, with optional RNNoise noise suppression</p>
+          
         </div>
-        <p class="repo-desc">Browser voice activity detection using Silero VAD, with optional RNNoise noise suppression</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="manus" data-date="2026-07-07" data-commits="1" data-rank="14">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-ai/manus" target="_blank" rel="noopener noreferrer">manus</a>
-          <span class="repo-org-tag">almide-ai</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide-ai/manus" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">manus</span>
+            <span class="repo-org-tag">almide-ai</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">A computer-use agent in Almide that lets Claude see and control a real macOS desktop.</p>
+          
         </div>
-        <p class="repo-desc">A computer-use agent in Almide that lets Claude see and control a real macOS desktop.</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-07-07">Jul 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-07-07">Jul 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="almai" data-date="2026-05-01" data-commits="18" data-rank="15">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide-ai/almai" target="_blank" rel="noopener noreferrer">almai</a>
-          <span class="repo-org-tag">almide-ai</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/almide-ai/almai" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">almai</span>
+            <span class="repo-org-tag">almide-ai</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">Multi-provider LLM client for Almide: one interface for every provider, pure Almide.</p>
+          <ul class="repo-topics"><li class="repo-topic">ai</li><li class="repo-topic">almide</li><li class="repo-topic">anthropic</li></ul>
         </div>
-        <p class="repo-desc">Multi-provider LLM client for Almide: one interface for every provider, pure Almide.</p>
-        <ul class="repo-topics"><li class="repo-topic">ai</li><li class="repo-topic">almide</li><li class="repo-topic">anthropic</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">18<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-05-01">May 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">18<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-05-01">May 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="synapser" data-date="2026-06-11" data-commits="5" data-rank="16">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/synapser" target="_blank" rel="noopener noreferrer">synapser</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/synapser" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">synapser</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Type-safe TypeScript 4-phase pipeline that separates concerns in LLM agent processing</p>
+          
         </div>
-        <p class="repo-desc">Type-safe TypeScript 4-phase pipeline that separates concerns in LLM agent processing</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="embersm" data-date="2026-06-11" data-commits="6" data-rank="17">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/embersm" target="_blank" rel="noopener noreferrer">embersm</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/embersm" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">embersm</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Cloudflare Workers-native 5-layer memory system providing long-term memory for LLM agents</p>
+          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
         </div>
-        <p class="repo-desc">Cloudflare Workers-native 5-layer memory system providing long-term memory for LLM agents</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unisttp" data-date="2026-06-11" data-commits="4" data-rank="18">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/Aid-On/unisttp" target="_blank" rel="noopener noreferrer">unisttp</a>
-          <span class="repo-org-tag">Aid-On</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/Aid-On/unisttp" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">unisttp</span>
+            <span class="repo-org-tag">Aid-On</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Unified speech-to-text provider for Cloudflare Workers AI and Groq via &quot;provider:model&quot; specs</p>
+          
         </div>
-        <p class="repo-desc">Unified speech-to-text provider for Cloudflare Workers AI and Groq via &quot;provider:model&quot; specs</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

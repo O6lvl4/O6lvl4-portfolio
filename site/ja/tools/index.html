@@ -789,16 +789,22 @@ a { color: inherit; text-decoration: none; }
 .repo-list { display: flex; flex-direction: column; }
 
 .repo-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-block: calc(var(--item-gap) * 0.42);
   border-top: 1px solid var(--border);
   @starting-style { opacity: 0; translate: 0 6px; }
   transition: opacity 0.2s, translate 0.2s;
 }
 .repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+/* the line itself is the link to the repository; the grid lives on the anchor */
+.repo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  color: inherit;
+  text-decoration: none;
+}
 
 .repo-top-line {
   display: flex;
@@ -1481,6 +1487,15 @@ h4.readme-h2 {
 
 /* a row the reader has filtered out, or has not asked to see yet */
 .repo-item[hidden] { display: none; }
+
+/* the row is one link to the repository: the name reacts, and an arrow says where it goes */
+.repo-item:hover .repo-name { text-decoration: underline; text-underline-offset: 3px; }
+.repo-go {
+  font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1;
+  color: var(--fg-faint); opacity: 0; translate: -4px 0;
+  transition: opacity 0.14s, translate 0.14s, color 0.14s;
+}
+.repo-item:hover .repo-go, .repo-row:focus-visible .repo-go { opacity: 1; translate: 0 0; color: var(--red); }
 .show-more-btn[hidden] { display: none; }
 
 /* the plate: the project's own screen, its command's answer, or what its README says */
@@ -1606,6 +1621,14 @@ h4.readme-h2 {
    figures a reader would otherwise have to count for themselves. */
 /* the card is as tall as what it holds, not as tall as the column beside it */
 .profile-card { align-self: start; }
+/* the three figures belong to the card, so inside it they are a band of it, not a box in a box */
+.profile-card .stat-panel {
+  border: 0; border-bottom: 1px solid var(--border);
+  background: transparent; box-shadow: none; margin-bottom: 0.5rem;
+}
+.profile-card .stat-cell { padding: 0.875rem 0.75rem 1rem 0; }
+.profile-card .stat-cell:not(:first-child) { padding-left: 1rem; }
+.profile-card .stat-val { font-size: 1.25rem; }
 .profile-head {
   display: flex; align-items: center; gap: 1rem;
   padding-bottom: 1.25rem; margin-bottom: 0.5rem;
@@ -1667,17 +1690,17 @@ a.show-more-btn { display: inline-flex; align-items: baseline; gap: 0.25rem; tex
    narrow, and the output scrolls inside its own box. */
 .object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
 .readme-code { overflow-x: auto; }
-.repo-item, .repo-item > div { min-width: 0; }
+.repo-item, .repo-row, .repo-row > div { min-width: 0; }
 
 /* The list is one pane, and a line of it is a thing you point at: it gets room inside that
    pane rather than running up against the edge of the page. */
 .repo-list { padding: 0.5rem 1.5rem; }
-.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-row { padding-inline: 0.875rem; margin-inline: -0.875rem; }
 .repo-item:first-child { border-top: 0; }
 .repo-item:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .repo-list { padding: 0.25rem 0.875rem; }
-  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+  .repo-row { padding-inline: 0.5rem; margin-inline: -0.5rem; }
 }
 
 /* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
@@ -1925,355 +1948,430 @@ body::after {
       <div class="lang-filter-list" role="group" aria-label="言語"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">すべて</button><button type="button" class="lang-chip" data-lang="Go" aria-pressed="false"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="Python" aria-pressed="false"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</button><button type="button" class="lang-chip" data-lang="C" aria-pressed="false"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</button><button type="button" class="lang-chip" data-lang="HTML" aria-pressed="false"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="MoonBit" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>MoonBit</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button></div>
     </div>
     <ul class="repo-list" role="list" aria-label="仕事"><li class="repo-item" data-org="tools" data-lang="Go" data-name="gformiac" data-date="2026-05-21" data-commits="9" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/gformiac" target="_blank" rel="noopener noreferrer">gformiac</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
-        </div>
-        <p class="repo-desc">YAML定義からGoogleフォームを宣言的に管理するIaCツール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">9<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-21">2026年5月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="tocsin" data-date="2026-05-12" data-commits="6" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/tocsin" target="_blank" rel="noopener noreferrer">tocsin</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-        </div>
-        <p class="repo-desc">CVE発行前にSNS等の兆候から供給網攻撃を検知する早期警戒システム</p>
-        <ul class="repo-topics"><li class="repo-topic">SQL</li><li class="repo-topic">JavaScript</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">6<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-12">2026年5月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="premaid" data-date="2026-04-27" data-commits="20" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/premaid" target="_blank" rel="noopener noreferrer">premaid</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-        </div>
-        <p class="repo-desc">Mermaid図を整ったSVG/PNGへ描画するCLI</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">20<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-04-27">2026年4月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="resepy" data-date="2026-03-06" data-commits="10" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/resepy" target="_blank" rel="noopener noreferrer">resepy</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
-        </div>
-        <p class="repo-desc">CSV・TSV・任意のDSVを変換・結合するCLIとPythonモジュール</p>
-        <ul class="repo-topics"><li class="repo-topic">cli</li><li class="repo-topic">csv</li><li class="repo-topic">delimiter</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">10<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-03-06">2026年3月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="igloc" data-date="2025-12-01" data-commits="10" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/igloc" target="_blank" rel="noopener noreferrer">igloc</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
-        </div>
-        <p class="repo-desc">gitignore対象のファイルを探し出しマシン間で移行できるGo製CLI</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">10<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2025-12-01">2025年12月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="pdf-burger" data-date="2026-02-24" data-commits="5" data-rank="5">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/pdf-burger" target="_blank" rel="noopener noreferrer">pdf-burger</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
-        </div>
-        <p class="repo-desc">複数のPDFやディレクトリを1つのファイルに結合するCLIツール</p>
-        <ul class="repo-topics"><li class="repo-topic">cli</li><li class="repo-topic">functional-programming</li><li class="repo-topic">pdf</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-02-24">2026年2月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="C" data-name="clipstash" data-date="2026-03-15" data-commits="1" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/ClipStash" target="_blank" rel="noopener noreferrer">ClipStash</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</span>
-        </div>
-        <p class="repo-desc">Objective-C製のmacOS向け軽量クリップボード履歴管理メニューバーアプリ</p>
-        <ul class="repo-topics"><li class="repo-topic">clipboard</li><li class="repo-topic">cocoa</li><li class="repo-topic">macos</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-03-15">2026年3月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="uimodulay" data-date="2026-09-18" data-commits="14" data-rank="7">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/uimodulay" target="_blank" rel="noopener noreferrer">uimodulay</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
-        </div>
-        <p class="repo-desc">URLをデザイナー視点のモジュール構造に変換するUI構造解析ツール</p>
-        <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">14<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-09-18">2026年9月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="connpass-discord-bot" data-date="2026-08-29" data-commits="5" data-rank="8">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/connpass-discord-bot" target="_blank" rel="noopener noreferrer">connpass-discord-bot</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
-        </div>
-        <p class="repo-desc">connpass API v2 のイベントを Discord に流す Go 1.27 製 Bot</p>
-        <ul class="repo-topics"><li class="repo-topic">Go</li><li class="repo-topic">CSS</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-08-29">2026年8月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="keiri" data-date="2026-06-22" data-commits="6" data-rank="9">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/keiri" target="_blank" rel="noopener noreferrer">keiri</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
-        </div>
-        <p class="repo-desc">領収書など経理書類の命名と抜けを整えるGo製CLI</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">6<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-06-22">2026年6月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="ytscribe" data-date="2026-06-29" data-commits="2" data-rank="10">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/ytscribe" target="_blank" rel="noopener noreferrer">ytscribe</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
-        </div>
-        <p class="repo-desc">YouTube URLから字幕優先・Whisper代替で文字起こしするCLI</p>
-        <ul class="repo-topics"><li class="repo-topic">cli</li><li class="repo-topic">python</li><li class="repo-topic">subtitles</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-06-29">2026年6月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="pagina" data-date="2026-05-20" data-commits="34" data-rank="11">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/pagina" target="_blank" rel="noopener noreferrer">pagina</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
-        </div>
-        <p class="repo-desc">HTMLとCSS Paged MediaをPDFに変換するRust製エンジン</p>
-        <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">34<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-20">2026年5月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="macleap" data-date="2026-06-19" data-commits="16" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/macleap" target="_blank" rel="noopener noreferrer">macleap</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-        </div>
-        <p class="repo-desc">手持ちのMacを検出し、同等以上の現行機種と下取り後の実質費用を見積もるCLI</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li><li class="repo-topic">apple-silicon</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">16<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-06-19">2026年6月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Almide" data-name="o6lvl4-vitals" data-date="2026-05-07" data-commits="10" data-rank="13">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/O6lvl4-vitals" target="_blank" rel="noopener noreferrer">O6lvl4-vitals</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
-        </div>
-        <p class="repo-desc">O6lvl4-protocolの14プロトコル準拠を定量検査するalmide製CLI</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">10<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-07">2026年5月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="syncenv" data-date="2025-10-28" data-commits="11" data-rank="14">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/syncenv" target="_blank" rel="noopener noreferrer">syncenv</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
-        </div>
-        <p class="repo-desc">Gitタグ単位で環境設定ファイルをクラウドと同期するCLIツール</p>
-        <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">11<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2025-10-28">2025年10月</time>
-      </div>
-    </li><li class="repo-item" data-org="tools" data-lang="" data-name="o6lvl4-protocol" data-date="2026-05-07" data-commits="7" data-rank="15">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/O6lvl4-protocol" target="_blank" rel="noopener noreferrer">O6lvl4-protocol</a>
-          <span class="repo-org-tag">O6lvl4</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/gformiac" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">gformiac</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">YAML定義からGoogleフォームを宣言的に管理するIaCツール</p>
           
         </div>
-        <p class="repo-desc">知的労働を最大化する、睡眠・食事・運動・認知の運用プロトコル集</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-07">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">9<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-21">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="tocsin" data-date="2026-05-12" data-commits="6" data-rank="1">
+      <a class="repo-row" href="https://github.com/O6lvl4/tocsin" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">tocsin</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">CVE発行前にSNS等の兆候から供給網攻撃を検知する早期警戒システム</p>
+          <ul class="repo-topics"><li class="repo-topic">SQL</li><li class="repo-topic">JavaScript</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">6<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-12">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="premaid" data-date="2026-04-27" data-commits="20" data-rank="2">
+      <a class="repo-row" href="https://github.com/O6lvl4/premaid" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">premaid</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">Mermaid図を整ったSVG/PNGへ描画するCLI</p>
+          
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">20<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-04-27">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="resepy" data-date="2026-03-06" data-commits="10" data-rank="3">
+      <a class="repo-row" href="https://github.com/O6lvl4/resepy" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">resepy</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+          </div>
+          <p class="repo-desc">CSV・TSV・任意のDSVを変換・結合するCLIとPythonモジュール</p>
+          <ul class="repo-topics"><li class="repo-topic">cli</li><li class="repo-topic">csv</li><li class="repo-topic">delimiter</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">10<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-03-06">2026年3月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="igloc" data-date="2025-12-01" data-commits="10" data-rank="4">
+      <a class="repo-row" href="https://github.com/O6lvl4/igloc" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">igloc</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">gitignore対象のファイルを探し出しマシン間で移行できるGo製CLI</p>
+          
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">10<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2025-12-01">2025年12月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="pdf-burger" data-date="2026-02-24" data-commits="5" data-rank="5">
+      <a class="repo-row" href="https://github.com/O6lvl4/pdf-burger" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">pdf-burger</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+          </div>
+          <p class="repo-desc">複数のPDFやディレクトリを1つのファイルに結合するCLIツール</p>
+          <ul class="repo-topics"><li class="repo-topic">cli</li><li class="repo-topic">functional-programming</li><li class="repo-topic">pdf</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-02-24">2026年2月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="C" data-name="clipstash" data-date="2026-03-15" data-commits="1" data-rank="6">
+      <a class="repo-row" href="https://github.com/O6lvl4/ClipStash" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ClipStash</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</span>
+          </div>
+          <p class="repo-desc">Objective-C製のmacOS向け軽量クリップボード履歴管理メニューバーアプリ</p>
+          <ul class="repo-topics"><li class="repo-topic">clipboard</li><li class="repo-topic">cocoa</li><li class="repo-topic">macos</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-03-15">2026年3月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="uimodulay" data-date="2026-09-18" data-commits="14" data-rank="7">
+      <a class="repo-row" href="https://github.com/O6lvl4/uimodulay" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">uimodulay</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">URLをデザイナー視点のモジュール構造に変換するUI構造解析ツール</p>
+          <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">14<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="connpass-discord-bot" data-date="2026-08-29" data-commits="5" data-rank="8">
+      <a class="repo-row" href="https://github.com/O6lvl4/connpass-discord-bot" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">connpass-discord-bot</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
+          </div>
+          <p class="repo-desc">connpass API v2 のイベントを Discord に流す Go 1.27 製 Bot</p>
+          <ul class="repo-topics"><li class="repo-topic">Go</li><li class="repo-topic">CSS</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-08-29">2026年8月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="keiri" data-date="2026-06-22" data-commits="6" data-rank="9">
+      <a class="repo-row" href="https://github.com/O6lvl4/keiri" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">keiri</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">領収書など経理書類の命名と抜けを整えるGo製CLI</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">6<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-06-22">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="ytscribe" data-date="2026-06-29" data-commits="2" data-rank="10">
+      <a class="repo-row" href="https://github.com/O6lvl4/ytscribe" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">ytscribe</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
+          </div>
+          <p class="repo-desc">YouTube URLから字幕優先・Whisper代替で文字起こしするCLI</p>
+          <ul class="repo-topics"><li class="repo-topic">cli</li><li class="repo-topic">python</li><li class="repo-topic">subtitles</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-06-29">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="pagina" data-date="2026-05-20" data-commits="34" data-rank="11">
+      <a class="repo-row" href="https://github.com/O6lvl4/pagina" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">pagina</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
+          </div>
+          <p class="repo-desc">HTMLとCSS Paged MediaをPDFに変換するRust製エンジン</p>
+          <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">Shell</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">34<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-20">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="macleap" data-date="2026-06-19" data-commits="16" data-rank="12">
+      <a class="repo-row" href="https://github.com/O6lvl4/macleap" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">macleap</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">手持ちのMacを検出し、同等以上の現行機種と下取り後の実質費用を見積もるCLI</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li><li class="repo-topic">apple-silicon</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">16<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-06-19">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="Almide" data-name="o6lvl4-vitals" data-date="2026-05-07" data-commits="10" data-rank="13">
+      <a class="repo-row" href="https://github.com/O6lvl4/O6lvl4-vitals" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">O6lvl4-vitals</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">O6lvl4-protocolの14プロトコル準拠を定量検査するalmide製CLI</p>
+          
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">10<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-07">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="syncenv" data-date="2025-10-28" data-commits="11" data-rank="14">
+      <a class="repo-row" href="https://github.com/O6lvl4/syncenv" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">syncenv</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">Gitタグ単位で環境設定ファイルをクラウドと同期するCLIツール</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">11<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2025-10-28">2025年10月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="tools" data-lang="" data-name="o6lvl4-protocol" data-date="2026-05-07" data-commits="7" data-rank="15">
+      <a class="repo-row" href="https://github.com/O6lvl4/O6lvl4-protocol" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">O6lvl4-protocol</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            
+          </div>
+          <p class="repo-desc">知的労働を最大化する、睡眠・食事・運動・認知の運用プロトコル集</p>
+          
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-07">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="grclone" data-date="2026-05-01" data-commits="4" data-rank="16">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/grclone" target="_blank" rel="noopener noreferrer">grclone</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/grclone" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">grclone</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">rclone上でgit風の語彙を使えるようにする薄いCLI</p>
+          
         </div>
-        <p class="repo-desc">rclone上でgit風の語彙を使えるようにする薄いCLI</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-01">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-01">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="image-catalog-composer" data-date="2026-04-24" data-commits="4" data-rank="17">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/image-catalog-composer" target="_blank" rel="noopener noreferrer">image-catalog-composer</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/image-catalog-composer" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">image-catalog-composer</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">YAMLやJSONの設定から画像のラベル付きグリッドカタログを作るツール</p>
+          
         </div>
-        <p class="repo-desc">YAMLやJSONの設定から画像のラベル付きグリッドカタログを作るツール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-04-24">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">4<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-04-24">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="tools" data-lang="MoonBit" data-name="dns-checker" data-date="2026-01-16" data-commits="7" data-rank="18">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/dns-checker" target="_blank" rel="noopener noreferrer">dns-checker</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>MoonBit</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/dns-checker" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">dns-checker</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>MoonBit</span>
+          </div>
+          <p class="repo-desc">MoonBit製のメール送信ドメイン向けDNSレコードチェッカー</p>
+          <ul class="repo-topics"><li class="repo-topic">cli</li><li class="repo-topic">dns</li><li class="repo-topic">moonbit</li></ul>
         </div>
-        <p class="repo-desc">MoonBit製のメール送信ドメイン向けDNSレコードチェッカー</p>
-        <ul class="repo-topics"><li class="repo-topic">cli</li><li class="repo-topic">dns</li><li class="repo-topic">moonbit</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">7<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-01-16">2026年1月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">7<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-01-16">2026年1月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="tools" data-lang="Shell" data-name="netcheck" data-date="2026-06-11" data-commits="1" data-rank="19">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/netcheck" target="_blank" rel="noopener noreferrer">netcheck</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/netcheck" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">netcheck</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+          </div>
+          <p class="repo-desc">インターネット不調を層別に切り分けるmacOS用診断ツール</p>
+          
         </div>
-        <p class="repo-desc">インターネット不調を層別に切り分けるmacOS用診断ツール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-06-11">2026年6月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-06-11">2026年6月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="tools" data-lang="Almide" data-name="tocsin-almd" data-date="2026-05-12" data-commits="2" data-rank="20">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/tocsin-almd" target="_blank" rel="noopener noreferrer">tocsin-almd</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/tocsin-almd" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">tocsin-almd</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+          </div>
+          <p class="repo-desc">サプライチェーン攻撃の早期警戒ツールTocsinのAlmide実装</p>
+          
         </div>
-        <p class="repo-desc">サプライチェーン攻撃の早期警戒ツールTocsinのAlmide実装</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-12">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">2<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-12">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="chropen" data-date="2026-05-01" data-commits="1" data-rank="21">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/chropen" target="_blank" rel="noopener noreferrer">chropen</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/chropen" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">chropen</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
+          </div>
+          <p class="repo-desc">メールアドレスから指定のChromeプロファイルでURLを開くCLI</p>
+          
         </div>
-        <p class="repo-desc">メールアドレスから指定のChromeプロファイルでURLを開くCLI</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-05-01">2026年5月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-05-01">2026年5月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="tools" data-lang="Shell" data-name="azprofile" data-date="2025-09-13" data-commits="5" data-rank="22">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/azprofile" target="_blank" rel="noopener noreferrer">azprofile</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/azprofile" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">azprofile</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+          </div>
+          <p class="repo-desc">複数のAzureアカウントを簡単に切り替えるAzure CLIプロファイル管理ツール</p>
+          
         </div>
-        <p class="repo-desc">複数のAzureアカウントを簡単に切り替えるAzure CLIプロファイル管理ツール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2025-09-13">2025年9月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2025-09-13">2025年9月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="capto" data-date="2025-04-01" data-commits="5" data-rank="23">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/capto" target="_blank" rel="noopener noreferrer">capto</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/capto" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">capto</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+          </div>
+          <p class="repo-desc">ディレクトリ構造とファイル内容をPDFに記録するCLIツール</p>
+          
         </div>
-        <p class="repo-desc">ディレクトリ構造とファイル内容をPDFに記録するCLIツール</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2025-04-01">2025年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">5<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2025-04-01">2025年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li><li class="repo-item" data-org="tools" data-lang="Shell" data-name="dotfiles" data-date="2026-04-28" data-commits="3" data-rank="24">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/dotfiles" target="_blank" rel="noopener noreferrer">dotfiles</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+      <a class="repo-row" href="https://github.com/O6lvl4/dotfiles" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">dotfiles</span>
+            <span class="repo-org-tag">O6lvl4</span>
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
+          </div>
+          <p class="repo-desc">macOS開発環境をBrewfileとシェルスクリプトで管理するdotfiles</p>
+          
         </div>
-        <p class="repo-desc">macOS開発環境をBrewfileとシェルスクリプトで管理するdotfiles</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
-        <time class="repo-date" datetime="2026-04-28">2026年4月</time>
-      </div>
+        <div class="repo-meta">
+          <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
+          <time class="repo-date" datetime="2026-04-28">2026年4月</time>
+          <span class="repo-go" aria-hidden="true">→</span>
+        </div>
+      </a>
     </li></ul>
   </section>
       </div>

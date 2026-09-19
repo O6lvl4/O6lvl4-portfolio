@@ -216,8 +216,7 @@ const panel = [
   { key: t.panel.orgs, value: String(ORGS.length) },
   { key: t.panel.first, value: t.date(firstCommit) },
   { key: t.panel.last, value: `${lastRepo.name} · ${t.date(lastRepo.last)}` },
-  { key: t.panel.repos, value: String(total) },
-  { key: t.panel.commits, value: commits.toLocaleString("en-US") },
+  // the repository and commit totals are the card's own figures, above; they are not repeated here
   { key: t.panel.house, value: `${houseShare}%`, fill: houseShare / 100 },
   { key: t.panel.thisYear(thisYear.name), value: `${yearShare}%`, fill: yearShare / 100 },
 ];
@@ -248,7 +247,7 @@ const content = {
   index: { style: "list", first: true },
   home: { kicker: t.kicker(total), lead: t.lead, note: t.note(total), description: t.description(total) },
   landing: {
-    about: t.about(total, commits),
+    about: t.about(),
     stack,
     timeline,
     featured: FEATURED,
