@@ -119,7 +119,7 @@
      "JavaScript（76）",
      "TypeScript（57）",
      "HTML（30）",
-     "Shell（30）"
+     "Shell（29）"
     ]
    },
    {
@@ -142,6 +142,7 @@
     "lead": "almide、porta、als、ccgrid 等 199 个",
     "tags": [
      "Rust",
+     "Python",
      "Almide",
      "TypeScript"
     ]
@@ -210,8 +211,8 @@
    },
    {
     "key": "用 Almide 写的比例",
-    "value": "46%",
-    "fill": 0.46
+    "value": "45%",
+    "fill": 0.45
    },
    {
     "key": "2026 年的提交",
@@ -225,7 +226,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "14,249",
+    "value": "14,254",
     "label": "提交"
    },
    {
@@ -240,7 +241,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 122,
+    "count": 121,
     "color": "currentColor"
    },
    {
@@ -270,7 +271,7 @@
    },
    {
     "name": "Python",
-    "count": 8,
+    "count": 9,
     "color": "#3572a5"
    },
    {
@@ -361,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11154,
+    "count": 11157,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 1967,
+    "count": 1969,
     "of": 113
    },
    {
@@ -409,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13539
+    "count": 13544
    }
   ]
  },
@@ -425,7 +426,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "11,067",
+     "value": "11,068",
      "label": "提交"
     },
     {
@@ -440,7 +441,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11067
+     "count": 11068
     }
    ],
    "works": [
@@ -470,7 +471,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "8,896"
+       "value": "8,897"
       },
       {
        "label": "首次",
@@ -496,7 +497,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-19"
+      "date": "2026-09-20"
      }
     },
     {
@@ -1564,7 +1565,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "786",
+     "value": "788",
      "label": "提交"
     },
     {
@@ -1583,7 +1584,7 @@
     },
     {
      "name": "2026",
-     "count": 770
+     "count": 772
     }
    ],
    "works": [
@@ -1600,20 +1601,20 @@
      "id": "almide/porta",
      "title": "porta",
      "titleEn": "限制AI智能体文件与网络访问的安全MCP桥",
-     "date": "2026年8月",
-     "format": "Almide",
+     "date": "2026年9月",
+     "format": "Python",
      "credit": "almide",
      "url": "https://github.com/almide/porta",
      "tags": [
+      "Python",
       "Almide",
       "Rust",
-      "Shell",
       "ai-agent"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "97"
+       "value": "99"
       },
       {
        "label": "首次",
@@ -1635,7 +1636,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-06"
+      "date": "2026-09-20"
      }
     },
     {
@@ -7655,7 +7656,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "214",
+     "value": "216",
      "label": "提交"
     },
     {
@@ -7674,7 +7675,7 @@
     },
     {
      "name": "2026",
-     "count": 181
+     "count": 183
     }
    ],
    "works": [
@@ -7970,7 +7971,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "16"
+       "value": "18"
       },
       {
        "label": "首次",

@@ -1279,6 +1279,36 @@
   "score": 5.5
  },
  {
+  "full": "O6lvl4/O6lvl4-portfolio",
+  "owner": "O6lvl4",
+  "name": "O6lvl4-portfolio",
+  "url": "https://github.com/O6lvl4/O6lvl4-portfolio",
+  "site": "https://o6lvl4.github.io/O6lvl4-portfolio/",
+  "lead": "265 public repositories across O6lvl4, Aid-On, almide and the almide-* orgs, grouped by what they are, in Japanese, English and Chinese. Named after Ogma.",
+  "heading": "O6lvl4-portfolio",
+  "language": "HTML",
+  "languages": [
+   "HTML",
+   "JavaScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 18,
+  "years": {
+   "2026": 18
+  },
+  "first": "2026-09-19",
+  "last": "2026-09-20",
+  "license": "MIT",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "bash",
+   "code": "npm ci\nnpx playwright install chromium\nnpm run refresh"
+  },
+  "score": 5.4
+ },
+ {
   "full": "O6lvl4/almide-otel-demo",
   "owner": "O6lvl4",
   "name": "almide-otel-demo",
@@ -1330,36 +1360,6 @@
   "sample": {
    "lang": "sh",
    "code": "HB=/path/to/hb GOLEMIDE_BINARY=/path/to/golemide bench/tb2.sh pilot   # 10 tasks\nHB=... GOLEMIDE_BINARY=... bench/tb2.sh all                           # all 89"
-  },
-  "score": 5.3
- },
- {
-  "full": "O6lvl4/O6lvl4-portfolio",
-  "owner": "O6lvl4",
-  "name": "O6lvl4-portfolio",
-  "url": "https://github.com/O6lvl4/O6lvl4-portfolio",
-  "site": "https://o6lvl4.github.io/O6lvl4-portfolio/",
-  "lead": "265 public repositories across O6lvl4, Aid-On, almide and the almide-* orgs, grouped by what they are, in Japanese, English and Chinese. Named after Ogma.",
-  "heading": "O6lvl4-portfolio",
-  "language": "HTML",
-  "languages": [
-   "HTML",
-   "JavaScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 16,
-  "years": {
-   "2026": 16
-  },
-  "first": "2026-09-19",
-  "last": "2026-09-20",
-  "license": "MIT",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "bash",
-   "code": "npm ci\nnpx playwright install chromium\nnpm run refresh"
   },
   "score": 5.3
  },
@@ -3200,12 +3200,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 8896,
+  "commits": 8897,
   "years": {
-   "2026": 8896
+   "2026": 8897
   },
   "first": "2026-03-07",
-  "last": "2026-09-19",
+  "last": "2026-09-20",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3230,20 +3230,20 @@
   "name": "porta",
   "url": "https://github.com/almide/porta",
   "lead": "Sandboxed runtime for AI agents. WASM isolation + OS-level sandbox. Run Claude Code, Python, or any command with filesystem/network restrictions. No Docker required.",
-  "heading": "Network open by default (like Docker)",
-  "language": "Almide",
+  "heading": "Set your model endpoint/name in examples/chat-agent/agent.toml and team.toml.",
+  "language": "Python",
   "languages": [
+   "Python",
    "Almide",
-   "Rust",
-   "Shell"
+   "Rust"
   ],
   "stars": 2,
-  "commits": 97,
+  "commits": 99,
   "years": {
-   "2026": 97
+   "2026": 99
   },
   "first": "2026-04-07",
-  "last": "2026-08-06",
+  "last": "2026-09-20",
   "tag": "v0.4.0",
   "license": "Apache-2.0",
   "topics": [
@@ -3260,9 +3260,9 @@
   "plate": "code",
   "sample": {
    "lang": "bash",
-   "code": "porta run claude --allow-net '*:443' -v . -e \"HOME=$HOME\" -- --print \"Fix the bug\""
+   "code": "bash scripts/install-almide.sh\n.tools/almide/almide build src/mod.almd -o target/porta\n.tools/almide/almide build examples/chat-agent/src/mod.almd --target wasm -o examples/chat-agent/agent.wasm\n.tools/almide/almide build examples/demo-agent/src/mod.almd --target wasm -o examples/demo-agent/agent.wasm\n# Set your model endpoint/name in examples/chat-agent/agent.toml and team.toml.\ntarget/porta agent examples/chat-agent/agent.toml -- \"Add 20 and 22 using the tool.\"\ntarget/porta agent examples/chat-agent/team.toml -- \"Ask the calculator to add 20 and 22.\""
   },
-  "score": 20.9
+  "score": 21
  },
  {
   "full": "almide/als",
