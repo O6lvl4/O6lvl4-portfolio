@@ -1,0 +1,2495 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add("js")</script>
+<title>用 Almide 写 Minecraft | O6lvl4</title>
+<meta name="description" content="用 Almide 自底向上实现 Minecraft 协议：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写">
+<meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
+<meta property="og:site_name" content="O6lvl4">
+<meta property="og:locale" content="zh">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/mc/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/zh/mc/">
+<meta property="og:title" content="用 Almide 写 Minecraft | O6lvl4">
+<meta property="og:description" content="用 Almide 自底向上实现 Minecraft 协议：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写">
+<meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/share/og.zh.jpg">
+<meta property="og:image:alt" content="O6lvl4 — 公开仓库 265 个">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Sans+Ogham&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap">
+<style>
+:root {
+  --bg: light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260));
+  --bg-raised: light-dark(oklch(1 0 0), oklch(0.125 0.005 260));
+  --bg-subtle: light-dark(oklch(0.95 0.003 250), oklch(0.15 0.006 260));
+  --rail-bg: light-dark(oklch(0.97 0.003 250), oklch(0.075 0.004 260));
+  --fg: light-dark(oklch(0.04 0 0), oklch(0.96 0.002 250));
+  --fg-muted: light-dark(oklch(0.46 0.008 250), oklch(0.63 0.008 250));
+  --fg-faint: light-dark(oklch(0.68 0.008 250), oklch(0.42 0.008 250));
+  --border: light-dark(oklch(0.88 0.004 250), oklch(0.22 0.006 260));
+  --border-mid: light-dark(oklch(0.73 0.006 250), oklch(0.33 0.008 260));
+  --glass: light-dark(oklch(1 0 0 / 0.5), oklch(0.16 0.006 260 / 0.5));
+  --glass-thick: light-dark(oklch(1 0 0 / 0.7), oklch(0.13 0.006 260 / 0.7));
+  --glass-line: light-dark(oklch(0.04 0 0 / 0.08), oklch(1 0 0 / 0.1));
+  --glass-shine: light-dark(oklch(1 0 0 / 0.9), oklch(1 0 0 / 0.14));
+  --glass-shadow: light-dark(oklch(0.3 0.02 260 / 0.1), oklch(0 0 0 / 0.5));
+  --ground: light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260));
+  --ink: light-dark(oklch(0.04 0 0), oklch(0.96 0.002 250));
+  --ink-2: light-dark(oklch(0.46 0.008 250), oklch(0.63 0.008 250));
+  --ink-3: light-dark(oklch(0.68 0.008 250), oklch(0.42 0.008 250));
+  --rule: light-dark(oklch(0.88 0.004 250), oklch(0.22 0.006 260));
+  --accent: light-dark(oklch(0.5 0.22 25), oklch(0.64 0.23 25));
+  --seal: light-dark(oklch(0.5 0.22 25), oklch(0.64 0.23 25));
+  --seal-ink: light-dark(oklch(1 0 0), oklch(0.09 0.004 260));
+  --bloom-1: light-dark(oklch(0.5 0.22 25 / 0.1), oklch(0.64 0.23 25 / 0.3));
+  --bloom-2: light-dark(oklch(0.62 0.17 245 / 0.09), oklch(0.62 0.17 245 / 0.26));
+  --bloom-3: light-dark(oklch(0.72 0.13 190 / 0.08), oklch(0.72 0.13 190 / 0.18));
+  --grid-line: light-dark(oklch(0.04 0 0 / 0.045), oklch(0.96 0 0 / 0.07));
+  --font-ogham: 'Noto Sans Ogham', serif;
+  --font-display: 'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace;
+  --font-body: 'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace;
+  --font-ui: 'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace;
+  --font-mono: 'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, SFMono-Regular, monospace;
+  --font-text: 'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace;
+  --font-latin: 'JetBrains Mono', ui-monospace, monospace;
+  --font-name: 'JetBrains Mono', 'Noto Sans JP', 'Noto Sans SC', ui-monospace, monospace;
+  --g-ref: 1440;
+  --g-rail: 92;
+  --g-head: 88;
+  --g-contentLeft: 138;
+  --g-gutter: 46;
+  --g-plate: 156;
+  --g-essayLabel: 180;
+  --g-essayText: 540;
+  --g-essayTextX: 382;
+  --g-swContent: 1280;
+  --g-swProfile: 561;
+  --g-swMain: 607;
+  --g-swColGap: 16;
+  --g-swSectionGap: 143;
+  --g-swItemGap: 48;
+}
+/* fit: base — a light reset, the ground and ink, and focus as an underline (a box drawn round a
+   link reads as a stray rectangle once a click is followed by an arrow key). */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: none; text-size-adjust: none; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+}
+h1, h2, h3, p, ol, ul, figure { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+img { display: block; max-width: 100%; }
+a:focus-visible, button:focus-visible {
+  outline: none;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.45em;
+}
+.visuallyHidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+:root {
+  --ref: calc(var(--g-ref) * 1px);
+  --phone-bar: 56px;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+/* letters quoted as themselves inside a line, in whichever face can draw them (ogham, runes) */
+.cut { font-family: var(--font-ogham, inherit); font-size: 1.2em; letter-spacing: 0; }
+/* the frame's defaults; the rail pattern replaces them */
+:root { --rail: 0px; --gutter: clamp(18px, 2.4vw, 40px); --content-left: calc(var(--rail) + var(--gutter)); --head: 0px; }
+/* marks every template shares: the seal, and Instagram and mail */
+.seal {
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 3px;
+  background: var(--seal);
+  box-shadow: inset 0 0 0 2px var(--seal), inset 0 0 0 3px color-mix(in srgb, var(--seal-ink) 75%, transparent);
+  color: var(--seal-ink);
+}
+.seal i { font-style: normal; font-size: 10.5px; font-weight: 600; line-height: 1.05; }
+.contact a { display: inline-flex; align-items: center; gap: 12px; color: var(--ink-2); transition: color 0.3s; }
+.contact a:hover { color: var(--accent); }
+.contact svg { flex: none; }
+/* the maker's mark: their own picture, where the seal would be */
+.mark { width: 28px; height: 28px; border-radius: 3px; object-fit: cover; flex: none; }
+
+/* fit: oghma — one page for a body of software work, cut along an ogham stem.
+   Ported from the generated interface design: the faces and the palette come from the tokens,
+   the proportions from the template's measured geometry, the content from content.json. */
+
+/* ─── Animatable custom properties ─────────────────────────────────────── */
+
+@property --red-l {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0.50;
+}
+
+@property --red-c {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0.22;
+}
+
+@property --bar-w {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+/* ─── Palette: white / obsidian / one red ─────────────────────────────── */
+/*
+  Light  hex refs:
+    bg          #ffffff  oklch(1.00 0 0)
+    fg          #090909  oklch(0.04 0 0)
+    fg-muted    #6b6b6b  oklch(0.46 0 0)
+    fg-faint    #a8a8a8  oklch(0.70 0 0)
+    border      #dfdfdf  oklch(0.88 0 0)
+    border-mid  #b4b4b4  oklch(0.73 0 0)
+    rail-bg     #f7f7f7  oklch(0.97 0 0)
+    surface     #f2f2f2  oklch(0.95 0 0)
+    red         #c42b17  oklch(0.50 0.22 25)
+
+  Dark  hex refs:
+    bg          #0c0c0c  oklch(0.07 0 0)
+    fg          #f2f2f2  oklch(0.95 0 0)
+    fg-muted    #919191  oklch(0.60 0 0)
+    fg-faint    #5c5c5c  oklch(0.40 0 0)
+    border      #2a2a2a  oklch(0.19 0 0)
+    border-mid  #444444  oklch(0.30 0 0)
+    rail-bg     #080808  oklch(0.055 0 0)
+    surface     #161616  oklch(0.11 0 0)
+    red         #e03626  oklch(0.62 0.23 25)
+*/
+
+/* The palette and the faces arrive as tokens (--bg … --font-ui, see fit/tokens/oghma.json);
+   the red is the one non-neutral hue and is animatable through --red-l / --red-c. */
+:root {
+  color-scheme: light dark;
+  --red: oklch(var(--red-l) var(--red-c) 25);
+
+  /* Layout — measured off the reference Layout ASTs at a 1440px width */
+  --rail-w:      calc(var(--g-rail) * 1px);
+  --head-h:      calc(var(--g-head) * 1px);
+  --gutter:      calc(var(--g-gutter) * 1px);
+  --section-gap: calc(var(--g-swSectionGap) * 1px);
+  --item-gap:    calc(var(--g-swItemGap) * 1px);
+  --plate-h:     calc(var(--g-plate) * 1px);
+  --col-gap:     calc(var(--g-swColGap) * 1px);
+  --profile-w:   calc(var(--g-swProfile) * 1px);
+  --main-w:      calc(var(--g-swMain) * 1px);
+  --content-max: calc(var(--g-swContent) * 1px);
+}
+
+/* Manual theme override */
+[data-theme='light'] { color-scheme: light; --red-l: 0.50; --red-c: 0.22; }
+[data-theme='dark']  { color-scheme: dark;  --red-l: 0.62; --red-c: 0.23; }
+
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'tnum' 1, 'ss01' 1, 'kern' 1;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-mid) transparent;
+  scroll-behavior: smooth;
+}
+
+body { line-height: 1; }
+
+img { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+/* ─── Scroll-driven entrance ───────────────────────────────────────────── */
+
+@keyframes s-enter {
+  from { opacity: 0; translate: 0 20px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+.section {
+  animation: s-enter linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 30%;
+}
+
+.section + .section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 800px;
+}
+
+/* ─── Red dot pulse ─────────────────────────────────────────────────────── */
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 color-mix(in oklch, var(--red) 40%, transparent); }
+  70%  { box-shadow: 0 0 0 6px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* ─── App shell ─────────────────────────────────────────────────────────── */
+
+.app-shell {
+  display: grid;
+  grid-template-columns: var(--rail-w) 1fr;
+  min-height: 100svh;
+}
+
+/* ─── Left rail ─────────────────────────────────────────────────────────── */
+
+.rail {
+  grid-row: 1 / -1;
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  background: var(--rail-bg);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1.75rem 2rem;
+  overflow: hidden;
+  z-index: 20;
+}
+
+/* Ogham trunk — sideways-lr bottom-to-top, fallback to vertical-rl rotated */
+.ogham-trunk {
+  font-family: var(--font-ogham);
+  font-size: 2.25rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+  writing-mode: sideways-lr;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+@supports not (writing-mode: sideways-lr) {
+  .ogham-trunk {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+}
+
+.ogham-trunk:hover { color: var(--fg); }
+
+/* Year list runs down the rail — each year has a hairline crossing */
+.rail-year-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.rail-year {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.12em;
+  color: var(--fg-faint);
+  writing-mode: sideways-lr;
+  position: relative;
+}
+
+/* The single line crossing the trunk */
+.rail-year::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -300%;
+  right: -300%;
+  height: 1px;
+  background: var(--border);
+}
+
+.rail-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+/* ─── Main column ───────────────────────────────────────────────────────── */
+
+.main-wrap {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Site header ───────────────────────────────────────────────────────── */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: var(--head-h);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding-inline: var(--gutter);
+  gap: 2rem;
+}
+
+/* Username / callsign */
+.hdr-callsign {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--fg);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hdr-callsign::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+.hdr-nav {
+  display: flex;
+  border-left: 1px solid var(--border);
+}
+
+.hdr-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding: 0.3125rem 0.9375rem;
+  border-right: 1px solid var(--border);
+  transition: color 0.12s, background 0.12s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.hdr-nav a:hover,
+.hdr-nav a[aria-current] {
+  color: var(--fg);
+  background: var(--bg-subtle);
+}
+
+.hdr-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hdr-readout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1875rem;
+}
+
+.hdr-readout-val {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.hdr-readout-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.theme-toggle {
+  display: flex;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.theme-icon-btn {
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  color: var(--fg-faint);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+}
+.theme-icon-btn:last-child { border-right: none; }
+.theme-icon-btn.active {
+  color: var(--fg);
+  background: var(--bg-subtle);
+}
+.theme-icon-btn:hover:not(.active) { color: var(--fg-muted); }
+
+/* ─── Content ───────────────────────────────────────────────────────────── */
+
+.content {
+  max-width: var(--content-max);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  flex: 1;
+  padding-bottom: calc(var(--section-gap) * 1.5);
+}
+
+/* ─── Section chrome ────────────────────────────────────────────────────── */
+
+.section { padding-top: var(--section-gap); }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.ogham-mark {
+  font-family: var(--font-ogham);
+  font-size: 1.25rem;
+  color: var(--fg-muted);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fg);
+  font-weight: 400;
+}
+
+.section-count {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  color: var(--fg-faint);
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+}
+
+/* ─── §1 Entry ──────────────────────────────────────────────────────────── */
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: var(--profile-w) 1fr;
+  gap: var(--col-gap);
+}
+
+.entry-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 200;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+  text-wrap: balance;
+}
+
+.entry-handle {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  color: var(--fg-muted);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.entry-handle-at {
+  color: var(--red);
+  font-size: 0.5625rem;
+}
+
+.entry-title {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 2rem;
+}
+
+.entry-bio {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--fg-muted);
+  max-width: 44ch;
+  text-wrap: pretty;
+  margin-bottom: 2.5rem;
+}
+
+/* Stat panel */
+.stat-panel {
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stat-cell {
+  padding: 1.25rem 1.125rem;
+  border-right: 1px solid var(--border);
+}
+.stat-cell:last-child { border-right: none; }
+
+.stat-val {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0.375rem;
+}
+.stat-val .accent { color: var(--red); }
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* Instrument panel — right column of entry */
+.instrument-panel {
+  border: 1px solid var(--border);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  @starting-style { opacity: 0; translate: 16px 0; }
+  transition: opacity 0.4s 0.15s;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.panel-title {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.panel-status {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.panel-status::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+.panel-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 0.6875rem;
+  border-bottom: 1px solid var(--border);
+}
+.panel-row:last-child { border-bottom: none; }
+
+.panel-key {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.panel-val {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg);
+  line-height: 1.4;
+}
+
+.panel-track {
+  width: 60px;
+  height: 1px;
+  background: var(--border);
+  position: relative;
+  flex-shrink: 0;
+}
+.panel-fill {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  height: 2px;
+  background: var(--fg-muted);
+}
+
+/* ─── Org filter ───────────────────────────────────────────────────────── */
+
+.org-rail {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.75rem;
+  border: 1px solid var(--border);
+  align-self: flex-start;
+  flex-wrap: wrap;
+}
+
+.org-btn {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.org-btn:last-child { border-right: none; }
+.org-btn.active { color: var(--fg); background: var(--bg-subtle); }
+.org-btn:hover:not(.active) { color: var(--fg); }
+
+.org-btn-count {
+  color: var(--red);
+  font-size: 0.4375rem;
+}
+
+/* ─── §2 Works ──────────────────────────────────────────────────────────── */
+
+.works-toolbar {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.sort-bar {
+  display: flex;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.sort-btn {
+  font-family: var(--font-mono);
+  font-size: 0.4875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  padding: 0.5rem 0.875rem;
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+}
+.sort-btn:last-child { border-right: none; }
+.sort-btn.active { color: var(--fg); background: var(--bg-subtle); }
+.sort-btn:hover:not(.active) { color: var(--fg); }
+
+.lang-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.lang-chip {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg-muted);
+  padding: 0.3125rem 0.625rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.12s, border-color 0.12s;
+}
+.lang-chip.active { color: var(--fg); border-color: var(--border-mid); background: var(--bg-subtle); }
+.lang-chip:hover:not(.active) { color: var(--fg); }
+
+/* Lang dot: still uses language color in data-viz contexts */
+.lang-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  /* Fallback to neutral when used outside data-viz */
+}
+
+/* ─── Repo list ─────────────────────────────────────────────────────────── */
+
+.repo-list { display: flex; flex-direction: column; }
+
+.repo-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: calc(var(--item-gap) * 0.42);
+  border-top: 1px solid var(--border);
+  @starting-style { opacity: 0; translate: 0 6px; }
+  transition: opacity 0.2s, translate 0.2s;
+}
+.repo-item:last-child { border-bottom: 1px solid var(--border); }
+
+.repo-top-line {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3125rem;
+}
+
+.repo-name {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+}
+.repo-name:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.repo-org-tag {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  border: 1px solid var(--border);
+  padding: 0.1875rem 0.4375rem;
+}
+
+.repo-lang-tag {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.repo-pinned-mark {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.repo-desc {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--fg-muted);
+  text-wrap: pretty;
+  max-width: 68ch;
+  margin-bottom: 0.4375rem;
+}
+
+.repo-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.repo-topic {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.07em;
+  color: var(--fg-faint);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 0.125rem 0.5rem;
+}
+
+.repo-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  flex-shrink: 0;
+  padding-top: 0.0625rem;
+}
+
+.repo-stars {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.star-icon { width: 8px; height: 8px; opacity: 0.4; }
+
+.repo-date {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  color: var(--fg-faint);
+  letter-spacing: 0.06em;
+}
+
+.show-more-btn {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg-muted);
+  padding: 0.625rem 1.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: color 0.12s, border-color 0.12s;
+  display: block;
+}
+.show-more-btn:hover { color: var(--fg); border-color: var(--border-mid); }
+
+/* ─── §3 Stage ──────────────────────────────────────────────────────────── */
+
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--col-gap);
+}
+
+.stage-plate {
+  height: var(--plate-h);
+  border: 1px solid var(--border);
+  padding: 1.375rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.18s;
+  cursor: default;
+}
+
+/* The single red stripe — the only decoration */
+.stage-plate::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--red);
+}
+
+.stage-plate:hover { border-color: var(--border-mid); }
+
+.plate-label {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.plate-name {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--fg);
+  line-height: 1.3;
+  margin-top: auto;
+}
+
+.plate-desc {
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  line-height: 1.55;
+  text-wrap: pretty;
+  margin-top: 0.375rem;
+}
+
+.plate-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.875rem;
+}
+
+.plate-lang {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.plate-stars {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg-muted);
+}
+
+/* ─── §4 Object ─────────────────────────────────────────────────────────── */
+
+.object-grid {
+  display: grid;
+  grid-template-columns: var(--profile-w) 1fr;
+  gap: var(--col-gap);
+  align-items: start;
+}
+
+.object-meta-panel {
+  border: 1px solid var(--border);
+  position: sticky;
+  top: calc(var(--head-h) + 2rem);
+}
+
+.meta-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.9375rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  gap: 1rem;
+}
+.meta-row:last-child { border-bottom: none; }
+
+.meta-key {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  flex: 0 0 80px;
+  padding-top: 0.125em;
+}
+
+.meta-val {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+.meta-val.accent { color: var(--red); }
+
+.meta-topics { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+/* Readme */
+.readme-panel {
+  border: 1px solid var(--border);
+  padding: 2rem 2.25rem;
+}
+
+.readme-p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: var(--fg-muted);
+  text-wrap: pretty;
+  margin-bottom: 1rem;
+}
+
+.readme-code {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  padding: 0.875rem 1.125rem;
+  margin: 0.75rem 0;
+  overflow-x: auto;
+  line-height: 1.75;
+  color: var(--fg);
+}
+
+/* ─── §5 Overview ───────────────────────────────────────────────────────── */
+
+.overview-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--col-gap);
+  margin-bottom: 3rem;
+}
+
+.kpi-card {
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.375rem;
+}
+
+.kpi-val {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.375rem;
+}
+
+.kpi-label {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.timeline-sub {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 1rem;
+}
+
+.timeline-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 72px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+}
+
+.tl-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.tl-bar {
+  width: 100%;
+  background: var(--border-mid);
+  min-height: 1px;
+  transition: background 0.12s;
+  cursor: default;
+}
+.tl-bar:hover { background: var(--fg-muted); }
+.tl-bar.current { background: var(--red); }
+
+.timeline-labels {
+  display: flex;
+  gap: 3px;
+  margin-top: 0.375rem;
+  margin-bottom: 3rem;
+}
+
+.tl-yr {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 0.375rem;
+  color: var(--fg-faint);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/* ─── §6 Language distribution ──────────────────────────────────────────── */
+
+.lang-dist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 4rem;
+}
+
+.lang-bar-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 36px;
+  align-items: center;
+  gap: 0.875rem;
+  padding-block: 0.5625rem;
+  border-bottom: 1px solid var(--border);
+}
+.lang-bar-row:first-child { border-top: 1px solid var(--border); }
+
+.lbr-name {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.05em;
+  color: var(--fg-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lbr-track {
+  height: 1px;
+  background: var(--border);
+  position: relative;
+}
+
+.lbr-fill {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 3px;
+  transition: width 0.8s cubic-bezier(0.22, 0.9, 0.36, 1) 0.1s;
+}
+
+.lbr-count {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg);
+  text-align: right;
+}
+
+/* ─── Footer ────────────────────────────────────────────────────────────── */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.footer-ogham {
+  font-family: var(--font-ogham);
+  font-size: 1rem;
+  color: var(--fg-faint);
+  letter-spacing: 0.04em;
+}
+
+/* ─── Skip link ─────────────────────────────────────────────────────────── */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--gutter);
+  z-index: 100;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: top 0.15s;
+}
+.skip-link:focus { top: 0.75rem; }
+
+/* ─── Visually hidden (screen-reader only) ──────────────────────────────── */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── h2 reset (section-title) ──────────────────────────────────────────── */
+
+h2.section-title {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+/* ─── Locale switcher ────────────────────────────────────────────────────── */
+
+.locale-switcher {
+  display: flex;
+  border: 1px solid var(--border);
+}
+
+.locale-btn {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+  font-weight: 500;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.locale-btn:last-child { border-right: none; }
+.locale-btn.active {
+  color: var(--fg);
+  background: var(--bg-subtle);
+}
+.locale-btn:hover:not(.active) { color: var(--fg); }
+
+/* Entry section social links */
+.entry-social {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  align-self: flex-start;
+  width: fit-content;
+}
+
+.entry-social-link {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-right: 1px solid var(--border);
+  transition: color 0.12s;
+}
+.entry-social-link:last-child { border-right: none; }
+.entry-social-link:hover { color: var(--fg); }
+
+/* Footer social nav */
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-social-link {
+  font-family: var(--font-mono);
+  font-size: 0.4375rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.12s;
+}
+.footer-social-link:hover { color: var(--fg-muted); }
+
+/* ─── Org card (overview) ─────────────────────────────────────────────── */
+
+.org-card { position: relative; }
+
+.org-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.12s;
+}
+.org-card-link:hover { opacity: 0.75; }
+.org-card-link:hover .kpi-val { text-decoration: underline; text-underline-offset: 3px; }
+
+.org-card-desc {
+  font-family: var(--font-mono);
+  font-size: 0.4rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-faint);
+  line-height: 1.55;
+  margin-top: 0.5rem;
+}
+
+/* ─── Hdr callsign as link ────────────────────────────────────────────── */
+
+.hdr-callsign {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--fg);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: opacity 0.12s;
+}
+.hdr-callsign:hover { opacity: 0.7; }
+.hdr-callsign::before {
+  content: '';
+  display: inline-block;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+/* ─── dt/dd in meta-row — flex children, not block ────────────────────── */
+
+.meta-row {
+  /* already display:flex from base rule; dt/dd participate as flex items */
+}
+dt.meta-key, dd.meta-val, dd.meta-topics {
+  display: block; /* override browser default for dd margin */
+  margin: 0;
+}
+
+/* ─── h3/h4 reset in readme ───────────────────────────────────────────── */
+
+h3.readme-h1 {
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+h4.readme-h2 {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin: 1.75rem 0 0.75rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+/* ─── Focus & selection ─────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 1px solid var(--red);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: color-mix(in oklch, var(--red) 16%, transparent);
+}
+
+/* ─── Responsive ────────────────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .entry-grid  { grid-template-columns: 1fr; }
+  .object-grid { grid-template-columns: 1fr; }
+  .object-meta-panel { position: static; }
+  .overview-kpis { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --gutter: 28px;
+    --section-gap: 88px;
+    --profile-w: 100%;
+  }
+  .stage-grid    { grid-template-columns: 1fr 1fr; }
+  .lang-dist-grid { grid-template-columns: 1fr; }
+  .hdr-nav       { display: none; }
+}
+
+@media (max-width: 640px) {
+  :root { --gutter: 20px; --section-gap: 60px; }
+  .app-shell { grid-template-columns: 1fr; }
+  .rail      { display: none; }
+  .stage-grid { grid-template-columns: 1fr; }
+  .overview-kpis { grid-template-columns: 1fr 1fr; }
+  .stat-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stat-cell:nth-child(2) { border-right: none; }
+  .stat-cell:nth-child(3) {
+    grid-column: span 2;
+    border-top: 1px solid var(--border);
+  }
+  .hdr-right > .hdr-readout:first-child { display: none; }
+}
+
+/* ─── fit: what the content needs beyond the design ─────────────────────── */
+
+/* a row the reader has filtered out, or has not asked to see yet */
+.repo-item[hidden] { display: none; }
+.show-more-btn[hidden] { display: none; }
+
+/* the plate: the project's own screen, its command's answer, or what its README says */
+.plate-shot {
+  display: block; margin: -1.25rem -1.25rem 0.25rem; border-bottom: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+.plate-shot img { width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; object-position: top center; }
+
+/* the figure a row carries, with its unit small */
+.repo-meta-unit { color: var(--fg-faint); }
+
+/* the count on an org card, a size down from a headline figure */
+.kpi-val-sm { font-size: 1.25rem; }
+
+/* what a work says it does, as its own lines */
+.readme-points { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin: 0 0 1.25rem; }
+.readme-points li {
+  position: relative; padding-left: 1rem;
+  font-family: var(--font-body); font-size: 0.8125rem; line-height: 1.7; color: var(--fg-muted);
+}
+.readme-points li::before {
+  content: ''; position: absolute; left: 0; top: 0.6em; width: 2px; height: 0.7em; background: var(--red);
+}
+
+.meta-link {
+  font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.04em;
+  color: var(--fg); border-bottom: 1px solid var(--border-mid); margin-right: 0.75rem;
+  transition: color 0.12s, border-color 0.12s;
+}
+.meta-link:hover { color: var(--red); border-color: var(--red); }
+
+/* how the page was made, in the words of the content's own text page */
+.notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 2rem 3rem; }
+.note-row { display: flex; flex-direction: column; gap: 0.625rem; }
+.note-key {
+  font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--fg-faint); font-weight: 400;
+}
+.note-body .readme-p { margin-bottom: 0; }
+.note-body a { border-bottom: 1px solid var(--border-mid); }
+.note-body a:hover { color: var(--red); border-color: var(--red); }
+.note-foot {
+  margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border);
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.06em; color: var(--fg-faint);
+}
+
+/* letters quoted as themselves inside a line (ogham) */
+.cut { font-family: var(--font-ogham); font-size: 1.15em; }
+
+/* the head of the entry section is the page's own heading, so it is set in the display face */
+.entry-name { text-wrap: balance; }
+
+/* the work opened in full shows its own plate: its site as it renders, its command as it
+   answers, or what its README says it does — above the words, at the measured ratio */
+.readme-shot {
+  margin: -2rem -2.25rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+/* the plate keeps its own proportions, whatever they are: a mark, a screen and a card are
+   not the same shape, and none of them is improved by being cropped to another one */
+.readme-shot img { width: 100%; height: auto; }
+
+/* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
+.timeline-chart { height: 96px; }
+.tl-count {
+  font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums; color: var(--fg-faint);
+  margin-bottom: 0.25rem; white-space: nowrap;
+}
+
+/* ─── the families, and the page each one has ───────────────────────────── */
+
+.fam-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1px;
+  background: var(--border); border: 1px solid var(--border);
+}
+.fam-card {
+  position: relative; display: flex; flex-direction: column; gap: 0.5rem;
+  padding: 1.5rem 1.625rem 1.375rem; background: var(--bg);
+  transition: background 0.12s;
+}
+.fam-card:hover { background: var(--bg-raised); }
+.fam-mark {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  font-family: var(--font-ogham); font-size: 1.5rem; color: var(--fg-faint);
+}
+.fam-count {
+  font-family: var(--font-mono); font-size: 1.25rem; font-weight: 500;
+  font-variant-numeric: tabular-nums; color: var(--red); line-height: 1;
+}
+.fam-name { font-size: 1rem; font-weight: 600; letter-spacing: 0.01em; line-height: 1.4; }
+.fam-lead {
+  font-size: 0.75rem; line-height: 1.7; color: var(--fg-muted); text-wrap: pretty;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+}
+.fam-go {
+  margin-top: auto; padding-top: 0.75rem;
+  font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--fg-faint);
+}
+.fam-card:hover .fam-go { color: var(--red); }
+
+/* a family's own page */
+.fam-hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: var(--item-gap); }
+.fam-intro { max-width: 46em; margin-top: 1.25rem; font-size: 0.9375rem; line-height: 1.85; color: var(--fg-muted); text-wrap: pretty; }
+.fam-hero-mark { font-family: var(--font-ogham); font-size: 3.5rem; color: var(--border-mid); line-height: 1; flex: none; }
+.fam-back {
+  display: inline-block; margin-top: 1.5rem;
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--fg-muted); border-bottom: 1px solid var(--border);
+}
+.fam-back:hover { color: var(--red); border-color: var(--red); }
+
+/* where the work lives, as one line of places */
+.org-pills { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin-top: var(--item-gap); }
+.org-pills-key {
+  font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--fg-faint); margin-right: 0.25rem;
+}
+.org-pill {
+  display: inline-flex; align-items: baseline; gap: 0.4rem;
+  padding: 0.25rem 0.625rem; border: 1px solid var(--border);
+  font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.04em; color: var(--fg-muted);
+  transition: color 0.12s, border-color 0.12s;
+}
+.org-pill:hover { color: var(--fg); border-color: var(--border-mid); }
+.org-pill-count { font-size: 0.625rem; color: var(--fg-faint); font-variant-numeric: tabular-nums; }
+
+/* Nothing may widen the page: a grid track's automatic floor is its content's smallest width,
+   and a block of pre-formatted output has no small width — so the tracks are told they may be
+   narrow, and the output scrolls inside its own box. */
+.object-grid > *, .entry-grid > *, .lang-dist-grid > *, .fam-grid > *, .overview-kpis > * { min-width: 0; }
+.readme-code { overflow-x: auto; }
+.repo-item, .repo-item > div { min-width: 0; }
+
+/* The list is one pane, and a line of it is a thing you point at: it gets room inside that
+   pane rather than running up against the edge of the page. */
+.repo-list {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--glass-line);
+  border-radius: var(--radius);
+  background: var(--glass);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  box-shadow: inset 0 1px 0 var(--glass-shine), 0 1px 2px var(--glass-shadow), 0 12px 32px -18px var(--glass-shadow);
+}
+.repo-item { padding-inline: 0.875rem; margin-inline: -0.875rem; }
+.repo-item:first-child { border-top: 0; }
+.repo-item:last-child { border-bottom: 0; }
+@media (max-width: 640px) {
+  .repo-list { padding: 0.25rem 0.875rem; }
+  .repo-item { padding-inline: 0.5rem; margin-inline: -0.5rem; }
+}
+
+/* Command output wraps rather than scrolling sideways: a line of help is read, not scrolled. */
+.readme-code, .readme-code code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* fit: oghma glass — the panels read as layers of glass over a lit ground, the way a system does
+   when its windows are translucent. It lies over the ported design and changes only surfaces:
+   what the glass is made of, what sits behind it to be blurred, and where the light catches. */
+
+:root {
+  --glass-blur: 22px;
+  --radius: 14px;
+  --radius-sm: 10px;
+}
+
+/* ── the ground the glass has something to blur ─────────────────────────── */
+/* The lit field is painted by the body's own layers, so the body itself must not paint over
+   them: the ground colour stays on `html`, where the canvas takes it from. */
+body { background: transparent; }
+
+/* fixed, so every panel blurs the same lit field wherever the page is scrolled to */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(38rem 30rem at 16% 22%, var(--bloom-1), transparent 70%),
+    radial-gradient(34rem 26rem at 90% 30%, var(--bloom-2), transparent 72%),
+    radial-gradient(44rem 32rem at 74% 84%, var(--bloom-1), transparent 70%),
+    radial-gradient(40rem 30rem at 32% 68%, var(--bloom-3), transparent 72%),
+    var(--bg);
+}
+
+/* the grid a panel is set out on: hairlines, only just visible */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 3.5rem 3.5rem;
+  mask-image: radial-gradient(150% 120% at 50% -10%, black, transparent 90%);
+}
+
+/* the hairline that says a bar is live, the way an instrument's own edge is lit */
+.site-header { position: sticky; }
+.site-header::after,
+.rail::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--red) 70%, transparent) 30%, color-mix(in oklch, var(--red) 70%, transparent) 70%, transparent);
+  pointer-events: none;
+}
+.site-header::after { inset: auto 0 -1px; height: 1px; }
+.rail { position: sticky; }
+.rail::after {
+  inset: 0 -1px 0 auto;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, color-mix(in oklch, var(--red) 55%, transparent) 40%, transparent 85%);
+}
+
+/* ── what glass is made of ──────────────────────────────────────────────── */
+
+.rail,
+.site-header,
+.instrument-panel,
+.stat-panel,
+.stage-plate,
+.kpi-card,
+.fam-card,
+.object-meta-panel,
+.readme-panel,
+.theme-toggle,
+.locale-switcher,
+.org-pill,
+.show-more-btn,
+.lang-chip,
+.sort-bar,
+.org-rail .org-btn {
+  background: var(--glass);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  border: 1px solid var(--glass-line);
+  box-shadow:
+    inset 0 1px 0 var(--glass-shine),
+    0 1px 2px var(--glass-shadow),
+    0 12px 32px -18px var(--glass-shadow);
+}
+
+.instrument-panel,
+.stage-plate,
+.kpi-card,
+.fam-card,
+.object-meta-panel,
+.readme-panel,
+.stat-panel { border-radius: var(--radius); }
+.theme-toggle,
+.locale-switcher,
+.org-pill,
+.show-more-btn,
+.lang-chip,
+.sort-bar { border-radius: var(--radius-sm); }
+
+/* the bars that stay put are thicker glass, because everything passes under them */
+.site-header,
+.rail {
+  background: var(--glass-thick);
+  backdrop-filter: blur(calc(var(--glass-blur) * 1.4)) saturate(200%);
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 1.4)) saturate(200%);
+  border-radius: 0;
+}
+.site-header { border-width: 0 0 1px; }
+.rail { border-width: 0 1px 0 0; }
+
+/* inside a group, the pieces share one pane rather than each carrying their own */
+.sort-bar,
+.theme-toggle,
+.locale-switcher { overflow: hidden; }
+.sort-bar .sort-btn,
+.theme-toggle .theme-icon-btn,
+.locale-switcher .locale-btn {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.sort-bar .sort-btn + .sort-btn,
+.theme-toggle .theme-icon-btn + .theme-icon-btn,
+.locale-switcher .locale-btn + .locale-btn { border-left: 1px solid var(--glass-line); }
+.sort-btn.active,
+.theme-icon-btn.active,
+.locale-btn.active { background: color-mix(in oklch, var(--fg) 8%, transparent); }
+
+/* the grid of panes in the families keeps its hairlines, but each pane is glass */
+.fam-grid { background: transparent; border: 0; gap: var(--col-gap); }
+
+/* a row of the list is not glass — two hundred panes of it would cost more than it says */
+.repo-item { border-radius: var(--radius-sm); }
+.repo-item:hover { background: color-mix(in oklch, var(--bg-raised) 70%, transparent); }
+
+/* ── where the light catches ─────────────────────────────────────────────── */
+
+.kpi-card:hover,
+.fam-card:hover,
+.stage-plate:hover,
+.org-pill:hover,
+.show-more-btn:hover,
+.lang-chip:hover {
+  border-color: color-mix(in oklch, var(--fg) 18%, transparent);
+  box-shadow:
+    inset 0 1px 0 var(--glass-shine),
+    0 2px 4px var(--glass-shadow),
+    0 18px 40px -20px var(--glass-shadow);
+}
+
+/* the red index mark carries a little light of its own */
+.rail-dot {
+  box-shadow: 0 0 0 0 color-mix(in oklch, var(--red) 40%, transparent), 0 0 14px 2px color-mix(in oklch, var(--red) 55%, transparent);
+}
+.hdr-callsign::before { box-shadow: 0 0 12px 1px color-mix(in oklch, var(--red) 60%, transparent); }
+.tl-bar.current { box-shadow: 0 0 24px -4px color-mix(in oklch, var(--red) 70%, transparent); }
+.stage-plate::before { box-shadow: 0 0 18px -2px color-mix(in oklch, var(--red) 65%, transparent); }
+
+/* code and terminal output sit under the glass, not on it */
+.readme-code {
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklch, var(--fg) 6%, transparent);
+  border: 1px solid var(--glass-line);
+}
+
+/* the plate of a work opened in full keeps the pane's rounded corner */
+.readme-shot { border-radius: var(--radius) var(--radius) 0 0; overflow: hidden; }
+
+/* a card lifted onto glass no longer needs the section's own paint */
+.stage-plate { overflow: hidden; }
+
+@media (prefers-reduced-transparency: reduce) {
+  .rail,
+  .site-header,
+  .instrument-panel,
+  .stat-panel,
+  .stage-plate,
+  .kpi-card,
+  .fam-card,
+  .object-meta-panel,
+  .readme-panel,
+  .theme-toggle,
+  .locale-switcher,
+  .org-pill,
+  .show-more-btn,
+  .lang-chip,
+  .sort-bar {
+    background: var(--bg-raised);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  body::after { display: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <a class="skip-link" href="#main-content">跳到正文</a>
+  <aside class="rail" aria-hidden="true">
+    <div class="ogham-trunk" title="ogma">᚛ᚑᚌᚋᚐ᚜</div>
+    <div class="rail-year-list"><span class="rail-year">2026</span><span class="rail-year">2025</span><span class="rail-year">2024</span><span class="rail-year">2023</span><span class="rail-year">2022</span></div>
+    <div class="rail-dot"></div>
+  </aside>
+  <div class="main-wrap">
+    <header class="site-header">
+    <a class="hdr-callsign" href="../">O6lvl4</a>
+    <nav class="hdr-nav" aria-label="本页各节"><a href="../#entry">关于</a><a href="../#works">作品</a><a href="../#stage">主要作品</a><a href="../#object">细看一个</a><a href="../#overview">总体</a><a href="../#families">系列</a></nav>
+    <div class="hdr-right">
+      <div class="hdr-readout"><span class="hdr-readout-val">265</span><span class="hdr-readout-lbl">仓库</span></div>
+      <div class="hdr-readout"><span class="hdr-readout-val">19</span><span class="hdr-readout-lbl">语言</span></div>
+      <div class="locale-switcher" role="group" aria-label="语言"><a class="locale-btn" href="../../ja/">日本</a><a class="locale-btn" href="../../en/">EN</a><span class="locale-btn active" aria-current="true" lang="zh">中文</span></div>
+      <div class="theme-toggle" role="group" aria-label="配色">
+        <button type="button" class="theme-icon-btn" data-theme-set="light" aria-pressed="false" aria-label="浅色"><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" width="13" height="13"><circle cx="8" cy="8" r="3"/><line x1="8" y1="1" x2="8" y2="2.5"/><line x1="8" y1="13.5" x2="8" y2="15"/><line x1="1" y1="8" x2="2.5" y2="8"/><line x1="13.5" y1="8" x2="15" y2="8"/><line x1="3.05" y1="3.05" x2="4.1" y2="4.1"/><line x1="11.9" y1="11.9" x2="12.95" y2="12.95"/><line x1="12.95" y1="3.05" x2="11.9" y2="4.1"/><line x1="4.1" y1="11.9" x2="3.05" y2="12.95"/></svg></button>
+        <button type="button" class="theme-icon-btn" data-theme-set="dark" aria-pressed="false" aria-label="深色"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="12" height="12"><path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a.5.5 0 0 0-.6-.6A7 7 0 1 0 14.1 11.1a.5.5 0 0 0-.6-.6z"/></svg></button>
+      </div>
+    </div>
+  </header>
+    <main id="main-content">
+      <div class="content">
+        <section id="entry" class="section" aria-labelledby="heading-entry">
+    <div class="section-head">
+      <span class="ogham-mark" aria-hidden="true">ᚆ</span>
+      <h2 class="section-title" id="heading-entry">系列</h2>
+      
+    </div>
+    <div class="fam-hero">
+      <div>
+        <h1 class="entry-name">用 Almide 写 Minecraft</h1>
+        <p class="fam-intro">用 Almide 自底向上实现 Minecraft 协议：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写</p>
+        <a class="fam-back" href="../#families">← 全部系列</a>
+      </div>
+      <span class="fam-hero-mark" aria-hidden="true">ᚆ</span>
+    </div>
+    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">26</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">187</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">3</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">年份</div></div></div>
+    <div>
+      <div class="timeline-sub">各年提交</div>
+      <div class="timeline-chart" role="img" aria-label="年表: 2025 95, 2026 92"><div class="tl-bar-wrap">
+        <span class="tl-count">95</span>
+        <div class="tl-bar" style="height:100.0%" title="2025: 95"></div>
+      </div><div class="tl-bar-wrap">
+        <span class="tl-count">92</span>
+        <div class="tl-bar current" style="height:96.8%" title="2026: 92"></div>
+      </div></div>
+      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
+    </div>
+  </section>
+        <section id="object" class="section" aria-labelledby="heading-object">
+    <div class="section-head">
+      <span class="ogham-mark" aria-hidden="true">ᚄ</span>
+      <h2 class="section-title" id="heading-object">细看一个</h2>
+      
+    </div>
+    <div class="object-grid">
+      <dl class="object-meta-panel" aria-label="mc-protocol">
+      <div class="meta-row"><dt class="meta-key">名称</dt><dd class="meta-val accent">mc-protocol</dd></div><div class="meta-row"><dt class="meta-key">存放处</dt><dd class="meta-val">用 Almide 写 Minecraft</dd></div><div class="meta-row"><dt class="meta-key">语言</dt><dd class="meta-val">Almide</dd></div><div class="meta-row"><dt class="meta-key">提交</dt><dd class="meta-val">15</dd></div><div class="meta-row"><dt class="meta-key">首次</dt><dd class="meta-val">2026年5月</dd></div><div class="meta-row"><dt class="meta-key">版本</dt><dd class="meta-val">v0.2.0</dd></div><div class="meta-row"><dt class="meta-key">更新</dt><dd class="meta-val">2026年5月</dd></div>
+      <div class="meta-row"><dt class="meta-key">话题</dt><dd class="meta-topics"><span class="repo-topic">Almide</span></dd></div>
+      <div class="meta-row"><dt class="meta-key">去处</dt><dd class="meta-val"><a class="meta-link" href="https://github.com/almd-mc/mc-protocol" target="_blank" rel="noopener noreferrer">仓库</a></dd></div>
+    </dl>
+      <article class="readme-panel" aria-label="mc-protocol README">
+      <figure class="readme-shot"><img src="../img/plates/zh/almd-mc/mc-protocol-lo.webp" width="640" height="400" alt="O6lvl4「mc-protocol」" loading="lazy" decoding="async"></figure>
+      <h3 class="readme-h1">mc-protocol</h3>
+      <p class="readme-p">用Almide实现的Minecraft协议库</p>
+      <h4 class="readme-h2">功能</h4><ul class="readme-points"><li>AES-128-CFB8加密</li><li>zlib压缩</li><li>VarInt/VarLong编解码</li></ul>
+      
+    </article>
+    </div>
+  </section>
+        <section id="works" class="section" aria-labelledby="heading-works">
+    <div class="section-head">
+      <span class="ogham-mark" aria-hidden="true">ᚂ</span>
+      <h2 class="section-title" id="heading-works">作品</h2>
+      <span class="section-count">26 / 26</span>
+    </div>
+    
+    <div class="works-toolbar">
+      <div class="sort-bar" role="group" aria-label="排序"><button type="button" class="sort-btn active" data-sort="date" aria-pressed="true">按更新</button><button type="button" class="sort-btn" data-sort="commits" aria-pressed="false">按提交</button><button type="button" class="sort-btn" data-sort="format" aria-pressed="false">按语言</button><button type="button" class="sort-btn" data-sort="name" aria-pressed="false">按名称</button></div>
+      <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button></div>
+    </div>
+    <ul class="repo-list" role="list" data-shown="28" aria-label="作品"><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-protocol" data-date="2026-05-23" data-commits="15" data-rank="0">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-protocol" target="_blank" rel="noopener noreferrer">mc-protocol</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">用Almide实现的Minecraft协议库</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">15<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-cli" data-date="2026-05-23" data-commits="5" data-rank="1">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-bot-cli" target="_blank" rel="noopener noreferrer">mc-bot-cli</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">Almide Minecraft 机器人的命令行工具</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="JavaScript" data-name="mine-rabbit-bots" data-date="2025-11-21" data-commits="79" data-rank="2">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/Aid-On/mine-rabbit-bots" target="_blank" rel="noopener noreferrer">mine-rabbit-bots</a>
+          <span class="repo-org-tag">Aid-On</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
+        </div>
+        <p class="repo-desc">独立于 Craftsman 的 Mineflyer 机器人 Paper 测试沙盒</p>
+        <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">Shell</li></ul>
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">79<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2025-11-21">2025年11月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="TypeScript" data-name="craftsman" data-date="2025-10-14" data-commits="16" data-rank="3">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/O6lvl4/craftsman" target="_blank" rel="noopener noreferrer">craftsman</a>
+          <span class="repo-org-tag">O6lvl4</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+        </div>
+        <p class="repo-desc">基于Docker、按Pak管理Minecraft服务器的CLI</p>
+        <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">16<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2025-10-14">2025年10月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot" data-date="2026-05-23" data-commits="9" data-rank="4">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-bot" target="_blank" rel="noopener noreferrer">mc-bot</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">用Almide编写的Minecraft机器人框架</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">9<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-ai" data-date="2026-05-25" data-commits="3" data-rank="5">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-bot-ai" target="_blank" rel="noopener noreferrer">mc-bot-ai</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Minecraft机器人的AI集成层,基于almai</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-25">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pathfinder" data-date="2026-05-24" data-commits="3" data-rank="6">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-pathfinder" target="_blank" rel="noopener noreferrer">mc-pathfinder</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">mineflayer-pathfinder的Almide实现,面向Minecraft机器人的A*寻路</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-world" data-date="2026-05-24" data-commits="4" data-rank="7">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-world" target="_blank" rel="noopener noreferrer">mc-world</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft世界模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-block" data-date="2026-05-24" data-commits="4" data-rank="8">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-block" target="_blank" rel="noopener noreferrer">mc-block</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft方块模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-item" data-date="2026-05-24" data-commits="4" data-rank="9">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-item" target="_blank" rel="noopener noreferrer">mc-item</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft物品模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chunk" data-date="2026-05-24" data-commits="4" data-rank="10">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-chunk" target="_blank" rel="noopener noreferrer">mc-chunk</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft区块模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-entity" data-date="2026-05-24" data-commits="4" data-rank="11">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-entity" target="_blank" rel="noopener noreferrer">mc-entity</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft实体模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chat" data-date="2026-05-24" data-commits="5" data-rank="12">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-chat" target="_blank" rel="noopener noreferrer">mc-chat</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft聊天模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-nbt" data-date="2026-05-24" data-commits="5" data-rank="13">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-nbt" target="_blank" rel="noopener noreferrer">mc-nbt</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft NBT模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-auth" data-date="2026-05-23" data-commits="4" data-rank="14">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-auth" target="_blank" rel="noopener noreferrer">mc-auth</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft认证模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="neoforge" data-date="2026-05-23" data-commits="5" data-rank="15">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/neoforge" target="_blank" rel="noopener noreferrer">neoforge</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">Almide的Minecraft neoforge模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-registry" data-date="2026-05-23" data-commits="3" data-rank="16">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-registry" target="_blank" rel="noopener noreferrer">mc-registry</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft注册表模块</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-23">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server-impl" data-date="2026-05-24" data-commits="2" data-rank="17">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-server-impl" target="_blank" rel="noopener noreferrer">mc-server-impl</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">用Almide实现flying-squid的轻量Minecraft服务器</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-proxy" data-date="2026-05-24" data-commits="2" data-rank="18">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-proxy" target="_blank" rel="noopener noreferrer">mc-proxy</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">用Almide实现prismarine-proxy的Minecraft代理基础</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server" data-date="2026-05-24" data-commits="2" data-rank="19">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-server" target="_blank" rel="noopener noreferrer">mc-server</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">用Almide实现的Minecraft服务器协议基础</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-inventory" data-date="2026-05-24" data-commits="2" data-rank="20">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-inventory" target="_blank" rel="noopener noreferrer">mc-inventory</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Minecraft机器人的物品栏窗口管理</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pvp" data-date="2026-05-24" data-commits="2" data-rank="21">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-pvp" target="_blank" rel="noopener noreferrer">mc-pvp</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">用Almide实现的Minecraft机器人PvP战斗工具</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-collect" data-date="2026-05-24" data-commits="2" data-rank="22">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-collect" target="_blank" rel="noopener noreferrer">mc-collect</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">Minecraft机器人的方块收集自动化库</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-physics" data-date="2026-05-24" data-commits="1" data-rank="23">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-physics" target="_blank" rel="noopener noreferrer">mc-physics</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft物理模拟库</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-recipe" data-date="2026-05-24" data-commits="1" data-rank="24">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-recipe" target="_blank" rel="noopener noreferrer">mc-recipe</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft合成配方库,对标prismarine-recipe</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-data" data-date="2026-05-24" data-commits="1" data-rank="25">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/almd-mc/mc-data" target="_blank" rel="noopener noreferrer">mc-data</a>
+          <span class="repo-org-tag">almd-mc</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+        </div>
+        <p class="repo-desc">面向Almide的Minecraft数据定义</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
+        <time class="repo-date" datetime="2026-05-24">2026年5月</time>
+      </div>
+    </li></ul>
+    
+  </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+    <span class="footer-copy">O6lvl4</span>
+    <nav class="footer-social" aria-label="去处"><a class="footer-social-link" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a><a class="footer-social-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Almide</span></a></nav>
+    <span class="footer-ogham" title="ogma">᚛ᚑᚌᚋᚐ᚜</span>
+    <span class="footer-copy">265 仓库 · 10 系列</span>
+  </footer>
+  </div>
+</div>
+<script type="module">
+// Browser side of the oghma page: the colour scheme, which section you are in, and the list —
+// filtered by org and by language, ordered by any of its columns. The page is complete without
+// this file; everything here only narrows or reorders what is already rendered.
+
+const root = document.documentElement;
+
+function on                                     (el                         , type   , fn                                     )       {
+  el?.addEventListener(type, fn                 );
+}
+
+/** The reader's choice of scheme, kept per browser; `auto` follows the system and stores nothing. */
+function theme()       {
+  const btns = Array.from(document.querySelectorAll                   ("[data-theme-set]"));
+  if (btns.length === 0) return;
+
+  const show = (mode        )       => {
+    if (mode === "auto") root.removeAttribute("data-theme");
+    else root.setAttribute("data-theme", mode);
+    btns.forEach((b) => {
+      const on = b.dataset.themeSet === mode;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-pressed", String(on));
+    });
+  };
+
+  let saved = "auto";
+  try {
+    saved = localStorage.getItem("fit-theme") ?? "auto";
+  } catch {
+    saved = "auto";
+  }
+  show(saved);
+
+  btns.forEach((b) =>
+    on(b, "click", () => {
+      const want = b.dataset.themeSet ?? "auto";
+      const next = root.getAttribute("data-theme") === want ? "auto" : want;
+      show(next);
+      try {
+        if (next === "auto") localStorage.removeItem("fit-theme");
+        else localStorage.setItem("fit-theme", next);
+      } catch {
+        /* a browser that refuses storage still gets the change it asked for */
+      }
+    }),
+  );
+}
+
+/** Which section the reader is in, marked in the header. */
+function spy()       {
+  const links = Array.from(document.querySelectorAll                   (".hdr-nav a"));
+  const sections = links.map((a) => document.querySelector             (a.hash)).filter((s)                   => Boolean(s));
+  if (sections.length === 0) return;
+  const io = new IntersectionObserver(
+    (entries) =>
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const i = sections.indexOf(e.target               );
+        links.forEach((a, j) => (j === i ? a.setAttribute("aria-current", "location") : a.removeAttribute("aria-current")));
+      }),
+    { rootMargin: "-38% 0px -38% 0px", threshold: 0 },
+  );
+  sections.forEach((s) => io.observe(s));
+}
+
+               
+                  
+              
+               
+               
+               
+                  
+               
+ 
+
+                
+                   
+              
+                
+              
+               
+               
+               
+ 
+
+function readRows(box             )        {
+  return Array.from(box.children).map((el) => {
+    const e = el               ;
+    return {
+      el: e,
+      org: e.dataset.org ?? "",
+      lang: e.dataset.lang ?? "",
+      name: e.dataset.name ?? "",
+      date: e.dataset.date ?? "",
+      commits: Number(e.dataset.commits ?? 0),
+      rank: Number(e.dataset.rank ?? 0),
+    };
+  });
+}
+
+function compare(a     , b     , sort        )         {
+  if (sort === "commits") return b.commits - a.commits;
+  if (sort === "name") return a.name.localeCompare(b.name, undefined, { numeric: true });
+  if (sort === "format") return a.lang.localeCompare(b.lang) || b.commits - a.commits;
+  return b.date.localeCompare(a.date) || a.rank - b.rank;
+}
+
+function press(group        , key        , value        )       {
+  document.querySelectorAll                   (`[data-${group}]`).forEach((b) => {
+    const on = (b.dataset[key] ?? "") === value;
+    b.classList.toggle("active", on);
+    b.setAttribute("aria-pressed", String(on));
+  });
+}
+
+function apply(list      )       {
+  const keep = list.rows.filter((r) => (!list.org || r.org === list.org) && (!list.lang || r.lang === list.lang));
+  keep.sort((a, b) => compare(a, b, list.sort));
+  keep.forEach((r) => list.box.append(r.el));
+  list.rows.forEach((r) => (r.el.hidden = true));
+  const limit = list.all ? keep.length : Math.min(list.shown, keep.length);
+  keep.slice(0, limit).forEach((r) => (r.el.hidden = false));
+
+  const count = document.querySelector(".section-count");
+  if (count) count.textContent = `${keep.length} / ${list.rows.length}`;
+  const more = document.querySelector                   (".show-more-btn");
+  const rest = keep.length - limit;
+  if (more) {
+    more.hidden = rest <= 0;
+    const tail = more.querySelector(".show-more-count");
+    if (tail) tail.textContent = ` (${rest})`;
+  }
+}
+
+function listing()       {
+  const box = document.querySelector             (".repo-list");
+  if (!box) return;
+  const list       = {
+    box,
+    rows: readRows(box),
+    shown: Number(box.dataset.shown ?? 28),
+    org: "",
+    lang: "",
+    sort: "date",
+    all: false,
+  };
+  apply(list);
+
+  document.querySelectorAll                   ("[data-org]").forEach((b) =>
+    on(b, "click", () => {
+      list.org = list.org === b.dataset.org ? "" : (b.dataset.org ?? "");
+      list.all = false;
+      press("org", "org", list.org);
+      apply(list);
+    }),
+  );
+  document.querySelectorAll                   ("[data-lang]").forEach((b) =>
+    on(b, "click", () => {
+      list.lang = list.lang === b.dataset.lang ? "" : (b.dataset.lang ?? "");
+      list.all = false;
+      press("lang", "lang", list.lang);
+      apply(list);
+    }),
+  );
+  document.querySelectorAll                   ("[data-sort]").forEach((b) =>
+    on(b, "click", () => {
+      list.sort = b.dataset.sort ?? "date";
+      press("sort", "sort", list.sort);
+      apply(list);
+    }),
+  );
+  on(document.querySelector                   (".show-more-btn"), "click", () => {
+    list.all = true;
+    apply(list);
+  });
+}
+
+theme();
+spy();
+listing();
+
+export {};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "o6lvl4-portfolio",
+  "private": true,
+  "type": "module",
+  "description": "A portfolio of the public work under O6lvl4, Aid-On, almide and the almide-* orgs.",
+  "scripts": {
+    "mine": "node scripts/mine.mjs > data/repos.json",
+    "summarize": "node scripts/summarize.mjs",
+    "plates": "node scripts/plates.mjs",
+    "content": "node scripts/content.mjs ja > data/content.ja.json && node scripts/content.mjs en > data/content.en.json && node scripts/content.mjs zh > data/content.zh.json",
+    "og": "node scripts/og.mjs ja && node scripts/og.mjs en && node scripts/og.mjs zh",
+    "site": "node scripts/site.mjs",
+    "check": "node ../uimodulay/src/cli.ts fit check site/ja -o check",
+    "lint": "codopsy analyze ./scripts --fail-on-warning"
+  },
+  "devDependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.273",
+    "playwright": "^1.58.2",
+    "sharp": "^0.34.0"
+  }
+}

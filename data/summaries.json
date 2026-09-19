@@ -1,0 +1,6892 @@
+{
+ "almd-mc/mc-nbt": {
+  "ja": {
+   "what": "Almide向けのMinecraft NBTモジュール",
+   "points": [
+    "Almideのモジュール",
+    "Minecraft NBTを扱う",
+    "gitでdependenciesに追加"
+   ]
+  },
+  "en": {
+   "what": "A Minecraft NBT module for the Almide programming language.",
+   "points": [
+    "Module for Almide",
+    "Minecraft NBT support",
+    "Install via git dependency in toml"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft NBT模块",
+   "points": [
+    "Almide模块",
+    "支持Minecraft NBT",
+    "通过git依赖安装"
+   ]
+  }
+ },
+ "O6lvl4/hew": {
+  "ja": {
+   "what": "コーディングエージェント向けの構造認識型cat/grep/sed代替ツール",
+   "points": [
+    "--symbolで関数や型を名前指定",
+    "行番号付き出力とgrepの折り畳み",
+    "6言語をgramide文法で解析"
+   ]
+  },
+  "en": {
+   "what": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
+   "points": [
+    "--symbol cuts out a function or type by name",
+    "Numbered lines, clipping, gap markers",
+    "grep folds repeats, names enclosing symbol"
+   ]
+  },
+  "zh": {
+   "what": "面向编码代理的结构感知cat/grep/sed替代工具",
+   "points": [
+    "--symbol按名称提取函数",
+    "带行号的输出与裁剪",
+    "grep折叠重复并标注符号"
+   ]
+  }
+ },
+ "almide/almide": {
+  "ja": {
+   "what": "LLMによる編集後も動くコードを目指す静的型付け言語",
+   "points": [
+    "Rust経由のネイティブとWebAssemblyへコンパイル",
+    "修正案を示す網羅性チェックの診断",
+    "ネイティブとwasmで出力がバイト単位で一致"
+   ]
+  },
+  "en": {
+   "what": "A statically-typed language built so code survives LLM edits; compiles to native (via Rust) and WebAssembly",
+   "points": [
+    "Native and WebAssembly targets, byte-identical output",
+    "Compiler diagnostics that spell out the fix",
+    "Exhaustive match, effect fn, and fan concurrency"
+   ]
+  },
+  "zh": {
+   "what": "为LLM编辑后代码仍可用而设计的静态类型语言",
+   "points": [
+    "编译为原生(经Rust)和WebAssembly",
+    "给出修复方案的编译器诊断",
+    "原生与wasm输出字节一致"
+   ]
+  }
+ },
+ "Aid-On/unillm": {
+  "ja": {
+   "what": "エッジ環境向けに複数のLLMプロバイダを統一APIで扱うTypeScriptライブラリ",
+   "points": [
+    "Fluent APIとZodによる型安全な出力",
+    "nagare連携のWeb Streamsストリーミング",
+    "5プロバイダ・48モデルに対応"
+   ]
+  },
+  "en": {
+   "what": "Unified, type-safe TypeScript LLM interface for edge runtimes across multiple providers",
+   "points": [
+    "Fluent builder API with Zod structured output",
+    "Streaming via Web Streams and nagare Stream<T>",
+    "48 models across Anthropic, OpenAI, Groq, Gemini, Cloudflare"
+   ]
+  },
+  "zh": {
+   "what": "面向边缘环境的统一多厂商LLM接口",
+   "points": [
+    "Fluent API与Zod类型安全输出",
+    "基于nagare的Web Streams流式",
+    "支持5家厂商共48个模型"
+   ]
+  }
+ },
+ "O6lvl4/gformiac": {
+  "ja": {
+   "what": "YAML定義からGoogleフォームを宣言的に管理するIaCツール",
+   "points": [
+    "plan・apply・importコマンド",
+    "7種類のアイテムタイプ対応",
+    "state.jsonによる差分検出"
+   ]
+  },
+  "en": {
+   "what": "Infrastructure-as-code CLI that declaratively manages Google Forms from YAML definitions.",
+   "points": [
+    "plan, apply and import commands",
+    "Seven item types incl. choice and scale",
+    "Diff detection via .gformiac/state.json"
+   ]
+  },
+  "zh": {
+   "what": "用YAML声明式管理Google表单的IaC工具",
+   "points": [
+    "plan、apply、import命令",
+    "支持七种题目类型",
+    "基于state.json的差异检测"
+   ]
+  }
+ },
+ "O6lvl4/ccgrid": {
+  "ja": {
+   "what": "Lead agentが複数のTeammateを並列実行するチーム開発管理ツール",
+   "points": [
+    "セッション再開とコスト追跡",
+    "ルールベースの権限自動判定",
+    "WebSocketによるリアルタイム配信"
+   ]
+  },
+  "en": {
+   "what": "Team development tool on Claude Agent SDK where a Lead agent runs Teammate agents in parallel.",
+   "points": [
+    "Session resume and cost tracking",
+    "Rule-based permission allow/deny",
+    "Real-time WebSocket state delivery"
+   ]
+  },
+  "zh": {
+   "what": "基于Claude Agent SDK的团队开发管理工具",
+   "points": [
+    "会话恢复与成本跟踪",
+    "基于规则的权限判定",
+    "WebSocket实时推送"
+   ]
+  }
+ },
+ "O6lvl4/wyve": {
+  "ja": {
+   "what": "LLVM IRの一層上でオプティマイザ向け契約を書く静的意味論言語",
+   "points": [
+    "@noalias・@effectを証明して検証",
+    "@vectorize(require)失敗はコンパイルエラー",
+    "Leanで変換のビット厳密性を証明"
+   ]
+  },
+  "en": {
+   "what": "A static semantics language above LLVM IR for writing verified contracts for the optimizer.",
+   "points": [
+    "Proven @noalias and @effect contracts",
+    "@vectorize(require) fails the build with a reason",
+    "Lean proofs that schedule transforms are bitwise-exact"
+   ]
+  },
+  "zh": {
+   "what": "LLVM IR之上、为优化器编写契约的静态语义语言",
+   "points": [
+    "经证明的@noalias与@effect",
+    "@vectorize(require)失败即报错",
+    "Lean证明调度变换逐位精确"
+   ]
+  }
+ },
+ "O6lvl4/zfp": {
+  "ja": {
+   "what": "Zigのネイティブ型上で動くゼロコストの関数型ツールキット",
+   "points": [
+    "?TとE!Tを直接扱うoption・result",
+    "pipe・composeによる関数合成",
+    "monoidとsliceによる畳み込み"
+   ]
+  },
+  "en": {
+   "what": "Zero-cost functional programming toolkit for Zig, working directly on native ?T and E!T",
+   "points": [
+    "option and result on native ?T and E!T",
+    "pipe and compose for function pipelines",
+    "Named monoids and slice folds"
+   ]
+  },
+  "zh": {
+   "what": "基于Zig原生类型的零开销函数式工具库",
+   "points": [
+    "直接作用于?T的option",
+    "pipe与compose函数组合",
+    "monoid与slice折叠"
+   ]
+  }
+ },
+ "O6lvl4/gramide": {
+  "ja": {
+   "what": "Almide製の、コーディングエージェント向け構文木エンジン",
+   "points": [
+    "バイト列レキサーと文法値のパーサ",
+    "outline・tags・symbols・mapの各リーダー",
+    "編集後に最小範囲だけ読み直す増分再パース"
+   ]
+  },
+  "en": {
+   "what": "Syntax-tree engine in Almide for coding agents: lexer, grammar-driven parser, readers, CLI library",
+   "points": [
+    "Lexer over bytes driven by a per-language Spec",
+    "Parser interpreting a Grammar value, with recovery",
+    "Incremental reparse of the smallest edited item"
+   ]
+  },
+  "zh": {
+   "what": "面向编码智能体的Almide语法树引擎",
+   "points": [
+    "字节词法分析器与文法解析器",
+    "outline、tags、symbols、map读取器",
+    "编辑后的增量重新解析"
+   ]
+  }
+ },
+ "O6lvl4/sashiko": {
+  "ja": {
+   "what": "OpenTelemetry上でRubyの並行処理境界をまたいでトレースをつなぐ可観測性ライブラリ",
+   "points": [
+    "Thread/Fiber/Ractor境界の文脈引き継ぎ",
+    "宣言的DSL trace :method",
+    "Ruby::Box対応のtracer: DI"
+   ]
+  },
+  "en": {
+   "what": "Ruby library that keeps OpenTelemetry traces connected across Thread, Fiber, queue and Ractor boundaries.",
+   "points": [
+    "Context.thread, .fiber and .parallel_map helpers",
+    "Declarative trace DSL via Sashiko::Traced",
+    "Ractor span replay and per-Box tracer: DI"
+   ]
+  },
+  "zh": {
+   "what": "跨Ruby并发边界保持OpenTelemetry链路连续的库",
+   "points": [
+    "Thread/Fiber/Ractor上下文传递",
+    "声明式trace DSL",
+    "支持Ractor与Box的tracer: DI"
+   ]
+  }
+ },
+ "O6lvl4/gramide-cli": {
+  "ja": {
+   "what": "コーディングエージェント向けに構文木を提供するgramideコマンド",
+   "points": [
+    "check・outline・symbolsなどのコマンド",
+    "Go・Rust・Python等6言語パッケージ",
+    "予算内でリポジトリを順位付けるmap"
+   ]
+  },
+  "en": {
+   "what": "The gramide binary: syntax trees for coding agents, composing the engine and language packages.",
+   "points": [
+    "check, outline, symbols, parse, tags commands",
+    "Almide, Go, Rust, Python, JS, TS packages",
+    "Token-budgeted, task-ranked repository map"
+   ]
+  },
+  "zh": {
+   "what": "面向编码智能体的语法树命令行工具gramide",
+   "points": [
+    "check、outline、symbols等命令",
+    "Almide、Go、Rust等六种语言包",
+    "按令牌预算排序的仓库地图"
+   ]
+  }
+ },
+ "O6lvl4/gramide-almide": {
+  "ja": {
+   "what": "gramide向けAlmide用の字句仕様・文法・記号規則を一つにまとめたパッケージ",
+   "points": [
+    "Almideの.almd全ファイルの構文検査",
+    "文法テーブルを生成するgen-table",
+    "編集箇所だけ再解析する増分パース"
+   ]
+  },
+  "en": {
+   "what": "Almide package for gramide-cli: lexer spec, grammar, compiled table and symbol rules",
+   "points": [
+    "Syntax check of .almd files via check",
+    "gen-table generates the compiled grammar table",
+    "Incremental reparse of the smallest edited item"
+   ]
+  },
+  "zh": {
+   "what": "gramide 的 Almide 包：词法、文法与符号规则",
+   "points": [
+    "检查 .almd 文件语法",
+    "gen-table 生成文法表",
+    "仅重新解析被编辑的最小项"
+   ]
+  }
+ },
+ "O6lvl4/gramide-go": {
+  "ja": {
+   "what": "Go用のgramide文法一式を収めたAlmideパッケージ",
+   "points": [
+    "字句仕様と文法値、コンパイル済みテーブル",
+    "宣言名を決めるシンボル規則とoutline",
+    "go/parserと照合した宣言範囲"
+   ]
+  },
+  "en": {
+   "what": "Almide package giving gramide the Go lexer spec, grammar, compiled table and symbol rules",
+   "points": [
+    "GOROOT/src 8,042 of 8,077 files parse",
+    "Declaration ranges checked against go/parser",
+    "Incremental reparse and broken-file recovery"
+   ]
+  },
+  "zh": {
+   "what": "为gramide提供Go词法、文法与符号规则的Almide包",
+   "points": [
+    "词法规范与编译后语法表",
+    "与go/parser核对声明范围",
+    "增量重解析与损坏文件恢复"
+   ]
+  }
+ },
+ "O6lvl4/gramide-python": {
+  "ja": {
+   "what": "gramide-cli向けのPython 3.14対応。字句解析から編集中の回復までを担う",
+   "points": [
+    "CPython 3.14と照合する文法",
+    "壊れたファイル向けsymbols-recovered",
+    "1打鍵ごとの増分再解析"
+   ]
+  },
+  "en": {
+   "what": "Python 3.14 support for gramide-cli: lexer, grammar, symbol rules and edit-time recovery, checked against CPython",
+   "points": [
+    "Lexer and grammar checked against CPython 3.14",
+    "symbols-recovered for files that do not parse",
+    "Incremental re-reading per keystroke edit"
+   ]
+  },
+  "zh": {
+   "what": "gramide-cli的Python 3.14支持,含词法、文法与编辑恢复",
+   "points": [
+    "对照CPython 3.14校验",
+    "symbols-recovered恢复解析",
+    "按键级增量重解析"
+   ]
+  }
+ },
+ "O6lvl4/gramide-rust": {
+  "ja": {
+   "what": "gramide-cli向けRust文法一式を収めたAlmideパッケージ",
+   "points": [
+    "字句仕様と文法を値として保持",
+    "`outline`でimplやメソッドを階層表示",
+    "壊れたファイルからも宣言を回復"
+   ]
+  },
+  "en": {
+   "what": "Almide package giving gramide-cli its Rust lexer spec, grammar, compiled table and symbol rules",
+   "points": [
+    "Parses 826 of 827 Almide compiler .rs files",
+    "Incremental reparse: 4.6 µs median per edit",
+    "`check`, `outline`, `gen-table` commands"
+   ]
+  },
+  "zh": {
+   "what": "为gramide-cli提供Rust词法与文法的Almide包",
+   "points": [
+    "词法规范与文法即值",
+    "`outline`按层级列出impl与方法",
+    "可从损坏文件恢复声明"
+   ]
+  }
+ },
+ "O6lvl4/qusp": {
+  "ja": {
+   "what": "qusp.tomlで23言語のツールチェーンを並列導入するRust製マネージャ",
+   "points": [
+    "qusp.lockによる再現性の固定",
+    "シンボリックリンク群・qusp run・シェルフック",
+    "sha256等による全インストール検証"
+   ]
+  },
+  "en": {
+   "what": "A native-Rust multi-language toolchain manager driven by qusp.toml, locked in qusp.lock.",
+   "points": [
+    "23 native Rust backends, installed in parallel",
+    "Symlink farm, qusp run, or mise-style hook",
+    "Publisher hash verified on every install"
+   ]
+  },
+  "zh": {
+   "what": "由qusp.toml驱动的多语言工具链管理器",
+   "points": [
+    "23个原生Rust后端并行安装",
+    "符号链接、qusp run、shell钩子",
+    "每次安装均校验哈希"
+   ]
+  }
+ },
+ "O6lvl4/O6lvl4-knowledge": {
+  "ja": {
+   "what": "Obsidianと Git LFSによる知識ベースとグラフビューア",
+   "points": [
+    "Obsidianのナレッジベース",
+    "Git LFSによる大容量ファイル管理",
+    "グラフビューア"
+   ]
+  },
+  "en": {
+   "what": "An Obsidian knowledge base stored with Git LFS, with a graph viewer for browsing it",
+   "points": [
+    "Obsidian knowledge base",
+    "Git LFS for large files",
+    "Graph viewer"
+   ]
+  },
+  "zh": {
+   "what": "基于Obsidian和Git LFS的知识库及图谱查看器",
+   "points": [
+    "Obsidian知识库",
+    "Git LFS管理大文件",
+    "图谱查看器"
+   ]
+  }
+ },
+ "O6lvl4/gramide-javascript": {
+  "ja": {
+   "what": "gramide用のJavaScript言語パッケージ。構文検査と宣言抽出を行う",
+   "points": [
+    "check・outline・symbols・tags・map",
+    "ECMAScript 2025とJSXを読む",
+    "TypeScript構文解析器と宣言が一致"
+   ]
+  },
+  "en": {
+   "what": "JavaScript language package for gramide: scanner, grammar, table and symbol rules in Almide",
+   "points": [
+    "check, outline, symbols, tags and map commands",
+    "Reads ECMAScript 2025, JSX, .js/.mjs/.cjs/.jsx",
+    "Declarations match the TypeScript parser oracle"
+   ]
+  },
+  "zh": {
+   "what": "gramide的JavaScript语言包，含扫描器与语法表",
+   "points": [
+    "check、outline、symbols等命令",
+    "支持ECMAScript 2025与JSX",
+    "声明与TypeScript解析器一致"
+   ]
+  }
+ },
+ "O6lvl4/codopsy": {
+  "ja": {
+   "what": "tree-sitterで35言語を静的解析するコード品質アナライザ",
+   "points": [
+    "182のlintルールと複雑度計測",
+    "JSONレポートとA〜Fのスコア",
+    "--diffやCI向けの失敗条件指定"
+   ]
+  },
+  "en": {
+   "what": "AST-level code quality analyzer using tree-sitter for 35 languages, without executing code",
+   "points": [
+    "182 lint rules across 35 languages",
+    "Cyclomatic and cognitive complexity scoring",
+    "CI flags: --diff, --no-degradation, --fail-on-warning"
+   ]
+  },
+  "zh": {
+   "what": "基于tree-sitter的35种语言AST代码质量分析器",
+   "points": [
+    "182条lint规则",
+    "圈复杂度与认知复杂度",
+    "JSON报告与CI失败选项"
+   ]
+  }
+ },
+ "O6lvl4/gramide-typescript": {
+  "ja": {
+   "what": "gramideのTypeScript言語パッケージ。文法を公式パーサと照合して検証する",
+   "points": [
+    "check・outline・symbols・tags・map",
+    "TypeScript 5.9の.ts/.tsx対応",
+    "コンパイラのパーサと宣言が一致"
+   ]
+  },
+  "en": {
+   "what": "TypeScript language package for gramide, checked against the TypeScript compiler's parser, in Almide",
+   "points": [
+    "check, outline, symbols, tags and map commands",
+    "TypeScript 5.9: .ts, .mts, .cts and .tsx",
+    "Declarations match the compiler's parser"
+   ]
+  },
+  "zh": {
+   "what": "gramide的TypeScript语言包，对照官方解析器验证",
+   "points": [
+    "check、outline、symbols、tags、map",
+    "支持TypeScript 5.9及.tsx",
+    "声明与编译器解析器一致"
+   ]
+  }
+ },
+ "O6lvl4/lean2ts": {
+  "ja": {
+   "what": "Lean 4の仕様をTypeScriptの型・スタブ・fast-checkテストへ変換するツール",
+   "points": [
+    "structure/inductiveから型を生成",
+    "theoremをfast-checkの性質テストへ変換",
+    "defから関数スタブを生成"
+   ]
+  },
+  "en": {
+   "what": "Converts Lean 4 specs into TypeScript types, function stubs and fast-check property tests.",
+   "points": [
+    "Types from structure and inductive",
+    "Theorems become fast-check property tests",
+    "Function stubs generated from def"
+   ]
+  },
+  "zh": {
+   "what": "将Lean 4规约转换为TypeScript类型与属性测试",
+   "points": [
+    "由structure/inductive生成类型",
+    "theorem转为fast-check测试",
+    "由def生成函数桩"
+   ]
+  }
+ },
+ "O6lvl4/almide-headset-eq": {
+  "ja": {
+   "what": "CYBER CY-P5GMWHS用のAlmide製カスケードbiquadパラメトリックEQ",
+   "points": [
+    "RBJピーキングフィルタの係数設計",
+    "7バンドの補正カーブcyber_curve",
+    "WASMビルドとWebAudioデモ"
+   ]
+  },
+  "en": {
+   "what": "Parametric EQ of cascaded RBJ biquads in Almide, correcting the CYBER CY-P5GMWHS headset's sound",
+   "points": [
+    "RBJ peaking filter coefficient design",
+    "7-band correction curve via cyber_curve()",
+    "WASM build with WebAudio A/B demo"
+   ]
+  },
+  "zh": {
+   "what": "用Almide编写的级联biquad参量均衡器,校正CYBER耳机",
+   "points": [
+    "RBJ峰值滤波器系数设计",
+    "7频段补偿曲线cyber_curve",
+    "WASM构建与WebAudio演示"
+   ]
+  }
+ },
+ "O6lvl4/ccp": {
+  "ja": {
+   "what": "symlinkの重ね合わせで共有設定を保ったままClaude Codeの設定を切り替えるツール",
+   "points": [
+    "ccp initで全ファイルをsymlink化",
+    "overrideとshareで個別ファイルを切替",
+    "switchでCLAUDE_CONFIG_DIRを設定"
+   ]
+  },
+  "en": {
+   "what": "Claude Code profile switcher that overlays symlinks so settings stay shared by default",
+   "points": [
+    "ccp init symlinks everything from ~/.claude",
+    "override and share toggle per-file settings",
+    "switch exports CLAUDE_CONFIG_DIR via shell-init"
+   ]
+  },
+  "zh": {
+   "what": "用符号链接叠加切换Claude Code配置的工具",
+   "points": [
+    "ccp init 链接 ~/.claude 全部文件",
+    "override/share 切换单个文件",
+    "switch 导出 CLAUDE_CONFIG_DIR"
+   ]
+  }
+ },
+ "O6lvl4/tocsin": {
+  "ja": {
+   "what": "CVE発行前にSNS等の兆候から供給網攻撃を検知する早期警戒システム",
+   "points": [
+    "GitHub IssuesとHNなど4種を監視",
+    "キーワード事前フィルタとLLM分類",
+    "依存関係に基づく影響度スコア"
+   ]
+  },
+  "en": {
+   "what": "Early warning system that detects supply chain attacks from social signals before CVEs exist",
+   "points": [
+    "Polls GitHub Issues, HN, GHSA, OSV.dev",
+    "Pre-filter rejects 96% before LLM analysis",
+    "Alerts via console, Slack, or webhook"
+   ]
+  },
+  "zh": {
+   "what": "在CVE发布前从社交信号检测供应链攻击的预警系统",
+   "points": [
+    "监控GitHub Issues、HN等四类来源",
+    "关键词预过滤加LLM分类",
+    "按依赖关系计算个人影响分"
+   ]
+  }
+ },
+ "O6lvl4/llmine": {
+  "ja": {
+   "what": "複数のLLMを端末から統一的に使えるCLIツール",
+   "points": [
+    "OpenAI・Azure・Claude・Bedrock・Ollama対応",
+    "パイプ入力とgit diffの大きな入力処理",
+    "model・providerプロファイルの管理と切替"
+   ]
+  },
+  "en": {
+   "what": "A CLI tool giving unified terminal access to OpenAI, Azure, Claude, Bedrock and Ollama LLMs",
+   "points": [
+    "Five providers through one command-line interface",
+    "Pipe input, including large inputs like git diffs",
+    "Model and provider profiles via llmine model/provider"
+   ]
+  },
+  "zh": {
+   "what": "从终端统一访问多种LLM的命令行工具",
+   "points": [
+    "支持OpenAI、Azure、Claude、Bedrock、Ollama",
+    "支持管道输入与大型git diff",
+    "用model和provider管理配置档案"
+   ]
+  }
+ },
+ "O6lvl4/gv": {
+  "ja": {
+   "what": "uv級の速度でGoの版とツールを管理するRust製シングルバイナリ",
+   "points": [
+    "go.modのtoolchain行を参照",
+    "gv.lockでツールを固定・再現",
+    "内容アドレス式ストアでSDK共有"
+   ]
+  },
+  "en": {
+   "what": "Fast single-binary Go version and toolchain manager in Rust, like uv for Python",
+   "points": [
+    "Reads go.mod's toolchain line as a source",
+    "Pins tools in gv.toml, locks in gv.lock",
+    "Content-addressed store with sha256 dedup"
+   ]
+  },
+  "zh": {
+   "what": "Rust编写的Go版本与工具链管理器",
+   "points": [
+    "读取go.mod的toolchain行",
+    "gv.lock锁定工具版本",
+    "内容寻址存储去重"
+   ]
+  }
+ },
+ "O6lvl4/memre": {
+  "ja": {
+   "what": "AI搭載の間隔反復フラッシュカードを作るmacOSネイティブアプリ",
+   "points": [
+    "SM-2準拠のスケジューラ",
+    "Ollama・Claude等の複数AI対応",
+    "学習テキストからカード自動生成"
+   ]
+  },
+  "en": {
+   "what": "Native macOS desktop app for AI-powered spaced repetition flashcards, with local-first storage.",
+   "points": [
+    "SM-2 inspired scheduler",
+    "Ollama, Anthropic API, Claude Code CLI",
+    "Card extraction from pasted study text"
+   ]
+  },
+  "zh": {
+   "what": "AI驱动的macOS原生间隔重复闪卡应用",
+   "points": [
+    "类SM-2调度器",
+    "支持Ollama与Claude",
+    "从学习文本提取卡片"
+   ]
+  }
+ },
+ "O6lvl4/premaid": {
+  "ja": {
+   "what": "Mermaid図を整ったSVG/PNGへ描画するCLI",
+   "points": [
+    "独自prettyテーマで12種の図に対応",
+    "lintでの検出とautofix修正",
+    "Claude Codeスキル同梱"
+   ]
+  },
+  "en": {
+   "what": "A CLI that renders Mermaid diagrams to refined SVG and PNG using a custom pretty theme",
+   "points": [
+    "12 diagram types in the pretty theme",
+    "premaid lint with --fix auto-repair",
+    "Bundled Claude Code skill"
+   ]
+  },
+  "zh": {
+   "what": "用命令行将Mermaid图渲染为精美SVG和PNG",
+   "points": [
+    "pretty主题支持12种图表",
+    "premaid lint检查与--fix修复",
+    "内置Claude Code技能"
+   ]
+  }
+ },
+ "O6lvl4/php-build-standalone": {
+  "ja": {
+   "what": "静的リンク済みPHPバイナリを各プラットフォーム向けに配布するプロジェクト",
+   "points": [
+    "macOS・Linuxの4ターゲット対応",
+    "Laravel等向けの拡張を同梱",
+    "sha256付きGitHub Releases配布"
+   ]
+  },
+  "en": {
+   "what": "Pre-built static PHP binaries for every platform, needing no apt, brew or Docker to run.",
+   "points": [
+    "4 targets: macOS and Linux, arm64 and x86_64",
+    "29 extensions baked in for Laravel and Symfony",
+    "GitHub Releases with sha256 checksums"
+   ]
+  },
+  "zh": {
+   "what": "面向各平台的预构建静态PHP二进制文件",
+   "points": [
+    "支持macOS与Linux四个目标",
+    "内置适配Laravel的扩展",
+    "GitHub Releases附sha256校验"
+   ]
+  }
+ },
+ "O6lvl4/awen": {
+  "ja": {
+   "what": "Markdownのvault向けにSM-2間隔反復を行う、Almide製の知識定着CLI",
+   "points": [
+    "add・review・statsコマンド",
+    "品質0〜5評価によるSM-2スケジュール",
+    "vault内.srsにJSONでカード保存"
+   ]
+  },
+  "en": {
+   "what": "Knowledge-retention CLI that runs SM-2 spaced repetition on a markdown vault, written in Almide",
+   "points": [
+    "add, review and stats commands",
+    "SM-2 scheduling from 0–5 quality ratings",
+    "Cards stored as JSON in <vault>/.srs/"
+   ]
+  },
+  "zh": {
+   "what": "基于SM-2间隔重复的Markdown笔记记忆CLI",
+   "points": [
+    "add、review、stats命令",
+    "0–5质量评分的SM-2调度",
+    "卡片以JSON存于.srs目录"
+   ]
+  }
+ },
+ "O6lvl4/igloc": {
+  "ja": {
+   "what": "gitignore対象のファイルを探し出しマシン間で移行できるGo製CLI",
+   "points": [
+    "git status --ignoredで走査",
+    "env・keyなど種類別に分類",
+    "zipへのexport/import"
+   ]
+  },
+  "en": {
+   "what": "A Go CLI that scans git repos for gitignored files like .env and secrets, and migrates them between machines.",
+   "points": [
+    "Scan via git status --ignored",
+    "Categories: env, key, config, build, cache, ide",
+    "Export/import as zip with manifest.yaml"
+   ]
+  },
+  "zh": {
+   "what": "扫描被gitignore忽略的文件并支持迁移的CLI",
+   "points": [
+    "igloc scan递归扫描",
+    "igloc sync获取模式",
+    "zip导出与导入"
+   ]
+  }
+ },
+ "O6lvl4/resepy": {
+  "ja": {
+   "what": "CSV・TSV・任意のDSVを変換・結合するCLIとPythonモジュール",
+   "points": [
+    "拡張子から区切り文字を推定",
+    "convertとcatで変換・結合",
+    "--from/--toで任意の区切り文字"
+   ]
+  },
+  "en": {
+   "what": "CLI and Python module to convert and merge delimiter-separated files: CSV, TSV, any DSV",
+   "points": [
+    "Delimiter inferred from file extension",
+    "convert and cat commands",
+    "Custom delimiters via --from / --to"
+   ]
+  },
+  "zh": {
+   "what": "转换与合并CSV、TSV等DSV文件的CLI和Python模块",
+   "points": [
+    "按扩展名推断分隔符",
+    "convert与cat命令",
+    "--from/--to自定义分隔符"
+   ]
+  }
+ },
+ "O6lvl4/anyv-core": {
+  "ja": {
+   "what": "gv・rvなど*v系ツールチェーン管理の共通基盤Rustクレート",
+   "points": [
+    "XDG式パス配置とHOME環境変数上書き",
+    "tar.gz/zip自動判別の展開",
+    "GitHubリリースからの自己更新"
+   ]
+  },
+  "en": {
+   "what": "Rust crate holding the shared plumbing for *v toolchain managers such as gv and rv",
+   "points": [
+    "XDG-style paths with <APP>_HOME override",
+    "extract_archive auto-detects .tar.gz / .zip",
+    "SelfUpdate with sha256 verify, atomic replace"
+   ]
+  },
+  "zh": {
+   "what": "*v工具链管理器（gv、rv）的共享Rust基础库",
+   "points": [
+    "XDG路径与<APP>_HOME覆盖",
+    "自动识别tar.gz/zip解压",
+    "带sha256校验的自更新"
+   ]
+  }
+ },
+ "O6lvl4/line-bot-private": {
+  "ja": {
+   "what": "AWS SAMで作るGo製Lambda関数のサンプルテンプレート",
+   "points": [
+    "sam buildを包むMakefile",
+    "sam local start-apiでのローカル実行",
+    "sam deploy --guidedでのデプロイ"
+   ]
+  },
+  "en": {
+   "what": "A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.",
+   "points": [
+    "Makefile wrapping sam build",
+    "Local API via sam local start-api",
+    "Deploy with sam deploy --guided"
+   ]
+  },
+  "zh": {
+   "what": "基于AWS SAM的Go语言Lambda函数示例模板",
+   "points": [
+    "Makefile封装sam build",
+    "sam local start-api本地运行",
+    "sam deploy --guided部署"
+   ]
+  }
+ },
+ "O6lvl4/pdf-burger": {
+  "ja": {
+   "what": "複数のPDFやディレクトリを1つのファイルに結合するCLIツール",
+   "points": [
+    "ディレクトリを自然順で結合",
+    "-rで再帰的にサブディレクトリを検索",
+    "--dry-runで結合対象を事前確認"
+   ]
+  },
+  "en": {
+   "what": "A CLI that stacks multiple PDFs and directories into a single merged PDF file.",
+   "points": [
+    "Natural-order sorting of directory PDFs",
+    "Recursive search with -r",
+    "Preview merge targets with --dry-run"
+   ]
+  },
+  "zh": {
+   "what": "将多个PDF和目录合并为单个文件的命令行工具",
+   "points": [
+    "目录内PDF按自然顺序排序",
+    "-r递归搜索子目录",
+    "--dry-run预览合并目标"
+   ]
+  }
+ },
+ "O6lvl4/ClipStash": {
+  "ja": {
+   "what": "Objective-C製のmacOS向け軽量クリップボード履歴管理メニューバーアプリ",
+   "points": [
+    "直近20件のテキスト履歴を保持",
+    "Cmd+Shift+Vでマウス位置に履歴表示",
+    "選択した項目を直接ペースト"
+   ]
+  },
+  "en": {
+   "what": "A lightweight macOS menu bar clipboard history manager written in pure Objective-C.",
+   "points": [
+    "Keeps last 20 text entries, deduplicated",
+    "Cmd+Shift+V global hotkey popup at cursor",
+    "Selecting an entry pastes into the active app"
+   ]
+  },
+  "zh": {
+   "what": "纯Objective-C编写的macOS轻量剪贴板历史菜单栏应用",
+   "points": [
+    "保留最近20条文本并去重",
+    "Cmd+Shift+V在光标处弹出历史",
+    "选中条目直接粘贴到当前应用"
+   ]
+  }
+ },
+ "O6lvl4/hello-lean4": {
+  "ja": {
+   "what": "Lean 4 で書かれた Hello World CLI アプリ",
+   "points": [
+    "Linux・macOS 向けビルド済みバイナリ",
+    "Releases から tar.gz で配布",
+    "elan と lake build でソースビルド"
+   ]
+  },
+  "en": {
+   "what": "A Hello World CLI app written in Lean 4, with prebuilt binaries for Linux and macOS.",
+   "points": [
+    "Prebuilt binaries on the Releases page",
+    "Linux x86_64, macOS ARM64 and x86_64",
+    "Source build with elan and lake build"
+   ]
+  },
+  "zh": {
+   "what": "用 Lean 4 编写的 Hello World CLI 应用",
+   "points": [
+    "提供 Linux、macOS 预编译二进制",
+    "Releases 页面下载 tar.gz",
+    "通过 elan 和 lake build 构建"
+   ]
+  }
+ },
+ "O6lvl4/treesrc": {
+  "ja": {
+   "what": ".gitignoreを尊重してディレクトリ構造とファイル内容を表示するCLI",
+   "points": [
+    "ツリー形式のディレクトリ表示",
+    "各ファイルの内容表示",
+    "-iによる追加の無視パターン指定"
+   ]
+  },
+  "en": {
+   "what": "A TypeScript CLI that shows directory trees and file contents, respecting .gitignore rules",
+   "points": [
+    "Neatly formatted directory tree",
+    "Contents of each file displayed",
+    "Custom ignore patterns via -i/--ignore"
+   ]
+  },
+  "zh": {
+   "what": "遵循.gitignore显示目录结构与文件内容的CLI",
+   "points": [
+    "树形目录结构显示",
+    "查看各文件内容",
+    "-i指定额外忽略规则"
+   ]
+  }
+ },
+ "O6lvl4/homebrew-tap": {
+  "ja": {
+   "what": "@O6lvl4のHomebrewフォーミュラを配布するtap",
+   "points": [
+    "brew install O6lvl4/tap/gv",
+    "gv: Go版・ツールチェーン管理",
+    "codopsy: 34言語のAST品質解析"
+   ]
+  },
+  "en": {
+   "what": "Homebrew tap distributing @O6lvl4's formulae, including gv and codopsy.",
+   "points": [
+    "One-step install: brew install O6lvl4/tap/gv",
+    "gv: Go version and toolchain manager",
+    "codopsy: AST-level analyzer for 34 languages"
+   ]
+  },
+  "zh": {
+   "what": "@O6lvl4 的 Homebrew formula 仓库",
+   "points": [
+    "brew install O6lvl4/tap/gv",
+    "gv：Go 版本与工具链管理",
+    "codopsy：34 种语言 AST 分析"
+   ]
+  }
+ },
+ "O6lvl4/golemide": {
+  "ja": {
+   "what": "証拠に基づき編集し検証するAlmide製コーディングエージェント",
+   "points": [
+    "observe後に編集する流れ",
+    "書き込み前の構文チェック",
+    "単一ネイティブバイナリ"
+   ]
+  },
+  "en": {
+   "what": "A coding agent in Almide that observes a repo, edits with syntax checks, and re-runs tests.",
+   "points": [
+    "observe, solve and polish commands",
+    "Syntax check before every write",
+    "Single native binary with optional tools"
+   ]
+  },
+  "zh": {
+   "what": "用Almide编写的编码代理，先观察再编辑并验证",
+   "points": [
+    "observe、solve、polish命令",
+    "写入前语法检查",
+    "单一原生二进制文件"
+   ]
+  }
+ },
+ "O6lvl4/chip-war-chronicle": {
+  "ja": {
+   "what": "半導体・政策・地政学を並べ因果を読む番組表型タイムライン",
+   "points": [
+    "6系列を共通時間軸に配置",
+    "因果リンクと断面ビュー",
+    "DuckDB-WASMのSQLコンソール"
+   ]
+  },
+  "en": {
+   "what": "Swimlane timeline of semiconductors and world affairs, 2018–2026, with sourced events and causal links.",
+   "points": [
+    "6 threads on one shared time axis",
+    "Causal links between events",
+    "In-browser SQL via DuckDB-WASM"
+   ]
+  },
+  "zh": {
+   "what": "半导体与世界局势的泳道时间线",
+   "points": [
+    "6条系列共用时间轴",
+    "跨系列因果链接",
+    "DuckDB-WASM的SQL控制台"
+   ]
+  }
+ },
+ "O6lvl4/ctxgate": {
+  "ja": {
+   "what": "Claude Code向けのコンテキストファイアウォール。ツール出力を保管し圧縮表示する",
+   "points": [
+    "生出力をローカルvaultに保管",
+    "窓40%超で出力を要約表示",
+    "ctxgate showで詳細を取得"
+   ]
+  },
+  "en": {
+   "what": "Context firewall for Claude Code and Codex CLI that vaults tool outputs and shows the model compressed views",
+   "points": [
+    "Local vault for raw tool outputs",
+    "Squeezes big outputs once window is 40% full",
+    "ctxgate show to fetch details on demand"
+   ]
+  },
+  "zh": {
+   "what": "Claude Code的上下文防火墙,存档工具输出并压缩展示",
+   "points": [
+    "原始输出存入本地vault",
+    "窗口达40%后压缩输出",
+    "ctxgate show按需取回详情"
+   ]
+  }
+ },
+ "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide": {
+  "ja": {
+   "what": "Almideで見るWebAssemblyの現在地を語る登壇スライド",
+   "points": [
+    "依存ゼロの単一HTML(index.html)",
+    "矢印・Space・クリック・スワイプ操作",
+    "デモ8件のリポジトリとLive一覧"
+   ]
+  },
+  "en": {
+   "what": "Talk slides on the state of WebAssembly, seen through the Almide language, for Webナイト宮崎",
+   "points": [
+    "Single dependency-free HTML file (index.html)",
+    "Arrow, Space, click and swipe navigation",
+    "Links to 8 demos with repos and live pages"
+   ]
+  },
+  "zh": {
+   "what": "用Almide讲述WebAssembly现状的演讲幻灯片",
+   "points": [
+    "零依赖的单文件HTML",
+    "方向键、空格、点击、滑动操作",
+    "8个演示的仓库与在线链接"
+   ]
+  }
+ },
+ "O6lvl4/almide-otel-demo": {
+  "ja": {
+   "what": "純Almideで書かれた自作OpenTelemetryトレーシングSDKと分散トレースデモ",
+   "points": [
+    "OTLP/HTTP+JSONをJaegerへ直送",
+    "W3C traceparentでサービス間伝播",
+    "36件のテストでワイヤ形式を検証"
+   ]
+  },
+  "en": {
+   "what": "A from-scratch OpenTelemetry tracing SDK in pure Almide, with a two-service trace demo in Jaeger",
+   "points": [
+    "OTLP/HTTP+JSON posted straight to Jaeger",
+    "W3C traceparent context propagation",
+    "36 tests pinning the wire format"
+   ]
+  },
+  "zh": {
+   "what": "纯Almide自研的OpenTelemetry追踪SDK及Jaeger双服务演示",
+   "points": [
+    "OTLP/HTTP+JSON直发Jaeger",
+    "W3C traceparent上下文传播",
+    "36个测试锁定线路格式"
+   ]
+  }
+ },
+ "O6lvl4/assay": {
+  "ja": {
+   "what": "コーディングエージェントのベンチ値を条件付きで保存し測定も行う基盤",
+   "points": [
+    "リーダーボード由来の値のみ保存",
+    "未公開の空白をABSENCESに記録",
+    "bench/tb2.shでTerminal-Bench 2.0測定"
+   ]
+  },
+  "en": {
+   "what": "Stores coding-agent benchmark figures with their qualifiers intact, plus a harness to measure missing ones.",
+   "points": [
+    "Leaderboard-sourced figures only, with absences recorded",
+    "score.incomparable and composite_delta refuse bad comparisons",
+    "bench/tb2.sh runs golemide on Terminal-Bench 2.0 via harbor"
+   ]
+  },
+  "zh": {
+   "what": "保留限定条件的编码智能体基准数据及测评工具",
+   "points": [
+    "仅收录排行榜原始数值",
+    "以ABSENCES记录缺失数据",
+    "bench/tb2.sh测Terminal-Bench 2.0"
+   ]
+  }
+ },
+ "O6lvl4/uimodulay": {
+  "ja": {
+   "what": "URLをデザイナー視点のモジュール構造に変換するUI構造解析ツール",
+   "points": [
+    "Layout ASTとJSON Schemaの出力",
+    "手描き風ワイヤーフレームのSVG生成",
+    "幅ごとの配置変化を示すresponsive diff"
+   ]
+  },
+  "en": {
+   "what": "Semantic UI structure analyzer that turns a URL into the modules a designer would draw, not the DOM",
+   "points": [
+    "Versioned Layout AST with JSON Schema",
+    "Hand-drawn wireframe SVG via sketch",
+    "Responsive diff across widths, Tailwind emit"
+   ]
+  },
+  "zh": {
+   "what": "将URL解析为设计师视角模块结构的UI分析器",
+   "points": [
+    "带版本的Layout AST输出",
+    "手绘风格线框图SVG",
+    "多宽度响应式差异对比"
+   ]
+  }
+ },
+ "O6lvl4/agent-bench-matrix": {
+  "ja": {
+   "what": "エージェント向けベンチマークの公開リーダーボードを、モデル別に一枚の表へまとめたもの",
+   "points": [
+    "行モデル×列ボードのマトリクス",
+    "実測から当てはめた戦闘力(推定)",
+    "出典付きの取得元データ保存"
+   ]
+  },
+  "en": {
+   "what": "A single table gathering public agent-benchmark leaderboards by model, with every number sourced.",
+   "points": [
+    "Model-by-leaderboard matrix with filters",
+    "Fitted 'combat power' estimate with error bars",
+    "Vendor self-reported claims kept as a separate layer"
+   ]
+  },
+  "zh": {
+   "what": "把智能体基准公开榜单按模型汇成一张表",
+   "points": [
+    "模型×榜单的矩阵",
+    "实测拟合的战斗力估计",
+    "厂商自报数据单独成层"
+   ]
+  }
+ },
+ "O6lvl4/emet": {
+  "ja": {
+   "what": "主張の数値・引用・名前を出典と照合し、終了ステータスで答える引用ゲート",
+   "points": [
+    "数値・引用・固有名の照合",
+    "5種の判定と終了コード0/1/2",
+    "CLIとWorker用の2つの入口"
+   ]
+  },
+  "en": {
+   "what": "A citation gate that checks each claim's figures, quotes and names against its cited pages and exits 0 or 1.",
+   "points": [
+    "Figure, quote and entity probes per claim",
+    "Five verdicts; exit 0, 1 or 2",
+    "CLI binary plus network-free worker.almd"
+   ]
+  },
+  "zh": {
+   "what": "核对主张数字、引文与名称的引用闸门",
+   "points": [
+    "数字、引文、实体三类核查",
+    "五种判定与退出码0/1/2",
+    "CLI与无网络的worker入口"
+   ]
+  }
+ },
+ "O6lvl4/go1.26-vs-go1.27": {
+  "ja": {
+   "what": "Go 1.26と1.27の書き方を並べて比べる、実行可能なbefore/after集",
+   "points": [
+    "ジェネリックメソッドの導入",
+    "encoding/json/v2・標準uuid・crypto/mldsa",
+    "goroutineleakプロファイル・simd"
+   ]
+  },
+  "en": {
+   "what": "Runnable before/after pairs comparing how code is written in Go 1.26 versus Go 1.27",
+   "points": [
+    "Generic methods on types",
+    "encoding/json/v2, std uuid, crypto/mldsa",
+    "goroutineleak profile and experimental simd"
+   ]
+  },
+  "zh": {
+   "what": "并列对比Go 1.26与1.27写法的可运行示例",
+   "points": [
+    "泛型方法",
+    "json/v2、标准uuid、mldsa",
+    "goroutineleak与simd"
+   ]
+  }
+ },
+ "O6lvl4/onetool": {
+  "ja": {
+   "what": "任意のAPIを4つの汎用ツールでMCPに公開するフレームワーク",
+   "points": [
+    "OpenAPI・関数・MCP上流に対応",
+    "ポリシー制御と同意確認",
+    "スキーマ返却と応答のredaction"
+   ]
+  },
+  "en": {
+   "what": "A framework that fronts any API's operations with four generic MCP tools instead of one per endpoint",
+   "points": [
+    "Providers: OpenAPI, functions, upstream MCP",
+    "Policy-gated consent via elicitation",
+    "Schema feedback and response redaction"
+   ]
+  },
+  "zh": {
+   "what": "用四个通用工具封装任意API的MCP框架",
+   "points": [
+    "支持OpenAPI、函数、上游MCP",
+    "策略控制与授权确认",
+    "返回schema与响应脱敏"
+   ]
+  }
+ },
+ "O6lvl4/codopsy-almd": {
+  "ja": {
+   "what": "gramideの構文解析からAlideの複雑度を測るCLI",
+   "points": [
+    "未完全パースのファイルは採点しない",
+    "--baselineでファイル別に悪化を検出",
+    "--jsonと--maxによるCI向け出力"
+   ]
+  },
+  "en": {
+   "what": "CLI that measures Almide code complexity from gramide's parse, skipping files not fully parsed",
+   "points": [
+    "Files not fully parsed are NOT GRADED",
+    "Per-file --baseline gate against regressions",
+    "--json output and --max exit-code check"
+   ]
+  },
+  "zh": {
+   "what": "基于gramide解析度量Almide复杂度",
+   "points": [
+    "未完整解析的文件不评分",
+    "--baseline逐文件防劣化",
+    "支持--json与--max"
+   ]
+  }
+ },
+ "O6lvl4/connpass-discord-bot": {
+  "ja": {
+   "what": "connpass API v2 のイベントを Discord に流す Go 1.27 製 Bot",
+   "points": [
+    "/connpass search・upcoming・today・event",
+    "新着監視と朝のダイジェスト投稿",
+    "偽 connpass サーバでのデモ"
+   ]
+  },
+  "en": {
+   "what": "Discord bot for connpass API v2 events, written in Go 1.27 to showcase its new features",
+   "points": [
+    "/connpass search, upcoming, today, event",
+    "New-event watcher and morning digest",
+    "Fake connpass server for demos"
+   ]
+  },
+  "zh": {
+   "what": "用 Go 1.27 编写、推送 connpass 活动的 Discord Bot",
+   "points": [
+    "/connpass 四个斜杠命令",
+    "新活动监视与早间摘要",
+    "假 connpass 服务器演示"
+   ]
+  }
+ },
+ "O6lvl4/go1.27-vs-almide": {
+  "ja": {
+   "what": "Go 1.27の新機能を自作言語almide 0.41と並べて比べる勉強会用ノート",
+   "points": [
+    "ジェネリックメソッドとUFCSの対比",
+    "encoding/json/v2とCodecプロトコル",
+    "goroutineleakとfan構造化並行"
+   ]
+  },
+  "en": {
+   "what": "Notes comparing Go 1.27 new features with the almide 0.41 language, for a Miyazaki.go meetup",
+   "points": [
+    "Generic methods vs almide UFCS",
+    "encoding/json/v2 vs the Codec protocol",
+    "goroutineleak profile vs fan concurrency"
+   ]
+  },
+  "zh": {
+   "what": "对比Go 1.27新特性与almide 0.41的勉强会笔记",
+   "points": [
+    "泛型方法与UFCS对比",
+    "encoding/json/v2与Codec协议",
+    "goroutineleak与fan并发"
+   ]
+  }
+ },
+ "O6lvl4/keiri": {
+  "ja": {
+   "what": "領収書など経理書類の命名と抜けを整えるGo製CLI",
+   "points": [
+    "pdftotextによるPDF自動仕分け",
+    "必須カテゴリの月別欠落検出",
+    "HTMLレポート出力とlint・改名"
+   ]
+  },
+  "en": {
+   "what": "Go CLI that keeps receipts and bookkeeping documents tidy: naming, gaps and filing.",
+   "points": [
+    "ingest: PDF auto-classify via pdftotext",
+    "inventory: category × month gap matrix",
+    "receipts lint/plan/apply renames"
+   ]
+  },
+  "zh": {
+   "what": "整理收据等记账文件的Go命令行工具",
+   "points": [
+    "用pdftotext自动归档PDF",
+    "按月检测必需类别缺失",
+    "receipts lint/plan/apply"
+   ]
+  }
+ },
+ "O6lvl4/almide-audio-poc": {
+  "ja": {
+   "what": "AudioWorklet上でAlmide製WASMの加算合成を鳴らす最小デモ",
+   "points": [
+    "2,637バイトのsynth.wasm",
+    "8倍音の加算シンセ",
+    "周波数・倍音・音量をリアルタイム操作"
+   ]
+  },
+  "en": {
+   "what": "Minimal demo running Almide-compiled WASM in an AudioWorklet as an 8-harmonic additive synth",
+   "points": [
+    "2,637-byte synth.wasm, no wasm-bindgen",
+    "Per-sample synth_sample() calls, 142 ns each",
+    "Live frequency, harmonic and volume sliders"
+   ]
+  },
+  "zh": {
+   "what": "在AudioWorklet中运行Almide WASM的加法合成最小演示",
+   "points": [
+    "2,637字节的synth.wasm",
+    "8次谐波加法合成器",
+    "实时调节频率与音量"
+   ]
+  }
+ },
+ "O6lvl4/hokusai-portfolio": {
+  "ja": {
+   "what": "北斎の風景版画64図で組んだ、日本の作家向けポートフォリオサイトの見本",
+   "points": [
+    "冨嶽三十六景ほか三揃を収録",
+    "矢印キー・クリックで一図ずつ閲覧",
+    "一覧グリッドとOGPカードを備える"
+   ]
+  },
+  "en": {
+   "what": "Sample portfolio site for a Japanese artist, built from 64 Hokusai landscape prints (The Met Open Access)",
+   "points": [
+    "Three series, 64 public-domain prints",
+    "One work at a time, moved by keys or clicks",
+    "Series grid view and per-page share cards"
+   ]
+  },
+  "zh": {
+   "what": "以北斋64幅风景版画制作的日本艺术家作品集示例",
+   "points": [
+    "收录三个系列共64幅版画",
+    "按键或点击逐幅浏览",
+    "系列总览网格与分享卡片"
+   ]
+  }
+ },
+ "O6lvl4/onomly": {
+  "ja": {
+   "what": "プロダクト名候補の空きと衝突を調べるClaude Codeスキル",
+   "points": [
+    "レジストリ・ドメイン・GitHubの空き確認",
+    "既存プロダクト・商標の衝突調査",
+    "多言語の意味と検索性・LLM識別性の評価"
+   ]
+  },
+  "en": {
+   "what": "Claude Code skill that runs due diligence on product-name candidates and returns a verdict report",
+   "points": [
+    "Availability on npm, crates.io, PyPI, GitHub, domains",
+    "Existing product and trademark conflict search",
+    "Multilingual meaning and search/LLM distinctiveness"
+   ]
+  },
+  "zh": {
+   "what": "检验产品名候选的Claude Code技能",
+   "points": [
+    "注册表、域名、GitHub可用性",
+    "现有产品与商标冲突",
+    "多语言含义与可搜索性"
+   ]
+  }
+ },
+ "O6lvl4/ytscribe": {
+  "ja": {
+   "what": "YouTube URLから字幕優先・Whisper代替で文字起こしするCLI",
+   "points": [
+    "yt-dlpによる字幕取得",
+    "faster-whisperのローカル文字起こし",
+    "claude CLIによる--clean整形"
+   ]
+  },
+  "en": {
+   "what": "A CLI that transcribes YouTube URLs: subtitles first, local Whisper fallback, optional LLM cleanup",
+   "points": [
+    "Subtitles via yt-dlp, human or auto captions",
+    "Local Whisper (faster-whisper) with --model",
+    "--clean polish through the claude CLI"
+   ]
+  },
+  "zh": {
+   "what": "转写YouTube链接的CLI，字幕优先，Whisper兜底",
+   "points": [
+    "通过yt-dlp获取字幕",
+    "本地Whisper语音识别",
+    "--clean调用claude润色"
+   ]
+  }
+ },
+ "O6lvl4/pagina": {
+  "ja": {
+   "what": "HTMLとCSS Paged MediaをPDFに変換するRust製エンジン",
+   "points": [
+    "@pageと16種のマージンボックス",
+    "脚注・ページ番号・running header",
+    "--fontによるTTF/OTFフォント読込"
+   ]
+  },
+  "en": {
+   "what": "Rust engine that converts HTML with CSS Paged Media into PDF, built on Servo components",
+   "points": [
+    "@page size/margin and all 16 margin boxes",
+    "Page counters, running headers, footnotes",
+    "External TTF/OTF fonts via --font flag"
+   ]
+  },
+  "zh": {
+   "what": "将HTML与CSS分页媒体转为PDF的Rust引擎",
+   "points": [
+    "@page与16个页边框",
+    "页码、页眉、脚注",
+    "--font加载TTF/OTF字体"
+   ]
+  }
+ },
+ "O6lvl4/graph-garden": {
+  "ja": {
+   "what": "Markdownボールトを静的な知識ベースに変えるAstro統合",
+   "points": [
+    "双方向リンク",
+    "グラフ可視化",
+    "静的サイト生成"
+   ]
+  },
+  "en": {
+   "what": "Astro integration that turns a markdown vault into a static knowledge base.",
+   "points": [
+    "Bidirectional links",
+    "Graph visualization",
+    "Static knowledge base output"
+   ]
+  },
+  "zh": {
+   "what": "将Markdown库转为静态知识库的Astro集成",
+   "points": [
+    "双向链接",
+    "图谱可视化",
+    "静态知识库生成"
+   ]
+  }
+ },
+ "O6lvl4/codopsy-ts": {
+  "ja": {
+   "what": "TypeScript/JavaScript向けのAST品質解析CLI。A〜F採点と複雑度計測を行う",
+   "points": [
+    "循環的・認知的複雑度の計測",
+    "ベースライン追跡とホットスポット検出",
+    "JSON/HTML/SARIF出力とプラグイン"
+   ]
+  },
+  "en": {
+   "what": "Zero-config AST-level code quality analyzer for TypeScript and JavaScript, run from one CLI command",
+   "points": [
+    "A–F quality score per file and project",
+    "Cyclomatic and cognitive complexity metrics",
+    "Baseline gate, hotspots, JSON/HTML/SARIF output"
+   ]
+  },
+  "zh": {
+   "what": "面向TypeScript/JavaScript的AST代码质量分析器",
+   "points": [
+    "A–F质量评分",
+    "圈复杂度与认知复杂度",
+    "基线跟踪与热点检测"
+   ]
+  }
+ },
+ "O6lvl4/craftsman": {
+  "ja": {
+   "what": "Docker上のMinecraftサーバーをPak単位で管理する堅牢なCLI",
+   "points": [
+    "up/start/stop/backup/logsコマンド",
+    "アップグレード失敗時の自動ロールバック",
+    "--json/--yaml/--csvのパイプ出力"
+   ]
+  },
+  "en": {
+   "what": "A minimal, fail-safe CLI (TypeScript + Ink) for managing Minecraft servers on Docker, per Pak.",
+   "points": [
+    "Idempotent up, start, stop, backup, logs",
+    "Upgrade with auto-rollback, migrate, clone",
+    "--json, --yaml, --csv, --quiet output"
+   ]
+  },
+  "zh": {
+   "what": "基于Docker、按Pak管理Minecraft服务器的CLI",
+   "points": [
+    "up/start/stop/backup命令",
+    "升级失败自动回滚",
+    "--json/--yaml/--csv输出"
+   ]
+  }
+ },
+ "O6lvl4/macleap": {
+  "ja": {
+   "what": "手持ちのMacを検出し、同等以上の現行機種と下取り後の実質費用を見積もるCLI",
+   "points": [
+    "system_profilerでMacを検出",
+    "現行ラインナップとの照合",
+    "plan: 下取り後の実質費用"
+   ]
+  },
+  "en": {
+   "what": "CLI that detects your Mac, finds equal-or-better current models, and estimates net upgrade cost after trade-in.",
+   "points": [
+    "Mac detection via system_profiler",
+    "suggest, tradein and plan subcommands",
+    "Region-parameterized JSON data (jp shipped)"
+   ]
+  },
+  "zh": {
+   "what": "检测当前Mac、推荐同等或更好机型并估算折价后升级费用的CLI",
+   "points": [
+    "用system_profiler检测Mac",
+    "suggest/tradein/plan命令",
+    "按地区配置JSON数据"
+   ]
+  }
+ },
+ "O6lvl4/codopsy-ts-skill": {
+  "ja": {
+   "what": "コード品質の採点・分析・自動修正を行うClaude Code用プラグイン",
+   "points": [
+    "A〜F品質スコアと13のlintルール",
+    "baselineとhotspotsの検出",
+    "/codopsy --fixによる自動修正"
+   ]
+  },
+  "en": {
+   "what": "Claude Code plugin adding /codopsy to run codopsy-ts, score code quality and auto-fix issues",
+   "points": [
+    "A–F quality score per file and project",
+    "Baseline snapshots and git-churn hotspots",
+    "/codopsy --fix with before/after comparison"
+   ]
+  },
+  "zh": {
+   "what": "用于代码质量评分与自动修复的Claude Code插件",
+   "points": [
+    "A–F质量评分与13条lint规则",
+    "baseline快照与hotspots检测",
+    "/codopsy --fix自动修复"
+   ]
+  }
+ },
+ "O6lvl4/environment-health-viewer": {
+  "ja": {
+   "what": "現在地の環境リスクと気象警報を一画面で見る静的ダッシュボード",
+   "points": [
+    "偏頭痛・熱中症・UVなど7種のリスク",
+    "気象庁警報と現在の天候・太陽運行",
+    "Hexagonal構成とVitestテスト"
+   ]
+  },
+  "en": {
+   "what": "Static dashboard showing local health risks, JMA warnings, weather and sun cycle on one screen",
+   "points": [
+    "Migraine, heatstroke, UV, air, pollen risks",
+    "JMA warnings, current weather, solar cycle",
+    "Hexagonal design with Vitest and dependency-cruiser"
+   ]
+  },
+  "zh": {
+   "what": "一屏展示所在地环境健康风险与气象警报的静态看板",
+   "points": [
+    "偏头痛、中暑、紫外线等风险",
+    "气象厅警报与当前天气",
+    "六边形架构与Vitest测试"
+   ]
+  }
+ },
+ "O6lvl4/gulp-coach": {
+  "ja": {
+   "what": "体重・年齢・性別と直近摂取量から飲める量と待ち時間を示す完全ローカルの水分摂取コーチ",
+   "points": [
+    "Profileから1日推奨量と1時間上限を算出",
+    "100/200/300/500 mLのクイックログとUNDO",
+    "localStorageのみで動作しサーバ不要"
+   ]
+  },
+  "en": {
+   "what": "A fully local hydration coach that shows how much more you can drink or how long to wait, from your profile and recent intake.",
+   "points": [
+    "Daily target and hourly limit from weight, age, sex",
+    "Quick log buttons (100/200/300/500 mL) with UNDO",
+    "localStorage only, no server; Hexagonal layers checked in CI"
+   ]
+  },
+  "zh": {
+   "what": "完全本地运行的饮水教练,提示还能喝多少或需等待多久",
+   "points": [
+    "按体重年龄性别算每日推荐量",
+    "100/200/300/500 mL快捷记录与UNDO",
+    "仅用localStorage,无需服务器"
+   ]
+  }
+ },
+ "O6lvl4/imoduru": {
+  "ja": {
+   "what": "URL配下を再帰的に巡回し、MCPで提供するRust製クローラー",
+   "points": [
+    "HTMLとPDFのテキスト抽出",
+    "stealthモードとプロキシ対応",
+    "checkpointによる中断再開"
+   ]
+  },
+  "en": {
+   "what": "Recursive Rust + Playwright web crawler that serves collected text to AI agents via MCP",
+   "points": [
+    "HTML and PDF text extraction",
+    "Stealth mode, fingerprint rotation, proxies",
+    "MCP tools: crawl, query, list_pages, get_page"
+   ]
+  },
+  "zh": {
+   "what": "Rust与Playwright递归爬虫,经MCP提供数据",
+   "points": [
+    "提取HTML与PDF文本",
+    "stealth模式与代理支持",
+    "MCP工具:crawl、query"
+   ]
+  }
+ },
+ "O6lvl4/O6lvl4-vitals": {
+  "ja": {
+   "what": "O6lvl4-protocolの14プロトコル準拠を定量検査するalmide製CLI",
+   "points": [
+    "生活データと違反検知ルールの照合",
+    "vitals log による対話・フラグ入力",
+    "vitals report のMarkdown週次・月次レポート"
+   ]
+  },
+  "en": {
+   "what": "An almide CLI that quantitatively checks daily life data against the 14 O6lvl4-protocol rules.",
+   "points": [
+    "Pass/fail check per protocol with vitals check",
+    "Interactive and flag-based vitals log input",
+    "Markdown weekly/monthly report via vitals report"
+   ]
+  },
+  "zh": {
+   "what": "检查O6lvl4-protocol 14项协议合规的almide命令行工具",
+   "points": [
+    "vitals check逐协议判定",
+    "vitals log交互与参数录入",
+    "vitals report生成Markdown报告"
+   ]
+  }
+ },
+ "O6lvl4/syncenv": {
+  "ja": {
+   "what": "Gitタグ単位で環境設定ファイルをクラウドと同期するCLIツール",
+   "points": [
+    "S3・Azure・GCSに対応",
+    "AES-256-GCMによる暗号化",
+    "push・pull・list・diffコマンド"
+   ]
+  },
+  "en": {
+   "what": "A CLI that syncs environment config files with cloud storage, versioned by Git tag or branch",
+   "points": [
+    "AWS S3, Azure Blob and GCS storage",
+    "Optional AES-256-GCM encryption",
+    "init, push, pull, list and diff commands"
+   ]
+  },
+  "zh": {
+   "what": "按Git标签同步环境配置文件到云存储的CLI工具",
+   "points": [
+    "支持S3、Azure、GCS",
+    "可选AES-256-GCM加密",
+    "push、pull、list、diff命令"
+   ]
+  }
+ },
+ "O6lvl4/dns-checker": {
+  "ja": {
+   "what": "MoonBit製のメール送信ドメイン向けDNSレコードチェッカー",
+   "points": [
+    "TXT・SPFレコードの確認",
+    "DMARCポリシーの確認",
+    "DKIM (CNAME) の確認"
+   ]
+  },
+  "en": {
+   "what": "DNS record checker written in MoonBit for verifying email-sending domain setup.",
+   "points": [
+    "TXT and SPF record checks",
+    "DMARC policy check",
+    "DKIM CNAME record check"
+   ]
+  },
+  "zh": {
+   "what": "MoonBit编写的邮件域名DNS记录检查工具",
+   "points": [
+    "检查TXT与SPF记录",
+    "检查DMARC策略",
+    "检查DKIM (CNAME)"
+   ]
+  }
+ },
+ "O6lvl4/grclone": {
+  "ja": {
+   "what": "rclone上でgit風の語彙を使えるようにする薄いCLI",
+   "points": [
+    "status/fetch/diff/pull/push",
+    "bisyncによるsyncとresync",
+    "GRCLONE_LOCAL/REMOTEで設定"
+   ]
+  },
+  "en": {
+   "what": "A thin git-flavored CLI on top of rclone for syncing a local path with an rclone remote",
+   "points": [
+    "status, fetch, diff, pull and push verbs",
+    "sync and resync via rclone bisync",
+    "Configured by GRCLONE_LOCAL/GRCLONE_REMOTE or flags"
+   ]
+  },
+  "zh": {
+   "what": "基于rclone的git风格精简命令行工具",
+   "points": [
+    "status/fetch/diff/pull/push",
+    "基于bisync的sync与resync",
+    "用环境变量或参数配置"
+   ]
+  }
+ },
+ "O6lvl4/image-catalog-composer": {
+  "ja": {
+   "what": "YAMLやJSONの設定から画像のラベル付きグリッドカタログを作るツール",
+   "points": [
+    "ICO/CURのデコード内蔵",
+    "glob指定のクイックモード",
+    "fitとラベルの細かな設定"
+   ]
+  },
+  "en": {
+   "what": "Node.js tool that composes a labeled grid catalog image from a YAML/JSON spec, using Sharp.",
+   "points": [
+    "Quick mode with paths or glob patterns",
+    "Built-in ICO/CUR decoding",
+    "Configurable grid, labels, fit and background"
+   ]
+  },
+  "zh": {
+   "what": "用YAML或JSON生成带标签的图片网格目录",
+   "points": [
+    "支持路径和glob的快速模式",
+    "内置ICO/CUR解码",
+    "可配置网格、标签与fit"
+   ]
+  }
+ },
+ "O6lvl4/lean-lang-sandbox": {
+  "ja": {
+   "what": "定理証明からプログラミングまで学べるLean 4のチュートリアル集",
+   "points": [
+    "01〜10の段階的チュートリアル",
+    "日本語コメント付き、#evalで確認",
+    "FizzBuzzとその性質の証明"
+   ]
+  },
+  "en": {
+   "what": "Lean 4 learning sandbox with ten step-by-step tutorials, from theorem proving to programming",
+   "points": [
+    "Ten tutorials, 01 to 10, read in order",
+    "Japanese comments, results shown with #eval",
+    "FizzBuzz with proofs of its properties"
+   ]
+  },
+  "zh": {
+   "what": "Lean 4学习沙盒，含从定理证明到编程的教程",
+   "points": [
+    "01至10的分步教程",
+    "日文注释，可用#eval验证",
+    "FizzBuzz及其性质证明"
+   ]
+  }
+ },
+ "O6lvl4/O6lvl4-protocol": {
+  "ja": {
+   "what": "知的労働を最大化する、睡眠・食事・運動・認知の運用プロトコル集",
+   "points": [
+    "固定構造の14プロトコル",
+    "目標体組成と赤信号ルール",
+    "12週間の立ち上げ計画"
+   ]
+  },
+  "en": {
+   "what": "A set of operational protocols for sleep, diet, exercise and cognition to maximize intellectual work.",
+   "points": [
+    "14 protocols in a fixed structure",
+    "Target body composition with red-flag rules",
+    "12-week ramp-up plan"
+   ]
+  },
+  "zh": {
+   "what": "最大化脑力工作的睡眠饮食运动运用协议集",
+   "points": [
+    "14个固定结构协议",
+    "目标体成分与红灯规则",
+    "12周启动计划"
+   ]
+  }
+ },
+ "O6lvl4/almide-examples": {
+  "ja": {
+   "what": "Almide言語のサンプルとmini-gitベンチマーク実装集",
+   "points": [
+    "sample.almdによる基本機能例",
+    "mini-git実装(v1+v2、30/30テスト通過)",
+    "TypeScript変換しDenoで実行"
+   ]
+  },
+  "en": {
+   "what": "Example programs and a mini-git benchmark implementation for the Almide programming language",
+   "points": [
+    "Basic language feature sample (sample.almd)",
+    "mini-git v1+v2, 30/30 tests passing",
+    "Transpile to TypeScript, run via Deno"
+   ]
+  },
+  "zh": {
+   "what": "Almide语言的示例程序与mini-git基准实现",
+   "points": [
+    "sample.almd基础语法示例",
+    "mini-git v1+v2,30/30测试通过",
+    "转译为TypeScript并用Deno运行"
+   ]
+  }
+ },
+ "O6lvl4/chropen": {
+  "ja": {
+   "what": "メールアドレスから指定のChromeプロファイルでURLを開くCLI",
+   "points": [
+    "メールからプロファイル解決",
+    "--list でプロファイル一覧表示",
+    "Goライブラリとして利用可能"
+   ]
+  },
+  "en": {
+   "what": "A Go CLI that opens URLs in a specific Chrome profile, chosen by its account email.",
+   "points": [
+    "Resolves email to Chrome profile directory",
+    "--list shows all detected profiles",
+    "Usable as a Go library (profile package)"
+   ]
+  },
+  "zh": {
+   "what": "按邮箱在指定Chrome配置文件中打开网址的工具",
+   "points": [
+    "邮箱解析为配置文件目录",
+    "--list列出所有配置文件",
+    "可作为Go库使用"
+   ]
+  }
+ },
+ "O6lvl4/fizzbuzz-lean4-cli": {
+  "ja": {
+   "what": "Lean 4 製の FizzBuzz CLI。fizzbuzz-lean4-lib を利用する",
+   "points": [
+    "fizzbuzzcli で1〜15を出力",
+    "引数で範囲を指定（例: 30）",
+    "lake build でソースからビルド"
+   ]
+  },
+  "en": {
+   "what": "A FizzBuzz command-line app written in Lean 4, built on fizzbuzz-lean4-lib",
+   "points": [
+    "Default run prints FizzBuzz for 1 to 15",
+    "Range set by argument, e.g. fizzbuzzcli 30",
+    "Prebuilt binaries for Linux and macOS"
+   ]
+  },
+  "zh": {
+   "what": "用 Lean 4 编写的 FizzBuzz 命令行程序",
+   "points": [
+    "默认输出 1 到 15",
+    "参数指定范围，如 30",
+    "提供 Linux、macOS 二进制"
+   ]
+  }
+ },
+ "O6lvl4/lean4-rust-backend": {
+  "ja": {
+   "what": "Lean 4をRustへ変換するIRベースのコード生成バックエンド",
+   "points": [
+    "IRベースのコード生成",
+    "ランタイムの提供",
+    "WASMへのクロスコンパイル対応"
+   ]
+  },
+  "en": {
+   "what": "A Lean 4 to Rust backend that generates Rust code from Lean's IR, with a runtime and WASM support.",
+   "points": [
+    "IR-based code generation",
+    "Bundled runtime",
+    "WASM cross-compilation support"
+   ]
+  },
+  "zh": {
+   "what": "基于IR的Lean 4到Rust代码生成后端",
+   "points": [
+    "基于IR的代码生成",
+    "附带运行时",
+    "支持WASM交叉编译"
+   ]
+  }
+ },
+ "O6lvl4/netcheck": {
+  "ja": {
+   "what": "インターネット不調を層別に切り分けるmacOS用診断ツール",
+   "points": [
+    "Wi-Fiからスループットまで9層測定",
+    "VPN検出とトンネル終端の特定",
+    "OK/WARN/NG判定と切り分けヒント"
+   ]
+  },
+  "en": {
+   "what": "A macOS diagnostic tool that isolates internet problems layer by layer, from the bottom up.",
+   "points": [
+    "Nine layers, from Wi-Fi link to throughput",
+    "VPN detection and tunnel endpoint identification",
+    "OK/WARN/NG verdicts with troubleshooting hints"
+   ]
+  },
+  "zh": {
+   "what": "按层排查网络故障的macOS诊断工具",
+   "points": [
+    "从Wi-Fi到吞吐量共9层测量",
+    "检测VPN并定位隧道终端",
+    "OK/WARN/NG判定与排查提示"
+   ]
+  }
+ },
+ "O6lvl4/pitchy": {
+  "ja": {
+   "what": "口笛の音程をリアルタイムで検出しコードを表示するツールとリズムゲーム",
+   "points": [
+    "McLeod法によるCLIチューナー",
+    "口笛の音域を測るキャリブレーション",
+    "PERFECT/GREAT/GOODのスコア判定"
+   ]
+  },
+  "en": {
+   "what": "Whistle pitch detection toolkit that shows matching chords, plus a whistle-controlled rhythm game",
+   "points": [
+    "CLI tuner with McLeod pitch detection",
+    "Calibration to your personal whistle range",
+    "PERFECT/GREAT/GOOD/MISS scoring with combo"
+   ]
+  },
+  "zh": {
+   "what": "口哨音高检测工具,显示和弦并含节奏游戏",
+   "points": [
+    "基于McLeod的CLI调音器",
+    "口哨音域校准",
+    "PERFECT/GREAT/GOOD评分"
+   ]
+  }
+ },
+ "O6lvl4/tabi-navi": {
+  "ja": {
+   "what": "旅程の制約と分岐案から最安のフライト×ホテルを探索するCLI",
+   "points": [
+    "trip.config.jsonで制約と案を定義",
+    "案ごとの比較と推奨案の提示",
+    "Amadeus・楽天トラベル対応、モックあり"
+   ]
+  },
+  "en": {
+   "what": "CLI that finds the cheapest flight×hotel combos for trip constraints and compares variants.",
+   "points": [
+    "Constraints and variants in trip.config.json",
+    "Per-variant comparison with a recommended pick",
+    "Amadeus and Rakuten Travel APIs, or mock data"
+   ]
+  },
+  "zh": {
+   "what": "按行程约束搜索最便宜机票加酒店组合的CLI",
+   "points": [
+    "trip.config.json定义约束与方案",
+    "逐案比较并给出推荐案",
+    "支持Amadeus与乐天旅游，可用模拟数据"
+   ]
+  }
+ },
+ "O6lvl4/tocsin-almd": {
+  "ja": {
+   "what": "サプライチェーン攻撃の早期警戒ツールTocsinのAlmide実装",
+   "points": [
+    "サプライチェーン攻撃の早期警戒",
+    "Almideによる実装",
+    "Tocsinの実装版"
+   ]
+  },
+  "en": {
+   "what": "Almide implementation of Tocsin, a supply chain attack early warning tool.",
+   "points": [
+    "Supply chain attack early warning",
+    "Written in Almide",
+    "Implementation of Tocsin"
+   ]
+  },
+  "zh": {
+   "what": "Tocsin供应链攻击预警的Almide实现",
+   "points": [
+    "供应链攻击早期预警",
+    "使用Almide编写",
+    "Tocsin的实现版本"
+   ]
+  }
+ },
+ "O6lvl4/stock-counter-app": {
+  "ja": {
+   "what": "Flutterで作られた在庫カウンターアプリの初期テンプレート",
+   "points": [
+    "Flutterアプリの雛形",
+    "Dart製プロジェクト",
+    "Flutter公式ドキュメントへの案内"
+   ]
+  },
+  "en": {
+   "what": "A Flutter project named stock_counter_app, still at the default starter-template stage.",
+   "points": [
+    "Flutter starter project",
+    "Written in Dart",
+    "Links to Flutter codelab and cookbook"
+   ]
+  },
+  "zh": {
+   "what": "名为stock_counter_app的Flutter初始项目",
+   "points": [
+    "Flutter应用模板",
+    "以Dart编写",
+    "附Flutter官方文档链接"
+   ]
+  }
+ },
+ "O6lvl4/cct-fennel-sandbox": {
+  "ja": {
+   "what": "CC:Tweaked向けFennelプロジェクトのテンプレート",
+   "points": [
+    "単一のdist/main.luaへコンパイル",
+    "npm run build / make build",
+    "タートル移動・採掘・周辺機器検出"
+   ]
+  },
+  "en": {
+   "what": "A Fennel project template for the Minecraft CC:Tweaked mod, compiled to a single Lua file.",
+   "points": [
+    "Builds src/main.fnl to dist/main.lua",
+    "npm run build, make build, make watch",
+    "Turtle movement, mining, fuel and peripheral demos"
+   ]
+  },
+  "zh": {
+   "what": "面向CC:Tweaked的Fennel项目模板",
+   "points": [
+    "编译为单个dist/main.lua",
+    "npm run build / make build",
+    "海龟移动、挖掘与外设检测"
+   ]
+  }
+ },
+ "O6lvl4/sandbox-next-ghpage": {
+  "ja": {
+   "what": "Next.jsをGitHub Pagesへデプロイする手順をまとめた検証用リポジトリ",
+   "points": [
+    "create-next-appでのTypeScript作成",
+    "next.config.jsのbasePath設定",
+    "GitHub Actionsでの自動デプロイ"
+   ]
+  },
+  "en": {
+   "what": "A sandbox documenting how to deploy a TypeScript Next.js app to GitHub Pages step by step",
+   "points": [
+    "create-next-app with --typescript",
+    "basePath and assetPrefix in next.config.js",
+    "GitHub Actions deploy to gh-pages branch"
+   ]
+  },
+  "zh": {
+   "what": "演示将Next.js应用部署到GitHub Pages的步骤",
+   "points": [
+    "create-next-app创建TypeScript项目",
+    "next.config.js的basePath设置",
+    "GitHub Actions自动部署"
+   ]
+  }
+ },
+ "O6lvl4/azprofile": {
+  "ja": {
+   "what": "複数のAzureアカウントを簡単に切り替えるAzure CLIプロファイル管理ツール",
+   "points": [
+    "azprofile use でプロファイル切替",
+    "az と azd の両コマンドに対応",
+    "AZURE_CONFIG_DIRによる設定分離"
+   ]
+  },
+  "en": {
+   "what": "A CLI that manages and switches between multiple Azure accounts via isolated profiles",
+   "points": [
+    "Switch profiles with `azprofile use`",
+    "Works with both `az` and `azd` commands",
+    "Isolated config dirs via AZURE_CONFIG_DIR"
+   ]
+  },
+  "zh": {
+   "what": "轻松切换多个Azure账户的CLI配置管理工具",
+   "points": [
+    "azprofile use 切换配置",
+    "支持 az 与 azd 命令",
+    "AZURE_CONFIG_DIR 隔离配置"
+   ]
+  }
+ },
+ "O6lvl4/capto": {
+  "ja": {
+   "what": "ディレクトリ構造とファイル内容をPDFに記録するCLIツール",
+   "points": [
+    "行番号付きテキスト表示と画像表示",
+    "「.gitignore」適用とバイナリ自動検出",
+    "再帰スキャンとフォント・タイトル指定"
+   ]
+  },
+  "en": {
+   "what": "A CLI tool that captures directory structure and file contents into a PDF for multi-modal LLMs",
+   "points": [
+    "Directory tree and line-numbered text display",
+    "Images shown inline; binary files auto-detected",
+    "Recursive scan, .gitignore rules, custom ignores"
+   ]
+  },
+  "zh": {
+   "what": "将目录结构与文件内容生成PDF的命令行工具",
+   "points": [
+    "目录树与带行号文本",
+    "PDF内直接显示图片",
+    "遵循.gitignore并识别二进制"
+   ]
+  }
+ },
+ "O6lvl4/line-bot-sandbox": {
+  "ja": {
+   "what": "AWS SAMで作るLINE Bot用Go製Lambda関数のサンプルテンプレート",
+   "points": [
+    "sam buildとMakefileでビルド",
+    "sam local start-apiでローカル実行",
+    "sam deploy --guidedでデプロイ"
+   ]
+  },
+  "en": {
+   "what": "A Go sample template for an AWS Lambda function behind API Gateway, built and deployed with SAM.",
+   "points": [
+    "Build via sam build wrapped in a Makefile",
+    "Local run with sam local start-api at /hello",
+    "Deploy with sam deploy --guided"
+   ]
+  },
+  "zh": {
+   "what": "基于AWS SAM的Go语言Lambda函数示例模板",
+   "points": [
+    "Makefile封装sam build构建",
+    "sam local start-api本地运行",
+    "sam deploy --guided部署"
+   ]
+  }
+ },
+ "O6lvl4/sandbox-gcp": {
+  "ja": {
+   "what": "GCP上でTerraformを使い環境を構築する手順書",
+   "points": [
+    "サービスアカウントとJSONキーの設定",
+    "TF_VAR環境変数の設定",
+    "terraform init/plan/apply/destroy"
+   ]
+  },
+  "en": {
+   "what": "A Japanese guide to building environments on Google Cloud Platform using Terraform.",
+   "points": [
+    "Service account and JSON key setup",
+    "TF_VAR_ environment variables",
+    "terraform init/plan/apply/destroy"
+   ]
+  },
+  "zh": {
+   "what": "使用Terraform在GCP上构建环境的手册",
+   "points": [
+    "服务账号与JSON密钥设置",
+    "TF_VAR环境变量配置",
+    "terraform init/plan/apply/destroy"
+   ]
+  }
+ },
+ "O6lvl4/sandbox-golang-cli": {
+  "ja": {
+   "what": "Cobraで作るGo製CLIアプリケーションの雛形プロジェクト",
+   "points": [
+    "cobra-cli のインストール",
+    "cobra-cli init での初期化",
+    "cobra-cli add でコマンド追加"
+   ]
+  },
+  "en": {
+   "what": "A Go CLI application built with the Cobra library, with setup steps using cobra-cli.",
+   "points": [
+    "cobra-cli install via go install",
+    "Project setup with cobra-cli init",
+    "Command scaffolding with cobra-cli add"
+   ]
+  },
+  "zh": {
+   "what": "使用Cobra库构建的Go命令行应用",
+   "points": [
+    "安装cobra-cli工具",
+    "cobra-cli init初始化项目",
+    "cobra-cli add添加命令"
+   ]
+  }
+ },
+ "O6lvl4/sandbox-next-firebase-app-hosting-line-auth": {
+  "ja": {
+   "what": "Next.js製LINE認証をFirebaseへ載せるCDKTF管理の参照実装",
+   "points": [
+    "NextAuth.jsによるLINE OAuth",
+    "Firebase HostingとApp Hosting",
+    "CDKTFでのインフラのコード管理"
+   ]
+  },
+  "en": {
+   "what": "Reference architecture for LINE login in Next.js App Router, deployed to Firebase with CDKTF infrastructure.",
+   "points": [
+    "LINE OAuth via NextAuth.js",
+    "Firebase Hosting and App Hosting (SSR)",
+    "Infrastructure as code with CDKTF"
+   ]
+  },
+  "zh": {
+   "what": "基于CDKTF的Next.js LINE登录Firebase参考架构",
+   "points": [
+    "NextAuth.js集成LINE OAuth",
+    "Firebase Hosting与App Hosting",
+    "CDKTF管理基础设施"
+   ]
+  }
+ },
+ "O6lvl4/sandbox-next-ts-gh-page": {
+  "ja": {
+   "what": "create-next-appで作成したNext.jsプロジェクト",
+   "points": [
+    "npm run devで開発サーバー起動",
+    "app/page.tsxの編集が自動反映",
+    "next/fontでGeistフォントを最適化"
+   ]
+  },
+  "en": {
+   "what": "A Next.js project bootstrapped with create-next-app, per the standard starter template",
+   "points": [
+    "Dev server via npm/yarn/pnpm/bun dev",
+    "Auto-updating page from app/page.tsx",
+    "Geist font optimized with next/font"
+   ]
+  },
+  "zh": {
+   "what": "用create-next-app创建的Next.js项目",
+   "points": [
+    "用dev命令启动开发服务器",
+    "修改app/page.tsx自动更新",
+    "next/font优化Geist字体"
+   ]
+  }
+ },
+ "O6lvl4/ts-react-tailwindcss-sandbox": {
+  "ja": {
+   "what": "React と Tailwind CSS でレスポンシブデザインを示すデモ",
+   "points": [
+    "レスポンシブグリッドレイアウト",
+    "ブレイクポイント動作の視覚的デモ",
+    "ユーティリティクラスの React コンポーネント"
+   ]
+  },
+  "en": {
+   "what": "Demo of responsive design with React and Tailwind CSS breakpoints, companion to a Zenn guide",
+   "points": [
+    "Responsive grid layouts with Tailwind CSS",
+    "Visual demo of breakpoint behavior",
+    "React components using utility classes"
+   ]
+  },
+  "zh": {
+   "what": "用React和Tailwind CSS演示响应式设计的示例",
+   "points": [
+    "响应式网格布局",
+    "断点行为可视化演示",
+    "使用工具类的React组件"
+   ]
+  }
+ },
+ "O6lvl4/ts-tsnode-sandbox": {
+  "ja": {
+   "what": "TypeScriptとts-nodeでNode.jsアプリを開発する方法を示すデモ",
+   "points": [
+    "ts-nodeによるTS直接実行",
+    "CLIアプリと環境変数の例",
+    "デバッグ設定のサンプル"
+   ]
+  },
+  "en": {
+   "what": "A demo project showing how to build Node.js apps with TypeScript and ts-node, from setup to advanced use.",
+   "points": [
+    "Direct TypeScript execution via ts-node",
+    "Basic CLI app with env variable examples",
+    "Debug config samples and performance tips"
+   ]
+  },
+  "zh": {
+   "what": "演示用TypeScript和ts-node开发Node.js应用的项目",
+   "points": [
+    "ts-node直接运行TS",
+    "CLI应用与环境变量示例",
+    "调试配置示例"
+   ]
+  }
+ },
+ "O6lvl4/tz-clocks": {
+  "ja": {
+   "what": "Create React Appで作られたReactアプリ。tz-clocksの固有機能はREADMEに記載なし",
+   "points": [
+    "npm startで開発サーバー起動",
+    "npm run buildで本番ビルド",
+    "npm testでテスト実行"
+   ]
+  },
+  "en": {
+   "what": "A React app bootstrapped with Create React App; the README describes no tz-clocks-specific features",
+   "points": [
+    "npm start dev server on localhost:3000",
+    "npm run build production bundle to build folder",
+    "npm test interactive watch-mode runner"
+   ]
+  },
+  "zh": {
+   "what": "基于Create React App的React应用，README未说明具体功能",
+   "points": [
+    "npm start 启动开发服务器",
+    "npm run build 生产构建",
+    "npm test 交互式测试"
+   ]
+  }
+ },
+ "O6lvl4/zod-to-markdown": {
+  "ja": {
+   "what": "Zodスキーマ��Markdownドキュメントへ変換するユーティリティ関数",
+   "points": [
+    "zodSchemaToMarkdown関数",
+    "ZodObjectやZodArrayなど10種に対応",
+    "indentLevelで初期インデント指定"
+   ]
+  },
+  "en": {
+   "what": "A utility function that converts Zod schemas into Markdown documentation.",
+   "points": [
+    "zodSchemaToMarkdown function",
+    "Supports ZodObject, ZodArray, ZodEnum and more",
+    "Optional indentLevel parameter"
+   ]
+  },
+  "zh": {
+   "what": "将Zod模式转换为Markdown文档的工具函数",
+   "points": [
+    "zodSchemaToMarkdown函数",
+    "支持ZodObject、ZodArray等类型",
+    "可选indentLevel缩进参数"
+   ]
+  }
+ },
+ "O6lvl4/aws-py-s3-sandbox": {
+  "ja": {
+   "what": "SAM CLIでデプロイするサーバーレスアプリのPythonサンプル",
+   "points": [
+    "Lambda関数とAPI Gatewayの構成",
+    "sam local invokeでのローカル実行",
+    "template.yamlによるリソース定義"
+   ]
+  },
+  "en": {
+   "what": "A Python serverless sample app deployed with the SAM CLI, using Lambda and API Gateway",
+   "points": [
+    "Lambda function with API Gateway endpoint",
+    "Local testing via sam local invoke/start-api",
+    "AWS resources defined in template.yaml"
+   ]
+  },
+  "zh": {
+   "what": "用SAM CLI部署的Python无服务器示例应用",
+   "points": [
+    "Lambda函数与API Gateway",
+    "sam local本地调用与测试",
+    "template.yaml定义资源"
+   ]
+  }
+ },
+ "O6lvl4/cdev": {
+  "ja": {
+   "what": "Claude Codeで説明からプロジェクトを自動構築するCLI",
+   "points": [
+    "build コマンドで一式生成",
+    "多数のフレームワークに対応",
+    "doctor で依存関係を確認"
+   ]
+  },
+  "en": {
+   "what": "A shell CLI that uses Claude Code's bypass permissions to build whole projects from a description.",
+   "points": [
+    "cdev build \"<description>\" <directory>",
+    "Any framework or language stack",
+    "cdev doctor checks installation and dependencies"
+   ]
+  },
+  "zh": {
+   "what": "用Claude Code根据描述自动构建项目的CLI",
+   "points": [
+    "build 命令生成完整项目",
+    "支持多种框架与语言",
+    "doctor 检查依赖"
+   ]
+  }
+ },
+ "O6lvl4/cctweaked-fennel-landfill": {
+  "ja": {
+   "what": "エンダータートル用の自動埋め立て・整地システム",
+   "points": [
+    "5x5ブロックの埋め立て範囲",
+    "y=62から下向きに土で埋め立て",
+    "エンダーチェストから土を自動補給"
+   ]
+  },
+  "en": {
+   "what": "Automatic landfill and land-leveling system for Ender Turtles in CC:Tweaked, written in Lua and Fennel",
+   "points": [
+    "5x5 block area (for testing)",
+    "Fills downward with dirt from y=62",
+    "Auto-restocks dirt from an Ender Chest"
+   ]
+  },
+  "zh": {
+   "what": "用于末影海龟的自动填埋整地系统",
+   "points": [
+    "5x5方块范围",
+    "从y=62向下用泥土填埋",
+    "从末影箱自动补给泥土"
+   ]
+  }
+ },
+ "O6lvl4/dotfiles": {
+  "ja": {
+   "what": "macOS開発環境をBrewfileとシェルスクリプトで管理するdotfiles",
+   "points": [
+    "install.shによるパッケージ導入",
+    "update.shとbackup.shでの更新・保存",
+    "Brewfileでbrew・cask・mas・tap管理"
+   ]
+  },
+  "en": {
+   "what": "Dotfiles that manage a macOS development environment with a Brewfile and shell scripts.",
+   "points": [
+    "Package install via install.sh",
+    "update.sh and backup.sh scripts",
+    "Brewfile with brew, cask, mas and tap entries"
+   ]
+  },
+  "zh": {
+   "what": "用Brewfile和脚本管理macOS开发环境的dotfiles",
+   "points": [
+    "install.sh安装软件包",
+    "update.sh与backup.sh脚本",
+    "Brewfile管理brew/cask/mas"
+   ]
+  }
+ },
+ "O6lvl4/lean4-practice": {
+  "ja": {
+   "what": "Lean 4コード生成のベストプラクティスを提供するClaude Codeプラグイン",
+   "points": [
+    "言語・タクティックのリファレンス",
+    "標準ライブラリ・Lake設定の解説",
+    "テストパターンとIDE・LSP連携"
+   ]
+  },
+  "en": {
+   "what": "A Claude Code plugin providing best practices for generating Lean 4 code.",
+   "points": [
+    "Language and tactics references",
+    "Stdlib (Std, Batteries, Mathlib) and Lake config",
+    "Testing patterns and LSP/Lake tooling"
+   ]
+  },
+  "zh": {
+   "what": "提供Lean 4代码生成最佳实践的Claude Code插件",
+   "points": [
+    "语言与tactics参考",
+    "标准库与Lake配置",
+    "测试模式与LSP工具"
+   ]
+  }
+ },
+ "O6lvl4/fizzbuzz-lean4-lib": {
+  "ja": {
+   "what": "Lean 4 で書かれた FizzBuzz ライブラリ",
+   "points": [
+    "fizzbuzz による単一数値の変換",
+    "fizzbuzzRange による範囲変換",
+    "lakefile.toml の require で導入"
+   ]
+  },
+  "en": {
+   "what": "A FizzBuzz library written in Lean 4, usable as a Lake dependency.",
+   "points": [
+    "fizzbuzz: convert a single Nat",
+    "fizzbuzzRange: convert a range to List String",
+    "Add via lakefile.toml require; lake build"
+   ]
+  },
+  "zh": {
+   "what": "用 Lean 4 编写的 FizzBuzz 库",
+   "points": [
+    "fizzbuzz 转换单个数值",
+    "fizzbuzzRange 转换数值范围",
+    "通过 lakefile.toml 引入"
+   ]
+  }
+ },
+ "O6lvl4/golang-cp-solve-sandbox": {
+  "ja": {
+   "what": "READMEなし。Go製のリポジトリで、競技プログラミングの解答用サンドボックスと名前から読める",
+   "points": [
+    "Go言語で記述",
+    "READMEに記載された機能なし",
+    "名前は競技プログラミング用"
+   ]
+  },
+  "en": {
+   "what": "No README; a Go repository whose name suggests a sandbox for competitive programming solutions",
+   "points": [
+    "Written in Go",
+    "No features documented in a README",
+    "Name points to competitive programming"
+   ]
+  },
+  "zh": {
+   "what": "无README；名称显示为Go竞赛编程解题沙盒",
+   "points": [
+    "使用Go语言编写",
+    "README未记载功能",
+    "名称指向竞赛编程"
+   ]
+  }
+ },
+ "O6lvl4/golang-lib-lo-sandbox": {
+  "ja": {
+   "what": "READMEなし。Go製のlo系ライブラリ検証用サンドボックス",
+   "points": [
+    "Go言語で記述",
+    "READMEの記載なし",
+    "リポジトリ名はlo検証用を示唆"
+   ]
+  },
+  "en": {
+   "what": "No README; a Go repository whose name suggests a sandbox for the lo library.",
+   "points": [
+    "Written in Go",
+    "No README provided",
+    "Name suggests lo library experiments"
+   ]
+  },
+  "zh": {
+   "what": "无README,Go语言的lo库沙盒仓库",
+   "points": [
+    "使用Go语言编写",
+    "未提供README",
+    "名称暗示lo库试验"
+   ]
+  }
+ },
+ "O6lvl4/golang-lib-vecty-sandbox": {
+  "ja": {
+   "what": "Go製Webフロントエンドライブラリvectyの試用サンドボックス",
+   "points": [
+    "Goで記述",
+    "CSSによるスタイリング",
+    "README未整備"
+   ]
+  },
+  "en": {
+   "what": "A sandbox repository written in Go and CSS, apparently for trying the vecty library; no README",
+   "points": [
+    "Written in Go",
+    "Styled with CSS",
+    "No README provided"
+   ]
+  },
+  "zh": {
+   "what": "用Go试验vecty库的沙盒仓库",
+   "points": [
+    "使用Go编写",
+    "使用CSS样式",
+    "暂无README"
+   ]
+  }
+ },
+ "O6lvl4/mastra-sandbox": {
+  "ja": {
+   "what": "mastra-sandboxというリポジトリ。READMEはなく詳細は不明",
+   "points": [
+    "TypeScriptで記述",
+    "JavaScriptを含む",
+    "READMEの記載なし"
+   ]
+  },
+  "en": {
+   "what": "A repository named mastra-sandbox; it has no README, so its purpose is not documented.",
+   "points": [
+    "Written in TypeScript",
+    "Includes JavaScript",
+    "No README description available"
+   ]
+  },
+  "zh": {
+   "what": "名为mastra-sandbox的仓库，无README，用途未说明",
+   "points": [
+    "使用TypeScript编写",
+    "包含JavaScript",
+    "README无功能描述"
+   ]
+  }
+ },
+ "O6lvl4/rust-cli-sandbox": {
+  "ja": {
+   "what": "Rust製CLIの試作用サンドボックス",
+   "points": [
+    "Rustで書かれたリポジトリ",
+    "READMEは題名のみ",
+    "詳細な機能の記載なし"
+   ]
+  },
+  "en": {
+   "what": "A Rust repository named rust-cli-sandbox, apparently a sandbox for CLI experiments.",
+   "points": [
+    "Written in Rust",
+    "README contains only the title",
+    "No documented commands or features"
+   ]
+  },
+  "zh": {
+   "what": "Rust编写的CLI实验沙盒仓库",
+   "points": [
+    "使用Rust编写",
+    "README仅含标题",
+    "未记载具体功能"
+   ]
+  }
+ },
+ "O6lvl4/ebitengine-sandbox": {
+  "ja": {
+   "what": "READMEなし。Goで書かれたEbitengineのサンドボックス",
+   "points": [
+    "Go言語で実装",
+    "Ebitengineを利用",
+    "READMEに詳細記載なし"
+   ]
+  },
+  "en": {
+   "what": "A Go sandbox repository for Ebitengine; the repo has no README describing it further.",
+   "points": [
+    "Written in Go",
+    "Named for Ebitengine",
+    "No documented features or commands"
+   ]
+  },
+  "zh": {
+   "what": "无README，使用Go的Ebitengine沙盒",
+   "points": [
+    "使用Go语言编写",
+    "名称指向Ebitengine",
+    "README未说明功能"
+   ]
+  }
+ },
+ "O6lvl4/langchain-translate-chain": {
+  "ja": {
+   "what": "README がなく、内容の説明が確認できない TypeScript 製リポジトリ",
+   "points": [
+    "TypeScript で記述",
+    "リポジトリ名は translate-chain",
+    "LangChain 関連を示唆する名称"
+   ]
+  },
+  "en": {
+   "what": "A TypeScript repository with no README, so its purpose is not documented.",
+   "points": [
+    "Written in TypeScript",
+    "Named langchain-translate-chain",
+    "No documented commands or formats"
+   ]
+  },
+  "zh": {
+   "what": "无 README 的 TypeScript 仓库,用途未说明",
+   "points": [
+    "使用 TypeScript 编写",
+    "仓库名为 translate-chain",
+    "无已记载的命令或格式"
+   ]
+  }
+ },
+ "O6lvl4/react-native-ts-boilerplate": {
+  "ja": {
+   "what": "React Native向けTypeScriptボイラープレート",
+   "points": [
+    "React Nativeプロジェクトの雛形",
+    "TypeScriptベースの構成",
+    "READMEは題名のみ記載"
+   ]
+  },
+  "en": {
+   "what": "A React Native boilerplate project written in TypeScript; the README gives only its name.",
+   "points": [
+    "React Native project template",
+    "TypeScript-based setup",
+    "README contains only a title"
+   ]
+  },
+  "zh": {
+   "what": "React Native的TypeScript样板项目",
+   "points": [
+    "React Native项目模板",
+    "基于TypeScript",
+    "README仅含标题"
+   ]
+  }
+ },
+ "O6lvl4/sam-swagger-api-sandbox": {
+  "ja": {
+   "what": "AWS SAMとOpenAPIを組み合わせたサンドボックス",
+   "points": [
+    "AWS SAM",
+    "OpenAPI",
+    "JavaScript・Python・Ruby"
+   ]
+  },
+  "en": {
+   "what": "A sandbox project combining AWS SAM with OpenAPI (Swagger).",
+   "points": [
+    "AWS SAM",
+    "OpenAPI",
+    "JavaScript, Python and Ruby code"
+   ]
+  },
+  "zh": {
+   "what": "结合AWS SAM与OpenAPI的沙盒项目",
+   "points": [
+    "AWS SAM",
+    "OpenAPI",
+    "JavaScript、Python、Ruby"
+   ]
+  }
+ },
+ "O6lvl4/sandbox-chatgpt-talk": {
+  "ja": {
+   "what": "READMEが無く、内容が不明なサンドボックスリポジトリ",
+   "points": [
+    "READMEの記載なし",
+    "名称はsandbox-chatgpt-talk",
+    "機能や状態は未記載"
+   ]
+  },
+  "en": {
+   "what": "A sandbox repository with no README, so its purpose is not documented",
+   "points": [
+    "No README provided",
+    "Named sandbox-chatgpt-talk",
+    "Features and status undocumented"
+   ]
+  },
+  "zh": {
+   "what": "沙盒仓库,无README,用途未说明",
+   "points": [
+    "未提供README",
+    "名称为sandbox-chatgpt-talk",
+    "功能与状态未记载"
+   ]
+  }
+ },
+ "O6lvl4/sandbox-discord-bot": {
+  "ja": {
+   "what": "Discord botのサンドボックスリポジトリ",
+   "points": [
+    "Discord bot",
+    "サンドボックス",
+    "READMEは題名のみ"
+   ]
+  },
+  "en": {
+   "what": "A sandbox repository for a Discord bot; the README gives only the project name.",
+   "points": [
+    "Discord bot project",
+    "Sandbox for experiments",
+    "README contains title only"
+   ]
+  },
+  "zh": {
+   "what": "Discord 机器人的沙盒仓库",
+   "points": [
+    "Discord 机器人",
+    "沙盒项目",
+    "README 仅含标题"
+   ]
+  }
+ },
+ "O6lvl4/sandbox-langchaingo": {
+  "ja": {
+   "what": "langchaingoを試すためのサンドボックスリポジトリ",
+   "points": [
+    "READMEはタイトルのみ",
+    "詳細な説明は未記載",
+    "名称はsandbox-langchaingo"
+   ]
+  },
+  "en": {
+   "what": "A sandbox repository named sandbox-langchaingo, apparently for trying out langchaingo.",
+   "points": [
+    "README contains only a title",
+    "No features or usage documented",
+    "Name: sandbox-langchaingo"
+   ]
+  },
+  "zh": {
+   "what": "用于试验langchaingo的沙盒仓库",
+   "points": [
+    "README仅含标题",
+    "未记载功能与用法",
+    "名称为sandbox-langchaingo"
+   ]
+  }
+ },
+ "O6lvl4/tyrano-sandbox": {
+  "ja": {
+   "what": "Tyrano系ノベルゲームを試すためのサンドボックス。READMEなし",
+   "points": [
+    "HTML・JavaScript・CSSで構成",
+    "READMEの記載なし",
+    "実験用リポジトリ"
+   ]
+  },
+  "en": {
+   "what": "A sandbox repository for Tyrano experiments; it has no README describing it.",
+   "points": [
+    "Written in HTML, JavaScript and CSS",
+    "No README documentation provided",
+    "Named as a sandbox for trying things out"
+   ]
+  },
+  "zh": {
+   "what": "Tyrano 相关的试验沙盒，无 README",
+   "points": [
+    "由 HTML、JavaScript、CSS 构成",
+    "README 未提供说明",
+    "仓库名为沙盒"
+   ]
+  }
+ },
+ "almide/porta": {
+  "ja": {
+   "what": "AIエージェント向けにファイルシステムやネットワークを制限する安全なMCPブリッジ",
+   "points": [
+    "WASMサンドボックスで隔離実行",
+    "macOS sandbox-execによるOS制限",
+    "porta.tomlによる宣言的設定"
+   ]
+  },
+  "en": {
+   "what": "A secure MCP bridge that restricts filesystem, network and command access for AI agents and native commands",
+   "points": [
+    "WASM sandbox via wasmtime for .wasm agents",
+    "OS-level restrictions via macOS sandbox-exec",
+    "Declarative setup with porta.toml and porta up"
+   ]
+  },
+  "zh": {
+   "what": "限制AI智能体文件与网络访问的安全MCP桥",
+   "points": [
+    "基于wasmtime的WASM沙箱",
+    "macOS sandbox-exec系统级限制",
+    "porta.toml声明式配置"
+   ]
+  }
+ },
+ "almide/als": {
+  "ja": {
+   "what": "Almide言語の規範的意味論と適合性コーパスを保持し、任意のalmideバイナリを判定する仕様リポジトリ",
+   "points": [
+    "301件の挙動契約台帳",
+    "591件のクロスターゲットfixture",
+    "conformance.pyによる適合性判定"
+   ]
+  },
+  "en": {
+   "what": "Normative semantics, contract ledger and conformance corpus that judge any almide binary; no compiler.",
+   "points": [
+    "301 behavior contracts (C-NNN ledger)",
+    "591 cross-target fixtures plus 752 diagnostic cases",
+    "scripts/conformance.py runner for any binary"
+   ]
+  },
+  "zh": {
+   "what": "Almide语言规范与一致性语料库，可评判任意almide二进制",
+   "points": [
+    "301条行为契约台账",
+    "591个跨目标fixture",
+    "conformance.py一致性运行器"
+   ]
+  }
+ },
+ "almide/docs": {
+  "ja": {
+   "what": "Almide言語のドキュメントサイト。ブラウザで実行できるサンプルを備える",
+   "points": [
+    "Astro + Starlight製サイト",
+    "WebAssemblyで動くPlayground埋め込み",
+    "リンク・サンプル・コードの検査"
+   ]
+  },
+  "en": {
+   "what": "Astro + Starlight documentation site for Almide, with code samples runnable in the browser.",
+   "points": [
+    "Playground samples run via WebAssembly compiler",
+    "Samples kept as real files in src/samples/",
+    "check:links, check:embeds, check:snippets gates"
+   ]
+  },
+  "zh": {
+   "what": "Almide语言文档站,示例可在浏览器运行",
+   "points": [
+    "基于Astro + Starlight",
+    "WebAssembly运行Playground示例",
+    "检查链接、示例与代码块"
+   ]
+  }
+ },
+ "almide/almide-grammar": {
+  "ja": {
+   "what": "Almide構文の定義を一元管理する、キーワード・演算子・優先順位のモジュール",
+   "points": [
+    "35個のキーワードを5グループで提供",
+    "11段階の演算子優先順位テーブル",
+    "tree-sitter・textmate・rust向けCLI出力"
+   ]
+  },
+  "en": {
+   "what": "Single source of truth for Almide syntax: keywords, operators, precedence and TextMate scopes.",
+   "points": [
+    "35 keywords in 5 groups",
+    "11-level operator precedence table",
+    "CLI targets: tree-sitter, textmate, rust, info"
+   ]
+  },
+  "zh": {
+   "what": "Almide语法定义的唯一来源模块",
+   "points": [
+    "5组共35个关键字",
+    "11级运算符优先级表",
+    "支持tree-sitter、textmate、rust输出"
+   ]
+  }
+ },
+ "almide/vscode-almide": {
+  "ja": {
+   "what": "Almide言語の.almdファイル向けVS Code拡張",
+   "points": [
+    "構文ハイライトと括弧の対応",
+    "コメント切替とコード折りたたみ",
+    "almide-grammarから文法を生成"
+   ]
+  },
+  "en": {
+   "what": "VS Code extension for Almide (.almd files), with a TextMate grammar generated from Almide source",
+   "points": [
+    "Syntax highlighting and bracket matching",
+    "Comment toggling and code folding",
+    "Grammar generated via almide run generator/main.almd"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide语言.almd文件的VS Code扩展",
+   "points": [
+    "语法高亮与括号匹配",
+    "注释切换与代码折叠",
+    "由almide-grammar生成语法"
+   ]
+  }
+ },
+ "almide/tree-sitter-almide": {
+  "ja": {
+   "what": "Almide言語用のTree-sitter文法",
+   "points": [
+    "コンパイラ準拠の演算子優先順位",
+    "highlights.scmとtags.scm",
+    "RustとNode.jsから利用可能"
+   ]
+  },
+  "en": {
+   "what": "Tree-sitter grammar for the Almide programming language, mirroring the compiler's parser.",
+   "points": [
+    "Operator precedence matching the compiler",
+    "highlights.scm and tags.scm queries",
+    "Rust and Node.js bindings for .almd files"
+   ]
+  },
+  "zh": {
+   "what": "Almide语言的Tree-sitter语法",
+   "points": [
+    "与编译器一致的运算符优先级",
+    "highlights.scm与tags.scm",
+    "支持Rust和Node.js"
+   ]
+  }
+ },
+ "almide/almide-dojo": {
+  "ja": {
+   "what": "LLM生成コードの修正生存率を毎日測るAlmide用の計測基盤",
+   "points": [
+    "最大3回リトライ後の最終合格率",
+    "31タスクの3段階タスクバンク",
+    "Almide自身で書かれたハーネス"
+   ]
+  },
+  "en": {
+   "what": "Daily measurement of how often LLM-written code survives modification in Almide, with a harness written in Almide.",
+   "points": [
+    "Final pass rate after up to 3 retries",
+    "31-task bank in three difficulty tiers",
+    "Harness written in Almide itself"
+   ]
+  },
+  "zh": {
+   "what": "每日测量Almide中LLM代码的修改存活率",
+   "points": [
+    "最多3次重试后的最终通过率",
+    "三档难度共31个任务",
+    "用Almide自身编写的测试框架"
+   ]
+  }
+ },
+ "almide/dfa": {
+  "ja": {
+   "what": "正規表現の集合を単一DFAにまとめ最左最長一致を行うAlmide用ライブラリ",
+   "points": [
+    "最左最長一致を線形時間で実行",
+    "複数パターンを融合した1つのオートマトン",
+    "WASMでも動く純Almide実装"
+   ]
+  },
+  "en": {
+   "what": "Multi-pattern DFA matcher for Almide: compiles a regex set into one leftmost-longest automaton.",
+   "points": [
+    "Leftmost-longest matching in linear time",
+    "One fused automaton for N patterns",
+    "Pure Almide, no @extern, native and WASM"
+   ]
+  },
+  "zh": {
+   "what": "Almide的多模式DFA匹配库,将正则集编译为单一自动机",
+   "points": [
+    "线性时间最左最长匹配",
+    "多模式融合为单一自动机",
+    "纯Almide,支持WASM"
+   ]
+  }
+ },
+ "almide/almide-bindgen": {
+  "ja": {
+   "what": "Almide向けの汎用FFIバインディング生成ライブラリ",
+   "points": [
+    "20言語のバインディング生成",
+    "Rust FFIスキャフォールディング生成",
+    "バイトバッファによる型シリアライズ"
+   ]
+  },
+  "en": {
+   "what": "Universal FFI binding generator library for Almide, written entirely in Almide",
+   "points": [
+    "Bindings for 20 language targets",
+    "Rust FFI scaffolding and Cargo generation",
+    "Byte buffer protocol, no C struct mapping"
+   ]
+  },
+  "zh": {
+   "what": "用Almide编写的通用FFI绑定生成库",
+   "points": [
+    "支持20种语言目标",
+    "生成Rust FFI脚手架",
+    "字节缓冲区协议序列化类型"
+   ]
+  }
+ },
+ "almide/playground": {
+  "ja": {
+   "what": "ブラウザ上でAlmideコードを書いて実行できるオンラインplayground",
+   "points": [
+    "WASMによるクライアント側コンパイル",
+    "複数タブとimport self.<tab>対応",
+    "SVG/PPM出力のVisual表示"
+   ]
+  },
+  "en": {
+   "what": "Online playground to write and run Almide .almd code in the browser via WASM, no install needed",
+   "points": [
+    "Client-side compiler built as WebAssembly",
+    "Multi-file tabs with import self.<tab>",
+    "Visual tab renders SVG and PPM output"
+   ]
+  },
+  "zh": {
+   "what": "在浏览器中编写并运行Almide代码的在线playground",
+   "points": [
+    "WASM客户端编译",
+    "多文件标签页与import self",
+    "SVG/PPM可视化输出"
+   ]
+  }
+ },
+ "almide/bonsai-almide": {
+  "ja": {
+   "what": "Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ",
+   "points": [
+    "Qwen3テンプレートとKVキャッシュ",
+    "温度・top-k・繰り返しペナルティ",
+    "248MBモデルをIndexedDBに保存"
+   ]
+  },
+  "en": {
+   "what": "Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language",
+   "points": [
+    "Qwen3 chat template with KV cache streaming",
+    "Sampling: temperature, top-k, repetition penalty",
+    "32 KB WASM; 248 MB model cached in IndexedDB"
+   ]
+  },
+  "zh": {
+   "what": "经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示",
+   "points": [
+    "Qwen3聊天模板与KV缓存",
+    "温度、top-k、重复惩罚采样",
+    "248MB模型缓存于IndexedDB"
+   ]
+  }
+ },
+ "almide/yaml": {
+  "ja": {
+   "what": "Almide向けの純Almide製YAMLパーサ兼シリアライザ。Codec連携対応",
+   "points": [
+    "yaml.parseとyaml.stringify",
+    "Codec型のencode・decode",
+    "フロー記法とネスト構造に対応"
+   ]
+  },
+  "en": {
+   "what": "Pure Almide YAML parser and serializer for Almide, with Codec integration for typed records",
+   "points": [
+    "yaml.parse and yaml.stringify",
+    "yaml.encode and decode for Codec types",
+    "Flow sequences, flow mappings, nesting"
+   ]
+  },
+  "zh": {
+   "what": "Almide 的纯 Almide YAML 解析与序列化库，支持 Codec",
+   "points": [
+    "yaml.parse 与 yaml.stringify",
+    "Codec 类型的 encode/decode",
+    "支持流式序列与映射"
+   ]
+  }
+ },
+ "almide/aes": {
+  "ja": {
+   "what": "Almide向けのAES-128-CFB8暗号化ライブラリ",
+   "points": [
+    "Rust対象はAES-NIで高速化",
+    "WASM向けは純Almideのフォールバック",
+    "new_cfb8・cfb8_encrypt・cfb8_decrypt API"
+   ]
+  },
+  "en": {
+   "what": "AES-128-CFB8 encryption library for Almide, using AES-NI on Rust and pure Almide on WASM",
+   "points": [
+    "AES-NI acceleration on the Rust target",
+    "Pure Almide fallback for WASM",
+    "new_cfb8, cfb8_encrypt, cfb8_decrypt API"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的AES-128-CFB8加密库",
+   "points": [
+    "Rust目标使用AES-NI加速",
+    "WASM使用纯Almide回退",
+    "new_cfb8与cfb8加解密API"
+   ]
+  }
+ },
+ "almide/sha1": {
+  "ja": {
+   "what": "Almide向けのSHA-1ハッシュライブラリ",
+   "points": [
+    "hashで20バイトのダイジェスト",
+    "hexで16進文字列に変換",
+    "Rustは AES-NI、WASMは純Almide"
+   ]
+  },
+  "en": {
+   "what": "SHA-1 hash library for Almide, native-accelerated on Rust with a pure Almide WASM fallback",
+   "points": [
+    "hash: Bytes to 20-byte SHA-1 digest",
+    "hex: Bytes digest to hex String",
+    "AES-NI on Rust, pure Almide on WASM"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的SHA-1哈希库",
+   "points": [
+    "hash生成20字节摘要",
+    "hex转十六进制字符串",
+    "Rust用AES-NI,WASM纯Almide"
+   ]
+  }
+ },
+ "almide/svg": {
+  "ja": {
+   "what": "Almide向けの純Almide製SVGドキュメント生成ライブラリ",
+   "points": [
+    "rectやcircleなどの要素ファクトリ",
+    "fillやstrokeのパイプ属性修飾",
+    "svg.pathによるパスd文字列の構築"
+   ]
+  },
+  "en": {
+   "what": "Pure Almide library for generating SVG documents, working on all Almide targets.",
+   "points": [
+    "Element factories: rect, circle, text, group",
+    "Pipe-friendly attribute modifiers like fill",
+    "svg.path builder for path d strings"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的纯Almide SVG文档生成库",
+   "points": [
+    "rect、circle等元素工厂",
+    "fill、stroke管道式属性修饰",
+    "svg.path构建路径d字符串"
+   ]
+  }
+ },
+ "almide/almide-sqlite": {
+  "ja": {
+   "what": "Almide向けのSQLite3データベースアクセスライブラリ",
+   "points": [
+    "open/open_memoryで接続",
+    "?パラメータ束縛のexecとquery",
+    "transactionで自動commit/rollback"
+   ]
+  },
+  "en": {
+   "what": "SQLite3 database access library for the Almide language, installed with almide add",
+   "points": [
+    "open and open_memory connections",
+    "exec and query with ? parameter binding",
+    "transaction with auto commit/rollback"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的SQLite3数据库访问库",
+   "points": [
+    "open/open_memory连接",
+    "支持?参数绑定的查询",
+    "transaction自动提交回滚"
+   ]
+  }
+ },
+ "almide/almide-lander": {
+  "ja": {
+   "what": "AlmideモジュールをネイティブFFIや各言語向けパッケージに出力するエクスポーター",
+   "points": [
+    "21言語向けバインディング生成",
+    "cdylibとバイトバッファプロトコル",
+    "npm公開用のWasm/JSバンドル出力"
+   ]
+  },
+  "en": {
+   "what": "Package exporter that compiles Almide modules into native libraries for 21 languages plus npm/Wasm",
+   "points": [
+    "One command, 21 language bindings",
+    "cdylib with byte-buffer protocol",
+    "npm-ready Wasm bundle via --target wasm"
+   ]
+  },
+  "zh": {
+   "what": "将Almide模块导出为21种语言原生包的工具",
+   "points": [
+    "21种语言绑定生成",
+    "cdylib与字节缓冲协议",
+    "--target wasm输出npm包"
+   ]
+  }
+ },
+ "almide/almide-agents": {
+  "ja": {
+   "what": "AIエージェントにAlmideを正しく書かせる、AGENTS.mdとClaude Codeスキルの参照パッケージ",
+   "points": [
+    "AGENTS.md形式の構文リファレンス",
+    "Claude Codeスキル SKILL.md",
+    "任意のプロンプトに貼れるMarkdown"
+   ]
+  },
+  "en": {
+   "what": "Drop-in AGENTS.md and Claude Code skill that teach coding agents to write Almide correctly",
+   "points": [
+    "AGENTS.md syntax/stdlib reference",
+    "Claude Code skill (claude-skill/almide/SKILL.md)",
+    "Plain Markdown for any system prompt"
+   ]
+  },
+  "zh": {
+   "what": "教编码智能体正确编写Almide的AGENTS.md与技能包",
+   "points": [
+    "AGENTS.md语法参考",
+    "Claude Code技能SKILL.md",
+    "可粘贴到任意提示的Markdown"
+   ]
+  }
+ },
+ "almide/almide-web": {
+  "ja": {
+   "what": "Almide WASMアプリ向けのブラウザAPIバインディング",
+   "points": [
+    "dom・fetch・timer・consoleモジュール",
+    "コールバック方式の非同期処理",
+    "Node.jsヘッドレステストホスト"
+   ]
+  },
+  "en": {
+   "what": "Browser API bindings for Almide WASM apps, bridging Almide code to DOM, fetch and timers.",
+   "points": [
+    "dom, fetch, timer and console modules",
+    "Callback pattern for async fetch and timers",
+    "Node.js headless host for byte-diffed tests"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide WASM应用的浏览器API绑定",
+   "points": [
+    "dom、fetch、timer、console模块",
+    "异步操作采用回调模式",
+    "Node.js无头测试宿主"
+   ]
+  }
+ },
+ "almide/base64": {
+  "ja": {
+   "what": "Almide向けの純Almide製Base64エンコード・デコードライブラリ",
+   "points": [
+    "標準(RFC 4648)とURL-safe対応",
+    "文字列とバイトリストのAPI",
+    "almide add almide/base64で導入"
+   ]
+  },
+  "en": {
+   "what": "Pure Almide Base64 encoding and decoding library, with standard and URL-safe variants.",
+   "points": [
+    "Standard (RFC 4648) and URL-safe variants",
+    "String and byte-list (List[Int]) APIs",
+    "Result-based decode; install via almide add"
+   ]
+  },
+  "zh": {
+   "what": "Almide的纯Almide实现Base64编解码库",
+   "points": [
+    "支持标准RFC 4648与URL安全",
+    "字符串与字节列表API",
+    "almide add almide/base64安装"
+   ]
+  }
+ },
+ "almide/parsegen": {
+  "ja": {
+   "what": "Almide製のtree-sitter互換パーサジェネレータ。grammar.jsonから構文木を生成する",
+   "points": [
+    "grammar.jsonを直接入力",
+    "tree-sitter parseと同じS式を出力",
+    "C不要でWASM上でも動作"
+   ]
+  },
+  "en": {
+   "what": "Pure-Almide, tree-sitter compatible parser generator that reads grammar.json to build syntax trees",
+   "points": [
+    "Reads grammar.json directly",
+    "Same S-expression as tree-sitter parse",
+    "No C toolchain; runs in WebAssembly"
+   ]
+  },
+  "zh": {
+   "what": "Almide编写的tree-sitter兼容解析器生成器",
+   "points": [
+    "直接读取grammar.json",
+    "输出与tree-sitter相同的S表达式",
+    "无需C，可在WASM运行"
+   ]
+  }
+ },
+ "almide/bigint": {
+  "ja": {
+   "what": "Almide向けの任意精度な符号なし整数演算ライブラリ",
+   "points": [
+    "任意精度の符号なし整数",
+    "Almideで実装",
+    "Almide向けパッケージ"
+   ]
+  },
+  "en": {
+   "what": "Arbitrary-precision unsigned integer arithmetic library for the Almide language",
+   "points": [
+    "Arbitrary-precision unsigned integers",
+    "Written in Almide",
+    "Package for Almide projects"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的任意精度无符号整数运算库",
+   "points": [
+    "任意精度无符号整数",
+    "使用Almide编写",
+    "面向Almide的库"
+   ]
+  }
+ },
+ "almide/almide-wasm-bindgen": {
+  "ja": {
+   "what": "AlmideからWASMとJS/TSバインディングを生成するライブラリ",
+   "points": [
+    "wasm・ESM・d.ts・witの出力",
+    "npm公開可能なdist生成",
+    "Record・Variant・Map・Setの対応"
+   ]
+  },
+  "en": {
+   "what": "Library that generates WebAssembly and JS/TS bindings for Almide, written in Almide",
+   "points": [
+    "Emits .wasm, ESM .js, .d.ts and .wit",
+    "npm-publishable dist with package.json",
+    "Records, variants, tuples, Map, Set, Bytes"
+   ]
+  },
+  "zh": {
+   "what": "为Almide生成WASM与JS/TS绑定的库",
+   "points": [
+    "输出wasm、js、d.ts、wit",
+    "可发布npm的dist目录",
+    "支持Record、Variant、Map、Set"
+   ]
+  }
+ },
+ "almide/toml": {
+  "ja": {
+   "what": "Almide向けのTOML v1.0パーサ兼シリアライザ、Codec連携付き",
+   "points": [
+    "parse/stringifyでValueと相互変換",
+    "encode/decodeでCodec型に対応",
+    "複数行文字列や[[...]]配列テーブル対応"
+   ]
+  },
+  "en": {
+   "what": "TOML v1.0 parser and serializer for Almide, written in pure Almide with Codec integration",
+   "points": [
+    "toml.parse and toml.stringify for Value",
+    "toml.encode and toml.decode for Codec types",
+    "Multiline strings, inline tables, [[...]] arrays"
+   ]
+  },
+  "zh": {
+   "what": "Almide 的 TOML v1.0 解析与序列化库,集成 Codec",
+   "points": [
+    "parse/stringify 转换 Value",
+    "encode/decode 支持 Codec 类型",
+    "支持多行字符串与 [[...]] 表数组"
+   ]
+  }
+ },
+ "almide/rsa": {
+  "ja": {
+   "what": "Almide向けのRSA PKCS1v15暗号化とDER鍵解析ライブラリ",
+   "points": [
+    "RSA PKCS1v15暗号化",
+    "DER形式の鍵のパース",
+    "Almideで実装"
+   ]
+  },
+  "en": {
+   "what": "An Almide library for RSA PKCS1v15 encryption with DER key parsing.",
+   "points": [
+    "RSA PKCS1v15 encryption",
+    "DER key parsing",
+    "Written in Almide"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的RSA PKCS1v15加密与DER密钥解析库",
+   "points": [
+    "RSA PKCS1v15加密",
+    "DER密钥解析",
+    "使用Almide编写"
+   ]
+  }
+ },
+ "almide/.github": {
+  "ja": {
+   "what": "almide組織のプロフィールとコミュニティ規約ファイルを置くリポジトリ",
+   "points": [
+    "組織プロフィール",
+    "コミュニティヘルスファイル",
+    "almide組織の共通設定"
+   ]
+  },
+  "en": {
+   "what": "Repository holding the almide organization's profile and community health files",
+   "points": [
+    "Organization profile",
+    "Community health files",
+    "Shared files for the almide organization"
+   ]
+  },
+  "zh": {
+   "what": "almide组织的主页与社区规范文件仓库",
+   "points": [
+    "组织主页",
+    "社区健康文件",
+    "almide组织共用文件"
+   ]
+  }
+ },
+ "almide/csv": {
+  "ja": {
+   "what": "RFC 4180対応の、Almide向け純Almide製CSVパーサ兼シリアライザ",
+   "points": [
+    "引用符付きフィールドと改行対応",
+    "ヘッダー行つきのオブジェクト配列変換",
+    "parseとstringifyのラウンドトリップ保証"
+   ]
+  },
+  "en": {
+   "what": "Pure Almide CSV parser and serializer with RFC 4180 support, for the Almide language",
+   "points": [
+    "Quoted fields, escaped quotes, embedded newlines",
+    "Header-row parsing to array of objects",
+    "Roundtrip-safe parse and stringify"
+   ]
+  },
+  "zh": {
+   "what": "Almide 的 CSV 解析与序列化库,支持 RFC 4180",
+   "points": [
+    "支持引号字段与转义引号",
+    "带表头解析为对象数组",
+    "解析与序列化可往返无损"
+   ]
+  }
+ },
+ "almide/almide-js": {
+  "ja": {
+   "what": "AlmideのJS/TS向けWASM SDKの進捗記録とベンチマーク集",
+   "points": [
+    "ESM・.d.ts・.wit出力の一括生成",
+    "Rust+wasm-bindgenとの速度比較",
+    "Node・Bun・Deno・ブラウザ対応"
+   ]
+  },
+  "en": {
+   "what": "Progress log and benchmarks for Almide's JS/TS-friendly WASM SDK and its binding generator.",
+   "points": [
+    "One-command .wasm, ESM, .d.ts, .wit output",
+    "Head-to-head benchmarks vs Rust+wasm-bindgen",
+    "Runs in Node, Bun, Deno and browsers"
+   ]
+  },
+  "zh": {
+   "what": "Almide的JS/TS向WASM SDK进度与基准记录",
+   "points": [
+    "一键生成ESM、.d.ts、.wit",
+    "对比Rust+wasm-bindgen基准",
+    "支持Node、Bun、Deno、浏览器"
+   ]
+  }
+ },
+ "almide-graphics/nendo": {
+  "ja": {
+   "what": "3Dアバターファイルを検査・編集・カスタマイズするツールキット",
+   "points": [
+    "VRM 0.x/1.0対応のCLIとGLB解析",
+    "ブラウザ上の3Dキャラクターエディタ",
+    "Blender連携とFBXからVRMへの変換"
+   ]
+  },
+  "en": {
+   "what": "Avatar sculpting toolkit to inspect, edit and visually customize VRM 3D avatar files",
+   "points": [
+    "CLI: inspect, validate, meta, migrate, bake",
+    "Browser editor for parts, shape, face, textures",
+    "Blender headless FBX-to-VRM conversion"
+   ]
+  },
+  "zh": {
+   "what": "用于检查、编辑和定制3D头像的工具包",
+   "points": [
+    "支持VRM 0.x/1.0的命令行",
+    "浏览器3D角色编辑器",
+    "Blender联动FBX转VRM"
+   ]
+  }
+ },
+ "almide-graphics/nn": {
+  "ja": {
+   "what": "Almide製matrix stdlib上のTransformer・信号処理ライブラリ",
+   "points": [
+    "Whisper tinyのネイティブ/WASM推論",
+    "GGUF/GGML重みローダーとBPE tokenizer",
+    "WAV・mel・FFTの音声前処理"
+   ]
+  },
+  "en": {
+   "what": "Transformer and signal-processing library in Almide, built on the matrix stdlib, with Whisper inference",
+   "points": [
+    "Whisper tiny end-to-end, native and WASM",
+    "GGUF/GGML loaders and BPE tokenizer",
+    "WAV decode, mel spectrogram and FFT"
+   ]
+  },
+  "zh": {
+   "what": "基于matrix标准库的Almide Transformer与信号处理库",
+   "points": [
+    "Whisper tiny原生与WASM推理",
+    "GGUF/GGML加载器与BPE分词",
+    "WAV解码、mel谱与FFT"
+   ]
+  }
+ },
+ "almide-graphics/obsid": {
+  "ja": {
+   "what": "Almide向けのCanvas 2D・WebGL・3Dメッシュ描画をWASMで行うグラフィックスランタイム",
+   "points": [
+    "Canvas 2D・WebGL 1.0バインディング",
+    "シーングラフ・軌道カメラ・照明の3D描画",
+    "wasmtime+wgpuのネイティブホスト"
+   ]
+  },
+  "en": {
+   "what": "Graphics runtime for Almide providing Canvas 2D, WebGL and 3D mesh rendering via WASM",
+   "points": [
+    "Canvas 2D and WebGL 1.0 API bindings",
+    "3D mesh renderer with scene graph, orbit camera, lighting",
+    "Native host on Rust with wasmtime, wgpu, winit"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的图形运行时，通过WASM支持2D、WebGL与3D",
+   "points": [
+    "Canvas 2D与WebGL 1.0绑定",
+    "含场景图与轨道相机的3D渲染",
+    "wasmtime+wgpu原生宿主"
+   ]
+  }
+ },
+ "almide-graphics/ceangal": {
+  "ja": {
+   "what": "Almide向けのGPUネイティブUIフレームワーク",
+   "points": [
+    "Yoga互換のFlexboxレイアウト",
+    "計算シェーダーによるGPU描画",
+    "Cellベースの反応的状態管理"
+   ]
+  },
+  "en": {
+   "what": "GPU-native UI framework for Almide: layout, widgets and interaction on top of snaidhm",
+   "points": [
+    "Yoga-compatible Flexbox layout engine",
+    "Compute-shader GPU rendering, no Canvas 2D",
+    "DOM overlay for selection, ARIA and IME"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的GPU原生UI框架",
+   "points": [
+    "兼容Yoga的Flexbox布局",
+    "计算着色器GPU渲染",
+    "基于Cell的响应式状态"
+   ]
+  }
+ },
+ "almide-graphics/lumen": {
+  "ja": {
+   "what": "Almide向けの純粋なグラフィックス数学プリミティブ集",
+   "points": [
+    "vec3のベクトル演算",
+    "mat4の行列変換とカメラ",
+    "colorの生成・混色・CSS出力"
+   ]
+  },
+  "en": {
+   "what": "Pure graphics math primitives for Almide that use no @extern(wasm) and run on every target",
+   "points": [
+    "lumen.vec3 vector operations",
+    "lumen.mat4 transforms, look_at, perspective",
+    "lumen.color rgb, from_hex, mix, to_css"
+   ]
+  },
+  "zh": {
+   "what": "Almide的纯图形数学基础库",
+   "points": [
+    "vec3向量运算",
+    "mat4矩阵与相机变换",
+    "color颜色混合与CSS输出"
+   ]
+  }
+ },
+ "almide-graphics/ceangal-native": {
+  "ja": {
+   "what": "ceangal向けネイティブwgpuバックエンドの概念実証",
+   "points": [
+    "wgpuベースのバックエンド",
+    "ceangal用のネイティブ描画",
+    "Rustで実装"
+   ]
+  },
+  "en": {
+   "what": "Proof-of-concept native wgpu backend for ceangal, written in Rust",
+   "points": [
+    "Native wgpu backend",
+    "Backend for ceangal",
+    "Written in Rust"
+   ]
+  },
+  "zh": {
+   "what": "ceangal的原生wgpu后端概念验证",
+   "points": [
+    "基于wgpu的后端",
+    "面向ceangal",
+    "使用Rust编写"
+   ]
+  }
+ },
+ "almide-graphics/cruth": {
+  "ja": {
+   "what": "Almide向けのVRM/glTFキャラクター層。解析・形状・モーフ・表情を扱う",
+   "points": [
+    "GLB/glTFのJSON・accessor解析",
+    "pos+normal+uv 32バイト頂点",
+    "VRM 0.xのblendShape表情"
+   ]
+  },
+  "en": {
+   "what": "Renderer-agnostic VRM/glTF character layer for Almide: parsing, geometry, morphs, expressions",
+   "points": [
+    "GLB/glTF container, accessor, bufferView reading",
+    "32-byte pos+normal+uv vertices, u32 indices",
+    "VRM 0.x visemes and blink/joy/angry expressions"
+   ]
+  },
+  "zh": {
+   "what": "Almide的VRM/glTF角色层，含解析与表情",
+   "points": [
+    "GLB/glTF解析",
+    "32字节顶点布局",
+    "VRM 0.x表情与形态目标"
+   ]
+  }
+ },
+ "almide-graphics/ceangal-anime": {
+  "ja": {
+   "what": "anime.js風のtween・easing・timeline・staggerを備えたAlmide用アニメーションエンジン",
+   "points": [
+    "31種のeasing関数とID指定の呼び出し",
+    "loop・delay・方向指定付きのtween",
+    "linear・from_centerなどのstagger"
+   ]
+  },
+  "en": {
+   "what": "Pure-WASM animation engine for Almide with anime.js-inspired tween, easing, timeline and stagger",
+   "points": [
+    "31 Penner easing functions with ID dispatch",
+    "Tweens with loop, delay, direction, pause/resume",
+    "Stagger: linear, range, from_center, from_edges"
+   ]
+  },
+  "zh": {
+   "what": "受anime.js启发的Almide动画引擎",
+   "points": [
+    "31种缓动函数,支持ID调用",
+    "带循环、延迟、方向的tween",
+    "timeline与stagger错开延迟"
+   ]
+  }
+ },
+ "almide-ai/manus": {
+  "ja": {
+   "what": "macOSの実デスクトップをClaudeに操作させるAlmide製エージェント",
+   "points": [
+    "スクリーンショット→判断→操作のループ",
+    "cliclickでクリック・入力・キー操作",
+    "操作ごとの[y/N]確認と40ステップ上限"
+   ]
+  },
+  "en": {
+   "what": "A computer-use agent in Almide that lets Claude see and control a real macOS desktop.",
+   "points": [
+    "Screenshot, think, act loop via Messages API",
+    "Clicks, typing and keys run through cliclick",
+    "Per-action [y/N] prompt and 40-step cap"
+   ]
+  },
+  "zh": {
+   "what": "用Almide编写的macOS桌面操控智能体",
+   "points": [
+    "截图、思考、操作的循环",
+    "通过cliclick执行点击与输入",
+    "逐步确认与40步上限"
+   ]
+  }
+ },
+ "almide-graphics/slabhra": {
+  "ja": {
+   "what": "Almide製の、リバースモードautogradとテンソルを備えた微分可能プログラミング基盤",
+   "points": [
+    "リバースモード自動微分テープ",
+    "SGD・Adamオプティマイザ",
+    "PyTorch照合済みMLP・DLGN例"
+   ]
+  },
+  "en": {
+   "what": "Differentiable programming library for Almide: reverse-mode autograd, tensors and optimizers",
+   "points": [
+    "Reverse-mode autograd tape, depth-ordered backward",
+    "SGD and Adam optimizers",
+    "MLP and DLGN examples checked against PyTorch"
+   ]
+  },
+  "zh": {
+   "what": "Almide原生的可微编程库,含反向自动微分",
+   "points": [
+    "反向模式自动微分磁带",
+    "SGD与Adam优化器",
+    "对照PyTorch验证的示例"
+   ]
+  }
+ },
+ "almide-ai/homullus": {
+  "ja": {
+   "what": "Almide製の、モジュール式AIエージェントCLIランタイム",
+   "points": [
+    "Bash・Read・Write等6つの組込ツール",
+    "3種の権限モードと危険コマンド検知",
+    "almai経由のマルチプロバイダ対応"
+   ]
+  },
+  "en": {
+   "what": "Modular AI agent CLI runtime written in Almide, built on almai for multiple LLM providers",
+   "points": [
+    "REPL with /model, /tools, /trust slash commands",
+    "6 built-in tools: Bash, Read, Write, Edit, Glob, Grep",
+    "3 permission modes plus dangerous Bash detection"
+   ]
+  },
+  "zh": {
+   "what": "用Almide编写的模块化AI代理CLI运行时",
+   "points": [
+    "内置Bash、Read、Write等6种工具",
+    "三种权限模式与危险命令检测",
+    "基于almai的多提供商支持"
+   ]
+  }
+ },
+ "almd-mc/mc-bot-cli": {
+  "ja": {
+   "what": "Almide製Minecraftボット用のCLI",
+   "points": [
+    "host・port指定で接続",
+    "初回にMicrosoftデバイス認証",
+    "トークンをキャッシュ"
+   ]
+  },
+  "en": {
+   "what": "A command-line interface for the Almide Minecraft bot, written in Almide.",
+   "points": [
+    "Connects to a given host and port",
+    "Microsoft device code auth on first run",
+    "Cached token for later runs"
+   ]
+  },
+  "zh": {
+   "what": "Almide Minecraft 机器人的命令行工具",
+   "points": [
+    "可指定主机与端口",
+    "首次运行微软设备码认证",
+    "缓存令牌供后续使用"
+   ]
+  }
+ },
+ "almide-ai/almai": {
+  "ja": {
+   "what": "Almide用のマルチプロバイダLLMクライアント。単一の窓口で各社に対応",
+   "points": [
+    "8種のプロバイダをprefixで切替",
+    "JSONモードとツール呼び出し",
+    "指数バックオフのcall_retry"
+   ]
+  },
+  "en": {
+   "what": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
+   "points": [
+    "Anthropic, OpenAI, Gemini, Azure, Cloudflare, CLI",
+    "JSON mode and tool calling",
+    "call_retry with exponential backoff"
+   ]
+  },
+  "zh": {
+   "what": "Almide的多提供商LLM客户端,统一接口",
+   "points": [
+    "按前缀切换8种提供商",
+    "JSON模式与工具调用",
+    "call_retry指数退避重试"
+   ]
+  }
+ },
+ "almd-mc/mc-protocol": {
+  "ja": {
+   "what": "AlmideでMinecraftプロトコルを実装したライブラリ",
+   "points": [
+    "AES-128-CFB8暗号化とzlib圧縮",
+    "VarInt/VarLongの符号化と復号",
+    "パケットの構築・解析・圧縮"
+   ]
+  },
+  "en": {
+   "what": "Minecraft protocol implementation in Almide: TCP, packet framing, encryption, compression",
+   "points": [
+    "AES-128-CFB8 encryption via almide/aes",
+    "Zlib packet compression",
+    "VarInt/VarLong encoding and decoding"
+   ]
+  },
+  "zh": {
+   "what": "用Almide实现的Minecraft协议库",
+   "points": [
+    "AES-128-CFB8加密",
+    "zlib压缩",
+    "VarInt/VarLong编解码"
+   ]
+  }
+ },
+ "almd-mc/mc-bot": {
+  "ja": {
+   "what": "Almideで書かれたMinecraftボットのフレームワーク",
+   "points": [
+    "認証とログインシーケンスの処理",
+    "NeoForgeハンドシェイク対応",
+    "keep aliveの処理"
+   ]
+  },
+  "en": {
+   "what": "Minecraft bot framework in Almide handling authentication, login, NeoForge handshake and keep alive",
+   "points": [
+    "Authentication and login sequence",
+    "NeoForge handshake",
+    "Keep alive handling"
+   ]
+  },
+  "zh": {
+   "what": "用Almide编写的Minecraft机器人框架",
+   "points": [
+    "处理认证与登录流程",
+    "NeoForge握手",
+    "保持连接(keep alive)"
+   ]
+  }
+ },
+ "almd-mc/mc-auth": {
+  "ja": {
+   "what": "Almide向けのMinecraft認証モジュール",
+   "points": [
+    "Almide用モジュール",
+    "gitによる依存指定",
+    "Minecraft認証"
+   ]
+  },
+  "en": {
+   "what": "Minecraft auth module for the Almide language, installed as a git dependency",
+   "points": [
+    "Minecraft authentication module",
+    "Written for Almide",
+    "Install via git dependency in TOML"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft认证模块",
+   "points": [
+    "Almide模块",
+    "Minecraft认证",
+    "通过git依赖安装"
+   ]
+  }
+ },
+ "almd-mc/mc-block": {
+  "ja": {
+   "what": "Almide向けのMinecraftブロックモジュール",
+   "points": [
+    "Almideのモジュールとして提供",
+    "gitでの依存追加に対応",
+    "Minecraftブロックを扱う"
+   ]
+  },
+  "en": {
+   "what": "A Minecraft block module for the Almide programming language.",
+   "points": [
+    "Module for Almide",
+    "Installed as a git dependency",
+    "Minecraft block support"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft方块模块",
+   "points": [
+    "Almide模块",
+    "通过git依赖安装",
+    "Minecraft方块支持"
+   ]
+  }
+ },
+ "almd-mc/mc-chat": {
+  "ja": {
+   "what": "Almide向けのMinecraftチャットモジュール",
+   "points": [
+    "Almideのモジュール",
+    "gitによる依存追加",
+    "Minecraftチャット向け"
+   ]
+  },
+  "en": {
+   "what": "A Minecraft chat module for the Almide language, installed as a git dependency.",
+   "points": [
+    "Minecraft chat module",
+    "Written in Almide",
+    "Install via git dependency in TOML"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft聊天模块",
+   "points": [
+    "Almide模块",
+    "Minecraft聊天",
+    "通过git依赖安装"
+   ]
+  }
+ },
+ "almd-mc/mc-bot-ai": {
+  "ja": {
+   "what": "almaiを用いたMinecraftボット向けAI統合レイヤー(Phase 5 Intelligence)",
+   "points": [
+    "Minecraftボット向けAI統合",
+    "almaiによるPhase 5 Intelligence",
+    "Almideで実装"
+   ]
+  },
+  "en": {
+   "what": "AI integration layer for Minecraft bots, covering Phase 5 Intelligence with almai",
+   "points": [
+    "AI integration for Minecraft bots",
+    "Phase 5 Intelligence via almai",
+    "Written in Almide"
+   ]
+  },
+  "zh": {
+   "what": "面向Minecraft机器人的AI集成层,基于almai",
+   "points": [
+    "Minecraft机器人AI集成",
+    "almai实现Phase 5 Intelligence",
+    "使用Almide编写"
+   ]
+  }
+ },
+ "almd-mc/mc-chunk": {
+  "ja": {
+   "what": "Almide向けのMinecraftチャンク用モジュール",
+   "points": [
+    "Almideモジュール",
+    "Minecraftチャンクを扱う",
+    "gitでの依存追加"
+   ]
+  },
+  "en": {
+   "what": "A Minecraft chunk module for the Almide language, installed as a git dependency.",
+   "points": [
+    "Minecraft chunk module",
+    "Written for Almide",
+    "Install via git dependency in TOML"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft区块模块",
+   "points": [
+    "Almide模块",
+    "Minecraft区块支持",
+    "通过git依赖安装"
+   ]
+  }
+ },
+ "almd-mc/mc-entity": {
+  "ja": {
+   "what": "Almide向けのMinecraftエンティティモジュール",
+   "points": [
+    "Almide用モジュール",
+    "Minecraftエンティティを扱う",
+    "gitからの依存追加に対応"
+   ]
+  },
+  "en": {
+   "what": "A Minecraft entity module for the Almide language, installed as a git dependency.",
+   "points": [
+    "Minecraft entity module",
+    "Written for Almide",
+    "Install via git dependency in TOML"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft实体模块",
+   "points": [
+    "Almide专用模块",
+    "Minecraft实体",
+    "通过git依赖安装"
+   ]
+  }
+ },
+ "almd-mc/mc-item": {
+  "ja": {
+   "what": "Almide向けのMinecraftアイテムモジュール",
+   "points": [
+    "Almideのモジュール",
+    "Minecraftアイテムを対象",
+    "gitでdependenciesに追加"
+   ]
+  },
+  "en": {
+   "what": "A Minecraft item module for the Almide programming language.",
+   "points": [
+    "Module for Almide",
+    "Targets Minecraft items",
+    "Installed via a git dependency in TOML"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft物品模块",
+   "points": [
+    "Almide模块",
+    "面向Minecraft物品",
+    "通过git依赖安装"
+   ]
+  }
+ },
+ "almd-mc/mc-pathfinder": {
+  "ja": {
+   "what": "mineflayer-pathfinderのAlmide実装で、Minecraftボット向けA*経路探索",
+   "points": [
+    "A*による経路探索",
+    "Minecraftボット向け",
+    "Almideで実装"
+   ]
+  },
+  "en": {
+   "what": "An Almide implementation of mineflayer-pathfinder: A* pathfinding for Minecraft bots",
+   "points": [
+    "A* pathfinding",
+    "For Minecraft bots",
+    "Written in Almide"
+   ]
+  },
+  "zh": {
+   "what": "mineflayer-pathfinder的Almide实现,面向Minecraft机器人的A*寻路",
+   "points": [
+    "A*寻路算法",
+    "面向Minecraft机器人",
+    "使用Almide编写"
+   ]
+  }
+ },
+ "almd-mc/mc-registry": {
+  "ja": {
+   "what": "Almide向けのMinecraftレジストリモジュール",
+   "points": [
+    "Almideのモジュール",
+    "Minecraftレジストリ対応",
+    "gitによる依存追加"
+   ]
+  },
+  "en": {
+   "what": "A Minecraft registry module for the Almide language, installable as a git dependency.",
+   "points": [
+    "Minecraft registry module",
+    "Written for Almide",
+    "Install via git dependency in TOML"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft注册表模块",
+   "points": [
+    "Almide模块",
+    "Minecraft注册表",
+    "通过git依赖安装"
+   ]
+  }
+ },
+ "almd-mc/mc-world": {
+  "ja": {
+   "what": "Almide向けのMinecraftワールドモジュール",
+   "points": [
+    "Almide用モジュール",
+    "Minecraftワールドを対象",
+    "gitによる依存追加"
+   ]
+  },
+  "en": {
+   "what": "A Minecraft world module for the Almide programming language.",
+   "points": [
+    "Module for Almide",
+    "Targets Minecraft worlds",
+    "Installed as a git dependency in toml"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft世界模块",
+   "points": [
+    "Almide专用模块",
+    "面向Minecraft世界",
+    "通过git依赖安装"
+   ]
+  }
+ },
+ "almd-mc/neoforge": {
+  "ja": {
+   "what": "Almide向けMinecraft neoforgeモジュール",
+   "points": [
+    "Almideのモジュール",
+    "git依存でインストール",
+    "neoforge対象"
+   ]
+  },
+  "en": {
+   "what": "A Minecraft neoforge module for the Almide language, installed as a git dependency.",
+   "points": [
+    "Minecraft neoforge module",
+    "Almide dependency via git",
+    "Added through Almide's dependencies TOML"
+   ]
+  },
+  "zh": {
+   "what": "Almide的Minecraft neoforge模块",
+   "points": [
+    "Almide模块",
+    "通过git依赖安装",
+    "面向neoforge"
+   ]
+  }
+ },
+ "almd-mc/mc-collect": {
+  "ja": {
+   "what": "Minecraft bot向けブロック収集自動化。mineflayer-collectblockのAlmide実装",
+   "points": [
+    "ブロック収集の自動化",
+    "mineflayer-collectblockのAlmide版",
+    "Minecraft bot向けライブラリ"
+   ]
+  },
+  "en": {
+   "what": "Block collection automation for Minecraft bots, an Almide implementation of mineflayer-collectblock",
+   "points": [
+    "Block collection automation",
+    "Minecraft bot support",
+    "Almide port of mineflayer-collectblock"
+   ]
+  },
+  "zh": {
+   "what": "Minecraft机器人的方块收集自动化库",
+   "points": [
+    "自动收集方块",
+    "面向Minecraft机器人",
+    "mineflayer-collectblock的Almide实现"
+   ]
+  }
+ },
+ "almd-mc/mc-data": {
+  "ja": {
+   "what": "Almide向けのMinecraftデータ定義集",
+   "points": [
+    "ブロックの定義",
+    "エンティティの定義",
+    "ゲームモードの定義"
+   ]
+  },
+  "en": {
+   "what": "Minecraft data definitions for Almide, covering blocks, entities and game modes",
+   "points": [
+    "Block definitions",
+    "Entity definitions",
+    "Game mode definitions"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft数据定义",
+   "points": [
+    "方块定义",
+    "实体定义",
+    "游戏模式定义"
+   ]
+  }
+ },
+ "almd-mc/mc-inventory": {
+  "ja": {
+   "what": "Minecraftボット向けのインベントリウィンドウ管理。prismarine-windowsのAlmide実装",
+   "points": [
+    "インベントリウィンドウ管理",
+    "prismarine-windowsのAlmide実装",
+    "Minecraftボット向け"
+   ]
+  },
+  "en": {
+   "what": "Inventory window management for Minecraft bots, an Almide implementation of prismarine-windows",
+   "points": [
+    "Inventory window management",
+    "Almide port of prismarine-windows",
+    "Built for Minecraft bots"
+   ]
+  },
+  "zh": {
+   "what": "面向Minecraft机器人的物品栏窗口管理",
+   "points": [
+    "物品栏窗口管理",
+    "prismarine-windows的Almide实现",
+    "面向Minecraft机器人"
+   ]
+  }
+ },
+ "almd-mc/mc-proxy": {
+  "ja": {
+   "what": "prismarine-proxyをAlmideで実装したMinecraftプロキシの基盤",
+   "points": [
+    "Almideによる実装",
+    "prismarine-proxy準拠の設計",
+    "Minecraftプロキシの土台"
+   ]
+  },
+  "en": {
+   "what": "Minecraft proxy foundation, an Almide implementation of prismarine-proxy.",
+   "points": [
+    "Written in Almide",
+    "Implementation of prismarine-proxy",
+    "Foundation for Minecraft proxies"
+   ]
+  },
+  "zh": {
+   "what": "用Almide实现prismarine-proxy的Minecraft代理基础",
+   "points": [
+    "使用Almide编写",
+    "prismarine-proxy的实现",
+    "Minecraft代理基础"
+   ]
+  }
+ },
+ "almd-mc/mc-physics": {
+  "ja": {
+   "what": "Almide向けのMinecraft物理シミュレーション(prismarine-physics相当)",
+   "points": [
+    "Minecraft物理シミュレーション",
+    "prismarine-physics相当の機能",
+    "Almideで実装"
+   ]
+  },
+  "en": {
+   "what": "Minecraft physics simulation library for Almide, equivalent to prismarine-physics.",
+   "points": [
+    "Minecraft physics simulation",
+    "prismarine-physics equivalent",
+    "Written in Almide"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft物理模拟库",
+   "points": [
+    "Minecraft物理模拟",
+    "对标prismarine-physics",
+    "使用Almide编写"
+   ]
+  }
+ },
+ "almd-mc/mc-pvp": {
+  "ja": {
+   "what": "mineflayer-pvpをAlmideで実装した、Minecraftボット向けPvP戦闘ユーティリティ",
+   "points": [
+    "Almideによる実装",
+    "Minecraftボット向けPvP戦闘",
+    "mineflayer-pvpの移植"
+   ]
+  },
+  "en": {
+   "what": "PvP combat utilities for Minecraft bots, an Almide implementation of mineflayer-pvp",
+   "points": [
+    "Written in Almide",
+    "PvP combat for Minecraft bots",
+    "Implementation of mineflayer-pvp"
+   ]
+  },
+  "zh": {
+   "what": "用Almide实现的Minecraft机器人PvP战斗工具",
+   "points": [
+    "Almide语言实现",
+    "面向Minecraft机器人",
+    "mineflayer-pvp的实现"
+   ]
+  }
+ },
+ "almd-mc/mc-recipe": {
+  "ja": {
+   "what": "Almide向けのMinecraftクラフトレシピライブラリ(prismarine-recipe相当)",
+   "points": [
+    "Minecraftのクラフトレシピ",
+    "Almideで実装",
+    "prismarine-recipe相当の機能"
+   ]
+  },
+  "en": {
+   "what": "Minecraft crafting recipes for Almide, an equivalent of prismarine-recipe.",
+   "points": [
+    "Minecraft crafting recipes",
+    "Written in Almide",
+    "prismarine-recipe equivalent"
+   ]
+  },
+  "zh": {
+   "what": "面向Almide的Minecraft合成配方库,对标prismarine-recipe",
+   "points": [
+    "Minecraft合成配方",
+    "使用Almide编写",
+    "对标prismarine-recipe"
+   ]
+  }
+ },
+ "almd-mc/mc-server": {
+  "ja": {
+   "what": "node-minecraft-protocolのサーバーモードをAlmideで実装したMinecraftサーバー基盤",
+   "points": [
+    "Almideによる実装",
+    "Minecraftサーバープロトコル基盤",
+    "node-minecraft-protocolのサーバーモード"
+   ]
+  },
+  "en": {
+   "what": "Almide implementation of node-minecraft-protocol's server mode, a Minecraft server protocol base",
+   "points": [
+    "Written in Almide",
+    "Minecraft server protocol foundation",
+    "Server mode of node-minecraft-protocol"
+   ]
+  },
+  "zh": {
+   "what": "用Almide实现的Minecraft服务器协议基础",
+   "points": [
+    "Almide语言实现",
+    "Minecraft服务器协议基础",
+    "node-minecraft-protocol服务端模式"
+   ]
+  }
+ },
+ "almd-mc/mc-server-impl": {
+  "ja": {
+   "what": "flying-squidをAlmideで実装した軽量Minecraftサーバー",
+   "points": [
+    "Almideによる実装",
+    "flying-squidの再実装",
+    "軽量なMinecraftサーバー"
+   ]
+  },
+  "en": {
+   "what": "A lightweight Minecraft server implementation, an Almide implementation of flying-squid",
+   "points": [
+    "Written in Almide",
+    "Implementation of flying-squid",
+    "Lightweight Minecraft server"
+   ]
+  },
+  "zh": {
+   "what": "用Almide实现flying-squid的轻量Minecraft服务器",
+   "points": [
+    "以Almide编写",
+    "实现flying-squid",
+    "轻量Minecraft服务器"
+   ]
+  }
+ },
+ "Aid-On/llm-throttle": {
+  "ja": {
+   "what": "LLM API向けにRPMとTPMを同時制御するレート制限ライブラリ",
+   "points": [
+    "RPM・TPMの二重制限",
+    "トークンバケットとバースト対応",
+    "実消費量による事後調整"
+   ]
+  },
+  "en": {
+   "what": "A TypeScript rate limiting library that controls both RPM and TPM for LLM API calls",
+   "points": [
+    "Dual RPM and TPM limiting",
+    "Token bucket with burst limits",
+    "Post-adjustment by actual token usage"
+   ]
+  },
+  "zh": {
+   "what": "同时限制RPM与TPM的LLM API限流库",
+   "points": [
+    "RPM与TPM双重限流",
+    "令牌桶与突发限制",
+    "按实际用量事后调整"
+   ]
+  }
+ },
+ "Aid-On/llm-queue-dispatcher": {
+  "ja": {
+   "what": "LLMリクエストをスコアリングで選び出す、レート制限対応のキュー",
+   "points": [
+    "多次元スコアリングによる選択",
+    "@aid-on/llm-throttleとの連携",
+    "差し替え可能なストレージ"
+   ]
+  },
+  "en": {
+   "what": "A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.",
+   "points": [
+    "Multi-dimensional request scoring",
+    "@aid-on/llm-throttle rate limiter integration",
+    "Pluggable storage adapters, in-memory included"
+   ]
+  },
+  "zh": {
+   "what": "按评分与限流选取LLM请求的队列调度器",
+   "points": [
+    "多维度请求评分",
+    "集成@aid-on/llm-throttle",
+    "可插拔存储适配器"
+   ]
+  }
+ },
+ "Aid-On/aid-on-ui-system": {
+  "ja": {
+   "what": "aid-on-ui-system2という名称のUIシステムのリポジトリ",
+   "points": [
+    "TypeScriptで記述",
+    "JavaScriptを併用",
+    "READMEは名称のみ記載"
+   ]
+  },
+  "en": {
+   "what": "A repository named aid-on-ui-system2, apparently a UI system; its README gives no details",
+   "points": [
+    "Written in TypeScript",
+    "Also uses JavaScript",
+    "README contains only the project name"
+   ]
+  },
+  "zh": {
+   "what": "名为aid-on-ui-system2的UI系统仓库",
+   "points": [
+    "使用TypeScript编写",
+    "同时使用JavaScript",
+    "README仅含项目名称"
+   ]
+  }
+ },
+ "Aid-On/whenm": {
+  "ja": {
+   "what": "時間と状態変化を理解するスキーマレスな時系列メモリシステム",
+   "points": [
+    "Event Calculusによる時間推論",
+    "自然言語のremember/ask",
+    "Groq・Gemini・Cloudflare対応"
+   ]
+  },
+  "en": {
+   "what": "Schemaless temporal memory for AI apps that tracks state changes and answers time-based questions",
+   "points": [
+    "Event Calculus-based temporal reasoning",
+    "Natural-language remember() and ask()",
+    "Groq, Gemini and Cloudflare providers"
+   ]
+  },
+  "zh": {
+   "what": "理解时间与状态变化的无模式时序记忆系统",
+   "points": [
+    "基于Event Calculus的时间推理",
+    "自然语言remember与ask",
+    "支持Groq、Gemini、Cloudflare"
+   ]
+  }
+ },
+ "Aid-On/templex": {
+  "ja": {
+   "what": "文章から再利用可能な文章テンプレートを抽出し新規記事を生成するライブラリ",
+   "points": [
+    "構成・修辞技法のテンプレート抽出",
+    "問題解決型・恐怖訴求型のパターン",
+    "英語・日本語プロンプト対応"
+   ]
+  },
+  "en": {
+   "what": "TypeScript library that extracts reusable writing templates from text with LLMs and generates new articles",
+   "points": [
+    "Template extraction of structure and rhetoric",
+    "Problem-solution and fear-driven patterns",
+    "English and Japanese prompts, progress tracking"
+   ]
+  },
+  "zh": {
+   "what": "用AI从文本提取写作模板并生成新文章的库",
+   "points": [
+    "提取结构与修辞模板",
+    "问题解决与恐惧驱动模式",
+    "支持英语和日语提示词"
+   ]
+  }
+ },
+ "Aid-On/fractop": {
+  "ja": {
+   "what": "LLMの文脈上限を超える長文を分割・処理・統合するTypeScriptライブラリ",
+   "points": [
+    "チェーン式Fluent APIとチャンク分割",
+    "並列処理・リトライ・タイムアウト",
+    "Nagareストリームとバッチ処理"
+   ]
+  },
+  "en": {
+   "what": "TypeScript library that chunks, processes and merges text too long for an LLM's context limit.",
+   "points": [
+    "Fluent API with overlapping smart chunking",
+    "Parallel workers, retry and timeout",
+    "Nagare streaming and batch processing"
+   ]
+  },
+  "zh": {
+   "what": "将超出LLM上下文的长文分块处理并合并的TS库",
+   "points": [
+    "链式Fluent API与智能分块",
+    "并行、重试与超时控制",
+    "Nagare流式与批量处理"
+   ]
+  }
+ },
+ "Aid-On/iteratop": {
+  "ja": {
+   "what": "LLMと収束ループを組むTypeScript製の反復処理ライブラリ",
+   "points": [
+    "ビルダーとプリセットで設定",
+    "nagareによる反復のストリーミング",
+    "コスト・スコアの組み込み計測"
+   ]
+  },
+  "en": {
+   "what": "TypeScript library for convergent iteration loops with LLMs, inspired by Scrum and OODA loops",
+   "points": [
+    "Builder pattern and presets: fast, thorough, balanced",
+    "Streaming iteration states via @aid-on/nagare",
+    "Built-in metrics for cost, performance, convergence"
+   ]
+  },
+  "zh": {
+   "what": "面向LLM的TypeScript收敛迭代循环库",
+   "points": [
+    "构建器模式与预设配置",
+    "基于nagare的迭代流式输出",
+    "内置成本与收敛指标"
+   ]
+  }
+ },
+ "Aid-On/nagare": {
+  "ja": {
+   "what": "ReadableStreamそのものにリアクティブ拡張を加えるエッジ向けストリームライブラリ",
+   "points": [
+    "mapAsyncの順序保持並行処理",
+    "自動バックプレッシャー制御",
+    "SSE対応とtoResponse出力"
+   ]
+  },
+  "en": {
+   "what": "A TypeScript stream library where Stream<T> is a ReadableStream, with reactive operators for the edge",
+   "points": [
+    "Order-preserving concurrent mapAsync",
+    "Automatic backpressure handling",
+    "Native SSE and direct toResponse output"
+   ]
+  },
+  "zh": {
+   "what": "为边缘计算扩展ReadableStream的响应式流库",
+   "points": [
+    "mapAsync并发且保序",
+    "自动背压处理",
+    "原生SSE与toResponse输出"
+   ]
+  }
+ },
+ "Aid-On/fizz-brain-orchestrator": {
+  "ja": {
+   "what": "コメントを文の断片ストリームに変える Fizz の brain 合成 CLI",
+   "points": [
+    "classify・few-shot・prompt の連結",
+    "fizz-llm-client 経由の LLM 呼び出し",
+    "SentenceFragment を NDJSON で出力"
+   ]
+  },
+  "en": {
+   "what": "Fizz brain CLI that composes the pipeline turning each comment into sentence fragments on stdout",
+   "points": [
+    "Classify, few-shot search, prompt build",
+    "LLM call via fizz-llm-client",
+    "SentenceFragment output as NDJSON"
+   ]
+  },
+  "zh": {
+   "what": "Fizz 的 brain 合成 CLI,把评论转为句子片段流",
+   "points": [
+    "分类、few-shot 检索、构建提示",
+    "经 fizz-llm-client 调用 LLM",
+    "以 NDJSON 输出 SentenceFragment"
+   ]
+  }
+ },
+ "Aid-On/fizz-conversation-history": {
+  "ja": {
+   "what": "直近N ターンだけを保持する窓つき会話履歴の部品",
+   "points": [
+    "push_user/push_assistant/clear",
+    "直近 N ターンの窓つき履歴",
+    "ネットワーク不要のテスト"
+   ]
+  },
+  "en": {
+   "what": "Fizz AITuber brain component in Almide: windowed in-memory history of the last N turns",
+   "points": [
+    "push_user/push_assistant/clear operations",
+    "Window of the most recent N turns",
+    "Tests run with no network or API key"
+   ]
+  },
+  "zh": {
+   "what": "Almide 写的 Fizz 部件，保留最近 N 轮对话窗口",
+   "points": [
+    "push_user/push_assistant/clear",
+    "最近 N 轮窗口式历史",
+    "测试无需网络与 API 密钥"
+   ]
+  }
+ },
+ "Aid-On/fizz-llm-client": {
+  "ja": {
+   "what": "Almide製AITuber「Fizz」向けのマルチプロバイダLLMクライアント",
+   "points": [
+    "Anthropic/OpenAI/OpenRouter/Groq対応",
+    "call / call_with:非ストリーミング",
+    "call_streaming:差分ごとにon_delta"
+   ]
+  },
+  "en": {
+   "what": "Multi-provider LLM client in Almide for the Fizz AITuber system's brain component.",
+   "points": [
+    "Anthropic, OpenAI, OpenRouter, Groq via provider/model",
+    "call and call_with for non-streaming responses",
+    "call_streaming with on_delta per text delta"
+   ]
+  },
+  "zh": {
+   "what": "Almide编写的Fizz AITuber多提供商LLM客户端",
+   "points": [
+    "支持Anthropic/OpenAI等四家",
+    "call/call_with非流式调用",
+    "call_streaming流式回调on_delta"
+   ]
+  }
+ },
+ "Aid-On/fizz-persona": {
+  "ja": {
+   "what": "Almide製AITuber Fizzのpersonaオンディスク形式契約",
+   "points": [
+    "spec/voice/world等のJSON形式",
+    "validate()によるファイル間整合検査",
+    "examples.tsvのfew-shot例文形式"
+   ]
+  },
+  "en": {
+   "what": "Almide package defining the on-disk persona format contract for the Fizz AITuber system",
+   "points": [
+    "spec, voice, world, transforms, triggers JSON",
+    "validate() cross-file consistency check",
+    "examples.tsv few-shot TSV parse/format"
+   ]
+  },
+  "zh": {
+   "what": "Fizz AITuber的persona磁盘格式契约(Almide)",
+   "points": [
+    "spec/voice/world等JSON格式",
+    "validate()跨文件一致性检查",
+    "examples.tsv少样本示例格式"
+   ]
+  }
+ },
+ "Aid-On/fizz-prompt-builder": {
+  "ja": {
+   "what": "persona・recall・履歴・コメントからLLMのmessages列を組み立てるライブラリ",
+   "points": [
+    "system+recall→few-shot→履歴の順",
+    "fizz-llm-clientのMessage列を出力",
+    "プリミティブ入力の疎結合設計"
+   ]
+  },
+  "en": {
+   "what": "Almide library for Fizz that assembles LLM messages from persona, recall, few-shot, history and a comment",
+   "points": [
+    "Order: system+recall, few-shot, history, comment",
+    "Outputs fizz-llm-client Message list for call_with",
+    "Primitive inputs, no persona/history/retriever deps"
+   ]
+  },
+  "zh": {
+   "what": "将人设、回忆、历史与评论组装为LLM消息列的库",
+   "points": [
+    "按system+recall、few-shot、历史排序",
+    "输出fizz-llm-client的Message列",
+    "基础类型输入,松耦合"
+   ]
+  }
+ },
+ "Aid-On/fizz-protocol": {
+  "ja": {
+   "what": "Almide製AITuber「Fizz」の各部品が共有するワイヤ契約パッケージ",
+   "points": [
+    "感情タグ文法と正規21種の語彙",
+    "5ドメインのワイヤコマンド",
+    "手書きコーデックのフラットJSON"
+   ]
+  },
+  "en": {
+   "what": "Shared wire contracts for Fizz, an AITuber system in Almide, used by all its components",
+   "points": [
+    "Emotion vocabulary (21 canonical) and inline tag grammar",
+    "Wire commands in 5 domains plus Response",
+    "Hand-written codecs over flat JSON wire format"
+   ]
+  },
+  "zh": {
+   "what": "Almide编写的AITuber系统Fizz的共享通信契约",
+   "points": [
+    "21种感情词汇与内联标签",
+    "5个领域的通信命令",
+    "手写编解码的扁平JSON"
+   ]
+  }
+ },
+ "Aid-On/fizz-comment-classifier": {
+  "ja": {
+   "what": "コメント文面からリアクション感情を判定するAlmide製ライブラリ",
+   "points": [
+    "classify(text) -> Option[Emotion]",
+    "キーワードルール・先勝ち方式",
+    "ネットワーク・APIキー不要のテスト"
+   ]
+  },
+  "en": {
+   "what": "Almide library for Fizz that classifies a comment into a reaction Emotion by keyword rules",
+   "points": [
+    "classify(text) -> Option[Emotion]",
+    "First-match-wins keyword rules",
+    "Tests run with no network or API key"
+   ]
+  },
+  "zh": {
+   "what": "按关键词规则把评论判定为反应情感的Almide库",
+   "points": [
+    "classify(text) -> Option[Emotion]",
+    "关键词规则、先匹配者胜",
+    "测试无需网络与API密钥"
+   ]
+  }
+ },
+ "Aid-On/fizz-few-shot-retriever": {
+  "ja": {
+   "what": "着弾コメントに似た過去Q/Aを上位k件取得するAlmide製ライブラリ",
+   "points": [
+    "文字bigramのJaccard類似度",
+    "select(query, corpus, k)",
+    "ネットワーク・APIキー不要のテスト"
+   ]
+  },
+  "en": {
+   "what": "Almide library for Fizz that retrieves the top-k past Q/A examples similar to an incoming comment",
+   "points": [
+    "Character-bigram Jaccard similarity",
+    "select(query, corpus, k)",
+    "Tests need no network or API key"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的Almide组件,检索与来信评论相似的前k条问答",
+   "points": [
+    "字符bigram的Jaccard相似度",
+    "select(query, corpus, k)",
+    "测试无需网络与API密钥"
+   ]
+  }
+ },
+ "Aid-On/fizz-stream-sentence-parser": {
+  "ja": {
+   "what": "LLM出力を文とタグに分割するFizzの脳部品",
+   "points": [
+    "[emotion]/[fx]/[hair]タグの切り出し",
+    "parse_allとfeedのストリーミング対応",
+    "文字リスト処理でマルチバイト安全"
+   ]
+  },
+  "en": {
+   "what": "Fizz brain component in Almide that splits LLM output into sentences and inline tags.",
+   "points": [
+    "[emotion]/[fx]/[hair] tag extraction",
+    "parse_all and streaming feed with remainder",
+    "Multibyte-safe character-list processing"
+   ]
+  },
+  "zh": {
+   "what": "Fizz大脑部件,切分LLM输出为句子与标签",
+   "points": [
+    "提取[emotion]/[fx]/[hair]标签",
+    "parse_all与流式feed",
+    "字符列表处理,多字节安全"
+   ]
+  }
+ },
+ "Aid-On/fizz-first-time-greeter": {
+  "ja": {
+   "what": "初見視聴者に自己紹介を一度だけ行う、決定論的なAITuber Fizzの脳部品",
+   "points": [
+    "should_greetによる挨拶判定",
+    "intro_fragmentsで紹介文を生成",
+    "mark_deliveredとINTRO_DELAY_MS"
+   ]
+  },
+  "en": {
+   "what": "Deterministic Almide brain component for Fizz, the AITuber, giving first-time viewers a one-time self-intro",
+   "points": [
+    "should_greet check",
+    "intro_fragments for intro text",
+    "mark_delivered and INTRO_DELAY_MS"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的大脑部件,仅向首次观众确定性地自我介绍一次",
+   "points": [
+    "should_greet 判断是否问候",
+    "intro_fragments 自我介绍片段",
+    "mark_delivered 与 INTRO_DELAY_MS"
+   ]
+  }
+ },
+ "Aid-On/fizz-thinking-cue-detector": {
+  "ja": {
+   "what": "発話文が思考モーションを出すべきか判定するFizzの脳部品",
+   "points": [
+    "should_play_thinking(fragment) -> Bool",
+    "発話中のみ判定",
+    "ネットワーク・APIキー不要のテスト"
+   ]
+  },
+  "en": {
+   "what": "Fizz brain component in Almide that decides whether a spoken sentence triggers thinking motion",
+   "points": [
+    "should_play_thinking(fragment) -> Bool",
+    "Speech-only; not called from idle or waiting",
+    "Pure logic, tests need no network or API key"
+   ]
+  },
+  "zh": {
+   "what": "Fizz大脑部件,判断发话句是否触发思考动作",
+   "points": [
+    "should_play_thinking(fragment) -> Bool",
+    "仅在发话中判定",
+    "纯逻辑,测试无需网络或密钥"
+   ]
+  }
+ },
+ "Aid-On/fuzztok": {
+  "ja": {
+   "what": "CJK対応の高速・軽量なファジートークン数推定ライブラリ",
+   "points": [
+    "日本語・中国語・韓国語の文字判定",
+    "バッチ推定とストリーミング対応",
+    "トークン数からのコスト計算"
+   ]
+  },
+  "en": {
+   "what": "Fast, lightweight fuzzy token estimation library for LLM text, with CJK support",
+   "points": [
+    "Model configs via dependency injection",
+    "Batch and streaming estimation",
+    "Token-to-cost calculation utilities"
+   ]
+  },
+  "zh": {
+   "what": "支持CJK的快速轻量模糊Token估算库",
+   "points": [
+    "中日韩字符识别与分析",
+    "批量与流式估算",
+    "Token成本计算工具"
+   ]
+  }
+ },
+ "Aid-On/memory-rag": {
+  "ja": {
+   "what": "Vercel AI SDK対応の、軽量でプロバイダ非依存なインメモリRAGライブラリ",
+   "points": [
+    "外部依存なしのインメモリベクトル検索",
+    "OpenAI・Anthropic・Google・Cohere対応",
+    "セッション単位の知識ベース分離"
+   ]
+  },
+  "en": {
+   "what": "A lightweight, provider-agnostic in-memory RAG library with Vercel AI SDK integration",
+   "points": [
+    "In-memory vector store, no external dependencies",
+    "OpenAI, Anthropic, Google, Cohere providers",
+    "Per-session isolated knowledge bases"
+   ]
+  },
+  "zh": {
+   "what": "轻量、不绑定提供商的内存RAG库,集成Vercel AI SDK",
+   "points": [
+    "无外部依赖的内存向量检索",
+    "支持OpenAI、Anthropic等提供商",
+    "按会话隔离的知识库"
+   ]
+  }
+ },
+ "Aid-On/qwiks": {
+  "ja": {
+   "what": "Nagare Stream<T>をQwik Signalへ橋渡しするフックライブラリ",
+   "points": [
+    "useStreamTextによるテキスト配信",
+    "useStream・useStreamArrayの汎用配信",
+    "useSSEStreamでSSE受信"
+   ]
+  },
+  "en": {
+   "what": "Hook library that bridges nagare Stream<T> to Qwik Signals for reactive stream handling.",
+   "points": [
+    "useStreamText for text streaming with metrics",
+    "Generic useStream and useStreamArray hooks",
+    "useSSEStream for Server-Sent Events"
+   ]
+  },
+  "zh": {
+   "what": "将Nagare流桥接到Qwik Signal的钩子库",
+   "points": [
+    "useStreamText文本流",
+    "通用useStream与useStreamArray",
+    "useSSEStream接收SSE"
+   ]
+  }
+ },
+ "Aid-On/outline-api-client-ts": {
+  "ja": {
+   "what": "Outline知識ベースAPI向けの型安全なTypeScriptクライアントライブラリ",
+   "points": [
+    "文書の作成・検索・更新・削除",
+    "コレクション管理と認証情報取得",
+    "自動リトライと非同期イテレータ"
+   ]
+  },
+  "en": {
+   "what": "A type-safe TypeScript client library for the Outline knowledge base API, built for Node.js.",
+   "points": [
+    "Document create, search, update, delete, export",
+    "Collections and auth info APIs",
+    "Automatic retry and async iterators"
+   ]
+  },
+  "zh": {
+   "what": "面向Outline知识库API的类型安全TypeScript客户端库",
+   "points": [
+    "文档增删改查与搜索",
+    "集合管理与认证信息",
+    "自动重试与异步迭代器"
+   ]
+  }
+ },
+ "Aid-On/unillm-vercel-ai-sdk": {
+  "ja": {
+   "what": "@aid-on/unillmをVercel AI SDKで使うためのLanguageModelV1互換ラッパー",
+   "points": [
+    "getModelによるモデル生成",
+    "createFallbackChainの複数プロバイダ切替",
+    "generateObjectとwithRetry"
+   ]
+  },
+  "en": {
+   "what": "Vercel AI SDK wrapper for @aid-on/unillm giving LanguageModelV1 compatibility for existing AI SDK code",
+   "points": [
+    "getModel(spec, credentials) for LanguageModelV1",
+    "createFallbackChain across Groq, Gemini, Cloudflare",
+    "generateObject with Zod and withRetry backoff"
+   ]
+  },
+  "zh": {
+   "what": "为@aid-on/unillm提供Vercel AI SDK的LanguageModelV1兼容封装",
+   "points": [
+    "getModel创建模型",
+    "createFallbackChain多供应商回退",
+    "generateObject与withRetry"
+   ]
+  }
+ },
+ "Aid-On/vad": {
+  "ja": {
+   "what": "ブラウザ向けの音声区間検出。Silero VADとRNNoise雑音抑制を統合",
+   "points": [
+    "Silero VADによる音声検出",
+    "RNNoiseによるノイズ抑制",
+    "audioToWav()でWAV変換"
+   ]
+  },
+  "en": {
+   "what": "Browser voice activity detection using Silero VAD, with optional RNNoise noise suppression",
+   "points": [
+    "Silero VAD via ONNX Runtime",
+    "Optional RNNoise noise suppression",
+    "audioToWav() for STT-ready WAV output"
+   ]
+  },
+  "zh": {
+   "what": "浏览器端语音活动检测,集成Silero VAD与RNNoise降噪",
+   "points": [
+    "基于Silero VAD的语音检测",
+    "RNNoise噪声抑制",
+    "audioToWav()转WAV"
+   ]
+  }
+ },
+ "Aid-On/mine-rabbit-bots": {
+  "ja": {
+   "what": "Paper サーバー上で Mineflyer の Bot を検証する、Craftsman 独立のサンドボックス",
+   "points": [
+    "チャットコマンドで移動・追従",
+    "自動採掘・クラフト・製錬",
+    "`.env` と環境変数で接続設定"
+   ]
+  },
+  "en": {
+   "what": "A sandbox, separate from Craftsman, for testing a Mineflyer bot and config on a Paper server",
+   "points": [
+    "Chat commands: come, follow, dig, build",
+    "craftauto and smeltauto with auto-gathering",
+    "`.env` and env-var connection settings"
+   ]
+  },
+  "zh": {
+   "what": "独立于 Craftsman 的 Mineflyer 机器人 Paper 测试沙盒",
+   "points": [
+    "聊天指令移动、跟随、挖掘",
+    "craftauto、smeltauto 自动合成",
+    "支持 `.env` 连接配置"
+   ]
+  }
+ },
+ "Aid-On/aid-on-js-training": {
+  "ja": {
+   "what": "テスト付きでJavaScriptを段階的に学べる初心者向け問題集",
+   "points": [
+    "テスト駆動開発形式の学習",
+    "Jestによる自動採点",
+    "基本からReactまでの4セクション"
+   ]
+  },
+  "en": {
+   "what": "A beginner JavaScript exercise set with bundled tests that automatically check your answers",
+   "points": [
+    "Test-driven (TDD) style learning",
+    "Automatic grading via npm test",
+    "Four sections, from basics to React"
+   ]
+  },
+  "zh": {
+   "what": "带测试的JavaScript入门习题集",
+   "points": [
+    "测试驱动开发式学习",
+    "自动判分",
+    "从基础到React共四部分"
+   ]
+  }
+ },
+ "Aid-On/design-system": {
+  "ja": {
+   "what": "Qwik向けの型安全な色トークンとライト/ダークテーマ管理を提供するデザインシステム",
+   "points": [
+    "surface・content等の色トークン",
+    "useTheme()とuseColorPreference()",
+    "生成CSSとサブパスエクスポート"
+   ]
+  },
+  "en": {
+   "what": "A type-safe color token system with light/dark theming for Qwik applications.",
+   "points": [
+    "Color tokens with light/dark variants",
+    "useTheme() and useColorPreference() hooks",
+    "Generated CSS and sub-path exports"
+   ]
+  },
+  "zh": {
+   "what": "面向Qwik的类型安全颜色令牌与明暗主题库",
+   "points": [
+    "明暗两套颜色令牌",
+    "useTheme()等主题Hook",
+    "生成CSS与子路径导出"
+   ]
+  }
+ },
+ "Aid-On/didoq": {
+  "ja": {
+   "what": "Cloudflare向けのFluent APIとnagare Stream対応ジョブキュー",
+   "points": [
+    "チェーン式のFluent API",
+    "WebSocketによるリアルタイム通知",
+    "シャーディングとロック救済"
+   ]
+  },
+  "en": {
+   "what": "Distributed job queue for Cloudflare Workers, D1 and Durable Objects with a fluent API and nagare Stream.",
+   "points": [
+    "Chainable fluent job builder API",
+    "nagare Stream and WebSocket job events",
+    "Sharding with automatic lock rescue"
+   ]
+  },
+  "zh": {
+   "what": "面向Cloudflare的流式API作业队列",
+   "points": [
+    "链式流式API",
+    "WebSocket实时推送",
+    "分片与锁恢复"
+   ]
+  }
+ },
+ "Aid-On/auth": {
+  "ja": {
+   "what": "Cloudflare Workers向けの、Fluent API採用のエッジネイティブ認証ライブラリ",
+   "points": [
+    "HMAC-SHA256署名セッションと鍵ローテーション",
+    "Google/GitHub/独自のOAuth 2.0とCSRF対策",
+    "監査ログとCloudflare Access連携"
+   ]
+  },
+  "en": {
+   "what": "Edge-native auth library for Cloudflare Workers with a Fluent API, using only Web Crypto.",
+   "points": [
+    "HMAC-SHA256 sessions with key rotation",
+    "OAuth 2.0 (Google, GitHub, custom) with CSRF state",
+    "Guest users, audit logging, Cloudflare Access"
+   ]
+  },
+  "zh": {
+   "what": "面向Cloudflare Workers的边缘原生认证库",
+   "points": [
+    "HMAC-SHA256会话与密钥轮换",
+    "OAuth 2.0与CSRF防护",
+    "访客用户、审计日志、CF Access"
+   ]
+  }
+ },
+ "Aid-On/embersm": {
+  "ja": {
+   "what": "Cloudflare Workers上でLLMエージェントに長期記憶を与える5層メモリ",
+   "points": [
+    "Semantic+Episode構成でLOCOMO 66-75%",
+    "Flash/Episode/Semantic/Temporal/Graph",
+    "Prolog形式のグラフ記憶と推論"
+   ]
+  },
+  "en": {
+   "what": "Cloudflare Workers-native 5-layer memory system providing long-term memory for LLM agents",
+   "points": [
+    "LOCOMO 66-75% with Semantic + Episode",
+    "KV, D1 and Vectorize storage layers",
+    "Prolog-format graph facts with inference queries"
+   ]
+  },
+  "zh": {
+   "what": "基于Cloudflare Workers的LLM长期记忆五层架构",
+   "points": [
+    "Semantic+Episode达LOCOMO 66-75%",
+    "KV、D1、Vectorize存储层",
+    "Prolog格式图记忆与推理"
+   ]
+  }
+ },
+ "Aid-On/fizz-comment-dedupe": {
+  "ja": {
+   "what": "commentストリームから既出IDを落とすNDJSONパイプフィルタ",
+   "points": [
+    "FIFO上限つきseen set(既定512)",
+    "NDJSON入力からNDJSON出力",
+    "不正行はstderr警告で読み飛ばし"
+   ]
+  },
+  "en": {
+   "what": "A pure NDJSON pipe filter for Fizz that drops already-seen comment IDs from a comment stream.",
+   "points": [
+    "FIFO-capped seen set (default 512)",
+    "NDJSON in, NDJSON out",
+    "Skips invalid lines with a stderr warning"
+   ]
+  },
+  "zh": {
+   "what": "Fizz评论流的NDJSON管道过滤器,去除重复ID",
+   "points": [
+    "带FIFO上限的已见集合",
+    "NDJSON输入输出",
+    "无效行警告后跳过"
+   ]
+  }
+ },
+ "Aid-On/fizz-lipsync": {
+  "ja": {
+   "what": "音声のRMSから滑らかな口の開き値[0,1]を出す口パクDSPコア",
+   "points": [
+    "Almide一本でnativeとwasmに対応",
+    "オフライン precompute CLI(f32le入力)",
+    "AudioWorklet用 lipsync_init/step"
+   ]
+  },
+  "en": {
+   "what": "Lipsync DSP core for Fizz: turns audio RMS into a smooth mouth-open value in [0,1].",
+   "points": [
+    "One Almide core for native and wasm",
+    "Offline precompute CLI for raw f32 LE audio",
+    "AudioWorklet wasm exports lipsync_init/lipsync_step"
+   ]
+  },
+  "zh": {
+   "what": "Fizz 口型同步 DSP 核心,将音频 RMS 转为口型开合值",
+   "points": [
+    "一套 Almide 核心通吃 native 与 wasm",
+    "离线 precompute CLI(f32le)",
+    "AudioWorklet 用 lipsync_step"
+   ]
+  }
+ },
+ "Aid-On/fizz-manual-comment-input": {
+  "ja": {
+   "what": "運用者のstdin手入力を正規化Comment NDJSONで流すFizzの入力部品",
+   "points": [
+    "TAB区切りでuser指定",
+    "ID は man-<unix_ms>-<seq> で採番",
+    "FIZZ_MANUAL_USER で既定名変更"
+   ]
+  },
+  "en": {
+   "what": "Fizz comment source that turns operator stdin lines into normalized Manual Comment NDJSON",
+   "points": [
+    "TAB-separated user and text input",
+    "IDs numbered as man-<unix_ms>-<seq>",
+    "Default user set via FIZZ_MANUAL_USER"
+   ]
+  },
+  "zh": {
+   "what": "将运维手动输入转为Comment NDJSON的Fizz组件",
+   "points": [
+    "TAB分隔指定user",
+    "ID为man-<unix_ms>-<seq>",
+    "FIZZ_MANUAL_USER设默认名"
+   ]
+  }
+ },
+ "Aid-On/fizz-memory-api": {
+  "ja": {
+   "what": "note/recall/search/wipe/usersをHTTP公開するFizzのmemoryサービス",
+   "points": [
+    "追記型JSONLのイベントログ",
+    "リクエスト毎にファイルを読むstateless実装",
+    "FIZZ_MEMORY_PORTでポート指定(既定8088)"
+   ]
+  },
+  "en": {
+   "what": "Fizz's memory HTTP service exposing note, recall, search, wipe and users over a JSONL log",
+   "points": [
+    "POST /note appends MemoryEvent with id",
+    "GET /recall, /search, /users endpoints",
+    "Stateless handlers on append-only JSONL"
+   ]
+  },
+  "zh": {
+   "what": "Fizz 的 memory HTTP 服务,公开记忆操作接口",
+   "points": [
+    "基于追加式 JSONL 事件日志",
+    "note/recall/search/wipe/users",
+    "端口由 FIZZ_MEMORY_PORT 指定"
+   ]
+  }
+ },
+ "Aid-On/fizz-memory-l3-summarizer": {
+  "ja": {
+   "what": "閾値超過でLLMがユーザ別要約を更新するFizz記憶層L3",
+   "points": [
+    "閾値(既定8件)での要約判定",
+    "prevを使ったrolling更新",
+    "NDJSON入出力とFIZZ_LLM_MODEL指定"
+   ]
+  },
+  "en": {
+   "what": "Fizz memory layer L3 that rolls a per-user summary via an LLM once events pass a threshold",
+   "points": [
+    "Threshold check (default 8 events)",
+    "Rolling update from prev summary",
+    "NDJSON stdin I/O, FIZZ_LLM_MODEL setting"
+   ]
+  },
+  "zh": {
+   "what": "事件超阈值时用LLM滚动更新用户摘要的Fizz记忆L3层",
+   "points": [
+    "阈值判定(默认8条)",
+    "基于prev的滚动更新",
+    "NDJSON输入输出与模型配置"
+   ]
+  }
+ },
+ "Aid-On/fizz-tweet-validator": {
+  "ja": {
+   "what": "X(twitter-text)の重み付き文字数を数え280上限を検証するライブラリ",
+   "points": [
+    "CJK等は2・ASCII等は1で計算",
+    "weighted_length / remaining / is_valid",
+    "native と wasm の両ビルド対応"
+   ]
+  },
+  "en": {
+   "what": "Counts X (twitter-text) weighted characters and checks tweets against the 280 limit.",
+   "points": [
+    "CJK weight 2, ASCII/Latin weight 1",
+    "weighted_length, remaining, is_valid API",
+    "Native and wasm builds, checked in CI"
+   ]
+  },
+  "zh": {
+   "what": "按X加权字数统计并校验280上限",
+   "points": [
+    "CJK计2、ASCII计1",
+    "weighted_length等API",
+    "支持native与wasm构建"
+   ]
+  }
+ },
+ "Aid-On/fizz-twitch-chat-source": {
+  "ja": {
+   "what": "Twitch チャットを匿名購読し正規化コメントをNDJSONで出力する部品",
+   "points": [
+    "匿名 justinfan の読み取り専用",
+    "PRIVMSG → Comment 正規化",
+    "RECONNECT/EOF 時の5秒後再接続"
+   ]
+  },
+  "en": {
+   "what": "Fizz input component that reads Twitch chat anonymously and streams normalized Comment NDJSON to stdout",
+   "points": [
+    "Anonymous read-only justinfan{N} nick, no OAuth",
+    "PRIVMSG to fizz-protocol Comment conversion",
+    "PING-PONG keepalive and 5s auto-reconnect"
+   ]
+  },
+  "zh": {
+   "what": "匿名订阅Twitch聊天并输出标准化Comment的部件",
+   "points": [
+    "匿名justinfan只读",
+    "PRIVMSG转换为Comment",
+    "PING/PONG与5秒重连"
+   ]
+  }
+ },
+ "Aid-On/fizz-x-mention-source": {
+  "ja": {
+   "what": "XのメンションをXAPI proxy経由で取得しコメントNDJSONに流す部品",
+   "points": [
+    "XAPI /api/mentionsをpolling",
+    "sinceIdは前進のみ、初回はpriming",
+    "displayName空なら@handleに補完"
+   ]
+  },
+  "en": {
+   "what": "Fizz input component that polls X mentions via an XAPI proxy and streams Comment NDJSON to stdout",
+   "points": [
+    "Polls XAPI /api/mentions with sinceId",
+    "First fetch primes sinceId without emitting",
+    "Empty displayName falls back to @handle"
+   ]
+  },
+  "zh": {
+   "what": "经XAPI代理轮询X提及并输出评论NDJSON",
+   "points": [
+    "轮询XAPI /api/mentions",
+    "sinceId只前进，首次仅预热",
+    "displayName为空用@handle"
+   ]
+  }
+ },
+ "Aid-On/fizz-youtube-chat-source": {
+  "ja": {
+   "what": "YouTube Live Chatを取得しComment NDJSONで出力する読み取り専用部品",
+   "points": [
+    "Data API v3のAPI keyのみで動作",
+    "初回履歴をスキップするpriming",
+    "quota超過や終了時に自動で再試行"
+   ]
+  },
+  "en": {
+   "what": "Read-only Fizz component that polls YouTube Live Chat and streams normalized Comment NDJSON to stdout",
+   "points": [
+    "Data API v3 with API key only, no OAuth",
+    "First-page history skipped (priming)",
+    "Backoff and retry on quota, end, transient errors"
+   ]
+  },
+  "zh": {
+   "what": "轮询YouTube直播聊天并输出Comment NDJSON的只读组件",
+   "points": [
+    "仅需Data API v3的API key",
+    "跳过首页历史(priming)",
+    "配额超限与结束时自动重试"
+   ]
+  }
+ },
+ "Aid-On/kotorody-portfolio": {
+  "ja": {
+   "what": "Aid-OnのフロントエンドエンジニアkotorodyのポートフォリオHTMLサイト",
+   "points": [
+    "HTMLで記述したサイト",
+    "kotorodyのポートフォリオ",
+    "Aid-On所属のフロントエンド"
+   ]
+  },
+  "en": {
+   "what": "Portfolio site of kotorody, a Frontend Engineer at Aid-On, written in HTML.",
+   "points": [
+    "Personal portfolio for kotorody",
+    "Written in HTML",
+    "Aid-On frontend engineer profile"
+   ]
+  },
+  "zh": {
+   "what": "Aid-On前端工程师kotorody的作品集网站",
+   "points": [
+    "以HTML编写",
+    "kotorody个人作品集",
+    "Aid-On前端工程师"
+   ]
+  }
+ },
+ "Aid-On/synapser": {
+  "ja": {
+   "what": "LLMエージェント処理を4フェーズに分ける型安全なTypeScriptパイプライン",
+   "points": [
+    "Stimulus→Synapse→Response→Signal",
+    "SSEストリーミングとArtifact Reporter",
+    "Mastraアダプタとaction registry"
+   ]
+  },
+  "en": {
+   "what": "Type-safe TypeScript 4-phase pipeline that separates concerns in LLM agent processing",
+   "points": [
+    "Stimulus→Synapse→Response→Signal flow builder",
+    "SSE streaming and artifact reporter",
+    "Mastra adapter and type-safe action registry"
+   ]
+  },
+  "zh": {
+   "what": "将LLM智能体处理分为四阶段的类型安全管道",
+   "points": [
+    "Stimulus→Signal四阶段流程",
+    "SSE流式输出与Artifact",
+    "Mastra适配器与动作注册表"
+   ]
+  }
+ },
+ "Aid-On/unisttp": {
+  "ja": {
+   "what": "Cloudflare Workers AIとGroqを統一的に扱うSTTプロバイダ",
+   "points": [
+    "\"provider:model\"形式のSTTSpec",
+    "プロバイダ間の自動フォールバック",
+    "VADフィルタと依存ゼロのfetch実装"
+   ]
+  },
+  "en": {
+   "what": "Unified speech-to-text provider for Cloudflare Workers AI and Groq via \"provider:model\" specs",
+   "points": [
+    "\"provider:model\" STTSpec format",
+    "Automatic fallback chains across providers",
+    "VAD filtering, zero runtime dependencies"
+   ]
+  },
+  "zh": {
+   "what": "统一调用Cloudflare与Groq的语音转文字库",
+   "points": [
+    "\"provider:model\"规格格式",
+    "跨提供商自动回退链",
+    "VAD过滤，零运行时依赖"
+   ]
+  }
+ },
+ "Aid-On/animula": {
+  "ja": {
+   "what": "Almide製AI VTuberフレームワーク。キャラクターに宿る小さな魂",
+   "points": [
+    "Almideとネイティブ単一Rustホスト",
+    "顔・目・口を別メッシュで描画",
+    "音声・HTTP・TTS・LLMを順次追加"
+   ]
+  },
+  "en": {
+   "what": "AI VTuber framework written in Almide, with a single native Rust host for rendering and I/O",
+   "points": [
+    "Head, eyes, mouth as separate meshes",
+    "wasmtime + wgpu + winit native host",
+    "Roadmap: audio, HTTP, TTS, lip sync, LLM"
+   ]
+  },
+  "zh": {
+   "what": "用Almide编写的AI VTuber框架",
+   "points": [
+    "脸、眼、口分离网格",
+    "wasmtime+wgpu+winit宿主",
+    "路线图:音频、TTS、LLM"
+   ]
+  }
+ },
+ "Aid-On/fizz-audio-leader-elector": {
+  "ja": {
+   "what": "複数タブから音声再生リーダーを1つ選ぶ選出コア",
+   "points": [
+    "現リーダーが有効なら維持",
+    "無効時は最初のeligible viewerを選出",
+    "native/wasm両対応のAlmideコア"
+   ]
+  },
+  "en": {
+   "what": "Audio-leader election core that picks one playback leader among multiple viewer tabs.",
+   "points": [
+    "Keeps current leader while still eligible",
+    "Else first eligible viewer, or -1 if none",
+    "Almide core for native and wasm targets"
+   ]
+  },
+  "zh": {
+   "what": "从多个viewer标签页选出一个音频播放领导者",
+   "points": [
+    "当前领导者有效则保持",
+    "否则选首个eligible viewer",
+    "Almide核心,支持native与wasm"
+   ]
+  }
+ },
+ "Aid-On/fizz-bgm-player": {
+  "ja": {
+   "what": "FizzのBGMプレイリストで次/前/シャッフルの曲indexを決める部品",
+   "points": [
+    "next/prev のラップ切替対応",
+    "rand01注入のshuffle_next",
+    "native・wasm両ターゲット対応"
+   ]
+  },
+  "en": {
+   "what": "Playlist navigation for Fizz BGM: picks the next, previous or shuffled track index from a count.",
+   "points": [
+    "next/prev with wrap option",
+    "shuffle_next with caller-injected rand01",
+    "Native and wasm builds via Almide"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的BGM播放列表导航,按索引决定曲目",
+   "points": [
+    "next/prev支持循环切换",
+    "调用方注入rand01的shuffle_next",
+    "支持native与wasm构建"
+   ]
+  }
+ },
+ "Aid-On/fizz-camera-presets": {
+  "ja": {
+   "what": "Fizzのカメラプリセット計算コア。face/upper/fullの目標位置と注視点を算出",
+   "points": [
+    "3種のプリセット framing計算",
+    "easeInOutCubic の tween",
+    "native と wasm の両対応"
+   ]
+  },
+  "en": {
+   "what": "Camera preset core for Fizz: computes face/upper/full camera position and look-at, plus easing.",
+   "points": [
+    "face/upper/full framing from head/hips",
+    "easeInOutCubic tween function",
+    "Single Almide core for native and wasm"
+   ]
+  },
+  "zh": {
+   "what": "Fizz相机预设计算核心,求目标位置与注视点",
+   "points": [
+    "face/upper/full三种预设",
+    "easeInOutCubic缓动",
+    "native与wasm双目标"
+   ]
+  }
+ },
+ "Aid-On/fizz-color-tint": {
+  "ja": {
+   "what": "虹彩再着色のための、RGB/HSV純粋色変換コア",
+   "points": [
+    "tintで色相と彩度を移し明度は保持",
+    "彩度マスクと左右分割の判定関数",
+    "native CLIとwasmの両方へビルド"
+   ]
+  },
+  "en": {
+   "what": "Pure color-conversion core for recoloring irises in PSD eye textures, built for native and wasm",
+   "points": [
+    "tint: remap hue+saturation, keep value",
+    "Saturation mask and left/right split helpers",
+    "Builds to native CLI and wasm"
+   ]
+  },
+  "zh": {
+   "what": "用于虹膜再着色的纯色彩转换核心",
+   "points": [
+    "tint保留明度,替换色相饱和度",
+    "饱和度蒙版与左右分割判定",
+    "可构建native CLI与wasm"
+   ]
+  }
+ },
+ "Aid-On/fizz-command-applier": {
+  "ja": {
+   "what": "avatar Commandのtypeをサブシステム分類へ対応付ける振り分けコア",
+   "points": [
+    "face/pose/motion/speech/control/scene",
+    "native CLIとwasmの両ビルド",
+    "cmd_route()でsubsystem idを返却"
+   ]
+  },
+  "en": {
+   "what": "Routing core that maps wire-protocol avatar Command types to their handling subsystem, in Almide",
+   "points": [
+    "Six subsystems plus unknown (-1)",
+    "Native CLI reading types from stdin",
+    "wasm build with cmd_alloc and cmd_route"
+   ]
+  },
+  "zh": {
+   "what": "将 avatar Command 类型映射到子系统的分发核心",
+   "points": [
+    "face/pose/motion等六类子系统",
+    "native 命令行构建",
+    "wasm 导出 cmd_route"
+   ]
+  }
+ },
+ "Aid-On/fizz-effect-checker": {
+  "ja": {
+   "what": "応答計画のeffectが許可集合に収まるか検証する部品",
+   "points": [
+    "used ⊆ allowed の包含検証",
+    "実行時 llm.<model> の許可追加",
+    "違反effectの初出順・重複排除抽出"
+   ]
+  },
+  "en": {
+   "what": "Static checker verifying a plan's used effects fall within a persona's allowed effect set.",
+   "points": [
+    "used ⊆ allowed subset check",
+    "Runtime llm.<model> added to allowed set",
+    "Violations listed in first-seen order, deduplicated"
+   ]
+  },
+  "zh": {
+   "what": "校验响应计划的effect是否在许可集合内",
+   "points": [
+    "used ⊆ allowed 包含校验",
+    "运行时追加 llm.<model>",
+    "违规effect按初现顺序去重"
+   ]
+  }
+ },
+ "Aid-On/fizz-env-loader": {
+  "ja": {
+   "what": "Fizz用の.envテキストをKEY=VALUEペアに解析するAlmide製パースコア",
+   "points": [
+    "trim・#コメント・空行のスキップ",
+    "同種クォートの除去(内側の=は保持)",
+    "parse_line・parse・to_jsonのAPI"
+   ]
+  },
+  "en": {
+   "what": "Almide core for Fizz that parses .env text into KEY=VALUE pairs, built as a native binary",
+   "points": [
+    "Trim, skip blank and # comment lines",
+    "Strips matching quotes, keeps inner =",
+    "parse_line, parse and to_json API"
+   ]
+  },
+  "zh": {
+   "what": "Fizz 的 .env 解析核心,将文本转为 KEY=VALUE",
+   "points": [
+    "trim、跳过空行与#注释",
+    "去除成对引号,保留内部=",
+    "parse_line、parse、to_json"
+   ]
+  }
+ },
+ "Aid-On/fizz-eval-dataset": {
+  "ja": {
+   "what": "コメント/返答評価セットTSVのスキーマと行検証を担う部品",
+   "points": [
+    "6列TSVスキーマとヘッダ行",
+    "example/monologue/無効の行分類",
+    "native + wasm対応のAlmideコア"
+   ]
+  },
+  "en": {
+   "what": "Schema and row validation for comment/reply eval-set TSVs, written in Almide for native and wasm.",
+   "points": [
+    "6-column TSV schema with header row",
+    "Row kinds: example, monologue, invalid",
+    "Single Almide core for native and wasm"
+   ]
+  },
+  "zh": {
+   "what": "评论/回复评测集TSV的模式与行校验",
+   "points": [
+    "6列TSV模式与表头行",
+    "example/monologue/无效行分类",
+    "Almide核心支持native与wasm"
+   ]
+  }
+ },
+ "Aid-On/fizz-eval-rubric": {
+  "ja": {
+   "what": "kotodama-eval 7軸ルーブリックの軸定義と重みを持つ部品",
+   "points": [
+    "7軸(BEL/ENG/TEX/INI/EMO/TEM/CON)",
+    "Likert 1-7と重み合計1.00",
+    "native + wasm対応のAlideコア"
+   ]
+  },
+  "en": {
+   "what": "Canonical 7-axis kotodama-eval rubric: axis metadata and composite weights, in Almide.",
+   "points": [
+    "7 axes BEL/ENG/TEX/INI/EMO/TEM/CON",
+    "Likert 1-7 scores, weights sum to 1.00",
+    "Almide core for native and wasm"
+   ]
+  },
+  "zh": {
+   "what": "kotodama-eval七轴评分标准的轴定义与权重",
+   "points": [
+    "七轴BEL/ENG/TEX/INI/EMO/TEM/CON",
+    "Likert 1-7,权重合计1.00",
+    "Almide核心,支持native与wasm"
+   ]
+  }
+ },
+ "Aid-On/fizz-expression-applier": {
+  "ja": {
+   "what": "emotion名から VRM表情channelと重み比を返し値をクランプするコア",
+   "points": [
+    "21種のemotionをchannelへ対応付け",
+    "VRMプリセットとVRoid系生モーフ対応",
+    "native実行とwasm、CIで一致検証"
+   ]
+  },
+  "en": {
+   "what": "Expression-applier core for Fizz: maps emotion names to VRM channels and weights, clamped to [0,1].",
+   "points": [
+    "21 emotions mapped to channels and weight ratios",
+    "VRM presets plus Lime/VRoid raw morph keys",
+    "Native binary and wasm build, checked in CI"
+   ]
+  },
+  "zh": {
+   "what": "Fizz表情适用核心,按emotion返回通道与权重",
+   "points": [
+    "支持21种emotion",
+    "兼容VRM预设与VRoid生モーフ",
+    "native与wasm,CI校验一致"
+   ]
+  }
+ },
+ "Aid-On/fizz-eval-score": {
+  "ja": {
+   "what": "kotodama-eval のスコア集計算術を担う Almide 製の単一責任部品",
+   "points": [
+    "7軸重み付き合計 composite",
+    "Likert 1..7 から 0..100% への変換",
+    "エピソード横断の mean/min/max"
+   ]
+  },
+  "en": {
+   "what": "Almide arithmetic core for kotodama-eval score aggregation, built for native and wasm",
+   "points": [
+    "7-axis weighted composite score",
+    "Likert 1..7 to 0..100% conversion",
+    "Cross-episode mean/min/max"
+   ]
+  },
+  "zh": {
+   "what": "kotodama-eval 评分聚合的 Almide 算术核心",
+   "points": [
+    "7 轴加权综合分 composite",
+    "Likert 1..7 转 0..100%",
+    "跨剧集 mean/min/max"
+   ]
+  }
+ },
+ "Aid-On/fizz-fbx-rig-normalizer": {
+  "ja": {
+   "what": "生ボーン名をVRM humanoidスロットへ対応付けるリグ正規化コア",
+   "points": [
+    "Mixamo/Unity/Maya/Blenderの別名照合",
+    "native CLIでボーン名一覧を変換",
+    "wasmブリッジでブラウザ利用"
+   ]
+  },
+  "en": {
+   "what": "Rig normalizer core that maps raw FBX bone names to VRM humanoid slots, native and wasm.",
+   "points": [
+    "Mixamo/Unity/Maya/Blender alias matching",
+    "Native CLI listing bone name to slot",
+    "wasm build with rig_alloc/rig_match bridge"
+   ]
+  },
+  "zh": {
+   "what": "将原始骨骼名映射到VRM humanoid插槽的规范化核心",
+   "points": [
+    "支持Mixamo/Unity/Maya/Blender别名",
+    "原生CLI转换骨骼名列表",
+    "wasm桥接供浏览器使用"
+   ]
+  }
+ },
+ "Aid-On/fizz-glb-container": {
+  "ja": {
+   "what": "GLB/VRMコンテナのヘッダを解析し位置と長さを返すAlide製コア",
+   "points": [
+    "magic・versionと全長の取得",
+    "JSON/BINチャンクのオフセットと長さ",
+    "native CLIとwasmの両ビルド"
+   ]
+  },
+  "en": {
+   "what": "Almide core that parses GLB/VRM container headers into chunk offsets and lengths.",
+   "points": [
+    "Magic, version and total length checks",
+    "JSON/BIN chunk offsets and lengths",
+    "Native CLI and wasm builds"
+   ]
+  },
+  "zh": {
+   "what": "解析GLB/VRM头部的Almide核心库",
+   "points": [
+    "magic、版本与总长度",
+    "JSON/BIN块偏移与长度",
+    "native CLI与wasm构建"
+   ]
+  }
+ },
+ "Aid-On/fizz-gesture-player": {
+  "ja": {
+   "what": "one-shotジェスチャのボーンオフセットを計算するFizzのDSPコア",
+   "points": [
+    "8種のジェスチャと8チャンネル",
+    "native・wasm両対応のAlmide実装",
+    "idle clipへ加算合成するraf連携"
+   ]
+  },
+  "en": {
+   "what": "Fizz's DSP core that computes bone offsets for one-shot gestures from a gesture ID and progress u.",
+   "points": [
+    "8 gestures: banzai, rage, nod, shrug and more",
+    "One Almide core for native and wasm",
+    "Additive blend onto idle clip in raf loop"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的手势计算核心，输出骨骼偏移",
+   "points": [
+    "8种手势与8个通道",
+    "Almide一次编写，native与wasm通用",
+    "raf中叠加到idle动画"
+   ]
+  }
+ },
+ "Aid-On/fizz-http-router": {
+  "ja": {
+   "what": "(method, path)をroute idに対応付けるFizzのHTTP振り分けコア",
+   "points": [
+    "順序付きmethod+prefixマッチ",
+    "Almide単一正本のnative・wasmビルド",
+    "CIでwasmとnativeの一致を検証"
+   ]
+  },
+  "en": {
+   "what": "Fizz HTTP dispatch core mapping (method, path) to a route id via ordered method+prefix matching",
+   "points": [
+    "Specific-first prefix matching, e.g. /api/tts/voicevox",
+    "Single Almide source for native and wasm builds",
+    "CI checks wasm and native results agree"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的HTTP分发核心,将(method, path)映射为route id",
+   "points": [
+    "有序的method+前缀匹配",
+    "单一Almide源码,支持native与wasm",
+    "CI验证wasm与native一致"
+   ]
+  }
+ },
+ "Aid-On/fizz-layout-scope": {
+  "ja": {
+   "what": "Fizzの横/縦レイアウトscopeを解決し位置設定の保存先を分けるAlmide製ライブラリ",
+   "points": [
+    "mode指定とURLクエリによる縦判定",
+    "Bool/Int返却でwasm越しに文字列不要",
+    "native/wasmビルドとCI一致検証"
+   ]
+  },
+  "en": {
+   "what": "Almide library resolving Fizz landscape/portrait scope to namespace position-config keys",
+   "points": [
+    "Vertical check from mode, then URL query",
+    "Returns Bool/Int, no strings across wasm",
+    "Native and wasm builds, CI-verified parity"
+   ]
+  },
+  "zh": {
+   "what": "用Almide解析Fizz横/竖屏scope的位置配置库",
+   "points": [
+    "按mode与URL查询判断竖屏",
+    "返回Bool/Int而非字符串",
+    "native与wasm构建,CI校验一致"
+   ]
+  }
+ },
+ "Aid-On/fizz-idle-motion": {
+  "ja": {
+   "what": "壁時計秒tの純関数で瞬き・呼吸・微揺れを計算するidleモーションコア",
+   "points": [
+    "blink・breath・sway値の決定論計算",
+    "2タブ間で同一曲線のロックステップ",
+    "native/wasm両対応のAlmideコア"
+   ]
+  },
+  "en": {
+   "what": "Idle-motion core computing avatar blink, breath and sway as pure functions of wall-clock time t",
+   "points": [
+    "Deterministic blink, breath and sway curves",
+    "Identical curves across tabs, no dt accumulation",
+    "One Almide core for native and wasm targets"
+   ]
+  },
+  "zh": {
+   "what": "以墙钟秒t纯函数计算眨眼、呼吸、微摆的idle动作核心",
+   "points": [
+    "确定性的眨眼呼吸微摆计算",
+    "多标签页曲线完全一致",
+    "Almide核心支持native与wasm"
+   ]
+  }
+ },
+ "Aid-On/fizz-liveness-monitor": {
+  "ja": {
+   "what": "WS接続のping/pong死活をtickごとに判定するFizzの判定コア",
+   "points": [
+    "pong受信でalive=trueに戻す状態機械",
+    "alive==falseのtickでterminate",
+    "最遅2*interval(10s)で接続死を検知"
+   ]
+  },
+  "en": {
+   "what": "Fizz's liveness core that judges WS connection ping/pong death on every tick, in Almide.",
+   "points": [
+    "Ping/pong state machine, alive flag per tick",
+    "Terminate when no pong since previous tick",
+    "Dead connection detected within 2*interval (10s)"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的WS连接ping/pong死活判定核心",
+   "points": [
+    "按tick判定的ping/pong状态机",
+    "上个tick无pong则terminate",
+    "最迟2*interval(10s)检测死连接"
+   ]
+  }
+ },
+ "Aid-On/fizz-memory-l1-ring": {
+  "ja": {
+   "what": "user_idごとの直近MemoryEventをメモリ保持し、recallに即答するL1記憶",
+   "points": [
+    "NDJSONのnote/recallコマンド",
+    "user_idごとcap件のリングバッファ",
+    "FIZZ_L1_CAPで上限変更(既定16)"
+   ]
+  },
+  "en": {
+   "what": "Fizz's L1 memory: an in-memory per-user ring of recent MemoryEvents that answers recall instantly.",
+   "points": [
+    "note/recall commands over NDJSON stdin",
+    "Per-user ring buffer capped at cap entries",
+    "Cap set via FIZZ_L1_CAP (default 16, min 1)"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的L1记忆,按用户在内存中保存近期事件",
+   "points": [
+    "基于NDJSON的note/recall命令",
+    "按user_id限长的环形缓冲",
+    "用FIZZ_L1_CAP设上限(默认16)"
+   ]
+  }
+ },
+ "Aid-On/fizz-memory-l2-events": {
+  "ja": {
+   "what": "全MemoryEventをNDJSONでappend-only永続化しuser_idで検索するFizz記憶のL2層",
+   "points": [
+    "1行1イベントのNDJSON追記",
+    "user_idと limit によるquery",
+    "wipeでログ全消去"
+   ]
+  },
+  "en": {
+   "what": "L2 persistence layer of Fizz memory: append-only NDJSON event log queryable per user_id",
+   "points": [
+    "Append-only NDJSON, one event per line",
+    "query by user_id with limit",
+    "wipe command clears the whole log"
+   ]
+  },
+  "zh": {
+   "what": "Fizz记忆L2层,以NDJSON追加保存事件并按user_id查询",
+   "points": [
+    "每行一个事件的NDJSON追加",
+    "按user_id与limit查询",
+    "wipe清空日志"
+   ]
+  }
+ },
+ "Aid-On/fizz-mixamo-retargeter": {
+  "ja": {
+   "what": "MixamoアニメをVRMボーンへ移す四元数リターゲット計算コア",
+   "points": [
+    "q' = parentRestWorld·q·restWorld⁻¹の変換",
+    "VRM0向けx,z軸フリップ",
+    "Hips positionのリグ身長比スケール"
+   ]
+  },
+  "en": {
+   "what": "Quaternion retargeting core in Almide that maps Mixamo animation onto VRM bones, native and wasm.",
+   "points": [
+    "Remap q' = parentRestWorld · q · restWorld⁻¹",
+    "VRM0 x,z axis flip",
+    "Hips position scaling by rig height ratio"
+   ]
+  },
+  "zh": {
+   "what": "将Mixamo动画重定向到VRM骨骼的四元数计算核心",
+   "points": [
+    "q'=父rest·q·rest逆 变换",
+    "VRM0的x、z轴翻转",
+    "Hips位置按身高比缩放"
+   ]
+  }
+ },
+ "Aid-On/fizz-reading-corrector": {
+  "ja": {
+   "what": "TTS前段で漢字をかなに置換し、固有名詞の読みを固定する補正フィルタ",
+   "points": [
+    "順序付きルールによる置換",
+    "FIZZ_READING_DICTでTSV辞書に差し替え",
+    "re:接頭辞の正規表現置換"
+   ]
+  },
+  "en": {
+   "what": "Pre-TTS filter for Fizz that replaces kanji with kana to fix readings of names and tricky words",
+   "points": [
+    "Ordered rule list for replacements",
+    "Swap rules via FIZZ_READING_DICT TSV file",
+    "Literal and re: regex replacement"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的TTS前读音校正过滤器,将汉字替换为假名",
+   "points": [
+    "按顺序应用的规则列表",
+    "用FIZZ_READING_DICT替换TSV词典",
+    "支持字面量与re:正则替换"
+   ]
+  }
+ },
+ "Aid-On/fizz-recall-gate": {
+  "ja": {
+   "what": "recall結果をbrain用に絞り、記憶なしの代替を返すFizzのゲート",
+   "points": [
+    "recentを直近cap件に絞るgate",
+    "記憶なしのempty/empty_new生成",
+    "既定RECENT_CAP=4のJSON I/O"
+   ]
+  },
+  "en": {
+   "what": "Fizz recall gate that trims RecallResult to the brain's budget and supplies a memory-less fallback",
+   "points": [
+    "gate: trim recent to the latest cap items",
+    "empty / empty_new memory-less RecallResult",
+    "JSON line I/O, default RECENT_CAP=4"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的recall网关,裁剪结果并提供无记忆回退",
+   "points": [
+    "gate将recent裁到最近cap条",
+    "empty/empty_new生成空结果",
+    "JSON行输入输出,默认cap为4"
+   ]
+  }
+ },
+ "Aid-On/fizz-reply-paginator": {
+  "ja": {
+   "what": "AI返答テキストを文の切れ目優先でページ分割するAlmide製コア",
+   "points": [
+    "hard break、soft break、maxLenの優先順",
+    "出力は各チャンク終端のcut points(Int列)",
+    "native実行とwasmビルドに対応"
+   ]
+  },
+  "en": {
+   "what": "Almide core that splits AI reply text into display chunks at sentence and clause boundaries.",
+   "points": [
+    "Hard break, soft break, then maxLen hard cut",
+    "Outputs cut points (Int) as cumulative end indexes",
+    "Native build and wasm target, checked for parity in CI"
+   ]
+  },
+  "zh": {
+   "what": "按句子边界拆分AI回复文本的Almide核心",
+   "points": [
+    "优先硬断句、软断句、maxLen截断",
+    "输出各块累计终点的cut points",
+    "支持native与wasm构建"
+   ]
+  }
+ },
+ "Aid-On/fizz-response-transformer": {
+  "ja": {
+   "what": "kotodamaの応答変換カタログ照合と重み付き選択を担うAlmide部品",
+   "points": [
+    "names/weightsによるカタログ照合",
+    "weight正規化と累積weight選択",
+    "候補からのpick_candidate決定的選択"
+   ]
+  },
+  "en": {
+   "what": "Catalog lookup and weighted selection of kotodama response transforms, in Almide (native + wasm)",
+   "points": [
+    "Catalog lookup via names/weights lists",
+    "weight normalization, cumulative pick_by_value",
+    "Deterministic pick_candidate from candidates"
+   ]
+  },
+  "zh": {
+   "what": "kotodama应答变换的目录匹配与加权选择",
+   "points": [
+    "names/weights目录匹配",
+    "weight归一化与累积选择",
+    "从候选确定性选取"
+   ]
+  }
+ },
+ "Aid-On/fizz-session-tracker": {
+  "ja": {
+   "what": "配信の開始/終了境界とユーザー別発言数を集計するトラッカ",
+   "points": [
+    "start/endで配信枠を明示化",
+    "participateでuser別発言を加算",
+    "NDJSONをstdinから1行1コマンド処理"
+   ]
+  },
+  "en": {
+   "what": "Fizz stream session tracker that marks start/end boundaries and counts per-user participation.",
+   "points": [
+    "start/end commands for stream sessions",
+    "Per-user participation counts via participate",
+    "NDJSON commands read from stdin"
+   ]
+  },
+  "zh": {
+   "what": "记录直播起止并统计每位用户发言的追踪器",
+   "points": [
+    "start/end划定直播时段",
+    "participate累计用户发言",
+    "stdin按行读取NDJSON命令"
+   ]
+  }
+ },
+ "Aid-On/fizz-speak-queue": {
+  "ja": {
+   "what": "LLM音声クリップの逐次再生を判定する状態機械と境界イベント導出部品",
+   "points": [
+    "再生前イベントの発火順序導出",
+    "drain再入を判定する状態機械",
+    "native・wasm両対応のAlmideコア"
+   ]
+  },
+  "en": {
+   "what": "Almide state machine and boundary-event logic for sequential playback of LLM-streamed TTS clips",
+   "points": [
+    "Pre-play event order: emotion, hair, fx, reply",
+    "Drain re-entrancy checks for the queue",
+    "Almide core built for native and wasm"
+   ]
+  },
+  "zh": {
+   "what": "逐次播放TTS片段的状态机与边界事件推导组件",
+   "points": [
+    "播放前事件触发顺序",
+    "drain再入判定状态机",
+    "Almide核心支持native与wasm"
+   ]
+  }
+ },
+ "Aid-On/fizz-trigger-matcher": {
+  "ja": {
+   "what": "入力文から推奨 transform(prior)を選ぶ部分文字列照合エンジン",
+   "points": [
+    "部分文字列マッチで triggers を照合",
+    "suggest を初出順・重複排除で返却",
+    "native と wasm にビルド可能"
+   ]
+  },
+  "en": {
+   "what": "Substring-match engine that picks suggested transform priors from a persona's triggers for an input.",
+   "points": [
+    "Substring matching of pattern rules",
+    "Suggests collected in first-seen order, deduplicated",
+    "Builds native and wasm from one Almide core"
+   ]
+  },
+  "zh": {
+   "what": "按子串匹配输入并推荐 transform 先验的引擎",
+   "points": [
+    "子串匹配 triggers 规则",
+    "建议按首次出现顺序去重",
+    "Almide 核心编译 native 与 wasm"
+   ]
+  }
+ },
+ "Aid-On/fizz-weather-codes": {
+  "ja": {
+   "what": "WMO天気コードを日本語ラベルに変換し天気の質問を検出するAlmide製ライブラリ",
+   "points": [
+    "label(code)で日本語ラベル変換",
+    "is_weather_query(text)で天気質問判定",
+    "native・wasmの両ターゲット対応"
+   ]
+  },
+  "en": {
+   "what": "Almide library mapping Open-Meteo WMO weather codes to Japanese TTS labels and detecting weather queries",
+   "points": [
+    "label(code) returns Japanese label, \"\" if unknown",
+    "is_weather_query(text) detects 天気/気温/温度",
+    "Native build and wasm with browser glue example"
+   ]
+  },
+  "zh": {
+   "what": "将WMO天气码转为日语标签并识别天气提问的Almide库",
+   "points": [
+    "label(code)输出日语标签",
+    "is_weather_query判定天气提问",
+    "支持native与wasm构建"
+   ]
+  }
+ },
+ "Aid-On/fizz-ws-reconnect": {
+  "ja": {
+   "what": "Fizz WS再接続の遅延を指数バックオフとjitterで計算する部品",
+   "points": [
+    "delay_ms:base 500ms、上限30s",
+    "delay_jittered_ms:equal jitter",
+    "native・wasm両ターゲット対応"
+   ]
+  },
+  "en": {
+   "what": "Computes Fizz WebSocket reconnect delays using exponential backoff, a cap and equal jitter.",
+   "points": [
+    "delay_ms: min(base * 2^attempt, cap)",
+    "delay_jittered_ms with injected rand01",
+    "Native and wasm builds from one Almide core"
+   ]
+  },
+  "zh": {
+   "what": "用指数退避加抖动计算Fizz WS重连延迟",
+   "points": [
+    "delay_ms:基础500ms、上限30s",
+    "delay_jittered_ms:equal jitter",
+    "支持native与wasm"
+   ]
+  }
+ },
+ "Aid-On/sandbox-ios-app": {
+  "ja": {
+   "what": "SwiftUI製iOSアプリのテンプレート。CI/CDとTestFlight配備を自動化",
+   "points": [
+    "Harmonizeによる構造ルールの検査",
+    "fastlane matchのコード署名",
+    "make一発のTestFlight配備"
+   ]
+  },
+  "en": {
+   "what": "A SwiftUI iOS app template with architectural linting, automated CI/CD and TestFlight deployment",
+   "points": [
+    "Harmonize architectural rules as unit tests",
+    "Code signing automated with fastlane match",
+    "One-command TestFlight deployment via make"
+   ]
+  },
+  "zh": {
+   "what": "带自动化CI/CD的SwiftUI iOS应用模板",
+   "points": [
+    "Harmonize架构规则检查",
+    "fastlane match代码签名",
+    "make命令部署TestFlight"
+   ]
+  }
+ },
+ "Aid-On/fizz-x-dummy-feed": {
+  "ja": {
+   "what": "Fizzの擬似mentionフィードの純ロジックをAlmideで実装したもの",
+   "points": [
+    "dum-+8桁ゼロ詰めのid採番",
+    "injectIdx % テンプレ数の巡回",
+    "sinceIdより新しいものだけ返す判定"
+   ]
+  },
+  "en": {
+   "what": "Pure simulation logic of Fizz's dummy X mention feed, written in Almide for native and wasm.",
+   "points": [
+    "8-digit zero-padded dum- id allocation",
+    "Template cycling via injectIdx % count",
+    "since-filtering by seq with is_newer"
+   ]
+  },
+  "zh": {
+   "what": "Fizz的X擬似mention信息流纯逻辑,用Almide编写",
+   "points": [
+    "dum-加8位补零的id编号",
+    "按模数循环选择模板",
+    "按sinceId过滤较新项"
+   ]
+  }
+ },
+ "Aid-On/next-pet-diary": {
+  "ja": {
+   "what": "create-next-appで作成したNext.jsプロジェクト",
+   "points": [
+    "npm run devの開発サーバー",
+    "app/page.tsxの編集で自動更新",
+    "next/fontによるGeist読み込み"
+   ]
+  },
+  "en": {
+   "what": "A Next.js project bootstrapped with create-next-app, named next-pet-diary.",
+   "points": [
+    "Dev server via npm, yarn, pnpm or bun",
+    "Auto-updating page from app/page.tsx",
+    "Geist font loaded with next/font"
+   ]
+  },
+  "zh": {
+   "what": "用create-next-app创建的Next.js项目",
+   "points": [
+    "npm run dev开发服务器",
+    "编辑app/page.tsx自动更新",
+    "next/font加载Geist字体"
+   ]
+  }
+ },
+ "Aid-On/auth-providers-ts": {
+  "ja": {
+   "what": "フレームワーク非依存のOAuth 2.0認証プロバイダーライブラリ",
+   "points": [
+    "LINE Login向けOAuth 2.0実装",
+    "認可URL生成とトークン交換",
+    "トークン更新・失効とプロフィール取得"
+   ]
+  },
+  "en": {
+   "what": "Framework-agnostic OAuth 2.0 authentication providers for cloud, edge and server runtimes.",
+   "points": [
+    "Full OAuth 2.0 flow for LINE Login",
+    "createLineAuthHandler and LineAuthClient",
+    "Token refresh, revocation, user profile"
+   ]
+  },
+  "zh": {
+   "what": "与框架无关的OAuth 2.0认证提供方库",
+   "points": [
+    "支持LINE Login的OAuth 2.0",
+    "授权URL生成与令牌交换",
+    "令牌刷新、撤销与用户资料"
+   ]
+  }
+ },
+ "Aid-On/aid-on-contract-generator": {
+  "ja": {
+   "what": "HTML/CSS/JSのみで動く契約書作成Webアプリ",
+   "points": [
+    "6種類の契約書タイプに対応",
+    "条項の編集・並び替えとプレビュー",
+    "JSON形式で設定を保存・読込"
+   ]
+  },
+  "en": {
+   "what": "A pure HTML/CSS/JavaScript web app that generates contracts entirely in the browser, with no build step.",
+   "points": [
+    "Six contract types, e.g. consulting, nda",
+    "Editable, draggable articles with {{variables}}",
+    "Save/load settings as JSON; PDF via print"
+   ]
+  },
+  "zh": {
+   "what": "纯HTML/CSS/JS的浏览器合同生成应用",
+   "points": [
+    "支持6种合同类型",
+    "条款编辑、拖拽排序与预览",
+    "设置可存取为JSON文件"
+   ]
+  }
+ },
+ "Aid-On/aid-on-tax-calculator": {
+  "ja": {
+   "what": "日本の消費税10%で税込・税抜価格を相互変換するPython製CLIツール",
+   "points": [
+    "税込⇔税抜の相互計算",
+    "1円未満切り捨て等の端数処理",
+    "カンマ区切り金額の入力に対応"
+   ]
+  },
+  "en": {
+   "what": "A Python CLI script that converts between tax-inclusive and tax-exclusive prices under Japan's 10% consumption tax.",
+   "points": [
+    "Two-way tax-inclusive/exclusive conversion",
+    "Practical rounding: floor below 1 yen, adjustment",
+    "Comma-separated amounts such as 55,640"
+   ]
+  },
+  "zh": {
+   "what": "按日本10%消费税换算含税与不含税价格的Python命令行工具",
+   "points": [
+    "含税与不含税双向换算",
+    "按实务舍去不足1日元的尾数",
+    "支持逗号分隔的金额输入"
+   ]
+  }
+ },
+ "Aid-On/.github": {
+  "ja": {
+   "what": "READMEがなく、内容を確認できないAid-Onの.githubリポジトリ",
+   "points": [
+    "READMEの記載なし",
+    "リポジトリ名は.github",
+    "Aid-On組織に属する"
+   ]
+  },
+  "en": {
+   "what": "Aid-On's .github repository, which has no README, so its purpose is not stated",
+   "points": [
+    "No README provided",
+    "Repository named .github",
+    "Belongs to the Aid-On organization"
+   ]
+  },
+  "zh": {
+   "what": "Aid-On的.github仓库，无README，用途未说明",
+   "points": [
+    "未提供README",
+    "仓库名为.github",
+    "隶属Aid-On组织"
+   ]
+  }
+ },
+ "Aid-On/next-auth-providers": {
+  "ja": {
+   "what": "LINEログインに対応したNextAuth.js用認証プロバイダ集",
+   "points": [
+    "LINE Login OAuth 2.0に対応",
+    "ID・表示名・プロフィール画像の取得",
+    "NextAuth.js v4以上・型定義付き"
+   ]
+  },
+  "en": {
+   "what": "NextAuth.js authentication providers by Aid-On, with LINE Login OAuth 2.0 support",
+   "points": [
+    "LineProvider for LINE Login OAuth 2.0",
+    "Fetches user ID, display name and profile picture",
+    "NextAuth.js v4+ with full TypeScript types"
+   ]
+  },
+  "zh": {
+   "what": "Aid-On的NextAuth.js认证提供者,支持LINE登录",
+   "points": [
+    "支持LINE Login OAuth 2.0",
+    "获取用户ID、昵称和头像",
+    "兼容NextAuth.js v4+,含TS类型"
+   ]
+  }
+ },
+ "Aid-On/aid-on-draft-ui": {
+  "ja": {
+   "what": "aid-on-draft-uiという名前のUIプロジェクト。READMEに説明はない",
+   "points": [
+    "READMEは題名のみ",
+    "JavaScriptで記述",
+    "TypeScriptとCSSを使用"
+   ]
+  },
+  "en": {
+   "what": "A project named aid-on-draft-ui; its README gives only the title and no description",
+   "points": [
+    "README contains only a title",
+    "Written in JavaScript",
+    "Also uses TypeScript and CSS"
+   ]
+  },
+  "zh": {
+   "what": "名为aid-on-draft-ui的项目，README无说明",
+   "points": [
+    "README仅有标题",
+    "使用JavaScript编写",
+    "另用TypeScript与CSS"
+   ]
+  }
+ },
+ "Aid-On/AIChatPractice": {
+  "ja": {
+   "what": "AIチャットの練習用Swiftリポジトリ(READMEなし)",
+   "points": [
+    "Swiftで記述",
+    "AIチャットが題材",
+    "READMEは未整備"
+   ]
+  },
+  "en": {
+   "what": "A Swift repository named AIChatPractice, apparently for AI chat practice; it has no README.",
+   "points": [
+    "Written in Swift",
+    "Name suggests an AI chat theme",
+    "No README documentation provided"
+   ]
+  },
+  "zh": {
+   "what": "名为AIChatPractice的Swift仓库,无README",
+   "points": [
+    "使用Swift编写",
+    "名称指向AI聊天练习",
+    "暂无README说明"
+   ]
+  }
+ },
+ "Aid-On/aid-on-invoice-generator": {
+  "ja": {
+   "what": "請求書を生成するプロジェクト(READMEは名称のみ記載)",
+   "points": [
+    "HTMLで記述",
+    "リポジトリ名は aid-on-invoice-generator",
+    "詳細な機能の記載なし"
+   ]
+  },
+  "en": {
+   "what": "An invoice generator project; the README gives only the name, aid-on-invoice-generator",
+   "points": [
+    "Written in HTML",
+    "Named aid-on-invoice-generator",
+    "No further features documented"
+   ]
+  },
+  "zh": {
+   "what": "发票生成项目,README仅有名称",
+   "points": [
+    "使用HTML编写",
+    "名为aid-on-invoice-generator",
+    "README未说明其他功能"
+   ]
+  }
+ },
+ "Aid-On/reporting-page-by-calendar-days": {
+  "ja": {
+   "what": "暦日ごとのレポートページを扱うJavaScript/HTMLのプロジェクト",
+   "points": [
+    "JavaScriptによる実装",
+    "HTMLのレポートページ",
+    "暦日単位のレポート"
+   ]
+  },
+  "en": {
+   "what": "A JavaScript and HTML project for reporting pages by calendar day; the README gives no details.",
+   "points": [
+    "Written in JavaScript",
+    "HTML-based report page",
+    "Reporting organized by calendar days"
+   ]
+  },
+  "zh": {
+   "what": "按日历日期生成报告页面的JS/HTML项目",
+   "points": [
+    "JavaScript实现",
+    "HTML报告页面",
+    "按日历日期报告"
+   ]
+  }
+ },
+ "Aid-On/reporting-page-by-working-days": {
+  "ja": {
+   "what": "営業日ベースでレポートを表示するWebページ",
+   "points": [
+    "JavaScriptとHTMLで実装",
+    "営業日単位のレポート表示",
+    "READMEは未記載"
+   ]
+  },
+  "en": {
+   "what": "A JavaScript and HTML page for reporting by working days; the README gives no details",
+   "points": [
+    "Written in JavaScript and HTML",
+    "Reporting organized by working days",
+    "No README documentation provided"
+   ]
+  },
+  "zh": {
+   "what": "按工作日生成报告的网页",
+   "points": [
+    "使用JavaScript和HTML",
+    "按工作日报告",
+    "README未提供说明"
+   ]
+  }
+ }
+}

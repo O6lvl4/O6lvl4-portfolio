@@ -1,0 +1,55 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # codopsy (O6lvl4/codopsy): rank A and no warnings on the scripts, or nothing is deployed.
+  # Built from main: the v2.2.0 release flags TypeScript `import type` as unused.
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          cache-targets: false
+          cache-directories: ~/.cargo/bin
+      - name: Install codopsy (main)
+        run: command -v codopsy || cargo install --git https://github.com/O6lvl4/codopsy.git --locked
+      - name: Quality gate (rank A, no warnings)
+        run: |
+          codopsy analyze ./scripts --fail-on-warning -o codopsy-report.json
+          node -e '
+            const s = require("./codopsy-report.json").score;
+            console.log(`codopsy: ${s.grade} (${s.overall}/100)`);
+            if (s.grade !== "A") process.exit(1);
+          '
+
+  # The plates are made from the clones and the commands on the author's machine, so the built
+  # site is committed and this only uploads it.
+  deploy:
+    needs: quality
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v5
