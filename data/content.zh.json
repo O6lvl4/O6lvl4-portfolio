@@ -393,20 +393,20 @@
  "series": [
   {
    "id": "almide",
-   "title": "做一门语言",
+   "title": "做语言",
    "short": "语言",
-   "intro": "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）",
+   "intro": "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。另一门语言是 wyve：在 LLVM IR 之上一层放置静态语义，让优化器把契约写下来，用 Racket 写成",
    "figures": [
     {
-     "value": "17",
+     "value": "18",
      "label": "公开仓库"
     },
     {
-     "value": "10,531",
+     "value": "10,640",
      "label": "提交"
     },
     {
-     "value": "6",
+     "value": "7",
      "label": "语言"
     },
     {
@@ -417,7 +417,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 10531
+     "count": 10640
     }
    ],
    "works": [
@@ -517,6 +517,48 @@
      ],
      "order": {
       "date": "2026-09-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/wyve",
+     "title": "wyve",
+     "titleEn": "LLVM IR之上、为优化器编写契约的静态语义语言",
+     "date": "2026年6月",
+     "format": "Racket",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/wyve",
+     "tags": [
+      "Racket",
+      "C",
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "109"
+      },
+      {
+       "label": "首次",
+       "value": "2026年6月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.0.7"
+      },
+      {
+       "label": "星标",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/wyve"
+      }
+     ],
+     "order": {
+      "date": "2026-06-09"
      }
     },
     {
@@ -1499,11 +1541,11 @@
    "intro": "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
    "figures": [
     {
-     "value": "26",
+     "value": "25",
      "label": "公开仓库"
     },
     {
-     "value": "776",
+     "value": "773",
      "label": "提交"
     },
     {
@@ -1522,7 +1564,7 @@
     },
     {
      "name": "2026",
-     "count": 760
+     "count": 757
     }
    ],
    "works": [
@@ -2470,35 +2512,6 @@
      "order": {
       "date": "2025-08-25"
      }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean4-practice",
-     "title": "lean4-practice",
-     "titleEn": "提供Lean 4代码生成最佳实践的Claude Code插件",
-     "date": "2026年3月",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean4-practice",
-     "tags": [],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/lean4-practice"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
-     }
     }
    ]
   },
@@ -2506,14 +2519,14 @@
    "id": "llm",
    "title": "智能体与 LLM 的基础",
    "short": "LLM 基础",
-   "intro": "真正把模型用起来所需要的：对任何供应商都同一张脸的入口（unillm、almai）与语音入口（unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus），以及在终端用同一个口子调多个模型的 CLI（llmine）",
+   "intro": "真正把模型用起来所需要的：对任何供应商都同一张脸的入口（unillm、almai）与语音入口（unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus）、在终端用同一个口子调多个模型的 CLI（llmine），以及用纯 Almide 写、跑在 WASM 上的模型本身（bonsai-almide）",
    "figures": [
     {
-     "value": "18",
+     "value": "19",
      "label": "公开仓库"
     },
     {
-     "value": "261",
+     "value": "296",
      "label": "提交"
     },
     {
@@ -2532,7 +2545,7 @@
     },
     {
      "name": "2026",
-     "count": 113
+     "count": 148
     }
    ],
    "works": [
@@ -2632,6 +2645,44 @@
      ],
      "order": {
       "date": "2025-08-03"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/bonsai-almide",
+     "title": "bonsai-almide",
+     "titleEn": "经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示",
+     "date": "2026年4月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/bonsai-almide",
+     "tags": [
+      "Almide",
+      "JavaScript",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "35"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      },
+      {
+       "label": "星标",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/bonsai-almide"
+      }
+     ],
+     "order": {
+      "date": "2026-04-22"
      }
     },
     {
@@ -6673,21 +6724,436 @@
    ]
   },
   {
-   "id": "tools",
-   "title": "手边的工具与公开站点",
-   "short": "工具与站点",
-   "intro": "为每天的活儿写的小可执行文件，以及公开的页面：搭环境（gv、qusp、dotfiles、netcheck）、处理文书（keiri、pdf-burger、resepy、capto、gformiac）、积累知识（O6lvl4-knowledge、awen、memre、graph-garden）、给人看的站点（hokusai-portfolio、chip-war-chronicle、agent-bench-matrix、uimodulay），以及随手放在近处的一次性小东西（听口哨音高的 pitchy、耳机 EQ、盯供应链攻击的 tocsin）",
+   "id": "toolchain",
+   "title": "把语言环境准备好",
+   "short": "工具链",
+   "intro": "让每种语言的工具链在需要时才以需要的版本出现在手边：随 cd 坍缩成一个的叠加态（qusp）、达到 uv 速度的 Go 版本管理器（gv）及 *v 系共用的底座（anyv-core）、不需要 apt/brew/Docker 的静态 PHP（php-build-standalone），以及自己的 formula 仓库（homebrew-tap）",
    "figures": [
     {
-     "value": "47",
+     "value": "5",
      "label": "公开仓库"
     },
     {
-     "value": "835",
+     "value": "186",
      "label": "提交"
     },
     {
-     "value": "11",
+     "value": "2",
+     "label": "语言"
+    },
+    {
+     "value": "2026–2026",
+     "label": "年份"
+    }
+   ],
+   "years": [
+    {
+     "name": "2026",
+     "count": 186
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/shared/O6lvl4/qusp.jpg",
+     "readme": {
+      "lead": "由qusp.toml驱动的多语言工具链管理器",
+      "points": [
+       "23个原生Rust后端并行安装",
+       "符号链接、qusp run、shell钩子",
+       "每次安装均校验哈希"
+      ],
+      "code": {
+       "cmd": "qusp --help",
+       "out": "Every language toolchain in superposition. `cd` collapses to one.\n\nUsage: qusp [OPTIONS] <COMMAND>\n\nCommands:\n  backends     List the languages this build of qusp supports\n  install      Install toolchains. With no args, installs everything pinned in qusp.toml (in parallel). With `<lang> <version>`, installs just one\n  sync         Reconcile installs with qusp.toml + qusp.lock. With --frozen, refuses to update qusp.lock and uses lock-as-truth\n  add          Pin and install a tool. Auto-routes to the backend whose registry recognizes the name\n  run          Run a command using the resolved multi-language environment\n  x            Ephemeral run. argv[0]=`quspx` dispatches into this. Resolves, installs (or reuses), executes — without touching qusp.toml/qusp.lock\n  list         List installed toolchains, or remote ones with --remote\n  current      Resolve and report which version applies in the current directory\n  shellenv     Print shell exports (PATH/GOROOT/GEM_HOME/…) for the current project. Source via `eval \"$(qusp shellenv)\"`\n  hook         Print a shell hook that re-applies `qusp shellenv` on every directory change\n  init         Scaffold a starter `qusp.toml` in the current directory\n  outdated     Report toolchains/tools that have newer versions upstream\n  self-update  In-place self-update against the latest GitHub release\n  tree         Show the resolved multi-language environment\n  doctor       Print a gv/uv-style health check\n  dir          Print path of a gv-managed dir (data, cache, …)\n  completions  Generate shell completions\n  setup        One-time system setup: ensure ~/.local/bin is visible to all apps\n  pin          Set, list, or remove the global pin for a language\n  help         Print this message or the help of the given subcommand(s)\n\nOptions:\n  -q, --quiet                          "
+      }
+     },
+     "id": "O6lvl4/qusp",
+     "title": "qusp",
+     "titleEn": "由qusp.toml驱动的多语言工具链管理器",
+     "date": "2026年7月",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/qusp",
+     "tags": [
+      "Rust",
+      "Shell",
+      "Python",
+      "cli"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "95"
+      },
+      {
+       "label": "首次",
+       "value": "2026年7月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.32.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/qusp"
+      }
+     ],
+     "order": {
+      "date": "2026-07-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gv",
+     "title": "gv",
+     "titleEn": "Rust编写的Go版本与工具链管理器",
+     "date": "2026年4月",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gv",
+     "tags": [
+      "Rust",
+      "Shell",
+      "cli",
+      "developer-tools"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "18"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.6.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/gv"
+      }
+     ],
+     "order": {
+      "date": "2026-04-28"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/php-build-standalone",
+     "title": "php-build-standalone",
+     "titleEn": "面向各平台的预构建静态PHP二进制文件",
+     "date": "2026年4月",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/php-build-standalone",
+     "tags": [],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "13"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版本",
+       "value": "php-8.2.31"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/php-build-standalone"
+      }
+     ],
+     "order": {
+      "date": "2026-04-29"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/anyv-core",
+     "title": "anyv-core",
+     "titleEn": "*v工具链管理器（gv、rv）的共享Rust基础库",
+     "date": "2026年5月",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/anyv-core",
+     "tags": [
+      "Rust",
+      "developer-tools",
+      "library",
+      "rust"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "4"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/anyv-core"
+      }
+     ],
+     "order": {
+      "date": "2026-05-09"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/homebrew-tap",
+     "title": "homebrew-tap",
+     "titleEn": "@O6lvl4 的 Homebrew formula 仓库",
+     "date": "2026年8月",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/homebrew-tap",
+     "tags": [
+      "Python",
+      "Ruby",
+      "developer-tools",
+      "golang"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "56"
+      },
+      {
+       "label": "首次",
+       "value": "2026年8月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/homebrew-tap"
+      }
+     ],
+     "order": {
+      "date": "2026-08-08"
+     }
+    }
+   ]
+  },
+  {
+   "id": "knowledge",
+   "title": "把学到的留住",
+   "short": "知识",
+   "intro": "为了记住读过的东西而做的一层：把 Obsidian 保管库连同 Git LFS 一起以图的方式查看（O6lvl4-knowledge）、用 SM-2 复习 markdown 保管库的 CLI（awen）、把同一件事做成 macOS 应用（memre）、把保管库变成静态知识库的 Astro 集成（graph-garden）",
+   "figures": [
+    {
+     "value": "4",
+     "label": "公开仓库"
+    },
+    {
+     "value": "327",
+     "label": "提交"
+    },
+    {
+     "value": "4",
+     "label": "语言"
+    },
+    {
+     "value": "2026–2026",
+     "label": "年份"
+    }
+   ],
+   "years": [
+    {
+     "name": "2026",
+     "count": 327
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/shared/O6lvl4/O6lvl4-knowledge.jpg",
+     "readme": {
+      "lead": "基于Obsidian和Git LFS的知识库及图谱查看器",
+      "points": [
+       "Obsidian知识库",
+       "Git LFS管理大文件",
+       "图谱查看器"
+      ]
+     },
+     "id": "O6lvl4/O6lvl4-knowledge",
+     "title": "O6lvl4-knowledge",
+     "titleEn": "基于Obsidian和Git LFS的知识库及图谱查看器",
+     "date": "2026年8月",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-knowledge",
+     "tags": [
+      "JavaScript",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "275"
+      },
+      {
+       "label": "首次",
+       "value": "2026年8月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/O6lvl4-knowledge"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/O6lvl4-knowledge/"
+      }
+     ],
+     "order": {
+      "date": "2026-08-22"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/memre",
+     "title": "memre",
+     "titleEn": "AI驱动的macOS原生间隔重复闪卡应用",
+     "date": "2026年4月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/memre",
+     "tags": [
+      "TypeScript",
+      "Go",
+      "CSS",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "20"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/memre"
+      }
+     ],
+     "order": {
+      "date": "2026-04-27"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/awen",
+     "title": "awen",
+     "titleEn": "基于SM-2间隔重复的Markdown笔记记忆CLI",
+     "date": "2026年5月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/awen",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "11"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.0.5"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/awen"
+      }
+     ],
+     "order": {
+      "date": "2026-05-04"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/graph-garden",
+     "title": "graph-garden",
+     "titleEn": "将Markdown库转为静态知识库的Astro集成",
+     "date": "2026年6月",
+     "format": "CSS",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/graph-garden",
+     "tags": [
+      "CSS",
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "21"
+      },
+      {
+       "label": "首次",
+       "value": "2026年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/graph-garden"
+      }
+     ],
+     "order": {
+      "date": "2026-06-01"
+     }
+    }
+   ]
+  },
+  {
+   "id": "sites",
+   "title": "给人看的页面",
+   "short": "公开页面",
+   "intro": "在浏览器里打开、到此为止的东西：画家作品集样例（hokusai-portfolio）与某人的作品集（kotorody-portfolio）、半导体与世界局势的时间线（chip-war-chronicle）、把智能体基准汇成一张表（agent-bench-matrix）、演讲幻灯片、照看身体的小应用（gulp-coach、environment-health-viewer、tabi-navi）、玩声音的两个（pitchy、almide-headset-eq），以及为文书写的纯 HTML（aid-on-contract-generator、aid-on-invoice-generator、aid-on-tax-calculator）",
+   "figures": [
+    {
+     "value": "13",
+     "label": "公开仓库"
+    },
+    {
+     "value": "124",
+     "label": "提交"
+    },
+    {
+     "value": "4",
      "label": "语言"
     },
     {
@@ -6698,11 +7164,510 @@
    "years": [
     {
      "name": "2025",
-     "count": 41
+     "count": 8
     },
     {
      "name": "2026",
-     "count": 794
+     "count": 116
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/zh/O6lvl4/almide-headset-eq.jpg",
+     "readme": {
+      "lead": "用Almide编写的级联biquad参量均衡器,校正CYBER耳机",
+      "points": [
+       "RBJ峰值滤波器系数设计",
+       "7频段补偿曲线cyber_curve",
+       "WASM构建与WebAudio演示"
+      ]
+     },
+     "id": "O6lvl4/almide-headset-eq",
+     "title": "almide-headset-eq",
+     "titleEn": "用Almide编写的级联biquad参量均衡器,校正CYBER耳机",
+     "date": "2026年6月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/almide-headset-eq",
+     "tags": [
+      "HTML",
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "4"
+      },
+      {
+       "label": "首次",
+       "value": "2026年6月"
+      },
+      {
+       "label": "星标",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/almide-headset-eq"
+      }
+     ],
+     "order": {
+      "date": "2026-06-19"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/chip-war-chronicle",
+     "title": "chip-war-chronicle",
+     "titleEn": "半导体与世界局势的泳道时间线",
+     "date": "2026年9月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/chip-war-chronicle",
+     "tags": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "42"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/chip-war-chronicle"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/chip-war-chronicle/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
+     "titleEn": "用Almide讲述WebAssembly现状的演讲幻灯片",
+     "date": "2026年7月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "27"
+      },
+      {
+       "label": "首次",
+       "value": "2026年7月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
+      }
+     ],
+     "order": {
+      "date": "2026-07-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/agent-bench-matrix",
+     "title": "agent-bench-matrix",
+     "titleEn": "把智能体基准公开榜单按模型汇成一张表",
+     "date": "2026年9月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/agent-bench-matrix",
+     "tags": [
+      "HTML",
+      "JavaScript",
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "9"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/agent-bench-matrix"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/agent-bench-matrix/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/hokusai-portfolio",
+     "title": "hokusai-portfolio",
+     "titleEn": "以北斋64幅风景版画制作的日本艺术家作品集示例",
+     "date": "2026年9月",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/hokusai-portfolio",
+     "tags": [
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "github-pages"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "2"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/hokusai-portfolio"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/hokusai-portfolio/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gulp-coach",
+     "title": "gulp-coach",
+     "titleEn": "完全本地运行的饮水教练,提示还能喝多少或需等待多久",
+     "date": "2026年4月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gulp-coach",
+     "tags": [
+      "TypeScript",
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "12"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/gulp-coach"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/gulp-coach/"
+      }
+     ],
+     "order": {
+      "date": "2026-04-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/environment-health-viewer",
+     "title": "environment-health-viewer",
+     "titleEn": "一屏展示所在地环境健康风险与气象警报的静态看板",
+     "date": "2026年4月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/environment-health-viewer",
+     "tags": [
+      "TypeScript",
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "10"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/environment-health-viewer"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/environment-health-viewer/"
+      }
+     ],
+     "order": {
+      "date": "2026-04-23"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/kotorody-portfolio",
+     "title": "kotorody-portfolio",
+     "titleEn": "Aid-On前端工程师kotorody的作品集网站",
+     "date": "2026年5月",
+     "format": "HTML",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/kotorody-portfolio",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "7"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/Aid-On/kotorody-portfolio"
+      }
+     ],
+     "order": {
+      "date": "2026-05-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/tabi-navi",
+     "title": "tabi-navi",
+     "titleEn": "按行程约束搜索最便宜机票加酒店组合的CLI",
+     "date": "2026年6月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/tabi-navi",
+     "tags": [
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "1"
+      },
+      {
+       "label": "首次",
+       "value": "2026年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/tabi-navi"
+      }
+     ],
+     "order": {
+      "date": "2026-06-11"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/pitchy",
+     "title": "pitchy",
+     "titleEn": "口哨音高检测工具,显示和弦并含节奏游戏",
+     "date": "2026年5月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/pitchy",
+     "tags": [
+      "HTML",
+      "Rust"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "2"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/pitchy"
+      }
+     ],
+     "order": {
+      "date": "2026-05-12"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/aid-on-contract-generator",
+     "title": "aid-on-contract-generator",
+     "titleEn": "纯HTML/CSS/JS的浏览器合同生成应用",
+     "date": "2025年6月",
+     "format": "JavaScript",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/aid-on-contract-generator",
+     "tags": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "2"
+      },
+      {
+       "label": "首次",
+       "value": "2025年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/Aid-On/aid-on-contract-generator"
+      }
+     ],
+     "order": {
+      "date": "2025-06-29"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/aid-on-tax-calculator",
+     "title": "aid-on-tax-calculator",
+     "titleEn": "按日本10%消费税换算含税与不含税价格的Python命令行工具",
+     "date": "2025年3月",
+     "format": "Python",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/aid-on-tax-calculator",
+     "tags": [
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "2"
+      },
+      {
+       "label": "首次",
+       "value": "2025年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/Aid-On/aid-on-tax-calculator"
+      }
+     ],
+     "order": {
+      "date": "2025-03-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/aid-on-invoice-generator",
+     "title": "aid-on-invoice-generator",
+     "titleEn": "发票生成项目,README仅有名称",
+     "date": "2025年6月",
+     "format": "HTML",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/aid-on-invoice-generator",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "4"
+      },
+      {
+       "label": "首次",
+       "value": "2025年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/Aid-On/aid-on-invoice-generator"
+      }
+     ],
+     "order": {
+      "date": "2025-06-02"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tools",
+   "title": "手边的工具",
+   "short": "手边的工具",
+   "intro": "为每天的活儿写的小可执行文件：处理文书（keiri、pdf-burger、resepy、capto、gformiac）、查看环境与机器（netcheck、igloc、syncenv、macleap、dns-checker）、切换账号（azprofile、chropen）、把写好的东西变成能交出去的形态（pagina、premaid、image-catalog-composer）、尽早知道供应链攻击（tocsin、tocsin-almd）、把界面结构提成 Layout AST（uimodulay），以及自己的工作规约与对照它的合规检查器（O6lvl4-protocol、O6lvl4-vitals）",
+   "figures": [
+    {
+     "value": "25",
+     "label": "公开仓库"
+    },
+    {
+     "value": "198",
+     "label": "提交"
+    },
+    {
+     "value": "9",
+     "label": "语言"
+    },
+    {
+     "value": "2025–2026",
+     "label": "年份"
+    }
+   ],
+   "years": [
+    {
+     "name": "2025",
+     "count": 33
+    },
+    {
+     "name": "2026",
+     "count": 165
     }
    ],
    "works": [
@@ -6756,120 +7721,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/qusp",
-     "title": "qusp",
-     "titleEn": "由qusp.toml驱动的多语言工具链管理器",
-     "date": "2026年7月",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/qusp",
-     "tags": [
-      "Rust",
-      "Shell",
-      "Python",
-      "cli"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "95"
-      },
-      {
-       "label": "首次",
-       "value": "2026年7月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.32.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/qusp"
-      }
-     ],
-     "order": {
-      "date": "2026-07-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-knowledge",
-     "title": "O6lvl4-knowledge",
-     "titleEn": "基于Obsidian和Git LFS的知识库及图谱查看器",
-     "date": "2026年8月",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-knowledge",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "275"
-      },
-      {
-       "label": "首次",
-       "value": "2026年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/O6lvl4-knowledge"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/O6lvl4-knowledge/"
-      }
-     ],
-     "order": {
-      "date": "2026-08-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/almide-headset-eq",
-     "title": "almide-headset-eq",
-     "titleEn": "用Almide编写的级联biquad参量均衡器,校正CYBER耳机",
-     "date": "2026年6月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/almide-headset-eq",
-     "tags": [
-      "HTML",
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "星标",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/almide-headset-eq"
-      }
-     ],
-     "order": {
-      "date": "2026-06-19"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/tocsin",
      "title": "tocsin",
      "titleEn": "在CVE发布前从社交信号检测供应链攻击的预警系统",
@@ -6908,84 +7759,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/gv",
-     "title": "gv",
-     "titleEn": "Rust编写的Go版本与工具链管理器",
-     "date": "2026年4月",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gv",
-     "tags": [
-      "Rust",
-      "Shell",
-      "cli",
-      "developer-tools"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "18"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.6.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/gv"
-      }
-     ],
-     "order": {
-      "date": "2026-04-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/memre",
-     "title": "memre",
-     "titleEn": "AI驱动的macOS原生间隔重复闪卡应用",
-     "date": "2026年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/memre",
-     "tags": [
-      "TypeScript",
-      "Go",
-      "CSS",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "20"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/memre"
-      }
-     ],
-     "order": {
-      "date": "2026-04-27"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/premaid",
      "title": "premaid",
      "titleEn": "用命令行将Mermaid图渲染为精美SVG和PNG",
@@ -7018,75 +7791,6 @@
      ],
      "order": {
       "date": "2026-04-27"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/php-build-standalone",
-     "title": "php-build-standalone",
-     "titleEn": "面向各平台的预构建静态PHP二进制文件",
-     "date": "2026年4月",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/php-build-standalone",
-     "tags": [],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "13"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      },
-      {
-       "label": "版本",
-       "value": "php-8.2.31"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/php-build-standalone"
-      }
-     ],
-     "order": {
-      "date": "2026-04-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/awen",
-     "title": "awen",
-     "titleEn": "基于SM-2间隔重复的Markdown笔记记忆CLI",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/awen",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "11"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.0.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/awen"
-      }
-     ],
-     "order": {
-      "date": "2026-05-04"
      }
     },
     {
@@ -7162,45 +7866,6 @@
      ],
      "order": {
       "date": "2025-12-01"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/anyv-core",
-     "title": "anyv-core",
-     "titleEn": "*v工具链管理器（gv、rv）的共享Rust基础库",
-     "date": "2026年5月",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/anyv-core",
-     "tags": [
-      "Rust",
-      "developer-tools",
-      "library",
-      "rust"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/anyv-core"
-      }
-     ],
-     "order": {
-      "date": "2026-05-09"
      }
     },
     {
@@ -7282,111 +7947,6 @@
      }
     },
     {
-     "image": "",
-     "id": "O6lvl4/homebrew-tap",
-     "title": "homebrew-tap",
-     "titleEn": "@O6lvl4 的 Homebrew formula 仓库",
-     "date": "2026年8月",
-     "format": "Python",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/homebrew-tap",
-     "tags": [
-      "Python",
-      "Ruby",
-      "developer-tools",
-      "golang"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "56"
-      },
-      {
-       "label": "首次",
-       "value": "2026年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/homebrew-tap"
-      }
-     ],
-     "order": {
-      "date": "2026-08-08"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/chip-war-chronicle",
-     "title": "chip-war-chronicle",
-     "titleEn": "半导体与世界局势的泳道时间线",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/chip-war-chronicle",
-     "tags": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "42"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/chip-war-chronicle"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/chip-war-chronicle/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
-     "titleEn": "用Almide讲述WebAssembly现状的演讲幻灯片",
-     "date": "2026年7月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "27"
-      },
-      {
-       "label": "首次",
-       "value": "2026年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
-      }
-     ],
-     "order": {
-      "date": "2026-07-06"
-     }
-    },
-    {
      "image": "plates/zh/O6lvl4/uimodulay.jpg",
      "readme": {
       "lead": "将URL解析为设计师视角模块结构的UI分析器",
@@ -7426,44 +7986,6 @@
      ],
      "order": {
       "date": "2026-09-18"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/agent-bench-matrix",
-     "title": "agent-bench-matrix",
-     "titleEn": "把智能体基准公开榜单按模型汇成一张表",
-     "date": "2026年9月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/agent-bench-matrix",
-     "tags": [
-      "HTML",
-      "JavaScript",
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "9"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/agent-bench-matrix"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/agent-bench-matrix/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-14"
      }
     },
     {
@@ -7531,45 +8053,6 @@
      ],
      "order": {
       "date": "2026-06-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/hokusai-portfolio",
-     "title": "hokusai-portfolio",
-     "titleEn": "以北斋64幅风景版画制作的日本艺术家作品集示例",
-     "date": "2026年9月",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/hokusai-portfolio",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "github-pages"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/hokusai-portfolio"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/hokusai-portfolio/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-18"
      }
     },
     {
@@ -7643,39 +8126,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/graph-garden",
-     "title": "graph-garden",
-     "titleEn": "将Markdown库转为静态知识库的Astro集成",
-     "date": "2026年6月",
-     "format": "CSS",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/graph-garden",
-     "tags": [
-      "CSS",
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "21"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/graph-garden"
-      }
-     ],
-     "order": {
-      "date": "2026-06-01"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/macleap",
      "title": "macleap",
      "titleEn": "检测当前Mac、推荐同等或更好机型并估算折价后升级费用的CLI",
@@ -7739,82 +8189,6 @@
      ],
      "order": {
       "date": "2026-05-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gulp-coach",
-     "title": "gulp-coach",
-     "titleEn": "完全本地运行的饮水教练,提示还能喝多少或需等待多久",
-     "date": "2026年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gulp-coach",
-     "tags": [
-      "TypeScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "12"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/gulp-coach"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/gulp-coach/"
-      }
-     ],
-     "order": {
-      "date": "2026-04-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/environment-health-viewer",
-     "title": "environment-health-viewer",
-     "titleEn": "一屏展示所在地环境健康风险与气象警报的静态看板",
-     "date": "2026年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/environment-health-viewer",
-     "tags": [
-      "TypeScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "10"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/environment-health-viewer"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/environment-health-viewer/"
-      }
-     ],
-     "order": {
-      "date": "2026-04-23"
      }
     },
     {
@@ -7979,38 +8353,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/kotorody-portfolio",
-     "title": "kotorody-portfolio",
-     "titleEn": "Aid-On前端工程师kotorody的作品集网站",
-     "date": "2026年5月",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/kotorody-portfolio",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "7"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/kotorody-portfolio"
-      }
-     ],
-     "order": {
-      "date": "2026-05-18"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/netcheck",
      "title": "netcheck",
      "titleEn": "按层排查网络故障的macOS诊断工具",
@@ -8037,71 +8379,6 @@
      ],
      "order": {
       "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/tabi-navi",
-     "title": "tabi-navi",
-     "titleEn": "按行程约束搜索最便宜机票加酒店组合的CLI",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/tabi-navi",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/tabi-navi"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/pitchy",
-     "title": "pitchy",
-     "titleEn": "口哨音高检测工具,显示和弦并含节奏游戏",
-     "date": "2026年5月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/pitchy",
-     "tags": [
-      "HTML",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/pitchy"
-      }
-     ],
-     "order": {
-      "date": "2026-05-12"
      }
     },
     {
@@ -8232,72 +8509,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/aid-on-contract-generator",
-     "title": "aid-on-contract-generator",
-     "titleEn": "纯HTML/CSS/JS的浏览器合同生成应用",
-     "date": "2025年6月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-contract-generator",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2025年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/aid-on-contract-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-tax-calculator",
-     "title": "aid-on-tax-calculator",
-     "titleEn": "按日本10%消费税换算含税与不含税价格的Python命令行工具",
-     "date": "2025年3月",
-     "format": "Python",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-tax-calculator",
-     "tags": [
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2025年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/aid-on-tax-calculator"
-      }
-     ],
-     "order": {
-      "date": "2025-03-06"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/dotfiles",
      "title": "dotfiles",
      "titleEn": "用Brewfile和脚本管理macOS开发环境的dotfiles",
@@ -8327,139 +8538,49 @@
      "order": {
       "date": "2026-04-28"
      }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-invoice-generator",
-     "title": "aid-on-invoice-generator",
-     "titleEn": "发票生成项目,README仅有名称",
-     "date": "2025年6月",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-invoice-generator",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2025年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/aid-on-invoice-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-02"
-     }
     }
    ]
   },
   {
-   "id": "lab",
-   "title": "试过的东西",
-   "short": "试过的",
-   "intro": "碰过、比过、留着的其他语言与机制：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、Zig 上零成本的函数式工具箱（zfp）、位于 LLVM IR 之上一层的语义语言 wyve、用 OpenTelemetry 看 Ruby 并发边界的 sashiko、Go 各版本写法的对照、用自制语言发出的声音与写的追踪，以及模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
+   "id": "other-langs",
+   "title": "用别的语言写",
+   "short": "别的语言",
+   "intro": "在自制语言之外写的东西：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、把 Lean 降到 Rust 的后端（lean4-rust-backend）、在这之前的证明练习（hello-lean4、lean-lang-sandbox、lean4-practice、fizzbuzz-lean4-lib、fizzbuzz-lean4-cli）、在 Zig 的类型里消失的零成本函数式工具箱（zfp），以及用 OpenTelemetry 看 Ruby 并发边界的 sashiko",
    "figures": [
     {
-     "value": "48",
+     "value": "9",
      "label": "公开仓库"
     },
     {
-     "value": "595",
+     "value": "103",
      "label": "提交"
     },
     {
-     "value": "16",
+     "value": "5",
      "label": "语言"
     },
     {
-     "value": "2022–2026",
+     "value": "2026–2026",
      "label": "年份"
     }
    ],
    "years": [
     {
-     "name": "2022",
-     "count": 43
-    },
-    {
-     "name": "2023",
-     "count": 20
-    },
-    {
-     "name": "2024",
-     "count": 29
-    },
-    {
-     "name": "2025",
-     "count": 232
-    },
-    {
      "name": "2026",
-     "count": 271
+     "count": 103
     }
    ],
    "works": [
     {
-     "image": "plates/zh/O6lvl4/wyve.jpg",
+     "image": "plates/shared/O6lvl4/zfp.jpg",
      "readme": {
-      "lead": "LLVM IR之上、为优化器编写契约的静态语义语言",
+      "lead": "基于Zig原生类型的零开销函数式工具库",
       "points": [
-       "经证明的@noalias与@effect",
-       "@vectorize(require)失败即报错",
-       "Lean证明调度变换逐位精确"
+       "直接作用于?T的option",
+       "pipe与compose函数组合",
+       "monoid与slice折叠"
       ]
      },
-     "id": "O6lvl4/wyve",
-     "title": "wyve",
-     "titleEn": "LLVM IR之上、为优化器编写契约的静态语义语言",
-     "date": "2026年6月",
-     "format": "Racket",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/wyve",
-     "tags": [
-      "Racket",
-      "C",
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "109"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.0.7"
-      },
-      {
-       "label": "星标",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/wyve"
-      }
-     ],
-     "order": {
-      "date": "2026-06-09"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/zfp",
      "title": "zfp",
      "titleEn": "基于Zig原生类型的零开销函数式工具库",
@@ -8554,44 +8675,6 @@
     },
     {
      "image": "",
-     "id": "almide/bonsai-almide",
-     "title": "bonsai-almide",
-     "titleEn": "经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/bonsai-almide",
-     "tags": [
-      "Almide",
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "35"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      },
-      {
-       "label": "星标",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/bonsai-almide"
-      }
-     ],
-     "order": {
-      "date": "2026-04-22"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/lean2ts",
      "title": "lean2ts",
      "titleEn": "将Lean 4规约转换为TypeScript类型与属性测试",
@@ -8631,42 +8714,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/line-bot-private",
-     "title": "line-bot-private",
-     "titleEn": "基于AWS SAM的Go语言Lambda函数示例模板",
-     "date": "2022年10月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/line-bot-private",
-     "tags": [
-      "Go"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "6"
-      },
-      {
-       "label": "首次",
-       "value": "2022年10月"
-      },
-      {
-       "label": "星标",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/line-bot-private"
-      }
-     ],
-     "order": {
-      "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/hello-lean4",
      "title": "hello-lean4",
      "titleEn": "用 Lean 4 编写的 Hello World CLI 应用",
@@ -8699,6 +8746,259 @@
      ],
      "order": {
       "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/lean-lang-sandbox",
+     "title": "lean-lang-sandbox",
+     "titleEn": "Lean 4学习沙盒，含从定理证明到编程的教程",
+     "date": "2026年2月",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean-lang-sandbox",
+     "tags": [
+      "Lean",
+      "functional-programming",
+      "japanese",
+      "lean"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "3"
+      },
+      {
+       "label": "首次",
+       "value": "2026年2月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/lean-lang-sandbox"
+      }
+     ],
+     "order": {
+      "date": "2026-02-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/lean4-rust-backend",
+     "title": "lean4-rust-backend",
+     "titleEn": "基于IR的Lean 4到Rust代码生成后端",
+     "date": "2026年3月",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean4-rust-backend",
+     "tags": [
+      "Rust",
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "1"
+      },
+      {
+       "label": "首次",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/lean4-rust-backend"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/fizzbuzz-lean4-cli",
+     "title": "fizzbuzz-lean4-cli",
+     "titleEn": "用 Lean 4 编写的 FizzBuzz 命令行程序",
+     "date": "2026年3月",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
+     "tags": [
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "1"
+      },
+      {
+       "label": "首次",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-cli"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/lean4-practice",
+     "title": "lean4-practice",
+     "titleEn": "提供Lean 4代码生成最佳实践的Claude Code插件",
+     "date": "2026年3月",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean4-practice",
+     "tags": [],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "3"
+      },
+      {
+       "label": "首次",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/lean4-practice"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/fizzbuzz-lean4-lib",
+     "title": "fizzbuzz-lean4-lib",
+     "titleEn": "用 Lean 4 编写的 FizzBuzz 库",
+     "date": "2026年3月",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-lib",
+     "tags": [
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "1"
+      },
+      {
+       "label": "首次",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-lib"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    }
+   ]
+  },
+  {
+   "id": "lab",
+   "title": "试过的东西",
+   "short": "试过的",
+   "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide）、JavaScript 习题集（aid-on-js-training），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
+   "figures": [
+    {
+     "value": "38",
+     "label": "公开仓库"
+    },
+    {
+     "value": "351",
+     "label": "提交"
+    },
+    {
+     "value": "12",
+     "label": "语言"
+    },
+    {
+     "value": "2022–2026",
+     "label": "年份"
+    }
+   ],
+   "years": [
+    {
+     "name": "2022",
+     "count": 43
+    },
+    {
+     "name": "2023",
+     "count": 20
+    },
+    {
+     "name": "2024",
+     "count": 29
+    },
+    {
+     "name": "2025",
+     "count": 232
+    },
+    {
+     "name": "2026",
+     "count": 27
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/zh/O6lvl4/line-bot-private.jpg",
+     "readme": {
+      "lead": "基于AWS SAM的Go语言Lambda函数示例模板",
+      "points": [
+       "Makefile封装sam build",
+       "sam local start-api本地运行",
+       "sam deploy --guided部署"
+      ]
+     },
+     "id": "O6lvl4/line-bot-private",
+     "title": "line-bot-private",
+     "titleEn": "基于AWS SAM的Go语言Lambda函数示例模板",
+     "date": "2022年10月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/line-bot-private",
+     "tags": [
+      "Go"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2022年10月"
+      },
+      {
+       "label": "星标",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/line-bot-private"
+      }
+     ],
+     "order": {
+      "date": "2022-10-30"
      }
     },
     {
@@ -8866,106 +9166,6 @@
      ],
      "order": {
       "date": "2025-08-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean-lang-sandbox",
-     "title": "lean-lang-sandbox",
-     "titleEn": "Lean 4学习沙盒，含从定理证明到编程的教程",
-     "date": "2026年2月",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean-lang-sandbox",
-     "tags": [
-      "Lean",
-      "functional-programming",
-      "japanese",
-      "lean"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/lean-lang-sandbox"
-      }
-     ],
-     "order": {
-      "date": "2026-02-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean4-rust-backend",
-     "title": "lean4-rust-backend",
-     "titleEn": "基于IR的Lean 4到Rust代码生成后端",
-     "date": "2026年3月",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean4-rust-backend",
-     "tags": [
-      "Rust",
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/lean4-rust-backend"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/fizzbuzz-lean4-cli",
-     "title": "fizzbuzz-lean4-cli",
-     "titleEn": "用 Lean 4 编写的 FizzBuzz 命令行程序",
-     "date": "2026年3月",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
-     "tags": [
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-cli"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
      }
     },
     {
@@ -9487,38 +9687,6 @@
      ],
      "order": {
       "date": "2025-12-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/fizzbuzz-lean4-lib",
-     "title": "fizzbuzz-lean4-lib",
-     "titleEn": "用 Lean 4 编写的 FizzBuzz 库",
-     "date": "2026年3月",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-lib",
-     "tags": [
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-lib"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
      }
     },
     {

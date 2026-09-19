@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>言語をつくる | O6lvl4</title>
-<meta name="description" content="静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。">
+<meta name="description" content="静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。もう一つの言語は wyve — LLVM IR の一層上に静的な意味論を置き、最適化器に契約を書かせるもので、Racket で書いてあります。">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/almide/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/ja/almide/">
 <meta property="og:title" content="言語をつくる | O6lvl4">
-<meta property="og:description" content="静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。">
+<meta property="og:description" content="静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。もう一つの言語は wyve — LLVM IR の一層上に静的な意味論を置き、最適化器に契約を書かせるもので、Racket で書いてあります。">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/share/og.ja.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 公開リポジトリ 265 件">
 <meta name="twitter:card" content="summary_large_image">
@@ -1828,12 +1828,12 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">言語をつくる</h1>
-        <p class="fam-intro">静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。</p>
+        <p class="fam-intro">静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。もう一つの言語は wyve — LLVM IR の一層上に静的な意味論を置き、最適化器に契約を書かせるもので、Racket で書いてあります。</p>
         <a class="fam-back" href="../#families">← 系統の一覧へ</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚁ</span>
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">17</div><div class="kpi-label">公開リポジトリ</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">10,531</div><div class="kpi-label">コミット</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">6</div><div class="kpi-label">言語</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">期間</div></div></div>
+    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">18</div><div class="kpi-label">公開リポジトリ</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">10,640</div><div class="kpi-label">コミット</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">7</div><div class="kpi-label">言語</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">期間</div></div></div>
     
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
@@ -1888,12 +1888,12 @@ Options:
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚂ</span>
       <h2 class="section-title" id="heading-works">仕事</h2>
-      <span class="section-count">17 / 17</span>
+      <span class="section-count">18 / 18</span>
     </div>
     
     <div class="works-toolbar">
       <div class="sort-bar" role="group" aria-label="並べ替え"><button type="button" class="sort-btn active" data-sort="date" aria-pressed="true">更新順</button><button type="button" class="sort-btn" data-sort="commits" aria-pressed="false">コミット順</button><button type="button" class="sort-btn" data-sort="format" aria-pressed="false">言語順</button><button type="button" class="sort-btn" data-sort="name" aria-pressed="false">名前順</button></div>
-      <div class="lang-filter-list" role="group" aria-label="言語"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">すべて</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="C" aria-pressed="false"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</button><button type="button" class="lang-chip" data-lang="HTML" aria-pressed="false"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button></div>
+      <div class="lang-filter-list" role="group" aria-label="言語"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">すべて</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="Racket" aria-pressed="false"><span class="lang-dot" style="background:#3c5caa;width:5px;height:5px" aria-hidden="true"></span>Racket</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="C" aria-pressed="false"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</button><button type="button" class="lang-chip" data-lang="HTML" aria-pressed="false"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button></div>
     </div>
     <ul class="repo-list" role="list" data-shown="28" aria-label="仕事"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-13" data-commits="8502" data-rank="0">
       <div>
@@ -1923,7 +1923,21 @@ Options:
         <span class="repo-stars">1418<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-09-07">2026年9月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="docs" data-date="2026-08-15" data-commits="63" data-rank="2">
+    </li><li class="repo-item" data-org="almide" data-lang="Racket" data-name="wyve" data-date="2026-06-09" data-commits="109" data-rank="2">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/O6lvl4/wyve" target="_blank" rel="noopener noreferrer">wyve</a>
+          <span class="repo-org-tag">O6lvl4</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3c5caa;width:5px;height:5px" aria-hidden="true"></span>Racket</span>
+        </div>
+        <p class="repo-desc">LLVM IRの一層上でオプティマイザ向け契約を書く静的意味論言語</p>
+        <ul class="repo-topics"><li class="repo-topic">C</li><li class="repo-topic">Lean</li></ul>
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">109<span class="repo-meta-unit"> コミット</span></span>
+        <time class="repo-date" datetime="2026-06-09">2026年6月</time>
+      </div>
+    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="docs" data-date="2026-08-15" data-commits="63" data-rank="3">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/docs" target="_blank" rel="noopener noreferrer">docs</a>
@@ -1937,7 +1951,7 @@ Options:
         <span class="repo-stars">63<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-08-15">2026年8月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="vscode-almide" data-date="2026-07-25" data-commits="23" data-rank="3">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="vscode-almide" data-date="2026-07-25" data-commits="23" data-rank="4">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/vscode-almide" target="_blank" rel="noopener noreferrer">vscode-almide</a>
@@ -1951,7 +1965,7 @@ Options:
         <span class="repo-stars">23<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-07-25">2026年7月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-grammar" data-date="2026-07-29" data-commits="27" data-rank="4">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-grammar" data-date="2026-07-29" data-commits="27" data-rank="5">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/almide-grammar" target="_blank" rel="noopener noreferrer">almide-grammar</a>
@@ -1965,7 +1979,7 @@ Options:
         <span class="repo-stars">27<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-07-29">2026年7月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="C" data-name="tree-sitter-almide" data-date="2026-09-07" data-commits="21" data-rank="5">
+    </li><li class="repo-item" data-org="almide" data-lang="C" data-name="tree-sitter-almide" data-date="2026-09-07" data-commits="21" data-rank="6">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/tree-sitter-almide" target="_blank" rel="noopener noreferrer">tree-sitter-almide</a>
@@ -1979,7 +1993,7 @@ Options:
         <span class="repo-stars">21<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-09-07">2026年9月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="HTML" data-name="almide-dojo" data-date="2026-08-17" data-commits="202" data-rank="6">
+    </li><li class="repo-item" data-org="almide" data-lang="HTML" data-name="almide-dojo" data-date="2026-08-17" data-commits="202" data-rank="7">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/almide-dojo" target="_blank" rel="noopener noreferrer">almide-dojo</a>
@@ -1993,7 +2007,7 @@ Options:
         <span class="repo-stars">202<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-08-17">2026年8月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-bindgen" data-date="2026-04-12" data-commits="33" data-rank="7">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-bindgen" data-date="2026-04-12" data-commits="33" data-rank="8">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/almide-bindgen" target="_blank" rel="noopener noreferrer">almide-bindgen</a>
@@ -2007,7 +2021,7 @@ Options:
         <span class="repo-stars">33<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-04-12">2026年4月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="playground" data-date="2026-08-21" data-commits="148" data-rank="8">
+    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="playground" data-date="2026-08-21" data-commits="148" data-rank="9">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/playground" target="_blank" rel="noopener noreferrer">playground</a>
@@ -2021,7 +2035,7 @@ Options:
         <span class="repo-stars">148<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-08-21">2026年8月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-lander" data-date="2026-07-25" data-commits="54" data-rank="9">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-lander" data-date="2026-07-25" data-commits="54" data-rank="10">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/almide-lander" target="_blank" rel="noopener noreferrer">almide-lander</a>
@@ -2035,7 +2049,7 @@ Options:
         <span class="repo-stars">54<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-07-25">2026年7月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="" data-name="almide-agents" data-date="2026-07-29" data-commits="6" data-rank="10">
+    </li><li class="repo-item" data-org="almide" data-lang="" data-name="almide-agents" data-date="2026-07-29" data-commits="6" data-rank="11">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/almide-agents" target="_blank" rel="noopener noreferrer">almide-agents</a>
@@ -2049,7 +2063,7 @@ Options:
         <span class="repo-stars">6<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-07-29">2026年7月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="parsegen" data-date="2026-08-17" data-commits="3" data-rank="11">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="parsegen" data-date="2026-08-17" data-commits="3" data-rank="12">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/parsegen" target="_blank" rel="noopener noreferrer">parsegen</a>
@@ -2063,7 +2077,7 @@ Options:
         <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-08-17">2026年8月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-web" data-date="2026-07-25" data-commits="3" data-rank="12">
+    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-web" data-date="2026-07-25" data-commits="3" data-rank="13">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/almide-web" target="_blank" rel="noopener noreferrer">almide-web</a>
@@ -2077,7 +2091,7 @@ Options:
         <span class="repo-stars">3<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-07-25">2026年7月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-wasm-bindgen" data-date="2026-04-15" data-commits="24" data-rank="13">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-wasm-bindgen" data-date="2026-04-15" data-commits="24" data-rank="14">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/almide-wasm-bindgen" target="_blank" rel="noopener noreferrer">almide-wasm-bindgen</a>
@@ -2091,7 +2105,7 @@ Options:
         <span class="repo-stars">24<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-04-15">2026年4月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="Shell" data-name="almide-examples" data-date="2026-03-07" data-commits="1" data-rank="14">
+    </li><li class="repo-item" data-org="almide" data-lang="Shell" data-name="almide-examples" data-date="2026-03-07" data-commits="1" data-rank="15">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/almide-examples" target="_blank" rel="noopener noreferrer">almide-examples</a>
@@ -2105,7 +2119,7 @@ Options:
         <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-03-07">2026年3月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-js" data-date="2026-04-15" data-commits="1" data-rank="15">
+    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-js" data-date="2026-04-15" data-commits="1" data-rank="16">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/almide-js" target="_blank" rel="noopener noreferrer">almide-js</a>
@@ -2119,7 +2133,7 @@ Options:
         <span class="repo-stars">1<span class="repo-meta-unit"> コミット</span></span>
         <time class="repo-date" datetime="2026-04-15">2026年4月</time>
       </div>
-    </li><li class="repo-item" data-org="almide" data-lang="" data-name=".github" data-date="2026-03-30" data-commits="2" data-rank="16">
+    </li><li class="repo-item" data-org="almide" data-lang="" data-name=".github" data-date="2026-03-30" data-commits="2" data-rank="17">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide/.github" target="_blank" rel="noopener noreferrer">.github</a>
@@ -2142,7 +2156,7 @@ Options:
     <span class="footer-copy">O6lvl4</span>
     <nav class="footer-social" aria-label="行き先"><a class="footer-social-link" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a><a class="footer-social-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Almide</span></a></nav>
     <span class="footer-ogham" title="ogma">᚛ᚑᚌᚋᚐ᚜</span>
-    <span class="footer-copy">265 リポジトリ · 10 系統</span>
+    <span class="footer-copy">265 リポジトリ · 14 系統</span>
   </footer>
   </div>
 </div>

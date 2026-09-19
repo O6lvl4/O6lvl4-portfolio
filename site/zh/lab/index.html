@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>试过的东西 | O6lvl4</title>
-<meta name="description" content="碰过、比过、留着的其他语言与机制：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、Zig 上零成本的函数式工具箱（zfp）、位于 LLVM IR 之上一层的语义语言 wyve、用 OpenTelemetry 看 Ruby 并发边界的 sashiko、Go 各版本写法的对照、用自制语言发出的声音与写的追踪，以及模板与练习。留着是因为下次撞到同一面墙时，这些记录有用">
+<meta name="description" content="碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide）、JavaScript 习题集（aid-on-js-training），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="zh">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/lab/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/zh/lab/">
 <meta property="og:title" content="试过的东西 | O6lvl4">
-<meta property="og:description" content="碰过、比过、留着的其他语言与机制：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、Zig 上零成本的函数式工具箱（zfp）、位于 LLVM IR 之上一层的语义语言 wyve、用 OpenTelemetry 看 Ruby 并发边界的 sashiko、Go 各版本写法的对照、用自制语言发出的声音与写的追踪，以及模板与练习。留着是因为下次撞到同一面墙时，这些记录有用">
+<meta property="og:description" content="碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide）、JavaScript 习题集（aid-on-js-training），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/share/og.zh.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 公开仓库 265 个">
 <meta name="twitter:card" content="summary_large_image">
@@ -1821,36 +1821,36 @@ body::after {
       <div class="content">
         <section id="entry" class="section" aria-labelledby="heading-entry">
     <div class="section-head">
-      <span class="ogham-mark" aria-hidden="true">ᚊ</span>
+      <span class="ogham-mark" aria-hidden="true">ᚎ</span>
       <h2 class="section-title" id="heading-entry">系列</h2>
       
     </div>
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">试过的东西</h1>
-        <p class="fam-intro">碰过、比过、留着的其他语言与机制：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、Zig 上零成本的函数式工具箱（zfp）、位于 LLVM IR 之上一层的语义语言 wyve、用 OpenTelemetry 看 Ruby 并发边界的 sashiko、Go 各版本写法的对照、用自制语言发出的声音与写的追踪，以及模板与练习。留着是因为下次撞到同一面墙时，这些记录有用</p>
+        <p class="fam-intro">碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide）、JavaScript 习题集（aid-on-js-training），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用</p>
         <a class="fam-back" href="../#families">← 全部系列</a>
       </div>
-      <span class="fam-hero-mark" aria-hidden="true">ᚊ</span>
+      <span class="fam-hero-mark" aria-hidden="true">ᚎ</span>
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">48</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">595</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">16</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2022–2026</div><div class="kpi-label">年份</div></div></div>
+    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">38</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">351</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">12</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2022–2026</div><div class="kpi-label">年份</div></div></div>
     <div>
       <div class="timeline-sub">各年提交</div>
-      <div class="timeline-chart" role="img" aria-label="年表: 2022 43, 2023 20, 2024 29, 2025 232, 2026 271"><div class="tl-bar-wrap">
+      <div class="timeline-chart" role="img" aria-label="年表: 2022 43, 2023 20, 2024 29, 2025 232, 2026 27"><div class="tl-bar-wrap">
         <span class="tl-count">43</span>
-        <div class="tl-bar" style="height:15.9%" title="2022: 43"></div>
+        <div class="tl-bar" style="height:18.5%" title="2022: 43"></div>
       </div><div class="tl-bar-wrap">
         <span class="tl-count">20</span>
-        <div class="tl-bar" style="height:7.4%" title="2023: 20"></div>
+        <div class="tl-bar" style="height:8.6%" title="2023: 20"></div>
       </div><div class="tl-bar-wrap">
         <span class="tl-count">29</span>
-        <div class="tl-bar" style="height:10.7%" title="2024: 29"></div>
+        <div class="tl-bar" style="height:12.5%" title="2024: 29"></div>
       </div><div class="tl-bar-wrap">
         <span class="tl-count">232</span>
-        <div class="tl-bar" style="height:85.6%" title="2025: 232"></div>
+        <div class="tl-bar" style="height:100.0%" title="2025: 232"></div>
       </div><div class="tl-bar-wrap">
-        <span class="tl-count">271</span>
-        <div class="tl-bar current" style="height:100.0%" title="2026: 271"></div>
+        <span class="tl-count">27</span>
+        <div class="tl-bar current" style="height:11.6%" title="2026: 27"></div>
       </div></div>
       <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2022</span><span class="tl-yr">2023</span><span class="tl-yr">2024</span><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
     </div>
@@ -1862,16 +1862,16 @@ body::after {
       
     </div>
     <div class="object-grid">
-      <dl class="object-meta-panel" aria-label="wyve">
-      <div class="meta-row"><dt class="meta-key">名称</dt><dd class="meta-val accent">wyve</dd></div><div class="meta-row"><dt class="meta-key">存放处</dt><dd class="meta-val">试过的东西</dd></div><div class="meta-row"><dt class="meta-key">语言</dt><dd class="meta-val">Racket</dd></div><div class="meta-row"><dt class="meta-key">提交</dt><dd class="meta-val">109</dd></div><div class="meta-row"><dt class="meta-key">首次</dt><dd class="meta-val">2026年6月</dd></div><div class="meta-row"><dt class="meta-key">版本</dt><dd class="meta-val">v0.0.7</dd></div><div class="meta-row"><dt class="meta-key">星标</dt><dd class="meta-val">1</dd></div><div class="meta-row"><dt class="meta-key">更新</dt><dd class="meta-val">2026年6月</dd></div>
-      <div class="meta-row"><dt class="meta-key">话题</dt><dd class="meta-topics"><span class="repo-topic">Racket</span><span class="repo-topic">C</span><span class="repo-topic">Lean</span></dd></div>
-      <div class="meta-row"><dt class="meta-key">去处</dt><dd class="meta-val"><a class="meta-link" href="https://github.com/O6lvl4/wyve" target="_blank" rel="noopener noreferrer">仓库</a></dd></div>
+      <dl class="object-meta-panel" aria-label="line-bot-private">
+      <div class="meta-row"><dt class="meta-key">名称</dt><dd class="meta-val accent">line-bot-private</dd></div><div class="meta-row"><dt class="meta-key">存放处</dt><dd class="meta-val">试过的东西</dd></div><div class="meta-row"><dt class="meta-key">语言</dt><dd class="meta-val">Go</dd></div><div class="meta-row"><dt class="meta-key">提交</dt><dd class="meta-val">6</dd></div><div class="meta-row"><dt class="meta-key">首次</dt><dd class="meta-val">2022年10月</dd></div><div class="meta-row"><dt class="meta-key">星标</dt><dd class="meta-val">1</dd></div><div class="meta-row"><dt class="meta-key">更新</dt><dd class="meta-val">2022年10月</dd></div>
+      <div class="meta-row"><dt class="meta-key">话题</dt><dd class="meta-topics"><span class="repo-topic">Go</span></dd></div>
+      <div class="meta-row"><dt class="meta-key">去处</dt><dd class="meta-val"><a class="meta-link" href="https://github.com/O6lvl4/line-bot-private" target="_blank" rel="noopener noreferrer">仓库</a></dd></div>
     </dl>
-      <article class="readme-panel" aria-label="wyve README">
-      <figure class="readme-shot"><img src="../img/plates/zh/O6lvl4/wyve-lo.webp" width="640" height="400" alt="O6lvl4「wyve」" loading="lazy" decoding="async"></figure>
-      <h3 class="readme-h1">wyve</h3>
-      <p class="readme-p">LLVM IR之上、为优化器编写契约的静态语义语言</p>
-      <h4 class="readme-h2">功能</h4><ul class="readme-points"><li>经证明的@noalias与@effect</li><li>@vectorize(require)失败即报错</li><li>Lean证明调度变换逐位精确</li></ul>
+      <article class="readme-panel" aria-label="line-bot-private README">
+      <figure class="readme-shot"><img src="../img/plates/zh/O6lvl4/line-bot-private-lo.webp" width="640" height="400" alt="O6lvl4「line-bot-private」" loading="lazy" decoding="async"></figure>
+      <h3 class="readme-h1">line-bot-private</h3>
+      <p class="readme-p">基于AWS SAM的Go语言Lambda函数示例模板</p>
+      <h4 class="readme-h2">功能</h4><ul class="readme-points"><li>Makefile封装sam build</li><li>sam local start-api本地运行</li><li>sam deploy --guided部署</li></ul>
       
     </article>
     </div>
@@ -1880,84 +1880,14 @@ body::after {
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚂ</span>
       <h2 class="section-title" id="heading-works">作品</h2>
-      <span class="section-count">48 / 48</span>
+      <span class="section-count">38 / 38</span>
     </div>
     
     <div class="works-toolbar">
       <div class="sort-bar" role="group" aria-label="排序"><button type="button" class="sort-btn active" data-sort="date" aria-pressed="true">按更新</button><button type="button" class="sort-btn" data-sort="commits" aria-pressed="false">按提交</button><button type="button" class="sort-btn" data-sort="format" aria-pressed="false">按语言</button><button type="button" class="sort-btn" data-sort="name" aria-pressed="false">按名称</button></div>
-      <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="Racket" aria-pressed="false"><span class="lang-dot" style="background:#3c5caa;width:5px;height:5px" aria-hidden="true"></span>Racket</button><button type="button" class="lang-chip" data-lang="Zig" aria-pressed="false"><span class="lang-dot" style="background:#ec915c;width:5px;height:5px" aria-hidden="true"></span>Zig</button><button type="button" class="lang-chip" data-lang="Ruby" aria-pressed="false"><span class="lang-dot" style="background:#701516;width:5px;height:5px" aria-hidden="true"></span>Ruby</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="Go" aria-pressed="false"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</button><button type="button" class="lang-chip" data-lang="Lean" aria-pressed="false"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Swift" aria-pressed="false"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</button></div>
+      <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="Go" aria-pressed="false"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="Swift" aria-pressed="false"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="Lua" aria-pressed="false"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</button><button type="button" class="lang-chip" data-lang="Dart" aria-pressed="false"><span class="lang-dot" style="background:#00b4ab;width:5px;height:5px" aria-hidden="true"></span>Dart</button><button type="button" class="lang-chip" data-lang="CSS" aria-pressed="false"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</button><button type="button" class="lang-chip" data-lang="Makefile" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Makefile</button><button type="button" class="lang-chip" data-lang="Python" aria-pressed="false"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</button></div>
     </div>
-    <ul class="repo-list" role="list" data-shown="28" aria-label="作品"><li class="repo-item" data-org="lab" data-lang="Racket" data-name="wyve" data-date="2026-06-09" data-commits="109" data-rank="0">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/wyve" target="_blank" rel="noopener noreferrer">wyve</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3c5caa;width:5px;height:5px" aria-hidden="true"></span>Racket</span>
-        </div>
-        <p class="repo-desc">LLVM IR之上、为优化器编写契约的静态语义语言</p>
-        <ul class="repo-topics"><li class="repo-topic">C</li><li class="repo-topic">Lean</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">109<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-06-09">2026年6月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Zig" data-name="zfp" data-date="2026-02-22" data-commits="47" data-rank="1">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/zfp" target="_blank" rel="noopener noreferrer">zfp</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#ec915c;width:5px;height:5px" aria-hidden="true"></span>Zig</span>
-        </div>
-        <p class="repo-desc">基于Zig原生类型的零开销函数式工具库</p>
-        <ul class="repo-topics"><li class="repo-topic">functional-programming</li><li class="repo-topic">maybe</li><li class="repo-topic">option</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">47<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-02-22">2026年2月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Ruby" data-name="sashiko" data-date="2026-04-26" data-commits="20" data-rank="2">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/sashiko" target="_blank" rel="noopener noreferrer">sashiko</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#701516;width:5px;height:5px" aria-hidden="true"></span>Ruby</span>
-        </div>
-        <p class="repo-desc">跨Ruby并发边界保持OpenTelemetry链路连续的库</p>
-        <ul class="repo-topics"><li class="repo-topic">concurrency</li><li class="repo-topic">distributed-tracing</li><li class="repo-topic">observability</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">20<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-04-26">2026年4月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Almide" data-name="bonsai-almide" data-date="2026-04-22" data-commits="35" data-rank="3">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/almide/bonsai-almide" target="_blank" rel="noopener noreferrer">bonsai-almide</a>
-          <span class="repo-org-tag">almide</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
-        </div>
-        <p class="repo-desc">经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示</p>
-        <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">35<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-04-22">2026年4月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="lean2ts" data-date="2026-03-02" data-commits="25" data-rank="4">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/lean2ts" target="_blank" rel="noopener noreferrer">lean2ts</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-        </div>
-        <p class="repo-desc">将Lean 4规约转换为TypeScript类型与属性测试</p>
-        <ul class="repo-topics"><li class="repo-topic">Lean</li><li class="repo-topic">code-generation</li><li class="repo-topic">fast-check</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">25<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-03-02">2026年3月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="line-bot-private" data-date="2022-10-30" data-commits="6" data-rank="5">
+    <ul class="repo-list" role="list" data-shown="28" aria-label="作品"><li class="repo-item" data-org="lab" data-lang="Go" data-name="line-bot-private" data-date="2022-10-30" data-commits="6" data-rank="0">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/line-bot-private" target="_blank" rel="noopener noreferrer">line-bot-private</a>
@@ -1971,21 +1901,7 @@ body::after {
         <span class="repo-stars">6<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2022-10-30">2022年10月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Lean" data-name="hello-lean4" data-date="2026-03-07" data-commits="2" data-rank="6">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/hello-lean4" target="_blank" rel="noopener noreferrer">hello-lean4</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
-        </div>
-        <p class="repo-desc">用 Lean 4 编写的 Hello World CLI 应用</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-03-07">2026年3月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Almide" data-name="almide-otel-demo" data-date="2026-08-04" data-commits="13" data-rank="7">
+    </li><li class="repo-item" data-org="lab" data-lang="Almide" data-name="almide-otel-demo" data-date="2026-08-04" data-commits="13" data-rank="1">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/almide-otel-demo" target="_blank" rel="noopener noreferrer">almide-otel-demo</a>
@@ -1999,7 +1915,7 @@ body::after {
         <span class="repo-stars">13<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2026-08-04">2026年8月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="go1.26-vs-go1.27" data-date="2026-07-31" data-commits="8" data-rank="8">
+    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="go1.26-vs-go1.27" data-date="2026-07-31" data-commits="8" data-rank="2">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/go1.26-vs-go1.27" target="_blank" rel="noopener noreferrer">go1.26-vs-go1.27</a>
@@ -2013,7 +1929,7 @@ body::after {
         <span class="repo-stars">8<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2026-07-31">2026年7月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="go1.27-vs-almide" data-date="2026-07-31" data-commits="4" data-rank="9">
+    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="go1.27-vs-almide" data-date="2026-07-31" data-commits="4" data-rank="3">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/go1.27-vs-almide" target="_blank" rel="noopener noreferrer">go1.27-vs-almide</a>
@@ -2027,7 +1943,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2026-07-31">2026年7月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="almide-audio-poc" data-date="2026-07-25" data-commits="2" data-rank="10">
+    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="almide-audio-poc" data-date="2026-07-25" data-commits="2" data-rank="4">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/almide-audio-poc" target="_blank" rel="noopener noreferrer">almide-audio-poc</a>
@@ -2041,7 +1957,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2026-07-25">2026年7月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="aid-on-js-training" data-date="2025-08-28" data-commits="122" data-rank="11">
+    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="aid-on-js-training" data-date="2025-08-28" data-commits="122" data-rank="5">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/aid-on-js-training" target="_blank" rel="noopener noreferrer">aid-on-js-training</a>
@@ -2055,49 +1971,7 @@ body::after {
         <span class="repo-stars">122<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-08-28">2025年8月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Lean" data-name="lean-lang-sandbox" data-date="2026-02-24" data-commits="3" data-rank="12">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/lean-lang-sandbox" target="_blank" rel="noopener noreferrer">lean-lang-sandbox</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
-        </div>
-        <p class="repo-desc">Lean 4学习沙盒，含从定理证明到编程的教程</p>
-        <ul class="repo-topics"><li class="repo-topic">functional-programming</li><li class="repo-topic">japanese</li><li class="repo-topic">lean</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-02-24">2026年2月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Rust" data-name="lean4-rust-backend" data-date="2026-03-07" data-commits="1" data-rank="13">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/lean4-rust-backend" target="_blank" rel="noopener noreferrer">lean4-rust-backend</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
-        </div>
-        <p class="repo-desc">基于IR的Lean 4到Rust代码生成后端</p>
-        <ul class="repo-topics"><li class="repo-topic">Lean</li></ul>
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-03-07">2026年3月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Lean" data-name="fizzbuzz-lean4-cli" data-date="2026-03-07" data-commits="1" data-rank="14">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/fizzbuzz-lean4-cli" target="_blank" rel="noopener noreferrer">fizzbuzz-lean4-cli</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
-        </div>
-        <p class="repo-desc">用 Lean 4 编写的 FizzBuzz 命令行程序</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-03-07">2026年3月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Swift" data-name="sandbox-ios-app" data-date="2025-10-12" data-commits="2" data-rank="15">
+    </li><li class="repo-item" data-org="lab" data-lang="Swift" data-name="sandbox-ios-app" data-date="2025-10-12" data-commits="2" data-rank="6">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/sandbox-ios-app" target="_blank" rel="noopener noreferrer">sandbox-ios-app</a>
@@ -2111,7 +1985,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-10-12">2025年10月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="next-pet-diary" data-date="2025-08-31" data-commits="25" data-rank="16">
+    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="next-pet-diary" data-date="2025-08-31" data-commits="25" data-rank="7">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/next-pet-diary" target="_blank" rel="noopener noreferrer">next-pet-diary</a>
@@ -2125,7 +1999,7 @@ body::after {
         <span class="repo-stars">25<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-08-31">2025年8月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Lua" data-name="cct-fennel-sandbox" data-date="2025-09-16" data-commits="17" data-rank="17">
+    </li><li class="repo-item" data-org="lab" data-lang="Lua" data-name="cct-fennel-sandbox" data-date="2025-09-16" data-commits="17" data-rank="8">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/cct-fennel-sandbox" target="_blank" rel="noopener noreferrer">cct-fennel-sandbox</a>
@@ -2139,7 +2013,7 @@ body::after {
         <span class="repo-stars">17<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-09-16">2025年9月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Dart" data-name="stock-counter-app" data-date="2022-03-13" data-commits="14" data-rank="18">
+    </li><li class="repo-item" data-org="lab" data-lang="Dart" data-name="stock-counter-app" data-date="2022-03-13" data-commits="14" data-rank="9">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/stock-counter-app" target="_blank" rel="noopener noreferrer">stock-counter-app</a>
@@ -2153,7 +2027,7 @@ body::after {
         <span class="repo-stars">14<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2022-03-13">2022年3月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="CSS" data-name="sandbox-next-ghpage" data-date="2023-11-18" data-commits="8" data-rank="19">
+    </li><li class="repo-item" data-org="lab" data-lang="CSS" data-name="sandbox-next-ghpage" data-date="2023-11-18" data-commits="8" data-rank="10">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/sandbox-next-ghpage" target="_blank" rel="noopener noreferrer">sandbox-next-ghpage</a>
@@ -2167,7 +2041,7 @@ body::after {
         <span class="repo-stars">8<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2023-11-18">2023年11月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="sandbox-next-firebase-app-hosting-line-auth" data-date="2025-08-23" data-commits="5" data-rank="20">
+    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="sandbox-next-firebase-app-hosting-line-auth" data-date="2025-08-23" data-commits="5" data-rank="11">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/sandbox-next-firebase-app-hosting-line-auth" target="_blank" rel="noopener noreferrer">sandbox-next-firebase-app-hosting-line-auth</a>
@@ -2181,7 +2055,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-08-23">2025年8月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="sandbox-next-ts-gh-page" data-date="2025-04-11" data-commits="3" data-rank="21">
+    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="sandbox-next-ts-gh-page" data-date="2025-04-11" data-commits="3" data-rank="12">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/sandbox-next-ts-gh-page" target="_blank" rel="noopener noreferrer">sandbox-next-ts-gh-page</a>
@@ -2195,7 +2069,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-04-11">2025年4月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="ts-tsnode-sandbox" data-date="2024-09-13" data-commits="7" data-rank="22">
+    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="ts-tsnode-sandbox" data-date="2024-09-13" data-commits="7" data-rank="13">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/ts-tsnode-sandbox" target="_blank" rel="noopener noreferrer">ts-tsnode-sandbox</a>
@@ -2209,7 +2083,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2024-09-13">2024年9月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="ts-react-tailwindcss-sandbox" data-date="2024-09-11" data-commits="5" data-rank="23">
+    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="ts-react-tailwindcss-sandbox" data-date="2024-09-11" data-commits="5" data-rank="14">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/ts-react-tailwindcss-sandbox" target="_blank" rel="noopener noreferrer">ts-react-tailwindcss-sandbox</a>
@@ -2223,7 +2097,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2024-09-11">2024年9月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="sandbox-golang-cli" data-date="2024-02-05" data-commits="3" data-rank="24">
+    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="sandbox-golang-cli" data-date="2024-02-05" data-commits="3" data-rank="15">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/sandbox-golang-cli" target="_blank" rel="noopener noreferrer">sandbox-golang-cli</a>
@@ -2237,7 +2111,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2024-02-05">2024年2月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Makefile" data-name="sandbox-gcp" data-date="2023-11-19" data-commits="5" data-rank="25">
+    </li><li class="repo-item" data-org="lab" data-lang="Makefile" data-name="sandbox-gcp" data-date="2023-11-19" data-commits="5" data-rank="16">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/sandbox-gcp" target="_blank" rel="noopener noreferrer">sandbox-gcp</a>
@@ -2251,7 +2125,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2023-11-19">2023年11月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="tz-clocks" data-date="2023-06-21" data-commits="3" data-rank="26">
+    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="tz-clocks" data-date="2023-06-21" data-commits="3" data-rank="17">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/tz-clocks" target="_blank" rel="noopener noreferrer">tz-clocks</a>
@@ -2265,7 +2139,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2023-06-21">2023年6月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="line-bot-sandbox" data-date="2022-10-01" data-commits="4" data-rank="27">
+    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="line-bot-sandbox" data-date="2022-10-01" data-commits="4" data-rank="18">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/line-bot-sandbox" target="_blank" rel="noopener noreferrer">line-bot-sandbox</a>
@@ -2279,7 +2153,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2022-10-01">2022年10月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Python" data-name="aws-py-s3-sandbox" data-date="2022-03-10" data-commits="2" data-rank="28">
+    </li><li class="repo-item" data-org="lab" data-lang="Python" data-name="aws-py-s3-sandbox" data-date="2022-03-10" data-commits="2" data-rank="19">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/aws-py-s3-sandbox" target="_blank" rel="noopener noreferrer">aws-py-s3-sandbox</a>
@@ -2293,7 +2167,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2022-03-10">2022年3月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Lua" data-name="cctweaked-fennel-landfill" data-date="2025-10-25" data-commits="42" data-rank="29">
+    </li><li class="repo-item" data-org="lab" data-lang="Lua" data-name="cctweaked-fennel-landfill" data-date="2025-10-25" data-commits="42" data-rank="20">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/cctweaked-fennel-landfill" target="_blank" rel="noopener noreferrer">cctweaked-fennel-landfill</a>
@@ -2307,7 +2181,7 @@ body::after {
         <span class="repo-stars">42<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-10-25">2025年10月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="" data-name=".github" data-date="2025-12-30" data-commits="7" data-rank="30">
+    </li><li class="repo-item" data-org="lab" data-lang="" data-name=".github" data-date="2025-12-30" data-commits="7" data-rank="21">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/.github" target="_blank" rel="noopener noreferrer">.github</a>
@@ -2321,21 +2195,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-12-30">2025年12月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Lean" data-name="fizzbuzz-lean4-lib" data-date="2026-03-07" data-commits="1" data-rank="31">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/fizzbuzz-lean4-lib" target="_blank" rel="noopener noreferrer">fizzbuzz-lean4-lib</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
-        </div>
-        <p class="repo-desc">用 Lean 4 编写的 FizzBuzz 库</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
-        <time class="repo-date" datetime="2026-03-07">2026年3月</time>
-      </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Swift" data-name="aichatpractice" data-date="2025-09-05" data-commits="8" data-rank="32">
+    </li><li class="repo-item" data-org="lab" data-lang="Swift" data-name="aichatpractice" data-date="2025-09-05" data-commits="8" data-rank="22">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/AIChatPractice" target="_blank" rel="noopener noreferrer">AIChatPractice</a>
@@ -2349,7 +2209,7 @@ body::after {
         <span class="repo-stars">8<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-09-05">2025年9月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="mastra-sandbox" data-date="2025-04-02" data-commits="3" data-rank="33">
+    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="mastra-sandbox" data-date="2025-04-02" data-commits="3" data-rank="23">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/mastra-sandbox" target="_blank" rel="noopener noreferrer">mastra-sandbox</a>
@@ -2363,7 +2223,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-04-02">2025年4月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="golang-cp-solve-sandbox" data-date="2023-02-05" data-commits="4" data-rank="34">
+    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="golang-cp-solve-sandbox" data-date="2023-02-05" data-commits="4" data-rank="24">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/golang-cp-solve-sandbox" target="_blank" rel="noopener noreferrer">golang-cp-solve-sandbox</a>
@@ -2377,7 +2237,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2023-02-05">2023年2月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="CSS" data-name="golang-lib-vecty-sandbox" data-date="2022-09-04" data-commits="3" data-rank="35">
+    </li><li class="repo-item" data-org="lab" data-lang="CSS" data-name="golang-lib-vecty-sandbox" data-date="2022-09-04" data-commits="3" data-rank="25">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/golang-lib-vecty-sandbox" target="_blank" rel="noopener noreferrer">golang-lib-vecty-sandbox</a>
@@ -2391,7 +2251,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2022-09-04">2022年9月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="golang-lib-lo-sandbox" data-date="2022-08-21" data-commits="3" data-rank="36">
+    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="golang-lib-lo-sandbox" data-date="2022-08-21" data-commits="3" data-rank="26">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/golang-lib-lo-sandbox" target="_blank" rel="noopener noreferrer">golang-lib-lo-sandbox</a>
@@ -2405,7 +2265,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2022-08-21">2022年8月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Rust" data-name="rust-cli-sandbox" data-date="2022-05-08" data-commits="5" data-rank="37">
+    </li><li class="repo-item" data-org="lab" data-lang="Rust" data-name="rust-cli-sandbox" data-date="2022-05-08" data-commits="5" data-rank="27">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/rust-cli-sandbox" target="_blank" rel="noopener noreferrer">rust-cli-sandbox</a>
@@ -2419,7 +2279,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2022-05-08">2022年5月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="reporting-page-by-calendar-days" data-date="2025-02-02" data-commits="4" data-rank="38">
+    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="reporting-page-by-calendar-days" data-date="2025-02-02" data-commits="4" data-rank="28">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/reporting-page-by-calendar-days" target="_blank" rel="noopener noreferrer">reporting-page-by-calendar-days</a>
@@ -2433,7 +2293,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-02-02">2025年2月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="reporting-page-by-working-days" data-date="2025-02-02" data-commits="3" data-rank="39">
+    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="reporting-page-by-working-days" data-date="2025-02-02" data-commits="3" data-rank="29">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/reporting-page-by-working-days" target="_blank" rel="noopener noreferrer">reporting-page-by-working-days</a>
@@ -2447,7 +2307,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-02-02">2025年2月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="HTML" data-name="tyrano-sandbox" data-date="2025-03-03" data-commits="2" data-rank="40">
+    </li><li class="repo-item" data-org="lab" data-lang="HTML" data-name="tyrano-sandbox" data-date="2025-03-03" data-commits="2" data-rank="30">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/tyrano-sandbox" target="_blank" rel="noopener noreferrer">tyrano-sandbox</a>
@@ -2461,7 +2321,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2025-03-03">2025年3月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="langchain-translate-chain" data-date="2024-04-05" data-commits="1" data-rank="41">
+    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="langchain-translate-chain" data-date="2024-04-05" data-commits="1" data-rank="31">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/langchain-translate-chain" target="_blank" rel="noopener noreferrer">langchain-translate-chain</a>
@@ -2475,7 +2335,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2024-04-05">2024年4月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-discord-bot" data-date="2024-02-03" data-commits="1" data-rank="42">
+    </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-discord-bot" data-date="2024-02-03" data-commits="1" data-rank="32">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/sandbox-discord-bot" target="_blank" rel="noopener noreferrer">sandbox-discord-bot</a>
@@ -2489,7 +2349,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2024-02-03">2024年2月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-langchaingo" data-date="2024-02-02" data-commits="1" data-rank="43">
+    </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-langchaingo" data-date="2024-02-02" data-commits="1" data-rank="33">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/sandbox-langchaingo" target="_blank" rel="noopener noreferrer">sandbox-langchaingo</a>
@@ -2503,7 +2363,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2024-02-02">2024年2月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-chatgpt-talk" data-date="" data-commits="0" data-rank="44">
+    </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-chatgpt-talk" data-date="" data-commits="0" data-rank="34">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/sandbox-chatgpt-talk" target="_blank" rel="noopener noreferrer">sandbox-chatgpt-talk</a>
@@ -2517,7 +2377,7 @@ body::after {
         <span class="repo-stars">0<span class="repo-meta-unit"> 提交</span></span>
         
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="ebitengine-sandbox" data-date="2023-03-10" data-commits="2" data-rank="45">
+    </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="ebitengine-sandbox" data-date="2023-03-10" data-commits="2" data-rank="35">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/ebitengine-sandbox" target="_blank" rel="noopener noreferrer">ebitengine-sandbox</a>
@@ -2531,7 +2391,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2023-03-10">2023年3月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="react-native-ts-boilerplate" data-date="2022-03-26" data-commits="2" data-rank="46">
+    </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="react-native-ts-boilerplate" data-date="2022-03-26" data-commits="2" data-rank="36">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/react-native-ts-boilerplate" target="_blank" rel="noopener noreferrer">react-native-ts-boilerplate</a>
@@ -2545,7 +2405,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
         <time class="repo-date" datetime="2022-03-26">2022年3月</time>
       </div>
-    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="sam-swagger-api-sandbox" data-date="2022-02-25" data-commits="2" data-rank="47">
+    </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="sam-swagger-api-sandbox" data-date="2022-02-25" data-commits="2" data-rank="37">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/sam-swagger-api-sandbox" target="_blank" rel="noopener noreferrer">sam-swagger-api-sandbox</a>
@@ -2560,7 +2420,7 @@ body::after {
         <time class="repo-date" datetime="2022-02-25">2022年2月</time>
       </div>
     </li></ul>
-    <button type="button" class="show-more-btn">显示其余<span class="show-more-count"> (20)</span></button>
+    <button type="button" class="show-more-btn">显示其余<span class="show-more-count"> (10)</span></button>
   </section>
       </div>
     </main>
@@ -2568,7 +2428,7 @@ body::after {
     <span class="footer-copy">O6lvl4</span>
     <nav class="footer-social" aria-label="去处"><a class="footer-social-link" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a><a class="footer-social-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>Almide</span></a></nav>
     <span class="footer-ogham" title="ogma">᚛ᚑᚌᚋᚐ᚜</span>
-    <span class="footer-copy">265 仓库 · 10 系列</span>
+    <span class="footer-copy">265 仓库 · 14 系列</span>
   </footer>
   </div>
 </div>

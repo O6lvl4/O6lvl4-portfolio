@@ -27,9 +27,12 @@ O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ265件を、一つ
   snapshot per frame on a page that scrolls hundreds of lines. Everything Latin is set in JetBrains
   Mono, the face code is written in, with Noto Sans Ogham for the stem and Noto Sans JP and SC for
   Japanese and Chinese — all OFL.
-- **Ten families, each with its own page.** The work is grouped by what kind of thing it is —
-  languages, the standard library, an agent's tools, graphics, and so on — and every family has its
-  own page with its own figures, its own years and all of its repositories.
+- **Fourteen families, each with its own page.** The work is grouped by what kind of thing it is —
+  languages, the standard library, an agent's tools, LLM groundwork, an AITuber's parts, Minecraft,
+  drawing, the edge and the web, toolchains, knowledge, public pages, tools at hand, other
+  languages, and what was only tried out. A family is a kind of thing and not a place, so `wyve`
+  sits with the language work however little Almide is in it, and a sandbox stays a sandbox however
+  many commits it has. Every family has its own page with its own figures, years and repositories.
 - **Every figure comes from the repositories.** The languages, the commits, the years and the counts
   are measured from the local clones. The year chart is linear and prints each year's number, and
   history shared between repositories is counted once — the page says so in its own footnote.

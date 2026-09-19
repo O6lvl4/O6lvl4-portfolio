@@ -395,18 +395,18 @@
    "id": "almide",
    "title": "言語をつくる",
    "short": "言語",
-   "intro": "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。",
+   "intro": "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。もう一つの言語は wyve — LLVM IR の一層上に静的な意味論を置き、最適化器に契約を書かせるもので、Racket で書いてあります。",
    "figures": [
     {
-     "value": "17",
+     "value": "18",
      "label": "公開リポジトリ"
     },
     {
-     "value": "10,531",
+     "value": "10,640",
      "label": "コミット"
     },
     {
-     "value": "6",
+     "value": "7",
      "label": "言語"
     },
     {
@@ -417,7 +417,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 10531
+     "count": 10640
     }
    ],
    "works": [
@@ -517,6 +517,48 @@
      ],
      "order": {
       "date": "2026-09-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/wyve",
+     "title": "wyve",
+     "titleEn": "LLVM IRの一層上でオプティマイザ向け契約を書く静的意味論言語",
+     "date": "2026年6月",
+     "format": "Racket",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/wyve",
+     "tags": [
+      "Racket",
+      "C",
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "109"
+      },
+      {
+       "label": "初回",
+       "value": "2026年6月"
+      },
+      {
+       "label": "版",
+       "value": "v0.0.7"
+      },
+      {
+       "label": "星",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/wyve"
+      }
+     ],
+     "order": {
+      "date": "2026-06-09"
      }
     },
     {
@@ -1499,11 +1541,11 @@
    "intro": "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
    "figures": [
     {
-     "value": "26",
+     "value": "25",
      "label": "公開リポジトリ"
     },
     {
-     "value": "776",
+     "value": "773",
      "label": "コミット"
     },
     {
@@ -1522,7 +1564,7 @@
     },
     {
      "name": "2026",
-     "count": 760
+     "count": 757
     }
    ],
    "works": [
@@ -2470,35 +2512,6 @@
      "order": {
       "date": "2025-08-25"
      }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean4-practice",
-     "title": "lean4-practice",
-     "titleEn": "Lean 4コード生成のベストプラクティスを提供するClaude Codeプラグイン",
-     "date": "2026年3月",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean4-practice",
-     "tags": [],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/lean4-practice"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
-     }
     }
    ]
   },
@@ -2506,14 +2519,14 @@
    "id": "llm",
    "title": "エージェントと LLM の土台",
    "short": "LLM の土台",
-   "intro": "モデルを実際に使うために要るもの。どのプロバイダにも同じ顔で当たる窓口（unillm・almai）と音声入力の窓口（unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、Almide で書いたエージェントの実行環境（homullus）と Mac を操作する手（manus）、そして端末から複数のモデルを同じ口で叩く CLI（llmine）。",
+   "intro": "モデルを実際に使うために要るもの。どのプロバイダにも同じ顔で当たる窓口（unillm・almai）と音声入力の窓口（unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、Almide で書いたエージェントの実行環境（homullus）と Mac を操作する手（manus）、端末から複数のモデルを同じ口で叩く CLI（llmine）、そしてモデルそのものを純 Almide で書いて WASM で走らせたもの（bonsai-almide）。",
    "figures": [
     {
-     "value": "18",
+     "value": "19",
      "label": "公開リポジトリ"
     },
     {
-     "value": "261",
+     "value": "296",
      "label": "コミット"
     },
     {
@@ -2532,7 +2545,7 @@
     },
     {
      "name": "2026",
-     "count": 113
+     "count": 148
     }
    ],
    "works": [
@@ -2632,6 +2645,44 @@
      ],
      "order": {
       "date": "2025-08-03"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/bonsai-almide",
+     "title": "bonsai-almide",
+     "titleEn": "Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ",
+     "date": "2026年4月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/bonsai-almide",
+     "tags": [
+      "Almide",
+      "JavaScript",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "35"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      },
+      {
+       "label": "星",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/bonsai-almide"
+      }
+     ],
+     "order": {
+      "date": "2026-04-22"
      }
     },
     {
@@ -6673,21 +6724,436 @@
    ]
   },
   {
-   "id": "tools",
-   "title": "手元の道具と公開サイト",
-   "short": "道具とサイト",
-   "intro": "毎日の作業のために書いた小さな実行ファイルと、公開しているページ。環境を整えるもの（gv・qusp・dotfiles・netcheck）、書類を片づけるもの（keiri・pdf-burger・resepy・capto・gformiac）、知識を溜めるもの（O6lvl4-knowledge・awen・memre・graph-garden）、見せるためのサイト（hokusai-portfolio・chip-war-chronicle・agent-bench-matrix・uimodulay）、そして手の届くところに置いた単発のもの（口笛の音程を採る pitchy、ヘッドセットの EQ、供給網への攻撃を早く知る tocsin）。",
+   "id": "toolchain",
+   "title": "言語環境をそろえる",
+   "short": "ツールチェーン",
+   "intro": "どの言語の処理系も、要るときに要る版だけ手元にある状態にするもの。cd で一つに収束する重ね合わせ（qusp）、uv 並の速さで Go の版を切り替えるもの（gv）とその土台（anyv-core）、apt も brew も Docker も要らない静的 PHP（php-build-standalone）、そして自分の formula 置き場（homebrew-tap）。",
    "figures": [
     {
-     "value": "47",
+     "value": "5",
      "label": "公開リポジトリ"
     },
     {
-     "value": "835",
+     "value": "186",
      "label": "コミット"
     },
     {
-     "value": "11",
+     "value": "2",
+     "label": "言語"
+    },
+    {
+     "value": "2026–2026",
+     "label": "期間"
+    }
+   ],
+   "years": [
+    {
+     "name": "2026",
+     "count": 186
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/shared/O6lvl4/qusp.jpg",
+     "readme": {
+      "lead": "qusp.tomlで23言語のツールチェーンを並列導入するRust製マネージャ",
+      "points": [
+       "qusp.lockによる再現性の固定",
+       "シンボリックリンク群・qusp run・シェルフック",
+       "sha256等による全インストール検証"
+      ],
+      "code": {
+       "cmd": "qusp --help",
+       "out": "Every language toolchain in superposition. `cd` collapses to one.\n\nUsage: qusp [OPTIONS] <COMMAND>\n\nCommands:\n  backends     List the languages this build of qusp supports\n  install      Install toolchains. With no args, installs everything pinned in qusp.toml (in parallel). With `<lang> <version>`, installs just one\n  sync         Reconcile installs with qusp.toml + qusp.lock. With --frozen, refuses to update qusp.lock and uses lock-as-truth\n  add          Pin and install a tool. Auto-routes to the backend whose registry recognizes the name\n  run          Run a command using the resolved multi-language environment\n  x            Ephemeral run. argv[0]=`quspx` dispatches into this. Resolves, installs (or reuses), executes — without touching qusp.toml/qusp.lock\n  list         List installed toolchains, or remote ones with --remote\n  current      Resolve and report which version applies in the current directory\n  shellenv     Print shell exports (PATH/GOROOT/GEM_HOME/…) for the current project. Source via `eval \"$(qusp shellenv)\"`\n  hook         Print a shell hook that re-applies `qusp shellenv` on every directory change\n  init         Scaffold a starter `qusp.toml` in the current directory\n  outdated     Report toolchains/tools that have newer versions upstream\n  self-update  In-place self-update against the latest GitHub release\n  tree         Show the resolved multi-language environment\n  doctor       Print a gv/uv-style health check\n  dir          Print path of a gv-managed dir (data, cache, …)\n  completions  Generate shell completions\n  setup        One-time system setup: ensure ~/.local/bin is visible to all apps\n  pin          Set, list, or remove the global pin for a language\n  help         Print this message or the help of the given subcommand(s)\n\nOptions:\n  -q, --quiet                          "
+      }
+     },
+     "id": "O6lvl4/qusp",
+     "title": "qusp",
+     "titleEn": "qusp.tomlで23言語のツールチェーンを並列導入するRust製マネージャ",
+     "date": "2026年7月",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/qusp",
+     "tags": [
+      "Rust",
+      "Shell",
+      "Python",
+      "cli"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "95"
+      },
+      {
+       "label": "初回",
+       "value": "2026年7月"
+      },
+      {
+       "label": "版",
+       "value": "v0.32.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/qusp"
+      }
+     ],
+     "order": {
+      "date": "2026-07-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gv",
+     "title": "gv",
+     "titleEn": "uv級の速度でGoの版とツールを管理するRust製シングルバイナリ",
+     "date": "2026年4月",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gv",
+     "tags": [
+      "Rust",
+      "Shell",
+      "cli",
+      "developer-tools"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "18"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版",
+       "value": "v0.6.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gv"
+      }
+     ],
+     "order": {
+      "date": "2026-04-28"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/php-build-standalone",
+     "title": "php-build-standalone",
+     "titleEn": "静的リンク済みPHPバイナリを各プラットフォーム向けに配布するプロジェクト",
+     "date": "2026年4月",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/php-build-standalone",
+     "tags": [],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "13"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版",
+       "value": "php-8.2.31"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/php-build-standalone"
+      }
+     ],
+     "order": {
+      "date": "2026-04-29"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/anyv-core",
+     "title": "anyv-core",
+     "titleEn": "gv・rvなど*v系ツールチェーン管理の共通基盤Rustクレート",
+     "date": "2026年5月",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/anyv-core",
+     "tags": [
+      "Rust",
+      "developer-tools",
+      "library",
+      "rust"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "4"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      },
+      {
+       "label": "版",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/anyv-core"
+      }
+     ],
+     "order": {
+      "date": "2026-05-09"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/homebrew-tap",
+     "title": "homebrew-tap",
+     "titleEn": "@O6lvl4のHomebrewフォーミュラを配布するtap",
+     "date": "2026年8月",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/homebrew-tap",
+     "tags": [
+      "Python",
+      "Ruby",
+      "developer-tools",
+      "golang"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "56"
+      },
+      {
+       "label": "初回",
+       "value": "2026年8月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/homebrew-tap"
+      }
+     ],
+     "order": {
+      "date": "2026-08-08"
+     }
+    }
+   ]
+  },
+  {
+   "id": "knowledge",
+   "title": "知識をためて忘れない",
+   "short": "知識をためる",
+   "intro": "読んだことを覚えておくための層。Obsidian の保管庫を Git LFS ごとグラフで見るもの（O6lvl4-knowledge）、markdown の保管庫を SM-2 で復習する CLI（awen）、同じことを macOS のアプリでやるもの（memre）、保管庫を静的な知識ベースに変える Astro 統合（graph-garden）。",
+   "figures": [
+    {
+     "value": "4",
+     "label": "公開リポジトリ"
+    },
+    {
+     "value": "327",
+     "label": "コミット"
+    },
+    {
+     "value": "4",
+     "label": "言語"
+    },
+    {
+     "value": "2026–2026",
+     "label": "期間"
+    }
+   ],
+   "years": [
+    {
+     "name": "2026",
+     "count": 327
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/shared/O6lvl4/O6lvl4-knowledge.jpg",
+     "readme": {
+      "lead": "Obsidianと Git LFSによる知識ベースとグラフビューア",
+      "points": [
+       "Obsidianのナレッジベース",
+       "Git LFSによる大容量ファイル管理",
+       "グラフビューア"
+      ]
+     },
+     "id": "O6lvl4/O6lvl4-knowledge",
+     "title": "O6lvl4-knowledge",
+     "titleEn": "Obsidianと Git LFSによる知識ベースとグラフビューア",
+     "date": "2026年8月",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-knowledge",
+     "tags": [
+      "JavaScript",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "275"
+      },
+      {
+       "label": "初回",
+       "value": "2026年8月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/O6lvl4-knowledge"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/O6lvl4-knowledge/"
+      }
+     ],
+     "order": {
+      "date": "2026-08-22"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/memre",
+     "title": "memre",
+     "titleEn": "AI搭載の間隔反復フラッシュカードを作るmacOSネイティブアプリ",
+     "date": "2026年4月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/memre",
+     "tags": [
+      "TypeScript",
+      "Go",
+      "CSS",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "20"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/memre"
+      }
+     ],
+     "order": {
+      "date": "2026-04-27"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/awen",
+     "title": "awen",
+     "titleEn": "Markdownのvault向けにSM-2間隔反復を行う、Almide製の知識定着CLI",
+     "date": "2026年5月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/awen",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "11"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      },
+      {
+       "label": "版",
+       "value": "v0.0.5"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/awen"
+      }
+     ],
+     "order": {
+      "date": "2026-05-04"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/graph-garden",
+     "title": "graph-garden",
+     "titleEn": "Markdownボールトを静的な知識ベースに変えるAstro統合",
+     "date": "2026年6月",
+     "format": "CSS",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/graph-garden",
+     "tags": [
+      "CSS",
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "21"
+      },
+      {
+       "label": "初回",
+       "value": "2026年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/graph-garden"
+      }
+     ],
+     "order": {
+      "date": "2026-06-01"
+     }
+    }
+   ]
+  },
+  {
+   "id": "sites",
+   "title": "見せるためのページ",
+   "short": "公開ページ",
+   "intro": "ブラウザで開いて、それで完結するもの。作家のポートフォリオ見本（hokusai-portfolio）と人のポートフォリオ（kotorody-portfolio）、半導体と世界情勢のタイムライン（chip-war-chronicle）、エージェントのベンチを一枚の表にしたもの（agent-bench-matrix）、登壇スライド、体の面倒を見る小さなアプリ（gulp-coach・environment-health-viewer・tabi-navi）、音で遊ぶもの（pitchy・almide-headset-eq）、そして事務のための素の HTML（aid-on-contract-generator・aid-on-invoice-generator・aid-on-tax-calculator）。",
+   "figures": [
+    {
+     "value": "13",
+     "label": "公開リポジトリ"
+    },
+    {
+     "value": "124",
+     "label": "コミット"
+    },
+    {
+     "value": "4",
      "label": "言語"
     },
     {
@@ -6698,11 +7164,510 @@
    "years": [
     {
      "name": "2025",
-     "count": 41
+     "count": 8
     },
     {
      "name": "2026",
-     "count": 794
+     "count": 116
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/ja/O6lvl4/almide-headset-eq.jpg",
+     "readme": {
+      "lead": "CYBER CY-P5GMWHS用のAlmide製カスケードbiquadパラメトリックEQ",
+      "points": [
+       "RBJピーキングフィルタの係数設計",
+       "7バンドの補正カーブcyber_curve",
+       "WASMビルドとWebAudioデモ"
+      ]
+     },
+     "id": "O6lvl4/almide-headset-eq",
+     "title": "almide-headset-eq",
+     "titleEn": "CYBER CY-P5GMWHS用のAlmide製カスケードbiquadパラメトリックEQ",
+     "date": "2026年6月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/almide-headset-eq",
+     "tags": [
+      "HTML",
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "4"
+      },
+      {
+       "label": "初回",
+       "value": "2026年6月"
+      },
+      {
+       "label": "星",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/almide-headset-eq"
+      }
+     ],
+     "order": {
+      "date": "2026-06-19"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/chip-war-chronicle",
+     "title": "chip-war-chronicle",
+     "titleEn": "半導体・政策・地政学を並べ因果を読む番組表型タイムライン",
+     "date": "2026年9月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/chip-war-chronicle",
+     "tags": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "42"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/chip-war-chronicle"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/chip-war-chronicle/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
+     "titleEn": "Almideで見るWebAssemblyの現在地を語る登壇スライド",
+     "date": "2026年7月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "27"
+      },
+      {
+       "label": "初回",
+       "value": "2026年7月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
+      }
+     ],
+     "order": {
+      "date": "2026-07-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/agent-bench-matrix",
+     "title": "agent-bench-matrix",
+     "titleEn": "エージェント向けベンチマークの公開リーダーボードを、モデル別に一枚の表へまとめたもの",
+     "date": "2026年9月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/agent-bench-matrix",
+     "tags": [
+      "HTML",
+      "JavaScript",
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "9"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/agent-bench-matrix"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/agent-bench-matrix/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/hokusai-portfolio",
+     "title": "hokusai-portfolio",
+     "titleEn": "北斎の風景版画64図で組んだ、日本の作家向けポートフォリオサイトの見本",
+     "date": "2026年9月",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/hokusai-portfolio",
+     "tags": [
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "github-pages"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "2"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/hokusai-portfolio"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/hokusai-portfolio/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gulp-coach",
+     "title": "gulp-coach",
+     "titleEn": "体重・年齢・性別と直近摂取量から飲める量と待ち時間を示す完全ローカルの水分摂取コーチ",
+     "date": "2026年4月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gulp-coach",
+     "tags": [
+      "TypeScript",
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "12"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gulp-coach"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/gulp-coach/"
+      }
+     ],
+     "order": {
+      "date": "2026-04-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/environment-health-viewer",
+     "title": "environment-health-viewer",
+     "titleEn": "現在地の環境リスクと気象警報を一画面で見る静的ダッシュボード",
+     "date": "2026年4月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/environment-health-viewer",
+     "tags": [
+      "TypeScript",
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "10"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/environment-health-viewer"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/environment-health-viewer/"
+      }
+     ],
+     "order": {
+      "date": "2026-04-23"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/kotorody-portfolio",
+     "title": "kotorody-portfolio",
+     "titleEn": "Aid-OnのフロントエンドエンジニアkotorodyのポートフォリオHTMLサイト",
+     "date": "2026年5月",
+     "format": "HTML",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/kotorody-portfolio",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "7"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/Aid-On/kotorody-portfolio"
+      }
+     ],
+     "order": {
+      "date": "2026-05-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/tabi-navi",
+     "title": "tabi-navi",
+     "titleEn": "旅程の制約と分岐案から最安のフライト×ホテルを探索するCLI",
+     "date": "2026年6月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/tabi-navi",
+     "tags": [
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "1"
+      },
+      {
+       "label": "初回",
+       "value": "2026年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/tabi-navi"
+      }
+     ],
+     "order": {
+      "date": "2026-06-11"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/pitchy",
+     "title": "pitchy",
+     "titleEn": "口笛の音程をリアルタイムで検出しコードを表示するツールとリズムゲーム",
+     "date": "2026年5月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/pitchy",
+     "tags": [
+      "HTML",
+      "Rust"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "2"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/pitchy"
+      }
+     ],
+     "order": {
+      "date": "2026-05-12"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/aid-on-contract-generator",
+     "title": "aid-on-contract-generator",
+     "titleEn": "HTML/CSS/JSのみで動く契約書作成Webアプリ",
+     "date": "2025年6月",
+     "format": "JavaScript",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/aid-on-contract-generator",
+     "tags": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "2"
+      },
+      {
+       "label": "初回",
+       "value": "2025年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/Aid-On/aid-on-contract-generator"
+      }
+     ],
+     "order": {
+      "date": "2025-06-29"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/aid-on-tax-calculator",
+     "title": "aid-on-tax-calculator",
+     "titleEn": "日本の消費税10%で税込・税抜価格を相互変換するPython製CLIツール",
+     "date": "2025年3月",
+     "format": "Python",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/aid-on-tax-calculator",
+     "tags": [
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "2"
+      },
+      {
+       "label": "初回",
+       "value": "2025年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/Aid-On/aid-on-tax-calculator"
+      }
+     ],
+     "order": {
+      "date": "2025-03-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/aid-on-invoice-generator",
+     "title": "aid-on-invoice-generator",
+     "titleEn": "請求書を生成するプロジェクト(READMEは名称のみ記載)",
+     "date": "2025年6月",
+     "format": "HTML",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/aid-on-invoice-generator",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "4"
+      },
+      {
+       "label": "初回",
+       "value": "2025年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/Aid-On/aid-on-invoice-generator"
+      }
+     ],
+     "order": {
+      "date": "2025-06-02"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tools",
+   "title": "手元の道具",
+   "short": "手元の道具",
+   "intro": "毎日の作業のために書いた小さな実行ファイル。書類を片づけるもの（keiri・pdf-burger・resepy・capto・gformiac）、環境と機械を見るもの（netcheck・igloc・syncenv・macleap・dns-checker）、アカウントを切り替えるもの（azprofile・chropen）、書いたものを渡せる形にするもの（pagina・premaid・image-catalog-composer）、供給網への攻撃を早く知るもの（tocsin・tocsin-almd）、UI の構造を Layout AST に起こすもの（uimodulay）、そして自分の作業規約とその適合チェッカー（O6lvl4-protocol・O6lvl4-vitals）。",
+   "figures": [
+    {
+     "value": "25",
+     "label": "公開リポジトリ"
+    },
+    {
+     "value": "198",
+     "label": "コミット"
+    },
+    {
+     "value": "9",
+     "label": "言語"
+    },
+    {
+     "value": "2025–2026",
+     "label": "期間"
+    }
+   ],
+   "years": [
+    {
+     "name": "2025",
+     "count": 33
+    },
+    {
+     "name": "2026",
+     "count": 165
     }
    ],
    "works": [
@@ -6756,120 +7721,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/qusp",
-     "title": "qusp",
-     "titleEn": "qusp.tomlで23言語のツールチェーンを並列導入するRust製マネージャ",
-     "date": "2026年7月",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/qusp",
-     "tags": [
-      "Rust",
-      "Shell",
-      "Python",
-      "cli"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "95"
-      },
-      {
-       "label": "初回",
-       "value": "2026年7月"
-      },
-      {
-       "label": "版",
-       "value": "v0.32.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/qusp"
-      }
-     ],
-     "order": {
-      "date": "2026-07-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-knowledge",
-     "title": "O6lvl4-knowledge",
-     "titleEn": "Obsidianと Git LFSによる知識ベースとグラフビューア",
-     "date": "2026年8月",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-knowledge",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "275"
-      },
-      {
-       "label": "初回",
-       "value": "2026年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/O6lvl4-knowledge"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/O6lvl4-knowledge/"
-      }
-     ],
-     "order": {
-      "date": "2026-08-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/almide-headset-eq",
-     "title": "almide-headset-eq",
-     "titleEn": "CYBER CY-P5GMWHS用のAlmide製カスケードbiquadパラメトリックEQ",
-     "date": "2026年6月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/almide-headset-eq",
-     "tags": [
-      "HTML",
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "星",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/almide-headset-eq"
-      }
-     ],
-     "order": {
-      "date": "2026-06-19"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/tocsin",
      "title": "tocsin",
      "titleEn": "CVE発行前にSNS等の兆候から供給網攻撃を検知する早期警戒システム",
@@ -6908,84 +7759,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/gv",
-     "title": "gv",
-     "titleEn": "uv級の速度でGoの版とツールを管理するRust製シングルバイナリ",
-     "date": "2026年4月",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gv",
-     "tags": [
-      "Rust",
-      "Shell",
-      "cli",
-      "developer-tools"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "18"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      },
-      {
-       "label": "版",
-       "value": "v0.6.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gv"
-      }
-     ],
-     "order": {
-      "date": "2026-04-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/memre",
-     "title": "memre",
-     "titleEn": "AI搭載の間隔反復フラッシュカードを作るmacOSネイティブアプリ",
-     "date": "2026年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/memre",
-     "tags": [
-      "TypeScript",
-      "Go",
-      "CSS",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "20"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      },
-      {
-       "label": "版",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/memre"
-      }
-     ],
-     "order": {
-      "date": "2026-04-27"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/premaid",
      "title": "premaid",
      "titleEn": "Mermaid図を整ったSVG/PNGへ描画するCLI",
@@ -7018,75 +7791,6 @@
      ],
      "order": {
       "date": "2026-04-27"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/php-build-standalone",
-     "title": "php-build-standalone",
-     "titleEn": "静的リンク済みPHPバイナリを各プラットフォーム向けに配布するプロジェクト",
-     "date": "2026年4月",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/php-build-standalone",
-     "tags": [],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "13"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      },
-      {
-       "label": "版",
-       "value": "php-8.2.31"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/php-build-standalone"
-      }
-     ],
-     "order": {
-      "date": "2026-04-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/awen",
-     "title": "awen",
-     "titleEn": "Markdownのvault向けにSM-2間隔反復を行う、Almide製の知識定着CLI",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/awen",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "11"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      },
-      {
-       "label": "版",
-       "value": "v0.0.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/awen"
-      }
-     ],
-     "order": {
-      "date": "2026-05-04"
      }
     },
     {
@@ -7162,45 +7866,6 @@
      ],
      "order": {
       "date": "2025-12-01"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/anyv-core",
-     "title": "anyv-core",
-     "titleEn": "gv・rvなど*v系ツールチェーン管理の共通基盤Rustクレート",
-     "date": "2026年5月",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/anyv-core",
-     "tags": [
-      "Rust",
-      "developer-tools",
-      "library",
-      "rust"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      },
-      {
-       "label": "版",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/anyv-core"
-      }
-     ],
-     "order": {
-      "date": "2026-05-09"
      }
     },
     {
@@ -7282,111 +7947,6 @@
      }
     },
     {
-     "image": "",
-     "id": "O6lvl4/homebrew-tap",
-     "title": "homebrew-tap",
-     "titleEn": "@O6lvl4のHomebrewフォーミュラを配布するtap",
-     "date": "2026年8月",
-     "format": "Python",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/homebrew-tap",
-     "tags": [
-      "Python",
-      "Ruby",
-      "developer-tools",
-      "golang"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "56"
-      },
-      {
-       "label": "初回",
-       "value": "2026年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/homebrew-tap"
-      }
-     ],
-     "order": {
-      "date": "2026-08-08"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/chip-war-chronicle",
-     "title": "chip-war-chronicle",
-     "titleEn": "半導体・政策・地政学を並べ因果を読む番組表型タイムライン",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/chip-war-chronicle",
-     "tags": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "42"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/chip-war-chronicle"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/chip-war-chronicle/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
-     "titleEn": "Almideで見るWebAssemblyの現在地を語る登壇スライド",
-     "date": "2026年7月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "27"
-      },
-      {
-       "label": "初回",
-       "value": "2026年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
-      }
-     ],
-     "order": {
-      "date": "2026-07-06"
-     }
-    },
-    {
      "image": "plates/ja/O6lvl4/uimodulay.jpg",
      "readme": {
       "lead": "URLをデザイナー視点のモジュール構造に変換するUI構造解析ツール",
@@ -7426,44 +7986,6 @@
      ],
      "order": {
       "date": "2026-09-18"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/agent-bench-matrix",
-     "title": "agent-bench-matrix",
-     "titleEn": "エージェント向けベンチマークの公開リーダーボードを、モデル別に一枚の表へまとめたもの",
-     "date": "2026年9月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/agent-bench-matrix",
-     "tags": [
-      "HTML",
-      "JavaScript",
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "9"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/agent-bench-matrix"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/agent-bench-matrix/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-14"
      }
     },
     {
@@ -7531,45 +8053,6 @@
      ],
      "order": {
       "date": "2026-06-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/hokusai-portfolio",
-     "title": "hokusai-portfolio",
-     "titleEn": "北斎の風景版画64図で組んだ、日本の作家向けポートフォリオサイトの見本",
-     "date": "2026年9月",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/hokusai-portfolio",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "github-pages"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/hokusai-portfolio"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/hokusai-portfolio/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-18"
      }
     },
     {
@@ -7643,39 +8126,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/graph-garden",
-     "title": "graph-garden",
-     "titleEn": "Markdownボールトを静的な知識ベースに変えるAstro統合",
-     "date": "2026年6月",
-     "format": "CSS",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/graph-garden",
-     "tags": [
-      "CSS",
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "21"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/graph-garden"
-      }
-     ],
-     "order": {
-      "date": "2026-06-01"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/macleap",
      "title": "macleap",
      "titleEn": "手持ちのMacを検出し、同等以上の現行機種と下取り後の実質費用を見積もるCLI",
@@ -7739,82 +8189,6 @@
      ],
      "order": {
       "date": "2026-05-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gulp-coach",
-     "title": "gulp-coach",
-     "titleEn": "体重・年齢・性別と直近摂取量から飲める量と待ち時間を示す完全ローカルの水分摂取コーチ",
-     "date": "2026年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gulp-coach",
-     "tags": [
-      "TypeScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "12"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gulp-coach"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/gulp-coach/"
-      }
-     ],
-     "order": {
-      "date": "2026-04-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/environment-health-viewer",
-     "title": "environment-health-viewer",
-     "titleEn": "現在地の環境リスクと気象警報を一画面で見る静的ダッシュボード",
-     "date": "2026年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/environment-health-viewer",
-     "tags": [
-      "TypeScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "10"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/environment-health-viewer"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/environment-health-viewer/"
-      }
-     ],
-     "order": {
-      "date": "2026-04-23"
      }
     },
     {
@@ -7979,38 +8353,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/kotorody-portfolio",
-     "title": "kotorody-portfolio",
-     "titleEn": "Aid-OnのフロントエンドエンジニアkotorodyのポートフォリオHTMLサイト",
-     "date": "2026年5月",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/kotorody-portfolio",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "7"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/kotorody-portfolio"
-      }
-     ],
-     "order": {
-      "date": "2026-05-18"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/netcheck",
      "title": "netcheck",
      "titleEn": "インターネット不調を層別に切り分けるmacOS用診断ツール",
@@ -8037,71 +8379,6 @@
      ],
      "order": {
       "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/tabi-navi",
-     "title": "tabi-navi",
-     "titleEn": "旅程の制約と分岐案から最安のフライト×ホテルを探索するCLI",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/tabi-navi",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/tabi-navi"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/pitchy",
-     "title": "pitchy",
-     "titleEn": "口笛の音程をリアルタイムで検出しコードを表示するツールとリズムゲーム",
-     "date": "2026年5月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/pitchy",
-     "tags": [
-      "HTML",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/pitchy"
-      }
-     ],
-     "order": {
-      "date": "2026-05-12"
      }
     },
     {
@@ -8232,72 +8509,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/aid-on-contract-generator",
-     "title": "aid-on-contract-generator",
-     "titleEn": "HTML/CSS/JSのみで動く契約書作成Webアプリ",
-     "date": "2025年6月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-contract-generator",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2025年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/aid-on-contract-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-tax-calculator",
-     "title": "aid-on-tax-calculator",
-     "titleEn": "日本の消費税10%で税込・税抜価格を相互変換するPython製CLIツール",
-     "date": "2025年3月",
-     "format": "Python",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-tax-calculator",
-     "tags": [
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2025年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/aid-on-tax-calculator"
-      }
-     ],
-     "order": {
-      "date": "2025-03-06"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/dotfiles",
      "title": "dotfiles",
      "titleEn": "macOS開発環境をBrewfileとシェルスクリプトで管理するdotfiles",
@@ -8327,139 +8538,49 @@
      "order": {
       "date": "2026-04-28"
      }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-invoice-generator",
-     "title": "aid-on-invoice-generator",
-     "titleEn": "請求書を生成するプロジェクト(READMEは名称のみ記載)",
-     "date": "2025年6月",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-invoice-generator",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2025年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/aid-on-invoice-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-02"
-     }
     }
    ]
   },
   {
-   "id": "lab",
-   "title": "試したもの",
-   "short": "試したもの",
-   "intro": "他の言語や仕組みを触り、比べ、置いてあるもの。Lean 4 の定理を TypeScript のプロパティテストに落とす lean2ts、Zig のゼロコスト関数型（zfp）、LLVM IR の一層上の意味論言語 wyve、Ruby の並行境界を OpenTelemetry で覗く sashiko、Go の版ごとの書き方くらべ、自作言語で鳴らした音や書いたトレーシング、そして雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
+   "id": "other-langs",
+   "title": "他の言語で書く",
+   "short": "他の言語で",
+   "intro": "自作言語の外で書いたもの。Lean 4 の定理を TypeScript のプロパティテストに落とすもの（lean2ts）、Lean を Rust に落とすバックエンド（lean4-rust-backend）、その手前の証明の練習（hello-lean4・lean-lang-sandbox・lean4-practice・fizzbuzz-lean4-lib・fizzbuzz-lean4-cli）、Zig の型で消えるゼロコスト関数型ツールキット（zfp）、Ruby の並行境界を OpenTelemetry で覗くもの（sashiko）。",
    "figures": [
     {
-     "value": "48",
+     "value": "9",
      "label": "公開リポジトリ"
     },
     {
-     "value": "595",
+     "value": "103",
      "label": "コミット"
     },
     {
-     "value": "16",
+     "value": "5",
      "label": "言語"
     },
     {
-     "value": "2022–2026",
+     "value": "2026–2026",
      "label": "期間"
     }
    ],
    "years": [
     {
-     "name": "2022",
-     "count": 43
-    },
-    {
-     "name": "2023",
-     "count": 20
-    },
-    {
-     "name": "2024",
-     "count": 29
-    },
-    {
-     "name": "2025",
-     "count": 232
-    },
-    {
      "name": "2026",
-     "count": 271
+     "count": 103
     }
    ],
    "works": [
     {
-     "image": "plates/ja/O6lvl4/wyve.jpg",
+     "image": "plates/shared/O6lvl4/zfp.jpg",
      "readme": {
-      "lead": "LLVM IRの一層上でオプティマイザ向け契約を書く静的意味論言語",
+      "lead": "Zigのネイティブ型上で動くゼロコストの関数型ツールキット",
       "points": [
-       "@noalias・@effectを証明して検証",
-       "@vectorize(require)失敗はコンパイルエラー",
-       "Leanで変換のビット厳密性を証明"
+       "?TとE!Tを直接扱うoption・result",
+       "pipe・composeによる関数合成",
+       "monoidとsliceによる畳み込み"
       ]
      },
-     "id": "O6lvl4/wyve",
-     "title": "wyve",
-     "titleEn": "LLVM IRの一層上でオプティマイザ向け契約を書く静的意味論言語",
-     "date": "2026年6月",
-     "format": "Racket",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/wyve",
-     "tags": [
-      "Racket",
-      "C",
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "109"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.0.7"
-      },
-      {
-       "label": "星",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/wyve"
-      }
-     ],
-     "order": {
-      "date": "2026-06-09"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/zfp",
      "title": "zfp",
      "titleEn": "Zigのネイティブ型上で動くゼロコストの関数型ツールキット",
@@ -8554,44 +8675,6 @@
     },
     {
      "image": "",
-     "id": "almide/bonsai-almide",
-     "title": "bonsai-almide",
-     "titleEn": "Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/bonsai-almide",
-     "tags": [
-      "Almide",
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "35"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      },
-      {
-       "label": "星",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/bonsai-almide"
-      }
-     ],
-     "order": {
-      "date": "2026-04-22"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/lean2ts",
      "title": "lean2ts",
      "titleEn": "Lean 4の仕様をTypeScriptの型・スタブ・fast-checkテストへ変換するツール",
@@ -8631,42 +8714,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/line-bot-private",
-     "title": "line-bot-private",
-     "titleEn": "AWS SAMで作るGo製Lambda関数のサンプルテンプレート",
-     "date": "2022年10月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/line-bot-private",
-     "tags": [
-      "Go"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "6"
-      },
-      {
-       "label": "初回",
-       "value": "2022年10月"
-      },
-      {
-       "label": "星",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/line-bot-private"
-      }
-     ],
-     "order": {
-      "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/hello-lean4",
      "title": "hello-lean4",
      "titleEn": "Lean 4 で書かれた Hello World CLI アプリ",
@@ -8699,6 +8746,259 @@
      ],
      "order": {
       "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/lean-lang-sandbox",
+     "title": "lean-lang-sandbox",
+     "titleEn": "定理証明からプログラミングまで学べるLean 4のチュートリアル集",
+     "date": "2026年2月",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean-lang-sandbox",
+     "tags": [
+      "Lean",
+      "functional-programming",
+      "japanese",
+      "lean"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "3"
+      },
+      {
+       "label": "初回",
+       "value": "2026年2月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/lean-lang-sandbox"
+      }
+     ],
+     "order": {
+      "date": "2026-02-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/lean4-rust-backend",
+     "title": "lean4-rust-backend",
+     "titleEn": "Lean 4をRustへ変換するIRベースのコード生成バックエンド",
+     "date": "2026年3月",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean4-rust-backend",
+     "tags": [
+      "Rust",
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "1"
+      },
+      {
+       "label": "初回",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/lean4-rust-backend"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/fizzbuzz-lean4-cli",
+     "title": "fizzbuzz-lean4-cli",
+     "titleEn": "Lean 4 製の FizzBuzz CLI。fizzbuzz-lean4-lib を利用する",
+     "date": "2026年3月",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
+     "tags": [
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "1"
+      },
+      {
+       "label": "初回",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-cli"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/lean4-practice",
+     "title": "lean4-practice",
+     "titleEn": "Lean 4コード生成のベストプラクティスを提供するClaude Codeプラグイン",
+     "date": "2026年3月",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean4-practice",
+     "tags": [],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "3"
+      },
+      {
+       "label": "初回",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/lean4-practice"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/fizzbuzz-lean4-lib",
+     "title": "fizzbuzz-lean4-lib",
+     "titleEn": "Lean 4 で書かれた FizzBuzz ライブラリ",
+     "date": "2026年3月",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-lib",
+     "tags": [
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "1"
+      },
+      {
+       "label": "初回",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-lib"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    }
+   ]
+  },
+  {
+   "id": "lab",
+   "title": "試したもの",
+   "short": "試したもの",
+   "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、JavaScript の問題集（aid-on-js-training）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
+   "figures": [
+    {
+     "value": "38",
+     "label": "公開リポジトリ"
+    },
+    {
+     "value": "351",
+     "label": "コミット"
+    },
+    {
+     "value": "12",
+     "label": "言語"
+    },
+    {
+     "value": "2022–2026",
+     "label": "期間"
+    }
+   ],
+   "years": [
+    {
+     "name": "2022",
+     "count": 43
+    },
+    {
+     "name": "2023",
+     "count": 20
+    },
+    {
+     "name": "2024",
+     "count": 29
+    },
+    {
+     "name": "2025",
+     "count": 232
+    },
+    {
+     "name": "2026",
+     "count": 27
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/ja/O6lvl4/line-bot-private.jpg",
+     "readme": {
+      "lead": "AWS SAMで作るGo製Lambda関数のサンプルテンプレート",
+      "points": [
+       "sam buildを包むMakefile",
+       "sam local start-apiでのローカル実行",
+       "sam deploy --guidedでのデプロイ"
+      ]
+     },
+     "id": "O6lvl4/line-bot-private",
+     "title": "line-bot-private",
+     "titleEn": "AWS SAMで作るGo製Lambda関数のサンプルテンプレート",
+     "date": "2022年10月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/line-bot-private",
+     "tags": [
+      "Go"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2022年10月"
+      },
+      {
+       "label": "星",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/line-bot-private"
+      }
+     ],
+     "order": {
+      "date": "2022-10-30"
      }
     },
     {
@@ -8866,106 +9166,6 @@
      ],
      "order": {
       "date": "2025-08-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean-lang-sandbox",
-     "title": "lean-lang-sandbox",
-     "titleEn": "定理証明からプログラミングまで学べるLean 4のチュートリアル集",
-     "date": "2026年2月",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean-lang-sandbox",
-     "tags": [
-      "Lean",
-      "functional-programming",
-      "japanese",
-      "lean"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/lean-lang-sandbox"
-      }
-     ],
-     "order": {
-      "date": "2026-02-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean4-rust-backend",
-     "title": "lean4-rust-backend",
-     "titleEn": "Lean 4をRustへ変換するIRベースのコード生成バックエンド",
-     "date": "2026年3月",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean4-rust-backend",
-     "tags": [
-      "Rust",
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/lean4-rust-backend"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/fizzbuzz-lean4-cli",
-     "title": "fizzbuzz-lean4-cli",
-     "titleEn": "Lean 4 製の FizzBuzz CLI。fizzbuzz-lean4-lib を利用する",
-     "date": "2026年3月",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
-     "tags": [
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-cli"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
      }
     },
     {
@@ -9487,38 +9687,6 @@
      ],
      "order": {
       "date": "2025-12-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/fizzbuzz-lean4-lib",
-     "title": "fizzbuzz-lean4-lib",
-     "titleEn": "Lean 4 で書かれた FizzBuzz ライブラリ",
-     "date": "2026年3月",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-lib",
-     "tags": [
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-lib"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
      }
     },
     {

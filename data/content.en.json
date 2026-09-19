@@ -393,20 +393,20 @@
  "series": [
   {
    "id": "almide",
-   "title": "Making a language",
-   "short": "Language",
-   "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo).",
+   "title": "Making languages",
+   "short": "Languages",
+   "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). The other language here is wyve: a static semantics one layer above LLVM IR, where the optimizer has to write down its contracts — written in Racket.",
    "figures": [
     {
-     "value": "17",
+     "value": "18",
      "label": "Repositories"
     },
     {
-     "value": "10,531",
+     "value": "10,640",
      "label": "Commits"
     },
     {
-     "value": "6",
+     "value": "7",
      "label": "Languages"
     },
     {
@@ -417,7 +417,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 10531
+     "count": 10640
     }
    ],
    "works": [
@@ -517,6 +517,48 @@
      ],
      "order": {
       "date": "2026-09-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/wyve",
+     "title": "wyve",
+     "titleEn": "A static semantics language above LLVM IR for writing verified contracts for the optimizer.",
+     "date": "Jun 2026",
+     "format": "Racket",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/wyve",
+     "tags": [
+      "Racket",
+      "C",
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "109"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.0.7"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/wyve"
+      }
+     ],
+     "order": {
+      "date": "2026-06-09"
      }
     },
     {
@@ -1499,11 +1541,11 @@
    "intro": "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
    "figures": [
     {
-     "value": "26",
+     "value": "25",
      "label": "Repositories"
     },
     {
-     "value": "776",
+     "value": "773",
      "label": "Commits"
     },
     {
@@ -1522,7 +1564,7 @@
     },
     {
      "name": "2026",
-     "count": 760
+     "count": 757
     }
    ],
    "works": [
@@ -2470,35 +2512,6 @@
      "order": {
       "date": "2025-08-25"
      }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean4-practice",
-     "title": "lean4-practice",
-     "titleEn": "A Claude Code plugin providing best practices for generating Lean 4 code.",
-     "date": "Mar 2026",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean4-practice",
-     "tags": [],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/lean4-practice"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
-     }
     }
    ]
   },
@@ -2506,14 +2519,14 @@
    "id": "llm",
    "title": "Agents, and groundwork for LLMs",
    "short": "LLM groundwork",
-   "intro": "What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), and a CLI that reaches many models through one mouth (llmine).",
+   "intro": "What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).",
    "figures": [
     {
-     "value": "18",
+     "value": "19",
      "label": "Repositories"
     },
     {
-     "value": "261",
+     "value": "296",
      "label": "Commits"
     },
     {
@@ -2532,7 +2545,7 @@
     },
     {
      "name": "2026",
-     "count": 113
+     "count": 148
     }
    ],
    "works": [
@@ -2632,6 +2645,44 @@
      ],
      "order": {
       "date": "2025-08-03"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/bonsai-almide",
+     "title": "bonsai-almide",
+     "titleEn": "Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language",
+     "date": "Apr 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/bonsai-almide",
+     "tags": [
+      "Almide",
+      "JavaScript",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "35"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/bonsai-almide"
+      }
+     ],
+     "order": {
+      "date": "2026-04-22"
      }
     },
     {
@@ -6673,21 +6724,436 @@
    ]
   },
   {
-   "id": "tools",
-   "title": "Tools at hand, and sites in public",
-   "short": "Tools and sites",
-   "intro": "The small binaries written for the day's work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay), and the one-offs left within reach (pitchy reads the pitch of a whistle, an EQ for a headset, tocsin watches the supply chain).",
+   "id": "toolchain",
+   "title": "Getting a toolchain in place",
+   "short": "Toolchains",
+   "intro": "Having the right version of every language's toolchain at hand, and only when it is needed: a superposition that collapses on cd (qusp), a Go version manager at uv speed (gv) on the substrate the *v managers share (anyv-core), static PHP binaries that need no apt, brew or Docker (php-build-standalone), and my own tap (homebrew-tap).",
    "figures": [
     {
-     "value": "47",
+     "value": "5",
      "label": "Repositories"
     },
     {
-     "value": "835",
+     "value": "186",
      "label": "Commits"
     },
     {
-     "value": "11",
+     "value": "2",
+     "label": "Languages"
+    },
+    {
+     "value": "2026–2026",
+     "label": "Span"
+    }
+   ],
+   "years": [
+    {
+     "name": "2026",
+     "count": 186
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/shared/O6lvl4/qusp.jpg",
+     "readme": {
+      "lead": "A native-Rust multi-language toolchain manager driven by qusp.toml, locked in qusp.lock.",
+      "points": [
+       "23 native Rust backends, installed in parallel",
+       "Symlink farm, qusp run, or mise-style hook",
+       "Publisher hash verified on every install"
+      ],
+      "code": {
+       "cmd": "qusp --help",
+       "out": "Every language toolchain in superposition. `cd` collapses to one.\n\nUsage: qusp [OPTIONS] <COMMAND>\n\nCommands:\n  backends     List the languages this build of qusp supports\n  install      Install toolchains. With no args, installs everything pinned in qusp.toml (in parallel). With `<lang> <version>`, installs just one\n  sync         Reconcile installs with qusp.toml + qusp.lock. With --frozen, refuses to update qusp.lock and uses lock-as-truth\n  add          Pin and install a tool. Auto-routes to the backend whose registry recognizes the name\n  run          Run a command using the resolved multi-language environment\n  x            Ephemeral run. argv[0]=`quspx` dispatches into this. Resolves, installs (or reuses), executes — without touching qusp.toml/qusp.lock\n  list         List installed toolchains, or remote ones with --remote\n  current      Resolve and report which version applies in the current directory\n  shellenv     Print shell exports (PATH/GOROOT/GEM_HOME/…) for the current project. Source via `eval \"$(qusp shellenv)\"`\n  hook         Print a shell hook that re-applies `qusp shellenv` on every directory change\n  init         Scaffold a starter `qusp.toml` in the current directory\n  outdated     Report toolchains/tools that have newer versions upstream\n  self-update  In-place self-update against the latest GitHub release\n  tree         Show the resolved multi-language environment\n  doctor       Print a gv/uv-style health check\n  dir          Print path of a gv-managed dir (data, cache, …)\n  completions  Generate shell completions\n  setup        One-time system setup: ensure ~/.local/bin is visible to all apps\n  pin          Set, list, or remove the global pin for a language\n  help         Print this message or the help of the given subcommand(s)\n\nOptions:\n  -q, --quiet                          "
+      }
+     },
+     "id": "O6lvl4/qusp",
+     "title": "qusp",
+     "titleEn": "A native-Rust multi-language toolchain manager driven by qusp.toml, locked in qusp.lock.",
+     "date": "Jul 2026",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/qusp",
+     "tags": [
+      "Rust",
+      "Shell",
+      "Python",
+      "cli"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "95"
+      },
+      {
+       "label": "Started",
+       "value": "Jul 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.32.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/qusp"
+      }
+     ],
+     "order": {
+      "date": "2026-07-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gv",
+     "title": "gv",
+     "titleEn": "Fast single-binary Go version and toolchain manager in Rust, like uv for Python",
+     "date": "Apr 2026",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gv",
+     "tags": [
+      "Rust",
+      "Shell",
+      "cli",
+      "developer-tools"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "18"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.6.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gv"
+      }
+     ],
+     "order": {
+      "date": "2026-04-28"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/php-build-standalone",
+     "title": "php-build-standalone",
+     "titleEn": "Pre-built static PHP binaries for every platform, needing no apt, brew or Docker to run.",
+     "date": "Apr 2026",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/php-build-standalone",
+     "tags": [],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "13"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      },
+      {
+       "label": "Release",
+       "value": "php-8.2.31"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/php-build-standalone"
+      }
+     ],
+     "order": {
+      "date": "2026-04-29"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/anyv-core",
+     "title": "anyv-core",
+     "titleEn": "Rust crate holding the shared plumbing for *v toolchain managers such as gv and rv",
+     "date": "May 2026",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/anyv-core",
+     "tags": [
+      "Rust",
+      "developer-tools",
+      "library",
+      "rust"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "4"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/anyv-core"
+      }
+     ],
+     "order": {
+      "date": "2026-05-09"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/homebrew-tap",
+     "title": "homebrew-tap",
+     "titleEn": "Homebrew tap distributing @O6lvl4's formulae, including gv and codopsy.",
+     "date": "Aug 2026",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/homebrew-tap",
+     "tags": [
+      "Python",
+      "Ruby",
+      "developer-tools",
+      "golang"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "56"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/homebrew-tap"
+      }
+     ],
+     "order": {
+      "date": "2026-08-08"
+     }
+    }
+   ]
+  },
+  {
+   "id": "knowledge",
+   "title": "Keeping what is learnt",
+   "short": "Knowledge",
+   "intro": "The layer for remembering what has been read: an Obsidian vault, Git LFS and all, seen as a graph (O6lvl4-knowledge); a CLI that revises a markdown vault by SM-2 (awen); the same thing as a macOS app (memre); and an Astro integration that turns a vault into a static knowledge base (graph-garden).",
+   "figures": [
+    {
+     "value": "4",
+     "label": "Repositories"
+    },
+    {
+     "value": "327",
+     "label": "Commits"
+    },
+    {
+     "value": "4",
+     "label": "Languages"
+    },
+    {
+     "value": "2026–2026",
+     "label": "Span"
+    }
+   ],
+   "years": [
+    {
+     "name": "2026",
+     "count": 327
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/shared/O6lvl4/O6lvl4-knowledge.jpg",
+     "readme": {
+      "lead": "An Obsidian knowledge base stored with Git LFS, with a graph viewer for browsing it",
+      "points": [
+       "Obsidian knowledge base",
+       "Git LFS for large files",
+       "Graph viewer"
+      ]
+     },
+     "id": "O6lvl4/O6lvl4-knowledge",
+     "title": "O6lvl4-knowledge",
+     "titleEn": "An Obsidian knowledge base stored with Git LFS, with a graph viewer for browsing it",
+     "date": "Aug 2026",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-knowledge",
+     "tags": [
+      "JavaScript",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "275"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/O6lvl4-knowledge"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/O6lvl4-knowledge/"
+      }
+     ],
+     "order": {
+      "date": "2026-08-22"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/memre",
+     "title": "memre",
+     "titleEn": "Native macOS desktop app for AI-powered spaced repetition flashcards, with local-first storage.",
+     "date": "Apr 2026",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/memre",
+     "tags": [
+      "TypeScript",
+      "Go",
+      "CSS",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "20"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/memre"
+      }
+     ],
+     "order": {
+      "date": "2026-04-27"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/awen",
+     "title": "awen",
+     "titleEn": "Knowledge-retention CLI that runs SM-2 spaced repetition on a markdown vault, written in Almide",
+     "date": "May 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/awen",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "11"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.0.5"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/awen"
+      }
+     ],
+     "order": {
+      "date": "2026-05-04"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/graph-garden",
+     "title": "graph-garden",
+     "titleEn": "Astro integration that turns a markdown vault into a static knowledge base.",
+     "date": "Jun 2026",
+     "format": "CSS",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/graph-garden",
+     "tags": [
+      "CSS",
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "21"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/graph-garden"
+      }
+     ],
+     "order": {
+      "date": "2026-06-01"
+     }
+    }
+   ]
+  },
+  {
+   "id": "sites",
+   "title": "Pages made to be looked at",
+   "short": "Pages",
+   "intro": "Things that open in a browser and are finished there: a sample portfolio for an artist (hokusai-portfolio) and one for a person (kotorody-portfolio), a timeline of chips and world affairs (chip-war-chronicle), agent benchmarks gathered into one table (agent-bench-matrix), a talk's slides, small apps that look after a body (gulp-coach, environment-health-viewer, tabi-navi), two that play with sound (pitchy, almide-headset-eq), and plain HTML for paperwork (aid-on-contract-generator, aid-on-invoice-generator, aid-on-tax-calculator).",
+   "figures": [
+    {
+     "value": "13",
+     "label": "Repositories"
+    },
+    {
+     "value": "124",
+     "label": "Commits"
+    },
+    {
+     "value": "4",
      "label": "Languages"
     },
     {
@@ -6698,11 +7164,510 @@
    "years": [
     {
      "name": "2025",
-     "count": 41
+     "count": 8
     },
     {
      "name": "2026",
-     "count": 794
+     "count": 116
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/en/O6lvl4/almide-headset-eq.jpg",
+     "readme": {
+      "lead": "Parametric EQ of cascaded RBJ biquads in Almide, correcting the CYBER CY-P5GMWHS headset's sound",
+      "points": [
+       "RBJ peaking filter coefficient design",
+       "7-band correction curve via cyber_curve()",
+       "WASM build with WebAudio A/B demo"
+      ]
+     },
+     "id": "O6lvl4/almide-headset-eq",
+     "title": "almide-headset-eq",
+     "titleEn": "Parametric EQ of cascaded RBJ biquads in Almide, correcting the CYBER CY-P5GMWHS headset's sound",
+     "date": "Jun 2026",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/almide-headset-eq",
+     "tags": [
+      "HTML",
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "4"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/almide-headset-eq"
+      }
+     ],
+     "order": {
+      "date": "2026-06-19"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/chip-war-chronicle",
+     "title": "chip-war-chronicle",
+     "titleEn": "Swimlane timeline of semiconductors and world affairs, 2018–2026, with sourced events and causal links.",
+     "date": "Sep 2026",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/chip-war-chronicle",
+     "tags": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "42"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/chip-war-chronicle"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/chip-war-chronicle/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
+     "titleEn": "Talk slides on the state of WebAssembly, seen through the Almide language, for Webナイト宮崎",
+     "date": "Jul 2026",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "27"
+      },
+      {
+       "label": "Started",
+       "value": "Jul 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
+      }
+     ],
+     "order": {
+      "date": "2026-07-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/agent-bench-matrix",
+     "title": "agent-bench-matrix",
+     "titleEn": "A single table gathering public agent-benchmark leaderboards by model, with every number sourced.",
+     "date": "Sep 2026",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/agent-bench-matrix",
+     "tags": [
+      "HTML",
+      "JavaScript",
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "9"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/agent-bench-matrix"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/agent-bench-matrix/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-14"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/hokusai-portfolio",
+     "title": "hokusai-portfolio",
+     "titleEn": "Sample portfolio site for a Japanese artist, built from 64 Hokusai landscape prints (The Met Open Access)",
+     "date": "Sep 2026",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/hokusai-portfolio",
+     "tags": [
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "github-pages"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/hokusai-portfolio"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/hokusai-portfolio/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gulp-coach",
+     "title": "gulp-coach",
+     "titleEn": "A fully local hydration coach that shows how much more you can drink or how long to wait, from your profile and recent intake.",
+     "date": "Apr 2026",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gulp-coach",
+     "tags": [
+      "TypeScript",
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "12"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gulp-coach"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/gulp-coach/"
+      }
+     ],
+     "order": {
+      "date": "2026-04-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/environment-health-viewer",
+     "title": "environment-health-viewer",
+     "titleEn": "Static dashboard showing local health risks, JMA warnings, weather and sun cycle on one screen",
+     "date": "Apr 2026",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/environment-health-viewer",
+     "tags": [
+      "TypeScript",
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "10"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/environment-health-viewer"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/environment-health-viewer/"
+      }
+     ],
+     "order": {
+      "date": "2026-04-23"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/kotorody-portfolio",
+     "title": "kotorody-portfolio",
+     "titleEn": "Portfolio site of kotorody, a Frontend Engineer at Aid-On, written in HTML.",
+     "date": "May 2026",
+     "format": "HTML",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/kotorody-portfolio",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "7"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/kotorody-portfolio"
+      }
+     ],
+     "order": {
+      "date": "2026-05-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/tabi-navi",
+     "title": "tabi-navi",
+     "titleEn": "CLI that finds the cheapest flight×hotel combos for trip constraints and compares variants.",
+     "date": "Jun 2026",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/tabi-navi",
+     "tags": [
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/tabi-navi"
+      }
+     ],
+     "order": {
+      "date": "2026-06-11"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/pitchy",
+     "title": "pitchy",
+     "titleEn": "Whistle pitch detection toolkit that shows matching chords, plus a whistle-controlled rhythm game",
+     "date": "May 2026",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/pitchy",
+     "tags": [
+      "HTML",
+      "Rust"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/pitchy"
+      }
+     ],
+     "order": {
+      "date": "2026-05-12"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/aid-on-contract-generator",
+     "title": "aid-on-contract-generator",
+     "titleEn": "A pure HTML/CSS/JavaScript web app that generates contracts entirely in the browser, with no build step.",
+     "date": "Jun 2025",
+     "format": "JavaScript",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/aid-on-contract-generator",
+     "tags": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2025"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/aid-on-contract-generator"
+      }
+     ],
+     "order": {
+      "date": "2025-06-29"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/aid-on-tax-calculator",
+     "title": "aid-on-tax-calculator",
+     "titleEn": "A Python CLI script that converts between tax-inclusive and tax-exclusive prices under Japan's 10% consumption tax.",
+     "date": "Mar 2025",
+     "format": "Python",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/aid-on-tax-calculator",
+     "tags": [
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2025"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/aid-on-tax-calculator"
+      }
+     ],
+     "order": {
+      "date": "2025-03-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "Aid-On/aid-on-invoice-generator",
+     "title": "aid-on-invoice-generator",
+     "titleEn": "An invoice generator project; the README gives only the name, aid-on-invoice-generator",
+     "date": "Jun 2025",
+     "format": "HTML",
+     "credit": "Aid-On",
+     "url": "https://github.com/Aid-On/aid-on-invoice-generator",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "4"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2025"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/Aid-On/aid-on-invoice-generator"
+      }
+     ],
+     "order": {
+      "date": "2025-06-02"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tools",
+   "title": "Tools at hand",
+   "short": "Tools at hand",
+   "intro": "The small binaries written for the day's work: getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), looking at an environment and a machine (netcheck, igloc, syncenv, macleap, dns-checker), switching accounts (azprofile, chropen), turning what is written into something you can hand over (pagina, premaid, image-catalog-composer), hearing about a supply-chain attack early (tocsin, tocsin-almd), lifting a UI's structure into a Layout AST (uimodulay), and my own working protocol with the checker that grades against it (O6lvl4-protocol, O6lvl4-vitals).",
+   "figures": [
+    {
+     "value": "25",
+     "label": "Repositories"
+    },
+    {
+     "value": "198",
+     "label": "Commits"
+    },
+    {
+     "value": "9",
+     "label": "Languages"
+    },
+    {
+     "value": "2025–2026",
+     "label": "Span"
+    }
+   ],
+   "years": [
+    {
+     "name": "2025",
+     "count": 33
+    },
+    {
+     "name": "2026",
+     "count": 165
     }
    ],
    "works": [
@@ -6756,120 +7721,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/qusp",
-     "title": "qusp",
-     "titleEn": "A native-Rust multi-language toolchain manager driven by qusp.toml, locked in qusp.lock.",
-     "date": "Jul 2026",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/qusp",
-     "tags": [
-      "Rust",
-      "Shell",
-      "Python",
-      "cli"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "95"
-      },
-      {
-       "label": "Started",
-       "value": "Jul 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.32.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/qusp"
-      }
-     ],
-     "order": {
-      "date": "2026-07-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-knowledge",
-     "title": "O6lvl4-knowledge",
-     "titleEn": "An Obsidian knowledge base stored with Git LFS, with a graph viewer for browsing it",
-     "date": "Aug 2026",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-knowledge",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "275"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/O6lvl4-knowledge"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/O6lvl4-knowledge/"
-      }
-     ],
-     "order": {
-      "date": "2026-08-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/almide-headset-eq",
-     "title": "almide-headset-eq",
-     "titleEn": "Parametric EQ of cascaded RBJ biquads in Almide, correcting the CYBER CY-P5GMWHS headset's sound",
-     "date": "Jun 2026",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/almide-headset-eq",
-     "tags": [
-      "HTML",
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Stars",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/almide-headset-eq"
-      }
-     ],
-     "order": {
-      "date": "2026-06-19"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/tocsin",
      "title": "tocsin",
      "titleEn": "Early warning system that detects supply chain attacks from social signals before CVEs exist",
@@ -6908,84 +7759,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/gv",
-     "title": "gv",
-     "titleEn": "Fast single-binary Go version and toolchain manager in Rust, like uv for Python",
-     "date": "Apr 2026",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gv",
-     "tags": [
-      "Rust",
-      "Shell",
-      "cli",
-      "developer-tools"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "18"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.6.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/gv"
-      }
-     ],
-     "order": {
-      "date": "2026-04-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/memre",
-     "title": "memre",
-     "titleEn": "Native macOS desktop app for AI-powered spaced repetition flashcards, with local-first storage.",
-     "date": "Apr 2026",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/memre",
-     "tags": [
-      "TypeScript",
-      "Go",
-      "CSS",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "20"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/memre"
-      }
-     ],
-     "order": {
-      "date": "2026-04-27"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/premaid",
      "title": "premaid",
      "titleEn": "A CLI that renders Mermaid diagrams to refined SVG and PNG using a custom pretty theme",
@@ -7018,75 +7791,6 @@
      ],
      "order": {
       "date": "2026-04-27"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/php-build-standalone",
-     "title": "php-build-standalone",
-     "titleEn": "Pre-built static PHP binaries for every platform, needing no apt, brew or Docker to run.",
-     "date": "Apr 2026",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/php-build-standalone",
-     "tags": [],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "13"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      },
-      {
-       "label": "Release",
-       "value": "php-8.2.31"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/php-build-standalone"
-      }
-     ],
-     "order": {
-      "date": "2026-04-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/awen",
-     "title": "awen",
-     "titleEn": "Knowledge-retention CLI that runs SM-2 spaced repetition on a markdown vault, written in Almide",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/awen",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "11"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.0.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/awen"
-      }
-     ],
-     "order": {
-      "date": "2026-05-04"
      }
     },
     {
@@ -7162,45 +7866,6 @@
      ],
      "order": {
       "date": "2025-12-01"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/anyv-core",
-     "title": "anyv-core",
-     "titleEn": "Rust crate holding the shared plumbing for *v toolchain managers such as gv and rv",
-     "date": "May 2026",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/anyv-core",
-     "tags": [
-      "Rust",
-      "developer-tools",
-      "library",
-      "rust"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/anyv-core"
-      }
-     ],
-     "order": {
-      "date": "2026-05-09"
      }
     },
     {
@@ -7282,111 +7947,6 @@
      }
     },
     {
-     "image": "",
-     "id": "O6lvl4/homebrew-tap",
-     "title": "homebrew-tap",
-     "titleEn": "Homebrew tap distributing @O6lvl4's formulae, including gv and codopsy.",
-     "date": "Aug 2026",
-     "format": "Python",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/homebrew-tap",
-     "tags": [
-      "Python",
-      "Ruby",
-      "developer-tools",
-      "golang"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "56"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/homebrew-tap"
-      }
-     ],
-     "order": {
-      "date": "2026-08-08"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/chip-war-chronicle",
-     "title": "chip-war-chronicle",
-     "titleEn": "Swimlane timeline of semiconductors and world affairs, 2018–2026, with sourced events and causal links.",
-     "date": "Sep 2026",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/chip-war-chronicle",
-     "tags": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "42"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/chip-war-chronicle"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/chip-war-chronicle/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
-     "titleEn": "Talk slides on the state of WebAssembly, seen through the Almide language, for Webナイト宮崎",
-     "date": "Jul 2026",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "27"
-      },
-      {
-       "label": "Started",
-       "value": "Jul 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
-      }
-     ],
-     "order": {
-      "date": "2026-07-06"
-     }
-    },
-    {
      "image": "plates/en/O6lvl4/uimodulay.jpg",
      "readme": {
       "lead": "Semantic UI structure analyzer that turns a URL into the modules a designer would draw, not the DOM",
@@ -7426,44 +7986,6 @@
      ],
      "order": {
       "date": "2026-09-18"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/agent-bench-matrix",
-     "title": "agent-bench-matrix",
-     "titleEn": "A single table gathering public agent-benchmark leaderboards by model, with every number sourced.",
-     "date": "Sep 2026",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/agent-bench-matrix",
-     "tags": [
-      "HTML",
-      "JavaScript",
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "9"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/agent-bench-matrix"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/agent-bench-matrix/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-14"
      }
     },
     {
@@ -7531,45 +8053,6 @@
      ],
      "order": {
       "date": "2026-06-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/hokusai-portfolio",
-     "title": "hokusai-portfolio",
-     "titleEn": "Sample portfolio site for a Japanese artist, built from 64 Hokusai landscape prints (The Met Open Access)",
-     "date": "Sep 2026",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/hokusai-portfolio",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "github-pages"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/hokusai-portfolio"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/hokusai-portfolio/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-18"
      }
     },
     {
@@ -7643,39 +8126,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/graph-garden",
-     "title": "graph-garden",
-     "titleEn": "Astro integration that turns a markdown vault into a static knowledge base.",
-     "date": "Jun 2026",
-     "format": "CSS",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/graph-garden",
-     "tags": [
-      "CSS",
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "21"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/graph-garden"
-      }
-     ],
-     "order": {
-      "date": "2026-06-01"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/macleap",
      "title": "macleap",
      "titleEn": "CLI that detects your Mac, finds equal-or-better current models, and estimates net upgrade cost after trade-in.",
@@ -7739,82 +8189,6 @@
      ],
      "order": {
       "date": "2026-05-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gulp-coach",
-     "title": "gulp-coach",
-     "titleEn": "A fully local hydration coach that shows how much more you can drink or how long to wait, from your profile and recent intake.",
-     "date": "Apr 2026",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gulp-coach",
-     "tags": [
-      "TypeScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "12"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/gulp-coach"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/gulp-coach/"
-      }
-     ],
-     "order": {
-      "date": "2026-04-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/environment-health-viewer",
-     "title": "environment-health-viewer",
-     "titleEn": "Static dashboard showing local health risks, JMA warnings, weather and sun cycle on one screen",
-     "date": "Apr 2026",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/environment-health-viewer",
-     "tags": [
-      "TypeScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "10"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/environment-health-viewer"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/environment-health-viewer/"
-      }
-     ],
-     "order": {
-      "date": "2026-04-23"
      }
     },
     {
@@ -7979,38 +8353,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/kotorody-portfolio",
-     "title": "kotorody-portfolio",
-     "titleEn": "Portfolio site of kotorody, a Frontend Engineer at Aid-On, written in HTML.",
-     "date": "May 2026",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/kotorody-portfolio",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "7"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/kotorody-portfolio"
-      }
-     ],
-     "order": {
-      "date": "2026-05-18"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/netcheck",
      "title": "netcheck",
      "titleEn": "A macOS diagnostic tool that isolates internet problems layer by layer, from the bottom up.",
@@ -8037,71 +8379,6 @@
      ],
      "order": {
       "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/tabi-navi",
-     "title": "tabi-navi",
-     "titleEn": "CLI that finds the cheapest flight×hotel combos for trip constraints and compares variants.",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/tabi-navi",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/tabi-navi"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/pitchy",
-     "title": "pitchy",
-     "titleEn": "Whistle pitch detection toolkit that shows matching chords, plus a whistle-controlled rhythm game",
-     "date": "May 2026",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/pitchy",
-     "tags": [
-      "HTML",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/pitchy"
-      }
-     ],
-     "order": {
-      "date": "2026-05-12"
      }
     },
     {
@@ -8232,72 +8509,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/aid-on-contract-generator",
-     "title": "aid-on-contract-generator",
-     "titleEn": "A pure HTML/CSS/JavaScript web app that generates contracts entirely in the browser, with no build step.",
-     "date": "Jun 2025",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-contract-generator",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/aid-on-contract-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-tax-calculator",
-     "title": "aid-on-tax-calculator",
-     "titleEn": "A Python CLI script that converts between tax-inclusive and tax-exclusive prices under Japan's 10% consumption tax.",
-     "date": "Mar 2025",
-     "format": "Python",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-tax-calculator",
-     "tags": [
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/aid-on-tax-calculator"
-      }
-     ],
-     "order": {
-      "date": "2025-03-06"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/dotfiles",
      "title": "dotfiles",
      "titleEn": "Dotfiles that manage a macOS development environment with a Brewfile and shell scripts.",
@@ -8327,139 +8538,49 @@
      "order": {
       "date": "2026-04-28"
      }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-invoice-generator",
-     "title": "aid-on-invoice-generator",
-     "titleEn": "An invoice generator project; the README gives only the name, aid-on-invoice-generator",
-     "date": "Jun 2025",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-invoice-generator",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/aid-on-invoice-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-02"
-     }
     }
    ]
   },
   {
-   "id": "lab",
-   "title": "Things tried out",
-   "short": "Tried out",
-   "intro": "Other languages and other machinery, touched, compared and left standing: lean2ts turns Lean 4 theorems into TypeScript property tests, zfp is a zero-cost functional toolkit for Zig, wyve is a semantics language one layer above LLVM IR, sashiko watches Ruby's concurrency boundaries through OpenTelemetry, there is the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.",
+   "id": "other-langs",
+   "title": "Writing in other languages",
+   "short": "Other languages",
+   "intro": "Written outside my own language: lean2ts turns Lean 4 theorems into TypeScript property tests, lean4-rust-backend lowers Lean to Rust, and before either of those comes the practice (hello-lean4, lean-lang-sandbox, lean4-practice, fizzbuzz-lean4-lib, fizzbuzz-lean4-cli); zfp is a zero-cost functional toolkit that disappears into Zig's types; sashiko watches Ruby's concurrency boundaries through OpenTelemetry.",
    "figures": [
     {
-     "value": "48",
+     "value": "9",
      "label": "Repositories"
     },
     {
-     "value": "595",
+     "value": "103",
      "label": "Commits"
     },
     {
-     "value": "16",
+     "value": "5",
      "label": "Languages"
     },
     {
-     "value": "2022–2026",
+     "value": "2026–2026",
      "label": "Span"
     }
    ],
    "years": [
     {
-     "name": "2022",
-     "count": 43
-    },
-    {
-     "name": "2023",
-     "count": 20
-    },
-    {
-     "name": "2024",
-     "count": 29
-    },
-    {
-     "name": "2025",
-     "count": 232
-    },
-    {
      "name": "2026",
-     "count": 271
+     "count": 103
     }
    ],
    "works": [
     {
-     "image": "plates/en/O6lvl4/wyve.jpg",
+     "image": "plates/shared/O6lvl4/zfp.jpg",
      "readme": {
-      "lead": "A static semantics language above LLVM IR for writing verified contracts for the optimizer.",
+      "lead": "Zero-cost functional programming toolkit for Zig, working directly on native ?T and E!T",
       "points": [
-       "Proven @noalias and @effect contracts",
-       "@vectorize(require) fails the build with a reason",
-       "Lean proofs that schedule transforms are bitwise-exact"
+       "option and result on native ?T and E!T",
+       "pipe and compose for function pipelines",
+       "Named monoids and slice folds"
       ]
      },
-     "id": "O6lvl4/wyve",
-     "title": "wyve",
-     "titleEn": "A static semantics language above LLVM IR for writing verified contracts for the optimizer.",
-     "date": "Jun 2026",
-     "format": "Racket",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/wyve",
-     "tags": [
-      "Racket",
-      "C",
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "109"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.0.7"
-      },
-      {
-       "label": "Stars",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/wyve"
-      }
-     ],
-     "order": {
-      "date": "2026-06-09"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/zfp",
      "title": "zfp",
      "titleEn": "Zero-cost functional programming toolkit for Zig, working directly on native ?T and E!T",
@@ -8554,44 +8675,6 @@
     },
     {
      "image": "",
-     "id": "almide/bonsai-almide",
-     "title": "bonsai-almide",
-     "titleEn": "Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language",
-     "date": "Apr 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/bonsai-almide",
-     "tags": [
-      "Almide",
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "35"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      },
-      {
-       "label": "Stars",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/bonsai-almide"
-      }
-     ],
-     "order": {
-      "date": "2026-04-22"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/lean2ts",
      "title": "lean2ts",
      "titleEn": "Converts Lean 4 specs into TypeScript types, function stubs and fast-check property tests.",
@@ -8631,42 +8714,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/line-bot-private",
-     "title": "line-bot-private",
-     "titleEn": "A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.",
-     "date": "Oct 2022",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/line-bot-private",
-     "tags": [
-      "Go"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "6"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2022"
-      },
-      {
-       "label": "Stars",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/line-bot-private"
-      }
-     ],
-     "order": {
-      "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/hello-lean4",
      "title": "hello-lean4",
      "titleEn": "A Hello World CLI app written in Lean 4, with prebuilt binaries for Linux and macOS.",
@@ -8699,6 +8746,259 @@
      ],
      "order": {
       "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/lean-lang-sandbox",
+     "title": "lean-lang-sandbox",
+     "titleEn": "Lean 4 learning sandbox with ten step-by-step tutorials, from theorem proving to programming",
+     "date": "Feb 2026",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean-lang-sandbox",
+     "tags": [
+      "Lean",
+      "functional-programming",
+      "japanese",
+      "lean"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Feb 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/lean-lang-sandbox"
+      }
+     ],
+     "order": {
+      "date": "2026-02-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/lean4-rust-backend",
+     "title": "lean4-rust-backend",
+     "titleEn": "A Lean 4 to Rust backend that generates Rust code from Lean's IR, with a runtime and WASM support.",
+     "date": "Mar 2026",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean4-rust-backend",
+     "tags": [
+      "Rust",
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/lean4-rust-backend"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/fizzbuzz-lean4-cli",
+     "title": "fizzbuzz-lean4-cli",
+     "titleEn": "A FizzBuzz command-line app written in Lean 4, built on fizzbuzz-lean4-lib",
+     "date": "Mar 2026",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
+     "tags": [
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-cli"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/lean4-practice",
+     "title": "lean4-practice",
+     "titleEn": "A Claude Code plugin providing best practices for generating Lean 4 code.",
+     "date": "Mar 2026",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean4-practice",
+     "tags": [],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/lean4-practice"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/fizzbuzz-lean4-lib",
+     "title": "fizzbuzz-lean4-lib",
+     "titleEn": "A FizzBuzz library written in Lean 4, usable as a Lake dependency.",
+     "date": "Mar 2026",
+     "format": "Lean",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-lib",
+     "tags": [
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-lib"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    }
+   ]
+  },
+  {
+   "id": "lab",
+   "title": "Things tried out",
+   "short": "Tried out",
+   "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), a set of JavaScript exercises (aid-on-js-training), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
+   "figures": [
+    {
+     "value": "38",
+     "label": "Repositories"
+    },
+    {
+     "value": "351",
+     "label": "Commits"
+    },
+    {
+     "value": "12",
+     "label": "Languages"
+    },
+    {
+     "value": "2022–2026",
+     "label": "Span"
+    }
+   ],
+   "years": [
+    {
+     "name": "2022",
+     "count": 43
+    },
+    {
+     "name": "2023",
+     "count": 20
+    },
+    {
+     "name": "2024",
+     "count": 29
+    },
+    {
+     "name": "2025",
+     "count": 232
+    },
+    {
+     "name": "2026",
+     "count": 27
+    }
+   ],
+   "works": [
+    {
+     "image": "plates/en/O6lvl4/line-bot-private.jpg",
+     "readme": {
+      "lead": "A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.",
+      "points": [
+       "Makefile wrapping sam build",
+       "Local API via sam local start-api",
+       "Deploy with sam deploy --guided"
+      ]
+     },
+     "id": "O6lvl4/line-bot-private",
+     "title": "line-bot-private",
+     "titleEn": "A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.",
+     "date": "Oct 2022",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/line-bot-private",
+     "tags": [
+      "Go"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2022"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/line-bot-private"
+      }
+     ],
+     "order": {
+      "date": "2022-10-30"
      }
     },
     {
@@ -8866,106 +9166,6 @@
      ],
      "order": {
       "date": "2025-08-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean-lang-sandbox",
-     "title": "lean-lang-sandbox",
-     "titleEn": "Lean 4 learning sandbox with ten step-by-step tutorials, from theorem proving to programming",
-     "date": "Feb 2026",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean-lang-sandbox",
-     "tags": [
-      "Lean",
-      "functional-programming",
-      "japanese",
-      "lean"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/lean-lang-sandbox"
-      }
-     ],
-     "order": {
-      "date": "2026-02-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean4-rust-backend",
-     "title": "lean4-rust-backend",
-     "titleEn": "A Lean 4 to Rust backend that generates Rust code from Lean's IR, with a runtime and WASM support.",
-     "date": "Mar 2026",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean4-rust-backend",
-     "tags": [
-      "Rust",
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/lean4-rust-backend"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/fizzbuzz-lean4-cli",
-     "title": "fizzbuzz-lean4-cli",
-     "titleEn": "A FizzBuzz command-line app written in Lean 4, built on fizzbuzz-lean4-lib",
-     "date": "Mar 2026",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-cli",
-     "tags": [
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-cli"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
      }
     },
     {
@@ -9487,38 +9687,6 @@
      ],
      "order": {
       "date": "2025-12-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/fizzbuzz-lean4-lib",
-     "title": "fizzbuzz-lean4-lib",
-     "titleEn": "A FizzBuzz library written in Lean 4, usable as a Lake dependency.",
-     "date": "Mar 2026",
-     "format": "Lean",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/fizzbuzz-lean4-lib",
-     "tags": [
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/fizzbuzz-lean4-lib"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
      }
     },
     {
