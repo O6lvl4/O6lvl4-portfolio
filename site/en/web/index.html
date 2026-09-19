@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>Parts for the edge and the web | O6lvl4</title>
-<meta name="description" content="The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive, and the bridges to it; a job queue; edge-native authentication; a design system of colour tokens and themes; a client for a knowledge-base API.">
+<meta name="description" content="The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare&#39;s job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="en">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/web/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/en/web/">
 <meta property="og:title" content="Parts for the edge and the web | O6lvl4">
-<meta property="og:description" content="The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive, and the bridges to it; a job queue; edge-native authentication; a design system of colour tokens and themes; a client for a knowledge-base API.">
+<meta property="og:description" content="The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare&#39;s job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/share/og.en.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 265 public repositories">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,7 +1828,7 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">Parts for the edge and the web</h1>
-        <p class="fam-intro">The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive, and the bridges to it; a job queue; edge-native authentication; a design system of colour tokens and themes; a client for a knowledge-base API.</p>
+        <p class="fam-intro">The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare&#39;s job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).</p>
         <a class="fam-back" href="../#families">← All families</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚈ</span>
@@ -1831,7 +1836,7 @@ body::after {
     <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">11</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">122</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2024–2026</div><div class="kpi-label">Span</div></div></div>
     <div>
       <div class="timeline-sub">Commits by year</div>
-      <div class="timeline-chart" role="img" aria-label="Timeline: 2024 60, 2025 26, 2026 36"><div class="tl-bar-wrap">
+      <div class="timeline-chart few" role="img" aria-label="Timeline: 2024 60, 2025 26, 2026 36"><div class="tl-bar-wrap">
         <span class="tl-count">60</span>
         <div class="tl-bar" style="height:100.0%" title="2024: 60"></div>
       </div><div class="tl-bar-wrap">
@@ -1841,7 +1846,7 @@ body::after {
         <span class="tl-count">36</span>
         <div class="tl-bar current" style="height:60.0%" title="2026: 36"></div>
       </div></div>
-      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2024</span><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
+      <div class="timeline-labels few" aria-hidden="true"><span class="tl-yr">2024</span><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
     </div>
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">

@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>智能体与 LLM 的基础 | O6lvl4</title>
-<meta name="description" content="真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm），以及终端 CLI 和操作 Mac 的手">
+<meta name="description" content="真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus），以及在终端用同一个口子调多个模型的 CLI（llmine）和操作 Mac 的手">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="zh">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/llm/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/zh/llm/">
 <meta property="og:title" content="智能体与 LLM 的基础 | O6lvl4">
-<meta property="og:description" content="真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm），以及终端 CLI 和操作 Mac 的手">
+<meta property="og:description" content="真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus），以及在终端用同一个口子调多个模型的 CLI（llmine）和操作 Mac 的手">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/share/og.zh.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 公开仓库 265 个">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,7 +1828,7 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">智能体与 LLM 的基础</h1>
-        <p class="fam-intro">真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm），以及终端 CLI 和操作 Mac 的手</p>
+        <p class="fam-intro">真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus），以及在终端用同一个口子调多个模型的 CLI（llmine）和操作 Mac 的手</p>
         <a class="fam-back" href="../#families">← 全部系列</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚄ</span>
@@ -1831,14 +1836,14 @@ body::after {
     <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">18</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">261</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">3</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">年份</div></div></div>
     <div>
       <div class="timeline-sub">各年提交</div>
-      <div class="timeline-chart" role="img" aria-label="年表: 2025 148, 2026 113"><div class="tl-bar-wrap">
+      <div class="timeline-chart few" role="img" aria-label="年表: 2025 148, 2026 113"><div class="tl-bar-wrap">
         <span class="tl-count">148</span>
         <div class="tl-bar" style="height:100.0%" title="2025: 148"></div>
       </div><div class="tl-bar-wrap">
         <span class="tl-count">113</span>
         <div class="tl-bar current" style="height:76.4%" title="2026: 113"></div>
       </div></div>
-      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
+      <div class="timeline-labels few" aria-hidden="true"><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
     </div>
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">

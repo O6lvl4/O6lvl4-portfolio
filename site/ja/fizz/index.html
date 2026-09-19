@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>AITuber の部品 | O6lvl4</title>
-<meta name="description" content="AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。どれも単一責任の純関数で、Almide で書いてあります。">
+<meta name="description" content="AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。部品の間をつなぐのは共通のプロトコル（fizz-protocol）で、返事の組み立て全体は fizz-brain-orchestrator が受け持ちます。どれも単一責任の純関数で、Almide で書いてあります。">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/fizz/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/ja/fizz/">
 <meta property="og:title" content="AITuber の部品 | O6lvl4">
-<meta property="og:description" content="AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。どれも単一責任の純関数で、Almide で書いてあります。">
+<meta property="og:description" content="AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。部品の間をつなぐのは共通のプロトコル（fizz-protocol）で、返事の組み立て全体は fizz-brain-orchestrator が受け持ちます。どれも単一責任の純関数で、Almide で書いてあります。">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/share/og.ja.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 公開リポジトリ 265 件">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,20 +1828,13 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">AITuber の部品</h1>
-        <p class="fam-intro">AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。どれも単一責任の純関数で、Almide で書いてあります。</p>
+        <p class="fam-intro">AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。部品の間をつなぐのは共通のプロトコル（fizz-protocol）で、返事の組み立て全体は fizz-brain-orchestrator が受け持ちます。どれも単一責任の純関数で、Almide で書いてあります。</p>
         <a class="fam-back" href="../#families">← 系統の一覧へ</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚅ</span>
     </div>
     <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">52</div><div class="kpi-label">公開リポジトリ</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">109</div><div class="kpi-label">コミット</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">1</div><div class="kpi-label">言語</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">期間</div></div></div>
-    <div>
-      <div class="timeline-sub">年ごとのコミット</div>
-      <div class="timeline-chart" role="img" aria-label="年表: 2026 109"><div class="tl-bar-wrap">
-        <span class="tl-count">109</span>
-        <div class="tl-bar current" style="height:100.0%" title="2026: 109"></div>
-      </div></div>
-      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2026</span></div>
-    </div>
+    
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
     <div class="section-head">

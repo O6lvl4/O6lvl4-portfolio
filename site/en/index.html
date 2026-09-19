@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1841,7 +1846,7 @@ body::after {
       <h2 class="section-title" id="heading-works">Work</h2>
       <span class="section-count">265 / 265</span>
     </div>
-    <div class="org-rail" role="group" aria-label="Where it lives"><button type="button" class="org-btn active" data-org="" aria-pressed="true">All<span class="org-btn-count" aria-hidden="true">265</span></button><button type="button" class="org-btn" data-org="almide" aria-pressed="false" title="Almide itself — a statically-typed language — and everything around it: the normative semantics and its conformance corpus, one place for the grammar, a parser generator, editor support, export to WASM and native, the documentation and playground, and the rig that measures every day whether generated code survives.">Making a language<span class="org-btn-count" aria-hidden="true">17</span></button><button type="button" class="org-btn" data-org="stdlib" aria-pressed="false" title="Before writing in the language, the things you write with: pure-Almide parts — encodings (Base64, CSV, TOML, YAML, SVG), ciphers (AES, RSA, SHA-1), arbitrary-precision integers, a set of regular expressions folded into one DFA, and a door to SQLite.">Almide&#39;s standard library<span class="org-btn-count" aria-hidden="true">11</span></button><button type="button" class="org-btn" data-org="agent-tools" aria-pressed="false" title="What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source. Each started as something needed that day.">Tools for coding agents<span class="org-btn-count" aria-hidden="true">27</span></button><button type="button" class="org-btn" data-org="llm" aria-pressed="false" title="What it takes to actually use a model: one door to many providers (unillm, almai, unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), a CLI for the terminal, and a hand that works a Mac.">Agents, and groundwork for LLMs<span class="org-btn-count" aria-hidden="true">18</span></button><button type="button" class="org-btn" data-org="fizz" aria-pressed="false" title="An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). Each is a single-purpose pure function, written in Almide.">The parts of an AITuber<span class="org-btn-count" aria-hidden="true">52</span></button><button type="button" class="org-btn" data-org="mc" aria-pressed="false" title="Minecraft&#39;s protocol implemented in Almide from the bottom up: authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and a bot — replacing the layers of node-minecraft-protocol and prismarine in a typed language.">Minecraft, in Almide<span class="org-btn-count" aria-hidden="true">26</span></button><button type="button" class="org-btn" data-org="graphics" aria-pressed="false" title="The layer for drawing in Almide: a GPU-native UI (ceangal), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth), transformers and signal processing (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).">Drawing, and the maths under it<span class="org-btn-count" aria-hidden="true">9</span></button><button type="button" class="org-btn" data-org="web" aria-pressed="false" title="The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive, and the bridges to it; a job queue; edge-native authentication; a design system of colour tokens and themes; a client for a knowledge-base API.">Parts for the edge and the web<span class="org-btn-count" aria-hidden="true">11</span></button><button type="button" class="org-btn" data-org="tools" aria-pressed="false" title="The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), and sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay).">Tools at hand, and sites in public<span class="org-btn-count" aria-hidden="true">46</span></button><button type="button" class="org-btn" data-org="lab" aria-pressed="false" title="Other languages and other machinery, touched, compared and left standing: proofs and translation in Lean 4, a zero-cost functional toolkit in Zig, wyve — a semantics language one layer above LLVM IR — the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.">Things tried out<span class="org-btn-count" aria-hidden="true">48</span></button></div>
+    <div class="org-rail" role="group" aria-label="Where it lives"><button type="button" class="org-btn active" data-org="" aria-pressed="true">All<span class="org-btn-count" aria-hidden="true">265</span></button><button type="button" class="org-btn" data-org="almide" aria-pressed="false" title="Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo).">Making a language<span class="org-btn-count" aria-hidden="true">17</span></button><button type="button" class="org-btn" data-org="stdlib" aria-pressed="false" title="Before writing in the language, the things you write with: pure-Almide parts — encodings (Base64, CSV, TOML, YAML, SVG), ciphers (AES, RSA, SHA-1), arbitrary-precision integers, a set of regular expressions folded into one DFA, and a door to SQLite.">Almide&#39;s standard library<span class="org-btn-count" aria-hidden="true">11</span></button><button type="button" class="org-btn" data-org="agent-tools" aria-pressed="false" title="What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.">Tools for coding agents<span class="org-btn-count" aria-hidden="true">26</span></button><button type="button" class="org-btn" data-org="llm" aria-pressed="false" title="What it takes to actually use a model: one door to many providers (unillm, almai, unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus), a CLI that reaches many models through one mouth (llmine), and a hand that works a Mac.">Agents, and groundwork for LLMs<span class="org-btn-count" aria-hidden="true">18</span></button><button type="button" class="org-btn" data-org="fizz" aria-pressed="false" title="An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.">The parts of an AITuber<span class="org-btn-count" aria-hidden="true">52</span></button><button type="button" class="org-btn" data-org="mc" aria-pressed="false" title="Minecraft&#39;s protocol implemented in Almide from the bottom up (mc-protocol): authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and bots (mc-bot, craftsman) — replacing the layers of node-minecraft-protocol and prismarine in a typed language.">Minecraft, in Almide<span class="org-btn-count" aria-hidden="true">26</span></button><button type="button" class="org-btn" data-org="graphics" aria-pressed="false" title="The layer for drawing in Almide: a GPU-native UI (ceangal) and its animation engine (ceangal-anime), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth) with a toolkit for the files themselves (nendo), neural-network primitives (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).">Drawing, and the maths under it<span class="org-btn-count" aria-hidden="true">9</span></button><button type="button" class="org-btn" data-org="web" aria-pressed="false" title="The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare&#39;s job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).">Parts for the edge and the web<span class="org-btn-count" aria-hidden="true">11</span></button><button type="button" class="org-btn" data-org="tools" aria-pressed="false" title="The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay), and the one-offs left within reach (pitchy reads the pitch of a whistle, an EQ for a headset, tocsin watches the supply chain).">Tools at hand, and sites in public<span class="org-btn-count" aria-hidden="true">47</span></button><button type="button" class="org-btn" data-org="lab" aria-pressed="false" title="Other languages and other machinery, touched, compared and left standing: lean2ts turns Lean 4 theorems into TypeScript property tests, zfp is a zero-cost functional toolkit for Zig, wyve is a semantics language one layer above LLVM IR, sashiko watches Ruby&#39;s concurrency boundaries through OpenTelemetry, there is the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.">Things tried out<span class="org-btn-count" aria-hidden="true">48</span></button></div>
     <div class="works-toolbar">
       <div class="sort-bar" role="group" aria-label="Sort"><button type="button" class="sort-btn active" data-sort="date" aria-pressed="true">Recent</button><button type="button" class="sort-btn" data-sort="commits" aria-pressed="false">Commits</button><button type="button" class="sort-btn" data-sort="format" aria-pressed="false">Language</button><button type="button" class="sort-btn" data-sort="name" aria-pressed="false">Name</button></div>
       <div class="lang-filter-list" role="group" aria-label="Language"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">All</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="Go" aria-pressed="false"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="HTML" aria-pressed="false"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</button><button type="button" class="lang-chip" data-lang="Python" aria-pressed="false"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button><button type="button" class="lang-chip" data-lang="Lean" aria-pressed="false"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</button><button type="button" class="lang-chip" data-lang="CSS" aria-pressed="false"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</button></div>
@@ -2574,21 +2579,7 @@ body::after {
         <span class="repo-stars">9<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-02-18">Feb 2026</time>
       </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="capto" data-date="2025-04-01" data-commits="5" data-rank="52">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/capto" target="_blank" rel="noopener noreferrer">capto</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-        </div>
-        <p class="repo-desc">A CLI tool that captures directory structure and file contents into a PDF for multi-modal LLMs</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-04-01">Apr 2025</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Shell" data-name="cdev" data-date="2025-08-25" data-commits="2" data-rank="53">
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Shell" data-name="cdev" data-date="2025-08-25" data-commits="2" data-rank="52">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/cdev" target="_blank" rel="noopener noreferrer">cdev</a>
@@ -2602,7 +2593,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-08-25">Aug 2025</time>
       </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="" data-name="lean4-practice" data-date="2026-03-07" data-commits="3" data-rank="54">
+    </li><li class="repo-item" data-org="agent-tools" data-lang="" data-name="lean4-practice" data-date="2026-03-07" data-commits="3" data-rank="53">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/lean4-practice" target="_blank" rel="noopener noreferrer">lean4-practice</a>
@@ -2616,7 +2607,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-03-07">Mar 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="JavaScript" data-name="llm-throttle" data-date="2025-08-03" data-commits="12" data-rank="55">
+    </li><li class="repo-item" data-org="llm" data-lang="JavaScript" data-name="llm-throttle" data-date="2025-08-03" data-commits="12" data-rank="54">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/llm-throttle" target="_blank" rel="noopener noreferrer">llm-throttle</a>
@@ -2630,7 +2621,7 @@ body::after {
         <span class="repo-stars">12<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llm-queue-dispatcher" data-date="2025-08-03" data-commits="10" data-rank="56">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llm-queue-dispatcher" data-date="2025-08-03" data-commits="10" data-rank="55">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/llm-queue-dispatcher" target="_blank" rel="noopener noreferrer">llm-queue-dispatcher</a>
@@ -2644,7 +2635,7 @@ body::after {
         <span class="repo-stars">10<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="homullus" data-date="2026-05-18" data-commits="28" data-rank="57">
+    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="homullus" data-date="2026-05-18" data-commits="28" data-rank="56">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-ai/homullus" target="_blank" rel="noopener noreferrer">homullus</a>
@@ -2658,7 +2649,7 @@ body::after {
         <span class="repo-stars">28<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-18">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unillm" data-date="2026-06-11" data-commits="29" data-rank="58">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unillm" data-date="2026-06-11" data-commits="29" data-rank="57">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/unillm" target="_blank" rel="noopener noreferrer">unillm</a>
@@ -2672,7 +2663,7 @@ body::after {
         <span class="repo-stars">29<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="whenm" data-date="2026-02-20" data-commits="32" data-rank="59">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="whenm" data-date="2026-02-20" data-commits="32" data-rank="58">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/whenm" target="_blank" rel="noopener noreferrer">whenm</a>
@@ -2686,7 +2677,7 @@ body::after {
         <span class="repo-stars">32<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-02-20">Feb 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llmine" data-date="2025-09-21" data-commits="27" data-rank="60">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llmine" data-date="2025-09-21" data-commits="27" data-rank="59">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/llmine" target="_blank" rel="noopener noreferrer">llmine</a>
@@ -2700,7 +2691,7 @@ body::after {
         <span class="repo-stars">27<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-09-21">Sep 2025</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="templex" data-date="2026-06-12" data-commits="24" data-rank="61">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="templex" data-date="2026-06-12" data-commits="24" data-rank="60">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/templex" target="_blank" rel="noopener noreferrer">templex</a>
@@ -2714,7 +2705,7 @@ body::after {
         <span class="repo-stars">24<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-12">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="iteratop" data-date="2026-06-11" data-commits="18" data-rank="62">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="iteratop" data-date="2026-06-11" data-commits="18" data-rank="61">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/iteratop" target="_blank" rel="noopener noreferrer">iteratop</a>
@@ -2728,7 +2719,7 @@ body::after {
         <span class="repo-stars">18<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="fractop" data-date="2026-06-10" data-commits="19" data-rank="63">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="fractop" data-date="2026-06-10" data-commits="19" data-rank="62">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fractop" target="_blank" rel="noopener noreferrer">fractop</a>
@@ -2742,7 +2733,7 @@ body::after {
         <span class="repo-stars">19<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-10">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="JavaScript" data-name="fuzztok" data-date="2025-08-03" data-commits="8" data-rank="64">
+    </li><li class="repo-item" data-org="llm" data-lang="JavaScript" data-name="fuzztok" data-date="2025-08-03" data-commits="8" data-rank="63">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fuzztok" target="_blank" rel="noopener noreferrer">fuzztok</a>
@@ -2756,7 +2747,7 @@ body::after {
         <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="memory-rag" data-date="2025-08-10" data-commits="7" data-rank="65">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="memory-rag" data-date="2025-08-10" data-commits="7" data-rank="64">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/memory-rag" target="_blank" rel="noopener noreferrer">memory-rag</a>
@@ -2770,7 +2761,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-08-10">Aug 2025</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unillm-vercel-ai-sdk" data-date="2026-09-06" data-commits="7" data-rank="66">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unillm-vercel-ai-sdk" data-date="2026-09-06" data-commits="7" data-rank="65">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/unillm-vercel-ai-sdk" target="_blank" rel="noopener noreferrer">unillm-vercel-ai-sdk</a>
@@ -2784,7 +2775,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="vad" data-date="2026-09-06" data-commits="6" data-rank="67">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="vad" data-date="2026-09-06" data-commits="6" data-rank="66">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/vad" target="_blank" rel="noopener noreferrer">vad</a>
@@ -2798,7 +2789,7 @@ body::after {
         <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="manus" data-date="2026-07-07" data-commits="1" data-rank="68">
+    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="manus" data-date="2026-07-07" data-commits="1" data-rank="67">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-ai/manus" target="_blank" rel="noopener noreferrer">manus</a>
@@ -2812,7 +2803,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-07-07">Jul 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="almai" data-date="2026-05-01" data-commits="18" data-rank="69">
+    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="almai" data-date="2026-05-01" data-commits="18" data-rank="68">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-ai/almai" target="_blank" rel="noopener noreferrer">almai</a>
@@ -2826,7 +2817,7 @@ body::after {
         <span class="repo-stars">18<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-01">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="synapser" data-date="2026-06-11" data-commits="5" data-rank="70">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="synapser" data-date="2026-06-11" data-commits="5" data-rank="69">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/synapser" target="_blank" rel="noopener noreferrer">synapser</a>
@@ -2840,7 +2831,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="embersm" data-date="2026-06-11" data-commits="6" data-rank="71">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="embersm" data-date="2026-06-11" data-commits="6" data-rank="70">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/embersm" target="_blank" rel="noopener noreferrer">embersm</a>
@@ -2854,7 +2845,7 @@ body::after {
         <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unisttp" data-date="2026-06-11" data-commits="4" data-rank="72">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unisttp" data-date="2026-06-11" data-commits="4" data-rank="71">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/unisttp" target="_blank" rel="noopener noreferrer">unisttp</a>
@@ -2868,7 +2859,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-protocol" data-date="2026-06-15" data-commits="7" data-rank="73">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-protocol" data-date="2026-06-15" data-commits="7" data-rank="72">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-protocol" target="_blank" rel="noopener noreferrer">fizz-protocol</a>
@@ -2882,7 +2873,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-llm-client" data-date="2026-06-14" data-commits="3" data-rank="74">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-llm-client" data-date="2026-06-14" data-commits="3" data-rank="73">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-llm-client" target="_blank" rel="noopener noreferrer">fizz-llm-client</a>
@@ -2896,7 +2887,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-prompt-builder" data-date="2026-06-14" data-commits="3" data-rank="75">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-prompt-builder" data-date="2026-06-14" data-commits="3" data-rank="74">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-prompt-builder" target="_blank" rel="noopener noreferrer">fizz-prompt-builder</a>
@@ -2910,7 +2901,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-persona" data-date="2026-06-14" data-commits="3" data-rank="76">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-persona" data-date="2026-06-14" data-commits="3" data-rank="75">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-persona" target="_blank" rel="noopener noreferrer">fizz-persona</a>
@@ -2924,7 +2915,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-conversation-history" data-date="2026-06-14" data-commits="3" data-rank="77">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-conversation-history" data-date="2026-06-14" data-commits="3" data-rank="76">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-conversation-history" target="_blank" rel="noopener noreferrer">fizz-conversation-history</a>
@@ -2938,7 +2929,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-brain-orchestrator" data-date="2026-06-14" data-commits="4" data-rank="78">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-brain-orchestrator" data-date="2026-06-14" data-commits="4" data-rank="77">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-brain-orchestrator" target="_blank" rel="noopener noreferrer">fizz-brain-orchestrator</a>
@@ -2952,7 +2943,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-thinking-cue-detector" data-date="2026-06-14" data-commits="2" data-rank="79">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-thinking-cue-detector" data-date="2026-06-14" data-commits="2" data-rank="78">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-thinking-cue-detector" target="_blank" rel="noopener noreferrer">fizz-thinking-cue-detector</a>
@@ -2966,7 +2957,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-stream-sentence-parser" data-date="2026-06-14" data-commits="2" data-rank="80">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-stream-sentence-parser" data-date="2026-06-14" data-commits="2" data-rank="79">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-stream-sentence-parser" target="_blank" rel="noopener noreferrer">fizz-stream-sentence-parser</a>
@@ -2980,7 +2971,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-first-time-greeter" data-date="2026-06-14" data-commits="2" data-rank="81">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-first-time-greeter" data-date="2026-06-14" data-commits="2" data-rank="80">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-first-time-greeter" target="_blank" rel="noopener noreferrer">fizz-first-time-greeter</a>
@@ -2994,7 +2985,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-few-shot-retriever" data-date="2026-06-14" data-commits="2" data-rank="82">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-few-shot-retriever" data-date="2026-06-14" data-commits="2" data-rank="81">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-few-shot-retriever" target="_blank" rel="noopener noreferrer">fizz-few-shot-retriever</a>
@@ -3008,7 +2999,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-comment-classifier" data-date="2026-06-14" data-commits="2" data-rank="83">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-comment-classifier" data-date="2026-06-14" data-commits="2" data-rank="82">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-comment-classifier" target="_blank" rel="noopener noreferrer">fizz-comment-classifier</a>
@@ -3022,7 +3013,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-tweet-validator" data-date="2026-06-14" data-commits="3" data-rank="84">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-tweet-validator" data-date="2026-06-14" data-commits="3" data-rank="83">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-tweet-validator" target="_blank" rel="noopener noreferrer">fizz-tweet-validator</a>
@@ -3036,7 +3027,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-api" data-date="2026-06-14" data-commits="3" data-rank="85">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-api" data-date="2026-06-14" data-commits="3" data-rank="84">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-api" target="_blank" rel="noopener noreferrer">fizz-memory-api</a>
@@ -3050,7 +3041,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l3-summarizer" data-date="2026-06-14" data-commits="3" data-rank="86">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l3-summarizer" data-date="2026-06-14" data-commits="3" data-rank="85">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-l3-summarizer" target="_blank" rel="noopener noreferrer">fizz-memory-l3-summarizer</a>
@@ -3064,7 +3055,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-youtube-chat-source" data-date="2026-06-14" data-commits="4" data-rank="87">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-youtube-chat-source" data-date="2026-06-14" data-commits="4" data-rank="86">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-youtube-chat-source" target="_blank" rel="noopener noreferrer">fizz-youtube-chat-source</a>
@@ -3078,7 +3069,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-x-mention-source" data-date="2026-06-14" data-commits="4" data-rank="88">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-x-mention-source" data-date="2026-06-14" data-commits="4" data-rank="87">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-x-mention-source" target="_blank" rel="noopener noreferrer">fizz-x-mention-source</a>
@@ -3092,7 +3083,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-twitch-chat-source" data-date="2026-06-14" data-commits="4" data-rank="89">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-twitch-chat-source" data-date="2026-06-14" data-commits="4" data-rank="88">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-twitch-chat-source" target="_blank" rel="noopener noreferrer">fizz-twitch-chat-source</a>
@@ -3106,7 +3097,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-manual-comment-input" data-date="2026-06-14" data-commits="4" data-rank="90">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-manual-comment-input" data-date="2026-06-14" data-commits="4" data-rank="89">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-manual-comment-input" target="_blank" rel="noopener noreferrer">fizz-manual-comment-input</a>
@@ -3120,7 +3111,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-lipsync" data-date="2026-06-14" data-commits="4" data-rank="91">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-lipsync" data-date="2026-06-14" data-commits="4" data-rank="90">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-lipsync" target="_blank" rel="noopener noreferrer">fizz-lipsync</a>
@@ -3134,7 +3125,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-comment-dedupe" data-date="2026-06-14" data-commits="4" data-rank="92">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-comment-dedupe" data-date="2026-06-14" data-commits="4" data-rank="91">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-comment-dedupe" target="_blank" rel="noopener noreferrer">fizz-comment-dedupe</a>
@@ -3148,7 +3139,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-speak-queue" data-date="2026-06-15" data-commits="1" data-rank="93">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-speak-queue" data-date="2026-06-15" data-commits="1" data-rank="92">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-speak-queue" target="_blank" rel="noopener noreferrer">fizz-speak-queue</a>
@@ -3162,7 +3153,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-effect-checker" data-date="2026-06-15" data-commits="1" data-rank="94">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-effect-checker" data-date="2026-06-15" data-commits="1" data-rank="93">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-effect-checker" target="_blank" rel="noopener noreferrer">fizz-effect-checker</a>
@@ -3176,7 +3167,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-response-transformer" data-date="2026-06-15" data-commits="1" data-rank="95">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-response-transformer" data-date="2026-06-15" data-commits="1" data-rank="94">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-response-transformer" target="_blank" rel="noopener noreferrer">fizz-response-transformer</a>
@@ -3190,7 +3181,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-trigger-matcher" data-date="2026-06-15" data-commits="1" data-rank="96">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-trigger-matcher" data-date="2026-06-15" data-commits="1" data-rank="95">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-trigger-matcher" target="_blank" rel="noopener noreferrer">fizz-trigger-matcher</a>
@@ -3204,7 +3195,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-dataset" data-date="2026-06-15" data-commits="2" data-rank="97">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-dataset" data-date="2026-06-15" data-commits="2" data-rank="96">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-eval-dataset" target="_blank" rel="noopener noreferrer">fizz-eval-dataset</a>
@@ -3218,7 +3209,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-score" data-date="2026-06-15" data-commits="1" data-rank="98">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-score" data-date="2026-06-15" data-commits="1" data-rank="97">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-eval-score" target="_blank" rel="noopener noreferrer">fizz-eval-score</a>
@@ -3232,7 +3223,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-rubric" data-date="2026-06-15" data-commits="1" data-rank="99">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-eval-rubric" data-date="2026-06-15" data-commits="1" data-rank="98">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-eval-rubric" target="_blank" rel="noopener noreferrer">fizz-eval-rubric</a>
@@ -3246,7 +3237,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-glb-container" data-date="2026-06-15" data-commits="1" data-rank="100">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-glb-container" data-date="2026-06-15" data-commits="1" data-rank="99">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-glb-container" target="_blank" rel="noopener noreferrer">fizz-glb-container</a>
@@ -3260,7 +3251,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-color-tint" data-date="2026-06-15" data-commits="1" data-rank="101">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-color-tint" data-date="2026-06-15" data-commits="1" data-rank="100">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-color-tint" target="_blank" rel="noopener noreferrer">fizz-color-tint</a>
@@ -3274,7 +3265,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-idle-motion" data-date="2026-06-15" data-commits="2" data-rank="102">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-idle-motion" data-date="2026-06-15" data-commits="2" data-rank="101">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-idle-motion" target="_blank" rel="noopener noreferrer">fizz-idle-motion</a>
@@ -3288,7 +3279,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-weather-codes" data-date="2026-06-15" data-commits="2" data-rank="103">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-weather-codes" data-date="2026-06-15" data-commits="2" data-rank="102">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-weather-codes" target="_blank" rel="noopener noreferrer">fizz-weather-codes</a>
@@ -3302,7 +3293,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-15">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-x-dummy-feed" data-date="2026-06-14" data-commits="1" data-rank="104">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-x-dummy-feed" data-date="2026-06-14" data-commits="1" data-rank="103">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-x-dummy-feed" target="_blank" rel="noopener noreferrer">fizz-x-dummy-feed</a>
@@ -3316,7 +3307,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-layout-scope" data-date="2026-06-14" data-commits="1" data-rank="105">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-layout-scope" data-date="2026-06-14" data-commits="1" data-rank="104">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-layout-scope" target="_blank" rel="noopener noreferrer">fizz-layout-scope</a>
@@ -3330,7 +3321,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-bgm-player" data-date="2026-06-14" data-commits="1" data-rank="106">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-bgm-player" data-date="2026-06-14" data-commits="1" data-rank="105">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-bgm-player" target="_blank" rel="noopener noreferrer">fizz-bgm-player</a>
@@ -3344,7 +3335,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-reply-paginator" data-date="2026-06-14" data-commits="1" data-rank="107">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-reply-paginator" data-date="2026-06-14" data-commits="1" data-rank="106">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-reply-paginator" target="_blank" rel="noopener noreferrer">fizz-reply-paginator</a>
@@ -3358,7 +3349,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-ws-reconnect" data-date="2026-06-14" data-commits="1" data-rank="108">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-ws-reconnect" data-date="2026-06-14" data-commits="1" data-rank="107">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-ws-reconnect" target="_blank" rel="noopener noreferrer">fizz-ws-reconnect</a>
@@ -3372,7 +3363,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-liveness-monitor" data-date="2026-06-14" data-commits="1" data-rank="109">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-liveness-monitor" data-date="2026-06-14" data-commits="1" data-rank="108">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-liveness-monitor" target="_blank" rel="noopener noreferrer">fizz-liveness-monitor</a>
@@ -3386,7 +3377,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-env-loader" data-date="2026-06-14" data-commits="2" data-rank="110">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-env-loader" data-date="2026-06-14" data-commits="2" data-rank="109">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-env-loader" target="_blank" rel="noopener noreferrer">fizz-env-loader</a>
@@ -3400,7 +3391,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-http-router" data-date="2026-06-14" data-commits="2" data-rank="111">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-http-router" data-date="2026-06-14" data-commits="2" data-rank="110">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-http-router" target="_blank" rel="noopener noreferrer">fizz-http-router</a>
@@ -3414,7 +3405,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-audio-leader-elector" data-date="2026-06-14" data-commits="1" data-rank="112">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-audio-leader-elector" data-date="2026-06-14" data-commits="1" data-rank="111">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-audio-leader-elector" target="_blank" rel="noopener noreferrer">fizz-audio-leader-elector</a>
@@ -3428,7 +3419,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-expression-applier" data-date="2026-06-14" data-commits="1" data-rank="113">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-expression-applier" data-date="2026-06-14" data-commits="1" data-rank="112">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-expression-applier" target="_blank" rel="noopener noreferrer">fizz-expression-applier</a>
@@ -3442,7 +3433,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-command-applier" data-date="2026-06-14" data-commits="1" data-rank="114">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-command-applier" data-date="2026-06-14" data-commits="1" data-rank="113">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-command-applier" target="_blank" rel="noopener noreferrer">fizz-command-applier</a>
@@ -3456,7 +3447,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-mixamo-retargeter" data-date="2026-06-14" data-commits="1" data-rank="115">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-mixamo-retargeter" data-date="2026-06-14" data-commits="1" data-rank="114">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-mixamo-retargeter" target="_blank" rel="noopener noreferrer">fizz-mixamo-retargeter</a>
@@ -3470,7 +3461,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-fbx-rig-normalizer" data-date="2026-06-14" data-commits="1" data-rank="116">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-fbx-rig-normalizer" data-date="2026-06-14" data-commits="1" data-rank="115">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-fbx-rig-normalizer" target="_blank" rel="noopener noreferrer">fizz-fbx-rig-normalizer</a>
@@ -3484,7 +3475,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-camera-presets" data-date="2026-06-14" data-commits="1" data-rank="117">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-camera-presets" data-date="2026-06-14" data-commits="1" data-rank="116">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-camera-presets" target="_blank" rel="noopener noreferrer">fizz-camera-presets</a>
@@ -3498,7 +3489,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-gesture-player" data-date="2026-06-14" data-commits="1" data-rank="118">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-gesture-player" data-date="2026-06-14" data-commits="1" data-rank="117">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-gesture-player" target="_blank" rel="noopener noreferrer">fizz-gesture-player</a>
@@ -3512,7 +3503,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-session-tracker" data-date="2026-06-14" data-commits="2" data-rank="119">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-session-tracker" data-date="2026-06-14" data-commits="2" data-rank="118">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-session-tracker" target="_blank" rel="noopener noreferrer">fizz-session-tracker</a>
@@ -3526,7 +3517,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-recall-gate" data-date="2026-06-14" data-commits="2" data-rank="120">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-recall-gate" data-date="2026-06-14" data-commits="2" data-rank="119">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-recall-gate" target="_blank" rel="noopener noreferrer">fizz-recall-gate</a>
@@ -3540,7 +3531,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-reading-corrector" data-date="2026-06-14" data-commits="2" data-rank="121">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-reading-corrector" data-date="2026-06-14" data-commits="2" data-rank="120">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-reading-corrector" target="_blank" rel="noopener noreferrer">fizz-reading-corrector</a>
@@ -3554,7 +3545,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l2-events" data-date="2026-06-14" data-commits="2" data-rank="122">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l2-events" data-date="2026-06-14" data-commits="2" data-rank="121">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-l2-events" target="_blank" rel="noopener noreferrer">fizz-memory-l2-events</a>
@@ -3568,7 +3559,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l1-ring" data-date="2026-06-14" data-commits="2" data-rank="123">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-memory-l1-ring" data-date="2026-06-14" data-commits="2" data-rank="122">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/fizz-memory-l1-ring" target="_blank" rel="noopener noreferrer">fizz-memory-l1-ring</a>
@@ -3582,7 +3573,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-14">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="animula" data-date="2026-04-17" data-commits="2" data-rank="124">
+    </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="animula" data-date="2026-04-17" data-commits="2" data-rank="123">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/animula" target="_blank" rel="noopener noreferrer">animula</a>
@@ -3596,7 +3587,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-17">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-protocol" data-date="2026-05-23" data-commits="15" data-rank="125">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-protocol" data-date="2026-05-23" data-commits="15" data-rank="124">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-protocol" target="_blank" rel="noopener noreferrer">mc-protocol</a>
@@ -3610,7 +3601,7 @@ body::after {
         <span class="repo-stars">15<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-23">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-cli" data-date="2026-05-23" data-commits="5" data-rank="126">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-cli" data-date="2026-05-23" data-commits="5" data-rank="125">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-bot-cli" target="_blank" rel="noopener noreferrer">mc-bot-cli</a>
@@ -3624,7 +3615,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-23">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="JavaScript" data-name="mine-rabbit-bots" data-date="2025-11-21" data-commits="79" data-rank="127">
+    </li><li class="repo-item" data-org="mc" data-lang="JavaScript" data-name="mine-rabbit-bots" data-date="2025-11-21" data-commits="79" data-rank="126">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/mine-rabbit-bots" target="_blank" rel="noopener noreferrer">mine-rabbit-bots</a>
@@ -3638,7 +3629,7 @@ body::after {
         <span class="repo-stars">79<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-11-21">Nov 2025</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="TypeScript" data-name="craftsman" data-date="2025-10-14" data-commits="16" data-rank="128">
+    </li><li class="repo-item" data-org="mc" data-lang="TypeScript" data-name="craftsman" data-date="2025-10-14" data-commits="16" data-rank="127">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/craftsman" target="_blank" rel="noopener noreferrer">craftsman</a>
@@ -3652,7 +3643,7 @@ body::after {
         <span class="repo-stars">16<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-10-14">Oct 2025</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot" data-date="2026-05-23" data-commits="9" data-rank="129">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot" data-date="2026-05-23" data-commits="9" data-rank="128">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-bot" target="_blank" rel="noopener noreferrer">mc-bot</a>
@@ -3666,7 +3657,7 @@ body::after {
         <span class="repo-stars">9<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-23">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-ai" data-date="2026-05-25" data-commits="3" data-rank="130">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-ai" data-date="2026-05-25" data-commits="3" data-rank="129">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-bot-ai" target="_blank" rel="noopener noreferrer">mc-bot-ai</a>
@@ -3680,7 +3671,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-25">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pathfinder" data-date="2026-05-24" data-commits="3" data-rank="131">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pathfinder" data-date="2026-05-24" data-commits="3" data-rank="130">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-pathfinder" target="_blank" rel="noopener noreferrer">mc-pathfinder</a>
@@ -3694,7 +3685,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-world" data-date="2026-05-24" data-commits="4" data-rank="132">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-world" data-date="2026-05-24" data-commits="4" data-rank="131">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-world" target="_blank" rel="noopener noreferrer">mc-world</a>
@@ -3708,7 +3699,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-block" data-date="2026-05-24" data-commits="4" data-rank="133">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-block" data-date="2026-05-24" data-commits="4" data-rank="132">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-block" target="_blank" rel="noopener noreferrer">mc-block</a>
@@ -3722,7 +3713,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-item" data-date="2026-05-24" data-commits="4" data-rank="134">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-item" data-date="2026-05-24" data-commits="4" data-rank="133">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-item" target="_blank" rel="noopener noreferrer">mc-item</a>
@@ -3736,7 +3727,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chunk" data-date="2026-05-24" data-commits="4" data-rank="135">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chunk" data-date="2026-05-24" data-commits="4" data-rank="134">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-chunk" target="_blank" rel="noopener noreferrer">mc-chunk</a>
@@ -3750,7 +3741,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-entity" data-date="2026-05-24" data-commits="4" data-rank="136">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-entity" data-date="2026-05-24" data-commits="4" data-rank="135">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-entity" target="_blank" rel="noopener noreferrer">mc-entity</a>
@@ -3764,7 +3755,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chat" data-date="2026-05-24" data-commits="5" data-rank="137">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chat" data-date="2026-05-24" data-commits="5" data-rank="136">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-chat" target="_blank" rel="noopener noreferrer">mc-chat</a>
@@ -3778,7 +3769,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-nbt" data-date="2026-05-24" data-commits="5" data-rank="138">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-nbt" data-date="2026-05-24" data-commits="5" data-rank="137">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-nbt" target="_blank" rel="noopener noreferrer">mc-nbt</a>
@@ -3792,7 +3783,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-auth" data-date="2026-05-23" data-commits="4" data-rank="139">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-auth" data-date="2026-05-23" data-commits="4" data-rank="138">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-auth" target="_blank" rel="noopener noreferrer">mc-auth</a>
@@ -3806,7 +3797,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-23">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="neoforge" data-date="2026-05-23" data-commits="5" data-rank="140">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="neoforge" data-date="2026-05-23" data-commits="5" data-rank="139">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/neoforge" target="_blank" rel="noopener noreferrer">neoforge</a>
@@ -3820,7 +3811,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-23">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-registry" data-date="2026-05-23" data-commits="3" data-rank="141">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-registry" data-date="2026-05-23" data-commits="3" data-rank="140">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-registry" target="_blank" rel="noopener noreferrer">mc-registry</a>
@@ -3834,7 +3825,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-23">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server-impl" data-date="2026-05-24" data-commits="2" data-rank="142">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server-impl" data-date="2026-05-24" data-commits="2" data-rank="141">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-server-impl" target="_blank" rel="noopener noreferrer">mc-server-impl</a>
@@ -3848,7 +3839,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-proxy" data-date="2026-05-24" data-commits="2" data-rank="143">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-proxy" data-date="2026-05-24" data-commits="2" data-rank="142">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-proxy" target="_blank" rel="noopener noreferrer">mc-proxy</a>
@@ -3862,7 +3853,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server" data-date="2026-05-24" data-commits="2" data-rank="144">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server" data-date="2026-05-24" data-commits="2" data-rank="143">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-server" target="_blank" rel="noopener noreferrer">mc-server</a>
@@ -3876,7 +3867,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-inventory" data-date="2026-05-24" data-commits="2" data-rank="145">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-inventory" data-date="2026-05-24" data-commits="2" data-rank="144">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-inventory" target="_blank" rel="noopener noreferrer">mc-inventory</a>
@@ -3890,7 +3881,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pvp" data-date="2026-05-24" data-commits="2" data-rank="146">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pvp" data-date="2026-05-24" data-commits="2" data-rank="145">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-pvp" target="_blank" rel="noopener noreferrer">mc-pvp</a>
@@ -3904,7 +3895,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-collect" data-date="2026-05-24" data-commits="2" data-rank="147">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-collect" data-date="2026-05-24" data-commits="2" data-rank="146">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-collect" target="_blank" rel="noopener noreferrer">mc-collect</a>
@@ -3918,7 +3909,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-physics" data-date="2026-05-24" data-commits="1" data-rank="148">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-physics" data-date="2026-05-24" data-commits="1" data-rank="147">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-physics" target="_blank" rel="noopener noreferrer">mc-physics</a>
@@ -3932,7 +3923,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-recipe" data-date="2026-05-24" data-commits="1" data-rank="149">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-recipe" data-date="2026-05-24" data-commits="1" data-rank="148">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-recipe" target="_blank" rel="noopener noreferrer">mc-recipe</a>
@@ -3946,7 +3937,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-data" data-date="2026-05-24" data-commits="1" data-rank="150">
+    </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-data" data-date="2026-05-24" data-commits="1" data-rank="149">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almd-mc/mc-data" target="_blank" rel="noopener noreferrer">mc-data</a>
@@ -3960,7 +3951,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-24">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="graphics" data-lang="HTML" data-name="nendo" data-date="2026-07-27" data-commits="95" data-rank="151">
+    </li><li class="repo-item" data-org="graphics" data-lang="HTML" data-name="nendo" data-date="2026-07-27" data-commits="95" data-rank="150">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-graphics/nendo" target="_blank" rel="noopener noreferrer">nendo</a>
@@ -3974,7 +3965,7 @@ body::after {
         <span class="repo-stars">95<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-07-27">Jul 2026</time>
       </div>
-    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="nn" data-date="2026-06-28" data-commits="74" data-rank="152">
+    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="nn" data-date="2026-06-28" data-commits="74" data-rank="151">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-graphics/nn" target="_blank" rel="noopener noreferrer">nn</a>
@@ -3988,7 +3979,7 @@ body::after {
         <span class="repo-stars">74<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-28">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="graphics" data-lang="JavaScript" data-name="obsid" data-date="2026-07-25" data-commits="48" data-rank="153">
+    </li><li class="repo-item" data-org="graphics" data-lang="JavaScript" data-name="obsid" data-date="2026-07-25" data-commits="48" data-rank="152">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-graphics/obsid" target="_blank" rel="noopener noreferrer">obsid</a>
@@ -4002,7 +3993,7 @@ body::after {
         <span class="repo-stars">48<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-07-25">Jul 2026</time>
       </div>
-    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="lumen" data-date="2026-04-12" data-commits="2" data-rank="154">
+    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="lumen" data-date="2026-04-12" data-commits="2" data-rank="153">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-graphics/lumen" target="_blank" rel="noopener noreferrer">lumen</a>
@@ -4016,7 +4007,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-12">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="ceangal" data-date="2026-07-25" data-commits="72" data-rank="155">
+    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="ceangal" data-date="2026-07-25" data-commits="72" data-rank="154">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-graphics/ceangal" target="_blank" rel="noopener noreferrer">ceangal</a>
@@ -4030,7 +4021,7 @@ body::after {
         <span class="repo-stars">72<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-07-25">Jul 2026</time>
       </div>
-    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="cruth" data-date="2026-07-28" data-commits="2" data-rank="156">
+    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="cruth" data-date="2026-07-28" data-commits="2" data-rank="155">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-graphics/cruth" target="_blank" rel="noopener noreferrer">cruth</a>
@@ -4044,7 +4035,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-07-28">Jul 2026</time>
       </div>
-    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="slabhra" data-date="2026-06-16" data-commits="7" data-rank="157">
+    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="slabhra" data-date="2026-06-16" data-commits="7" data-rank="156">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-graphics/slabhra" target="_blank" rel="noopener noreferrer">slabhra</a>
@@ -4058,7 +4049,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-16">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="graphics" data-lang="Rust" data-name="ceangal-native" data-date="2026-05-19" data-commits="5" data-rank="158">
+    </li><li class="repo-item" data-org="graphics" data-lang="Rust" data-name="ceangal-native" data-date="2026-05-19" data-commits="5" data-rank="157">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-graphics/ceangal-native" target="_blank" rel="noopener noreferrer">ceangal-native</a>
@@ -4072,7 +4063,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-19">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="ceangal-anime" data-date="2026-05-18" data-commits="6" data-rank="159">
+    </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="ceangal-anime" data-date="2026-05-18" data-commits="6" data-rank="158">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/almide-graphics/ceangal-anime" target="_blank" rel="noopener noreferrer">ceangal-anime</a>
@@ -4086,7 +4077,7 @@ body::after {
         <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-18">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="aid-on-ui-system" data-date="2026-09-06" data-commits="42" data-rank="160">
+    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="aid-on-ui-system" data-date="2026-09-06" data-commits="42" data-rank="159">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/aid-on-ui-system" target="_blank" rel="noopener noreferrer">aid-on-ui-system</a>
@@ -4100,7 +4091,7 @@ body::after {
         <span class="repo-stars">42<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="nagare" data-date="2026-06-11" data-commits="22" data-rank="161">
+    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="nagare" data-date="2026-06-11" data-commits="22" data-rank="160">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/nagare" target="_blank" rel="noopener noreferrer">nagare</a>
@@ -4114,7 +4105,7 @@ body::after {
         <span class="repo-stars">22<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="qwiks" data-date="2026-09-06" data-commits="8" data-rank="162">
+    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="qwiks" data-date="2026-09-06" data-commits="8" data-rank="161">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/qwiks" target="_blank" rel="noopener noreferrer">qwiks</a>
@@ -4128,7 +4119,7 @@ body::after {
         <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="outline-api-client-ts" data-date="2026-09-06" data-commits="7" data-rank="163">
+    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="outline-api-client-ts" data-date="2026-09-06" data-commits="7" data-rank="162">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/outline-api-client-ts" target="_blank" rel="noopener noreferrer">outline-api-client-ts</a>
@@ -4142,7 +4133,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="design-system" data-date="2026-06-11" data-commits="8" data-rank="164">
+    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="design-system" data-date="2026-06-11" data-commits="8" data-rank="163">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/design-system" target="_blank" rel="noopener noreferrer">design-system</a>
@@ -4156,7 +4147,7 @@ body::after {
         <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="didoq" data-date="2026-06-10" data-commits="8" data-rank="165">
+    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="didoq" data-date="2026-06-10" data-commits="8" data-rank="164">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/didoq" target="_blank" rel="noopener noreferrer">didoq</a>
@@ -4170,7 +4161,7 @@ body::after {
         <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-10">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="auth" data-date="2026-06-11" data-commits="3" data-rank="166">
+    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="auth" data-date="2026-06-11" data-commits="3" data-rank="165">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/auth" target="_blank" rel="noopener noreferrer">auth</a>
@@ -4184,7 +4175,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="JavaScript" data-name="zod-to-markdown" data-date="2024-03-26" data-commits="6" data-rank="167">
+    </li><li class="repo-item" data-org="web" data-lang="JavaScript" data-name="zod-to-markdown" data-date="2024-03-26" data-commits="6" data-rank="166">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/zod-to-markdown" target="_blank" rel="noopener noreferrer">zod-to-markdown</a>
@@ -4198,7 +4189,7 @@ body::after {
         <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2024-03-26">Mar 2024</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="auth-providers-ts" data-date="2025-08-23" data-commits="3" data-rank="168">
+    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="auth-providers-ts" data-date="2025-08-23" data-commits="3" data-rank="167">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/auth-providers-ts" target="_blank" rel="noopener noreferrer">auth-providers-ts</a>
@@ -4212,7 +4203,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-08-23">Aug 2025</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="next-auth-providers" data-date="2025-08-23" data-commits="1" data-rank="169">
+    </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="next-auth-providers" data-date="2025-08-23" data-commits="1" data-rank="168">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/next-auth-providers" target="_blank" rel="noopener noreferrer">next-auth-providers</a>
@@ -4226,7 +4217,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-08-23">Aug 2025</time>
       </div>
-    </li><li class="repo-item" data-org="web" data-lang="JavaScript" data-name="aid-on-draft-ui" data-date="2024-09-01" data-commits="14" data-rank="170">
+    </li><li class="repo-item" data-org="web" data-lang="JavaScript" data-name="aid-on-draft-ui" data-date="2024-09-01" data-commits="14" data-rank="169">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/aid-on-draft-ui" target="_blank" rel="noopener noreferrer">aid-on-draft-ui</a>
@@ -4240,7 +4231,7 @@ body::after {
         <span class="repo-stars">14<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2024-09-01">Sep 2024</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="gformiac" data-date="2026-05-21" data-commits="9" data-rank="171">
+    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="gformiac" data-date="2026-05-21" data-commits="9" data-rank="170">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/gformiac" target="_blank" rel="noopener noreferrer">gformiac</a>
@@ -4254,7 +4245,7 @@ body::after {
         <span class="repo-stars">9<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-21">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="qusp" data-date="2026-07-07" data-commits="95" data-rank="172">
+    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="qusp" data-date="2026-07-07" data-commits="95" data-rank="171">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/qusp" target="_blank" rel="noopener noreferrer">qusp</a>
@@ -4268,7 +4259,7 @@ body::after {
         <span class="repo-stars">95<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-07-07">Jul 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="JavaScript" data-name="o6lvl4-knowledge" data-date="2026-08-22" data-commits="275" data-rank="173">
+    </li><li class="repo-item" data-org="tools" data-lang="JavaScript" data-name="o6lvl4-knowledge" data-date="2026-08-22" data-commits="275" data-rank="172">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/O6lvl4-knowledge" target="_blank" rel="noopener noreferrer">O6lvl4-knowledge</a>
@@ -4282,7 +4273,7 @@ body::after {
         <span class="repo-stars">275<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-08-22">Aug 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="almide-headset-eq" data-date="2026-06-19" data-commits="4" data-rank="174">
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="almide-headset-eq" data-date="2026-06-19" data-commits="4" data-rank="173">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/almide-headset-eq" target="_blank" rel="noopener noreferrer">almide-headset-eq</a>
@@ -4296,7 +4287,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-19">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="tocsin" data-date="2026-05-12" data-commits="6" data-rank="175">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="tocsin" data-date="2026-05-12" data-commits="6" data-rank="174">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/tocsin" target="_blank" rel="noopener noreferrer">tocsin</a>
@@ -4310,7 +4301,7 @@ body::after {
         <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-12">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="gv" data-date="2026-04-28" data-commits="18" data-rank="176">
+    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="gv" data-date="2026-04-28" data-commits="18" data-rank="175">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/gv" target="_blank" rel="noopener noreferrer">gv</a>
@@ -4324,7 +4315,7 @@ body::after {
         <span class="repo-stars">18<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-28">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="memre" data-date="2026-04-27" data-commits="20" data-rank="177">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="memre" data-date="2026-04-27" data-commits="20" data-rank="176">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/memre" target="_blank" rel="noopener noreferrer">memre</a>
@@ -4338,7 +4329,7 @@ body::after {
         <span class="repo-stars">20<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-27">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="premaid" data-date="2026-04-27" data-commits="20" data-rank="178">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="premaid" data-date="2026-04-27" data-commits="20" data-rank="177">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/premaid" target="_blank" rel="noopener noreferrer">premaid</a>
@@ -4352,7 +4343,7 @@ body::after {
         <span class="repo-stars">20<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-27">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="" data-name="php-build-standalone" data-date="2026-04-29" data-commits="13" data-rank="179">
+    </li><li class="repo-item" data-org="tools" data-lang="" data-name="php-build-standalone" data-date="2026-04-29" data-commits="13" data-rank="178">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/php-build-standalone" target="_blank" rel="noopener noreferrer">php-build-standalone</a>
@@ -4366,7 +4357,7 @@ body::after {
         <span class="repo-stars">13<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-29">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Almide" data-name="awen" data-date="2026-05-04" data-commits="11" data-rank="180">
+    </li><li class="repo-item" data-org="tools" data-lang="Almide" data-name="awen" data-date="2026-05-04" data-commits="11" data-rank="179">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/awen" target="_blank" rel="noopener noreferrer">awen</a>
@@ -4380,7 +4371,7 @@ body::after {
         <span class="repo-stars">11<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-04">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="resepy" data-date="2026-03-06" data-commits="10" data-rank="181">
+    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="resepy" data-date="2026-03-06" data-commits="10" data-rank="180">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/resepy" target="_blank" rel="noopener noreferrer">resepy</a>
@@ -4394,7 +4385,7 @@ body::after {
         <span class="repo-stars">10<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-03-06">Mar 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="igloc" data-date="2025-12-01" data-commits="10" data-rank="182">
+    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="igloc" data-date="2025-12-01" data-commits="10" data-rank="181">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/igloc" target="_blank" rel="noopener noreferrer">igloc</a>
@@ -4408,7 +4399,7 @@ body::after {
         <span class="repo-stars">10<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-12-01">Dec 2025</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="anyv-core" data-date="2026-05-09" data-commits="4" data-rank="183">
+    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="anyv-core" data-date="2026-05-09" data-commits="4" data-rank="182">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/anyv-core" target="_blank" rel="noopener noreferrer">anyv-core</a>
@@ -4422,7 +4413,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-09">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="pdf-burger" data-date="2026-02-24" data-commits="5" data-rank="184">
+    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="pdf-burger" data-date="2026-02-24" data-commits="5" data-rank="183">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/pdf-burger" target="_blank" rel="noopener noreferrer">pdf-burger</a>
@@ -4436,7 +4427,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-02-24">Feb 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="C" data-name="clipstash" data-date="2026-03-15" data-commits="1" data-rank="185">
+    </li><li class="repo-item" data-org="tools" data-lang="C" data-name="clipstash" data-date="2026-03-15" data-commits="1" data-rank="184">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/ClipStash" target="_blank" rel="noopener noreferrer">ClipStash</a>
@@ -4450,7 +4441,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-03-15">Mar 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="homebrew-tap" data-date="2026-08-08" data-commits="56" data-rank="186">
+    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="homebrew-tap" data-date="2026-08-08" data-commits="56" data-rank="185">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/homebrew-tap" target="_blank" rel="noopener noreferrer">homebrew-tap</a>
@@ -4464,7 +4455,7 @@ body::after {
         <span class="repo-stars">56<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-08-08">Aug 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="chip-war-chronicle" data-date="2026-09-15" data-commits="42" data-rank="187">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="chip-war-chronicle" data-date="2026-09-15" data-commits="42" data-rank="186">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/chip-war-chronicle" target="_blank" rel="noopener noreferrer">chip-war-chronicle</a>
@@ -4478,7 +4469,7 @@ body::after {
         <span class="repo-stars">42<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-09-15">Sep 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="o6lvl4-webnight-miyazaki-20260703-slide" data-date="2026-07-06" data-commits="27" data-rank="188">
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="o6lvl4-webnight-miyazaki-20260703-slide" data-date="2026-07-06" data-commits="27" data-rank="187">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide" target="_blank" rel="noopener noreferrer">O6lvl4-webnight-miyazaki-20260703-slide</a>
@@ -4492,7 +4483,7 @@ body::after {
         <span class="repo-stars">27<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-07-06">Jul 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="uimodulay" data-date="2026-09-18" data-commits="14" data-rank="189">
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="uimodulay" data-date="2026-09-18" data-commits="14" data-rank="188">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/uimodulay" target="_blank" rel="noopener noreferrer">uimodulay</a>
@@ -4506,7 +4497,7 @@ body::after {
         <span class="repo-stars">14<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="agent-bench-matrix" data-date="2026-09-14" data-commits="9" data-rank="190">
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="agent-bench-matrix" data-date="2026-09-14" data-commits="9" data-rank="189">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/agent-bench-matrix" target="_blank" rel="noopener noreferrer">agent-bench-matrix</a>
@@ -4520,7 +4511,7 @@ body::after {
         <span class="repo-stars">9<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-09-14">Sep 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="connpass-discord-bot" data-date="2026-08-29" data-commits="5" data-rank="191">
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="connpass-discord-bot" data-date="2026-08-29" data-commits="5" data-rank="190">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/connpass-discord-bot" target="_blank" rel="noopener noreferrer">connpass-discord-bot</a>
@@ -4534,7 +4525,7 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-08-29">Aug 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="keiri" data-date="2026-06-22" data-commits="6" data-rank="192">
+    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="keiri" data-date="2026-06-22" data-commits="6" data-rank="191">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/keiri" target="_blank" rel="noopener noreferrer">keiri</a>
@@ -4548,7 +4539,7 @@ body::after {
         <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-22">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="JavaScript" data-name="hokusai-portfolio" data-date="2026-09-18" data-commits="2" data-rank="193">
+    </li><li class="repo-item" data-org="tools" data-lang="JavaScript" data-name="hokusai-portfolio" data-date="2026-09-18" data-commits="2" data-rank="192">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/hokusai-portfolio" target="_blank" rel="noopener noreferrer">hokusai-portfolio</a>
@@ -4562,7 +4553,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="ytscribe" data-date="2026-06-29" data-commits="2" data-rank="194">
+    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="ytscribe" data-date="2026-06-29" data-commits="2" data-rank="193">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/ytscribe" target="_blank" rel="noopener noreferrer">ytscribe</a>
@@ -4576,7 +4567,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-29">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="pagina" data-date="2026-05-20" data-commits="34" data-rank="195">
+    </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="pagina" data-date="2026-05-20" data-commits="34" data-rank="194">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/pagina" target="_blank" rel="noopener noreferrer">pagina</a>
@@ -4590,7 +4581,7 @@ body::after {
         <span class="repo-stars">34<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-20">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="CSS" data-name="graph-garden" data-date="2026-06-01" data-commits="21" data-rank="196">
+    </li><li class="repo-item" data-org="tools" data-lang="CSS" data-name="graph-garden" data-date="2026-06-01" data-commits="21" data-rank="195">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/graph-garden" target="_blank" rel="noopener noreferrer">graph-garden</a>
@@ -4604,7 +4595,7 @@ body::after {
         <span class="repo-stars">21<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-01">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="macleap" data-date="2026-06-19" data-commits="16" data-rank="197">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="macleap" data-date="2026-06-19" data-commits="16" data-rank="196">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/macleap" target="_blank" rel="noopener noreferrer">macleap</a>
@@ -4618,7 +4609,7 @@ body::after {
         <span class="repo-stars">16<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-19">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Almide" data-name="o6lvl4-vitals" data-date="2026-05-07" data-commits="10" data-rank="198">
+    </li><li class="repo-item" data-org="tools" data-lang="Almide" data-name="o6lvl4-vitals" data-date="2026-05-07" data-commits="10" data-rank="197">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/O6lvl4-vitals" target="_blank" rel="noopener noreferrer">O6lvl4-vitals</a>
@@ -4632,7 +4623,7 @@ body::after {
         <span class="repo-stars">10<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-07">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="gulp-coach" data-date="2026-04-24" data-commits="12" data-rank="199">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="gulp-coach" data-date="2026-04-24" data-commits="12" data-rank="198">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/gulp-coach" target="_blank" rel="noopener noreferrer">gulp-coach</a>
@@ -4646,7 +4637,7 @@ body::after {
         <span class="repo-stars">12<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-24">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="environment-health-viewer" data-date="2026-04-23" data-commits="10" data-rank="200">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="environment-health-viewer" data-date="2026-04-23" data-commits="10" data-rank="199">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/environment-health-viewer" target="_blank" rel="noopener noreferrer">environment-health-viewer</a>
@@ -4660,7 +4651,7 @@ body::after {
         <span class="repo-stars">10<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-23">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="syncenv" data-date="2025-10-28" data-commits="11" data-rank="201">
+    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="syncenv" data-date="2025-10-28" data-commits="11" data-rank="200">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/syncenv" target="_blank" rel="noopener noreferrer">syncenv</a>
@@ -4674,7 +4665,7 @@ body::after {
         <span class="repo-stars">11<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-10-28">Oct 2025</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="" data-name="o6lvl4-protocol" data-date="2026-05-07" data-commits="7" data-rank="202">
+    </li><li class="repo-item" data-org="tools" data-lang="" data-name="o6lvl4-protocol" data-date="2026-05-07" data-commits="7" data-rank="201">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/O6lvl4-protocol" target="_blank" rel="noopener noreferrer">O6lvl4-protocol</a>
@@ -4688,7 +4679,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-07">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="grclone" data-date="2026-05-01" data-commits="4" data-rank="203">
+    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="grclone" data-date="2026-05-01" data-commits="4" data-rank="202">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/grclone" target="_blank" rel="noopener noreferrer">grclone</a>
@@ -4702,7 +4693,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-01">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="image-catalog-composer" data-date="2026-04-24" data-commits="4" data-rank="204">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="image-catalog-composer" data-date="2026-04-24" data-commits="4" data-rank="203">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/image-catalog-composer" target="_blank" rel="noopener noreferrer">image-catalog-composer</a>
@@ -4716,7 +4707,7 @@ body::after {
         <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-24">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="MoonBit" data-name="dns-checker" data-date="2026-01-16" data-commits="7" data-rank="205">
+    </li><li class="repo-item" data-org="tools" data-lang="MoonBit" data-name="dns-checker" data-date="2026-01-16" data-commits="7" data-rank="204">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/dns-checker" target="_blank" rel="noopener noreferrer">dns-checker</a>
@@ -4730,7 +4721,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-01-16">Jan 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="kotorody-portfolio" data-date="2026-05-18" data-commits="7" data-rank="206">
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="kotorody-portfolio" data-date="2026-05-18" data-commits="7" data-rank="205">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/kotorody-portfolio" target="_blank" rel="noopener noreferrer">kotorody-portfolio</a>
@@ -4744,7 +4735,7 @@ body::after {
         <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-18">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Shell" data-name="netcheck" data-date="2026-06-11" data-commits="1" data-rank="207">
+    </li><li class="repo-item" data-org="tools" data-lang="Shell" data-name="netcheck" data-date="2026-06-11" data-commits="1" data-rank="206">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/netcheck" target="_blank" rel="noopener noreferrer">netcheck</a>
@@ -4758,7 +4749,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="tabi-navi" data-date="2026-06-11" data-commits="1" data-rank="208">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="tabi-navi" data-date="2026-06-11" data-commits="1" data-rank="207">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/tabi-navi" target="_blank" rel="noopener noreferrer">tabi-navi</a>
@@ -4772,7 +4763,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="pitchy" data-date="2026-05-12" data-commits="2" data-rank="209">
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="pitchy" data-date="2026-05-12" data-commits="2" data-rank="208">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/pitchy" target="_blank" rel="noopener noreferrer">pitchy</a>
@@ -4786,7 +4777,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-12">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Almide" data-name="tocsin-almd" data-date="2026-05-12" data-commits="2" data-rank="210">
+    </li><li class="repo-item" data-org="tools" data-lang="Almide" data-name="tocsin-almd" data-date="2026-05-12" data-commits="2" data-rank="209">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/tocsin-almd" target="_blank" rel="noopener noreferrer">tocsin-almd</a>
@@ -4800,7 +4791,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-12">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="chropen" data-date="2026-05-01" data-commits="1" data-rank="211">
+    </li><li class="repo-item" data-org="tools" data-lang="Go" data-name="chropen" data-date="2026-05-01" data-commits="1" data-rank="210">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/chropen" target="_blank" rel="noopener noreferrer">chropen</a>
@@ -4814,7 +4805,7 @@ body::after {
         <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-05-01">May 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Shell" data-name="azprofile" data-date="2025-09-13" data-commits="5" data-rank="212">
+    </li><li class="repo-item" data-org="tools" data-lang="Shell" data-name="azprofile" data-date="2025-09-13" data-commits="5" data-rank="211">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/azprofile" target="_blank" rel="noopener noreferrer">azprofile</a>
@@ -4827,6 +4818,20 @@ body::after {
       <div class="repo-meta">
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-09-13">Sep 2025</time>
+      </div>
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="capto" data-date="2025-04-01" data-commits="5" data-rank="212">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/O6lvl4/capto" target="_blank" rel="noopener noreferrer">capto</a>
+          <span class="repo-org-tag">O6lvl4</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+        </div>
+        <p class="repo-desc">A CLI tool that captures directory structure and file contents into a PDF for multi-modal LLMs</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
+        <time class="repo-date" datetime="2025-04-01">Apr 2025</time>
       </div>
     </li><li class="repo-item" data-org="tools" data-lang="JavaScript" data-name="aid-on-contract-generator" data-date="2025-06-29" data-commits="2" data-rank="213">
       <div>
@@ -5839,7 +5844,7 @@ Options:
         <span class="fam-mark" aria-hidden="true">ᚁ</span>
         <span class="fam-count">17</span>
         <h3 class="fam-name">Making a language</h3>
-        <p class="fam-lead">Almide itself — a statically-typed language — and everything around it: the normative semantics and its conformance corpus, one place for the grammar, a parser generator, editor support, export to WASM and native, the documentation and playground, and the rig that measures every day whether generated code survives.</p>
+        <p class="fam-lead">Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo).</p>
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a><a class="fam-card" href="stdlib/">
         <span class="fam-mark" aria-hidden="true">ᚂ</span>
@@ -5849,51 +5854,51 @@ Options:
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a><a class="fam-card" href="agent-tools/">
         <span class="fam-mark" aria-hidden="true">ᚃ</span>
-        <span class="fam-count">27</span>
+        <span class="fam-count">26</span>
         <h3 class="fam-name">Tools for coding agents</h3>
-        <p class="fam-lead">What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source. Each started as something needed that day.</p>
+        <p class="fam-lead">What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.</p>
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a><a class="fam-card" href="llm/">
         <span class="fam-mark" aria-hidden="true">ᚄ</span>
         <span class="fam-count">18</span>
         <h3 class="fam-name">Agents, and groundwork for LLMs</h3>
-        <p class="fam-lead">What it takes to actually use a model: one door to many providers (unillm, almai, unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), a CLI for the terminal, and a hand that works a Mac.</p>
+        <p class="fam-lead">What it takes to actually use a model: one door to many providers (unillm, almai, unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus), a CLI that reaches many models through one mouth (llmine), and a hand that works a Mac.</p>
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a><a class="fam-card" href="fizz/">
         <span class="fam-mark" aria-hidden="true">ᚅ</span>
         <span class="fam-count">52</span>
         <h3 class="fam-name">The parts of an AITuber</h3>
-        <p class="fam-lead">An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). Each is a single-purpose pure function, written in Almide.</p>
+        <p class="fam-lead">An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.</p>
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a><a class="fam-card" href="mc/">
         <span class="fam-mark" aria-hidden="true">ᚆ</span>
         <span class="fam-count">26</span>
         <h3 class="fam-name">Minecraft, in Almide</h3>
-        <p class="fam-lead">Minecraft&#39;s protocol implemented in Almide from the bottom up: authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and a bot — replacing the layers of node-minecraft-protocol and prismarine in a typed language.</p>
+        <p class="fam-lead">Minecraft&#39;s protocol implemented in Almide from the bottom up (mc-protocol): authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and bots (mc-bot, craftsman) — replacing the layers of node-minecraft-protocol and prismarine in a typed language.</p>
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a><a class="fam-card" href="graphics/">
         <span class="fam-mark" aria-hidden="true">ᚇ</span>
         <span class="fam-count">9</span>
         <h3 class="fam-name">Drawing, and the maths under it</h3>
-        <p class="fam-lead">The layer for drawing in Almide: a GPU-native UI (ceangal), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth), transformers and signal processing (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).</p>
+        <p class="fam-lead">The layer for drawing in Almide: a GPU-native UI (ceangal) and its animation engine (ceangal-anime), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth) with a toolkit for the files themselves (nendo), neural-network primitives (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).</p>
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a><a class="fam-card" href="web/">
         <span class="fam-mark" aria-hidden="true">ᚈ</span>
         <span class="fam-count">11</span>
         <h3 class="fam-name">Parts for the edge and the web</h3>
-        <p class="fam-lead">The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive, and the bridges to it; a job queue; edge-native authentication; a design system of colour tokens and themes; a client for a knowledge-base API.</p>
+        <p class="fam-lead">The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare&#39;s job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).</p>
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a><a class="fam-card" href="tools/">
         <span class="fam-mark" aria-hidden="true">ᚉ</span>
-        <span class="fam-count">46</span>
+        <span class="fam-count">47</span>
         <h3 class="fam-name">Tools at hand, and sites in public</h3>
-        <p class="fam-lead">The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), and sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay).</p>
+        <p class="fam-lead">The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay), and the one-offs left within reach (pitchy reads the pitch of a whistle, an EQ for a headset, tocsin watches the supply chain).</p>
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a><a class="fam-card" href="lab/">
         <span class="fam-mark" aria-hidden="true">ᚊ</span>
         <span class="fam-count">48</span>
         <h3 class="fam-name">Things tried out</h3>
-        <p class="fam-lead">Other languages and other machinery, touched, compared and left standing: proofs and translation in Lean 4, a zero-cost functional toolkit in Zig, wyve — a semantics language one layer above LLVM IR — the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.</p>
+        <p class="fam-lead">Other languages and other machinery, touched, compared and left standing: lean2ts turns Lean 4 theorems into TypeScript property tests, zfp is a zero-cost functional toolkit for Zig, wyve is a semantics language one layer above LLVM IR, sashiko watches Ruby&#39;s concurrency boundaries through OpenTelemetry, there is the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.</p>
         <span class="fam-go" aria-hidden="true">Open →</span>
       </a></div>
   </section>

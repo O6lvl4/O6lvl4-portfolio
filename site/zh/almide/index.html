@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>做一门语言 | O6lvl4</title>
-<meta name="description" content="静态类型语言 Almide 本体及其周边：规范语义与一致性语料、统一管理的文法、解析器生成器、编辑器支持、导出到 WASM 与原生、文档与 playground，以及每天测量生成代码存活率的基准设施">
+<meta name="description" content="静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="zh">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/almide/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/zh/almide/">
 <meta property="og:title" content="做一门语言 | O6lvl4">
-<meta property="og:description" content="静态类型语言 Almide 本体及其周边：规范语义与一致性语料、统一管理的文法、解析器生成器、编辑器支持、导出到 WASM 与原生、文档与 playground，以及每天测量生成代码存活率的基准设施">
+<meta property="og:description" content="静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/share/og.zh.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 公开仓库 265 个">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,20 +1828,13 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">做一门语言</h1>
-        <p class="fam-intro">静态类型语言 Almide 本体及其周边：规范语义与一致性语料、统一管理的文法、解析器生成器、编辑器支持、导出到 WASM 与原生、文档与 playground，以及每天测量生成代码存活率的基准设施</p>
+        <p class="fam-intro">静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）</p>
         <a class="fam-back" href="../#families">← 全部系列</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚁ</span>
     </div>
     <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">17</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">10,531</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">6</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">年份</div></div></div>
-    <div>
-      <div class="timeline-sub">各年提交</div>
-      <div class="timeline-chart" role="img" aria-label="年表: 2026 10531"><div class="tl-bar-wrap">
-        <span class="tl-count">10,531</span>
-        <div class="tl-bar current" style="height:100.0%" title="2026: 10531"></div>
-      </div></div>
-      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2026</span></div>
-    </div>
+    
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
     <div class="section-head">

@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>試したもの | O6lvl4</title>
-<meta name="description" content="他の言語や仕組みを触り、比べ、置いてあるもの。Lean 4 での証明と変換、Zig のゼロコスト関数型、LLVM IR の一層上の意味論言語 wyve、Go の版ごとの書き方くらべ、自作言語で鳴らした音や書いたトレーシング、そして雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。">
+<meta name="description" content="他の言語や仕組みを触り、比べ、置いてあるもの。Lean 4 の定理を TypeScript のプロパティテストに落とす lean2ts、Zig のゼロコスト関数型（zfp）、LLVM IR の一層上の意味論言語 wyve、Ruby の並行境界を OpenTelemetry で覗く sashiko、Go の版ごとの書き方くらべ、自作言語で鳴らした音や書いたトレーシング、そして雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/lab/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/ja/lab/">
 <meta property="og:title" content="試したもの | O6lvl4">
-<meta property="og:description" content="他の言語や仕組みを触り、比べ、置いてあるもの。Lean 4 での証明と変換、Zig のゼロコスト関数型、LLVM IR の一層上の意味論言語 wyve、Go の版ごとの書き方くらべ、自作言語で鳴らした音や書いたトレーシング、そして雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。">
+<meta property="og:description" content="他の言語や仕組みを触り、比べ、置いてあるもの。Lean 4 の定理を TypeScript のプロパティテストに落とす lean2ts、Zig のゼロコスト関数型（zfp）、LLVM IR の一層上の意味論言語 wyve、Ruby の並行境界を OpenTelemetry で覗く sashiko、Go の版ごとの書き方くらべ、自作言語で鳴らした音や書いたトレーシング、そして雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/share/og.ja.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 公開リポジトリ 265 件">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,7 +1828,7 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">試したもの</h1>
-        <p class="fam-intro">他の言語や仕組みを触り、比べ、置いてあるもの。Lean 4 での証明と変換、Zig のゼロコスト関数型、LLVM IR の一層上の意味論言語 wyve、Go の版ごとの書き方くらべ、自作言語で鳴らした音や書いたトレーシング、そして雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。</p>
+        <p class="fam-intro">他の言語や仕組みを触り、比べ、置いてあるもの。Lean 4 の定理を TypeScript のプロパティテストに落とす lean2ts、Zig のゼロコスト関数型（zfp）、LLVM IR の一層上の意味論言語 wyve、Ruby の並行境界を OpenTelemetry で覗く sashiko、Go の版ごとの書き方くらべ、自作言語で鳴らした音や書いたトレーシング、そして雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。</p>
         <a class="fam-back" href="../#families">← 系統の一覧へ</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚊ</span>

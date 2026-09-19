@@ -395,7 +395,7 @@
    "id": "almide",
    "title": "言語をつくる",
    "short": "言語",
-   "intro": "静的型付けの言語 Almide 本体と、その周り — 規範的な意味論と適合性コーパス、文法の一元管理、パーサジェネレータ、エディタ支援、WASM とネイティブへの書き出し、ドキュメントと playground、そして生成コードの生存率を毎日測る計測基盤。",
+   "intro": "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。",
    "figures": [
     {
      "value": "17",
@@ -1496,14 +1496,14 @@
    "id": "agent-tools",
    "title": "エージェントの道具",
    "short": "エージェントの道具",
-   "intro": "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide、主張を出典と照合する emet。どれも自分の作業で毎日使うものから始まっています。",
+   "intro": "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
    "figures": [
     {
-     "value": "27",
+     "value": "26",
      "label": "公開リポジトリ"
     },
     {
-     "value": "781",
+     "value": "776",
      "label": "コミット"
     },
     {
@@ -1518,7 +1518,7 @@
    "years": [
     {
      "name": "2025",
-     "count": 21
+     "count": 16
     },
     {
      "name": "2026",
@@ -2441,38 +2441,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/capto",
-     "title": "capto",
-     "titleEn": "ディレクトリ構造とファイル内容をPDFに記録するCLIツール",
-     "date": "2025年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/capto",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "5"
-      },
-      {
-       "label": "初回",
-       "value": "2025年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/capto"
-      }
-     ],
-     "order": {
-      "date": "2025-04-01"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/cdev",
      "title": "cdev",
      "titleEn": "Claude Codeで説明からプロジェクトを自動構築するCLI",
@@ -2538,7 +2506,7 @@
    "id": "llm",
    "title": "エージェントと LLM の土台",
    "short": "LLM の土台",
-   "intro": "モデルを実際に使うために要るもの。統一の窓口（unillm・almai・unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、そして端末から使う CLI と、Mac を操作する手。",
+   "intro": "モデルを実際に使うために要るもの。統一の窓口（unillm・almai・unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、Almide で書いたエージェントの実行環境（homullus）、そして端末から複数のモデルを同じ口で叩く CLI（llmine）と、Mac を操作する手。",
    "figures": [
     {
      "value": "18",
@@ -3249,7 +3217,7 @@
    "id": "fizz",
    "title": "AITuber の部品",
    "short": "AITuber",
-   "intro": "AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。どれも単一責任の純関数で、Almide で書いてあります。",
+   "intro": "AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。部品の間をつなぐのは共通のプロトコル（fizz-protocol）で、返事の組み立て全体は fizz-brain-orchestrator が受け持ちます。どれも単一責任の純関数で、Almide で書いてあります。",
    "figures": [
     {
      "value": "52",
@@ -5025,7 +4993,7 @@
    "id": "mc",
    "title": "Minecraft を Almide で",
    "short": "Minecraft",
-   "intro": "Minecraft のプロトコルを Almide で下から実装した一式。認証、チャンク、NBT、レジストリ、物理、経路探索、インベントリ、PvP、プロキシ、サーバー、そしてボット。node-minecraft-protocol や prismarine の各層を、型のある言語で置き換えていく試みです。",
+   "intro": "Minecraft のプロトコルを Almide で下から実装した一式（mc-protocol）。認証、チャンク、NBT、レジストリ、物理、経路探索、インベントリ、PvP、プロキシ、サーバー、そしてボット（mc-bot・craftsman）。node-minecraft-protocol や prismarine の各層を、型のある言語で置き換えていく試みです。",
    "figures": [
     {
      "value": "26",
@@ -5912,7 +5880,7 @@
    "id": "graphics",
    "title": "描画と数学",
    "short": "描画と数学",
-   "intro": "Almide で絵を描くための層。GPU ネイティブの UI（ceangal）、Canvas と WebGL を WASM から叩くもの（obsid）、純粋な数学プリミティブ（lumen）、VRM/glTF のキャラクター層（cruth）、Transformer と信号処理（nn）、リバースモード autograd の微分可能プログラミング基盤（slabhra）。",
+   "intro": "Almide で絵を描くための層。GPU ネイティブの UI（ceangal）とそのアニメーション（ceangal-anime）、Canvas と WebGL を WASM から叩くもの（obsid）、純粋な数学プリミティブ（lumen）、VRM/glTF のキャラクター層（cruth）とファイルそのものの道具箱（nendo）、ニューラルネットの基本部品（nn）、リバースモード autograd の微分可能プログラミング基盤（slabhra）。",
    "figures": [
     {
      "value": "9",
@@ -6280,7 +6248,7 @@
    "id": "web",
    "title": "エッジと Web の部品",
    "short": "エッジと Web",
-   "intro": "Cloudflare Workers やブラウザで動く層。ReadableStream にリアクティブな拡張を足す nagare とその橋渡し、ジョブキュー、エッジネイティブな認証、色トークンとテーマのデザインシステム、知識ベース API のクライアント。",
+   "intro": "Cloudflare Workers やブラウザで動く層。ReadableStream を包まずそのままリアクティブにする nagare と、その上の橋渡し（Cloudflare のジョブキューに繋ぐ didoq、Qwik に繋ぐ qwiks）、エッジネイティブな認証（auth・auth-providers-ts）、色トークンとテーマのデザインシステム（design-system・aid-on-ui-system）、知識ベース API のクライアント（outline-api-client-ts）。",
    "figures": [
     {
      "value": "11",
@@ -6708,14 +6676,14 @@
    "id": "tools",
    "title": "手元の道具と公開サイト",
    "short": "道具とサイト",
-   "intro": "毎日の作業のために書いた小さな実行ファイルと、公開しているページ。環境を整えるもの（gv・qusp・dotfiles・netcheck）、書類を片づけるもの（keiri・pdf-burger・resepy・capto）、知識を溜めるもの（O6lvl4-knowledge・awen・memre・graph-garden）、そして見せるためのサイト（hokusai-portfolio・chip-war-chronicle・agent-bench-matrix・uimodulay）。",
+   "intro": "毎日の作業のために書いた小さな実行ファイルと、公開しているページ。環境を整えるもの（gv・qusp・dotfiles・netcheck）、書類を片づけるもの（keiri・pdf-burger・resepy・capto・gformiac）、知識を溜めるもの（O6lvl4-knowledge・awen・memre・graph-garden）、見せるためのサイト（hokusai-portfolio・chip-war-chronicle・agent-bench-matrix・uimodulay）、そして手の届くところに置いた単発のもの（口笛の音程を採る pitchy、ヘッドセットの EQ、供給網への攻撃を早く知る tocsin）。",
    "figures": [
     {
-     "value": "46",
+     "value": "47",
      "label": "公開リポジトリ"
     },
     {
-     "value": "830",
+     "value": "835",
      "label": "コミット"
     },
     {
@@ -6730,7 +6698,7 @@
    "years": [
     {
      "name": "2025",
-     "count": 36
+     "count": 41
     },
     {
      "name": "2026",
@@ -8232,6 +8200,38 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/capto",
+     "title": "capto",
+     "titleEn": "ディレクトリ構造とファイル内容をPDFに記録するCLIツール",
+     "date": "2025年4月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/capto",
+     "tags": [
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "5"
+      },
+      {
+       "label": "初回",
+       "value": "2025年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/capto"
+      }
+     ],
+     "order": {
+      "date": "2025-04-01"
+     }
+    },
+    {
+     "image": "",
      "id": "Aid-On/aid-on-contract-generator",
      "title": "aid-on-contract-generator",
      "titleEn": "HTML/CSS/JSのみで動く契約書作成Webアプリ",
@@ -8366,7 +8366,7 @@
    "id": "lab",
    "title": "試したもの",
    "short": "試したもの",
-   "intro": "他の言語や仕組みを触り、比べ、置いてあるもの。Lean 4 での証明と変換、Zig のゼロコスト関数型、LLVM IR の一層上の意味論言語 wyve、Go の版ごとの書き方くらべ、自作言語で鳴らした音や書いたトレーシング、そして雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
+   "intro": "他の言語や仕組みを触り、比べ、置いてあるもの。Lean 4 の定理を TypeScript のプロパティテストに落とす lean2ts、Zig のゼロコスト関数型（zfp）、LLVM IR の一層上の意味論言語 wyve、Ruby の並行境界を OpenTelemetry で覗く sashiko、Go の版ごとの書き方くらべ、自作言語で鳴らした音や書いたトレーシング、そして雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
      "value": "48",

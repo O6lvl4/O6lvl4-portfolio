@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>Things tried out | O6lvl4</title>
-<meta name="description" content="Other languages and other machinery, touched, compared and left standing: proofs and translation in Lean 4, a zero-cost functional toolkit in Zig, wyve — a semantics language one layer above LLVM IR — the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.">
+<meta name="description" content="Other languages and other machinery, touched, compared and left standing: lean2ts turns Lean 4 theorems into TypeScript property tests, zfp is a zero-cost functional toolkit for Zig, wyve is a semantics language one layer above LLVM IR, sashiko watches Ruby&#39;s concurrency boundaries through OpenTelemetry, there is the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="en">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/lab/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/en/lab/">
 <meta property="og:title" content="Things tried out | O6lvl4">
-<meta property="og:description" content="Other languages and other machinery, touched, compared and left standing: proofs and translation in Lean 4, a zero-cost functional toolkit in Zig, wyve — a semantics language one layer above LLVM IR — the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.">
+<meta property="og:description" content="Other languages and other machinery, touched, compared and left standing: lean2ts turns Lean 4 theorems into TypeScript property tests, zfp is a zero-cost functional toolkit for Zig, wyve is a semantics language one layer above LLVM IR, sashiko watches Ruby&#39;s concurrency boundaries through OpenTelemetry, there is the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/share/og.en.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 265 public repositories">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,7 +1828,7 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">Things tried out</h1>
-        <p class="fam-intro">Other languages and other machinery, touched, compared and left standing: proofs and translation in Lean 4, a zero-cost functional toolkit in Zig, wyve — a semantics language one layer above LLVM IR — the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.</p>
+        <p class="fam-intro">Other languages and other machinery, touched, compared and left standing: lean2ts turns Lean 4 theorems into TypeScript property tests, zfp is a zero-cost functional toolkit for Zig, wyve is a semantics language one layer above LLVM IR, sashiko watches Ruby&#39;s concurrency boundaries through OpenTelemetry, there is the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.</p>
         <a class="fam-back" href="../#families">← All families</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚊ</span>

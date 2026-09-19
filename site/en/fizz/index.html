@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>The parts of an AITuber | O6lvl4</title>
-<meta name="description" content="An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). Each is a single-purpose pure function, written in Almide.">
+<meta name="description" content="An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="en">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/fizz/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/en/fizz/">
 <meta property="og:title" content="The parts of an AITuber | O6lvl4">
-<meta property="og:description" content="An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). Each is a single-purpose pure function, written in Almide.">
+<meta property="og:description" content="An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/share/og.en.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 265 public repositories">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,20 +1828,13 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">The parts of an AITuber</h1>
-        <p class="fam-intro">An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). Each is a single-purpose pure function, written in Almide.</p>
+        <p class="fam-intro">An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.</p>
         <a class="fam-back" href="../#families">← All families</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚅ</span>
     </div>
     <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">52</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">109</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">1</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">Span</div></div></div>
-    <div>
-      <div class="timeline-sub">Commits by year</div>
-      <div class="timeline-chart" role="img" aria-label="Timeline: 2026 109"><div class="tl-bar-wrap">
-        <span class="tl-count">109</span>
-        <div class="tl-bar current" style="height:100.0%" title="2026: 109"></div>
-      </div></div>
-      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2026</span></div>
-    </div>
+    
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
     <div class="section-head">

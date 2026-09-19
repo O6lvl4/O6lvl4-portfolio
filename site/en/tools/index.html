@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>Tools at hand, and sites in public | O6lvl4</title>
-<meta name="description" content="The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), and sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay).">
+<meta name="description" content="The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay), and the one-offs left within reach (pitchy reads the pitch of a whistle, an EQ for a headset, tocsin watches the supply chain).">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="en">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/tools/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/en/tools/">
 <meta property="og:title" content="Tools at hand, and sites in public | O6lvl4">
-<meta property="og:description" content="The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), and sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay).">
+<meta property="og:description" content="The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay), and the one-offs left within reach (pitchy reads the pitch of a whistle, an EQ for a headset, tocsin watches the supply chain).">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/share/og.en.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 265 public repositories">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,22 +1828,22 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">Tools at hand, and sites in public</h1>
-        <p class="fam-intro">The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), and sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay).</p>
+        <p class="fam-intro">The small binaries written for the day&#39;s work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay), and the one-offs left within reach (pitchy reads the pitch of a whistle, an EQ for a headset, tocsin watches the supply chain).</p>
         <a class="fam-back" href="../#families">← All families</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚉ</span>
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">46</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">830</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">11</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">Span</div></div></div>
+    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">47</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">835</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">11</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">Span</div></div></div>
     <div>
       <div class="timeline-sub">Commits by year</div>
-      <div class="timeline-chart" role="img" aria-label="Timeline: 2025 36, 2026 794"><div class="tl-bar-wrap">
-        <span class="tl-count">36</span>
-        <div class="tl-bar" style="height:4.5%" title="2025: 36"></div>
+      <div class="timeline-chart few" role="img" aria-label="Timeline: 2025 41, 2026 794"><div class="tl-bar-wrap">
+        <span class="tl-count">41</span>
+        <div class="tl-bar" style="height:5.2%" title="2025: 41"></div>
       </div><div class="tl-bar-wrap">
         <span class="tl-count">794</span>
         <div class="tl-bar current" style="height:100.0%" title="2026: 794"></div>
       </div></div>
-      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
+      <div class="timeline-labels few" aria-hidden="true"><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
     </div>
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
@@ -1866,7 +1871,7 @@ body::after {
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚂ</span>
       <h2 class="section-title" id="heading-works">Work</h2>
-      <span class="section-count">46 / 46</span>
+      <span class="section-count">47 / 47</span>
     </div>
     
     <div class="works-toolbar">
@@ -2461,7 +2466,21 @@ body::after {
         <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-09-13">Sep 2025</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="JavaScript" data-name="aid-on-contract-generator" data-date="2025-06-29" data-commits="2" data-rank="42">
+    </li><li class="repo-item" data-org="tools" data-lang="TypeScript" data-name="capto" data-date="2025-04-01" data-commits="5" data-rank="42">
+      <div>
+        <div class="repo-top-line">
+          <a class="repo-name" href="https://github.com/O6lvl4/capto" target="_blank" rel="noopener noreferrer">capto</a>
+          <span class="repo-org-tag">O6lvl4</span>
+          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+        </div>
+        <p class="repo-desc">A CLI tool that captures directory structure and file contents into a PDF for multi-modal LLMs</p>
+        
+      </div>
+      <div class="repo-meta">
+        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
+        <time class="repo-date" datetime="2025-04-01">Apr 2025</time>
+      </div>
+    </li><li class="repo-item" data-org="tools" data-lang="JavaScript" data-name="aid-on-contract-generator" data-date="2025-06-29" data-commits="2" data-rank="43">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/aid-on-contract-generator" target="_blank" rel="noopener noreferrer">aid-on-contract-generator</a>
@@ -2475,7 +2494,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-06-29">Jun 2025</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="aid-on-tax-calculator" data-date="2025-03-06" data-commits="2" data-rank="43">
+    </li><li class="repo-item" data-org="tools" data-lang="Python" data-name="aid-on-tax-calculator" data-date="2025-03-06" data-commits="2" data-rank="44">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/aid-on-tax-calculator" target="_blank" rel="noopener noreferrer">aid-on-tax-calculator</a>
@@ -2489,7 +2508,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-03-06">Mar 2025</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="Shell" data-name="dotfiles" data-date="2026-04-28" data-commits="3" data-rank="44">
+    </li><li class="repo-item" data-org="tools" data-lang="Shell" data-name="dotfiles" data-date="2026-04-28" data-commits="3" data-rank="45">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/dotfiles" target="_blank" rel="noopener noreferrer">dotfiles</a>
@@ -2503,7 +2522,7 @@ body::after {
         <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-04-28">Apr 2026</time>
       </div>
-    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="aid-on-invoice-generator" data-date="2025-06-02" data-commits="4" data-rank="45">
+    </li><li class="repo-item" data-org="tools" data-lang="HTML" data-name="aid-on-invoice-generator" data-date="2025-06-02" data-commits="4" data-rank="46">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/Aid-On/aid-on-invoice-generator" target="_blank" rel="noopener noreferrer">aid-on-invoice-generator</a>
@@ -2518,7 +2537,7 @@ body::after {
         <time class="repo-date" datetime="2025-06-02">Jun 2025</time>
       </div>
     </li></ul>
-    <button type="button" class="show-more-btn">Show the rest<span class="show-more-count"> (18)</span></button>
+    <button type="button" class="show-more-btn">Show the rest<span class="show-more-count"> (19)</span></button>
   </section>
       </div>
     </main>

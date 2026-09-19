@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>言語をつくる | O6lvl4</title>
-<meta name="description" content="静的型付けの言語 Almide 本体と、その周り — 規範的な意味論と適合性コーパス、文法の一元管理、パーサジェネレータ、エディタ支援、WASM とネイティブへの書き出し、ドキュメントと playground、そして生成コードの生存率を毎日測る計測基盤。">
+<meta name="description" content="静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/almide/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/ja/almide/">
 <meta property="og:title" content="言語をつくる | O6lvl4">
-<meta property="og:description" content="静的型付けの言語 Almide 本体と、その周り — 規範的な意味論と適合性コーパス、文法の一元管理、パーサジェネレータ、エディタ支援、WASM とネイティブへの書き出し、ドキュメントと playground、そして生成コードの生存率を毎日測る計測基盤。">
+<meta property="og:description" content="静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/share/og.ja.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 公開リポジトリ 265 件">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,20 +1828,13 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">言語をつくる</h1>
-        <p class="fam-intro">静的型付けの言語 Almide 本体と、その周り — 規範的な意味論と適合性コーパス、文法の一元管理、パーサジェネレータ、エディタ支援、WASM とネイティブへの書き出し、ドキュメントと playground、そして生成コードの生存率を毎日測る計測基盤。</p>
+        <p class="fam-intro">静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。</p>
         <a class="fam-back" href="../#families">← 系統の一覧へ</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚁ</span>
     </div>
     <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">17</div><div class="kpi-label">公開リポジトリ</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">10,531</div><div class="kpi-label">コミット</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">6</div><div class="kpi-label">言語</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">期間</div></div></div>
-    <div>
-      <div class="timeline-sub">年ごとのコミット</div>
-      <div class="timeline-chart" role="img" aria-label="年表: 2026 10531"><div class="tl-bar-wrap">
-        <span class="tl-count">10,531</span>
-        <div class="tl-bar current" style="height:100.0%" title="2026: 10531"></div>
-      </div></div>
-      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2026</span></div>
-    </div>
+    
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
     <div class="section-head">

@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1829,14 +1834,7 @@ body::after {
       <span class="fam-hero-mark" aria-hidden="true">ᚂ</span>
     </div>
     <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">11</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">66</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">1</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">年份</div></div></div>
-    <div>
-      <div class="timeline-sub">各年提交</div>
-      <div class="timeline-chart" role="img" aria-label="年表: 2026 66"><div class="tl-bar-wrap">
-        <span class="tl-count">66</span>
-        <div class="tl-bar current" style="height:100.0%" title="2026: 66"></div>
-      </div></div>
-      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2026</span></div>
-    </div>
+    
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
     <div class="section-head">

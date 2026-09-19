@@ -395,7 +395,7 @@
    "id": "almide",
    "title": "做一门语言",
    "short": "语言",
-   "intro": "静态类型语言 Almide 本体及其周边：规范语义与一致性语料、统一管理的文法、解析器生成器、编辑器支持、导出到 WASM 与原生、文档与 playground，以及每天测量生成代码存活率的基准设施",
+   "intro": "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）",
    "figures": [
     {
      "value": "17",
@@ -1496,14 +1496,14 @@
    "id": "agent-tools",
    "title": "给编码智能体的工具",
    "short": "智能体工具",
-   "intro": "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide、把主张与出处核对的 emet。每一个都源自当天的实际需要",
+   "intro": "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
    "figures": [
     {
-     "value": "27",
+     "value": "26",
      "label": "公开仓库"
     },
     {
-     "value": "781",
+     "value": "776",
      "label": "提交"
     },
     {
@@ -1518,7 +1518,7 @@
    "years": [
     {
      "name": "2025",
-     "count": 21
+     "count": 16
     },
     {
      "name": "2026",
@@ -2441,38 +2441,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/capto",
-     "title": "capto",
-     "titleEn": "将目录结构与文件内容生成PDF的命令行工具",
-     "date": "2025年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/capto",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "5"
-      },
-      {
-       "label": "首次",
-       "value": "2025年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/capto"
-      }
-     ],
-     "order": {
-      "date": "2025-04-01"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/cdev",
      "title": "cdev",
      "titleEn": "用Claude Code根据描述自动构建项目的CLI",
@@ -2538,7 +2506,7 @@
    "id": "llm",
    "title": "智能体与 LLM 的基础",
    "short": "LLM 基础",
-   "intro": "真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm），以及终端 CLI 和操作 Mac 的手",
+   "intro": "真正把模型用起来所需要的：统一入口（unillm、almai、unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus），以及在终端用同一个口子调多个模型的 CLI（llmine）和操作 Mac 的手",
    "figures": [
     {
      "value": "18",
@@ -3249,7 +3217,7 @@
    "id": "fizz",
    "title": "AITuber 的零件",
    "short": "AITuber",
-   "intro": "把 AITuber「Fizz」拆成可以逐个验证的零件：读取评论（来源、去重、分类、匹配）、组织回应（persona、记忆 L1–L3、历史、断句），以及驱动身体（口型、表情、注视、待机、手势、VRM 骨骼）。每个都是单一职责的纯函数，用 Almide 写成",
+   "intro": "把 AITuber「Fizz」拆成可以逐个验证的零件：读取评论（来源、去重、分类、匹配）、组织回应（persona、记忆 L1–L3、历史、断句），以及驱动身体（口型、表情、注视、待机、手势、VRM 骨骼）。零件之间说的是同一套协议（fizz-protocol），整条回应的组装交给 fizz-brain-orchestrator。每个都是单一职责的纯函数，用 Almide 写成",
    "figures": [
     {
      "value": "52",
@@ -5025,7 +4993,7 @@
    "id": "mc",
    "title": "用 Almide 写 Minecraft",
    "short": "Minecraft",
-   "intro": "用 Almide 自底向上实现 Minecraft 协议：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写",
+   "intro": "用 Almide 自底向上实现 Minecraft 协议（mc-protocol）：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人（mc-bot、craftsman）——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写",
    "figures": [
     {
      "value": "26",
@@ -5912,7 +5880,7 @@
    "id": "graphics",
    "title": "绘制与其下的数学",
    "short": "绘制",
-   "intro": "在 Almide 里作画的那一层：GPU 原生 UI（ceangal）、从 WASM 驱动 Canvas 与 WebGL（obsid）、纯数学基元（lumen）、VRM/glTF 角色层（cruth）、Transformer 与信号处理（nn），以及带反向模式 autograd 的可微编程基础（slabhra）",
+   "intro": "在 Almide 里作画的那一层：GPU 原生 UI（ceangal）与它的动画引擎（ceangal-anime）、从 WASM 驱动 Canvas 与 WebGL（obsid）、纯数学基元（lumen）、VRM/glTF 角色层（cruth）与文件本身的工具箱（nendo）、神经网络基本部件（nn），以及带反向模式 autograd 的可微编程基础（slabhra）",
    "figures": [
     {
      "value": "9",
@@ -6280,7 +6248,7 @@
    "id": "web",
    "title": "边缘与 Web 的零件",
    "short": "边缘与 Web",
-   "intro": "跑在 Cloudflare Workers 与浏览器上的那一层：让 ReadableStream 具备反应式能力的 nagare 及其桥接、任务队列、边缘原生认证、色彩令牌与主题的设计系统、知识库 API 客户端",
+   "intro": "跑在 Cloudflare Workers 与浏览器上的那一层：不做包装、直接让 ReadableStream 具备反应式能力的 nagare 及其之上的桥接（接 Cloudflare 任务队列的 didoq、接 Qwik 的 qwiks）、边缘原生认证（auth、auth-providers-ts）、色彩令牌与主题的设计系统（design-system、aid-on-ui-system）、知识库 API 客户端（outline-api-client-ts）",
    "figures": [
     {
      "value": "11",
@@ -6708,14 +6676,14 @@
    "id": "tools",
    "title": "手边的工具与公开站点",
    "short": "工具与站点",
-   "intro": "为每天的活儿写的小可执行文件，以及公开的页面：搭环境（gv、qusp、dotfiles、netcheck）、处理文书（keiri、pdf-burger、resepy、capto）、积累知识（O6lvl4-knowledge、awen、memre、graph-garden），以及给人看的站点（hokusai-portfolio、chip-war-chronicle、agent-bench-matrix、uimodulay）",
+   "intro": "为每天的活儿写的小可执行文件，以及公开的页面：搭环境（gv、qusp、dotfiles、netcheck）、处理文书（keiri、pdf-burger、resepy、capto、gformiac）、积累知识（O6lvl4-knowledge、awen、memre、graph-garden）、给人看的站点（hokusai-portfolio、chip-war-chronicle、agent-bench-matrix、uimodulay），以及随手放在近处的一次性小东西（听口哨音高的 pitchy、耳机 EQ、盯供应链攻击的 tocsin）",
    "figures": [
     {
-     "value": "46",
+     "value": "47",
      "label": "公开仓库"
     },
     {
-     "value": "830",
+     "value": "835",
      "label": "提交"
     },
     {
@@ -6730,7 +6698,7 @@
    "years": [
     {
      "name": "2025",
-     "count": 36
+     "count": 41
     },
     {
      "name": "2026",
@@ -8232,6 +8200,38 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/capto",
+     "title": "capto",
+     "titleEn": "将目录结构与文件内容生成PDF的命令行工具",
+     "date": "2025年4月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/capto",
+     "tags": [
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "5"
+      },
+      {
+       "label": "首次",
+       "value": "2025年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/capto"
+      }
+     ],
+     "order": {
+      "date": "2025-04-01"
+     }
+    },
+    {
+     "image": "",
      "id": "Aid-On/aid-on-contract-generator",
      "title": "aid-on-contract-generator",
      "titleEn": "纯HTML/CSS/JS的浏览器合同生成应用",
@@ -8366,7 +8366,7 @@
    "id": "lab",
    "title": "试过的东西",
    "short": "试过的",
-   "intro": "碰过、比过、留着的其他语言与机制：Lean 4 的证明与转换、Zig 上零成本的函数式工具箱、位于 LLVM IR 之上一层的语义语言 wyve、Go 各版本写法的对照、用自制语言发出的声音与写的追踪，以及模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
+   "intro": "碰过、比过、留着的其他语言与机制：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、Zig 上零成本的函数式工具箱（zfp）、位于 LLVM IR 之上一层的语义语言 wyve、用 OpenTelemetry 看 Ruby 并发边界的 sashiko、Go 各版本写法的对照、用自制语言发出的声音与写的追踪，以及模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
      "value": "48",

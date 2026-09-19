@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>Tools for coding agents | O6lvl4</title>
-<meta name="description" content="What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source. Each started as something needed that day.">
+<meta name="description" content="What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="en">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/agent-tools/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/en/agent-tools/">
 <meta property="og:title" content="Tools for coding agents | O6lvl4">
-<meta property="og:description" content="What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source. Each started as something needed that day.">
+<meta property="og:description" content="What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/share/og.en.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 265 public repositories">
 <meta name="twitter:card" content="summary_large_image">
@@ -1545,6 +1545,11 @@ h4.readme-h2 {
 
 /* each year's own number, above its bar: the bars are read as lengths, the numbers as facts */
 .timeline-chart { height: 96px; }
+/* A bar keeps a bar's proportions. The track is shared out equally, so two or three years would
+   paint slabs a third of the page wide — read as blocks of colour, not as lengths to compare.
+   With few years the bars are capped and sit at the start of the track; with five they fill it. */
+.timeline-chart.few, .timeline-labels.few { justify-content: flex-start; }
+.timeline-chart.few .tl-bar-wrap, .timeline-labels.few .tl-yr { max-width: 5.5rem; }
 .tl-count {
   font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums; color: var(--fg-faint);
@@ -1823,22 +1828,22 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">Tools for coding agents</h1>
-        <p class="fam-intro">What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source. Each started as something needed that day.</p>
+        <p class="fam-intro">What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.</p>
         <a class="fam-back" href="../#families">← All families</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚃ</span>
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">27</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">781</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">6</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">Span</div></div></div>
+    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">26</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">776</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">6</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">Span</div></div></div>
     <div>
       <div class="timeline-sub">Commits by year</div>
-      <div class="timeline-chart" role="img" aria-label="Timeline: 2025 21, 2026 760"><div class="tl-bar-wrap">
-        <span class="tl-count">21</span>
-        <div class="tl-bar" style="height:2.8%" title="2025: 21"></div>
+      <div class="timeline-chart few" role="img" aria-label="Timeline: 2025 16, 2026 760"><div class="tl-bar-wrap">
+        <span class="tl-count">16</span>
+        <div class="tl-bar" style="height:2.1%" title="2025: 16"></div>
       </div><div class="tl-bar-wrap">
         <span class="tl-count">760</span>
         <div class="tl-bar current" style="height:100.0%" title="2026: 760"></div>
       </div></div>
-      <div class="timeline-labels" aria-hidden="true"><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
+      <div class="timeline-labels few" aria-hidden="true"><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
     </div>
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
@@ -1866,7 +1871,7 @@ body::after {
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚂ</span>
       <h2 class="section-title" id="heading-works">Work</h2>
-      <span class="section-count">27 / 27</span>
+      <span class="section-count">26 / 26</span>
     </div>
     
     <div class="works-toolbar">
@@ -2209,21 +2214,7 @@ body::after {
         <span class="repo-stars">9<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2026-02-18">Feb 2026</time>
       </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="capto" data-date="2025-04-01" data-commits="5" data-rank="24">
-      <div>
-        <div class="repo-top-line">
-          <a class="repo-name" href="https://github.com/O6lvl4/capto" target="_blank" rel="noopener noreferrer">capto</a>
-          <span class="repo-org-tag">O6lvl4</span>
-          <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-        </div>
-        <p class="repo-desc">A CLI tool that captures directory structure and file contents into a PDF for multi-modal LLMs</p>
-        
-      </div>
-      <div class="repo-meta">
-        <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
-        <time class="repo-date" datetime="2025-04-01">Apr 2025</time>
-      </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Shell" data-name="cdev" data-date="2025-08-25" data-commits="2" data-rank="25">
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Shell" data-name="cdev" data-date="2025-08-25" data-commits="2" data-rank="24">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/cdev" target="_blank" rel="noopener noreferrer">cdev</a>
@@ -2237,7 +2228,7 @@ body::after {
         <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
         <time class="repo-date" datetime="2025-08-25">Aug 2025</time>
       </div>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="" data-name="lean4-practice" data-date="2026-03-07" data-commits="3" data-rank="26">
+    </li><li class="repo-item" data-org="agent-tools" data-lang="" data-name="lean4-practice" data-date="2026-03-07" data-commits="3" data-rank="25">
       <div>
         <div class="repo-top-line">
           <a class="repo-name" href="https://github.com/O6lvl4/lean4-practice" target="_blank" rel="noopener noreferrer">lean4-practice</a>

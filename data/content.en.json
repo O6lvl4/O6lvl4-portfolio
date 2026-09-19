@@ -395,7 +395,7 @@
    "id": "almide",
    "title": "Making a language",
    "short": "Language",
-   "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics and its conformance corpus, one place for the grammar, a parser generator, editor support, export to WASM and native, the documentation and playground, and the rig that measures every day whether generated code survives.",
+   "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo).",
    "figures": [
     {
      "value": "17",
@@ -1496,14 +1496,14 @@
    "id": "agent-tools",
    "title": "Tools for coding agents",
    "short": "Agent tools",
-   "intro": "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source. Each started as something needed that day.",
+   "intro": "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
    "figures": [
     {
-     "value": "27",
+     "value": "26",
      "label": "Repositories"
     },
     {
-     "value": "781",
+     "value": "776",
      "label": "Commits"
     },
     {
@@ -1518,7 +1518,7 @@
    "years": [
     {
      "name": "2025",
-     "count": 21
+     "count": 16
     },
     {
      "name": "2026",
@@ -2441,38 +2441,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/capto",
-     "title": "capto",
-     "titleEn": "A CLI tool that captures directory structure and file contents into a PDF for multi-modal LLMs",
-     "date": "Apr 2025",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/capto",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "5"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/capto"
-      }
-     ],
-     "order": {
-      "date": "2025-04-01"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/cdev",
      "title": "cdev",
      "titleEn": "A shell CLI that uses Claude Code's bypass permissions to build whole projects from a description.",
@@ -2538,7 +2506,7 @@
    "id": "llm",
    "title": "Agents, and groundwork for LLMs",
    "short": "LLM groundwork",
-   "intro": "What it takes to actually use a model: one door to many providers (unillm, almai, unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), a CLI for the terminal, and a hand that works a Mac.",
+   "intro": "What it takes to actually use a model: one door to many providers (unillm, almai, unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus), a CLI that reaches many models through one mouth (llmine), and a hand that works a Mac.",
    "figures": [
     {
      "value": "18",
@@ -3249,7 +3217,7 @@
    "id": "fizz",
    "title": "The parts of an AITuber",
    "short": "AITuber",
-   "intro": "An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). Each is a single-purpose pure function, written in Almide.",
+   "intro": "An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.",
    "figures": [
     {
      "value": "52",
@@ -5025,7 +4993,7 @@
    "id": "mc",
    "title": "Minecraft, in Almide",
    "short": "Minecraft",
-   "intro": "Minecraft's protocol implemented in Almide from the bottom up: authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and a bot — replacing the layers of node-minecraft-protocol and prismarine in a typed language.",
+   "intro": "Minecraft's protocol implemented in Almide from the bottom up (mc-protocol): authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and bots (mc-bot, craftsman) — replacing the layers of node-minecraft-protocol and prismarine in a typed language.",
    "figures": [
     {
      "value": "26",
@@ -5912,7 +5880,7 @@
    "id": "graphics",
    "title": "Drawing, and the maths under it",
    "short": "Drawing",
-   "intro": "The layer for drawing in Almide: a GPU-native UI (ceangal), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth), transformers and signal processing (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).",
+   "intro": "The layer for drawing in Almide: a GPU-native UI (ceangal) and its animation engine (ceangal-anime), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth) with a toolkit for the files themselves (nendo), neural-network primitives (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).",
    "figures": [
     {
      "value": "9",
@@ -6280,7 +6248,7 @@
    "id": "web",
    "title": "Parts for the edge and the web",
    "short": "Edge and web",
-   "intro": "The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive, and the bridges to it; a job queue; edge-native authentication; a design system of colour tokens and themes; a client for a knowledge-base API.",
+   "intro": "The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare's job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).",
    "figures": [
     {
      "value": "11",
@@ -6708,14 +6676,14 @@
    "id": "tools",
    "title": "Tools at hand, and sites in public",
    "short": "Tools and sites",
-   "intro": "The small binaries written for the day's work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), and sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay).",
+   "intro": "The small binaries written for the day's work, and the pages that are public: setting up an environment (gv, qusp, dotfiles, netcheck), getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), keeping what is learnt (O6lvl4-knowledge, awen, memre, graph-garden), sites made to be looked at (hokusai-portfolio, chip-war-chronicle, agent-bench-matrix, uimodulay), and the one-offs left within reach (pitchy reads the pitch of a whistle, an EQ for a headset, tocsin watches the supply chain).",
    "figures": [
     {
-     "value": "46",
+     "value": "47",
      "label": "Repositories"
     },
     {
-     "value": "830",
+     "value": "835",
      "label": "Commits"
     },
     {
@@ -6730,7 +6698,7 @@
    "years": [
     {
      "name": "2025",
-     "count": 36
+     "count": 41
     },
     {
      "name": "2026",
@@ -8232,6 +8200,38 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/capto",
+     "title": "capto",
+     "titleEn": "A CLI tool that captures directory structure and file contents into a PDF for multi-modal LLMs",
+     "date": "Apr 2025",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/capto",
+     "tags": [
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "5"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2025"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/capto"
+      }
+     ],
+     "order": {
+      "date": "2025-04-01"
+     }
+    },
+    {
+     "image": "",
      "id": "Aid-On/aid-on-contract-generator",
      "title": "aid-on-contract-generator",
      "titleEn": "A pure HTML/CSS/JavaScript web app that generates contracts entirely in the browser, with no build step.",
@@ -8366,7 +8366,7 @@
    "id": "lab",
    "title": "Things tried out",
    "short": "Tried out",
-   "intro": "Other languages and other machinery, touched, compared and left standing: proofs and translation in Lean 4, a zero-cost functional toolkit in Zig, wyve — a semantics language one layer above LLVM IR — the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.",
+   "intro": "Other languages and other machinery, touched, compared and left standing: lean2ts turns Lean 4 theorems into TypeScript property tests, zfp is a zero-cost functional toolkit for Zig, wyve is a semantics language one layer above LLVM IR, sashiko watches Ruby's concurrency boundaries through OpenTelemetry, there is the way Go reads from version to version, sound and tracing written in my own language, and the templates and exercises. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
      "value": "48",
