@@ -80,17 +80,17 @@
   "open": "開く",
   "allFamilies": "系統の一覧へ",
   "catalogue": "すべて",
-  "groups": "置き場所",
+  "groups": "org",
   "more": "順に見る",
   "showMore": "残りを見る",
   "about": "これまで",
   "work": "仕事",
-  "orgs": "置き場所",
-  "stack": "書いている言語",
+  "orgs": "org",
+  "stack": "言語ごとのリポジトリ",
   "history": "年表",
   "byYear": "年ごとのコミット",
-  "byOrg": "置き場所ごとのコミット",
-  "breakdown": "言語と置き場所",
+  "byOrg": "org ごとのコミット",
+  "breakdown": "何を書いてきたか",
   "allWorks": "全部を一覧で見る",
   "home": "先頭の頁へ",
   "briefLead": "系統ごとに、いちばん手を入れているものを一つずつ。残りは一覧で見られます。",
@@ -196,7 +196,7 @@
   ],
   "panel": [
    {
-    "key": "置き場所",
+    "key": "org",
     "value": "6"
    },
    {
