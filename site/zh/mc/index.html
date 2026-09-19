@@ -14,7 +14,7 @@
 <meta property="og:title" content="用 Almide 写 Minecraft | O6lvl4">
 <meta property="og:description" content="用 Almide 自底向上实现 Minecraft 协议（mc-protocol）：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人（mc-bot、craftsman）——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/share/og.zh.jpg">
-<meta property="og:image:alt" content="O6lvl4 — 公开仓库 265 个">
+<meta property="og:image:alt" content="O6lvl4 — 从语言开始，构建开发工具。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../mark.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1632,7 +1632,7 @@ body::after {
     <div class="hdr-right">
       <div class="hdr-readout"><span class="hdr-readout-val">265</span><span class="hdr-readout-lbl">仓库</span></div>
       <div class="hdr-readout"><span class="hdr-readout-val">19</span><span class="hdr-readout-lbl">语言</span></div>
-      <div class="locale-switcher" role="group" aria-label="语言"><a class="locale-btn" href="../../ja/">日本</a><a class="locale-btn" href="../../en/">EN</a><span class="locale-btn active" aria-current="true" lang="zh">中文</span></div>
+      <div class="locale-switcher" role="group" aria-label="语言"><a class="locale-btn" href="../../en/">EN</a><a class="locale-btn" href="../../ja/">日本</a><span class="locale-btn active" aria-current="true" lang="zh">中文</span></div>
       <div class="theme-toggle" role="group" aria-label="配色">
         <button type="button" class="theme-icon-btn" data-theme-set="light" aria-pressed="false" aria-label="浅色"><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" width="13" height="13"><circle cx="8" cy="8" r="3"/><line x1="8" y1="1" x2="8" y2="2.5"/><line x1="8" y1="13.5" x2="8" y2="15"/><line x1="1" y1="8" x2="2.5" y2="8"/><line x1="13.5" y1="8" x2="15" y2="8"/><line x1="3.05" y1="3.05" x2="4.1" y2="4.1"/><line x1="11.9" y1="11.9" x2="12.95" y2="12.95"/><line x1="12.95" y1="3.05" x2="11.9" y2="4.1"/><line x1="4.1" y1="11.9" x2="3.05" y2="12.95"/></svg></button>
         <button type="button" class="theme-icon-btn" data-theme-set="dark" aria-pressed="false" aria-label="深色"><svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" width="12" height="12"><path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a.5.5 0 0 0-.6-.6A7 7 0 1 0 14.1 11.1a.5.5 0 0 0-.6-.6z"/></svg></button>
@@ -2327,6 +2327,43 @@ listing();
 
 export {};
 
+</script>
+<script type="module">// Browser language is a preference, not a guess based on a visitor's location.
+const siteLanguages = new Set(['en', 'ja', 'zh']);
+const languageStorageKey = 'o6lvl4-portfolio-language';
+
+function preferredLanguage() {
+  try {
+    const saved = localStorage.getItem(languageStorageKey);
+    if (siteLanguages.has(saved)) return saved;
+  } catch {
+    // Language detection still works when storage is unavailable.
+  }
+  const preferences = navigator.languages?.length ? navigator.languages : [navigator.language];
+  for (const preference of preferences) {
+    const language = String(preference ?? '').toLowerCase().split(/[-_]/)[0];
+    if (siteLanguages.has(language)) return language;
+  }
+  return 'en';
+}
+
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('a.locale-btn, a[data-site-language]');
+  if (!link) return;
+  const target = new URL(link.href);
+  const language = target.pathname.match(/\/(en|ja|zh)\/?$/)?.[1];
+  if (target.origin !== location.origin || !siteLanguages.has(language)) return;
+  try {
+    localStorage.setItem(languageStorageKey, language);
+  } catch {
+    // The link itself still navigates normally.
+  }
+});
+
+// Explicit /en/, /ja/ and /zh/ URLs always keep the language they name.
+if (document.documentElement.hasAttribute('data-language-entry')) {
+  location.replace(preferredLanguage() + '/' + location.search + location.hash);
+}
 </script>
 </body>
 </html>

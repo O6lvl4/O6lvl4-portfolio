@@ -6,7 +6,7 @@
  "description": "265 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs.",
  "share": {
   "image": "og.en.jpg",
-  "alt": "O6lvl4 — 265 public repositories"
+  "alt": "O6lvl4 — Building developer tools, from the language up."
  },
  "artist": {
   "name": "O6lvl4",
@@ -31,12 +31,12 @@
  ],
  "langs": [
   {
-   "label": "日本語",
-   "href": "../ja/"
-  },
-  {
    "label": "English",
    "href": ""
+  },
+  {
+   "label": "日本語",
+   "href": "../ja/"
   },
   {
    "label": "中文",

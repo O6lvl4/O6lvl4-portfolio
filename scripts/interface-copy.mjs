@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { enhanceWorks } from "./works-ui.mjs";
 
 export function finishInterface(out, pages) {
+  const languageClient = readFileSync(new URL("./language-client.js", import.meta.url), "utf8");
   for (const page of pages) {
     const file = `${out}/${page}index.html`;
     let html = readFileSync(file, "utf8");
@@ -18,6 +19,7 @@ export function finishInterface(out, pages) {
 .list-intro + .section { padding-top: calc(var(--section-gap) * 0.4); }
 </style>`);
     }
+    html = html.replace('</body>', `<script type="module">${languageClient}</script>\n</body>`);
     writeFileSync(file, html);
   }
 }

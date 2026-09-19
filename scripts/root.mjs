@@ -1,22 +1,39 @@
-// The site root: sends a visitor to their own language, and links all three for anyone else.
+// Prefer the reader's saved choice or browser languages; otherwise open English.
 //
 //   node scripts/root.mjs > site/index.html
 
+import { readFileSync } from "node:fs";
+
+const content = JSON.parse(readFileSync("data/content.en.json", "utf8"));
+const languageClient = readFileSync(new URL("./language-client.js", import.meta.url), "utf8");
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const LANGS = [
-  { id: "ja", label: "日本語" },
   { id: "en", label: "English" },
+  { id: "ja", label: "日本語" },
   { id: "zh", label: "中文" },
 ];
 
-const links = LANGS.map((l) => `<a href="./${l.id}/">${l.label}</a>`).join("");
+const links = LANGS.map((l) => `<a href="./${l.id}/" data-site-language="${l.id}">${l.label}</a>`).join("");
 
 process.stdout.write(`<!doctype html>
-<html lang="en">
+<html lang="en" data-language-entry>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>O6lvl4</title>
 <meta name="description" content="Public work under O6lvl4, Aid-On, almide and the almide-* orgs.">
+<link rel="canonical" href="${esc(content.baseUrl)}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="O6lvl4">
+<meta property="og:title" content="${esc(content.artist.role)} | O6lvl4">
+<meta property="og:description" content="${esc(content.home.lead)}">
+<meta property="og:url" content="${esc(new URL('../', content.baseUrl).href)}">
+<meta property="og:image" content="${esc(new URL('share/og.en.jpg', content.baseUrl).href)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(content.share.alt)}">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="en/mark.png" type="image/png">
 <link rel="alternate" hreflang="ja" href="./ja/">
 <link rel="alternate" hreflang="en" href="./en/">
@@ -32,11 +49,7 @@ process.stdout.write(`<!doctype html>
   a:hover { border-color: #1f4d6b; }
 </style>
 <script>
-  var want = (navigator.language || "en").toLowerCase();
-  var to = "en";
-  if (want.indexOf("ja") === 0) to = "ja";
-  else if (want.indexOf("zh") === 0) to = "zh";
-  location.replace(to + "/" + location.hash);
+${languageClient}
 </script>
 </head>
 <body>

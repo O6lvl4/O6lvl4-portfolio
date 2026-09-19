@@ -39,8 +39,9 @@ O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ265件を、一つ
 - **Plates from the projects' own material.** The work opened in full shows its own plate: its site
   as it renders, its command as it answers, or a summary of what its README says it does — taken
   from that README alone, in each of the three languages. Nothing is drawn or mocked up.
-- **Three languages.** `/ja/`, `/en/` and `/zh/` are three built pages; the root sends a visitor to
-  theirs and links the other two, as does the page itself.
+- **English first, with Japanese and Chinese translations.** The root respects a saved language
+  choice, then the browser's preferred languages, falling back to `/en/`. It uses the English
+  share card. Direct language URLs stay in that language; the switcher remembers manual choices.
 
 `docs/PROMPT.ui.md` is the brief this interface was generated from; the design it produced (React
 + Tailwind, one page) is ported into uimodulay's `oghma` template — the same faces, palette and

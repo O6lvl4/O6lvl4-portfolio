@@ -10,7 +10,7 @@ import { updateHomeContent } from "./home-content.mjs";
 import { finishInterface } from "./interface-copy.mjs";
 
 const langs = process.argv.slice(2);
-const wanted = langs.length ? langs : ["ja", "en", "zh"];
+const wanted = langs.length ? langs : ["en", "ja", "zh"];
 
 for (const lang of wanted) {
   const out = `site/${lang}`;

@@ -8,7 +8,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { FAMILIES, familyOf } from "./families.mjs";
 import { TEXT } from "./text.mjs";
 
-const lang = process.argv[2] ?? "ja";
+const lang = process.argv[2] ?? "en";
 const projects = JSON.parse(readFileSync("data/projects.json", "utf8"));
 const summaries = existsSync("data/summaries.json") ? JSON.parse(readFileSync("data/summaries.json", "utf8")) : {};
 
@@ -32,8 +32,8 @@ const FEATURED = [
 ];
 
 const LANGS = [
-  { id: "ja", label: "日本語" },
   { id: "en", label: "English" },
+  { id: "ja", label: "日本語" },
   { id: "zh", label: "中文" },
 ];
 
@@ -227,7 +227,7 @@ const content = {
   root: "..",
   title: "O6lvl4",
   description: t.description(total),
-  share: { image: `og.${lang}.jpg`, alt: `O6lvl4 — ${t.kicker(total)}` },
+  share: { image: `og.${lang}.jpg`, alt: `O6lvl4 — ${t.role}` },
   artist: {
     name: "O6lvl4",
     nameEn: t.nameEn,

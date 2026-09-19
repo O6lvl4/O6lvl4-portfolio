@@ -6,7 +6,7 @@
  "description": "O6lvl4、Aid-On、almide 与 almide-* 组织下的 265 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。",
  "share": {
   "image": "og.zh.jpg",
-  "alt": "O6lvl4 — 公开仓库 265 个"
+  "alt": "O6lvl4 — 从语言开始，构建开发工具。"
  },
  "artist": {
   "name": "O6lvl4",
@@ -31,12 +31,12 @@
  ],
  "langs": [
   {
-   "label": "日本語",
-   "href": "../ja/"
-  },
-  {
    "label": "English",
    "href": "../en/"
+  },
+  {
+   "label": "日本語",
+   "href": "../ja/"
   },
   {
    "label": "中文",

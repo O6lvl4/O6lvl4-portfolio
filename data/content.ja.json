@@ -6,7 +6,7 @@
  "description": "O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ 265 件。言語 Almide とその周りの道具、エージェント、LLM の土台。",
  "share": {
   "image": "og.ja.jpg",
-  "alt": "O6lvl4 — 公開リポジトリ 265 件"
+  "alt": "O6lvl4 — 開発の道具を、言語からつくる。"
  },
  "artist": {
   "name": "O6lvl4",
@@ -31,12 +31,12 @@
  ],
  "langs": [
   {
-   "label": "日本語",
-   "href": ""
-  },
-  {
    "label": "English",
    "href": "../en/"
+  },
+  {
+   "label": "日本語",
+   "href": ""
   },
   {
    "label": "中文",
