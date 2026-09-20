@@ -71,9 +71,10 @@ jobs:
       # pages that are live, and the commit is the repository activity that keeps GitHub from
       # disabling a schedule after 60 quiet days. A commit made with GITHUB_TOKEN never starts
       # another workflow run, so recording the build cannot trigger a build. A push already
-      # carries its own change, and the deployment above is never held up by this record.
+      # carries its own change, a run started on another branch has no business writing to main,
+      # and the deployment above is never held up by this record.
       - name: Record the refreshed portfolio on main
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && github.ref == 'refs/heads/main'
         continue-on-error: true
         run: |
           git config user.name 'github-actions[bot]'
@@ -103,7 +104,7 @@ jobs:
       # Summaries stay handwritten, so the refresh only says which new projects are waiting for
       # one. Like the record above, this never holds up a deployment.
       - name: Say which projects still have no summary
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && github.ref == 'refs/heads/main'
         continue-on-error: true
         run: node scripts/summaries-issue.mjs
         env:
