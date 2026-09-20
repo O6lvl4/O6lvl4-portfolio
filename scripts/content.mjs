@@ -227,7 +227,7 @@ const content = {
   root: "..",
   title: "O6lvl4",
   description: t.description(total),
-  share: { image: `og.${lang}.jpg`, alt: `O6lvl4 — ${t.role}` },
+  share: { image: "og.jpg", alt: `O6lvl4 — ${t.role}` },
   artist: {
     name: "O6lvl4",
     nameEn: t.nameEn,

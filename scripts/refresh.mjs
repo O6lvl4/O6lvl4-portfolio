@@ -65,6 +65,7 @@ assert.deepEqual(projects.map((p) => p.full).sort(), repos.map((r) => r.full_nam
 run("content", ["en"], "data/content.en.json");
 run("refresh-plates");
 for (const lang of ["en", "ja", "zh"]) run("content", [lang], `data/content.${lang}.json`);
+run("og");
 rmSync("site", { recursive: true, force: true });
 run("site");
 run("verify-site");

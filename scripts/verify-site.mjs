@@ -13,6 +13,9 @@ for (const lang of ["en", "ja", "zh"]) {
   const works = readFileSync(`site/${lang}/works/index.html`, "utf8");
   for (const p of projects) assert(works.includes(p.url), `${lang}: missing ${p.full}`);
   assert(existsSync(`site/${lang}/index.html`), `${lang}: no home page`);
+  // The share card is named in a meta tag by its absolute URL, where a missing file shows up
+  // only once the link is posted somewhere.
+  assert(existsSync(`site/${lang}/share/og.jpg`), `${lang}: no share card`);
 }
 function verifyPage(file) {
   const html = readFileSync(file, "utf8");

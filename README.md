@@ -151,7 +151,7 @@ scripts/       how that data and the plates are made
 assets/        the avatar, used as the mark and the icon
 plates/        a plate per project (derived, not committed): shared/ and one dir per language
 site/          the built sites (ja, en, zh) and the root, uploaded by the Pages workflow
-og.<lang>.jpg  the share cards
+og.jpg         the share card, one in English for every language
 ```
 
 ## Credits

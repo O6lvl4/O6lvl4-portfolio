@@ -11,7 +11,7 @@
     "summarize": "node scripts/summarize.mjs",
     "plates": "node scripts/plates.mjs",
     "content": "node scripts/content.mjs ja > data/content.ja.json && node scripts/content.mjs en > data/content.en.json && node scripts/content.mjs zh > data/content.zh.json",
-    "og": "node scripts/og.mjs ja && node scripts/og.mjs en && node scripts/og.mjs zh",
+    "og": "node scripts/og.mjs",
     "site": "node scripts/site.mjs",
     "check": "node ../uimodulay/src/cli.ts fit check site/ja -o check",
     "lint": "codopsy analyze ./scripts --fail-on-warning"
