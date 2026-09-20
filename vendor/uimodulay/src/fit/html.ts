@@ -39,12 +39,15 @@ function absolute(content: Content, path: string): string | undefined {
   return content.baseUrl.replace(/\/?$/, "/") + path;
 }
 
+/** Open Graph asks for language_TERRITORY; a bare language tag is quietly ignored. */
+const OG_LOCALE: Record<string, string> = { ja: "ja_JP", en: "en_US", zh: "zh_CN" };
+
 function shareMeta(content: Content, head: Head): string {
   const image = absolute(content, head.share.image) ?? head.root + head.share.image;
   const url = absolute(content, head.path);
   return [
     `<meta property="og:site_name" content="${esc(content.title)}">`,
-    `<meta property="og:locale" content="${content.lang === "ja" ? "ja_JP" : esc(content.lang)}">`,
+    `<meta property="og:locale" content="${esc(OG_LOCALE[content.lang] ?? content.lang)}">`,
     `<meta property="og:type" content="website">`,
     url ? `<meta property="og:url" content="${esc(url)}"><link rel="canonical" href="${esc(url)}">` : "",
     `<meta property="og:title" content="${esc(head.title)}">`,

@@ -27,6 +27,9 @@ function verifyPage(file) {
     assert(url.startsWith(site), `${file}: share card is not on this site: ${url}`);
     assert(existsSync(join("site", decodeURIComponent(url.slice(site.length)))), `${file}: missing share card ${url}`);
   }
+  for (const [, locale] of html.matchAll(/property="og:locale" content="([^"]+)"/g)) {
+    assert(/^[a-z]{2}_[A-Z]{2}$/.test(locale), `${file}: og:locale is not language_TERRITORY: ${locale}`);
+  }
   for (const [, url] of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
     if (/^(?:[a-z]+:|\/\/|\/)/i.test(url)) continue;
     const path = resolve(dirname(file), url.split(/[?#]/)[0]);

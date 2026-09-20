@@ -67,6 +67,11 @@ function workHead(content: Content, s: Series, w: Work): Titled {
 function pageHead(content: Content, spec: PageSpec, s?: Series): Titled {
   if (s) return { title: `${s.title} | ${content.title}`, description: s.intro ?? content.description };
   if (spec.id === "about" && content.about) return { title: `${content.about.nav} | ${content.title}`, description: content.about.description ?? content.description };
+  // The list of everything is the page most worth sharing after the front one, so it says what it
+  // is rather than repeating the site's own line.
+  if (spec.id === "works" && content.labels?.work) {
+    return { title: `${content.labels.work} | ${content.title}`, description: content.labels.listLead ?? content.description };
+  }
   return { title: content.title, description: content.home.description ?? content.description };
 }
 
