@@ -1293,9 +1293,9 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 20,
+  "commits": 22,
   "years": {
-   "2026": 20
+   "2026": 22
   },
   "first": "2026-09-19",
   "last": "2026-09-20",
@@ -3238,9 +3238,9 @@
    "Rust"
   ],
   "stars": 2,
-  "commits": 102,
+  "commits": 103,
   "years": {
-   "2026": 102
+   "2026": 103
   },
   "first": "2026-04-07",
   "last": "2026-09-20",
@@ -3262,7 +3262,7 @@
    "lang": "bash",
    "code": "bash scripts/install-almide.sh\n.tools/almide/almide build src/mod.almd -o target/porta\n.tools/almide/almide build examples/chat-agent/src/mod.almd --target wasm -o examples/chat-agent/agent.wasm\n.tools/almide/almide build examples/demo-agent/src/mod.almd --target wasm -o examples/demo-agent/agent.wasm\n# Set your model endpoint/name in examples/chat-agent/agent.toml and team.toml.\ntarget/porta agent examples/chat-agent/agent.toml -- \"Add 20 and 22 using the tool.\"\ntarget/porta agent examples/chat-agent/team.toml -- \"Ask the calculator to add 20 and 22.\""
   },
-  "score": 21
+  "score": 21.1
  },
  {
   "full": "almide/als",
