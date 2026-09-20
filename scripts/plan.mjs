@@ -6,6 +6,7 @@
 
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
+import { shown } from "./shown.mjs";
 
 const [reposTsv, homeTsv] = process.argv.slice(2);
 const OWNERS = ["O6lvl4", "almide", "almide-graphics", "almide-ai", "almd-mc", "Aid-On"];
@@ -31,7 +32,7 @@ const tsv = (file, cols) =>
 
 const github = new Map();
 for (const r of tsv(reposTsv, ["full", "visibility", "fork", "language", "stars", "pushed", "description"])) {
-  if (r.visibility === "public" && r.fork === "false") github.set(r.full, r);
+  if (r.visibility === "public" && r.fork === "false" && shown(r.full)) github.set(r.full, r);
 }
 const extra = new Map();
 for (const r of tsv(homeTsv, ["full", "site", "license", "topics"])) extra.set(r.full, r);

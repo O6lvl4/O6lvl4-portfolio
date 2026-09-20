@@ -58,6 +58,9 @@ Run workflow**. Scheduled runs can start later when GitHub is busy.
 The build lists public, non-fork repositories for all six owners, clones their
 default-branch histories into a fresh temporary directory, and updates the project
 list, descriptions, languages, stars, tags and deduplicated commit statistics.
+GitHub's own furniture is left out of that list by `scripts/shown.mjs`: an
+organisation's `.github` profile, this site's own repository and the dotfiles drawer
+are never cloned, counted or shown.
 It renders the featured images and all three languages, checks repository coverage
 and local links/assets, and deploys only after every step succeeds. A failed refresh
 leaves the last successful deployment online. Removed or newly private repositories
@@ -71,8 +74,8 @@ refreshed `data/` and `site/` back to `main`. Existing translations in
 description or README excerpt in all languages until translations are added.
 Nothing writes a summary automatically: a scheduled run keeps one issue, **Projects
 without a summary**, listing the projects still waiting for one, and closes it when
-none are left (`scripts/summaries-issue.mjs`). The portfolio itself is left off that
-list on purpose. Write the summaries with `npm run summarize -- --only <owner/name>`.
+none are left (`scripts/summaries-issue.mjs`). Write the summaries with
+`npm run summarize -- --only <owner/name>`.
 Automatic builds render website screenshots or summary cards without executing
 commands from the collected projects. They reuse the checked-in logo and share cards.
 

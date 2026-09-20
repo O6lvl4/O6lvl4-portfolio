@@ -4,6 +4,7 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import assert from "node:assert/strict";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { shown } from "./shown.mjs";
 
 const owners = ["O6lvl4", "Aid-On", "almide", "almide-graphics", "almide-ai", "almd-mc"];
 const root = mkdtempSync(join(tmpdir(), "portfolio-refresh-"));
@@ -28,7 +29,8 @@ for (const owner of owners) {
   const pages = json([`${endpoint}&per_page=100`, "--paginate", "--slurp"]);
   const publicRepos = pages.flat().filter((r) => !r.private && !r.fork && r.owner.login.toLowerCase() === owner.toLowerCase());
   if (!publicRepos.length) throw new Error(`No public repositories returned for ${owner}; refusing an incomplete update`);
-  repos.push(...publicRepos);
+  // Nothing is cloned or counted that the site would not show anyway.
+  repos.push(...publicRepos.filter((r) => shown(r.full_name)));
 }
 repos.sort((a, b) => a.full_name.localeCompare(b.full_name));
 process.stdout.write(`Collecting ${repos.length} public repositories into ${root}\n`);

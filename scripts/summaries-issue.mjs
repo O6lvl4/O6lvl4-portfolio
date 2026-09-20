@@ -9,8 +9,6 @@ import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 
 const TITLE = "Projects without a summary";
-// The portfolio is the site itself; its card is meant to read as the repository's own description.
-const EXCLUDED = new Set(["O6lvl4/O6lvl4-portfolio"]);
 const LANGS = ["ja", "en", "zh"];
 // A checklist is a reminder, not an inventory: a lost summaries.json should not write a novel.
 const SHOWN = 30;
@@ -19,7 +17,7 @@ const gh = (args, input) => execFileSync("gh", args, { encoding: "utf8", input }
 
 const projects = JSON.parse(readFileSync("data/projects.json", "utf8"));
 const summaries = JSON.parse(readFileSync("data/summaries.json", "utf8"));
-const missing = projects.filter((p) => !EXCLUDED.has(p.full) && LANGS.some((lang) => !summaries[p.full]?.[lang]));
+const missing = projects.filter((p) => LANGS.some((lang) => !summaries[p.full]?.[lang]));
 
 const issues = JSON.parse(gh(["issue", "list", "--state", "open", "--limit", "100", "--json", "number,title"]));
 const open = issues.find((issue) => issue.title === TITLE)?.number;

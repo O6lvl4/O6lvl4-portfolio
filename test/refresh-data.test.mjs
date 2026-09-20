@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import test from "node:test";
 
-test("refresh discovers new work, excludes removed/private/fork entries and counts shared history once", () => {
+test("refresh discovers new work, excludes removed/private/fork/furniture entries and counts shared history once", () => {
   const root = mkdtempSync(join(tmpdir(), "portfolio-data-test-"));
   const env = {
     ...process.env, PORTFOLIO_CLONES: root, PORTFOLIO_AUTOMATED: "1",
@@ -35,6 +35,10 @@ test("refresh discovers new work, excludes removed/private/fork entries and coun
       "O6lvl4/shared-history\tpublic\tfalse\t-\t0\t2025-01-02\tShared",
       "O6lvl4/private-work\tprivate\tfalse\t-\t0\t2025-01-02\tPrivate",
       "O6lvl4/fork-work\tpublic\ttrue\t-\t0\t2025-01-02\tFork",
+      "O6lvl4/.github\tpublic\tfalse\t-\t0\t2025-01-02\tProfile",
+      "Aid-On/.github\tpublic\tfalse\t-\t0\t2025-01-02\tProfile",
+      "O6lvl4/O6lvl4-portfolio\tpublic\tfalse\t-\t0\t2025-01-02\tThis site",
+      "O6lvl4/dotfiles\tpublic\tfalse\t-\t0\t2025-01-02\tDotfiles",
     ].join("\n"));
     writeFileSync(join(root, "home.tsv"), "");
     writeFileSync(join(root, "data/projects.json"), JSON.stringify([{ full: "O6lvl4/deleted-work" }]));
