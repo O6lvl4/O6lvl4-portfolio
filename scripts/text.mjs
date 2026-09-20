@@ -10,7 +10,7 @@ export const TEXT = {
     lead: "Almideと、コードを書く人やエージェントのための道具を開発しています。",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公開リポジトリ ${n} 件`,
-    description: (n) => `O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ ${n} 件。言語 Almide とその周りの道具、エージェント、LLM の土台。`,
+    description: (n) => `必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。公開リポジトリ ${n} 件。`,
     note: (n) => `公開リポジトリ ${n} 件を並べた頁です。各プロジェクトの図版は、そのサイトの画面・コマンドの出力・README の要約から作りました。`,
     labels: {
       prev: "前のプロジェクト", next: "次のプロジェクト", index: "一覧", close: "閉じる", unit: "件",
@@ -107,7 +107,7 @@ export const TEXT = {
     lead: "I build Almide and tools for the people and agents writing code.",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `${n} public repositories`,
-    description: (n) => `${n} public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs.`,
+    description: (n) => `I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it. ${n} public repositories.`,
     note: (n) => `${n} public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.`,
     labels: {
       prev: "Previous", next: "Next", index: "Index", close: "Close", unit: " repos",
@@ -204,7 +204,7 @@ export const TEXT = {
     lead: "我开发Almide，以及供开发者和编程智能体使用的工具。",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公开仓库 ${n} 个`,
-    description: (n) => `O6lvl4、Aid-On、almide 与 almide-* 组织下的 ${n} 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。`,
+    description: (n) => `需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。公开仓库 ${n} 个。`,
     note: (n) => `这一页并列了 ${n} 个公开仓库。每个图版都取自项目本身：站点的画面、命令的输出，或 README 的摘要。`,
     labels: {
       prev: "上一个", next: "下一个", index: "总览", close: "关闭", unit: " 个",
