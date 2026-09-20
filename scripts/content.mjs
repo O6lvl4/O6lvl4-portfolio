@@ -239,7 +239,7 @@ const content = {
   },
   links: [
     { label: "GitHub", href: "https://github.com/O6lvl4" },
-    { label: "Almide", href: "https://almide.github.io/docs/" },
+    { label: "X", href: "https://x.com/O6lvl4" },
   ],
   langs: LANGS.map((l) => ({ label: l.label, href: l.id === lang ? "" : `../${l.id}/` })),
   labels: t.labels,
