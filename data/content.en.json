@@ -25,8 +25,8 @@
    "href": "https://github.com/O6lvl4"
   },
   {
-   "label": "Almide",
-   "href": "https://almide.github.io/docs/"
+   "label": "X",
+   "href": "https://x.com/O6lvl4"
   }
  ],
  "langs": [
@@ -226,7 +226,7 @@
     "label": "Repositories"
    },
    {
-    "value": "14,229",
+    "value": "14,247",
     "label": "Commits"
    },
    {
@@ -362,7 +362,7 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11160,
+    "count": 11178,
     "of": 28
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13528
+    "count": 13546
    }
   ]
  },
@@ -426,7 +426,7 @@
      "label": "Repositories"
     },
     {
-     "value": "11,066",
+     "value": "11,074",
      "label": "Commits"
     },
     {
@@ -441,7 +441,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11066
+     "count": 11074
     }
    ],
    "works": [
@@ -471,7 +471,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "8,897"
+       "value": "8,903"
       },
       {
        "label": "Started",
@@ -518,7 +518,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,441"
+       "value": "1,443"
       },
       {
        "label": "Started",
@@ -1534,7 +1534,7 @@
      "label": "Repositories"
     },
     {
-     "value": "793",
+     "value": "803",
      "label": "Commits"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 777
+     "count": 787
     }
    ],
    "works": [
@@ -1583,7 +1583,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "104"
+       "value": "114"
       },
       {
        "label": "Started",

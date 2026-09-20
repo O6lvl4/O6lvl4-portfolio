@@ -3143,9 +3143,9 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 8897,
+  "commits": 8903,
   "years": {
-   "2026": 8897
+   "2026": 8903
   },
   "first": "2026-03-07",
   "last": "2026-09-20",
@@ -3181,9 +3181,9 @@
    "Rust"
   ],
   "stars": 2,
-  "commits": 104,
+  "commits": 114,
   "years": {
-   "2026": 104
+   "2026": 114
   },
   "first": "2026-04-07",
   "last": "2026-09-20",
@@ -3205,7 +3205,7 @@
    "lang": "bash",
    "code": "bash scripts/install-almide.sh\n.tools/almide/almide build src/mod.almd -o target/porta\ncp target/porta ~/.local/bin/"
   },
-  "score": 21.1
+  "score": 21.3
  },
  {
   "full": "almide/als",
@@ -3221,9 +3221,9 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 1441,
+  "commits": 1443,
   "years": {
-   "2026": 1441
+   "2026": 1443
   },
   "first": "2026-03-07",
   "last": "2026-09-20",
