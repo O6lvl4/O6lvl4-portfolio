@@ -21,15 +21,15 @@ process.stdout.write(`<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>O6lvl4</title>
-<meta name="description" content="Public work under O6lvl4, Aid-On, almide and the almide-* orgs.">
+<meta name="description" content="${esc(content.description)}">
 <link rel="canonical" href="${esc(content.baseUrl)}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:title" content="${esc(content.artist.role)} | O6lvl4">
-<meta property="og:description" content="${esc(content.home.lead)}">
+<meta property="og:description" content="${esc(content.description)}">
 <meta property="og:url" content="${esc(new URL('../', content.baseUrl).href)}">
-<meta property="og:image" content="${esc(new URL('share/og.en.jpg', content.baseUrl).href)}">
+<meta property="og:image" content="${esc(new URL(`share/${content.share.image}`, content.baseUrl).href)}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="${esc(content.share.alt)}">
