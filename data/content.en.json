@@ -226,7 +226,7 @@
     "label": "Repositories"
    },
    {
-    "value": "14,254",
+    "value": "14,259",
     "label": "Commits"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11157,
+    "count": 11160,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 1969,
+    "count": 1971,
     "of": 113
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13544
+    "count": 13549
    }
   ]
  },
@@ -1565,7 +1565,7 @@
      "label": "Repositories"
     },
     {
-     "value": "788",
+     "value": "791",
      "label": "Commits"
     },
     {
@@ -1584,7 +1584,7 @@
     },
     {
      "name": "2026",
-     "count": 772
+     "count": 775
     }
    ],
    "works": [
@@ -1614,7 +1614,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "99"
+       "value": "102"
       },
       {
        "label": "Started",
@@ -7656,7 +7656,7 @@
      "label": "Repositories"
     },
     {
-     "value": "216",
+     "value": "218",
      "label": "Commits"
     },
     {
@@ -7675,7 +7675,7 @@
     },
     {
      "name": "2026",
-     "count": 183
+     "count": 185
     }
    ],
    "works": [
@@ -7971,7 +7971,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "18"
+       "value": "20"
       },
       {
        "label": "Started",
@@ -8066,39 +8066,6 @@
      ],
      "order": {
       "date": "2026-08-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/keiri",
-     "title": "keiri",
-     "titleEn": "Go CLI that keeps receipts and bookkeeping documents tidy: naming, gaps and filing.",
-     "date": "Jun 2026",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/keiri",
-     "tags": [
-      "Go",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "6"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/keiri"
-      }
-     ],
-     "order": {
-      "date": "2026-06-22"
      }
     },
     {
@@ -8366,6 +8333,39 @@
      ],
      "order": {
       "date": "2026-04-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/keiri",
+     "title": "keiri",
+     "titleEn": "Go CLI that keeps receipts and bookkeeping documents tidy: naming, gaps and filing.",
+     "date": "Jun 2026",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/keiri",
+     "tags": [
+      "Go",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/keiri"
+      }
+     ],
+     "order": {
+      "date": "2026-06-22"
      }
     },
     {

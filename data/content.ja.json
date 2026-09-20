@@ -226,7 +226,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "14,254",
+    "value": "14,259",
     "label": "コミット"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11157,
+    "count": 11160,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 1969,
+    "count": 1971,
     "of": 113
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13544
+    "count": 13549
    }
   ]
  },
@@ -1565,7 +1565,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "788",
+     "value": "791",
      "label": "コミット"
     },
     {
@@ -1584,7 +1584,7 @@
     },
     {
      "name": "2026",
-     "count": 772
+     "count": 775
     }
    ],
    "works": [
@@ -1614,7 +1614,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "99"
+       "value": "102"
       },
       {
        "label": "初回",
@@ -7656,7 +7656,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "216",
+     "value": "218",
      "label": "コミット"
     },
     {
@@ -7675,7 +7675,7 @@
     },
     {
      "name": "2026",
-     "count": 183
+     "count": 185
     }
    ],
    "works": [
@@ -7971,7 +7971,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "18"
+       "value": "20"
       },
       {
        "label": "初回",
@@ -8066,39 +8066,6 @@
      ],
      "order": {
       "date": "2026-08-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/keiri",
-     "title": "keiri",
-     "titleEn": "領収書など経理書類の命名と抜けを整えるGo製CLI",
-     "date": "2026年6月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/keiri",
-     "tags": [
-      "Go",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "6"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/keiri"
-      }
-     ],
-     "order": {
-      "date": "2026-06-22"
      }
     },
     {
@@ -8366,6 +8333,39 @@
      ],
      "order": {
       "date": "2026-04-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/keiri",
+     "title": "keiri",
+     "titleEn": "領収書など経理書類の命名と抜けを整えるGo製CLI",
+     "date": "2026年6月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/keiri",
+     "tags": [
+      "Go",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/keiri"
+      }
+     ],
+     "order": {
+      "date": "2026-06-22"
      }
     },
     {

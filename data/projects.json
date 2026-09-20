@@ -1293,9 +1293,9 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 18,
+  "commits": 20,
   "years": {
-   "2026": 18
+   "2026": 20
   },
   "first": "2026-09-19",
   "last": "2026-09-20",
@@ -1585,34 +1585,6 @@
   "sample": {
    "lang": "bash",
    "code": "# Go 側 (go.mod が go 1.27rc2 を指しているので、Go 1.21+ ならツールチェーンが自動取得される)\ngo run ./01-generic-methods\n\n# almide 側 (https://github.com/almide/almide)\nalmide run 01-generic-methods/main.almd\n\n# 全部まとめて\n./demo.sh"
-  },
-  "score": 5.1
- },
- {
-  "full": "O6lvl4/keiri",
-  "owner": "O6lvl4",
-  "name": "keiri",
-  "url": "https://github.com/O6lvl4/keiri",
-  "lead": "Bookkeeping document hygiene CLI (receipts lint, inventory, gap detection, ingest, view)",
-  "heading": "keiri",
-  "language": "Go",
-  "languages": [
-   "Go",
-   "HTML"
-  ],
-  "stars": 0,
-  "commits": 6,
-  "years": {
-   "2026": 6
-  },
-  "first": "2026-05-01",
-  "last": "2026-06-22",
-  "license": "MIT",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "go install github.com/O6lvl4/keiri/cmd/keiri@latest"
   },
   "score": 5.1
  },
@@ -2125,6 +2097,34 @@
   "sample": {
    "lang": "bash",
    "code": "# latest on the default branch\nnpm install github:O6lvl4/image-catalog-composer\n# shorthand works too\nnpm install O6lvl4/image-catalog-composer\n\n# pin to a tag or commit\nnpm install O6lvl4/image-catalog-composer#v0.1.0\nnpm install O6lvl4/image-catalog-composer#main\n\n# yarn / pnpm\nyarn add O6lvl4/image-catalog-composer\npnpm add O6lvl4/image-catalog-composer\n\n# run once without installing\nnpx github:O6lvl4/image-catalog-composer <inputs...> -o out.png"
+  },
+  "score": 3.1
+ },
+ {
+  "full": "O6lvl4/keiri",
+  "owner": "O6lvl4",
+  "name": "keiri",
+  "url": "https://github.com/O6lvl4/keiri",
+  "lead": "Bookkeeping document hygiene CLI (receipts lint, inventory, gap detection, ingest, view)",
+  "heading": "keiri",
+  "language": "Go",
+  "languages": [
+   "Go",
+   "HTML"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-05-01",
+  "last": "2026-06-22",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "go install github.com/O6lvl4/keiri/cmd/keiri@latest"
   },
   "score": 3.1
  },
@@ -3238,9 +3238,9 @@
    "Rust"
   ],
   "stars": 2,
-  "commits": 99,
+  "commits": 102,
   "years": {
-   "2026": 99
+   "2026": 102
   },
   "first": "2026-04-07",
   "last": "2026-09-20",

@@ -226,7 +226,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "14,254",
+    "value": "14,259",
     "label": "提交"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11157,
+    "count": 11160,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 1969,
+    "count": 1971,
     "of": 113
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13544
+    "count": 13549
    }
   ]
  },
@@ -1565,7 +1565,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "788",
+     "value": "791",
      "label": "提交"
     },
     {
@@ -1584,7 +1584,7 @@
     },
     {
      "name": "2026",
-     "count": 772
+     "count": 775
     }
    ],
    "works": [
@@ -1614,7 +1614,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "99"
+       "value": "102"
       },
       {
        "label": "首次",
@@ -7656,7 +7656,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "216",
+     "value": "218",
      "label": "提交"
     },
     {
@@ -7675,7 +7675,7 @@
     },
     {
      "name": "2026",
-     "count": 183
+     "count": 185
     }
    ],
    "works": [
@@ -7971,7 +7971,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "18"
+       "value": "20"
       },
       {
        "label": "首次",
@@ -8066,39 +8066,6 @@
      ],
      "order": {
       "date": "2026-08-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/keiri",
-     "title": "keiri",
-     "titleEn": "整理收据等记账文件的Go命令行工具",
-     "date": "2026年6月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/keiri",
-     "tags": [
-      "Go",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "6"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/keiri"
-      }
-     ],
-     "order": {
-      "date": "2026-06-22"
      }
     },
     {
@@ -8366,6 +8333,39 @@
      ],
      "order": {
       "date": "2026-04-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/keiri",
+     "title": "keiri",
+     "titleEn": "整理收据等记账文件的Go命令行工具",
+     "date": "2026年6月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/keiri",
+     "tags": [
+      "Go",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/keiri"
+      }
+     ],
+     "order": {
+      "date": "2026-06-22"
      }
     },
     {
