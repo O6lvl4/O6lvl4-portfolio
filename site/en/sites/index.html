@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1738,7 +1747,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">almide-headset-eq</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
           </div>
           <p class="repo-desc">Parametric EQ of cascaded RBJ biquads in Almide, correcting the CYBER CY-P5GMWHS headset&#39;s sound</p>
           <ul class="repo-topics"><li class="repo-topic">Almide</li></ul>
@@ -1746,7 +1754,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-06-19">Jun 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="TypeScript" data-name="chip-war-chronicle" data-date="2026-09-15" data-commits="42" data-rank="1">
@@ -1755,7 +1766,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">chip-war-chronicle</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">Swimlane timeline of semiconductors and world affairs, 2018–2026, with sourced events and causal links.</p>
           <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li></ul>
@@ -1763,7 +1773,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">42<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-15">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="o6lvl4-webnight-miyazaki-20260703-slide" data-date="2026-07-06" data-commits="27" data-rank="2">
@@ -1772,7 +1785,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">O6lvl4-webnight-miyazaki-20260703-slide</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
           </div>
           <p class="repo-desc">Talk slides on the state of WebAssembly, seen through the Almide language, for Webナイト宮崎</p>
           
@@ -1780,7 +1792,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">27<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-07-06">Jul 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="agent-bench-matrix" data-date="2026-09-14" data-commits="9" data-rank="3">
@@ -1789,7 +1804,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">agent-bench-matrix</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
           </div>
           <p class="repo-desc">A single table gathering public agent-benchmark leaderboards by model, with every number sourced.</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Almide</li></ul>
@@ -1797,7 +1811,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">9<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-14">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="JavaScript" data-name="hokusai-portfolio" data-date="2026-09-18" data-commits="2" data-rank="4">
@@ -1806,7 +1823,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">hokusai-portfolio</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">Sample portfolio site for a Japanese artist, built from 64 Hokusai landscape prints (The Met Open Access)</p>
           <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">HTML</li><li class="repo-topic">github-pages</li></ul>
@@ -1814,7 +1830,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="TypeScript" data-name="environment-health-viewer" data-date="2026-04-23" data-commits="10" data-rank="5">
@@ -1823,7 +1842,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">environment-health-viewer</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">Static dashboard showing local health risks, JMA warnings, weather and sun cycle on one screen</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
@@ -1831,7 +1849,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">10<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-04-23">Apr 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="TypeScript" data-name="gulp-coach" data-date="2026-04-24" data-commits="12" data-rank="6">
@@ -1840,7 +1861,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gulp-coach</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">A fully local hydration coach that shows how much more you can drink or how long to wait, from your profile and recent intake.</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
@@ -1848,7 +1868,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">12<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-04-24">Apr 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="kotorody-portfolio" data-date="2026-05-18" data-commits="7" data-rank="7">
@@ -1857,7 +1880,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">kotorody-portfolio</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
           </div>
           <p class="repo-desc">Portfolio site of kotorody, a Frontend Engineer at Aid-On, written in HTML.</p>
           
@@ -1865,7 +1887,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-18">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="pitchy" data-date="2026-05-12" data-commits="2" data-rank="8">
@@ -1874,7 +1899,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">pitchy</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
           </div>
           <p class="repo-desc">Whistle pitch detection toolkit that shows matching chords, plus a whistle-controlled rhythm game</p>
           <ul class="repo-topics"><li class="repo-topic">Rust</li></ul>
@@ -1882,7 +1906,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-12">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="TypeScript" data-name="tabi-navi" data-date="2026-06-11" data-commits="1" data-rank="9">
@@ -1891,7 +1918,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">tabi-navi</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">CLI that finds the cheapest flight×hotel combos for trip constraints and compares variants.</p>
           
@@ -1899,7 +1925,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="JavaScript" data-name="aid-on-contract-generator" data-date="2025-06-29" data-commits="2" data-rank="10">
@@ -1908,7 +1937,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">aid-on-contract-generator</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">A pure HTML/CSS/JavaScript web app that generates contracts entirely in the browser, with no build step.</p>
           <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">HTML</li></ul>
@@ -1916,7 +1944,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2025-06-29">Jun 2025</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="Python" data-name="aid-on-tax-calculator" data-date="2025-03-06" data-commits="2" data-rank="11">
@@ -1925,7 +1956,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">aid-on-tax-calculator</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
           </div>
           <p class="repo-desc">A Python CLI script that converts between tax-inclusive and tax-exclusive prices under Japan&#39;s 10% consumption tax.</p>
           
@@ -1933,7 +1963,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2025-03-06">Mar 2025</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="HTML" data-name="aid-on-invoice-generator" data-date="2025-06-02" data-commits="4" data-rank="12">
@@ -1942,7 +1975,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">aid-on-invoice-generator</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
           </div>
           <p class="repo-desc">An invoice generator project; the README gives only the name, aid-on-invoice-generator</p>
           
@@ -1950,7 +1982,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2025-06-02">Jun 2025</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
 
+          </div>
         </div>
       </a>
     </li></ul>

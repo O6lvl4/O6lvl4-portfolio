@@ -3,7 +3,7 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/en/",
  "root": "..",
  "title": "O6lvl4",
- "description": "262 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs.",
+ "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it. 262 public repositories.",
  "share": {
   "image": "og.jpg",
   "alt": "O6lvl4 — Building developer tools, from the language up."
@@ -104,7 +104,7 @@
   "kicker": "262 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
   "note": "262 public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.",
-  "description": "262 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs."
+  "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it. 262 public repositories."
  },
  "landing": {
   "about": [
@@ -226,7 +226,7 @@
     "label": "Repositories"
    },
    {
-    "value": "14,247",
+    "value": "14,257",
     "label": "Commits"
    },
    {
@@ -362,7 +362,7 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11178,
+    "count": 11188,
     "of": 28
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13546
+    "count": 13556
    }
   ]
  },
@@ -1534,7 +1534,7 @@
      "label": "Repositories"
     },
     {
-     "value": "803",
+     "value": "813",
      "label": "Commits"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 787
+     "count": 797
     }
    ],
    "works": [
@@ -1576,14 +1576,14 @@
      "url": "https://github.com/almide/porta",
      "tags": [
       "Python",
-      "Almide",
       "Rust",
+      "Almide",
       "ai-agent"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "114"
+       "value": "124"
       },
       {
        "label": "Started",

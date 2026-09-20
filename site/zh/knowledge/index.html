@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1728,7 +1737,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">O6lvl4-knowledge</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">基于Obsidian和Git LFS的知识库及图谱查看器</p>
           <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li></ul>
@@ -1736,7 +1744,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">275<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-08-22">2026年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="knowledge" data-lang="TypeScript" data-name="memre" data-date="2026-04-27" data-commits="20" data-rank="1">
@@ -1745,7 +1756,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">memre</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">AI驱动的macOS原生间隔重复闪卡应用</p>
           <ul class="repo-topics"><li class="repo-topic">Go</li><li class="repo-topic">CSS</li><li class="repo-topic">anthropic</li></ul>
@@ -1753,7 +1763,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">20<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-04-27">2026年4月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="knowledge" data-lang="Almide" data-name="awen" data-date="2026-05-04" data-commits="11" data-rank="2">
@@ -1762,7 +1775,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">awen</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">基于SM-2间隔重复的Markdown笔记记忆CLI</p>
           
@@ -1770,7 +1782,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">11<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-05-04">2026年5月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="knowledge" data-lang="CSS" data-name="graph-garden" data-date="2026-06-01" data-commits="21" data-rank="3">
@@ -1779,7 +1794,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">graph-garden</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
           </div>
           <p class="repo-desc">将Markdown库转为静态知识库的Astro集成</p>
           <ul class="repo-topics"><li class="repo-topic">TypeScript</li></ul>
@@ -1787,7 +1801,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">21<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-06-01">2026年6月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
 
+          </div>
         </div>
       </a>
     </li></ul>

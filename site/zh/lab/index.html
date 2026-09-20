@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1747,7 +1756,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">line-bot-private</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
           </div>
           <p class="repo-desc">基于AWS SAM的Go语言Lambda函数示例模板</p>
           
@@ -1755,7 +1763,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">6<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2022-10-30">2022年10月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Almide" data-name="almide-otel-demo" data-date="2026-08-04" data-commits="13" data-rank="1">
@@ -1764,7 +1775,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">almide-otel-demo</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">纯Almide自研的OpenTelemetry追踪SDK及Jaeger双服务演示</p>
           
@@ -1772,7 +1782,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">13<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-08-04">2026年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="go1.26-vs-go1.27" data-date="2026-07-31" data-commits="8" data-rank="2">
@@ -1781,7 +1794,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">go1.26-vs-go1.27</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
           </div>
           <p class="repo-desc">并列对比Go 1.26与1.27写法的可运行示例</p>
           <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
@@ -1789,7 +1801,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">8<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-07-31">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="go1.27-vs-almide" data-date="2026-07-31" data-commits="4" data-rank="3">
@@ -1798,7 +1813,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">go1.27-vs-almide</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
           </div>
           <p class="repo-desc">对比Go 1.27新特性与almide 0.41的勉强会笔记</p>
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
@@ -1806,7 +1820,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-07-31">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="almide-audio-poc" data-date="2026-07-25" data-commits="2" data-rank="4">
@@ -1815,7 +1832,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">almide-audio-poc</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">在AudioWorklet中运行Almide WASM的加法合成最小演示</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">Almide</li></ul>
@@ -1823,7 +1839,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-07-25">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="aid-on-js-training" data-date="2025-08-28" data-commits="122" data-rank="5">
@@ -1832,7 +1851,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">aid-on-js-training</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">带测试的JavaScript入门习题集</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
@@ -1840,7 +1858,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">122<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-08-28">2025年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Swift" data-name="sandbox-ios-app" data-date="2025-10-12" data-commits="2" data-rank="6">
@@ -1849,7 +1870,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sandbox-ios-app</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</span>
           </div>
           <p class="repo-desc">带自动化CI/CD的SwiftUI iOS应用模板</p>
           
@@ -1857,7 +1877,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-10-12">2025年10月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="next-pet-diary" data-date="2025-08-31" data-commits="25" data-rank="7">
@@ -1866,7 +1889,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">next-pet-diary</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">用create-next-app创建的Next.js项目</p>
           <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li></ul>
@@ -1874,7 +1896,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">25<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-08-31">2025年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Lua" data-name="cct-fennel-sandbox" data-date="2025-09-16" data-commits="17" data-rank="8">
@@ -1883,7 +1908,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">cct-fennel-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</span>
           </div>
           <p class="repo-desc">面向CC:Tweaked的Fennel项目模板</p>
           
@@ -1891,7 +1915,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">17<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-09-16">2025年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Dart" data-name="stock-counter-app" data-date="2022-03-13" data-commits="14" data-rank="9">
@@ -1900,7 +1927,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">stock-counter-app</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00b4ab;width:5px;height:5px" aria-hidden="true"></span>Dart</span>
           </div>
           <p class="repo-desc">名为stock_counter_app的Flutter初始项目</p>
           <ul class="repo-topics"><li class="repo-topic">C++</li><li class="repo-topic">C</li></ul>
@@ -1908,7 +1934,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">14<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2022-03-13">2022年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00b4ab;width:5px;height:5px" aria-hidden="true"></span>Dart</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="CSS" data-name="sandbox-next-ghpage" data-date="2023-11-18" data-commits="8" data-rank="10">
@@ -1917,7 +1946,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sandbox-next-ghpage</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
           </div>
           <p class="repo-desc">演示将Next.js应用部署到GitHub Pages的步骤</p>
           <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">JavaScript</li></ul>
@@ -1925,7 +1953,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">8<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2023-11-18">2023年11月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="line-bot-sandbox" data-date="2022-10-01" data-commits="4" data-rank="11">
@@ -1934,7 +1965,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">line-bot-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
           </div>
           <p class="repo-desc">基于AWS SAM的Go语言Lambda函数示例模板</p>
           
@@ -1942,7 +1972,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2022-10-01">2022年10月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Makefile" data-name="sandbox-gcp" data-date="2023-11-19" data-commits="5" data-rank="12">
@@ -1951,7 +1984,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sandbox-gcp</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Makefile</span>
           </div>
           <p class="repo-desc">使用Terraform在GCP上构建环境的手册</p>
           
@@ -1959,7 +1991,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2023-11-19">2023年11月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Makefile</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="sandbox-golang-cli" data-date="2024-02-05" data-commits="3" data-rank="13">
@@ -1968,7 +2003,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sandbox-golang-cli</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
           </div>
           <p class="repo-desc">使用Cobra库构建的Go命令行应用</p>
           
@@ -1976,7 +2010,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2024-02-05">2024年2月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="sandbox-next-firebase-app-hosting-line-auth" data-date="2025-08-23" data-commits="5" data-rank="14">
@@ -1985,7 +2022,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sandbox-next-firebase-app-hosting-line-auth</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">基于CDKTF的Next.js LINE登录Firebase参考架构</p>
           <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">CSS</li></ul>
@@ -1993,7 +2029,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-08-23">2025年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="sandbox-next-ts-gh-page" data-date="2025-04-11" data-commits="3" data-rank="15">
@@ -2002,7 +2041,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sandbox-next-ts-gh-page</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">用create-next-app创建的Next.js项目</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">CSS</li></ul>
@@ -2010,7 +2048,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-04-11">2025年4月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="ts-react-tailwindcss-sandbox" data-date="2024-09-11" data-commits="5" data-rank="16">
@@ -2019,7 +2060,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">ts-react-tailwindcss-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">用React和Tailwind CSS演示响应式设计的示例</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Shell</li></ul>
@@ -2027,7 +2067,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2024-09-11">2024年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="ts-tsnode-sandbox" data-date="2024-09-13" data-commits="7" data-rank="17">
@@ -2036,7 +2079,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">ts-tsnode-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">演示用TypeScript和ts-node开发Node.js应用的项目</p>
           <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
@@ -2044,7 +2086,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">7<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2024-09-13">2024年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="tz-clocks" data-date="2023-06-21" data-commits="3" data-rank="18">
@@ -2053,7 +2098,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">tz-clocks</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">基于Create React App的React应用，README未说明具体功能</p>
           <ul class="repo-topics"><li class="repo-topic">CSS</li></ul>
@@ -2061,7 +2105,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2023-06-21">2023年6月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Python" data-name="aws-py-s3-sandbox" data-date="2022-03-10" data-commits="2" data-rank="19">
@@ -2070,7 +2117,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">aws-py-s3-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
           </div>
           <p class="repo-desc">用SAM CLI部署的Python无服务器示例应用</p>
           
@@ -2078,7 +2124,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2022-03-10">2022年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Lua" data-name="cctweaked-fennel-landfill" data-date="2025-10-25" data-commits="42" data-rank="20">
@@ -2087,7 +2136,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">cctweaked-fennel-landfill</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</span>
           </div>
           <p class="repo-desc">用于末影海龟的自动填埋整地系统</p>
           
@@ -2095,7 +2143,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">42<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-10-25">2025年10月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#000080;width:5px;height:5px" aria-hidden="true"></span>Lua</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Swift" data-name="aichatpractice" data-date="2025-09-05" data-commits="8" data-rank="21">
@@ -2104,7 +2155,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">AIChatPractice</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</span>
           </div>
           <p class="repo-desc">名为AIChatPractice的Swift仓库,无README</p>
           
@@ -2112,7 +2162,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">8<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-09-05">2025年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f05138;width:5px;height:5px" aria-hidden="true"></span>Swift</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="golang-cp-solve-sandbox" data-date="2023-02-05" data-commits="4" data-rank="22">
@@ -2121,7 +2174,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">golang-cp-solve-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
           </div>
           <p class="repo-desc">无README；名称显示为Go竞赛编程解题沙盒</p>
           
@@ -2129,7 +2181,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2023-02-05">2023年2月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="golang-lib-lo-sandbox" data-date="2022-08-21" data-commits="3" data-rank="23">
@@ -2138,7 +2193,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">golang-lib-lo-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
           </div>
           <p class="repo-desc">无README,Go语言的lo库沙盒仓库</p>
           
@@ -2146,7 +2200,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2022-08-21">2022年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="CSS" data-name="golang-lib-vecty-sandbox" data-date="2022-09-04" data-commits="3" data-rank="24">
@@ -2155,7 +2212,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">golang-lib-vecty-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
           </div>
           <p class="repo-desc">用Go试验vecty库的沙盒仓库</p>
           <ul class="repo-topics"><li class="repo-topic">Go</li></ul>
@@ -2163,7 +2219,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2022-09-04">2022年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#563d7c;width:5px;height:5px" aria-hidden="true"></span>CSS</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="mastra-sandbox" data-date="2025-04-02" data-commits="3" data-rank="25">
@@ -2172,7 +2231,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mastra-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">名为mastra-sandbox的仓库，无README，用途未说明</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
@@ -2180,7 +2238,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-04-02">2025年4月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Rust" data-name="rust-cli-sandbox" data-date="2022-05-08" data-commits="5" data-rank="26">
@@ -2189,7 +2250,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">rust-cli-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">Rust编写的CLI实验沙盒仓库</p>
           
@@ -2197,7 +2257,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2022-05-08">2022年5月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="reporting-page-by-calendar-days" data-date="2025-02-02" data-commits="4" data-rank="27">
@@ -2206,7 +2269,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">reporting-page-by-calendar-days</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">按日历日期生成报告页面的JS/HTML项目</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
@@ -2214,7 +2276,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-02-02">2025年2月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="reporting-page-by-working-days" data-date="2025-02-02" data-commits="3" data-rank="28">
@@ -2223,7 +2288,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">reporting-page-by-working-days</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">按工作日生成报告的网页</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
@@ -2231,7 +2295,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-02-02">2025年2月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="Go" data-name="ebitengine-sandbox" data-date="2023-03-10" data-commits="2" data-rank="29">
@@ -2240,7 +2307,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">ebitengine-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
           </div>
           <p class="repo-desc">无README，使用Go的Ebitengine沙盒</p>
           
@@ -2248,7 +2314,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2023-03-10">2023年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="langchain-translate-chain" data-date="2024-04-05" data-commits="1" data-rank="30">
@@ -2257,7 +2326,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">langchain-translate-chain</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">无 README 的 TypeScript 仓库,用途未说明</p>
           
@@ -2265,7 +2333,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2024-04-05">2024年4月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="TypeScript" data-name="react-native-ts-boilerplate" data-date="2022-03-26" data-commits="2" data-rank="31">
@@ -2274,7 +2345,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">react-native-ts-boilerplate</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">React Native的TypeScript样板项目</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">C</li></ul>
@@ -2282,7 +2352,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2022-03-26">2022年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="sam-swagger-api-sandbox" data-date="2022-02-25" data-commits="2" data-rank="32">
@@ -2291,7 +2364,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sam-swagger-api-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">结合AWS SAM与OpenAPI的沙盒项目</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Ruby</li></ul>
@@ -2299,7 +2371,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2022-02-25">2022年2月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-chatgpt-talk" data-date="" data-commits="0" data-rank="33">
@@ -2308,7 +2383,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sandbox-chatgpt-talk</span>
             <span class="repo-org-tag">O6lvl4</span>
-            
           </div>
           <p class="repo-desc">沙盒仓库,无README,用途未说明</p>
           
@@ -2316,7 +2390,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">0<span class="repo-meta-unit"> 提交</span></span>
           
+          <div class="repo-foot">
+            
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-discord-bot" data-date="2024-02-03" data-commits="1" data-rank="34">
@@ -2325,7 +2402,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sandbox-discord-bot</span>
             <span class="repo-org-tag">O6lvl4</span>
-            
           </div>
           <p class="repo-desc">Discord 机器人的沙盒仓库</p>
           
@@ -2333,7 +2409,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2024-02-03">2024年2月</time>
+          <div class="repo-foot">
+            
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="" data-name="sandbox-langchaingo" data-date="2024-02-02" data-commits="1" data-rank="35">
@@ -2342,7 +2421,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sandbox-langchaingo</span>
             <span class="repo-org-tag">O6lvl4</span>
-            
           </div>
           <p class="repo-desc">用于试验langchaingo的沙盒仓库</p>
           
@@ -2350,7 +2428,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2024-02-02">2024年2月</time>
+          <div class="repo-foot">
+            
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="HTML" data-name="tyrano-sandbox" data-date="2025-03-03" data-commits="2" data-rank="36">
@@ -2359,7 +2440,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">tyrano-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
           </div>
           <p class="repo-desc">Tyrano 相关的试验沙盒，无 README</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">CSS</li></ul>
@@ -2367,7 +2447,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-03-03">2025年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
 
+          </div>
         </div>
       </a>
     </li></ul>

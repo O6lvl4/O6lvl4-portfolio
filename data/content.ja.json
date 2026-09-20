@@ -3,7 +3,7 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/ja/",
  "root": "..",
  "title": "O6lvl4",
- "description": "O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ 262 件。言語 Almide とその周りの道具、エージェント、LLM の土台。",
+ "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。公開リポジトリ 262 件。",
  "share": {
   "image": "og.jpg",
   "alt": "O6lvl4 — 開発の道具を、言語からつくる。"
@@ -104,7 +104,7 @@
   "kicker": "公開リポジトリ 262 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
   "note": "公開リポジトリ 262 件を並べた頁です。各プロジェクトの図版は、そのサイトの画面・コマンドの出力・README の要約から作りました。",
-  "description": "O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ 262 件。言語 Almide とその周りの道具、エージェント、LLM の土台。"
+  "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。公開リポジトリ 262 件。"
  },
  "landing": {
   "about": [
@@ -226,7 +226,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "14,247",
+    "value": "14,257",
     "label": "コミット"
    },
    {
@@ -362,7 +362,7 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11178,
+    "count": 11188,
     "of": 28
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13546
+    "count": 13556
    }
   ]
  },
@@ -1534,7 +1534,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "803",
+     "value": "813",
      "label": "コミット"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 787
+     "count": 797
     }
    ],
    "works": [
@@ -1576,14 +1576,14 @@
      "url": "https://github.com/almide/porta",
      "tags": [
       "Python",
-      "Almide",
       "Rust",
+      "Almide",
       "ai-agent"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "114"
+       "value": "124"
       },
       {
        "label": "初回",

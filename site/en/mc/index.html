@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1738,7 +1747,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-protocol</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Minecraft protocol implementation in Almide: TCP, packet framing, encryption, compression</p>
           
@@ -1746,7 +1754,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">15<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-23">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-cli" data-date="2026-05-23" data-commits="5" data-rank="1">
@@ -1755,7 +1766,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-bot-cli</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A command-line interface for the Almide Minecraft bot, written in Almide.</p>
           
@@ -1763,7 +1773,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-23">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="JavaScript" data-name="mine-rabbit-bots" data-date="2025-11-21" data-commits="79" data-rank="2">
@@ -1772,7 +1785,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mine-rabbit-bots</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">A sandbox, separate from Craftsman, for testing a Mineflyer bot and config on a Paper server</p>
           <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">Shell</li></ul>
@@ -1780,7 +1792,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">79<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2025-11-21">Nov 2025</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="TypeScript" data-name="craftsman" data-date="2025-10-14" data-commits="16" data-rank="3">
@@ -1789,7 +1804,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">craftsman</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">A minimal, fail-safe CLI (TypeScript + Ink) for managing Minecraft servers on Docker, per Pak.</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
@@ -1797,7 +1811,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">16<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2025-10-14">Oct 2025</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot" data-date="2026-05-23" data-commits="9" data-rank="4">
@@ -1806,7 +1823,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-bot</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Minecraft bot framework in Almide handling authentication, login, NeoForge handshake and keep alive</p>
           
@@ -1814,7 +1830,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">9<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-23">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-auth" data-date="2026-05-23" data-commits="4" data-rank="5">
@@ -1823,7 +1842,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-auth</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Minecraft auth module for the Almide language, installed as a git dependency</p>
           
@@ -1831,7 +1849,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-23">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-block" data-date="2026-05-24" data-commits="4" data-rank="6">
@@ -1840,7 +1861,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-block</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A Minecraft block module for the Almide programming language.</p>
           
@@ -1848,7 +1868,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-bot-ai" data-date="2026-05-25" data-commits="3" data-rank="7">
@@ -1857,7 +1880,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-bot-ai</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">AI integration layer for Minecraft bots, covering Phase 5 Intelligence with almai</p>
           
@@ -1865,7 +1887,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-25">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chat" data-date="2026-05-24" data-commits="5" data-rank="8">
@@ -1874,7 +1899,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-chat</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A Minecraft chat module for the Almide language, installed as a git dependency.</p>
           
@@ -1882,7 +1906,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-chunk" data-date="2026-05-24" data-commits="4" data-rank="9">
@@ -1891,7 +1918,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-chunk</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A Minecraft chunk module for the Almide language, installed as a git dependency.</p>
           
@@ -1899,7 +1925,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-entity" data-date="2026-05-24" data-commits="4" data-rank="10">
@@ -1908,7 +1937,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-entity</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A Minecraft entity module for the Almide language, installed as a git dependency.</p>
           
@@ -1916,7 +1944,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-item" data-date="2026-05-24" data-commits="4" data-rank="11">
@@ -1925,7 +1956,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-item</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A Minecraft item module for the Almide programming language.</p>
           
@@ -1933,7 +1963,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-nbt" data-date="2026-05-24" data-commits="5" data-rank="12">
@@ -1942,7 +1975,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-nbt</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A Minecraft NBT module for the Almide programming language.</p>
           
@@ -1950,7 +1982,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pathfinder" data-date="2026-05-24" data-commits="3" data-rank="13">
@@ -1959,7 +1994,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-pathfinder</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">An Almide implementation of mineflayer-pathfinder: A* pathfinding for Minecraft bots</p>
           
@@ -1967,7 +2001,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-registry" data-date="2026-05-23" data-commits="3" data-rank="14">
@@ -1976,7 +2013,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-registry</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A Minecraft registry module for the Almide language, installable as a git dependency.</p>
           
@@ -1984,7 +2020,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-23">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-world" data-date="2026-05-24" data-commits="4" data-rank="15">
@@ -1993,7 +2032,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-world</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A Minecraft world module for the Almide programming language.</p>
           
@@ -2001,7 +2039,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="neoforge" data-date="2026-05-23" data-commits="5" data-rank="16">
@@ -2010,7 +2051,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">neoforge</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A Minecraft neoforge module for the Almide language, installed as a git dependency.</p>
           
@@ -2018,7 +2058,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-23">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-collect" data-date="2026-05-24" data-commits="2" data-rank="17">
@@ -2027,7 +2070,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-collect</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Block collection automation for Minecraft bots, an Almide implementation of mineflayer-collectblock</p>
           
@@ -2035,7 +2077,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-data" data-date="2026-05-24" data-commits="1" data-rank="18">
@@ -2044,7 +2089,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-data</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Minecraft data definitions for Almide, covering blocks, entities and game modes</p>
           
@@ -2052,7 +2096,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-inventory" data-date="2026-05-24" data-commits="2" data-rank="19">
@@ -2061,7 +2108,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-inventory</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Inventory window management for Minecraft bots, an Almide implementation of prismarine-windows</p>
           
@@ -2069,7 +2115,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-physics" data-date="2026-05-24" data-commits="1" data-rank="20">
@@ -2078,7 +2127,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-physics</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Minecraft physics simulation library for Almide, equivalent to prismarine-physics.</p>
           
@@ -2086,7 +2134,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-proxy" data-date="2026-05-24" data-commits="2" data-rank="21">
@@ -2095,7 +2146,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-proxy</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Minecraft proxy foundation, an Almide implementation of prismarine-proxy.</p>
           
@@ -2103,7 +2153,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-pvp" data-date="2026-05-24" data-commits="2" data-rank="22">
@@ -2112,7 +2165,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-pvp</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">PvP combat utilities for Minecraft bots, an Almide implementation of mineflayer-pvp</p>
           
@@ -2120,7 +2172,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-recipe" data-date="2026-05-24" data-commits="1" data-rank="23">
@@ -2129,7 +2184,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-recipe</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Minecraft crafting recipes for Almide, an equivalent of prismarine-recipe.</p>
           
@@ -2137,7 +2191,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server" data-date="2026-05-24" data-commits="2" data-rank="24">
@@ -2146,7 +2203,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-server</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide implementation of node-minecraft-protocol&#39;s server mode, a Minecraft server protocol base</p>
           
@@ -2154,7 +2210,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="Almide" data-name="mc-server-impl" data-date="2026-05-24" data-commits="2" data-rank="25">
@@ -2163,7 +2222,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mc-server-impl</span>
             <span class="repo-org-tag">almd-mc</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A lightweight Minecraft server implementation, an Almide implementation of flying-squid</p>
           
@@ -2171,7 +2229,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-24">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li></ul>

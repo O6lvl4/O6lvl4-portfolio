@@ -3177,13 +3177,13 @@
   "language": "Python",
   "languages": [
    "Python",
-   "Almide",
-   "Rust"
+   "Rust",
+   "Almide"
   ],
   "stars": 2,
-  "commits": 114,
+  "commits": 124,
   "years": {
-   "2026": 114
+   "2026": 124
   },
   "first": "2026-04-07",
   "last": "2026-09-20",
@@ -3205,7 +3205,7 @@
    "lang": "bash",
    "code": "bash scripts/install-almide.sh\n.tools/almide/almide build src/mod.almd -o target/porta\ncp target/porta ~/.local/bin/"
   },
-  "score": 21.3
+  "score": 21.5
  },
  {
   "full": "almide/als",

@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1728,7 +1737,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">nendo</span>
             <span class="repo-org-tag">almide-graphics</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
           </div>
           <p class="repo-desc">用于检查、编辑和定制3D头像的工具包</p>
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Python</li></ul>
@@ -1736,7 +1744,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">95<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-07-27">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="nn" data-date="2026-06-28" data-commits="74" data-rank="1">
@@ -1745,7 +1756,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">nn</span>
             <span class="repo-org-tag">almide-graphics</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">基于matrix标准库的Almide Transformer与信号处理库</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Rust</li><li class="repo-topic">almide</li></ul>
@@ -1753,7 +1763,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">74<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-06-28">2026年6月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="graphics" data-lang="JavaScript" data-name="obsid" data-date="2026-07-25" data-commits="48" data-rank="2">
@@ -1762,7 +1775,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">obsid</span>
             <span class="repo-org-tag">almide-graphics</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">面向Almide的图形运行时，通过WASM支持2D、WebGL与3D</p>
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Rust</li><li class="repo-topic">3d</li></ul>
@@ -1770,7 +1782,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">48<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-07-25">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="lumen" data-date="2026-04-12" data-commits="2" data-rank="3">
@@ -1779,7 +1794,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">lumen</span>
             <span class="repo-org-tag">almide-graphics</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide的纯图形数学基础库</p>
           <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">graphics</li><li class="repo-topic">math</li></ul>
@@ -1787,7 +1801,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-04-12">2026年4月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="ceangal" data-date="2026-07-25" data-commits="72" data-rank="4">
@@ -1796,7 +1813,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">ceangal</span>
             <span class="repo-org-tag">almide-graphics</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">面向Almide的GPU原生UI框架</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
@@ -1804,7 +1820,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">72<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-07-25">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="cruth" data-date="2026-07-28" data-commits="2" data-rank="5">
@@ -1813,7 +1832,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">cruth</span>
             <span class="repo-org-tag">almide-graphics</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide的VRM/glTF角色层，含解析与表情</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
@@ -1821,7 +1839,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-07-28">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="ceangal-anime" data-date="2026-05-18" data-commits="6" data-rank="6">
@@ -1830,7 +1851,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">ceangal-anime</span>
             <span class="repo-org-tag">almide-graphics</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">受anime.js启发的Almide动画引擎</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li></ul>
@@ -1838,7 +1858,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">6<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-05-18">2026年5月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Rust" data-name="ceangal-native" data-date="2026-05-19" data-commits="5" data-rank="7">
@@ -1847,7 +1870,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">ceangal-native</span>
             <span class="repo-org-tag">almide-graphics</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">ceangal的原生wgpu后端概念验证</p>
           
@@ -1855,7 +1877,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-05-19">2026年5月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="graphics" data-lang="Almide" data-name="slabhra" data-date="2026-06-16" data-commits="7" data-rank="8">
@@ -1864,7 +1889,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">slabhra</span>
             <span class="repo-org-tag">almide-graphics</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide原生的可微编程库,含反向自动微分</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li></ul>
@@ -1872,7 +1896,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">7<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-06-16">2026年6月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li></ul>

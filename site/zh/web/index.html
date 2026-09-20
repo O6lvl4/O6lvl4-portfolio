@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1741,7 +1750,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">aid-on-ui-system</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">名为aid-on-ui-system2的UI系统仓库</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
@@ -1749,7 +1757,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">42<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-09-06">2026年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="nagare" data-date="2026-06-11" data-commits="22" data-rank="1">
@@ -1758,7 +1769,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">nagare</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">为边缘计算扩展ReadableStream的响应式流库</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">edge-computing</li><li class="repo-topic">readablestream</li></ul>
@@ -1766,7 +1776,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">22<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-06-11">2026年6月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="qwiks" data-date="2026-09-06" data-commits="8" data-rank="2">
@@ -1775,7 +1788,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">qwiks</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">将Nagare流桥接到Qwik Signal的钩子库</p>
           
@@ -1783,7 +1795,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">8<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-09-06">2026年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="outline-api-client-ts" data-date="2026-09-06" data-commits="7" data-rank="3">
@@ -1792,7 +1807,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">outline-api-client-ts</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">面向Outline知识库API的类型安全TypeScript客户端库</p>
           <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">CSS</li></ul>
@@ -1800,7 +1814,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">7<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-09-06">2026年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="design-system" data-date="2026-06-11" data-commits="8" data-rank="4">
@@ -1809,7 +1826,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">design-system</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">面向Qwik的类型安全颜色令牌与明暗主题库</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
@@ -1817,7 +1833,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">8<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-06-11">2026年6月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="didoq" data-date="2026-06-10" data-commits="8" data-rank="5">
@@ -1826,7 +1845,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">didoq</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">面向Cloudflare的流式API作业队列</p>
           <ul class="repo-topics"><li class="repo-topic">SQL</li><li class="repo-topic">JavaScript</li></ul>
@@ -1834,7 +1852,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">8<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-06-10">2026年6月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="auth" data-date="2026-06-11" data-commits="3" data-rank="6">
@@ -1843,7 +1864,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">auth</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">面向Cloudflare Workers的边缘原生认证库</p>
           
@@ -1851,7 +1871,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-06-11">2026年6月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="JavaScript" data-name="zod-to-markdown" data-date="2024-03-26" data-commits="6" data-rank="7">
@@ -1860,7 +1883,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">zod-to-markdown</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">将Zod模式转换为Markdown文档的工具函数</p>
           <ul class="repo-topics"><li class="repo-topic">TypeScript</li></ul>
@@ -1868,7 +1890,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">6<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2024-03-26">2024年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="auth-providers-ts" data-date="2025-08-23" data-commits="3" data-rank="8">
@@ -1877,7 +1902,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">auth-providers-ts</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">与框架无关的OAuth 2.0认证提供方库</p>
           
@@ -1885,7 +1909,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-08-23">2025年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="next-auth-providers" data-date="2025-08-23" data-commits="1" data-rank="9">
@@ -1894,7 +1921,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">next-auth-providers</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">Aid-On的NextAuth.js认证提供者,支持LINE登录</p>
           
@@ -1902,7 +1928,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2025-08-23">2025年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="JavaScript" data-name="aid-on-draft-ui" data-date="2024-09-01" data-commits="14" data-rank="10">
@@ -1911,7 +1940,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">aid-on-draft-ui</span>
             <span class="repo-org-tag">Aid-On</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">名为aid-on-draft-ui的项目，README无说明</p>
           <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li></ul>
@@ -1919,7 +1947,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">14<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2024-09-01">2024年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li></ul>

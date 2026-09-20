@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1681,15 +1690,15 @@ body::after {
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚃ</span>
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">25</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">803</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">6</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">Span</div></div></div>
+    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">25</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">813</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">6</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">Span</div></div></div>
     <div>
       <div class="timeline-sub">Commits by year</div>
-      <div class="timeline-chart few" role="img" aria-label="Timeline: 2025 16, 2026 787"><div class="tl-bar-wrap">
+      <div class="timeline-chart few" role="img" aria-label="Timeline: 2025 16, 2026 797"><div class="tl-bar-wrap">
         <span class="tl-count">16</span>
         <div class="tl-bar" style="height:2.0%" title="2025: 16"></div>
       </div><div class="tl-bar-wrap">
-        <span class="tl-count">787</span>
-        <div class="tl-bar current" style="height:100.0%" title="2026: 787"></div>
+        <span class="tl-count">797</span>
+        <div class="tl-bar current" style="height:100.0%" title="2026: 797"></div>
       </div></div>
       <div class="timeline-labels few" aria-hidden="true"><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
     </div>
@@ -1708,9 +1717,9 @@ body::after {
     </div>
     <h3 class="om-name">porta</h3>
     <p class="om-path">almide<span class="om-slash">/</span>porta</p>
-      <dl class="om-figures"><div class="om-fig"><dd class="om-fig-val">114</dd><dt class="om-fig-key">Commits</dt></div><div class="om-fig"><dd class="om-fig-val">Apr 2026</dd><dt class="om-fig-key">Started</dt></div><div class="om-fig"><dd class="om-fig-val">v0.4.0</dd><dt class="om-fig-key">Release</dt></div><div class="om-fig"><dd class="om-fig-val">2</dd><dt class="om-fig-key">Stars</dt></div></dl>
+      <dl class="om-figures"><div class="om-fig"><dd class="om-fig-val">124</dd><dt class="om-fig-key">Commits</dt></div><div class="om-fig"><dd class="om-fig-val">Apr 2026</dd><dt class="om-fig-key">Started</dt></div><div class="om-fig"><dd class="om-fig-val">v0.4.0</dd><dt class="om-fig-key">Release</dt></div><div class="om-fig"><dd class="om-fig-val">2</dd><dt class="om-fig-key">Stars</dt></div></dl>
       <p class="om-updated">Updated<span class="om-updated-val">Sep 2026</span></p>
-    <ul class="om-topics"><li class="repo-topic">Python</li><li class="repo-topic">Almide</li><li class="repo-topic">Rust</li><li class="repo-topic">ai-agent</li></ul>
+    <ul class="om-topics"><li class="repo-topic">Python</li><li class="repo-topic">Rust</li><li class="repo-topic">Almide</li><li class="repo-topic">ai-agent</li></ul>
     <div class="om-links"><a class="om-link" href="https://github.com/almide/porta" target="_blank" rel="noopener noreferrer">Repository</a></div>
     </div>
       <article class="readme-panel" aria-label="porta README">
@@ -1732,21 +1741,23 @@ body::after {
       <div class="sort-bar" role="group" aria-label="Sort"><button type="button" class="sort-btn active" data-sort="date" aria-pressed="true">Recent</button><button type="button" class="sort-btn" data-sort="commits" aria-pressed="false">Commits</button><button type="button" class="sort-btn" data-sort="format" aria-pressed="false">Language</button><button type="button" class="sort-btn" data-sort="name" aria-pressed="false">Name</button></div>
       <div class="lang-filter-list" role="group" aria-label="Language"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">All</button><button type="button" class="lang-chip" data-lang="Python" aria-pressed="false"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Go" aria-pressed="false"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button></div>
     </div>
-    <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="agent-tools" data-lang="Python" data-name="porta" data-date="2026-09-20" data-commits="114" data-rank="0">
+    <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="agent-tools" data-lang="Python" data-name="porta" data-date="2026-09-20" data-commits="124" data-rank="0">
       <a class="repo-row" href="https://github.com/almide/porta" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
             <span class="repo-name">porta</span>
             <span class="repo-org-tag">almide</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
           </div>
           <p class="repo-desc">A secure MCP bridge that restricts filesystem, network and command access for AI agents and native commands</p>
-          <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Rust</li><li class="repo-topic">ai-agent</li></ul>
+          <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Almide</li><li class="repo-topic">ai-agent</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">114<span class="repo-meta-unit"> Commits</span></span>
+          <span class="repo-stars">124<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-20">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="ccgrid" data-date="2026-02-17" data-commits="69" data-rank="1">
@@ -1755,7 +1766,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">ccgrid</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">Team development tool on Claude Agent SDK where a Lead agent runs Teammate agents in parallel.</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li><li class="repo-topic">agent-sdk</li></ul>
@@ -1763,7 +1773,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">69<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-02-17">Feb 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide" data-date="2026-09-18" data-commits="174" data-rank="2">
@@ -1772,7 +1785,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gramide</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Syntax-tree engine in Almide for coding agents: lexer, grammar-driven parser, readers, CLI library</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
@@ -1780,7 +1792,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">174<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Python" data-name="gramide-cli" data-date="2026-09-18" data-commits="136" data-rank="3">
@@ -1789,7 +1804,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gramide-cli</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
           </div>
           <p class="repo-desc">The gramide binary: syntax trees for coding agents, composing the engine and language packages.</p>
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
@@ -1797,7 +1811,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">136<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-almide" data-date="2026-09-18" data-commits="128" data-rank="4">
@@ -1806,7 +1823,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gramide-almide</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide package for gramide-cli: lexer spec, grammar, compiled table and symbol rules</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
@@ -1814,7 +1830,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">128<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-go" data-date="2026-09-18" data-commits="129" data-rank="5">
@@ -1823,7 +1842,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gramide-go</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide package giving gramide the Go lexer spec, grammar, compiled table and symbol rules</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">C</li></ul>
@@ -1831,7 +1849,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">129<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-python" data-date="2026-09-18" data-commits="131" data-rank="6">
@@ -1840,7 +1861,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gramide-python</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Python 3.14 support for gramide-cli: lexer, grammar, symbol rules and edit-time recovery, checked against CPython</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">C</li></ul>
@@ -1848,7 +1868,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">131<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-rust" data-date="2026-09-18" data-commits="130" data-rank="7">
@@ -1857,7 +1880,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gramide-rust</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide package giving gramide-cli its Rust lexer spec, grammar, compiled table and symbol rules</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
@@ -1865,7 +1887,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">130<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Rust" data-name="codopsy" data-date="2026-08-30" data-commits="47" data-rank="8">
@@ -1874,7 +1899,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">codopsy</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">AST-level code quality analyzer using tree-sitter for 35 languages, without executing code</p>
           <ul class="repo-topics"><li class="repo-topic">Lean</li><li class="repo-topic">Java</li><li class="repo-topic">cli</li></ul>
@@ -1882,7 +1906,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">47<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-08-30">Aug 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="hew" data-date="2026-09-18" data-commits="47" data-rank="9">
@@ -1891,7 +1918,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">hew</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
@@ -1899,7 +1925,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">47<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-javascript" data-date="2026-09-18" data-commits="31" data-rank="10">
@@ -1908,7 +1937,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gramide-javascript</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">JavaScript language package for gramide: scanner, grammar, table and symbol rules in Almide</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">C</li></ul>
@@ -1916,7 +1944,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">31<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide-typescript" data-date="2026-09-18" data-commits="24" data-rank="11">
@@ -1925,7 +1956,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gramide-typescript</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">TypeScript language package for gramide, checked against the TypeScript compiler&#39;s parser, in Almide</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">JavaScript</li></ul>
@@ -1933,7 +1963,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">24<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-18">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="onomly" data-date="2026-09-06" data-commits="15" data-rank="12">
@@ -1942,7 +1975,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">onomly</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Claude Code skill that runs due diligence on product-name candidates and returns a verdict report</p>
           <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">claude-code</li><li class="repo-topic">claude-skill</li></ul>
@@ -1950,7 +1982,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">15<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Go" data-name="ccp" data-date="2026-05-28" data-commits="5" data-rank="13">
@@ -1959,7 +1994,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">ccp</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
           </div>
           <p class="repo-desc">Claude Code profile switcher that overlays symlinks so settings stay shared by default</p>
           
@@ -1967,7 +2001,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-28">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#00add8;width:5px;height:5px" aria-hidden="true"></span>Go</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="treesrc" data-date="2025-04-01" data-commits="14" data-rank="14">
@@ -1976,7 +2013,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">treesrc</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">A TypeScript CLI that shows directory trees and file contents, respecting .gitignore rules</p>
           
@@ -1984,7 +2020,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">14<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2025-04-01">Apr 2025</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="golemide" data-date="2026-09-13" data-commits="48" data-rank="15">
@@ -1993,7 +2032,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">golemide</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A coding agent in Almide that observes a repo, edits with syntax checks, and re-runs tests.</p>
           <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li></ul>
@@ -2001,7 +2039,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">48<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-13">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="ctxgate" data-date="2026-09-17" data-commits="34" data-rank="16">
@@ -2010,7 +2051,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">ctxgate</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Context firewall for Claude Code and Codex CLI that vaults tool outputs and shows the model compressed views</p>
           <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Python</li></ul>
@@ -2018,7 +2058,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">34<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-17">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Python" data-name="assay" data-date="2026-09-13" data-commits="17" data-rank="17">
@@ -2027,7 +2070,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">assay</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
           </div>
           <p class="repo-desc">Stores coding-agent benchmark figures with their qualifiers intact, plus a harness to measure missing ones.</p>
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li></ul>
@@ -2035,7 +2077,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">17<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-13">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="emet" data-date="2026-09-13" data-commits="11" data-rank="18">
@@ -2044,7 +2089,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">emet</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">A citation gate that checks each claim&#39;s figures, quotes and names against its cited pages and exits 0 or 1.</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
@@ -2052,7 +2096,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">11<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-13">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="onetool" data-date="2026-09-03" data-commits="11" data-rank="19">
@@ -2061,7 +2108,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">onetool</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">A framework that fronts any API&#39;s operations with four generic MCP tools instead of one per endpoint</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
@@ -2069,7 +2115,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">11<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-03">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="codopsy-almd" data-date="2026-09-11" data-commits="4" data-rank="20">
@@ -2078,7 +2127,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">codopsy-almd</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">CLI that measures Almide code complexity from gramide&#39;s parse, skipping files not fully parsed</p>
           <ul class="repo-topics"><li class="repo-topic">Shell</li></ul>
@@ -2086,7 +2134,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-11">Sep 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="TypeScript" data-name="codopsy-ts" data-date="2026-02-24" data-commits="16" data-rank="21">
@@ -2095,7 +2146,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">codopsy-ts</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">Zero-config AST-level code quality analyzer for TypeScript and JavaScript, run from one CLI command</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">ast</li><li class="repo-topic">baseline</li></ul>
@@ -2103,7 +2153,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">16<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-02-24">Feb 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="" data-name="codopsy-ts-skill" data-date="2026-02-18" data-commits="9" data-rank="22">
@@ -2112,7 +2165,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">codopsy-ts-skill</span>
             <span class="repo-org-tag">O6lvl4</span>
-            
           </div>
           <p class="repo-desc">Claude Code plugin adding /codopsy to run codopsy-ts, score code quality and auto-fix issues</p>
           <ul class="repo-topics"><li class="repo-topic">claude-code</li><li class="repo-topic">claude-code-plugin</li><li class="repo-topic">claude-code-skill</li><li class="repo-topic">code-quality</li></ul>
@@ -2120,7 +2172,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">9<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-02-18">Feb 2026</time>
+          <div class="repo-foot">
+            
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Rust" data-name="imoduru" data-date="2026-05-09" data-commits="12" data-rank="23">
@@ -2129,7 +2184,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">imoduru</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">Recursive Rust + Playwright web crawler that serves collected text to AI agents via MCP</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
@@ -2137,7 +2191,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">12<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-05-09">May 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Shell" data-name="cdev" data-date="2025-08-25" data-commits="2" data-rank="24">
@@ -2146,7 +2203,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">cdev</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
           </div>
           <p class="repo-desc">A shell CLI that uses Claude Code&#39;s bypass permissions to build whole projects from a description.</p>
           
@@ -2154,7 +2210,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2025-08-25">Aug 2025</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</span>
 
+          </div>
         </div>
       </a>
     </li></ul>

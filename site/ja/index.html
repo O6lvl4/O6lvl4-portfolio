@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>O6lvl4</title>
-<meta name="description" content="O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ 262 件。言語 Almide とその周りの道具、エージェント、LLM の土台。">
+<meta name="description" content="必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。公開リポジトリ 262 件。">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/ja/">
 <meta property="og:title" content="O6lvl4">
-<meta property="og:description" content="O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ 262 件。言語 Almide とその周りの道具、エージェント、LLM の土台。">
+<meta property="og:description" content="必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。公開リポジトリ 262 件。">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/ja/share/og.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 開発の道具を、言語からつくる。">
 <meta name="twitter:card" content="summary_large_image">
@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1739,7 +1748,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">almide</span>
             <span class="repo-org-tag">言語</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">LLMによる編集後も動くコードを目指す静的型付け言語</p>
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
@@ -1747,7 +1755,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">8,903<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-09-20">2026年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="stdlib" data-lang="Almide" data-name="yaml" data-date="2026-05-22" data-commits="10" data-rank="1">
@@ -1756,7 +1767,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">yaml</span>
             <span class="repo-org-tag">標準ライブラリ</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide向けの純Almide製YAMLパーサ兼シリアライザ。Codec連携対応</p>
           <ul class="repo-topics"><li class="repo-topic">almide</li><li class="repo-topic">parser</li><li class="repo-topic">yaml</li></ul>
@@ -1764,7 +1774,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">10<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-05-22">2026年5月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="gramide" data-date="2026-09-18" data-commits="174" data-rank="2">
@@ -1773,7 +1786,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gramide</span>
             <span class="repo-org-tag">エージェントの道具</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide製の、コーディングエージェント向け構文木エンジン</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
@@ -1781,7 +1793,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">174<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-09-18">2026年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="bonsai-almide" data-date="2026-04-22" data-commits="35" data-rank="3">
@@ -1790,7 +1805,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">bonsai-almide</span>
             <span class="repo-org-tag">LLM の土台</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
@@ -1798,7 +1812,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">35<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-04-22">2026年4月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="fizz" data-lang="Almide" data-name="fizz-protocol" data-date="2026-06-15" data-commits="7" data-rank="4">
@@ -1807,7 +1824,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">fizz-protocol</span>
             <span class="repo-org-tag">AITuber</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
           </div>
           <p class="repo-desc">Almide製AITuber「Fizz」の各部品が共有するワイヤ契約パッケージ</p>
           
@@ -1815,7 +1831,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">7<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-06-15">2026年6月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="mc" data-lang="JavaScript" data-name="mine-rabbit-bots" data-date="2025-11-21" data-commits="79" data-rank="5">
@@ -1824,7 +1843,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">mine-rabbit-bots</span>
             <span class="repo-org-tag">Minecraft</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">Paper サーバー上で Mineflyer の Bot を検証する、Craftsman 独立のサンドボックス</p>
           <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">Shell</li></ul>
@@ -1832,7 +1850,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">79<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2025-11-21">2025年11月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="graphics" data-lang="HTML" data-name="nendo" data-date="2026-07-27" data-commits="95" data-rank="6">
@@ -1841,7 +1862,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">nendo</span>
             <span class="repo-org-tag">描画と数学</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
           </div>
           <p class="repo-desc">3Dアバターファイルを検査・編集・カスタマイズするツールキット</p>
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Python</li></ul>
@@ -1849,7 +1869,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">95<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-07-27">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="web" data-lang="TypeScript" data-name="aid-on-ui-system" data-date="2026-09-06" data-commits="42" data-rank="7">
@@ -1858,7 +1881,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">aid-on-ui-system</span>
             <span class="repo-org-tag">エッジと Web</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">aid-on-ui-system2という名称のUIシステムのリポジトリ</p>
           <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
@@ -1866,7 +1888,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">42<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-09-06">2026年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="toolchain" data-lang="Rust" data-name="qusp" data-date="2026-07-07" data-commits="95" data-rank="8">
@@ -1875,7 +1900,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">qusp</span>
             <span class="repo-org-tag">ツールチェーン</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">qusp.tomlで23言語のツールチェーンを並列導入するRust製マネージャ</p>
           <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li><li class="repo-topic">asdf</li></ul>
@@ -1883,7 +1907,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">95<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-07-07">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="knowledge" data-lang="JavaScript" data-name="o6lvl4-knowledge" data-date="2026-08-22" data-commits="275" data-rank="9">
@@ -1892,7 +1919,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">O6lvl4-knowledge</span>
             <span class="repo-org-tag">知識をためる</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">Obsidianと Git LFSによる知識ベースとグラフビューア</p>
           <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li></ul>
@@ -1900,7 +1926,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">275<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-08-22">2026年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="sites" data-lang="TypeScript" data-name="chip-war-chronicle" data-date="2026-09-15" data-commits="42" data-rank="10">
@@ -1909,7 +1938,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">chip-war-chronicle</span>
             <span class="repo-org-tag">公開ページ</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">半導体・政策・地政学を並べ因果を読む番組表型タイムライン</p>
           <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li></ul>
@@ -1917,7 +1945,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">42<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-09-15">2026年9月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="tools" data-lang="Rust" data-name="pagina" data-date="2026-05-20" data-commits="34" data-rank="11">
@@ -1926,7 +1957,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">pagina</span>
             <span class="repo-org-tag">手元の道具</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">HTMLとCSS Paged MediaをPDFに変換するRust製エンジン</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">Shell</li></ul>
@@ -1934,7 +1964,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">34<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-05-20">2026年5月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="other-langs" data-lang="Zig" data-name="zfp" data-date="2026-02-22" data-commits="47" data-rank="12">
@@ -1943,7 +1976,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">zfp</span>
             <span class="repo-org-tag">他の言語で</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#ec915c;width:5px;height:5px" aria-hidden="true"></span>Zig</span>
           </div>
           <p class="repo-desc">Zigのネイティブ型上で動くゼロコストの関数型ツールキット</p>
           <ul class="repo-topics"><li class="repo-topic">functional-programming</li><li class="repo-topic">maybe</li><li class="repo-topic">option</li></ul>
@@ -1951,7 +1983,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">47<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2026-02-22">2026年2月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#ec915c;width:5px;height:5px" aria-hidden="true"></span>Zig</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="lab" data-lang="JavaScript" data-name="aid-on-js-training" data-date="2025-08-28" data-commits="122" data-rank="13">
@@ -1960,7 +1995,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">aid-on-js-training</span>
             <span class="repo-org-tag">試したもの</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
           </div>
           <p class="repo-desc">テスト付きでJavaScriptを段階的に学べる初心者向け問題集</p>
           <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">CSS</li></ul>
@@ -1968,7 +2002,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">122<span class="repo-meta-unit"> コミット</span></span>
           <time class="repo-date" datetime="2025-08-28">2025年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
 
+          </div>
         </div>
       </a>
     </li></ul>
@@ -2127,37 +2164,37 @@ body::after {
       <div class="timeline-sub">org ごとのコミット</div>
       <div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/almide" target="_blank" rel="noopener noreferrer">almide<span class="lbr-sub">28</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="11178" aria-valuemin="0" aria-valuemax="11178" aria-label="almide">
+        <div class="lbr-track" role="meter" aria-valuenow="11188" aria-valuemin="0" aria-valuemax="11188" aria-label="almide">
           <div class="lbr-fill" style="width:100.0%"></div>
         </div>
-        <span class="lbr-count" aria-hidden="true">11,178</span>
+        <span class="lbr-count" aria-hidden="true">11,188</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer">O6lvl4<span class="lbr-sub">111</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="1948" aria-valuemin="0" aria-valuemax="11178" aria-label="O6lvl4">
+        <div class="lbr-track" role="meter" aria-valuenow="1948" aria-valuemin="0" aria-valuemax="11188" aria-label="O6lvl4">
           <div class="lbr-fill" style="width:17.4%"></div>
         </div>
         <span class="lbr-count" aria-hidden="true">1,948</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/Aid-On" target="_blank" rel="noopener noreferrer">Aid-On<span class="lbr-sub">87</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="670" aria-valuemin="0" aria-valuemax="11178" aria-label="Aid-On">
+        <div class="lbr-track" role="meter" aria-valuenow="670" aria-valuemin="0" aria-valuemax="11188" aria-label="Aid-On">
           <div class="lbr-fill" style="width:6.0%"></div>
         </div>
         <span class="lbr-count" aria-hidden="true">670</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/almide-graphics" target="_blank" rel="noopener noreferrer">almide-graphics<span class="lbr-sub">9</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="311" aria-valuemin="0" aria-valuemax="11178" aria-label="almide-graphics">
+        <div class="lbr-track" role="meter" aria-valuenow="311" aria-valuemin="0" aria-valuemax="11188" aria-label="almide-graphics">
           <div class="lbr-fill" style="width:2.8%"></div>
         </div>
         <span class="lbr-count" aria-hidden="true">311</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/almd-mc" target="_blank" rel="noopener noreferrer">almd-mc<span class="lbr-sub">24</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="92" aria-valuemin="0" aria-valuemax="11178" aria-label="almd-mc">
+        <div class="lbr-track" role="meter" aria-valuenow="92" aria-valuemin="0" aria-valuemax="11188" aria-label="almd-mc">
           <div class="lbr-fill" style="width:0.8%"></div>
         </div>
         <span class="lbr-count" aria-hidden="true">92</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/almide-ai" target="_blank" rel="noopener noreferrer">almide-ai<span class="lbr-sub">3</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="48" aria-valuemin="0" aria-valuemax="11178" aria-label="almide-ai">
+        <div class="lbr-track" role="meter" aria-valuenow="48" aria-valuemin="0" aria-valuemax="11188" aria-label="almide-ai">
           <div class="lbr-fill" style="width:0.4%"></div>
         </div>
         <span class="lbr-count" aria-hidden="true">48</span>

@@ -3,7 +3,7 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/zh/",
  "root": "..",
  "title": "O6lvl4",
- "description": "O6lvl4、Aid-On、almide 与 almide-* 组织下的 262 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。",
+ "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。公开仓库 262 个。",
  "share": {
   "image": "og.jpg",
   "alt": "O6lvl4 — 从语言开始，构建开发工具。"
@@ -104,7 +104,7 @@
   "kicker": "公开仓库 262 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
   "note": "这一页并列了 262 个公开仓库。每个图版都取自项目本身：站点的画面、命令的输出，或 README 的摘要。",
-  "description": "O6lvl4、Aid-On、almide 与 almide-* 组织下的 262 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。"
+  "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。公开仓库 262 个。"
  },
  "landing": {
   "about": [
@@ -226,7 +226,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "14,247",
+    "value": "14,257",
     "label": "提交"
    },
    {
@@ -362,7 +362,7 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11178,
+    "count": 11188,
     "of": 28
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13546
+    "count": 13556
    }
   ]
  },
@@ -1534,7 +1534,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "803",
+     "value": "813",
      "label": "提交"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 787
+     "count": 797
     }
    ],
    "works": [
@@ -1576,14 +1576,14 @@
      "url": "https://github.com/almide/porta",
      "tags": [
       "Python",
-      "Almide",
       "Rust",
+      "Almide",
       "ai-agent"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "114"
+       "value": "124"
       },
       {
        "label": "首次",

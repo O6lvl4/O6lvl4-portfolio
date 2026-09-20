@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1728,7 +1737,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">qusp</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">由qusp.toml驱动的多语言工具链管理器</p>
           <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li><li class="repo-topic">asdf</li></ul>
@@ -1736,7 +1744,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">95<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-07-07">2026年7月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="toolchain" data-lang="Rust" data-name="gv" data-date="2026-04-28" data-commits="18" data-rank="1">
@@ -1745,7 +1756,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">gv</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">Rust编写的Go版本与工具链管理器</p>
           <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">cli</li><li class="repo-topic">developer-tools</li></ul>
@@ -1753,7 +1763,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">18<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-04-28">2026年4月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="toolchain" data-lang="" data-name="php-build-standalone" data-date="2026-04-29" data-commits="13" data-rank="2">
@@ -1762,7 +1775,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">php-build-standalone</span>
             <span class="repo-org-tag">O6lvl4</span>
-            
           </div>
           <p class="repo-desc">面向各平台的预构建静态PHP二进制文件</p>
           
@@ -1770,7 +1782,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">13<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-04-29">2026年4月</time>
+          <div class="repo-foot">
+            
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="toolchain" data-lang="Rust" data-name="anyv-core" data-date="2026-05-09" data-commits="4" data-rank="3">
@@ -1779,7 +1794,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">anyv-core</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">*v工具链管理器（gv、rv）的共享Rust基础库</p>
           <ul class="repo-topics"><li class="repo-topic">developer-tools</li><li class="repo-topic">library</li><li class="repo-topic">rust</li></ul>
@@ -1787,7 +1801,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">4<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-05-09">2026年5月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="toolchain" data-lang="Python" data-name="homebrew-tap" data-date="2026-08-08" data-commits="56" data-rank="4">
@@ -1796,7 +1813,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">homebrew-tap</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
           </div>
           <p class="repo-desc">@O6lvl4 的 Homebrew formula 仓库</p>
           <ul class="repo-topics"><li class="repo-topic">Ruby</li><li class="repo-topic">developer-tools</li><li class="repo-topic">golang</li></ul>
@@ -1804,7 +1820,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">56<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-08-08">2026年8月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
 
+          </div>
         </div>
       </a>
     </li></ul>

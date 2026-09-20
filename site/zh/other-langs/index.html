@@ -721,7 +721,7 @@ a { color: inherit; text-decoration: none; }
 .repo-row {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: stretch;
   gap: 2rem;
   padding-block: calc(var(--item-gap) * 0.42);
   color: inherit;
@@ -798,6 +798,15 @@ a { color: inherit; text-decoration: none; }
   gap: 0.25rem;
   flex-shrink: 0;
   padding-top: 0.0625rem;
+}
+
+/* what the work is written in, down in the corner the row leaves empty */
+.repo-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .repo-stars {
@@ -1728,7 +1737,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">zfp</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#ec915c;width:5px;height:5px" aria-hidden="true"></span>Zig</span>
           </div>
           <p class="repo-desc">基于Zig原生类型的零开销函数式工具库</p>
           <ul class="repo-topics"><li class="repo-topic">functional-programming</li><li class="repo-topic">maybe</li><li class="repo-topic">option</li></ul>
@@ -1736,7 +1744,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">47<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-02-22">2026年2月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#ec915c;width:5px;height:5px" aria-hidden="true"></span>Zig</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="other-langs" data-lang="Ruby" data-name="sashiko" data-date="2026-04-26" data-commits="20" data-rank="1">
@@ -1745,7 +1756,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">sashiko</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#701516;width:5px;height:5px" aria-hidden="true"></span>Ruby</span>
           </div>
           <p class="repo-desc">跨Ruby并发边界保持OpenTelemetry链路连续的库</p>
           <ul class="repo-topics"><li class="repo-topic">concurrency</li><li class="repo-topic">distributed-tracing</li><li class="repo-topic">observability</li></ul>
@@ -1753,7 +1763,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">20<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-04-26">2026年4月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#701516;width:5px;height:5px" aria-hidden="true"></span>Ruby</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="other-langs" data-lang="TypeScript" data-name="lean2ts" data-date="2026-03-02" data-commits="25" data-rank="2">
@@ -1762,7 +1775,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">lean2ts</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
           </div>
           <p class="repo-desc">将Lean 4规约转换为TypeScript类型与属性测试</p>
           <ul class="repo-topics"><li class="repo-topic">Lean</li><li class="repo-topic">code-generation</li><li class="repo-topic">fast-check</li></ul>
@@ -1770,7 +1782,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">25<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-03-02">2026年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="other-langs" data-lang="Lean" data-name="hello-lean4" data-date="2026-03-07" data-commits="2" data-rank="3">
@@ -1779,7 +1794,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">hello-lean4</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
           </div>
           <p class="repo-desc">用 Lean 4 编写的 Hello World CLI 应用</p>
           
@@ -1787,7 +1801,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">2<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-03-07">2026年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="other-langs" data-lang="Lean" data-name="lean-lang-sandbox" data-date="2026-02-24" data-commits="3" data-rank="4">
@@ -1796,7 +1813,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">lean-lang-sandbox</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
           </div>
           <p class="repo-desc">Lean 4学习沙盒，含从定理证明到编程的教程</p>
           <ul class="repo-topics"><li class="repo-topic">functional-programming</li><li class="repo-topic">japanese</li><li class="repo-topic">lean</li></ul>
@@ -1804,7 +1820,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-02-24">2026年2月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="other-langs" data-lang="Lean" data-name="fizzbuzz-lean4-cli" data-date="2026-03-07" data-commits="1" data-rank="5">
@@ -1813,7 +1832,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">fizzbuzz-lean4-cli</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
           </div>
           <p class="repo-desc">用 Lean 4 编写的 FizzBuzz 命令行程序</p>
           
@@ -1821,7 +1839,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-03-07">2026年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="other-langs" data-lang="Rust" data-name="lean4-rust-backend" data-date="2026-03-07" data-commits="1" data-rank="6">
@@ -1830,7 +1851,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">lean4-rust-backend</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
           </div>
           <p class="repo-desc">基于IR的Lean 4到Rust代码生成后端</p>
           <ul class="repo-topics"><li class="repo-topic">Lean</li></ul>
@@ -1838,7 +1858,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-03-07">2026年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="other-langs" data-lang="" data-name="lean4-practice" data-date="2026-03-07" data-commits="3" data-rank="7">
@@ -1847,7 +1870,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">lean4-practice</span>
             <span class="repo-org-tag">O6lvl4</span>
-            
           </div>
           <p class="repo-desc">提供Lean 4代码生成最佳实践的Claude Code插件</p>
           
@@ -1855,7 +1877,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">3<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-03-07">2026年3月</time>
+          <div class="repo-foot">
+            
 
+          </div>
         </div>
       </a>
     </li><li class="repo-item" data-org="other-langs" data-lang="Lean" data-name="fizzbuzz-lean4-lib" data-date="2026-03-07" data-commits="1" data-rank="8">
@@ -1864,7 +1889,6 @@ body::after {
           <div class="repo-top-line">
             <span class="repo-name">fizzbuzz-lean4-lib</span>
             <span class="repo-org-tag">O6lvl4</span>
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
           </div>
           <p class="repo-desc">用 Lean 4 编写的 FizzBuzz 库</p>
           
@@ -1872,7 +1896,10 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">1<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-03-07">2026年3月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#4c3023;width:5px;height:5px" aria-hidden="true"></span>Lean</span>
 
+          </div>
         </div>
       </a>
     </li></ul>
