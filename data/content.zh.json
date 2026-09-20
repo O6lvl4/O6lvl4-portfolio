@@ -3,15 +3,15 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/zh/",
  "root": "..",
  "title": "O6lvl4",
- "description": "O6lvl4、Aid-On、almide 与 almide-* 组织下的 266 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。",
+ "description": "O6lvl4、Aid-On、almide 与 almide-* 组织下的 262 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。",
  "share": {
-  "image": "og.zh.jpg",
+  "image": "og.jpg",
   "alt": "O6lvl4 — 从语言开始，构建开发工具。"
  },
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "266 repos",
+  "life": "262 repos",
   "avatar": "assets/avatar.png",
   "role": "从语言开始，构建开发工具。",
   "ogham": {
@@ -101,10 +101,10 @@
   "first": true
  },
  "home": {
-  "kicker": "公开仓库 266 个",
+  "kicker": "公开仓库 262 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 266 个公开仓库。每个图版都取自项目本身：站点的画面、命令的输出，或 README 的摘要。",
-  "description": "O6lvl4、Aid-On、almide 与 almide-* 组织下的 266 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。"
+  "note": "这一页并列了 262 个公开仓库。每个图版都取自项目本身：站点的画面、命令的输出，或 README 的摘要。",
+  "description": "O6lvl4、Aid-On、almide 与 almide-* 组织下的 262 个公开仓库：Almide 语言、周边工具、智能体，以及 LLM 的基础设施。"
  },
  "landing": {
   "about": [
@@ -116,10 +116,10 @@
     "heading": "常写的语言",
     "items": [
      "Almide（137）",
-     "JavaScript（76）",
+     "JavaScript（75）",
      "TypeScript（57）",
-     "HTML（30）",
-     "Shell（29）"
+     "HTML（29）",
+     "Shell（28）"
     ]
    },
    {
@@ -138,8 +138,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "开始了 203 个",
-    "lead": "almide、porta、als、ccgrid 等 199 个",
+    "title": "开始了 201 个",
+    "lead": "almide、porta、als、ccgrid 等 197 个",
     "tags": [
      "Rust",
      "Python",
@@ -149,8 +149,8 @@
    },
    {
     "period": "2025年",
-    "title": "开始了 38 个",
-    "lead": "llm-queue-dispatcher、llm-throttle、whenm、llmine 等 34 个",
+    "title": "开始了 36 个",
+    "lead": "llm-queue-dispatcher、llm-throttle、whenm、llmine 等 32 个",
     "tags": [
      "TypeScript",
      "JavaScript"
@@ -207,12 +207,12 @@
    },
    {
     "key": "最近更新",
-    "value": "O6lvl4-portfolio · 2026年9月"
+    "value": "almide · 2026年9月"
    },
    {
     "key": "用 Almide 写的比例",
-    "value": "45%",
-    "fill": 0.45
+    "value": "46%",
+    "fill": 0.46
    },
    {
     "key": "2026 年的提交",
@@ -222,11 +222,11 @@
   ],
   "figures": [
    {
-    "value": "266",
+    "value": "262",
     "label": "公开仓库"
    },
    {
-    "value": "14,262",
+    "value": "14,229",
     "label": "提交"
    },
    {
@@ -260,14 +260,14 @@
     "color": "#00add8"
    },
    {
-    "name": "HTML",
-    "count": 11,
-    "color": "#e34c26"
-   },
-   {
     "name": "Rust",
     "count": 10,
     "color": "#dea584"
+   },
+   {
+    "name": "HTML",
+    "count": 10,
+    "color": "#e34c26"
    },
    {
     "name": "Python",
@@ -275,14 +275,14 @@
     "color": "#3572a5"
    },
    {
-    "name": "Shell",
-    "count": 5,
-    "color": "#89e051"
-   },
-   {
     "name": "Lean",
     "count": 4,
     "color": "#4c3023"
+   },
+   {
+    "name": "Shell",
+    "count": 4,
+    "color": "#89e051"
    },
    {
     "name": "CSS",
@@ -336,11 +336,11 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 113
+    "count": 111
    },
    {
     "name": "almide",
-    "count": 29
+    "count": 28
    },
    {
     "name": "almide-graphics",
@@ -356,24 +356,24 @@
    },
    {
     "name": "Aid-On",
-    "count": 88
+    "count": 87
    }
   ],
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11161,
-    "of": 29
+    "count": 11160,
+    "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1973,
-    "of": 113
+    "count": 1948,
+    "of": 111
    },
    {
     "name": "Aid-On",
-    "count": 677,
-    "of": 88
+    "count": 670,
+    "of": 87
    },
    {
     "name": "almide-graphics",
@@ -406,11 +406,11 @@
    },
    {
     "name": "2025",
-    "count": 558
+    "count": 549
    },
    {
     "name": "2026",
-    "count": 13552
+    "count": 13528
    }
   ]
  },
@@ -422,11 +422,11 @@
    "intro": "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。另一门语言是 wyve：在 LLVM IR 之上一层放置静态语义，让优化器把契约写下来，用 Racket 写成",
    "figures": [
     {
-     "value": "18",
+     "value": "17",
      "label": "公开仓库"
     },
     {
-     "value": "11,068",
+     "value": "11,066",
      "label": "提交"
     },
     {
@@ -441,7 +441,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11068
+     "count": 11066
     }
    ],
    "works": [
@@ -1058,37 +1058,6 @@
     },
     {
      "image": "",
-     "id": "almide/.github",
-     "title": ".github",
-     "titleEn": "almide组织的主页与社区规范文件仓库",
-     "date": "2026年3月",
-     "credit": "almide",
-     "url": "https://github.com/almide/.github",
-     "tags": [
-      "almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/.github"
-      }
-     ],
-     "order": {
-      "date": "2026-03-30"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/almide-js",
      "title": "almide-js",
      "titleEn": "Almide的JS/TS向WASM SDK进度与基准记录",
@@ -1565,7 +1534,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "792",
+     "value": "793",
      "label": "提交"
     },
     {
@@ -1584,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 776
+     "count": 777
     }
    ],
    "works": [
@@ -1614,7 +1583,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "103"
+       "value": "104"
       },
       {
        "label": "首次",
@@ -7652,11 +7621,11 @@
    "intro": "为每天的活儿写的小可执行文件：处理文书（keiri、pdf-burger、resepy、capto、gformiac）、查看环境与机器（netcheck、igloc、syncenv、macleap、dns-checker）、切换账号（azprofile、chropen）、把写好的东西变成能交出去的形态（pagina、premaid、image-catalog-composer）、尽早知道供应链攻击（tocsin、tocsin-almd）、把界面结构提成 Layout AST（uimodulay），以及自己的工作规约与对照它的合规检查器（O6lvl4-protocol、O6lvl4-vitals）",
    "figures": [
     {
-     "value": "26",
+     "value": "24",
      "label": "公开仓库"
     },
     {
-     "value": "220",
+     "value": "195",
      "label": "提交"
     },
     {
@@ -7671,11 +7640,11 @@
    "years": [
     {
      "name": "2025",
-     "count": 33
+     "count": 31
     },
     {
      "name": "2026",
-     "count": 187
+     "count": 164
     }
    ],
    "works": [
@@ -7952,44 +7921,6 @@
      ],
      "order": {
       "date": "2026-03-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-portfolio",
-     "title": "O6lvl4-portfolio",
-     "titleEn": "265 public repositories across O6lvl4, Aid-On, almide and the almide-* orgs, grouped by what they are, in Japanese, English and Chinese. Named after Ogma.",
-     "date": "2026年9月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-portfolio",
-     "tags": [
-      "HTML",
-      "JavaScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "22"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/O6lvl4-portfolio"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/O6lvl4-portfolio/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-20"
      }
     },
     {
@@ -8552,38 +8483,6 @@
      "order": {
       "date": "2025-04-01"
      }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/dotfiles",
-     "title": "dotfiles",
-     "titleEn": "用Brewfile和脚本管理macOS开发环境的dotfiles",
-     "date": "2026年4月",
-     "format": "Shell",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/dotfiles",
-     "tags": [
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/dotfiles"
-      }
-     ],
-     "order": {
-      "date": "2026-04-28"
-     }
     }
    ]
   },
@@ -8964,11 +8863,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide）、JavaScript 习题集（aid-on-js-training），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "38",
+     "value": "37",
      "label": "公开仓库"
     },
     {
-     "value": "351",
+     "value": "344",
      "label": "提交"
     },
     {
@@ -8995,7 +8894,7 @@
     },
     {
      "name": "2025",
-     "count": 232
+     "count": 225
     },
     {
      "name": "2026",
@@ -9704,35 +9603,6 @@
      ],
      "order": {
       "date": "2025-10-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/.github",
-     "title": ".github",
-     "titleEn": "Aid-On的.github仓库，无README，用途未说明",
-     "date": "2025年12月",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/.github",
-     "tags": [],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "7"
-      },
-      {
-       "label": "首次",
-       "value": "2025年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/.github"
-      }
-     ],
-     "order": {
-      "date": "2025-12-30"
      }
     },
     {

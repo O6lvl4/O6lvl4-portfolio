@@ -3,15 +3,15 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/ja/",
  "root": "..",
  "title": "O6lvl4",
- "description": "O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ 266 件。言語 Almide とその周りの道具、エージェント、LLM の土台。",
+ "description": "O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ 262 件。言語 Almide とその周りの道具、エージェント、LLM の土台。",
  "share": {
-  "image": "og.ja.jpg",
+  "image": "og.jpg",
   "alt": "O6lvl4 — 開発の道具を、言語からつくる。"
  },
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "266 repos",
+  "life": "262 repos",
   "avatar": "assets/avatar.png",
   "role": "開発の道具を、言語からつくる。",
   "ogham": {
@@ -101,10 +101,10 @@
   "first": true
  },
  "home": {
-  "kicker": "公開リポジトリ 266 件",
+  "kicker": "公開リポジトリ 262 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
-  "note": "公開リポジトリ 266 件を並べた頁です。各プロジェクトの図版は、そのサイトの画面・コマンドの出力・README の要約から作りました。",
-  "description": "O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ 266 件。言語 Almide とその周りの道具、エージェント、LLM の土台。"
+  "note": "公開リポジトリ 262 件を並べた頁です。各プロジェクトの図版は、そのサイトの画面・コマンドの出力・README の要約から作りました。",
+  "description": "O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ 262 件。言語 Almide とその周りの道具、エージェント、LLM の土台。"
  },
  "landing": {
   "about": [
@@ -116,10 +116,10 @@
     "heading": "よく書く言語",
     "items": [
      "Almide（137）",
-     "JavaScript（76）",
+     "JavaScript（75）",
      "TypeScript（57）",
-     "HTML（30）",
-     "Shell（29）"
+     "HTML（29）",
+     "Shell（28）"
     ]
    },
    {
@@ -138,8 +138,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "203件を始めた",
-    "lead": "almide、porta、als、ccgrid ほか199件",
+    "title": "201件を始めた",
+    "lead": "almide、porta、als、ccgrid ほか197件",
     "tags": [
      "Rust",
      "Python",
@@ -149,8 +149,8 @@
    },
    {
     "period": "2025年",
-    "title": "38件を始めた",
-    "lead": "llm-queue-dispatcher、llm-throttle、whenm、llmine ほか34件",
+    "title": "36件を始めた",
+    "lead": "llm-queue-dispatcher、llm-throttle、whenm、llmine ほか32件",
     "tags": [
      "TypeScript",
      "JavaScript"
@@ -207,12 +207,12 @@
    },
    {
     "key": "直近の更新",
-    "value": "O6lvl4-portfolio · 2026年9月"
+    "value": "almide · 2026年9月"
    },
    {
     "key": "Almide で書いた割合",
-    "value": "45%",
-    "fill": 0.45
+    "value": "46%",
+    "fill": 0.46
    },
    {
     "key": "2026年のコミット",
@@ -222,11 +222,11 @@
   ],
   "figures": [
    {
-    "value": "266",
+    "value": "262",
     "label": "公開リポジトリ"
    },
    {
-    "value": "14,262",
+    "value": "14,229",
     "label": "コミット"
    },
    {
@@ -260,14 +260,14 @@
     "color": "#00add8"
    },
    {
-    "name": "HTML",
-    "count": 11,
-    "color": "#e34c26"
-   },
-   {
     "name": "Rust",
     "count": 10,
     "color": "#dea584"
+   },
+   {
+    "name": "HTML",
+    "count": 10,
+    "color": "#e34c26"
    },
    {
     "name": "Python",
@@ -275,14 +275,14 @@
     "color": "#3572a5"
    },
    {
-    "name": "Shell",
-    "count": 5,
-    "color": "#89e051"
-   },
-   {
     "name": "Lean",
     "count": 4,
     "color": "#4c3023"
+   },
+   {
+    "name": "Shell",
+    "count": 4,
+    "color": "#89e051"
    },
    {
     "name": "CSS",
@@ -336,11 +336,11 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 113
+    "count": 111
    },
    {
     "name": "almide",
-    "count": 29
+    "count": 28
    },
    {
     "name": "almide-graphics",
@@ -356,24 +356,24 @@
    },
    {
     "name": "Aid-On",
-    "count": 88
+    "count": 87
    }
   ],
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11161,
-    "of": 29
+    "count": 11160,
+    "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1973,
-    "of": 113
+    "count": 1948,
+    "of": 111
    },
    {
     "name": "Aid-On",
-    "count": 677,
-    "of": 88
+    "count": 670,
+    "of": 87
    },
    {
     "name": "almide-graphics",
@@ -406,11 +406,11 @@
    },
    {
     "name": "2025",
-    "count": 558
+    "count": 549
    },
    {
     "name": "2026",
-    "count": 13552
+    "count": 13528
    }
   ]
  },
@@ -422,11 +422,11 @@
    "intro": "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。もう一つの言語は wyve — LLVM IR の一層上に静的な意味論を置き、最適化器に契約を書かせるもので、Racket で書いてあります。",
    "figures": [
     {
-     "value": "18",
+     "value": "17",
      "label": "公開リポジトリ"
     },
     {
-     "value": "11,068",
+     "value": "11,066",
      "label": "コミット"
     },
     {
@@ -441,7 +441,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11068
+     "count": 11066
     }
    ],
    "works": [
@@ -1058,37 +1058,6 @@
     },
     {
      "image": "",
-     "id": "almide/.github",
-     "title": ".github",
-     "titleEn": "almide組織のプロフィールとコミュニティ規約ファイルを置くリポジトリ",
-     "date": "2026年3月",
-     "credit": "almide",
-     "url": "https://github.com/almide/.github",
-     "tags": [
-      "almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/.github"
-      }
-     ],
-     "order": {
-      "date": "2026-03-30"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/almide-js",
      "title": "almide-js",
      "titleEn": "AlmideのJS/TS向けWASM SDKの進捗記録とベンチマーク集",
@@ -1565,7 +1534,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "792",
+     "value": "793",
      "label": "コミット"
     },
     {
@@ -1584,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 776
+     "count": 777
     }
    ],
    "works": [
@@ -1614,7 +1583,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "103"
+       "value": "104"
       },
       {
        "label": "初回",
@@ -7652,11 +7621,11 @@
    "intro": "毎日の作業のために書いた小さな実行ファイル。書類を片づけるもの（keiri・pdf-burger・resepy・capto・gformiac）、環境と機械を見るもの（netcheck・igloc・syncenv・macleap・dns-checker）、アカウントを切り替えるもの（azprofile・chropen）、書いたものを渡せる形にするもの（pagina・premaid・image-catalog-composer）、供給網への攻撃を早く知るもの（tocsin・tocsin-almd）、UI の構造を Layout AST に起こすもの（uimodulay）、そして自分の作業規約とその適合チェッカー（O6lvl4-protocol・O6lvl4-vitals）。",
    "figures": [
     {
-     "value": "26",
+     "value": "24",
      "label": "公開リポジトリ"
     },
     {
-     "value": "220",
+     "value": "195",
      "label": "コミット"
     },
     {
@@ -7671,11 +7640,11 @@
    "years": [
     {
      "name": "2025",
-     "count": 33
+     "count": 31
     },
     {
      "name": "2026",
-     "count": 187
+     "count": 164
     }
    ],
    "works": [
@@ -7952,44 +7921,6 @@
      ],
      "order": {
       "date": "2026-03-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-portfolio",
-     "title": "O6lvl4-portfolio",
-     "titleEn": "265 public repositories across O6lvl4, Aid-On, almide and the almide-* orgs, grouped by what they are, in Japanese, English and Chinese. Named after Ogma.",
-     "date": "2026年9月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-portfolio",
-     "tags": [
-      "HTML",
-      "JavaScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "22"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/O6lvl4-portfolio"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/O6lvl4-portfolio/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-20"
      }
     },
     {
@@ -8552,38 +8483,6 @@
      "order": {
       "date": "2025-04-01"
      }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/dotfiles",
-     "title": "dotfiles",
-     "titleEn": "macOS開発環境をBrewfileとシェルスクリプトで管理するdotfiles",
-     "date": "2026年4月",
-     "format": "Shell",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/dotfiles",
-     "tags": [
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/dotfiles"
-      }
-     ],
-     "order": {
-      "date": "2026-04-28"
-     }
     }
    ]
   },
@@ -8964,11 +8863,11 @@
    "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、JavaScript の問題集（aid-on-js-training）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
-     "value": "38",
+     "value": "37",
      "label": "公開リポジトリ"
     },
     {
-     "value": "351",
+     "value": "344",
      "label": "コミット"
     },
     {
@@ -8995,7 +8894,7 @@
     },
     {
      "name": "2025",
-     "count": 232
+     "count": 225
     },
     {
      "name": "2026",
@@ -9704,35 +9603,6 @@
      ],
      "order": {
       "date": "2025-10-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/.github",
-     "title": ".github",
-     "titleEn": "READMEがなく、内容を確認できないAid-Onの.githubリポジトリ",
-     "date": "2025年12月",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/.github",
-     "tags": [],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "7"
-      },
-      {
-       "label": "初回",
-       "value": "2025年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/.github"
-      }
-     ],
-     "order": {
-      "date": "2025-12-30"
      }
     },
     {

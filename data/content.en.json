@@ -3,15 +3,15 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/en/",
  "root": "..",
  "title": "O6lvl4",
- "description": "266 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs.",
+ "description": "262 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs.",
  "share": {
-  "image": "og.en.jpg",
+  "image": "og.jpg",
   "alt": "O6lvl4 — Building developer tools, from the language up."
  },
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "266 repos",
+  "life": "262 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -101,10 +101,10 @@
   "first": true
  },
  "home": {
-  "kicker": "266 public repositories",
+  "kicker": "262 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "266 public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.",
-  "description": "266 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs."
+  "note": "262 public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.",
+  "description": "262 public repositories under O6lvl4, Aid-On, almide and the almide-* orgs: the Almide language, the tools around it, agents, and groundwork for LLMs."
  },
  "landing": {
   "about": [
@@ -116,10 +116,10 @@
     "heading": "Most written",
     "items": [
      "Almide（137）",
-     "JavaScript（76）",
+     "JavaScript（75）",
      "TypeScript（57）",
-     "HTML（30）",
-     "Shell（29）"
+     "HTML（29）",
+     "Shell（28）"
     ]
    },
    {
@@ -138,8 +138,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "203 started",
-    "lead": "almide, porta, als, ccgrid and 199 more",
+    "title": "201 started",
+    "lead": "almide, porta, als, ccgrid and 197 more",
     "tags": [
      "Rust",
      "Python",
@@ -149,8 +149,8 @@
    },
    {
     "period": "2025",
-    "title": "38 started",
-    "lead": "llm-queue-dispatcher, llm-throttle, whenm, llmine and 34 more",
+    "title": "36 started",
+    "lead": "llm-queue-dispatcher, llm-throttle, whenm, llmine and 32 more",
     "tags": [
      "TypeScript",
      "JavaScript"
@@ -207,12 +207,12 @@
    },
    {
     "key": "Last touched",
-    "value": "O6lvl4-portfolio · Sep 2026"
+    "value": "almide · Sep 2026"
    },
    {
     "key": "Written in Almide",
-    "value": "45%",
-    "fill": 0.45
+    "value": "46%",
+    "fill": 0.46
    },
    {
     "key": "Commits in 2026",
@@ -222,11 +222,11 @@
   ],
   "figures": [
    {
-    "value": "266",
+    "value": "262",
     "label": "Repositories"
    },
    {
-    "value": "14,262",
+    "value": "14,229",
     "label": "Commits"
    },
    {
@@ -260,14 +260,14 @@
     "color": "#00add8"
    },
    {
-    "name": "HTML",
-    "count": 11,
-    "color": "#e34c26"
-   },
-   {
     "name": "Rust",
     "count": 10,
     "color": "#dea584"
+   },
+   {
+    "name": "HTML",
+    "count": 10,
+    "color": "#e34c26"
    },
    {
     "name": "Python",
@@ -275,14 +275,14 @@
     "color": "#3572a5"
    },
    {
-    "name": "Shell",
-    "count": 5,
-    "color": "#89e051"
-   },
-   {
     "name": "Lean",
     "count": 4,
     "color": "#4c3023"
+   },
+   {
+    "name": "Shell",
+    "count": 4,
+    "color": "#89e051"
    },
    {
     "name": "CSS",
@@ -336,11 +336,11 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 113
+    "count": 111
    },
    {
     "name": "almide",
-    "count": 29
+    "count": 28
    },
    {
     "name": "almide-graphics",
@@ -356,24 +356,24 @@
    },
    {
     "name": "Aid-On",
-    "count": 88
+    "count": 87
    }
   ],
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11161,
-    "of": 29
+    "count": 11160,
+    "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1973,
-    "of": 113
+    "count": 1948,
+    "of": 111
    },
    {
     "name": "Aid-On",
-    "count": 677,
-    "of": 88
+    "count": 670,
+    "of": 87
    },
    {
     "name": "almide-graphics",
@@ -406,11 +406,11 @@
    },
    {
     "name": "2025",
-    "count": 558
+    "count": 549
    },
    {
     "name": "2026",
-    "count": 13552
+    "count": 13528
    }
   ]
  },
@@ -422,11 +422,11 @@
    "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). The other language here is wyve: a static semantics one layer above LLVM IR, where the optimizer has to write down its contracts — written in Racket.",
    "figures": [
     {
-     "value": "18",
+     "value": "17",
      "label": "Repositories"
     },
     {
-     "value": "11,068",
+     "value": "11,066",
      "label": "Commits"
     },
     {
@@ -441,7 +441,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11068
+     "count": 11066
     }
    ],
    "works": [
@@ -1058,37 +1058,6 @@
     },
     {
      "image": "",
-     "id": "almide/.github",
-     "title": ".github",
-     "titleEn": "Repository holding the almide organization's profile and community health files",
-     "date": "Mar 2026",
-     "credit": "almide",
-     "url": "https://github.com/almide/.github",
-     "tags": [
-      "almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/.github"
-      }
-     ],
-     "order": {
-      "date": "2026-03-30"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/almide-js",
      "title": "almide-js",
      "titleEn": "Progress log and benchmarks for Almide's JS/TS-friendly WASM SDK and its binding generator.",
@@ -1565,7 +1534,7 @@
      "label": "Repositories"
     },
     {
-     "value": "792",
+     "value": "793",
      "label": "Commits"
     },
     {
@@ -1584,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 776
+     "count": 777
     }
    ],
    "works": [
@@ -1614,7 +1583,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "103"
+       "value": "104"
       },
       {
        "label": "Started",
@@ -7652,11 +7621,11 @@
    "intro": "The small binaries written for the day's work: getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), looking at an environment and a machine (netcheck, igloc, syncenv, macleap, dns-checker), switching accounts (azprofile, chropen), turning what is written into something you can hand over (pagina, premaid, image-catalog-composer), hearing about a supply-chain attack early (tocsin, tocsin-almd), lifting a UI's structure into a Layout AST (uimodulay), and my own working protocol with the checker that grades against it (O6lvl4-protocol, O6lvl4-vitals).",
    "figures": [
     {
-     "value": "26",
+     "value": "24",
      "label": "Repositories"
     },
     {
-     "value": "220",
+     "value": "195",
      "label": "Commits"
     },
     {
@@ -7671,11 +7640,11 @@
    "years": [
     {
      "name": "2025",
-     "count": 33
+     "count": 31
     },
     {
      "name": "2026",
-     "count": 187
+     "count": 164
     }
    ],
    "works": [
@@ -7952,44 +7921,6 @@
      ],
      "order": {
       "date": "2026-03-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-portfolio",
-     "title": "O6lvl4-portfolio",
-     "titleEn": "265 public repositories across O6lvl4, Aid-On, almide and the almide-* orgs, grouped by what they are, in Japanese, English and Chinese. Named after Ogma.",
-     "date": "Sep 2026",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-portfolio",
-     "tags": [
-      "HTML",
-      "JavaScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "22"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/O6lvl4-portfolio"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/O6lvl4-portfolio/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-20"
      }
     },
     {
@@ -8552,38 +8483,6 @@
      "order": {
       "date": "2025-04-01"
      }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/dotfiles",
-     "title": "dotfiles",
-     "titleEn": "Dotfiles that manage a macOS development environment with a Brewfile and shell scripts.",
-     "date": "Apr 2026",
-     "format": "Shell",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/dotfiles",
-     "tags": [
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/dotfiles"
-      }
-     ],
-     "order": {
-      "date": "2026-04-28"
-     }
     }
    ]
   },
@@ -8964,11 +8863,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), a set of JavaScript exercises (aid-on-js-training), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "38",
+     "value": "37",
      "label": "Repositories"
     },
     {
-     "value": "351",
+     "value": "344",
      "label": "Commits"
     },
     {
@@ -8995,7 +8894,7 @@
     },
     {
      "name": "2025",
-     "count": 232
+     "count": 225
     },
     {
      "name": "2026",
@@ -9704,35 +9603,6 @@
      ],
      "order": {
       "date": "2025-10-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/.github",
-     "title": ".github",
-     "titleEn": "Aid-On's .github repository, which has no README, so its purpose is not stated",
-     "date": "Dec 2025",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/.github",
-     "tags": [],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "7"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/.github"
-      }
-     ],
-     "order": {
-      "date": "2025-12-30"
      }
     },
     {

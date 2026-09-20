@@ -1279,36 +1279,6 @@
   "score": 5.5
  },
  {
-  "full": "O6lvl4/O6lvl4-portfolio",
-  "owner": "O6lvl4",
-  "name": "O6lvl4-portfolio",
-  "url": "https://github.com/O6lvl4/O6lvl4-portfolio",
-  "site": "https://o6lvl4.github.io/O6lvl4-portfolio/",
-  "lead": "265 public repositories across O6lvl4, Aid-On, almide and the almide-* orgs, grouped by what they are, in Japanese, English and Chinese. Named after Ogma.",
-  "heading": "O6lvl4-portfolio",
-  "language": "HTML",
-  "languages": [
-   "HTML",
-   "JavaScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 22,
-  "years": {
-   "2026": 22
-  },
-  "first": "2026-09-19",
-  "last": "2026-09-20",
-  "license": "MIT",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "bash",
-   "code": "npm ci\nnpx playwright install chromium\nnpm run refresh"
-  },
-  "score": 5.4
- },
- {
   "full": "O6lvl4/almide-otel-demo",
   "owner": "O6lvl4",
   "name": "almide-otel-demo",
@@ -2826,33 +2796,6 @@
   "score": 1.8
  },
  {
-  "full": "O6lvl4/dotfiles",
-  "owner": "O6lvl4",
-  "name": "dotfiles",
-  "url": "https://github.com/O6lvl4/dotfiles",
-  "lead": "",
-  "heading": "Dotfiles & Development Environment",
-  "language": "Shell",
-  "languages": [
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2025": 2,
-   "2026": 1
-  },
-  "first": "2025-08-22",
-  "last": "2026-04-28",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
-  },
-  "score": 1.1
- },
- {
   "full": "O6lvl4/lean4-practice",
   "owner": "O6lvl4",
   "name": "lean4-practice",
@@ -3230,7 +3173,7 @@
   "name": "porta",
   "url": "https://github.com/almide/porta",
   "lead": "Sandboxed runtime for AI agents. WASM isolation + OS-level sandbox. Run Claude Code, Python, or any command with filesystem/network restrictions. No Docker required.",
-  "heading": "Set your model endpoint/name in examples/chat-agent/agent.toml and team.toml.",
+  "heading": "Set your model endpoint and name in examples/chat-agent/agent.toml",
   "language": "Python",
   "languages": [
    "Python",
@@ -3238,9 +3181,9 @@
    "Rust"
   ],
   "stars": 2,
-  "commits": 103,
+  "commits": 104,
   "years": {
-   "2026": 103
+   "2026": 104
   },
   "first": "2026-04-07",
   "last": "2026-09-20",
@@ -3260,7 +3203,7 @@
   "plate": "code",
   "sample": {
    "lang": "bash",
-   "code": "bash scripts/install-almide.sh\n.tools/almide/almide build src/mod.almd -o target/porta\n.tools/almide/almide build examples/chat-agent/src/mod.almd --target wasm -o examples/chat-agent/agent.wasm\n.tools/almide/almide build examples/demo-agent/src/mod.almd --target wasm -o examples/demo-agent/agent.wasm\n# Set your model endpoint/name in examples/chat-agent/agent.toml and team.toml.\ntarget/porta agent examples/chat-agent/agent.toml -- \"Add 20 and 22 using the tool.\"\ntarget/porta agent examples/chat-agent/team.toml -- \"Ask the calculator to add 20 and 22.\""
+   "code": "bash scripts/install-almide.sh\n.tools/almide/almide build src/mod.almd -o target/porta\ncp target/porta ~/.local/bin/"
   },
   "score": 21.1
  },
@@ -3998,27 +3941,6 @@
   "topics": [],
   "plate": "code",
   "score": 3.1
- },
- {
-  "full": "almide/.github",
-  "owner": "almide",
-  "name": ".github",
-  "url": "https://github.com/almide/.github",
-  "lead": "Organization profile and community health files",
-  "language": "",
-  "languages": [],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-03-30",
-  "last": "2026-03-30",
-  "topics": [
-   "almide"
-  ],
-  "plate": "code",
-  "score": 3
  },
  {
   "full": "almide/almide-js",
@@ -7277,25 +7199,6 @@
    "code": "npm install @aid-on/nextauth-providers\n```\n\n## Usage"
   },
   "score": 2
- },
- {
-  "full": "Aid-On/.github",
-  "owner": "Aid-On",
-  "name": ".github",
-  "url": "https://github.com/Aid-On/.github",
-  "lead": "",
-  "language": "",
-  "languages": [],
-  "stars": 0,
-  "commits": 7,
-  "years": {
-   "2025": 7
-  },
-  "first": "2025-02-02",
-  "last": "2025-12-30",
-  "topics": [],
-  "plate": "code",
-  "score": 1.1
  },
  {
   "full": "Aid-On/aid-on-draft-ui",
