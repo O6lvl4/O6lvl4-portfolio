@@ -10,13 +10,20 @@ import { readFileSync } from "node:fs";
 import { chromium } from "playwright";
 
 const LINES = ["Developer tools,", "from the language up."];
-const FIGURES = ["Repositories", "Commits", "Languages"];
+const MAKES = "compiler · language server · agent runtimes";
+// A language is a proper noun; the commands it ships are typed in lower case.
+const DISPLAY = { almide: "Almide" };
 
 const c = JSON.parse(readFileSync("data/content.en.json", "utf8"));
 const esc = (s) => String(s).replace(/[&<>"']/g, (v) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[v]);
 const avatar = `data:image/png;base64,${readFileSync("assets/avatar.png").toString("base64")}`;
-const figures = FIGURES.map((label) => c.landing.figures.find((f) => f.label === label)).filter(Boolean);
-const tally = figures.map((f) => `<span class="n">${esc(f.value)}</span> ${esc(f.label.toLowerCase())}`).join('<span class="sep">·</span>');
+// What the claim rests on: the work itself, by name. A count of repositories is a number
+// anyone can read two ways; a name is something to go and look at.
+const tally = (c.landing.featured ?? [])
+  .slice(0, 5)
+  .map((id) => id.split("/")[1])
+  .map((name) => `<span class="n">${esc(DISPLAY[name] ?? name)}</span>`)
+  .join('<span class="sep">·</span>');
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
 <style>
@@ -30,17 +37,18 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 * { box-sizing: border-box; margin: 0; }
 html, body { width: 1200px; height: 630px; overflow: hidden; }
 body {
-  display: flex; flex-direction: column; justify-content: space-between; gap: 48px;
+  display: flex; flex-direction: column; justify-content: center; gap: 62px;
   background: oklch(0.985 0.002 250); color: var(--ink);
-  font-family: var(--display); padding: 76px 72px 68px;
+  font-family: var(--display); padding: 60px 72px 56px;
 }
 .who { display: flex; align-items: center; gap: 40px; }
-.who img { width: 200px; height: 200px; border-radius: 50%; flex: none; filter: grayscale(1) contrast(1.05); }
-.name { font-size: 46px; font-weight: 500; letter-spacing: -.05em; margin-bottom: 14px; }
-h1 { font-size: 66px; font-weight: 700; line-height: 1.16; letter-spacing: -.06em; }
+.who img { width: 178px; height: 178px; border-radius: 50%; flex: none; filter: grayscale(1) contrast(1.05); }
+.name { font-size: 42px; font-weight: 500; letter-spacing: -.05em; margin-bottom: 14px; }
+h1 { font-size: 60px; font-weight: 700; line-height: 1.16; letter-spacing: -.06em; }
 h1 span { display: block; white-space: nowrap; }
 h1 span:last-child { color: var(--accent); }
-.tally { border-top: 2px solid var(--rule); padding-top: 36px; font-size: 38px; font-weight: 400; color: var(--muted); letter-spacing: -.03em; white-space: nowrap; }
+.makes { margin-top: 24px; font-size: 32px; font-weight: 400; color: var(--muted); letter-spacing: -.03em; }
+.tally { border-top: 2px solid var(--rule); padding-top: 32px; font-size: 34px; font-weight: 400; color: var(--muted); letter-spacing: -.03em; white-space: nowrap; }
 .tally .n { font-weight: 700; color: var(--ink); }
 .tally .sep { color: var(--accent); margin: 0 22px; }
 </style></head><body>
@@ -49,6 +57,7 @@ h1 span:last-child { color: var(--accent); }
   <div>
     <div class="name">${esc(c.artist.name)}</div>
     <h1>${LINES.map((line) => `<span>${esc(line)}</span>`).join("")}</h1>
+    <p class="makes">${esc(MAKES)}</p>
   </div>
 </div>
 <div class="tally">${tally}</div>
