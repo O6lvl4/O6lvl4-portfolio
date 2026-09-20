@@ -125,7 +125,6 @@ function repoRow(work: Work, owner: Series, index: number, tag?: string): string
           <div class="repo-top-line">
             <span class="repo-name">${esc(work.title)}</span>
             <span class="repo-org-tag">${esc(tag ?? work.credit ?? owner.title)}</span>
-            ${work.format ? `<span class="repo-lang-tag">${dot(work.format)}${esc(work.format)}</span>` : ""}
           </div>
           ${work.titleEn ? `<p class="repo-desc">${esc(work.titleEn)}</p>` : ""}
           ${topics.length ? `<ul class="repo-topics">${topics.map((t) => `<li class="repo-topic">${esc(t)}</li>`).join("")}</ul>` : ""}
@@ -133,7 +132,10 @@ function repoRow(work: Work, owner: Series, index: number, tag?: string): string
         <div class="repo-meta">
           ${commits ? `<span class="repo-stars">${esc(commits.value)}<span class="repo-meta-unit"> ${esc(commits.label)}</span></span>` : ""}
           ${work.date ? `<time class="repo-date"${when}>${esc(work.date)}</time>` : ""}
-          <span class="repo-go" aria-hidden="true">→</span>
+          <div class="repo-foot">
+            ${work.format ? `<span class="repo-lang-tag">${dot(work.format)}${esc(work.format)}</span>` : ""}
+            <span class="repo-go" aria-hidden="true">→</span>
+          </div>
         </div>
       </a>
     </li>`;
