@@ -3,7 +3,7 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/zh/",
  "root": "..",
  "title": "O6lvl4",
- "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。公开仓库 262 个。",
+ "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。",
  "share": {
   "image": "og.jpg",
   "alt": "O6lvl4 — 从语言开始，构建开发工具。"
@@ -104,7 +104,7 @@
   "kicker": "公开仓库 262 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
   "note": "这一页并列了 262 个公开仓库。每个图版都取自项目本身：站点的画面、命令的输出，或 README 的摘要。",
-  "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。公开仓库 262 个。"
+  "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
   "about": [
@@ -226,7 +226,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "14,257",
+    "value": "14,369",
     "label": "提交"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11188,
+    "count": 11294,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1948,
+    "count": 1954,
     "of": 111
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13556
+    "count": 13668
    }
   ]
  },
@@ -426,7 +426,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "11,074",
+     "value": "11,150",
      "label": "提交"
     },
     {
@@ -441,7 +441,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11074
+     "count": 11150
     }
    ],
    "works": [
@@ -471,7 +471,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "8,903"
+       "value": "8,979"
       },
       {
        "label": "首次",
@@ -497,7 +497,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-09-21"
      }
     },
     {
@@ -1534,7 +1534,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "813",
+     "value": "847",
      "label": "提交"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 797
+     "count": 831
     }
    ],
    "works": [
@@ -1583,7 +1583,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "124"
+       "value": "154"
       },
       {
        "label": "首次",
@@ -1605,7 +1605,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-09-21"
      }
     },
     {
@@ -1884,6 +1884,52 @@
      }
     },
     {
+     "image": "plates/zh/O6lvl4/hew.jpg",
+     "readme": {
+      "lead": "面向编码代理的结构感知cat/grep/sed替代工具",
+      "points": [
+       "--symbol按名称提取函数",
+       "带行号的输出与裁剪",
+       "grep折叠重复并标注符号"
+      ]
+     },
+     "id": "O6lvl4/hew",
+     "title": "hew",
+     "titleEn": "面向编码代理的结构感知cat/grep/sed替代工具",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/hew",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "48"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.4.17"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/hew"
+      }
+     ],
+     "order": {
+      "date": "2026-09-20"
+     }
+    },
+    {
      "image": "plates/zh/O6lvl4/codopsy.jpg",
      "readme": {
       "lead": "基于tree-sitter的35种语言AST代码质量分析器",
@@ -1928,52 +1974,6 @@
      ],
      "order": {
       "date": "2026-08-30"
-     }
-    },
-    {
-     "image": "plates/zh/O6lvl4/hew.jpg",
-     "readme": {
-      "lead": "面向编码代理的结构感知cat/grep/sed替代工具",
-      "points": [
-       "--symbol按名称提取函数",
-       "带行号的输出与裁剪",
-       "grep折叠重复并标注符号"
-      ]
-     },
-     "id": "O6lvl4/hew",
-     "title": "hew",
-     "titleEn": "面向编码代理的结构感知cat/grep/sed替代工具",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/hew",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "47"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.4.17"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/hew"
-      }
-     ],
-     "order": {
-      "date": "2026-09-18"
      }
     },
     {
@@ -2180,7 +2180,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "48"
+       "value": "49"
       },
       {
        "label": "首次",
@@ -2194,7 +2194,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-13"
+      "date": "2026-09-20"
      }
     },
     {
@@ -2214,7 +2214,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "34"
+       "value": "36"
       },
       {
        "label": "首次",
@@ -2228,7 +2228,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-17"
+      "date": "2026-09-20"
      }
     },
     {
@@ -7126,7 +7126,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "124",
+     "value": "126",
      "label": "提交"
     },
     {
@@ -7145,7 +7145,7 @@
     },
     {
      "name": "2026",
-     "count": 116
+     "count": 118
     }
    ],
    "works": [
@@ -7211,7 +7211,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "42"
+       "value": "43"
       },
       {
        "label": "首次",
@@ -7229,7 +7229,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-15"
+      "date": "2026-09-20"
      }
     },
     {
@@ -7281,7 +7281,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "9"
+       "value": "10"
       },
       {
        "label": "首次",
@@ -7299,7 +7299,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-14"
+      "date": "2026-09-20"
      }
     },
     {

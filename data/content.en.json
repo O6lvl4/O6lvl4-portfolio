@@ -3,7 +3,7 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/en/",
  "root": "..",
  "title": "O6lvl4",
- "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it. 262 public repositories.",
+ "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it.",
  "share": {
   "image": "og.jpg",
   "alt": "O6lvl4 — Building developer tools, from the language up."
@@ -104,7 +104,7 @@
   "kicker": "262 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
   "note": "262 public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.",
-  "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it. 262 public repositories."
+  "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
   "about": [
@@ -226,7 +226,7 @@
     "label": "Repositories"
    },
    {
-    "value": "14,257",
+    "value": "14,369",
     "label": "Commits"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11188,
+    "count": 11294,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1948,
+    "count": 1954,
     "of": 111
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13556
+    "count": 13668
    }
   ]
  },
@@ -426,7 +426,7 @@
      "label": "Repositories"
     },
     {
-     "value": "11,074",
+     "value": "11,150",
      "label": "Commits"
     },
     {
@@ -441,7 +441,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11074
+     "count": 11150
     }
    ],
    "works": [
@@ -471,7 +471,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "8,903"
+       "value": "8,979"
       },
       {
        "label": "Started",
@@ -497,7 +497,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-09-21"
      }
     },
     {
@@ -1534,7 +1534,7 @@
      "label": "Repositories"
     },
     {
-     "value": "813",
+     "value": "847",
      "label": "Commits"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 797
+     "count": 831
     }
    ],
    "works": [
@@ -1583,7 +1583,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "124"
+       "value": "154"
       },
       {
        "label": "Started",
@@ -1605,7 +1605,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-09-21"
      }
     },
     {
@@ -1884,6 +1884,52 @@
      }
     },
     {
+     "image": "plates/en/O6lvl4/hew.jpg",
+     "readme": {
+      "lead": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
+      "points": [
+       "--symbol cuts out a function or type by name",
+       "Numbered lines, clipping, gap markers",
+       "grep folds repeats, names enclosing symbol"
+      ]
+     },
+     "id": "O6lvl4/hew",
+     "title": "hew",
+     "titleEn": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
+     "date": "Sep 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/hew",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "48"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.4.17"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/hew"
+      }
+     ],
+     "order": {
+      "date": "2026-09-20"
+     }
+    },
+    {
      "image": "plates/en/O6lvl4/codopsy.jpg",
      "readme": {
       "lead": "AST-level code quality analyzer using tree-sitter for 35 languages, without executing code",
@@ -1928,52 +1974,6 @@
      ],
      "order": {
       "date": "2026-08-30"
-     }
-    },
-    {
-     "image": "plates/en/O6lvl4/hew.jpg",
-     "readme": {
-      "lead": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
-      "points": [
-       "--symbol cuts out a function or type by name",
-       "Numbered lines, clipping, gap markers",
-       "grep folds repeats, names enclosing symbol"
-      ]
-     },
-     "id": "O6lvl4/hew",
-     "title": "hew",
-     "titleEn": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/hew",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "47"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.4.17"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/hew"
-      }
-     ],
-     "order": {
-      "date": "2026-09-18"
      }
     },
     {
@@ -2180,7 +2180,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "48"
+       "value": "49"
       },
       {
        "label": "Started",
@@ -2194,7 +2194,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-13"
+      "date": "2026-09-20"
      }
     },
     {
@@ -2214,7 +2214,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "34"
+       "value": "36"
       },
       {
        "label": "Started",
@@ -2228,7 +2228,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-17"
+      "date": "2026-09-20"
      }
     },
     {
@@ -7126,7 +7126,7 @@
      "label": "Repositories"
     },
     {
-     "value": "124",
+     "value": "126",
      "label": "Commits"
     },
     {
@@ -7145,7 +7145,7 @@
     },
     {
      "name": "2026",
-     "count": 116
+     "count": 118
     }
    ],
    "works": [
@@ -7211,7 +7211,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "42"
+       "value": "43"
       },
       {
        "label": "Started",
@@ -7229,7 +7229,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-15"
+      "date": "2026-09-20"
      }
     },
     {
@@ -7281,7 +7281,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "9"
+       "value": "10"
       },
       {
        "label": "Started",
@@ -7299,7 +7299,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-14"
+      "date": "2026-09-20"
      }
     },
     {

@@ -3,7 +3,7 @@
  "baseUrl": "https://o6lvl4.github.io/O6lvl4-portfolio/ja/",
  "root": "..",
  "title": "O6lvl4",
- "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。公開リポジトリ 262 件。",
+ "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。",
  "share": {
   "image": "og.jpg",
   "alt": "O6lvl4 — 開発の道具を、言語からつくる。"
@@ -104,7 +104,7 @@
   "kicker": "公開リポジトリ 262 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
   "note": "公開リポジトリ 262 件を並べた頁です。各プロジェクトの図版は、そのサイトの画面・コマンドの出力・README の要約から作りました。",
-  "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。公開リポジトリ 262 件。"
+  "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。"
  },
  "landing": {
   "about": [
@@ -226,7 +226,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "14,257",
+    "value": "14,369",
     "label": "コミット"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11188,
+    "count": 11294,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1948,
+    "count": 1954,
     "of": 111
    },
    {
@@ -410,7 +410,7 @@
    },
    {
     "name": "2026",
-    "count": 13556
+    "count": 13668
    }
   ]
  },
@@ -426,7 +426,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "11,074",
+     "value": "11,150",
      "label": "コミット"
     },
     {
@@ -441,7 +441,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11074
+     "count": 11150
     }
    ],
    "works": [
@@ -471,7 +471,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "8,903"
+       "value": "8,979"
       },
       {
        "label": "初回",
@@ -497,7 +497,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-09-21"
      }
     },
     {
@@ -1534,7 +1534,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "813",
+     "value": "847",
      "label": "コミット"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 797
+     "count": 831
     }
    ],
    "works": [
@@ -1583,7 +1583,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "124"
+       "value": "154"
       },
       {
        "label": "初回",
@@ -1605,7 +1605,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-09-21"
      }
     },
     {
@@ -1884,6 +1884,52 @@
      }
     },
     {
+     "image": "plates/ja/O6lvl4/hew.jpg",
+     "readme": {
+      "lead": "コーディングエージェント向けの構造認識型cat/grep/sed代替ツール",
+      "points": [
+       "--symbolで関数や型を名前指定",
+       "行番号付き出力とgrepの折り畳み",
+       "6言語をgramide文法で解析"
+      ]
+     },
+     "id": "O6lvl4/hew",
+     "title": "hew",
+     "titleEn": "コーディングエージェント向けの構造認識型cat/grep/sed代替ツール",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/hew",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "48"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版",
+       "value": "v0.4.17"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/hew"
+      }
+     ],
+     "order": {
+      "date": "2026-09-20"
+     }
+    },
+    {
      "image": "plates/ja/O6lvl4/codopsy.jpg",
      "readme": {
       "lead": "tree-sitterで35言語を静的解析するコード品質アナライザ",
@@ -1928,52 +1974,6 @@
      ],
      "order": {
       "date": "2026-08-30"
-     }
-    },
-    {
-     "image": "plates/ja/O6lvl4/hew.jpg",
-     "readme": {
-      "lead": "コーディングエージェント向けの構造認識型cat/grep/sed代替ツール",
-      "points": [
-       "--symbolで関数や型を名前指定",
-       "行番号付き出力とgrepの折り畳み",
-       "6言語をgramide文法で解析"
-      ]
-     },
-     "id": "O6lvl4/hew",
-     "title": "hew",
-     "titleEn": "コーディングエージェント向けの構造認識型cat/grep/sed代替ツール",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/hew",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "47"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      },
-      {
-       "label": "版",
-       "value": "v0.4.17"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/hew"
-      }
-     ],
-     "order": {
-      "date": "2026-09-18"
      }
     },
     {
@@ -2180,7 +2180,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "48"
+       "value": "49"
       },
       {
        "label": "初回",
@@ -2194,7 +2194,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-13"
+      "date": "2026-09-20"
      }
     },
     {
@@ -2214,7 +2214,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "34"
+       "value": "36"
       },
       {
        "label": "初回",
@@ -2228,7 +2228,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-17"
+      "date": "2026-09-20"
      }
     },
     {
@@ -7126,7 +7126,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "124",
+     "value": "126",
      "label": "コミット"
     },
     {
@@ -7145,7 +7145,7 @@
     },
     {
      "name": "2026",
-     "count": 116
+     "count": 118
     }
    ],
    "works": [
@@ -7211,7 +7211,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "42"
+       "value": "43"
       },
       {
        "label": "初回",
@@ -7229,7 +7229,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-15"
+      "date": "2026-09-20"
      }
     },
     {
@@ -7281,7 +7281,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "9"
+       "value": "10"
       },
       {
        "label": "初回",
@@ -7299,7 +7299,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-14"
+      "date": "2026-09-20"
      }
     },
     {

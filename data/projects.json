@@ -413,6 +413,36 @@
   "score": 10.5
  },
  {
+  "full": "O6lvl4/hew",
+  "owner": "O6lvl4",
+  "name": "hew",
+  "url": "https://github.com/O6lvl4/hew",
+  "lead": "Read code the way a model should: structure-aware cat/grep/sed for coding agents, in Almide",
+  "heading": "hew",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 48,
+  "years": {
+   "2026": 48
+  },
+  "first": "2026-09-06",
+  "last": "2026-09-20",
+  "tag": "v0.4.17",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "hew src/lower.rs --symbol lower_match       one function, found by name\nhew src/lower.rs --grep \"Expr::Match\" --around 4   matches with context, labelled by enclosing fn\nhew src/lower.rs --lines 120-160            a range, numbered\nhew outline src/lower.rs                    the table of contents\nhew grep \"unwrap()\" src                     grep that folds repeats and names the symbol\nhew tree src --depth 2                      a directory, skipping vcs / build / deps"
+  },
+  "score": 10
+ },
+ {
   "full": "O6lvl4/codopsy",
   "owner": "O6lvl4",
   "name": "codopsy",
@@ -450,36 +480,6 @@
   "sample": {
    "lang": "console",
    "code": "$ codopsy analyze ./src -v\nAnalyzing ./src ...\nFound 2 source file(s).\n  ✗ ./src/Proof.lean (complexity: 1, cognitive: 0, issues: 1 error)\n      score A (91/100) — complexity 35/35, issues 31/40, structure 25/25\n  ✗ ./src/parser.ts (complexity: 6, cognitive: 11, issues: 1 error, 3 warnings)\n      score B (80/100) — complexity 35/35, issues 20/40, structure 25/25\n\n=== Analysis Summary ===\n  Quality Score:  B (84/100)\n  Files analyzed: 2\n  Total issues:   6\n    Error:   2\n    Warning: 3\n    Info:    1\n  Avg complexity: 2.7\n  Max complexity: 6 (parse in ./src/parser.ts)\n  Scoring thresholds: cyclomatic >10, cognitive >15"
-  },
-  "score": 9.9
- },
- {
-  "full": "O6lvl4/hew",
-  "owner": "O6lvl4",
-  "name": "hew",
-  "url": "https://github.com/O6lvl4/hew",
-  "lead": "Read code the way a model should: structure-aware cat/grep/sed for coding agents, in Almide",
-  "heading": "hew",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 47,
-  "years": {
-   "2026": 47
-  },
-  "first": "2026-09-06",
-  "last": "2026-09-18",
-  "tag": "v0.4.17",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "hew src/lower.rs --symbol lower_match       one function, found by name\nhew src/lower.rs --grep \"Expr::Match\" --around 4   matches with context, labelled by enclosing fn\nhew src/lower.rs --lines 120-160            a range, numbered\nhew outline src/lower.rs                    the table of contents\nhew grep \"unwrap()\" src                     grep that folds repeats and names the symbol\nhew tree src --depth 2                      a directory, skipping vcs / build / deps"
   },
   "score": 9.9
  },
@@ -1183,12 +1183,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 48,
+  "commits": 49,
   "years": {
-   "2026": 48
+   "2026": 49
   },
   "first": "2026-09-08",
-  "last": "2026-09-13",
+  "last": "2026-09-20",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -1213,19 +1213,19 @@
    "JavaScript"
   ],
   "stars": 0,
-  "commits": 42,
+  "commits": 43,
   "years": {
-   "2026": 42
+   "2026": 43
   },
   "first": "2026-09-07",
-  "last": "2026-09-15",
+  "last": "2026-09-20",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "ts",
    "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
   },
-  "score": 5.8
+  "score": 5.9
  },
  {
   "full": "O6lvl4/ctxgate",
@@ -1241,12 +1241,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 34,
+  "commits": 36,
   "years": {
-   "2026": 34
+   "2026": 36
   },
   "first": "2026-09-06",
-  "last": "2026-09-17",
+  "last": "2026-09-20",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -1376,12 +1376,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 9,
+  "commits": 10,
   "years": {
-   "2026": 9
+   "2026": 10
   },
   "first": "2026-09-14",
-  "last": "2026-09-14",
+  "last": "2026-09-20",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3143,12 +3143,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 8903,
+  "commits": 8979,
   "years": {
-   "2026": 8903
+   "2026": 8979
   },
   "first": "2026-03-07",
-  "last": "2026-09-20",
+  "last": "2026-09-21",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3181,12 +3181,12 @@
    "Almide"
   ],
   "stars": 2,
-  "commits": 124,
+  "commits": 154,
   "years": {
-   "2026": 124
+   "2026": 154
   },
   "first": "2026-04-07",
-  "last": "2026-09-20",
+  "last": "2026-09-21",
   "tag": "v0.4.0",
   "license": "Apache-2.0",
   "topics": [
@@ -3203,9 +3203,9 @@
   "plate": "code",
   "sample": {
    "lang": "bash",
-   "code": "bash scripts/install-almide.sh\n.tools/almide/almide build src/mod.almd -o target/porta\ncp target/porta ~/.local/bin/"
+   "code": "curl -fsSL https://raw.githubusercontent.com/almide/porta/main/scripts/install.sh | bash"
   },
-  "score": 21.5
+  "score": 22.1
  },
  {
   "full": "almide/als",
