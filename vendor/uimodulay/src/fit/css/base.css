@@ -51,3 +51,29 @@ a:focus-visible, button:focus-visible {
 .contact svg { flex: none; }
 /* the maker's mark: their own picture, where the seal would be */
 .mark { width: 28px; height: 28px; border-radius: 3px; object-fit: cover; flex: none; }
+
+/* ── A floor under the type, where the writing is Japanese or Chinese ──────────
+   The instrument panel's labels are drawn for JetBrains Mono, where 7px uppercase
+   still reads as a label. A kanji at 7px loses the strokes that tell it apart, so
+   the smallest steps are lifted for CJK pages — the same scale, one notch up.
+   .section-title and .entry-title are left alone: later rules already resize them,
+   and this block would win and shrink them. */
+html:is([lang='ja'], [lang='zh']) :is(.tl-yr) { font-size: 0.5625rem; }
+html:is([lang='ja'], [lang='zh']) :is(
+  .stat-label, .org-btn-count, .kpi-label, .timeline-sub, .hdr-readout-lbl,
+  .om-head, .om-fig-key, .om-updated, .om-family, .lang-chip, .repo-org-tag,
+  .repo-topic, .sort-btn
+) { font-size: 0.625rem; }
+html:is([lang='ja'], [lang='zh']) :is(
+  .panel-key, .org-btn, .tl-count, .locale-btn, .entry-social-link, .om-link,
+  .repo-lang-tag, .repo-date, .show-more-btn, .show-more-count, .section-count,
+  .entry-handle-at, .lbr-name, .lbr-count, .note-key, .fam-link-count, .lbr-sub
+) { font-size: 0.6875rem; }
+html:is([lang='ja'], [lang='zh']) h4.readme-h2,
+html:is([lang='ja'], [lang='zh']) .hdr-nav a { font-size: 0.6875rem; }
+/* Reading text, not a label: one notch up for CJK as well. */
+html:is([lang='ja'], [lang='zh']) :is(.readme-p, .entry-bio) { font-size: 0.9375rem; }
+html:is([lang='ja'], [lang='zh']) :is(
+  .note-foot, .fam-link, .fam-back, .om-path, .entry-handle, .panel-val,
+  .repo-go, .om-updated-val, .repo-stars, .repo-meta-unit
+) { font-size: 0.75rem; }
