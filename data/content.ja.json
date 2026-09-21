@@ -106,7 +106,7 @@
  "home": {
   "kicker": "公開リポジトリ 262 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
-  "note": "公開リポジトリ 262 件を並べた頁です。各プロジェクトの図版は、そのサイトの画面・コマンドの出力・README の要約から作りました。",
+  "note": "公開リポジトリ 262 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
   "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。"
  },
  "landing": {
@@ -1570,7 +1570,7 @@
    ],
    "works": [
     {
-     "image": "plates/ja/almide/porta.jpg",
+     "image": "plates/shared/almide/porta.jpg",
      "readme": {
       "lead": "AIエージェント向けにファイルシステムやネットワークを制限する安全なMCPブリッジ",
       "points": [
@@ -1942,7 +1942,7 @@
      }
     },
     {
-     "image": "plates/ja/O6lvl4/codopsy.jpg",
+     "image": "plates/shared/O6lvl4/codopsy.jpg",
      "readme": {
       "lead": "tree-sitterで35言語を静的解析するコード品質アナライザ",
       "points": [

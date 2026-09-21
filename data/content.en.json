@@ -106,7 +106,7 @@
  "home": {
   "kicker": "262 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "262 public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "262 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -1570,7 +1570,7 @@
    ],
    "works": [
     {
-     "image": "plates/en/almide/porta.jpg",
+     "image": "plates/shared/almide/porta.jpg",
      "readme": {
       "lead": "A secure MCP bridge that restricts filesystem, network and command access for AI agents and native commands",
       "points": [
@@ -1942,7 +1942,7 @@
      }
     },
     {
-     "image": "plates/en/O6lvl4/codopsy.jpg",
+     "image": "plates/shared/O6lvl4/codopsy.jpg",
      "readme": {
       "lead": "AST-level code quality analyzer using tree-sitter for 35 languages, without executing code",
       "points": [

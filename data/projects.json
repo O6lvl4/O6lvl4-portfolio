@@ -56,7 +56,8 @@
   "last": "2026-06-09",
   "tag": "v0.0.7",
   "topics": [],
-  "plate": "code",
+  "og": "https://repository-images.githubusercontent.com/1261968749/4f895126-7610-437b-b8db-04d412b40ccd",
+  "plate": "og",
   "sample": {
    "lang": "objc",
    "code": "@effect(reads(x, y), writes(y))\n@vectorize(require, width: 8)\n+ (void)saxpy:(float)a\n            x:(@noalias const float *)x\n            y:(@noalias float *)y\n        count:(usize)n;"
@@ -476,7 +477,8 @@
    "static-analysis",
    "tree-sitter"
   ],
-  "plate": "code",
+  "og": "https://repository-images.githubusercontent.com/1177516958/053926e8-fd8d-4c78-9bb4-6bf5d475a2fd",
+  "plate": "og",
   "sample": {
    "lang": "console",
    "code": "$ codopsy analyze ./src -v\nAnalyzing ./src ...\nFound 2 source file(s).\n  ✗ ./src/Proof.lean (complexity: 1, cognitive: 0, issues: 1 error)\n      score A (91/100) — complexity 35/35, issues 31/40, structure 25/25\n  ✗ ./src/parser.ts (complexity: 6, cognitive: 11, issues: 1 error, 3 warnings)\n      score B (80/100) — complexity 35/35, issues 20/40, structure 25/25\n\n=== Analysis Summary ===\n  Quality Score:  B (84/100)\n  Files analyzed: 2\n  Total issues:   6\n    Error:   2\n    Warning: 3\n    Info:    1\n  Avg complexity: 2.7\n  Max complexity: 6 (parse in ./src/parser.ts)\n  Scoring thresholds: cyclomatic >10, cognitive >15"
@@ -1191,7 +1193,8 @@
   "last": "2026-09-20",
   "license": "NOASSERTION",
   "topics": [],
-  "plate": "code",
+  "og": "https://repository-images.githubusercontent.com/1362136465/a64fdb12-9b66-4c14-a97d-af37d81ef089",
+  "plate": "og",
   "sample": {
    "lang": "sh",
    "code": "almide build\n./golemide observe --root ../project"
@@ -3200,7 +3203,8 @@
    "wasm",
    "wasmtime"
   ],
-  "plate": "code",
+  "og": "https://repository-images.githubusercontent.com/1203375793/236295a7-4483-40ad-8bf9-93194e0606cc",
+  "plate": "og",
   "sample": {
    "lang": "bash",
    "code": "curl -fsSL https://raw.githubusercontent.com/almide/porta/main/scripts/install.sh | bash"

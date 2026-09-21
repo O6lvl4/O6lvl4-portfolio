@@ -106,7 +106,7 @@
  "home": {
   "kicker": "公开仓库 262 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 262 个公开仓库。每个图版都取自项目本身：站点的画面、命令的输出，或 README 的摘要。",
+  "note": "这一页并列了 262 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
   "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
@@ -1570,7 +1570,7 @@
    ],
    "works": [
     {
-     "image": "plates/zh/almide/porta.jpg",
+     "image": "plates/shared/almide/porta.jpg",
      "readme": {
       "lead": "限制AI智能体文件与网络访问的安全MCP桥",
       "points": [
@@ -1942,7 +1942,7 @@
      }
     },
     {
-     "image": "plates/zh/O6lvl4/codopsy.jpg",
+     "image": "plates/shared/O6lvl4/codopsy.jpg",
      "readme": {
       "lead": "基于tree-sitter的35种语言AST代码质量分析器",
       "points": [
