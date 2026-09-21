@@ -147,6 +147,10 @@ html:is([lang='ja'], [lang='zh']) :is(
   .note-foot, .fam-link, .fam-back, .om-path, .entry-handle, .panel-val,
   .repo-go, .om-updated-val, .repo-stars, .repo-meta-unit
 ) { font-size: 0.75rem; }
+/* Japanese breaks where a phrase ends, not between any two characters, so a line never
+   leaves "の" stranded at the start of the next one. Browsers without auto-phrase keep
+   breaking as before. */
+html[lang='ja'] :is(.readme-p, .readme-points li, .entry-bio, .entry-title, .repo-desc) { word-break: auto-phrase; }
 
 /* fit: oghma — one page for a body of software work, cut along an ogham stem.
    Ported from the generated interface design: the faces and the palette come from the tokens,
@@ -1735,8 +1739,8 @@ body::after {
       <article class="readme-panel" aria-label="porta README">
       <figure class="readme-shot"><img src="../img/plates/shared/almide/porta-lo.webp" width="640" height="357" alt="O6lvl4「porta」" loading="lazy" decoding="async"></figure>
       <h3 class="readme-h1">porta</h3>
-      <p class="readme-p">限制AI智能体文件与网络访问的安全MCP桥</p>
-      <h4 class="readme-h2">功能</h4><ul class="readme-points"><li>基于wasmtime的WASM沙箱</li><li>macOS sandbox-exec系统级限制</li><li>porta.toml声明式配置</li></ul>
+      <p class="readme-p">只用你授予的权限来运行智能体</p>
+      <h4 class="readme-h2">功能</h4><ul class="readme-points"><li>为正在用的 CLI 智能体加上操作系统级限制</li><li>自己写的智能体在 WASM 运行时中隔离执行</li><li>一个 porta.toml 搞定，不需要 Docker</li></ul>
       
     </article>
     </div>
@@ -1759,7 +1763,7 @@ body::after {
             <span class="repo-name">porta</span>
             <span class="repo-org-tag">almide</span>
           </div>
-          <p class="repo-desc">限制AI智能体文件与网络访问的安全MCP桥</p>
+          <p class="repo-desc">只用你授予的权限来运行智能体</p>
           <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Almide</li><li class="repo-topic">ai-agent</li></ul>
         </div>
         <div class="repo-meta">
@@ -1911,7 +1915,7 @@ body::after {
             <span class="repo-name">hew</span>
             <span class="repo-org-tag">O6lvl4</span>
           </div>
-          <p class="repo-desc">面向编码代理的结构感知cat/grep/sed替代工具</p>
+          <p class="repo-desc">按模型该读的方式读代码：面向编程智能体的 cat/grep/sed</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
         </div>
         <div class="repo-meta">
@@ -1930,7 +1934,7 @@ body::after {
             <span class="repo-name">codopsy</span>
             <span class="repo-org-tag">O6lvl4</span>
           </div>
-          <p class="repo-desc">基于tree-sitter的35种语言AST代码质量分析器</p>
+          <p class="repo-desc">用同一把尺子，为35种语言的代码打分</p>
           <ul class="repo-topics"><li class="repo-topic">Lean</li><li class="repo-topic">Java</li><li class="repo-topic">cli</li></ul>
         </div>
         <div class="repo-meta">

@@ -457,16 +457,16 @@
     {
      "image": "plates/shared/almide/almide.jpg",
      "readme": {
-      "lead": "LLMによる編集後も動くコードを目指す静的型付け言語",
+      "lead": "AIに何度書き換えられても、コードが通り続ける言語",
       "points": [
-       "Rust経由のネイティブとWebAssemblyへコンパイル",
-       "修正案を示す網羅性チェックの診断",
-       "ネイティブとwasmで出力がバイト単位で一致"
+       "追う指標はひとつ、AIの編集を経ても通るコードの割合",
+       "エラーは、直し方をひとつに絞って示す",
+       "Rust経由のネイティブとWasm、出力はバイト単位で一致"
       ]
      },
      "id": "almide/almide",
      "title": "almide",
-     "titleEn": "LLMによる編集後も動くコードを目指す静的型付け言語",
+     "titleEn": "AIに何度書き換えられても、コードが通り続ける言語",
      "date": "2026年9月",
      "format": "Rust",
      "credit": "almide",
@@ -1573,16 +1573,16 @@
     {
      "image": "plates/shared/almide/porta.jpg",
      "readme": {
-      "lead": "AIエージェント向けにファイルシステムやネットワークを制限する安全なMCPブリッジ",
+      "lead": "許可した権限だけで、エージェントを動かす",
       "points": [
-       "WASMサンドボックスで隔離実行",
-       "macOS sandbox-execによるOS制限",
-       "porta.tomlによる宣言的設定"
+       "いま使っている CLI エージェントに、OS レベルの制限をかける",
+       "自作のエージェントは WASM ランタイムで隔離して動かす",
+       "設定は porta.toml ひとつ。Docker は要らない"
       ]
      },
      "id": "almide/porta",
      "title": "porta",
-     "titleEn": "AIエージェント向けにファイルシステムやネットワークを制限する安全なMCPブリッジ",
+     "titleEn": "許可した権限だけで、エージェントを動かす",
      "date": "2026年9月",
      "format": "Python",
      "credit": "almide",
@@ -1899,16 +1899,16 @@
     {
      "image": "plates/shared/O6lvl4/hew.jpg",
      "readme": {
-      "lead": "コーディングエージェント向けの構造認識型cat/grep/sed代替ツール",
+      "lead": "コードを、モデルが読むべき形で読む。エージェント向けの cat/grep/sed",
       "points": [
-       "--symbolで関数や型を名前指定",
-       "行番号付き出力とgrepの折り畳み",
-       "6言語をgramide文法で解析"
+       "関数や型を名前で指定すると、その部分だけを返す",
+       "行番号とサイズ付きで、頼んでいない行は読ませない",
+       "grep は重複をたたみ、どの関数の中かを添える"
       ]
      },
      "id": "O6lvl4/hew",
      "title": "hew",
-     "titleEn": "コーディングエージェント向けの構造認識型cat/grep/sed代替ツール",
+     "titleEn": "コードを、モデルが読むべき形で読む。エージェント向けの cat/grep/sed",
      "date": "2026年9月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -1945,16 +1945,16 @@
     {
      "image": "plates/shared/O6lvl4/codopsy.jpg",
      "readme": {
-      "lead": "tree-sitterで35言語を静的解析するコード品質アナライザ",
+      "lead": "35言語のコードを、ひとつの物差しで採点する",
       "points": [
-       "182のlintルールと複雑度計測",
-       "JSONレポートとA〜Fのスコア",
-       "--diffやCI向けの失敗条件指定"
+       "182 のルールと複雑度を、A〜F の評価にまとめる",
+       "コードは実行しない。コンパイラも言語サーバーも要らない単一バイナリ",
+       "差分だけを見て、品質が下がれば CI を落とす"
       ]
      },
      "id": "O6lvl4/codopsy",
      "title": "codopsy",
-     "titleEn": "tree-sitterで35言語を静的解析するコード品質アナライザ",
+     "titleEn": "35言語のコードを、ひとつの物差しで採点する",
      "date": "2026年8月",
      "format": "Rust",
      "credit": "O6lvl4",

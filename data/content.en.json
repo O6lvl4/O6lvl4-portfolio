@@ -457,16 +457,16 @@
     {
      "image": "plates/shared/almide/almide.jpg",
      "readme": {
-      "lead": "A statically-typed language built so code survives LLM edits; compiles to native (via Rust) and WebAssembly",
+      "lead": "A statically typed language built for one thing: code that survives AI edits",
       "points": [
-       "Native and WebAssembly targets, byte-identical output",
-       "Compiler diagnostics that spell out the fix",
-       "Exhaustive match, effect fn, and fan concurrency"
+       "One metric: how much code still passes after an AI's edits",
+       "Diagnostics that name the one fix, not a list of guesses",
+       "Native via Rust and WebAssembly, byte-identical output"
       ]
      },
      "id": "almide/almide",
      "title": "almide",
-     "titleEn": "A statically-typed language built so code survives LLM edits; compiles to native (via Rust) and WebAssembly",
+     "titleEn": "A statically typed language built for one thing: code that survives AI edits",
      "date": "Sep 2026",
      "format": "Rust",
      "credit": "almide",
@@ -1573,16 +1573,16 @@
     {
      "image": "plates/shared/almide/porta.jpg",
      "readme": {
-      "lead": "A secure MCP bridge that restricts filesystem, network and command access for AI agents and native commands",
+      "lead": "Run an agent with only the permissions you actually granted it",
       "points": [
-       "WASM sandbox via wasmtime for .wasm agents",
-       "OS-level restrictions via macOS sandbox-exec",
-       "Declarative setup with porta.toml and porta up"
+       "OS-enforced limits for the CLI agents you already use",
+       "A WASM runtime for the agents you build yourself",
+       "One porta.toml, and no Docker"
       ]
      },
      "id": "almide/porta",
      "title": "porta",
-     "titleEn": "A secure MCP bridge that restricts filesystem, network and command access for AI agents and native commands",
+     "titleEn": "Run an agent with only the permissions you actually granted it",
      "date": "Sep 2026",
      "format": "Python",
      "credit": "almide",
@@ -1899,16 +1899,16 @@
     {
      "image": "plates/shared/O6lvl4/hew.jpg",
      "readme": {
-      "lead": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
+      "lead": "Read code the way a model should: cat, grep and sed for coding agents",
       "points": [
-       "--symbol cuts out a function or type by name",
-       "Numbered lines, clipping, gap markers",
-       "grep folds repeats, names enclosing symbol"
+       "Name a function or type, get exactly that back",
+       "Numbered, sized output: no line the agent did not ask for",
+       "grep folds repeats and names the function each match sits in"
       ]
      },
      "id": "O6lvl4/hew",
      "title": "hew",
-     "titleEn": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
+     "titleEn": "Read code the way a model should: cat, grep and sed for coding agents",
      "date": "Sep 2026",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -1945,16 +1945,16 @@
     {
      "image": "plates/shared/O6lvl4/codopsy.jpg",
      "readme": {
-      "lead": "AST-level code quality analyzer using tree-sitter for 35 languages, without executing code",
+      "lead": "Static analysis that scores 35 languages on one scale",
       "points": [
-       "182 lint rules across 35 languages",
-       "Cyclomatic and cognitive complexity scoring",
-       "CI flags: --diff, --no-degradation, --fail-on-warning"
+       "182 rules and complexity, summed up as a grade from A to F",
+       "Never runs your code: one binary, no compilers or language servers",
+       "Checks only the diff, and fails CI when quality drops"
       ]
      },
      "id": "O6lvl4/codopsy",
      "title": "codopsy",
-     "titleEn": "AST-level code quality analyzer using tree-sitter for 35 languages, without executing code",
+     "titleEn": "Static analysis that scores 35 languages on one scale",
      "date": "Aug 2026",
      "format": "Rust",
      "credit": "O6lvl4",

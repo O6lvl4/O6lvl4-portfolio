@@ -457,16 +457,16 @@
     {
      "image": "plates/shared/almide/almide.jpg",
      "readme": {
-      "lead": "为LLM编辑后代码仍可用而设计的静态类型语言",
+      "lead": "无论被AI改写多少次，代码都能继续通过的语言",
       "points": [
-       "编译为原生(经Rust)和WebAssembly",
-       "给出修复方案的编译器诊断",
-       "原生与wasm输出字节一致"
+       "只追一个指标：经AI修改后仍能通过的代码比例",
+       "报错时把修法收敛到唯一一种",
+       "经Rust编译为原生与Wasm，输出逐字节一致"
       ]
      },
      "id": "almide/almide",
      "title": "almide",
-     "titleEn": "为LLM编辑后代码仍可用而设计的静态类型语言",
+     "titleEn": "无论被AI改写多少次，代码都能继续通过的语言",
      "date": "2026年9月",
      "format": "Rust",
      "credit": "almide",
@@ -1573,16 +1573,16 @@
     {
      "image": "plates/shared/almide/porta.jpg",
      "readme": {
-      "lead": "限制AI智能体文件与网络访问的安全MCP桥",
+      "lead": "只用你授予的权限来运行智能体",
       "points": [
-       "基于wasmtime的WASM沙箱",
-       "macOS sandbox-exec系统级限制",
-       "porta.toml声明式配置"
+       "为正在用的 CLI 智能体加上操作系统级限制",
+       "自己写的智能体在 WASM 运行时中隔离执行",
+       "一个 porta.toml 搞定，不需要 Docker"
       ]
      },
      "id": "almide/porta",
      "title": "porta",
-     "titleEn": "限制AI智能体文件与网络访问的安全MCP桥",
+     "titleEn": "只用你授予的权限来运行智能体",
      "date": "2026年9月",
      "format": "Python",
      "credit": "almide",
@@ -1899,16 +1899,16 @@
     {
      "image": "plates/shared/O6lvl4/hew.jpg",
      "readme": {
-      "lead": "面向编码代理的结构感知cat/grep/sed替代工具",
+      "lead": "按模型该读的方式读代码：面向编程智能体的 cat/grep/sed",
       "points": [
-       "--symbol按名称提取函数",
-       "带行号的输出与裁剪",
-       "grep折叠重复并标注符号"
+       "指定函数或类型名，只返回那一段",
+       "带行号和大小，不让智能体读没要的行",
+       "grep 折叠重复，并标出所在的函数"
       ]
      },
      "id": "O6lvl4/hew",
      "title": "hew",
-     "titleEn": "面向编码代理的结构感知cat/grep/sed替代工具",
+     "titleEn": "按模型该读的方式读代码：面向编程智能体的 cat/grep/sed",
      "date": "2026年9月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -1945,16 +1945,16 @@
     {
      "image": "plates/shared/O6lvl4/codopsy.jpg",
      "readme": {
-      "lead": "基于tree-sitter的35种语言AST代码质量分析器",
+      "lead": "用同一把尺子，为35种语言的代码打分",
       "points": [
-       "182条lint规则",
-       "圈复杂度与认知复杂度",
-       "JSON报告与CI失败选项"
+       "182条规则与复杂度，汇总成A到F的评分",
+       "从不执行代码：单一二进制，无需编译器或语言服务器",
+       "只看差异，质量一下降就让CI失败"
       ]
      },
      "id": "O6lvl4/codopsy",
      "title": "codopsy",
-     "titleEn": "基于tree-sitter的35种语言AST代码质量分析器",
+     "titleEn": "用同一把尺子，为35种语言的代码打分",
      "date": "2026年8月",
      "format": "Rust",
      "credit": "O6lvl4",

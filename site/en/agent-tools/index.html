@@ -147,6 +147,10 @@ html:is([lang='ja'], [lang='zh']) :is(
   .note-foot, .fam-link, .fam-back, .om-path, .entry-handle, .panel-val,
   .repo-go, .om-updated-val, .repo-stars, .repo-meta-unit
 ) { font-size: 0.75rem; }
+/* Japanese breaks where a phrase ends, not between any two characters, so a line never
+   leaves "の" stranded at the start of the next one. Browsers without auto-phrase keep
+   breaking as before. */
+html[lang='ja'] :is(.readme-p, .readme-points li, .entry-bio, .entry-title, .repo-desc) { word-break: auto-phrase; }
 
 /* fit: oghma — one page for a body of software work, cut along an ogham stem.
    Ported from the generated interface design: the faces and the palette come from the tokens,
@@ -1735,8 +1739,8 @@ body::after {
       <article class="readme-panel" aria-label="porta README">
       <figure class="readme-shot"><img src="../img/plates/shared/almide/porta-lo.webp" width="640" height="357" alt="O6lvl4「porta」" loading="lazy" decoding="async"></figure>
       <h3 class="readme-h1">porta</h3>
-      <p class="readme-p">A secure MCP bridge that restricts filesystem, network and command access for AI agents and native commands</p>
-      <h4 class="readme-h2">What it does</h4><ul class="readme-points"><li>WASM sandbox via wasmtime for .wasm agents</li><li>OS-level restrictions via macOS sandbox-exec</li><li>Declarative setup with porta.toml and porta up</li></ul>
+      <p class="readme-p">Run an agent with only the permissions you actually granted it</p>
+      <h4 class="readme-h2">What it does</h4><ul class="readme-points"><li>OS-enforced limits for the CLI agents you already use</li><li>A WASM runtime for the agents you build yourself</li><li>One porta.toml, and no Docker</li></ul>
       
     </article>
     </div>
@@ -1759,7 +1763,7 @@ body::after {
             <span class="repo-name">porta</span>
             <span class="repo-org-tag">almide</span>
           </div>
-          <p class="repo-desc">A secure MCP bridge that restricts filesystem, network and command access for AI agents and native commands</p>
+          <p class="repo-desc">Run an agent with only the permissions you actually granted it</p>
           <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Almide</li><li class="repo-topic">ai-agent</li></ul>
         </div>
         <div class="repo-meta">
@@ -1911,7 +1915,7 @@ body::after {
             <span class="repo-name">hew</span>
             <span class="repo-org-tag">O6lvl4</span>
           </div>
-          <p class="repo-desc">Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.</p>
+          <p class="repo-desc">Read code the way a model should: cat, grep and sed for coding agents</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
         </div>
         <div class="repo-meta">
@@ -1930,7 +1934,7 @@ body::after {
             <span class="repo-name">codopsy</span>
             <span class="repo-org-tag">O6lvl4</span>
           </div>
-          <p class="repo-desc">AST-level code quality analyzer using tree-sitter for 35 languages, without executing code</p>
+          <p class="repo-desc">Static analysis that scores 35 languages on one scale</p>
           <ul class="repo-topics"><li class="repo-topic">Lean</li><li class="repo-topic">Java</li><li class="repo-topic">cli</li></ul>
         </div>
         <div class="repo-meta">

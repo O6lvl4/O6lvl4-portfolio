@@ -147,6 +147,10 @@ html:is([lang='ja'], [lang='zh']) :is(
   .note-foot, .fam-link, .fam-back, .om-path, .entry-handle, .panel-val,
   .repo-go, .om-updated-val, .repo-stars, .repo-meta-unit
 ) { font-size: 0.75rem; }
+/* Japanese breaks where a phrase ends, not between any two characters, so a line never
+   leaves "の" stranded at the start of the next one. Browsers without auto-phrase keep
+   breaking as before. */
+html[lang='ja'] :is(.readme-p, .readme-points li, .entry-bio, .entry-title, .repo-desc) { word-break: auto-phrase; }
 
 /* fit: oghma — one page for a body of software work, cut along an ogham stem.
    Ported from the generated interface design: the faces and the palette come from the tokens,
@@ -1735,8 +1739,8 @@ body::after {
       <article class="readme-panel" aria-label="porta README">
       <figure class="readme-shot"><img src="../img/plates/shared/almide/porta-lo.webp" width="640" height="357" alt="O6lvl4「porta」" loading="lazy" decoding="async"></figure>
       <h3 class="readme-h1">porta</h3>
-      <p class="readme-p">AIエージェント向けにファイルシステムやネットワークを制限する安全なMCPブリッジ</p>
-      <h4 class="readme-h2">できること</h4><ul class="readme-points"><li>WASMサンドボックスで隔離実行</li><li>macOS sandbox-execによるOS制限</li><li>porta.tomlによる宣言的設定</li></ul>
+      <p class="readme-p">許可した権限だけで、エージェントを動かす</p>
+      <h4 class="readme-h2">できること</h4><ul class="readme-points"><li>いま使っている CLI エージェントに、OS レベルの制限をかける</li><li>自作のエージェントは WASM ランタイムで隔離して動かす</li><li>設定は porta.toml ひとつ。Docker は要らない</li></ul>
       
     </article>
     </div>
@@ -1759,7 +1763,7 @@ body::after {
             <span class="repo-name">porta</span>
             <span class="repo-org-tag">almide</span>
           </div>
-          <p class="repo-desc">AIエージェント向けにファイルシステムやネットワークを制限する安全なMCPブリッジ</p>
+          <p class="repo-desc">許可した権限だけで、エージェントを動かす</p>
           <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Almide</li><li class="repo-topic">ai-agent</li></ul>
         </div>
         <div class="repo-meta">
@@ -1911,7 +1915,7 @@ body::after {
             <span class="repo-name">hew</span>
             <span class="repo-org-tag">O6lvl4</span>
           </div>
-          <p class="repo-desc">コーディングエージェント向けの構造認識型cat/grep/sed代替ツール</p>
+          <p class="repo-desc">コードを、モデルが読むべき形で読む。エージェント向けの cat/grep/sed</p>
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
         </div>
         <div class="repo-meta">
@@ -1930,7 +1934,7 @@ body::after {
             <span class="repo-name">codopsy</span>
             <span class="repo-org-tag">O6lvl4</span>
           </div>
-          <p class="repo-desc">tree-sitterで35言語を静的解析するコード品質アナライザ</p>
+          <p class="repo-desc">35言語のコードを、ひとつの物差しで採点する</p>
           <ul class="repo-topics"><li class="repo-topic">Lean</li><li class="repo-topic">Java</li><li class="repo-topic">cli</li></ul>
         </div>
         <div class="repo-meta">

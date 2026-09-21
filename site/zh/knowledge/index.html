@@ -147,6 +147,10 @@ html:is([lang='ja'], [lang='zh']) :is(
   .note-foot, .fam-link, .fam-back, .om-path, .entry-handle, .panel-val,
   .repo-go, .om-updated-val, .repo-stars, .repo-meta-unit
 ) { font-size: 0.75rem; }
+/* Japanese breaks where a phrase ends, not between any two characters, so a line never
+   leaves "の" stranded at the start of the next one. Browsers without auto-phrase keep
+   breaking as before. */
+html[lang='ja'] :is(.readme-p, .readme-points li, .entry-bio, .entry-title, .repo-desc) { word-break: auto-phrase; }
 
 /* fit: oghma — one page for a body of software work, cut along an ogham stem.
    Ported from the generated interface design: the faces and the palette come from the tokens,
