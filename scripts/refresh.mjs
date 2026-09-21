@@ -44,6 +44,21 @@ async function worker() {
 }
 await Promise.all(Array.from({ length: 4 }, worker));
 
+/** The picture an author uploaded as a repository's social preview, where there is one. */
+function socialPreviews(list) {
+  const found = new Map();
+  for (let i = 0; i < list.length; i += 50) {
+    const batch = list.slice(i, i + 50);
+    const fields = batch.map((r, j) => `r${j}: repository(owner: ${JSON.stringify(r.owner.login)}, name: ${JSON.stringify(r.name)}) { usesCustomOpenGraphImage openGraphImageUrl }`);
+    const { data } = json(["graphql", "-f", `query={${fields.join(" ")}}`]);
+    batch.forEach((r, j) => {
+      if (data[`r${j}`]?.usesCustomOpenGraphImage) found.set(r.full_name, data[`r${j}`].openGraphImageUrl);
+    });
+  }
+  return found;
+}
+const previews = socialPreviews(repos);
+
 const cell = (value) => String(value ?? "").replace(/[\t\r\n]+/g, " ");
 function tsv(name, rows) {
   const path = join(root, name);
@@ -51,7 +66,7 @@ function tsv(name, rows) {
   return path;
 }
 const meta = tsv("repos.tsv", repos.map((r) => [r.full_name, "public", "false", r.language ?? "-", r.stargazers_count, r.pushed_at?.slice(0, 10), r.description]));
-const home = tsv("home.tsv", repos.map((r) => [r.full_name, r.homepage, r.license?.spdx_id, r.topics?.join(",")]));
+const home = tsv("home.tsv", repos.map((r) => [r.full_name, r.homepage, r.license?.spdx_id, r.topics?.join(","), previews.get(r.full_name)]));
 function run(script, args = [], output) {
   const result = execFileSync(process.execPath, [`scripts/${script}.mjs`, ...args], {
     env, encoding: "utf8", maxBuffer: 128 * 1024 * 1024, stdio: ["ignore", output ? "pipe" : "inherit", "inherit"],

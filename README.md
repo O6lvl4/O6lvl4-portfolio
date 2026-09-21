@@ -36,9 +36,10 @@ O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ265件を、一つ
 - **Every figure comes from the repositories.** The languages, the commits, the years and the counts
   are measured from the local clones. The year chart is linear and prints each year's number, and
   history shared between repositories is counted once — the page says so in its own footnote.
-- **Plates from the projects' own material.** The work opened in full shows its own plate: its site
-  as it renders, its command as it answers, or a summary of what its README says it does — taken
-  from that README alone, in each of the three languages. Nothing is drawn or mocked up.
+- **Plates from the projects' own material.** The work opened in full shows its own plate: the
+  social preview its author uploaded on GitHub, its site as it renders, its command as it answers,
+  or a summary of what its README says it does — taken from that README alone, in each of the three
+  languages. Nothing is drawn or mocked up.
 - **English first, with Japanese and Chinese translations.** The root respects a saved language
   choice, then the browser's preferred languages, falling back to `/en/`. It uses the English
   share card. Direct language URLs stay in that language; the switcher remembers manual choices.
@@ -61,7 +62,9 @@ list, descriptions, languages, stars, tags and deduplicated commit statistics.
 GitHub's own furniture is left out of that list by `scripts/shown.mjs`: an
 organisation's `.github` profile, this site's own repository and the dotfiles drawer
 are never cloned, counted or shown.
-It renders the featured images and all three languages, checks repository coverage
+It renders the featured images — a repository's own social preview where its author
+uploaded one on GitHub, otherwise its site, its command or a summary card — and all
+three languages, checks repository coverage
 and local links/assets, and deploys only after every step succeeds. A failed refresh
 leaves the last successful deployment online. Removed or newly private repositories
 disappear on the next successful build. `updated.json` on the published site records

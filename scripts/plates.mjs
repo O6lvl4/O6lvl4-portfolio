@@ -147,6 +147,23 @@ async function write(file, html, size = PLATE) {
   return true;
 }
 
+/**
+ * A project whose author uploaded a social preview is shown by that picture, as they drew it and at
+ * its own proportions — the same courtesy a project's own mark gets.
+ */
+async function writePreview(file, url) {
+  if (existsSync(file) && !force && !only) return false;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`social preview answered ${res.status}`);
+  mkdirSync(dirname(file), { recursive: true });
+  await sharp(Buffer.from(await res.arrayBuffer()))
+    .resize({ width: 1600, withoutEnlargement: true })
+    .flatten({ background: "#000000" })
+    .jpeg({ quality: 90 })
+    .toFile(file);
+  return true;
+}
+
 /** The size a mark's plate is drawn at: the mark's own, with the frame added around it. */
 async function logoSize(logo) {
   const { width, height } = await sharp(logo.file).metadata();
@@ -157,6 +174,14 @@ async function logoSize(logo) {
 let made = 0;
 for (const p of projects) {
   if (only && !only.includes(p.full)) continue;
+  if (p.plate === "og") {
+    try {
+      if (await writePreview(join("plates", "shared", p.owner, `${p.name}.jpg`), p.og)) made++;
+      continue;
+    } catch (e) {
+      process.stderr.write(`social preview failed, falling back to the summary: ${p.full}: ${String(e).slice(0, 90)}\n`);
+    }
+  }
   const logo = LOGOS[p.full];
   if (logo || p.plate === "site" || p.plate === "terminal") {
     const file = join("plates", "shared", p.owner, `${p.name}.jpg`);

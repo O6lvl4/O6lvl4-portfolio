@@ -40,13 +40,17 @@ test("refresh discovers new work, excludes removed/private/fork/furniture entrie
       "O6lvl4/O6lvl4-portfolio\tpublic\tfalse\t-\t0\t2025-01-02\tThis site",
       "O6lvl4/dotfiles\tpublic\tfalse\t-\t0\t2025-01-02\tDotfiles",
     ].join("\n"));
-    writeFileSync(join(root, "home.tsv"), "");
+    writeFileSync(join(root, "home.tsv"), "O6lvl4/new-work\t\t\t\thttps://repository-images.githubusercontent.com/1/preview\n");
     writeFileSync(join(root, "data/projects.json"), JSON.stringify([{ full: "O6lvl4/deleted-work" }]));
     const projects = JSON.parse(execFileSync(process.execPath, [resolve("scripts/plan.mjs"), "repos.tsv", "home.tsv"], { cwd: root, env, encoding: "utf8" }));
     assert.deepEqual(projects.map((p) => p.full).sort(), ["O6lvl4/new-work", "O6lvl4/shared-history"]);
     assert(projects.every((p) => p.language === "Almide" && p.commits === 1));
     assert.equal(projects.reduce((n, p) => n + (p.years["2025"] ?? 0), 0), 1);
     assert(projects.every((p) => p.terminal === undefined));
+    // an uploaded social preview is the plate; without one the code still is
+    assert.equal(projects.find((p) => p.name === "new-work").plate, "og");
+    assert.equal(projects.find((p) => p.name === "new-work").og, "https://repository-images.githubusercontent.com/1/preview");
+    assert.equal(projects.find((p) => p.name === "shared-history").plate, "code");
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

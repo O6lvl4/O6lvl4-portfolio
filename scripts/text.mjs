@@ -11,7 +11,7 @@ export const TEXT = {
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公開リポジトリ ${n} 件`,
     description: () => `必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。`,
-    note: (n) => `公開リポジトリ ${n} 件を並べた頁です。各プロジェクトの図版は、そのサイトの画面・コマンドの出力・README の要約から作りました。`,
+    note: (n) => `公開リポジトリ ${n} 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。`,
     labels: {
       prev: "前のプロジェクト", next: "次のプロジェクト", index: "一覧", close: "閉じる", unit: "件",
       sortBy: "並べ替え", colNo: "No.", colTitle: "名前", colLead: "できること", colFormat: "言語", colDate: "更新",
@@ -108,7 +108,7 @@ export const TEXT = {
     nameEn: "PUBLIC WORK",
     kicker: (n) => `${n} public repositories`,
     description: () => `I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it.`,
-    note: (n) => `${n} public repositories, side by side. Each plate is drawn from the project itself: its site as it renders, its command as it answers, or what its README says it does.`,
+    note: (n) => `${n} public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.`,
     labels: {
       prev: "Previous", next: "Next", index: "Index", close: "Close", unit: " repos",
       sortBy: "Sort", colNo: "No.", colTitle: "Name", colLead: "What it does", colFormat: "Language", colDate: "Updated",
@@ -205,7 +205,7 @@ export const TEXT = {
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公开仓库 ${n} 个`,
     description: () => `需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。`,
-    note: (n) => `这一页并列了 ${n} 个公开仓库。每个图版都取自项目本身：站点的画面、命令的输出，或 README 的摘要。`,
+    note: (n) => `这一页并列了 ${n} 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。`,
     labels: {
       prev: "上一个", next: "下一个", index: "总览", close: "关闭", unit: " 个",
       sortBy: "排序", colNo: "No.", colTitle: "名称", colLead: "功能", colFormat: "语言", colDate: "更新",

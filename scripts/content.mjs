@@ -43,10 +43,10 @@ const LANGS = [
 const t = TEXT[lang];
 if (!t) throw new Error(`unknown language: ${lang}`);
 
-/** The shared plate when the site or the command gave one; otherwise this language's summary card. */
+/** The shared plate when a preview, the site or the command gave one; otherwise this language's summary card. */
 function plateOf(p) {
   const shared = `plates/shared/${p.owner}/${p.name}.jpg`;
-  if ((p.plate === "site" || p.plate === "terminal") && existsSync(shared)) return shared;
+  if (["site", "terminal", "og"].includes(p.plate) && existsSync(shared)) return shared;
   return `plates/${lang}/${p.owner}/${p.name}.jpg`;
 }
 

@@ -1,6 +1,6 @@
 // Merge what the clones say (data/repos.json) with what GitHub says (stars, description, site,
 // license, topics) into the list the site is built from, and decide what each project's plate
-// will be drawn from: its own site, its own command, or its own code.
+// will be drawn from: the preview its author uploaded, its own site, its own command, or its code.
 //
 //   node scripts/plan.mjs <repos.tsv> <home.tsv> > data/projects.json
 
@@ -35,7 +35,7 @@ for (const r of tsv(reposTsv, ["full", "visibility", "fork", "language", "stars"
   if (r.visibility === "public" && r.fork === "false" && shown(r.full)) github.set(r.full, r);
 }
 const extra = new Map();
-for (const r of tsv(homeTsv, ["full", "site", "license", "topics"])) extra.set(r.full, r);
+for (const r of tsv(homeTsv, ["full", "site", "license", "topics", "og"])) extra.set(r.full, r);
 
 const mined = new Map(JSON.parse(readFileSync("data/repos.json", "utf8")).map((m) => [m.full, m]));
 
@@ -68,8 +68,12 @@ function recency(days) {
   return days < 365 ? 1 : 0;
 }
 
-/** What the plate is drawn from: the project's command, its site, or its code. */
-function plateKind(terminal, site) {
+/**
+ * What the plate is drawn from: the social preview its author uploaded, which is the picture they
+ * chose for it; otherwise the project's command, its site, or its code.
+ */
+function plateKind(terminal, site, og) {
+  if (og) return "og";
   if (terminal) return "terminal";
   return site ? "site" : "code";
 }
@@ -123,7 +127,8 @@ for (const [full, g] of github) {
     tag: m.tag,
     license: extra.get(full)?.license || undefined,
     topics: (extra.get(full)?.topics ?? "").split(",").filter(Boolean),
-    plate: plateKind(terminal, site),
+    og: extra.get(full)?.og || undefined,
+    plate: plateKind(terminal, site, extra.get(full)?.og),
     terminal,
     sample: m.sample,
   };
