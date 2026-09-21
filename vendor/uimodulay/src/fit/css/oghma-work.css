@@ -128,7 +128,11 @@
 
 /* the front page's cards: several works side by side, each carrying its own way out, the links of
    every card on one line at the foot however long the card above them runs */
-.object-grid.showcase { grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); align-items: stretch; }
+/* two to a row at most, so four cards sit as a square rather than three and one left over */
+.object-grid.showcase {
+  grid-template-columns: repeat(auto-fit, minmax(max(17rem, calc((100% - var(--col-gap)) / 2)), 1fr));
+  align-items: stretch;
+}
 .showcase .readme-panel { display: flex; flex-direction: column; }
 .showcase .om-links { margin-top: auto; padding-top: 1.5rem; }
 

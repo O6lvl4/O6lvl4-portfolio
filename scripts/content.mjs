@@ -32,7 +32,7 @@ const FEATURED = [
 ];
 
 /** The works the front page opens as cards: the language, and what it is used to build. */
-const SHOWCASE = ["almide/almide", "almide/porta", "O6lvl4/codopsy"];
+const SHOWCASE = ["almide/almide", "O6lvl4/hew", "almide/porta", "O6lvl4/codopsy"];
 
 const LANGS = [
   { id: "en", label: "English" },
