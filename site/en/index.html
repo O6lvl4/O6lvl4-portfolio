@@ -972,6 +972,12 @@ a { color: inherit; text-decoration: none; }
 }
 .om-link:hover { color: var(--fg); border-color: var(--red); }
 
+/* the front page's cards: several works side by side, each carrying its own way out, the links of
+   every card on one line at the foot however long the card above them runs */
+.object-grid.showcase { grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); align-items: stretch; }
+.showcase .readme-panel { display: flex; flex-direction: column; }
+.showcase .om-links { margin-top: auto; padding-top: 1.5rem; }
+
 /* Readme */
 .readme-panel {
   border: 1px solid var(--border);
@@ -1742,7 +1748,7 @@ body::after {
       </a><a class="fam-link" href="lab/" title="Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), a set of JavaScript exercises (aid-on-js-training), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.">
         <span class="fam-link-mark" aria-hidden="true">ᚎ</span>Things tried out<span class="fam-link-count">37</span>
       </a></nav>
-    <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-21" data-commits="8979" data-rank="0">
+    <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-21" data-commits="8984" data-rank="0">
       <a class="repo-row" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1753,7 +1759,7 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">8,979<span class="repo-meta-unit"> Commits</span></span>
+          <span class="repo-stars">8,984<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-21">Sep 2026</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
@@ -2014,24 +2020,30 @@ body::after {
         <section id="object" class="section" aria-labelledby="heading-object">
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚃ</span>
-      <h2 class="section-title" id="heading-object">One in full</h2>
+      <h2 class="section-title" id="heading-object">Selected work</h2>
       
     </div>
-    <div class="object-grid">
-      <div class="object-meta-panel" aria-label="Almide">
-    <div class="om-head"><span class="om-family">Language design &amp; development</span></div>
-    <h3 class="om-name">Almide</h3>
-    <p class="readme-p">A language for writing and revising code with AI.</p>
-    <div><h4 class="readme-h2">The aim</h4><p class="readme-p">A statically typed language designed to keep code working after LLM edits. Type checking and diagnostics that suggest fixes support the next revision.</p></div>
-<div><h4 class="readme-h2">What I build</h4><p class="readme-p">The language implementation in Rust, together with its specification, grammar, standard library, editor support and runtimes.</p></div>
-<div><h4 class="readme-h2">Tools built with it</h4><p class="readme-p">I use Almide to build gramide for syntax trees, hew for reading code by structure, and porta for running agents in isolation.</p></div>
-    <div class="om-links"><a class="om-link" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">Source code</a><a class="om-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer">Language documentation</a></div>
-  </div>
+    <div class="object-grid showcase">
       <article class="readme-panel" aria-label="almide README">
       <figure class="readme-shot"><img src="img/plates/shared/almide/almide-lo.webp" width="640" height="269" alt="O6lvl4「almide」" loading="lazy" decoding="async"></figure>
       <h3 class="readme-h1">almide</h3>
       <p class="readme-p">A statically-typed language built so code survives LLM edits; compiles to native (via Rust) and WebAssembly</p>
       <h4 class="readme-h2">What it does</h4><ul class="readme-points"><li>Native and WebAssembly targets, byte-identical output</li><li>Compiler diagnostics that spell out the fix</li><li>Exhaustive match, effect fn, and fan concurrency</li></ul>
+      <div class="om-links"><a class="om-link" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">Source code</a><a class="om-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer">Documentation</a></div>
+    </article>
+      <article class="readme-panel" aria-label="porta README">
+      <figure class="readme-shot"><img src="img/plates/en/almide/porta-lo.webp" width="640" height="400" alt="O6lvl4「porta」" loading="lazy" decoding="async"></figure>
+      <h3 class="readme-h1">porta</h3>
+      <p class="readme-p">A secure MCP bridge that restricts filesystem, network and command access for AI agents and native commands</p>
+      <h4 class="readme-h2">What it does</h4><ul class="readme-points"><li>WASM sandbox via wasmtime for .wasm agents</li><li>OS-level restrictions via macOS sandbox-exec</li><li>Declarative setup with porta.toml and porta up</li></ul>
+      <div class="om-links"><a class="om-link" href="https://github.com/almide/porta" target="_blank" rel="noopener noreferrer">Source code</a></div>
+    </article>
+      <article class="readme-panel" aria-label="codopsy README">
+      <figure class="readme-shot"><img src="img/plates/en/O6lvl4/codopsy-lo.webp" width="640" height="400" alt="O6lvl4「codopsy」" loading="lazy" decoding="async"></figure>
+      <h3 class="readme-h1">codopsy</h3>
+      <p class="readme-p">AST-level code quality analyzer using tree-sitter for 35 languages, without executing code</p>
+      <h4 class="readme-h2">What it does</h4><ul class="readme-points"><li>182 lint rules across 35 languages</li><li>Cyclomatic and cognitive complexity scoring</li><li>CI flags: --diff, --no-degradation, --fail-on-warning</li></ul>
+      <div class="om-links"><a class="om-link" href="https://github.com/O6lvl4/codopsy" target="_blank" rel="noopener noreferrer">Source code</a></div>
     </article>
     </div>
   </section>
@@ -2164,37 +2176,37 @@ body::after {
       <div class="timeline-sub">Commits by org</div>
       <div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/almide" target="_blank" rel="noopener noreferrer">almide<span class="lbr-sub">28</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="11294" aria-valuemin="0" aria-valuemax="11294" aria-label="almide">
+        <div class="lbr-track" role="meter" aria-valuenow="11323" aria-valuemin="0" aria-valuemax="11323" aria-label="almide">
           <div class="lbr-fill" style="width:100.0%"></div>
         </div>
-        <span class="lbr-count" aria-hidden="true">11,294</span>
+        <span class="lbr-count" aria-hidden="true">11,323</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/O6lvl4" target="_blank" rel="noopener noreferrer">O6lvl4<span class="lbr-sub">111</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="1954" aria-valuemin="0" aria-valuemax="11294" aria-label="O6lvl4">
+        <div class="lbr-track" role="meter" aria-valuenow="1955" aria-valuemin="0" aria-valuemax="11323" aria-label="O6lvl4">
           <div class="lbr-fill" style="width:17.3%"></div>
         </div>
-        <span class="lbr-count" aria-hidden="true">1,954</span>
+        <span class="lbr-count" aria-hidden="true">1,955</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/Aid-On" target="_blank" rel="noopener noreferrer">Aid-On<span class="lbr-sub">87</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="670" aria-valuemin="0" aria-valuemax="11294" aria-label="Aid-On">
+        <div class="lbr-track" role="meter" aria-valuenow="670" aria-valuemin="0" aria-valuemax="11323" aria-label="Aid-On">
           <div class="lbr-fill" style="width:5.9%"></div>
         </div>
         <span class="lbr-count" aria-hidden="true">670</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/almide-graphics" target="_blank" rel="noopener noreferrer">almide-graphics<span class="lbr-sub">9</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="311" aria-valuemin="0" aria-valuemax="11294" aria-label="almide-graphics">
-          <div class="lbr-fill" style="width:2.8%"></div>
+        <div class="lbr-track" role="meter" aria-valuenow="311" aria-valuemin="0" aria-valuemax="11323" aria-label="almide-graphics">
+          <div class="lbr-fill" style="width:2.7%"></div>
         </div>
         <span class="lbr-count" aria-hidden="true">311</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/almd-mc" target="_blank" rel="noopener noreferrer">almd-mc<span class="lbr-sub">24</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="92" aria-valuemin="0" aria-valuemax="11294" aria-label="almd-mc">
+        <div class="lbr-track" role="meter" aria-valuenow="92" aria-valuemin="0" aria-valuemax="11323" aria-label="almd-mc">
           <div class="lbr-fill" style="width:0.8%"></div>
         </div>
         <span class="lbr-count" aria-hidden="true">92</span>
       </div><div class="lang-bar-row org-bar-row">
         <a class="lbr-name" href="https://github.com/almide-ai" target="_blank" rel="noopener noreferrer">almide-ai<span class="lbr-sub">3</span></a>
-        <div class="lbr-track" role="meter" aria-valuenow="48" aria-valuemin="0" aria-valuemax="11294" aria-label="almide-ai">
+        <div class="lbr-track" role="meter" aria-valuenow="48" aria-valuemin="0" aria-valuemax="11323" aria-label="almide-ai">
           <div class="lbr-fill" style="width:0.4%"></div>
         </div>
         <span class="lbr-count" aria-hidden="true">48</span>

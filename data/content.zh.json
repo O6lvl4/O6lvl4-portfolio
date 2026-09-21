@@ -61,8 +61,11 @@
   "sort_name": "按名称",
   "all": "全部",
   "object": "详看一件",
+  "showcase": "代表作品",
   "overview": "总体",
   "points": "功能",
+  "source": "源代码",
+  "docs": "文档",
   "topics": "话题",
   "links": "去处",
   "output": "输出",
@@ -150,7 +153,7 @@
    {
     "period": "2025年",
     "title": "开始了 36 个",
-    "lead": "llm-queue-dispatcher、llm-throttle、whenm、llmine 等 32 个",
+    "lead": "llm-queue-dispatcher、llm-throttle、whenm、templex 等 32 个",
     "tags": [
      "TypeScript",
      "JavaScript"
@@ -196,6 +199,11 @@
    "O6lvl4/codopsy",
    "O6lvl4/uimodulay"
   ],
+  "showcase": [
+   "almide/almide",
+   "almide/porta",
+   "O6lvl4/codopsy"
+  ],
   "panel": [
    {
     "key": "组织",
@@ -207,7 +215,7 @@
    },
    {
     "key": "最近更新",
-    "value": "almide · 2026年9月"
+    "value": "hew · 2026年9月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -226,7 +234,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "14,369",
+    "value": "14,399",
     "label": "提交"
    },
    {
@@ -362,12 +370,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11294,
+    "count": 11323,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1954,
+    "count": 1955,
     "of": 111
    },
    {
@@ -410,7 +418,7 @@
    },
    {
     "name": "2026",
-    "count": 13668
+    "count": 13698
    }
   ]
  },
@@ -426,7 +434,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "11,150",
+     "value": "11,173",
      "label": "提交"
     },
     {
@@ -441,7 +449,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11150
+     "count": 11173
     }
    ],
    "works": [
@@ -471,7 +479,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "8,979"
+       "value": "8,984"
       },
       {
        "label": "首次",
@@ -518,7 +526,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,443"
+       "value": "1,461"
       },
       {
        "label": "首次",
@@ -527,6 +535,10 @@
       {
        "label": "版本",
        "value": "v1.0.0"
+      },
+      {
+       "label": "星标",
+       "value": "1"
       }
      ],
      "links": [
@@ -536,7 +548,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-09-21"
      }
     },
     {
@@ -1534,7 +1546,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "847",
+     "value": "854",
      "label": "提交"
     },
     {
@@ -1553,7 +1565,7 @@
     },
     {
      "name": "2026",
-     "count": 831
+     "count": 838
     }
    ],
    "works": [
@@ -1583,7 +1595,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "154"
+       "value": "160"
       },
       {
        "label": "首次",
@@ -1908,7 +1920,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "48"
+       "value": "49"
       },
       {
        "label": "首次",
@@ -1926,7 +1938,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-09-21"
      }
     },
     {
@@ -2747,42 +2759,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/llmine",
-     "title": "llmine",
-     "titleEn": "从终端统一访问多种LLM的命令行工具",
-     "date": "2025年9月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/llmine",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "27"
-      },
-      {
-       "label": "首次",
-       "value": "2025年2月"
-      },
-      {
-       "label": "版本",
-       "value": "v1.0.6"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/llmine"
-      }
-     ],
-     "order": {
-      "date": "2025-09-21"
-     }
-    },
-    {
-     "image": "",
      "id": "Aid-On/templex",
      "title": "templex",
      "titleEn": "用AI从文本提取写作模板并生成新文章的库",
@@ -2896,6 +2872,42 @@
      ],
      "order": {
       "date": "2026-06-11"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/llmine",
+     "title": "llmine",
+     "titleEn": "从终端统一访问多种LLM的命令行工具",
+     "date": "2025年9月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/llmine",
+     "tags": [
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "27"
+      },
+      {
+       "label": "首次",
+       "value": "2025年2月"
+      },
+      {
+       "label": "版本",
+       "value": "v1.0.6"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/llmine"
+      }
+     ],
+     "order": {
+      "date": "2025-09-21"
      }
     },
     {

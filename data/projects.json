@@ -426,12 +426,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 48,
+  "commits": 49,
   "years": {
-   "2026": 48
+   "2026": 49
   },
   "first": "2026-09-06",
-  "last": "2026-09-20",
+  "last": "2026-09-21",
   "tag": "v0.4.17",
   "license": "NOASSERTION",
   "topics": [],
@@ -693,34 +693,6 @@
    "code": "GitHub Issues ──┐\nHackerNews ─────┤                  ┌──────────┐    ┌──────────┐    ┌────────┐\nGHSA ───────────┼─→ Pre-filter ──→ │ LLM      │──→ │ Scorer   │──→ │ Notify │\nOSV.dev ────────┘   (96% reject)   │ Analysis │    │ (vs deps)│    │        │\n                                   └──────────┘    └──────────┘    └────────┘"
   },
   "score": 8.1
- },
- {
-  "full": "O6lvl4/llmine",
-  "owner": "O6lvl4",
-  "name": "llmine",
-  "url": "https://github.com/O6lvl4/llmine",
-  "lead": "A powerful CLI tool that provides unified access to various LLMs (ChatGPT, Claude, Gemini, etc.) from your terminal. Seamlessly interact with multiple AI providers including OpenAI, Azure OpenAI, Anthropic (Claude), AWS Bedrock, and Ollama through a single, elegant command-line interface.",
-  "heading": "llmine",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript"
-  ],
-  "stars": 0,
-  "commits": 27,
-  "years": {
-   "2025": 27
-  },
-  "first": "2025-02-26",
-  "last": "2025-09-21",
-  "tag": "v1.0.6",
-  "license": "MIT",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "npm install -g llmine\n```\n\n### Install from Source\n\n#### 1. Clone the repository"
-  },
-  "score": 7.5
  },
  {
   "full": "O6lvl4/gv",
@@ -1110,6 +1082,34 @@
    "code": "# 例: macOS ARM64\ntar xzf hello-macos-arm64.tar.gz\n./hello-macos-arm64"
   },
   "score": 7
+ },
+ {
+  "full": "O6lvl4/llmine",
+  "owner": "O6lvl4",
+  "name": "llmine",
+  "url": "https://github.com/O6lvl4/llmine",
+  "lead": "A powerful CLI tool that provides unified access to various LLMs (ChatGPT, Claude, Gemini, etc.) from your terminal. Seamlessly interact with multiple AI providers including OpenAI, Azure OpenAI, Anthropic (Claude), AWS Bedrock, and Ollama through a single, elegant command-line interface.",
+  "heading": "llmine",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript"
+  ],
+  "stars": 0,
+  "commits": 27,
+  "years": {
+   "2025": 27
+  },
+  "first": "2025-02-26",
+  "last": "2025-09-21",
+  "tag": "v1.0.6",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "npm install -g llmine\n```\n\n### Install from Source\n\n#### 1. Clone the repository"
+  },
+  "score": 6.5
  },
  {
   "full": "O6lvl4/treesrc",
@@ -3143,9 +3143,9 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 8979,
+  "commits": 8984,
   "years": {
-   "2026": 8979
+   "2026": 8984
   },
   "first": "2026-03-07",
   "last": "2026-09-21",
@@ -3181,9 +3181,9 @@
    "Almide"
   ],
   "stars": 2,
-  "commits": 154,
+  "commits": 160,
   "years": {
-   "2026": 154
+   "2026": 160
   },
   "first": "2026-04-07",
   "last": "2026-09-21",
@@ -3205,7 +3205,7 @@
    "lang": "bash",
    "code": "curl -fsSL https://raw.githubusercontent.com/almide/porta/main/scripts/install.sh | bash"
   },
-  "score": 22.1
+  "score": 22.2
  },
  {
   "full": "almide/als",
@@ -3220,13 +3220,13 @@
    "Rust",
    "Python"
   ],
-  "stars": 0,
-  "commits": 1443,
+  "stars": 1,
+  "commits": 1461,
   "years": {
-   "2026": 1443
+   "2026": 1461
   },
   "first": "2026-03-07",
-  "last": "2026-09-20",
+  "last": "2026-09-21",
   "tag": "v1.0.0",
   "license": "NOASSERTION",
   "topics": [
@@ -3240,7 +3240,7 @@
    "lang": "bash",
    "code": "   bash scripts/check-contracts.sh            --impl-root /path/to/almide\n   bash scripts/check-als-element-coverage.sh --impl-root /path/to/almide"
   },
-  "score": 15
+  "score": 20
  },
  {
   "full": "almide/docs",

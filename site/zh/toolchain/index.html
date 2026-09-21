@@ -972,6 +972,12 @@ a { color: inherit; text-decoration: none; }
 }
 .om-link:hover { color: var(--fg); border-color: var(--red); }
 
+/* the front page's cards: several works side by side, each carrying its own way out, the links of
+   every card on one line at the foot however long the card above them runs */
+.object-grid.showcase { grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); align-items: stretch; }
+.showcase .readme-panel { display: flex; flex-direction: column; }
+.showcase .om-links { margin-top: auto; padding-top: 1.5rem; }
+
 /* Readme */
 .readme-panel {
   border: 1px solid var(--border);
@@ -1717,6 +1723,7 @@ body::after {
       <h3 class="readme-h1">qusp</h3>
       <p class="readme-p">由qusp.toml驱动的多语言工具链管理器</p>
       <h4 class="readme-h2">功能</h4><ul class="readme-points"><li>23个原生Rust后端并行安装</li><li>符号链接、qusp run、shell钩子</li><li>每次安装均校验哈希</li></ul>
+      
     </article>
     </div>
   </section>

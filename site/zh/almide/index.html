@@ -972,6 +972,12 @@ a { color: inherit; text-decoration: none; }
 }
 .om-link:hover { color: var(--fg); border-color: var(--red); }
 
+/* the front page's cards: several works side by side, each carrying its own way out, the links of
+   every card on one line at the foot however long the card above them runs */
+.object-grid.showcase { grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); align-items: stretch; }
+.showcase .readme-panel { display: flex; flex-direction: column; }
+.showcase .om-links { margin-top: auto; padding-top: 1.5rem; }
+
 /* Readme */
 .readme-panel {
   border: 1px solid var(--border);
@@ -1690,7 +1696,7 @@ body::after {
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚁ</span>
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">17</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">11,150</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">7</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">年份</div></div></div>
+    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">17</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">11,173</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">7</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">年份</div></div></div>
     
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
@@ -1707,7 +1713,7 @@ body::after {
     </div>
     <h3 class="om-name">almide</h3>
     <p class="om-path">almide<span class="om-slash">/</span>almide</p>
-      <dl class="om-figures"><div class="om-fig"><dd class="om-fig-val">8,979</dd><dt class="om-fig-key">提交</dt></div><div class="om-fig"><dd class="om-fig-val">2026年3月</dd><dt class="om-fig-key">首次</dt></div><div class="om-fig"><dd class="om-fig-val">v0.60.0-rc3</dd><dt class="om-fig-key">版本</dt></div><div class="om-fig"><dd class="om-fig-val">34</dd><dt class="om-fig-key">星标</dt></div></dl>
+      <dl class="om-figures"><div class="om-fig"><dd class="om-fig-val">8,984</dd><dt class="om-fig-key">提交</dt></div><div class="om-fig"><dd class="om-fig-val">2026年3月</dd><dt class="om-fig-key">首次</dt></div><div class="om-fig"><dd class="om-fig-val">v0.60.0-rc3</dd><dt class="om-fig-key">版本</dt></div><div class="om-fig"><dd class="om-fig-val">34</dd><dt class="om-fig-key">星标</dt></div></dl>
       <p class="om-updated">更新<span class="om-updated-val">2026年9月</span></p>
     <ul class="om-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
     <div class="om-links"><a class="om-link" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">仓库</a><a class="om-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer">站点</a></div>
@@ -1717,6 +1723,7 @@ body::after {
       <h3 class="readme-h1">almide</h3>
       <p class="readme-p">为LLM编辑后代码仍可用而设计的静态类型语言</p>
       <h4 class="readme-h2">功能</h4><ul class="readme-points"><li>编译为原生(经Rust)和WebAssembly</li><li>给出修复方案的编译器诊断</li><li>原生与wasm输出字节一致</li></ul>
+      
     </article>
     </div>
   </section>
@@ -1731,7 +1738,7 @@ body::after {
       <div class="sort-bar" role="group" aria-label="排序"><button type="button" class="sort-btn active" data-sort="date" aria-pressed="true">按更新</button><button type="button" class="sort-btn" data-sort="commits" aria-pressed="false">按提交</button><button type="button" class="sort-btn" data-sort="format" aria-pressed="false">按语言</button><button type="button" class="sort-btn" data-sort="name" aria-pressed="false">按名称</button></div>
       <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="Racket" aria-pressed="false"><span class="lang-dot" style="background:#3c5caa;width:5px;height:5px" aria-hidden="true"></span>Racket</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="C" aria-pressed="false"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</button><button type="button" class="lang-chip" data-lang="HTML" aria-pressed="false"><span class="lang-dot" style="background:#e34c26;width:5px;height:5px" aria-hidden="true"></span>HTML</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button></div>
     </div>
-    <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-21" data-commits="8979" data-rank="0">
+    <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-21" data-commits="8984" data-rank="0">
       <a class="repo-row" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1742,7 +1749,7 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">8,979<span class="repo-meta-unit"> 提交</span></span>
+          <span class="repo-stars">8,984<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-09-21">2026年9月</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
@@ -1750,7 +1757,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="als" data-date="2026-09-20" data-commits="1443" data-rank="1">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="als" data-date="2026-09-21" data-commits="1461" data-rank="1">
       <a class="repo-row" href="https://github.com/almide/als" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1761,8 +1768,8 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Python</li><li class="repo-topic">almide</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">1,443<span class="repo-meta-unit"> 提交</span></span>
-          <time class="repo-date" datetime="2026-09-20">2026年9月</time>
+          <span class="repo-stars">1,461<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-09-21">2026年9月</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 

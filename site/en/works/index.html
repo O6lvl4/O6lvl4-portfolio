@@ -972,6 +972,12 @@ a { color: inherit; text-decoration: none; }
 }
 .om-link:hover { color: var(--fg); border-color: var(--red); }
 
+/* the front page's cards: several works side by side, each carrying its own way out, the links of
+   every card on one line at the foot however long the card above them runs */
+.object-grid.showcase { grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); align-items: stretch; }
+.showcase .readme-panel { display: flex; flex-direction: column; }
+.showcase .om-links { margin-top: auto; padding-top: 1.5rem; }
+
 /* Readme */
 .readme-panel {
   border: 1px solid var(--border);
@@ -1775,7 +1781,7 @@ body::after {
     <div class="work-feedback"><p id="work-count" role="status" aria-live="polite" aria-atomic="true" data-unit="projects"></p><button id="work-reset" type="button" disabled>Reset filters</button></div>
   </div>
   <div class="work-empty" hidden><h3>No projects match your search.</h3><p>Try a shorter keyword or change the field and language filters.</p></div>
-    <ul id="project-results" class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-21" data-commits="8979" data-rank="0">
+    <ul id="project-results" class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-09-21" data-commits="8984" data-rank="0">
       <a class="repo-row" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1786,7 +1792,7 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">8,979<span class="repo-meta-unit"> Commits</span></span>
+          <span class="repo-stars">8,984<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-21">Sep 2026</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
@@ -1794,7 +1800,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="als" data-date="2026-09-20" data-commits="1443" data-rank="1">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="als" data-date="2026-09-21" data-commits="1461" data-rank="1">
       <a class="repo-row" href="https://github.com/almide/als" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1805,8 +1811,8 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Python</li><li class="repo-topic">almide</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">1,443<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-09-20">Sep 2026</time>
+          <span class="repo-stars">1,461<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-09-21">Sep 2026</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
@@ -2307,7 +2313,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Python" data-name="porta" data-date="2026-09-21" data-commits="154" data-rank="28">
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Python" data-name="porta" data-date="2026-09-21" data-commits="160" data-rank="28">
       <a class="repo-row" href="https://github.com/almide/porta" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2318,7 +2324,7 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Almide</li><li class="repo-topic">ai-agent</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">154<span class="repo-meta-unit"> Commits</span></span>
+          <span class="repo-stars">160<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-09-21">Sep 2026</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:#3572a5;width:5px;height:5px" aria-hidden="true"></span>Python</span>
@@ -2459,7 +2465,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="hew" data-date="2026-09-20" data-commits="48" data-rank="36">
+    </li><li class="repo-item" data-org="agent-tools" data-lang="Almide" data-name="hew" data-date="2026-09-21" data-commits="49" data-rank="36">
       <a class="repo-row" href="https://github.com/O6lvl4/hew" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2470,8 +2476,8 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Python</li><li class="repo-topic">Shell</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">48<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-09-20">Sep 2026</time>
+          <span class="repo-stars">49<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-09-21">Sep 2026</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
@@ -2877,26 +2883,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llmine" data-date="2025-09-21" data-commits="27" data-rank="58">
-      <a class="repo-row" href="https://github.com/O6lvl4/llmine" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">llmine</span>
-            <span class="repo-org-tag">O6lvl4</span>
-          </div>
-          <p class="repo-desc">A CLI tool giving unified terminal access to OpenAI, Azure, Claude, Bedrock and Ollama LLMs</p>
-          
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">27<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2025-09-21">Sep 2025</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="templex" data-date="2026-06-12" data-commits="24" data-rank="59">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="templex" data-date="2026-06-12" data-commits="24" data-rank="58">
       <a class="repo-row" href="https://github.com/Aid-On/templex" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2915,7 +2902,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="fractop" data-date="2026-06-10" data-commits="19" data-rank="60">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="fractop" data-date="2026-06-10" data-commits="19" data-rank="59">
       <a class="repo-row" href="https://github.com/Aid-On/fractop" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2934,7 +2921,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="iteratop" data-date="2026-06-11" data-commits="18" data-rank="61">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="iteratop" data-date="2026-06-11" data-commits="18" data-rank="60">
       <a class="repo-row" href="https://github.com/Aid-On/iteratop" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2947,6 +2934,25 @@ body::after {
         <div class="repo-meta">
           <span class="repo-stars">18<span class="repo-meta-unit"> Commits</span></span>
           <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+
+          </div>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llmine" data-date="2025-09-21" data-commits="27" data-rank="61">
+      <a class="repo-row" href="https://github.com/O6lvl4/llmine" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">llmine</span>
+            <span class="repo-org-tag">O6lvl4</span>
+          </div>
+          <p class="repo-desc">A CLI tool giving unified terminal access to OpenAI, Azure, Claude, Bedrock and Ollama LLMs</p>
+          
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">27<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2025-09-21">Sep 2025</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
