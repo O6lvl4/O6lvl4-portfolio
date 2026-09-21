@@ -21,7 +21,7 @@ const ORGS = [
   { id: "aid-on", owner: "Aid-On" },
 ];
 
-/** The work put forward: shown as plates, and the first one opened in full. */
+/** The work put forward: opened in full wherever it appears, and named on the share card. */
 const FEATURED = [
   "almide/almide",
   "O6lvl4/gramide",
@@ -30,6 +30,9 @@ const FEATURED = [
   "O6lvl4/codopsy",
   "O6lvl4/uimodulay",
 ];
+
+/** The works the front page opens as cards: the language, and what it is used to build. */
+const SHOWCASE = ["almide/almide", "almide/porta", "O6lvl4/codopsy"];
 
 const LANGS = [
   { id: "en", label: "English" },
@@ -50,6 +53,7 @@ function plateOf(p) {
 /** The works a page opens in full: the ones put forward, and the first of every family. */
 const OPENED = new Set([
   ...FEATURED,
+  ...SHOWCASE,
   ...FAMILIES.map((f) => {
     const list = projects.filter((p) => familyOf(p).id === f.id);
     return [...list].sort((a, b) => b.score - a.score)[0]?.full;
@@ -251,6 +255,7 @@ const content = {
     stack,
     timeline,
     featured: FEATURED,
+    showcase: SHOWCASE,
     panel,
     figures,
     langs: langBars,

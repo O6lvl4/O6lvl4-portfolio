@@ -240,7 +240,18 @@ function metaPanel(ctx: PageCtx, work: Work, owner: Series): string {
     </div>`;
 }
 
-function readmePanel(ctx: PageCtx, work: Work): string {
+/** Where a card sends you, named for what is there: the source, and the docs when the site is docs. */
+function cardLinks(ctx: PageCtx, work: Work): string {
+  const links = (work.links ?? []).map((l) => {
+    const name = /^https:\/\/github\.com\//.test(l.href)
+      ? label(ctx, "source", "Source code")
+      : /\/docs\b/.test(l.href) ? label(ctx, "docs", "Documentation") : l.label;
+    return `<a class="om-link" href="${esc(l.href)}" target="_blank" rel="noopener noreferrer">${esc(name)}<span aria-hidden="true"> ↗</span></a>`;
+  });
+  return links.length ? `<div class="om-links">${links.join("")}</div>` : "";
+}
+
+function readmePanel(ctx: PageCtx, work: Work, withLinks = false): string {
   const readme = work.readme;
   const shot = work.image ? `<figure class="readme-shot">${imgTag(ctx, work, "lo", { loading: "lazy", decoding: "async" })}</figure>` : "";
   const points = readme?.points ?? [];
@@ -249,6 +260,7 @@ function readmePanel(ctx: PageCtx, work: Work): string {
       <h3 class="readme-h1">${esc(work.title)}</h3>
       <p class="readme-p">${esc(readme?.lead ?? work.titleEn)}</p>
       ${points.length ? `<h4 class="readme-h2">${esc(label(ctx, "points", "What it does"))}</h4><ul class="readme-points">${points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}
+      ${withLinks ? cardLinks(ctx, work) : ""}
     </article>`;
 }
 
@@ -264,6 +276,18 @@ export function objectFor(ctx: PageCtx, at: number, chosen?: { work: Work; owner
   </section>`;
 }
 
+/**
+ * The front page's works, opened as cards side by side: what each one is, what it does, and where
+ * it lives. A family page still opens its one work in full with objectFor.
+ */
 export function objectSection(ctx: PageCtx): string {
-  return objectFor(ctx, 2, pick(ctx, ctx.site.content.landing?.featured ?? [])[0]);
+  const landing = ctx.site.content.landing;
+  const chosen = pick(ctx, landing?.showcase ?? (landing?.featured ?? []).slice(0, 1));
+  if (!chosen.length) return "";
+  return `<section id="object" class="section" aria-labelledby="heading-object">
+    ${head({ at: 2, id: "object", title: label(ctx, "showcase", label(ctx, "object", "Selected work")) })}
+    <div class="object-grid showcase">
+      ${chosen.map((c) => readmePanel(ctx, c.work, true)).join("\n      ")}
+    </div>
+  </section>`;
 }

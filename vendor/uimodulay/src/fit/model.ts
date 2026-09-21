@@ -110,6 +110,8 @@ export interface Landing {
   timeline?: Period[];
   /** work ids to put forward, e.g. ["O6lvl4/hew", "almide/almide"] */
   featured?: string[];
+  /** work ids the front page opens as cards side by side; the first featured work when absent */
+  showcase?: string[];
   /** the index a reader can check the whole body against: key, value, and a meter where it helps */
   panel?: { key: string; value: string; fill?: number }[];
   /** the figures of the whole, large */
