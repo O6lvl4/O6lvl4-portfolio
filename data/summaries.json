@@ -27,53 +27,53 @@
  },
  "O6lvl4/hew": {
   "ja": {
-   "what": "コーディングエージェント向けの構造認識型cat/grep/sed代替ツール",
+   "what": "コードを、モデルが読むべき形で読む。エージェント向けの cat/grep/sed",
    "points": [
-    "--symbolで関数や型を名前指定",
-    "行番号付き出力とgrepの折り畳み",
-    "6言語をgramide文法で解析"
+    "関数や型を名前で指定すると、その部分だけを返す",
+    "行番号とサイズ付きで、頼んでいない行は読ませない",
+    "grep は重複をたたみ、どの関数の中かを添える"
    ]
   },
   "en": {
-   "what": "Structure-aware cat/grep/sed replacement for coding agents, returning numbered, sized code slices.",
+   "what": "Read code the way a model should: cat, grep and sed for coding agents",
    "points": [
-    "--symbol cuts out a function or type by name",
-    "Numbered lines, clipping, gap markers",
-    "grep folds repeats, names enclosing symbol"
+    "Name a function or type, get exactly that back",
+    "Numbered, sized output: no line the agent did not ask for",
+    "grep folds repeats and names the function each match sits in"
    ]
   },
   "zh": {
-   "what": "面向编码代理的结构感知cat/grep/sed替代工具",
+   "what": "按模型该读的方式读代码：面向编程智能体的 cat/grep/sed",
    "points": [
-    "--symbol按名称提取函数",
-    "带行号的输出与裁剪",
-    "grep折叠重复并标注符号"
+    "指定函数或类型名，只返回那一段",
+    "带行号和大小，不让智能体读没要的行",
+    "grep 折叠重复，并标出所在的函数"
    ]
   }
  },
  "almide/almide": {
   "ja": {
-   "what": "LLMによる編集後も動くコードを目指す静的型付け言語",
+   "what": "AIに何度書き換えられても、コードが通り続ける言語",
    "points": [
-    "Rust経由のネイティブとWebAssemblyへコンパイル",
-    "修正案を示す網羅性チェックの診断",
-    "ネイティブとwasmで出力がバイト単位で一致"
+    "追う指標はひとつ、AIの編集を経ても通るコードの割合",
+    "エラーは、直し方をひとつに絞って示す",
+    "Rust経由のネイティブとWasm、出力はバイト単位で一致"
    ]
   },
   "en": {
-   "what": "A statically-typed language built so code survives LLM edits; compiles to native (via Rust) and WebAssembly",
+   "what": "A statically typed language built for one thing: code that survives AI edits",
    "points": [
-    "Native and WebAssembly targets, byte-identical output",
-    "Compiler diagnostics that spell out the fix",
-    "Exhaustive match, effect fn, and fan concurrency"
+    "One metric: how much code still passes after an AI's edits",
+    "Diagnostics that name the one fix, not a list of guesses",
+    "Native via Rust and WebAssembly, byte-identical output"
    ]
   },
   "zh": {
-   "what": "为LLM编辑后代码仍可用而设计的静态类型语言",
+   "what": "无论被AI改写多少次，代码都能继续通过的语言",
    "points": [
-    "编译为原生(经Rust)和WebAssembly",
-    "给出修复方案的编译器诊断",
-    "原生与wasm输出字节一致"
+    "只追一个指标：经AI修改后仍能通过的代码比例",
+    "报错时把修法收敛到唯一一种",
+    "经Rust编译为原生与Wasm，输出逐字节一致"
    ]
   }
  },
@@ -469,27 +469,27 @@
  },
  "O6lvl4/codopsy": {
   "ja": {
-   "what": "tree-sitterで35言語を静的解析するコード品質アナライザ",
+   "what": "35言語のコードを、ひとつの物差しで採点する",
    "points": [
-    "182のlintルールと複雑度計測",
-    "JSONレポートとA〜Fのスコア",
-    "--diffやCI向けの失敗条件指定"
+    "182 のルールと複雑度を、A〜F の評価にまとめる",
+    "コードは実行しない。コンパイラも言語サーバーも要らない単一バイナリ",
+    "差分だけを見て、品質が下がれば CI を落とす"
    ]
   },
   "en": {
-   "what": "AST-level code quality analyzer using tree-sitter for 35 languages, without executing code",
+   "what": "Static analysis that scores 35 languages on one scale",
    "points": [
-    "182 lint rules across 35 languages",
-    "Cyclomatic and cognitive complexity scoring",
-    "CI flags: --diff, --no-degradation, --fail-on-warning"
+    "182 rules and complexity, summed up as a grade from A to F",
+    "Never runs your code: one binary, no compilers or language servers",
+    "Checks only the diff, and fails CI when quality drops"
    ]
   },
   "zh": {
-   "what": "基于tree-sitter的35种语言AST代码质量分析器",
+   "what": "用同一把尺子，为35种语言的代码打分",
    "points": [
-    "182条lint规则",
-    "圈复杂度与认知复杂度",
-    "JSON报告与CI失败选项"
+    "182条规则与复杂度，汇总成A到F的评分",
+    "从不执行代码：单一二进制，无需编译器或语言服务器",
+    "只看差异，质量一下降就让CI失败"
    ]
   }
  },
@@ -2991,27 +2991,27 @@
  },
  "almide/porta": {
   "ja": {
-   "what": "AIエージェント向けにファイルシステムやネットワークを制限する安全なMCPブリッジ",
+   "what": "許可した権限だけで、エージェントを動かす",
    "points": [
-    "WASMサンドボックスで隔離実行",
-    "macOS sandbox-execによるOS制限",
-    "porta.tomlによる宣言的設定"
+    "いま使っている CLI エージェントに、OS レベルの制限をかける",
+    "自作のエージェントは WASM ランタイムで隔離して動かす",
+    "設定は porta.toml ひとつ。Docker は要らない"
    ]
   },
   "en": {
-   "what": "A secure MCP bridge that restricts filesystem, network and command access for AI agents and native commands",
+   "what": "Run an agent with only the permissions you actually granted it",
    "points": [
-    "WASM sandbox via wasmtime for .wasm agents",
-    "OS-level restrictions via macOS sandbox-exec",
-    "Declarative setup with porta.toml and porta up"
+    "OS-enforced limits for the CLI agents you already use",
+    "A WASM runtime for the agents you build yourself",
+    "One porta.toml, and no Docker"
    ]
   },
   "zh": {
-   "what": "限制AI智能体文件与网络访问的安全MCP桥",
+   "what": "只用你授予的权限来运行智能体",
    "points": [
-    "基于wasmtime的WASM沙箱",
-    "macOS sandbox-exec系统级限制",
-    "porta.toml声明式配置"
+    "为正在用的 CLI 智能体加上操作系统级限制",
+    "自己写的智能体在 WASM 运行时中隔离执行",
+    "一个 porta.toml 搞定，不需要 Docker"
    ]
   }
  },
