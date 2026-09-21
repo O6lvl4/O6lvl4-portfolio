@@ -3147,12 +3147,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 8985,
+  "commits": 9108,
   "years": {
-   "2026": 8985
+   "2026": 9108
   },
   "first": "2026-03-07",
-  "last": "2026-09-21",
+  "last": "2026-09-22",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3177,7 +3177,6 @@
   "name": "porta",
   "url": "https://github.com/almide/porta",
   "lead": "Sandboxed runtime for AI agents. WASM isolation + OS-level sandbox. Run Claude Code, Python, or any command with filesystem/network restrictions. No Docker required.",
-  "heading": "Set your model endpoint and name in examples/chat-agent/agent.toml",
   "language": "Python",
   "languages": [
    "Python",
@@ -3185,12 +3184,12 @@
    "Almide"
   ],
   "stars": 2,
-  "commits": 160,
+  "commits": 179,
   "years": {
-   "2026": 160
+   "2026": 179
   },
   "first": "2026-04-07",
-  "last": "2026-09-21",
+  "last": "2026-09-22",
   "tag": "v0.4.0",
   "license": "Apache-2.0",
   "topics": [
@@ -3207,10 +3206,10 @@
   "og": "https://repository-images.githubusercontent.com/1203375793/236295a7-4483-40ad-8bf9-93194e0606cc",
   "plate": "og",
   "sample": {
-   "lang": "bash",
-   "code": "curl -fsSL https://raw.githubusercontent.com/almide/porta/main/scripts/install.sh | bash"
+   "lang": "text",
+   "code": "$ porta run sh -v ./work --read-policy strict --timeout 5 -- …\n  wrote ./work/out.txt              legitimate work goes through\n  read the SSH key       → refused\n  write outside ./work   → refused\n  # a hung command is killed at the deadline → exit 124"
   },
-  "score": 22.2
+  "score": 22.6
  },
  {
   "full": "almide/als",
