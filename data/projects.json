@@ -427,16 +427,17 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 49,
+  "commits": 50,
   "years": {
-   "2026": 49
+   "2026": 50
   },
   "first": "2026-09-06",
   "last": "2026-09-21",
   "tag": "v0.4.17",
   "license": "NOASSERTION",
   "topics": [],
-  "plate": "code",
+  "og": "https://repository-images.githubusercontent.com/1358833168/97f03155-a39e-4a50-9760-a4f56cd011c7",
+  "plate": "og",
   "sample": {
    "lang": "",
    "code": "hew src/lower.rs --symbol lower_match       one function, found by name\nhew src/lower.rs --grep \"Expr::Match\" --around 4   matches with context, labelled by enclosing fn\nhew src/lower.rs --lines 120-160            a range, numbered\nhew outline src/lower.rs                    the table of contents\nhew grep \"unwrap()\" src                     grep that folds repeats and names the symbol\nhew tree src --depth 2                      a directory, skipping vcs / build / deps"
@@ -3146,9 +3147,9 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 8984,
+  "commits": 8985,
   "years": {
-   "2026": 8984
+   "2026": 8985
   },
   "first": "2026-03-07",
   "last": "2026-09-21",

@@ -201,6 +201,7 @@
   ],
   "showcase": [
    "almide/almide",
+   "O6lvl4/hew",
    "almide/porta",
    "O6lvl4/codopsy"
   ],
@@ -234,7 +235,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "14,399",
+    "value": "14,401",
     "label": "提交"
    },
    {
@@ -370,12 +371,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11323,
+    "count": 11324,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1955,
+    "count": 1956,
     "of": 111
    },
    {
@@ -418,7 +419,7 @@
    },
    {
     "name": "2026",
-    "count": 13698
+    "count": 13700
    }
   ]
  },
@@ -434,7 +435,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "11,173",
+     "value": "11,174",
      "label": "提交"
     },
     {
@@ -449,7 +450,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11173
+     "count": 11174
     }
    ],
    "works": [
@@ -479,7 +480,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "8,984"
+       "value": "8,985"
       },
       {
        "label": "首次",
@@ -1546,7 +1547,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "854",
+     "value": "855",
      "label": "提交"
     },
     {
@@ -1565,7 +1566,7 @@
     },
     {
      "name": "2026",
-     "count": 838
+     "count": 839
     }
    ],
    "works": [
@@ -1896,7 +1897,7 @@
      }
     },
     {
-     "image": "plates/zh/O6lvl4/hew.jpg",
+     "image": "plates/shared/O6lvl4/hew.jpg",
      "readme": {
       "lead": "面向编码代理的结构感知cat/grep/sed替代工具",
       "points": [
@@ -1920,7 +1921,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "49"
+       "value": "50"
       },
       {
        "label": "首次",
