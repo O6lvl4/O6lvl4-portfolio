@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "262 repos",
+  "life": "175 repos",
   "avatar": "assets/avatar.png",
   "role": "从语言开始，构建开发工具。",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公开仓库 262 个",
+  "kicker": "公开仓库 175 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 262 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
+  "note": "这一页并列了 175 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
   "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
@@ -118,20 +118,20 @@
    {
     "heading": "常写的语言",
     "items": [
-     "Almide（137）",
-     "JavaScript（75）",
-     "TypeScript（57）",
-     "HTML（29）",
-     "Shell（28）"
+     "Almide（85）",
+     "TypeScript（31）",
+     "JavaScript（30）",
+     "Python（25）",
+     "Shell（25）"
     ]
    },
    {
     "heading": "其他",
     "items": [
-     "Python",
-     "CSS",
+     "HTML",
      "Rust",
      "Go",
+     "CSS",
      "C",
      "Lean",
      "Ruby"
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "开始了 201 个",
-    "lead": "almide、porta、als、ccgrid 等 197 个",
+    "title": "开始了 139 个",
+    "lead": "almide、porta、als、ccgrid 等 135 个",
     "tags": [
      "Rust",
      "Python",
@@ -152,21 +152,21 @@
    },
    {
     "period": "2025年",
-    "title": "开始了 36 个",
-    "lead": "llm-queue-dispatcher、llm-throttle、whenm、templex 等 32 个",
+    "title": "开始了 14 个",
+    "lead": "igloc、llmine、treesrc、craftsman 等 10 个",
     "tags": [
-     "TypeScript",
-     "JavaScript"
+     "Go",
+     "TypeScript"
     ]
    },
    {
     "period": "2024年",
-    "title": "开始了 10 个",
-    "lead": "aid-on-ui-system、aid-on-js-training、sandbox-golang-cli、ts-react-tailwindcss-sandbox 等 6 个",
+    "title": "开始了 7 个",
+    "lead": "sandbox-golang-cli、ts-react-tailwindcss-sandbox、ts-tsnode-sandbox、zod-to-markdown 等 3 个",
     "tags": [
+     "Go",
      "TypeScript",
-     "JavaScript",
-     "Go"
+     "JavaScript"
     ]
    },
    {
@@ -208,7 +208,7 @@
   "panel": [
    {
     "key": "组织",
-    "value": "6"
+    "value": "5"
    },
    {
     "key": "首次提交",
@@ -220,26 +220,26 @@
    },
    {
     "key": "用 Almide 写的比例",
-    "value": "46%",
-    "fill": 0.46
+    "value": "39%",
+    "fill": 0.39
    },
    {
     "key": "2026 年的提交",
-    "value": "95%",
-    "fill": 0.95
+    "value": "98%",
+    "fill": 0.98
    }
   ],
   "figures": [
    {
-    "value": "262",
+    "value": "175",
     "label": "公开仓库"
    },
    {
-    "value": "14,543",
+    "value": "14,159",
     "label": "提交"
    },
    {
-    "value": "19",
+    "value": "18",
     "label": "语言"
    },
    {
@@ -250,18 +250,13 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 121,
+    "count": 69,
     "color": "currentColor"
    },
    {
     "name": "TypeScript",
-    "count": 48,
+    "count": 26,
     "color": "#3178c6"
-   },
-   {
-    "name": "JavaScript",
-    "count": 18,
-    "color": "#f1e05a"
    },
    {
     "name": "Go",
@@ -274,14 +269,19 @@
     "color": "#dea584"
    },
    {
-    "name": "HTML",
+    "name": "JavaScript",
     "count": 10,
-    "color": "#e34c26"
+    "color": "#f1e05a"
    },
    {
     "name": "Python",
-    "count": 9,
+    "count": 8,
     "color": "#3572a5"
+   },
+   {
+    "name": "HTML",
+    "count": 8,
+    "color": "#e34c26"
    },
    {
     "name": "Lean",
@@ -307,11 +307,6 @@
     "name": "Lua",
     "count": 2,
     "color": "#000080"
-   },
-   {
-    "name": "Swift",
-    "count": 2,
-    "color": "#f05138"
    },
    {
     "name": "Racket",
@@ -362,27 +357,18 @@
    {
     "name": "almd-mc",
     "count": 24
-   },
-   {
-    "name": "Aid-On",
-    "count": 87
    }
   ],
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11466,
+    "count": 11750,
     "of": 28
    },
    {
     "name": "O6lvl4",
     "count": 1956,
     "of": 111
-   },
-   {
-    "name": "Aid-On",
-    "count": 670,
-    "of": 87
    },
    {
     "name": "almide-graphics",
@@ -396,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 48,
+    "count": 50,
     "of": 3
    }
   ],
@@ -411,15 +397,15 @@
    },
    {
     "name": "2024",
-    "count": 89
+    "count": 24
    },
    {
     "name": "2025",
-    "count": 549
+    "count": 162
    },
    {
     "name": "2026",
-    "count": 13842
+    "count": 13910
    }
   ]
  },
@@ -435,7 +421,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "11,297",
+     "value": "11,555",
      "label": "提交"
     },
     {
@@ -450,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11297
+     "count": 11555
     }
    ],
    "works": [
@@ -480,7 +466,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "9,108"
+       "value": "9,316"
       },
       {
        "label": "首次",
@@ -527,7 +513,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,461"
+       "value": "1,482"
       },
       {
        "label": "首次",
@@ -549,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-21"
+      "date": "2026-09-22"
      }
     },
     {
@@ -694,7 +680,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "25"
+       "value": "28"
       },
       {
        "label": "首次",
@@ -702,7 +688,7 @@
       },
       {
        "label": "版本",
-       "value": "v0.4.0"
+       "value": "v0.4.1"
       }
      ],
      "links": [
@@ -712,7 +698,46 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
+      "date": "2026-09-22"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-dojo",
+     "title": "almide-dojo",
+     "titleEn": "每日测量Almide中LLM代码的修改存活率",
+     "date": "2026年9月",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-dojo",
+     "tags": [
+      "HTML",
+      "Almide",
+      "Zig",
+      "almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "226"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/almide-dojo"
+      },
+      {
+       "label": "站点",
+       "href": "https://almide.github.io/almide-dojo/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-22"
      }
     },
     {
@@ -733,7 +758,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "22"
+       "value": "23"
       },
       {
        "label": "首次",
@@ -751,46 +776,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-dojo",
-     "title": "almide-dojo",
-     "titleEn": "每日测量Almide中LLM代码的修改存活率",
-     "date": "2026年8月",
-     "format": "HTML",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-dojo",
-     "tags": [
-      "HTML",
-      "Almide",
-      "almide",
-      "benchmark"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "202"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/almide-dojo"
-      },
-      {
-       "label": "站点",
-       "href": "https://almide.github.io/almide-dojo/"
-      }
-     ],
-     "order": {
-      "date": "2026-08-17"
+      "date": "2026-09-22"
      }
     },
     {
@@ -918,7 +904,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "7"
+       "value": "8"
       },
       {
        "label": "首次",
@@ -932,7 +918,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
+      "date": "2026-09-22"
      }
     },
     {
@@ -1547,7 +1533,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "874",
+     "value": "900",
      "label": "提交"
     },
     {
@@ -1566,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 858
+     "count": 884
     }
    ],
    "works": [
@@ -1596,7 +1582,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "179"
+       "value": "205"
       },
       {
        "label": "首次",
@@ -1604,11 +1590,11 @@
       },
       {
        "label": "版本",
-       "value": "v0.4.0"
+       "value": "v0.6.1"
       },
       {
        "label": "星标",
-       "value": "2"
+       "value": "3"
       }
      ],
      "links": [
@@ -2517,18 +2503,18 @@
    "id": "llm",
    "title": "智能体与 LLM 的基础",
    "short": "LLM 基础",
-   "intro": "真正把模型用起来所需要的：对任何供应商都同一张脸的入口（unillm、almai）与语音入口（unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus）、在终端用同一个口子调多个模型的 CLI（llmine），以及用纯 Almide 写、跑在 WASM 上的模型本身（bonsai-almide）",
+   "intro": "真正把模型用起来所需要的：对任何供应商都同一张脸的入口（almai）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus）、在终端用同一个口子调多个模型的 CLI（llmine），以及用纯 Almide 写、跑在 WASM 上的模型本身（bonsai-almide）",
    "figures": [
     {
-     "value": "19",
+     "value": "5",
      "label": "公开仓库"
     },
     {
-     "value": "297",
+     "value": "112",
      "label": "提交"
     },
     {
-     "value": "3",
+     "value": "2",
      "label": "语言"
     },
     {
@@ -2539,114 +2525,24 @@
    "years": [
     {
      "name": "2025",
-     "count": 148
+     "count": 27
     },
     {
      "name": "2026",
-     "count": 149
+     "count": 85
     }
    ],
    "works": [
     {
-     "image": "plates/zh/Aid-On/llm-queue-dispatcher.jpg",
+     "image": "plates/zh/almide/bonsai-almide.jpg",
      "readme": {
-      "lead": "按评分与限流选取LLM请求的队列调度器",
+      "lead": "经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示",
       "points": [
-       "多维度请求评分",
-       "集成@aid-on/llm-throttle",
-       "可插拔存储适配器"
+       "Qwen3聊天模板与KV缓存",
+       "温度、top-k、重复惩罚采样",
+       "248MB模型缓存于IndexedDB"
       ]
      },
-     "id": "Aid-On/llm-queue-dispatcher",
-     "title": "llm-queue-dispatcher",
-     "titleEn": "按评分与限流选取LLM请求的队列调度器",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/llm-queue-dispatcher",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "10"
-      },
-      {
-       "label": "首次",
-       "value": "2025年8月"
-      },
-      {
-       "label": "版本",
-       "value": "v1.0.2"
-      },
-      {
-       "label": "星标",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/llm-queue-dispatcher"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/llm-throttle",
-     "title": "llm-throttle",
-     "titleEn": "同时限制RPM与TPM的LLM API限流库",
-     "date": "2025年8月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/llm-throttle",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "12"
-      },
-      {
-       "label": "首次",
-       "value": "2025年8月"
-      },
-      {
-       "label": "版本",
-       "value": "v1.0.1"
-      },
-      {
-       "label": "星标",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/llm-throttle"
-      },
-      {
-       "label": "站点",
-       "href": "https://aid-on.github.io/llm-throttle/"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/bonsai-almide",
      "title": "bonsai-almide",
      "titleEn": "经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示",
@@ -2721,162 +2617,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/whenm",
-     "title": "whenm",
-     "titleEn": "理解时间与状态变化的无模式时序记忆系统",
-     "date": "2026年2月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/whenm",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "Shell",
-      "ai-memory"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "32"
-      },
-      {
-       "label": "首次",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.3.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/whenm"
-      }
-     ],
-     "order": {
-      "date": "2026-02-20"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/templex",
-     "title": "templex",
-     "titleEn": "用AI从文本提取写作模板并生成新文章的库",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/templex",
-     "tags": [
-      "TypeScript",
-      "ai",
-      "article-generation",
-      "document-analysis"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "24"
-      },
-      {
-       "label": "首次",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.2.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/templex"
-      }
-     ],
-     "order": {
-      "date": "2026-06-12"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fractop",
-     "title": "fractop",
-     "titleEn": "将超出LLM上下文的长文分块处理并合并的TS库",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fractop",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "ai",
-      "chunking"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "19"
-      },
-      {
-       "label": "首次",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.6.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fractop"
-      }
-     ],
-     "order": {
-      "date": "2026-06-10"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/iteratop",
-     "title": "iteratop",
-     "titleEn": "面向LLM的TypeScript收敛迭代循环库",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/iteratop",
-     "tags": [
-      "TypeScript",
-      "agent",
-      "ai",
-      "builder-pattern"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "18"
-      },
-      {
-       "label": "首次",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.3.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/iteratop"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/llmine",
      "title": "llmine",
      "titleEn": "从终端统一访问多种LLM的命令行工具",
@@ -2913,92 +2653,10 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fuzztok",
-     "title": "fuzztok",
-     "titleEn": "支持CJK的快速轻量模糊Token估算库",
-     "date": "2025年8月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fuzztok",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "HTML",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "8"
-      },
-      {
-       "label": "首次",
-       "value": "2025年8月"
-      },
-      {
-       "label": "版本",
-       "value": "v1.0.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fuzztok"
-      },
-      {
-       "label": "站点",
-       "href": "https://aid-on.github.io/fuzztok/"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/memory-rag",
-     "title": "memory-rag",
-     "titleEn": "轻量、不绑定提供商的内存RAG库,集成Vercel AI SDK",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/memory-rag",
-     "tags": [
-      "TypeScript",
-      "CSS",
-      "JavaScript",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "7"
-      },
-      {
-       "label": "首次",
-       "value": "2025年8月"
-      },
-      {
-       "label": "版本",
-       "value": "v1.0.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/memory-rag"
-      }
-     ],
-     "order": {
-      "date": "2025-08-10"
-     }
-    },
-    {
-     "image": "",
      "id": "almide-ai/almai",
      "title": "almai",
      "titleEn": "Almide的多提供商LLM客户端,统一接口",
-     "date": "2026年8月",
+     "date": "2026年9月",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/almai",
@@ -3011,7 +2669,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "19"
+       "value": "21"
       },
       {
        "label": "首次",
@@ -3025,71 +2683,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-04"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unillm-vercel-ai-sdk",
-     "title": "unillm-vercel-ai-sdk",
-     "titleEn": "为@aid-on/unillm提供Vercel AI SDK的LanguageModelV1兼容封装",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unillm-vercel-ai-sdk",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "7"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/unillm-vercel-ai-sdk"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/vad",
-     "title": "vad",
-     "titleEn": "浏览器端语音活动检测,集成Silero VAD与RNNoise降噪",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/vad",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "6"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/vad"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
+      "date": "2026-09-22"
      }
     },
     {
@@ -3123,1914 +2717,6 @@
      "order": {
       "date": "2026-07-07"
      }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unillm",
-     "title": "unillm",
-     "titleEn": "面向边缘环境的统一多厂商LLM接口",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unillm",
-     "tags": [
-      "TypeScript",
-      "ai",
-      "anthropic",
-      "claude"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "29"
-      },
-      {
-       "label": "首次",
-       "value": "2025年12月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/unillm"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/embersm",
-     "title": "embersm",
-     "titleEn": "基于Cloudflare Workers的LLM长期记忆五层架构",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/embersm",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "6"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/embersm"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/synapser",
-     "title": "synapser",
-     "titleEn": "将LLM智能体处理分为四阶段的类型安全管道",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/synapser",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "5"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/synapser"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unisttp",
-     "title": "unisttp",
-     "titleEn": "统一调用Cloudflare与Groq的语音转文字库",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unisttp",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/unisttp"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    }
-   ]
-  },
-  {
-   "id": "fizz",
-   "title": "AITuber 的零件",
-   "short": "AITuber",
-   "intro": "把 AITuber「Fizz」拆成可以逐个验证的零件：读取评论（来源、去重、分类、匹配）、组织回应（persona、记忆 L1–L3、历史、断句），以及驱动身体（口型、表情、注视、待机、手势、VRM 骨骼）。零件之间说的是同一套协议（fizz-protocol），整条回应的组装交给 fizz-brain-orchestrator。每个都是单一职责的纯函数，用 Almide 写成",
-   "figures": [
-    {
-     "value": "52",
-     "label": "公开仓库"
-    },
-    {
-     "value": "109",
-     "label": "提交"
-    },
-    {
-     "value": "1",
-     "label": "语言"
-    },
-    {
-     "value": "2026–2026",
-     "label": "年份"
-    }
-   ],
-   "years": [
-    {
-     "name": "2026",
-     "count": 109
-    }
-   ],
-   "works": [
-    {
-     "image": "plates/zh/Aid-On/fizz-brain-orchestrator.jpg",
-     "readme": {
-      "lead": "Fizz 的 brain 合成 CLI,把评论转为句子片段流",
-      "points": [
-       "分类、few-shot 检索、构建提示",
-       "经 fizz-llm-client 调用 LLM",
-       "以 NDJSON 输出 SentenceFragment"
-      ]
-     },
-     "id": "Aid-On/fizz-brain-orchestrator",
-     "title": "fizz-brain-orchestrator",
-     "titleEn": "Fizz 的 brain 合成 CLI,把评论转为句子片段流",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-brain-orchestrator",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-brain-orchestrator"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-conversation-history",
-     "title": "fizz-conversation-history",
-     "titleEn": "Almide 写的 Fizz 部件，保留最近 N 轮对话窗口",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-conversation-history",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-conversation-history"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-llm-client",
-     "title": "fizz-llm-client",
-     "titleEn": "Almide编写的Fizz AITuber多提供商LLM客户端",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-llm-client",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-llm-client"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-persona",
-     "title": "fizz-persona",
-     "titleEn": "Fizz AITuber的persona磁盘格式契约(Almide)",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-persona",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-persona"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-prompt-builder",
-     "title": "fizz-prompt-builder",
-     "titleEn": "将人设、回忆、历史与评论组装为LLM消息列的库",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-prompt-builder",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-prompt-builder"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-protocol",
-     "title": "fizz-protocol",
-     "titleEn": "Almide编写的AITuber系统Fizz的共享通信契约",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-protocol",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "7"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.2.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-protocol"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-comment-classifier",
-     "title": "fizz-comment-classifier",
-     "titleEn": "按关键词规则把评论判定为反应情感的Almide库",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-comment-classifier",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-comment-classifier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-few-shot-retriever",
-     "title": "fizz-few-shot-retriever",
-     "titleEn": "Fizz的Almide组件,检索与来信评论相似的前k条问答",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-few-shot-retriever",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-few-shot-retriever"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-first-time-greeter",
-     "title": "fizz-first-time-greeter",
-     "titleEn": "Fizz的大脑部件,仅向首次观众确定性地自我介绍一次",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-first-time-greeter",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-first-time-greeter"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-stream-sentence-parser",
-     "title": "fizz-stream-sentence-parser",
-     "titleEn": "Fizz大脑部件,切分LLM输出为句子与标签",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-stream-sentence-parser",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-stream-sentence-parser"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-thinking-cue-detector",
-     "title": "fizz-thinking-cue-detector",
-     "titleEn": "Fizz大脑部件,判断发话句是否触发思考动作",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-thinking-cue-detector",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-thinking-cue-detector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-comment-dedupe",
-     "title": "fizz-comment-dedupe",
-     "titleEn": "Fizz评论流的NDJSON管道过滤器,去除重复ID",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-comment-dedupe",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-comment-dedupe"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-lipsync",
-     "title": "fizz-lipsync",
-     "titleEn": "Fizz 口型同步 DSP 核心,将音频 RMS 转为口型开合值",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-lipsync",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-lipsync"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-manual-comment-input",
-     "title": "fizz-manual-comment-input",
-     "titleEn": "将运维手动输入转为Comment NDJSON的Fizz组件",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-manual-comment-input",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-manual-comment-input"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-api",
-     "title": "fizz-memory-api",
-     "titleEn": "Fizz 的 memory HTTP 服务,公开记忆操作接口",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-api",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-memory-api"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l3-summarizer",
-     "title": "fizz-memory-l3-summarizer",
-     "titleEn": "事件超阈值时用LLM滚动更新用户摘要的Fizz记忆L3层",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l3-summarizer",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-memory-l3-summarizer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-tweet-validator",
-     "title": "fizz-tweet-validator",
-     "titleEn": "按X加权字数统计并校验280上限",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-tweet-validator",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-tweet-validator"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-twitch-chat-source",
-     "title": "fizz-twitch-chat-source",
-     "titleEn": "匿名订阅Twitch聊天并输出标准化Comment的部件",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-twitch-chat-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-twitch-chat-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-x-mention-source",
-     "title": "fizz-x-mention-source",
-     "titleEn": "经XAPI代理轮询X提及并输出评论NDJSON",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-x-mention-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-x-mention-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-youtube-chat-source",
-     "title": "fizz-youtube-chat-source",
-     "titleEn": "轮询YouTube直播聊天并输出Comment NDJSON的只读组件",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-youtube-chat-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-youtube-chat-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/animula",
-     "title": "animula",
-     "titleEn": "用Almide编写的AI VTuber框架",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/animula",
-     "tags": [
-      "Almide",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/animula"
-      }
-     ],
-     "order": {
-      "date": "2026-04-17"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-audio-leader-elector",
-     "title": "fizz-audio-leader-elector",
-     "titleEn": "从多个viewer标签页选出一个音频播放领导者",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-audio-leader-elector",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-audio-leader-elector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-bgm-player",
-     "title": "fizz-bgm-player",
-     "titleEn": "Fizz的BGM播放列表导航,按索引决定曲目",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-bgm-player",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-bgm-player"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-camera-presets",
-     "title": "fizz-camera-presets",
-     "titleEn": "Fizz相机预设计算核心,求目标位置与注视点",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-camera-presets",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-camera-presets"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-color-tint",
-     "title": "fizz-color-tint",
-     "titleEn": "用于虹膜再着色的纯色彩转换核心",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-color-tint",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-color-tint"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-command-applier",
-     "title": "fizz-command-applier",
-     "titleEn": "将 avatar Command 类型映射到子系统的分发核心",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-command-applier",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-command-applier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-effect-checker",
-     "title": "fizz-effect-checker",
-     "titleEn": "校验响应计划的effect是否在许可集合内",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-effect-checker",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-effect-checker"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-env-loader",
-     "title": "fizz-env-loader",
-     "titleEn": "Fizz 的 .env 解析核心,将文本转为 KEY=VALUE",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-env-loader",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-env-loader"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-dataset",
-     "title": "fizz-eval-dataset",
-     "titleEn": "评论/回复评测集TSV的模式与行校验",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-dataset",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-eval-dataset"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-rubric",
-     "title": "fizz-eval-rubric",
-     "titleEn": "kotodama-eval七轴评分标准的轴定义与权重",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-rubric",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-eval-rubric"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-score",
-     "title": "fizz-eval-score",
-     "titleEn": "kotodama-eval 评分聚合的 Almide 算术核心",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-score",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-eval-score"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-expression-applier",
-     "title": "fizz-expression-applier",
-     "titleEn": "Fizz表情适用核心,按emotion返回通道与权重",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-expression-applier",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-expression-applier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-fbx-rig-normalizer",
-     "title": "fizz-fbx-rig-normalizer",
-     "titleEn": "将原始骨骼名映射到VRM humanoid插槽的规范化核心",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-fbx-rig-normalizer",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-fbx-rig-normalizer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-gesture-player",
-     "title": "fizz-gesture-player",
-     "titleEn": "Fizz的手势计算核心，输出骨骼偏移",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-gesture-player",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-gesture-player"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-glb-container",
-     "title": "fizz-glb-container",
-     "titleEn": "解析GLB/VRM头部的Almide核心库",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-glb-container",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-glb-container"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-http-router",
-     "title": "fizz-http-router",
-     "titleEn": "Fizz的HTTP分发核心,将(method, path)映射为route id",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-http-router",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-http-router"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-idle-motion",
-     "title": "fizz-idle-motion",
-     "titleEn": "以墙钟秒t纯函数计算眨眼、呼吸、微摆的idle动作核心",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-idle-motion",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-idle-motion"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-layout-scope",
-     "title": "fizz-layout-scope",
-     "titleEn": "用Almide解析Fizz横/竖屏scope的位置配置库",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-layout-scope",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-layout-scope"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-liveness-monitor",
-     "title": "fizz-liveness-monitor",
-     "titleEn": "Fizz的WS连接ping/pong死活判定核心",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-liveness-monitor",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-liveness-monitor"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l1-ring",
-     "title": "fizz-memory-l1-ring",
-     "titleEn": "Fizz的L1记忆,按用户在内存中保存近期事件",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l1-ring",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-memory-l1-ring"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l2-events",
-     "title": "fizz-memory-l2-events",
-     "titleEn": "Fizz记忆L2层,以NDJSON追加保存事件并按user_id查询",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l2-events",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-memory-l2-events"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-mixamo-retargeter",
-     "title": "fizz-mixamo-retargeter",
-     "titleEn": "将Mixamo动画重定向到VRM骨骼的四元数计算核心",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-mixamo-retargeter",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-mixamo-retargeter"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-reading-corrector",
-     "title": "fizz-reading-corrector",
-     "titleEn": "Fizz的TTS前读音校正过滤器,将汉字替换为假名",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-reading-corrector",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-reading-corrector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-recall-gate",
-     "title": "fizz-recall-gate",
-     "titleEn": "Fizz的recall网关,裁剪结果并提供无记忆回退",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-recall-gate",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-recall-gate"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-reply-paginator",
-     "title": "fizz-reply-paginator",
-     "titleEn": "按句子边界拆分AI回复文本的Almide核心",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-reply-paginator",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-reply-paginator"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-response-transformer",
-     "title": "fizz-response-transformer",
-     "titleEn": "kotodama应答变换的目录匹配与加权选择",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-response-transformer",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-response-transformer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-session-tracker",
-     "title": "fizz-session-tracker",
-     "titleEn": "记录直播起止并统计每位用户发言的追踪器",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-session-tracker",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-session-tracker"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-speak-queue",
-     "title": "fizz-speak-queue",
-     "titleEn": "逐次播放TTS片段的状态机与边界事件推导组件",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-speak-queue",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-speak-queue"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-trigger-matcher",
-     "title": "fizz-trigger-matcher",
-     "titleEn": "按子串匹配输入并推荐 transform 先验的引擎",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-trigger-matcher",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-trigger-matcher"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-weather-codes",
-     "title": "fizz-weather-codes",
-     "titleEn": "将WMO天气码转为日语标签并识别天气提问的Almide库",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-weather-codes",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-weather-codes"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-ws-reconnect",
-     "title": "fizz-ws-reconnect",
-     "titleEn": "用指数退避加抖动计算Fizz WS重连延迟",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-ws-reconnect",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-ws-reconnect"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-x-dummy-feed",
-     "title": "fizz-x-dummy-feed",
-     "titleEn": "Fizz的X擬似mention信息流纯逻辑,用Almide编写",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-x-dummy-feed",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/fizz-x-dummy-feed"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
     }
    ]
   },
@@ -5041,15 +2727,15 @@
    "intro": "用 Almide 自底向上实现 Minecraft 协议（mc-protocol）：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人（mc-bot、craftsman）——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写",
    "figures": [
     {
-     "value": "26",
+     "value": "25",
      "label": "公开仓库"
     },
     {
-     "value": "187",
+     "value": "108",
      "label": "提交"
     },
     {
-     "value": "3",
+     "value": "2",
      "label": "语言"
     },
     {
@@ -5060,7 +2746,7 @@
    "years": [
     {
      "name": "2025",
-     "count": 95
+     "count": 16
     },
     {
      "name": "2026",
@@ -5146,40 +2832,6 @@
      ],
      "order": {
       "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/mine-rabbit-bots",
-     "title": "mine-rabbit-bots",
-     "titleEn": "独立于 Craftsman 的 Mineflyer 机器人 Paper 测试沙盒",
-     "date": "2025年11月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/mine-rabbit-bots",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "79"
-      },
-      {
-       "label": "首次",
-       "value": "2025年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/mine-rabbit-bots"
-      }
-     ],
-     "order": {
-      "date": "2025-11-21"
      }
     },
     {
@@ -6290,434 +3942,6 @@
    ]
   },
   {
-   "id": "web",
-   "title": "边缘与 Web 的零件",
-   "short": "边缘与 Web",
-   "intro": "跑在 Cloudflare Workers 与浏览器上的那一层：不做包装、直接让 ReadableStream 具备反应式能力的 nagare 及其之上的桥接（接 Cloudflare 任务队列的 didoq、接 Qwik 的 qwiks）、边缘原生认证（auth、auth-providers-ts）、色彩令牌与主题的设计系统（design-system、aid-on-ui-system）、知识库 API 客户端（outline-api-client-ts）",
-   "figures": [
-    {
-     "value": "11",
-     "label": "公开仓库"
-    },
-    {
-     "value": "122",
-     "label": "提交"
-    },
-    {
-     "value": "2",
-     "label": "语言"
-    },
-    {
-     "value": "2024–2026",
-     "label": "年份"
-    }
-   ],
-   "years": [
-    {
-     "name": "2024",
-     "count": 60
-    },
-    {
-     "name": "2025",
-     "count": 26
-    },
-    {
-     "name": "2026",
-     "count": 36
-    }
-   ],
-   "works": [
-    {
-     "image": "plates/shared/Aid-On/aid-on-ui-system.jpg",
-     "readme": {
-      "lead": "名为aid-on-ui-system2的UI系统仓库",
-      "points": [
-       "使用TypeScript编写",
-       "同时使用JavaScript",
-       "README仅含项目名称"
-      ]
-     },
-     "id": "Aid-On/aid-on-ui-system",
-     "title": "aid-on-ui-system",
-     "titleEn": "名为aid-on-ui-system2的UI系统仓库",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-ui-system",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "42"
-      },
-      {
-       "label": "首次",
-       "value": "2024年7月"
-      },
-      {
-       "label": "版本",
-       "value": "v1.0.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/aid-on-ui-system"
-      },
-      {
-       "label": "站点",
-       "href": "https://aid-on.github.io/aid-on-ui-system/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/nagare",
-     "title": "nagare",
-     "titleEn": "为边缘计算扩展ReadableStream的响应式流库",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/nagare",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "edge-computing",
-      "readablestream"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "22"
-      },
-      {
-       "label": "首次",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.2.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/nagare"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/qwiks",
-     "title": "qwiks",
-     "titleEn": "将Nagare流桥接到Qwik Signal的钩子库",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/qwiks",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "8"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/qwiks"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/outline-api-client-ts",
-     "title": "outline-api-client-ts",
-     "titleEn": "面向Outline知识库API的类型安全TypeScript客户端库",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/outline-api-client-ts",
-     "tags": [
-      "TypeScript",
-      "Shell",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "7"
-      },
-      {
-       "label": "首次",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/outline-api-client-ts"
-      },
-      {
-       "label": "站点",
-       "href": "https://aid-on.github.io/outline-api-client-ts/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/design-system",
-     "title": "design-system",
-     "titleEn": "面向Qwik的类型安全颜色令牌与明暗主题库",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/design-system",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "8"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/design-system"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/didoq",
-     "title": "didoq",
-     "titleEn": "面向Cloudflare的流式API作业队列",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/didoq",
-     "tags": [
-      "TypeScript",
-      "SQL",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "8"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/didoq"
-      }
-     ],
-     "order": {
-      "date": "2026-06-10"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/auth",
-     "title": "auth",
-     "titleEn": "面向Cloudflare Workers的边缘原生认证库",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/auth",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/auth"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/zod-to-markdown",
-     "title": "zod-to-markdown",
-     "titleEn": "将Zod模式转换为Markdown文档的工具函数",
-     "date": "2024年3月",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/zod-to-markdown",
-     "tags": [
-      "JavaScript",
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "6"
-      },
-      {
-       "label": "首次",
-       "value": "2024年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/zod-to-markdown"
-      }
-     ],
-     "order": {
-      "date": "2024-03-26"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/auth-providers-ts",
-     "title": "auth-providers-ts",
-     "titleEn": "与框架无关的OAuth 2.0认证提供方库",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/auth-providers-ts",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/auth-providers-ts"
-      }
-     ],
-     "order": {
-      "date": "2025-08-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/next-auth-providers",
-     "title": "next-auth-providers",
-     "titleEn": "Aid-On的NextAuth.js认证提供者,支持LINE登录",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/next-auth-providers",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/next-auth-providers"
-      }
-     ],
-     "order": {
-      "date": "2025-08-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-draft-ui",
-     "title": "aid-on-draft-ui",
-     "titleEn": "名为aid-on-draft-ui的项目，README无说明",
-     "date": "2024年9月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-draft-ui",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "14"
-      },
-      {
-       "label": "首次",
-       "value": "2024年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/aid-on-draft-ui"
-      }
-     ],
-     "order": {
-      "date": "2024-09-01"
-     }
-    }
-   ]
-  },
-  {
    "id": "toolchain",
    "title": "把语言环境准备好",
    "short": "工具链",
@@ -7132,33 +4356,29 @@
    "id": "sites",
    "title": "给人看的页面",
    "short": "公开页面",
-   "intro": "在浏览器里打开、到此为止的东西：画家作品集样例（hokusai-portfolio）与某人的作品集（kotorody-portfolio）、半导体与世界局势的时间线（chip-war-chronicle）、把智能体基准汇成一张表（agent-bench-matrix）、演讲幻灯片、照看身体的小应用（gulp-coach、environment-health-viewer、tabi-navi）、玩声音的两个（pitchy、almide-headset-eq），以及为文书写的纯 HTML（aid-on-contract-generator、aid-on-invoice-generator、aid-on-tax-calculator）",
+   "intro": "在浏览器里打开、到此为止的东西：画家作品集样例（hokusai-portfolio）、半导体与世界局势的时间线（chip-war-chronicle）、把智能体基准汇成一张表（agent-bench-matrix）、演讲幻灯片、照看身体的小应用（gulp-coach、environment-health-viewer、tabi-navi），以及玩声音的两个（pitchy、almide-headset-eq）",
    "figures": [
     {
-     "value": "13",
+     "value": "9",
      "label": "公开仓库"
     },
     {
-     "value": "126",
+     "value": "111",
      "label": "提交"
     },
     {
-     "value": "4",
+     "value": "3",
      "label": "语言"
     },
     {
-     "value": "2025–2026",
+     "value": "2026–2026",
      "label": "年份"
     }
    ],
    "years": [
     {
-     "name": "2025",
-     "count": 8
-    },
-    {
      "name": "2026",
-     "count": 118
+     "count": 111
     }
    ],
    "works": [
@@ -7432,38 +4652,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/kotorody-portfolio",
-     "title": "kotorody-portfolio",
-     "titleEn": "Aid-On前端工程师kotorody的作品集网站",
-     "date": "2026年5月",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/kotorody-portfolio",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "7"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/kotorody-portfolio"
-      }
-     ],
-     "order": {
-      "date": "2026-05-18"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/pitchy",
      "title": "pitchy",
      "titleEn": "口哨音高检测工具,显示和弦并含节奏游戏",
@@ -7526,104 +4714,6 @@
      "order": {
       "date": "2026-06-11"
      }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-contract-generator",
-     "title": "aid-on-contract-generator",
-     "titleEn": "纯HTML/CSS/JS的浏览器合同生成应用",
-     "date": "2025年6月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-contract-generator",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2025年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/aid-on-contract-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-tax-calculator",
-     "title": "aid-on-tax-calculator",
-     "titleEn": "按日本10%消费税换算含税与不含税价格的Python命令行工具",
-     "date": "2025年3月",
-     "format": "Python",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-tax-calculator",
-     "tags": [
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2025年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/aid-on-tax-calculator"
-      }
-     ],
-     "order": {
-      "date": "2025-03-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-invoice-generator",
-     "title": "aid-on-invoice-generator",
-     "titleEn": "发票生成项目,README仅有名称",
-     "date": "2025年6月",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-invoice-generator",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2025年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/aid-on-invoice-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-02"
-     }
     }
    ]
   },
@@ -7634,23 +4724,27 @@
    "intro": "为每天的活儿写的小可执行文件：处理文书（keiri、pdf-burger、resepy、capto、gformiac）、查看环境与机器（netcheck、igloc、syncenv、macleap、dns-checker）、切换账号（azprofile、chropen）、把写好的东西变成能交出去的形态（pagina、premaid、image-catalog-composer）、尽早知道供应链攻击（tocsin、tocsin-almd）、把界面结构提成 Layout AST（uimodulay），以及自己的工作规约与对照它的合规检查器（O6lvl4-protocol、O6lvl4-vitals）",
    "figures": [
     {
-     "value": "24",
+     "value": "25",
      "label": "公开仓库"
     },
     {
-     "value": "195",
+     "value": "201",
      "label": "提交"
     },
     {
-     "value": "9",
+     "value": "10",
      "label": "语言"
     },
     {
-     "value": "2025–2026",
+     "value": "2024–2026",
      "label": "年份"
     }
    ],
    "years": [
+    {
+     "name": "2024",
+     "count": 6
+    },
     {
      "name": "2025",
      "count": 31
@@ -8496,6 +5590,39 @@
      "order": {
       "date": "2025-04-01"
      }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/zod-to-markdown",
+     "title": "zod-to-markdown",
+     "titleEn": "将Zod模式转换为Markdown文档的工具函数",
+     "date": "2024年3月",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/zod-to-markdown",
+     "tags": [
+      "JavaScript",
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2024年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/zod-to-markdown"
+      }
+     ],
+     "order": {
+      "date": "2024-03-26"
+     }
     }
    ]
   },
@@ -8873,18 +6000,18 @@
    "id": "lab",
    "title": "试过的东西",
    "short": "试过的",
-   "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide）、JavaScript 习题集（aid-on-js-training），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
+   "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "37",
+     "value": "31",
      "label": "公开仓库"
     },
     {
-     "value": "344",
+     "value": "180",
      "label": "提交"
     },
     {
-     "value": "12",
+     "value": "11",
      "label": "语言"
     },
     {
@@ -8903,11 +6030,11 @@
     },
     {
      "name": "2024",
-     "count": 29
+     "count": 18
     },
     {
      "name": "2025",
-     "count": 225
+     "count": 72
     },
     {
      "name": "2026",
@@ -9090,106 +6217,6 @@
      ],
      "order": {
       "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-js-training",
-     "title": "aid-on-js-training",
-     "titleEn": "带测试的JavaScript入门习题集",
-     "date": "2025年8月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-js-training",
-     "tags": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "122"
-      },
-      {
-       "label": "首次",
-       "value": "2024年11月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/aid-on-js-training"
-      }
-     ],
-     "order": {
-      "date": "2025-08-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/sandbox-ios-app",
-     "title": "sandbox-ios-app",
-     "titleEn": "带自动化CI/CD的SwiftUI iOS应用模板",
-     "date": "2025年10月",
-     "format": "Swift",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/sandbox-ios-app",
-     "tags": [
-      "Swift"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2025年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/sandbox-ios-app"
-      }
-     ],
-     "order": {
-      "date": "2025-10-12"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/next-pet-diary",
-     "title": "next-pet-diary",
-     "titleEn": "用create-next-app创建的Next.js项目",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/next-pet-diary",
-     "tags": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "25"
-      },
-      {
-       "label": "首次",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/next-pet-diary"
-      }
-     ],
-     "order": {
-      "date": "2025-08-31"
      }
     },
     {
@@ -9620,38 +6647,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/AIChatPractice",
-     "title": "AIChatPractice",
-     "titleEn": "名为AIChatPractice的Swift仓库,无README",
-     "date": "2025年9月",
-     "format": "Swift",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/AIChatPractice",
-     "tags": [
-      "Swift"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "8"
-      },
-      {
-       "label": "首次",
-       "value": "2025年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/AIChatPractice"
-      }
-     ],
-     "order": {
-      "date": "2025-09-05"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/golang-cp-solve-sandbox",
      "title": "golang-cp-solve-sandbox",
      "titleEn": "无README；名称显示为Go竞赛编程解题沙盒",
@@ -9810,72 +6805,6 @@
      ],
      "order": {
       "date": "2022-05-08"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/reporting-page-by-calendar-days",
-     "title": "reporting-page-by-calendar-days",
-     "titleEn": "按日历日期生成报告页面的JS/HTML项目",
-     "date": "2025年2月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/reporting-page-by-calendar-days",
-     "tags": [
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2025年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/reporting-page-by-calendar-days"
-      }
-     ],
-     "order": {
-      "date": "2025-02-02"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/reporting-page-by-working-days",
-     "title": "reporting-page-by-working-days",
-     "titleEn": "按工作日生成报告的网页",
-     "date": "2025年2月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/reporting-page-by-working-days",
-     "tags": [
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2025年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/Aid-On/reporting-page-by-working-days"
-      }
-     ],
-     "order": {
-      "date": "2025-02-02"
      }
     },
     {
@@ -10157,7 +7086,7 @@
     "blocks": [
      {
       "kind": "p",
-      "html": "也开发支撑应用的基础部分：智能体的工具连接与执行控制，以及LLM的限流、记忆和流式处理。"
+      "html": "也在做让AI真正跑起来的部分：把智能体限制在所授予权限之内的 porta，以及用 Almide 写的智能体运行时（homullus）与 LLM 客户端（almai）。"
      }
     ]
    }

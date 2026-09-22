@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "262 repos",
+  "life": "175 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "262 public repositories",
+  "kicker": "175 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "262 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "175 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -118,20 +118,20 @@
    {
     "heading": "Most written",
     "items": [
-     "Almide（137）",
-     "JavaScript（75）",
-     "TypeScript（57）",
-     "HTML（29）",
-     "Shell（28）"
+     "Almide（85）",
+     "TypeScript（31）",
+     "JavaScript（30）",
+     "Python（25）",
+     "Shell（25）"
     ]
    },
    {
     "heading": "Also",
     "items": [
-     "Python",
-     "CSS",
+     "HTML",
      "Rust",
      "Go",
+     "CSS",
      "C",
      "Lean",
      "Ruby"
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "201 started",
-    "lead": "almide, porta, als, ccgrid and 197 more",
+    "title": "139 started",
+    "lead": "almide, porta, als, ccgrid and 135 more",
     "tags": [
      "Rust",
      "Python",
@@ -152,21 +152,21 @@
    },
    {
     "period": "2025",
-    "title": "36 started",
-    "lead": "llm-queue-dispatcher, llm-throttle, whenm, templex and 32 more",
+    "title": "14 started",
+    "lead": "igloc, llmine, treesrc, craftsman and 10 more",
     "tags": [
-     "TypeScript",
-     "JavaScript"
+     "Go",
+     "TypeScript"
     ]
    },
    {
     "period": "2024",
-    "title": "10 started",
-    "lead": "aid-on-ui-system, aid-on-js-training, sandbox-golang-cli, ts-react-tailwindcss-sandbox and 6 more",
+    "title": "7 started",
+    "lead": "sandbox-golang-cli, ts-react-tailwindcss-sandbox, ts-tsnode-sandbox, zod-to-markdown and 3 more",
     "tags": [
+     "Go",
      "TypeScript",
-     "JavaScript",
-     "Go"
+     "JavaScript"
     ]
    },
    {
@@ -208,7 +208,7 @@
   "panel": [
    {
     "key": "Orgs",
-    "value": "6"
+    "value": "5"
    },
    {
     "key": "First commit",
@@ -220,26 +220,26 @@
    },
    {
     "key": "Written in Almide",
-    "value": "46%",
-    "fill": 0.46
+    "value": "39%",
+    "fill": 0.39
    },
    {
     "key": "Commits in 2026",
-    "value": "95%",
-    "fill": 0.95
+    "value": "98%",
+    "fill": 0.98
    }
   ],
   "figures": [
    {
-    "value": "262",
+    "value": "175",
     "label": "Repositories"
    },
    {
-    "value": "14,543",
+    "value": "14,159",
     "label": "Commits"
    },
    {
-    "value": "19",
+    "value": "18",
     "label": "Languages"
    },
    {
@@ -250,18 +250,13 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 121,
+    "count": 69,
     "color": "currentColor"
    },
    {
     "name": "TypeScript",
-    "count": 48,
+    "count": 26,
     "color": "#3178c6"
-   },
-   {
-    "name": "JavaScript",
-    "count": 18,
-    "color": "#f1e05a"
    },
    {
     "name": "Go",
@@ -274,14 +269,19 @@
     "color": "#dea584"
    },
    {
-    "name": "HTML",
+    "name": "JavaScript",
     "count": 10,
-    "color": "#e34c26"
+    "color": "#f1e05a"
    },
    {
     "name": "Python",
-    "count": 9,
+    "count": 8,
     "color": "#3572a5"
+   },
+   {
+    "name": "HTML",
+    "count": 8,
+    "color": "#e34c26"
    },
    {
     "name": "Lean",
@@ -307,11 +307,6 @@
     "name": "Lua",
     "count": 2,
     "color": "#000080"
-   },
-   {
-    "name": "Swift",
-    "count": 2,
-    "color": "#f05138"
    },
    {
     "name": "Racket",
@@ -362,27 +357,18 @@
    {
     "name": "almd-mc",
     "count": 24
-   },
-   {
-    "name": "Aid-On",
-    "count": 87
    }
   ],
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11466,
+    "count": 11750,
     "of": 28
    },
    {
     "name": "O6lvl4",
     "count": 1956,
     "of": 111
-   },
-   {
-    "name": "Aid-On",
-    "count": 670,
-    "of": 87
    },
    {
     "name": "almide-graphics",
@@ -396,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 48,
+    "count": 50,
     "of": 3
    }
   ],
@@ -411,15 +397,15 @@
    },
    {
     "name": "2024",
-    "count": 89
+    "count": 24
    },
    {
     "name": "2025",
-    "count": 549
+    "count": 162
    },
    {
     "name": "2026",
-    "count": 13842
+    "count": 13910
    }
   ]
  },
@@ -435,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "11,297",
+     "value": "11,555",
      "label": "Commits"
     },
     {
@@ -450,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11297
+     "count": 11555
     }
    ],
    "works": [
@@ -480,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "9,108"
+       "value": "9,316"
       },
       {
        "label": "Started",
@@ -527,7 +513,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,461"
+       "value": "1,482"
       },
       {
        "label": "Started",
@@ -549,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-21"
+      "date": "2026-09-22"
      }
     },
     {
@@ -694,7 +680,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "25"
+       "value": "28"
       },
       {
        "label": "Started",
@@ -702,7 +688,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.4.0"
+       "value": "v0.4.1"
       }
      ],
      "links": [
@@ -712,7 +698,46 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
+      "date": "2026-09-22"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-dojo",
+     "title": "almide-dojo",
+     "titleEn": "Daily measurement of how often LLM-written code survives modification in Almide, with a harness written in Almide.",
+     "date": "Sep 2026",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-dojo",
+     "tags": [
+      "HTML",
+      "Almide",
+      "Zig",
+      "almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "226"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/almide-dojo"
+      },
+      {
+       "label": "Site",
+       "href": "https://almide.github.io/almide-dojo/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-22"
      }
     },
     {
@@ -733,7 +758,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "22"
+       "value": "23"
       },
       {
        "label": "Started",
@@ -751,46 +776,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-dojo",
-     "title": "almide-dojo",
-     "titleEn": "Daily measurement of how often LLM-written code survives modification in Almide, with a harness written in Almide.",
-     "date": "Aug 2026",
-     "format": "HTML",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-dojo",
-     "tags": [
-      "HTML",
-      "Almide",
-      "almide",
-      "benchmark"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "202"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/almide-dojo"
-      },
-      {
-       "label": "Site",
-       "href": "https://almide.github.io/almide-dojo/"
-      }
-     ],
-     "order": {
-      "date": "2026-08-17"
+      "date": "2026-09-22"
      }
     },
     {
@@ -918,7 +904,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "7"
+       "value": "8"
       },
       {
        "label": "Started",
@@ -932,7 +918,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
+      "date": "2026-09-22"
      }
     },
     {
@@ -1547,7 +1533,7 @@
      "label": "Repositories"
     },
     {
-     "value": "874",
+     "value": "900",
      "label": "Commits"
     },
     {
@@ -1566,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 858
+     "count": 884
     }
    ],
    "works": [
@@ -1596,7 +1582,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "179"
+       "value": "205"
       },
       {
        "label": "Started",
@@ -1604,11 +1590,11 @@
       },
       {
        "label": "Release",
-       "value": "v0.4.0"
+       "value": "v0.6.1"
       },
       {
        "label": "Stars",
-       "value": "2"
+       "value": "3"
       }
      ],
      "links": [
@@ -2517,18 +2503,18 @@
    "id": "llm",
    "title": "Agents, and groundwork for LLMs",
    "short": "LLM groundwork",
-   "intro": "What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).",
+   "intro": "What it takes to actually use a model: one door to every provider (almai), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).",
    "figures": [
     {
-     "value": "19",
+     "value": "5",
      "label": "Repositories"
     },
     {
-     "value": "297",
+     "value": "112",
      "label": "Commits"
     },
     {
-     "value": "3",
+     "value": "2",
      "label": "Languages"
     },
     {
@@ -2539,114 +2525,24 @@
    "years": [
     {
      "name": "2025",
-     "count": 148
+     "count": 27
     },
     {
      "name": "2026",
-     "count": 149
+     "count": 85
     }
    ],
    "works": [
     {
-     "image": "plates/en/Aid-On/llm-queue-dispatcher.jpg",
+     "image": "plates/en/almide/bonsai-almide.jpg",
      "readme": {
-      "lead": "A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.",
+      "lead": "Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language",
       "points": [
-       "Multi-dimensional request scoring",
-       "@aid-on/llm-throttle rate limiter integration",
-       "Pluggable storage adapters, in-memory included"
+       "Qwen3 chat template with KV cache streaming",
+       "Sampling: temperature, top-k, repetition penalty",
+       "32 KB WASM; 248 MB model cached in IndexedDB"
       ]
      },
-     "id": "Aid-On/llm-queue-dispatcher",
-     "title": "llm-queue-dispatcher",
-     "titleEn": "A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.",
-     "date": "Aug 2025",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/llm-queue-dispatcher",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "10"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v1.0.2"
-      },
-      {
-       "label": "Stars",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/llm-queue-dispatcher"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/llm-throttle",
-     "title": "llm-throttle",
-     "titleEn": "A TypeScript rate limiting library that controls both RPM and TPM for LLM API calls",
-     "date": "Aug 2025",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/llm-throttle",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "12"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v1.0.1"
-      },
-      {
-       "label": "Stars",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/llm-throttle"
-      },
-      {
-       "label": "Site",
-       "href": "https://aid-on.github.io/llm-throttle/"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/bonsai-almide",
      "title": "bonsai-almide",
      "titleEn": "Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language",
@@ -2721,162 +2617,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/whenm",
-     "title": "whenm",
-     "titleEn": "Schemaless temporal memory for AI apps that tracks state changes and answers time-based questions",
-     "date": "Feb 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/whenm",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "Shell",
-      "ai-memory"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "32"
-      },
-      {
-       "label": "Started",
-       "value": "Dec 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v0.3.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/whenm"
-      }
-     ],
-     "order": {
-      "date": "2026-02-20"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/templex",
-     "title": "templex",
-     "titleEn": "TypeScript library that extracts reusable writing templates from text with LLMs and generates new articles",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/templex",
-     "tags": [
-      "TypeScript",
-      "ai",
-      "article-generation",
-      "document-analysis"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "24"
-      },
-      {
-       "label": "Started",
-       "value": "Dec 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/templex"
-      }
-     ],
-     "order": {
-      "date": "2026-06-12"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fractop",
-     "title": "fractop",
-     "titleEn": "TypeScript library that chunks, processes and merges text too long for an LLM's context limit.",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fractop",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "ai",
-      "chunking"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "19"
-      },
-      {
-       "label": "Started",
-       "value": "Dec 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v0.6.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fractop"
-      }
-     ],
-     "order": {
-      "date": "2026-06-10"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/iteratop",
-     "title": "iteratop",
-     "titleEn": "TypeScript library for convergent iteration loops with LLMs, inspired by Scrum and OODA loops",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/iteratop",
-     "tags": [
-      "TypeScript",
-      "agent",
-      "ai",
-      "builder-pattern"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "18"
-      },
-      {
-       "label": "Started",
-       "value": "Dec 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v0.3.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/iteratop"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/llmine",
      "title": "llmine",
      "titleEn": "A CLI tool giving unified terminal access to OpenAI, Azure, Claude, Bedrock and Ollama LLMs",
@@ -2913,92 +2653,10 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fuzztok",
-     "title": "fuzztok",
-     "titleEn": "Fast, lightweight fuzzy token estimation library for LLM text, with CJK support",
-     "date": "Aug 2025",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fuzztok",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "HTML",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "8"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v1.0.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fuzztok"
-      },
-      {
-       "label": "Site",
-       "href": "https://aid-on.github.io/fuzztok/"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/memory-rag",
-     "title": "memory-rag",
-     "titleEn": "A lightweight, provider-agnostic in-memory RAG library with Vercel AI SDK integration",
-     "date": "Aug 2025",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/memory-rag",
-     "tags": [
-      "TypeScript",
-      "CSS",
-      "JavaScript",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "7"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v1.0.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/memory-rag"
-      }
-     ],
-     "order": {
-      "date": "2025-08-10"
-     }
-    },
-    {
-     "image": "",
      "id": "almide-ai/almai",
      "title": "almai",
      "titleEn": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
-     "date": "Aug 2026",
+     "date": "Sep 2026",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/almai",
@@ -3011,7 +2669,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "19"
+       "value": "21"
       },
       {
        "label": "Started",
@@ -3025,71 +2683,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-04"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unillm-vercel-ai-sdk",
-     "title": "unillm-vercel-ai-sdk",
-     "titleEn": "Vercel AI SDK wrapper for @aid-on/unillm giving LanguageModelV1 compatibility for existing AI SDK code",
-     "date": "Sep 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unillm-vercel-ai-sdk",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "7"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/unillm-vercel-ai-sdk"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/vad",
-     "title": "vad",
-     "titleEn": "Browser voice activity detection using Silero VAD, with optional RNNoise noise suppression",
-     "date": "Sep 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/vad",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "6"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/vad"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
+      "date": "2026-09-22"
      }
     },
     {
@@ -3123,1914 +2717,6 @@
      "order": {
       "date": "2026-07-07"
      }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unillm",
-     "title": "unillm",
-     "titleEn": "Unified, type-safe TypeScript LLM interface for edge runtimes across multiple providers",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unillm",
-     "tags": [
-      "TypeScript",
-      "ai",
-      "anthropic",
-      "claude"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "29"
-      },
-      {
-       "label": "Started",
-       "value": "Dec 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/unillm"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/embersm",
-     "title": "embersm",
-     "titleEn": "Cloudflare Workers-native 5-layer memory system providing long-term memory for LLM agents",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/embersm",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "6"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/embersm"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/synapser",
-     "title": "synapser",
-     "titleEn": "Type-safe TypeScript 4-phase pipeline that separates concerns in LLM agent processing",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/synapser",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "5"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/synapser"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unisttp",
-     "title": "unisttp",
-     "titleEn": "Unified speech-to-text provider for Cloudflare Workers AI and Groq via \"provider:model\" specs",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unisttp",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/unisttp"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    }
-   ]
-  },
-  {
-   "id": "fizz",
-   "title": "The parts of an AITuber",
-   "short": "AITuber",
-   "intro": "An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.",
-   "figures": [
-    {
-     "value": "52",
-     "label": "Repositories"
-    },
-    {
-     "value": "109",
-     "label": "Commits"
-    },
-    {
-     "value": "1",
-     "label": "Languages"
-    },
-    {
-     "value": "2026–2026",
-     "label": "Span"
-    }
-   ],
-   "years": [
-    {
-     "name": "2026",
-     "count": 109
-    }
-   ],
-   "works": [
-    {
-     "image": "plates/en/Aid-On/fizz-brain-orchestrator.jpg",
-     "readme": {
-      "lead": "Fizz brain CLI that composes the pipeline turning each comment into sentence fragments on stdout",
-      "points": [
-       "Classify, few-shot search, prompt build",
-       "LLM call via fizz-llm-client",
-       "SentenceFragment output as NDJSON"
-      ]
-     },
-     "id": "Aid-On/fizz-brain-orchestrator",
-     "title": "fizz-brain-orchestrator",
-     "titleEn": "Fizz brain CLI that composes the pipeline turning each comment into sentence fragments on stdout",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-brain-orchestrator",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-brain-orchestrator"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-conversation-history",
-     "title": "fizz-conversation-history",
-     "titleEn": "Fizz AITuber brain component in Almide: windowed in-memory history of the last N turns",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-conversation-history",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-conversation-history"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-llm-client",
-     "title": "fizz-llm-client",
-     "titleEn": "Multi-provider LLM client in Almide for the Fizz AITuber system's brain component.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-llm-client",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-llm-client"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-persona",
-     "title": "fizz-persona",
-     "titleEn": "Almide package defining the on-disk persona format contract for the Fizz AITuber system",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-persona",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-persona"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-prompt-builder",
-     "title": "fizz-prompt-builder",
-     "titleEn": "Almide library for Fizz that assembles LLM messages from persona, recall, few-shot, history and a comment",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-prompt-builder",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-prompt-builder"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-protocol",
-     "title": "fizz-protocol",
-     "titleEn": "Shared wire contracts for Fizz, an AITuber system in Almide, used by all its components",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-protocol",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "7"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-protocol"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-comment-classifier",
-     "title": "fizz-comment-classifier",
-     "titleEn": "Almide library for Fizz that classifies a comment into a reaction Emotion by keyword rules",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-comment-classifier",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-comment-classifier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-few-shot-retriever",
-     "title": "fizz-few-shot-retriever",
-     "titleEn": "Almide library for Fizz that retrieves the top-k past Q/A examples similar to an incoming comment",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-few-shot-retriever",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-few-shot-retriever"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-first-time-greeter",
-     "title": "fizz-first-time-greeter",
-     "titleEn": "Deterministic Almide brain component for Fizz, the AITuber, giving first-time viewers a one-time self-intro",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-first-time-greeter",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-first-time-greeter"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-stream-sentence-parser",
-     "title": "fizz-stream-sentence-parser",
-     "titleEn": "Fizz brain component in Almide that splits LLM output into sentences and inline tags.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-stream-sentence-parser",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-stream-sentence-parser"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-thinking-cue-detector",
-     "title": "fizz-thinking-cue-detector",
-     "titleEn": "Fizz brain component in Almide that decides whether a spoken sentence triggers thinking motion",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-thinking-cue-detector",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-thinking-cue-detector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-comment-dedupe",
-     "title": "fizz-comment-dedupe",
-     "titleEn": "A pure NDJSON pipe filter for Fizz that drops already-seen comment IDs from a comment stream.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-comment-dedupe",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-comment-dedupe"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-lipsync",
-     "title": "fizz-lipsync",
-     "titleEn": "Lipsync DSP core for Fizz: turns audio RMS into a smooth mouth-open value in [0,1].",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-lipsync",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-lipsync"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-manual-comment-input",
-     "title": "fizz-manual-comment-input",
-     "titleEn": "Fizz comment source that turns operator stdin lines into normalized Manual Comment NDJSON",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-manual-comment-input",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-manual-comment-input"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-api",
-     "title": "fizz-memory-api",
-     "titleEn": "Fizz's memory HTTP service exposing note, recall, search, wipe and users over a JSONL log",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-api",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-memory-api"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l3-summarizer",
-     "title": "fizz-memory-l3-summarizer",
-     "titleEn": "Fizz memory layer L3 that rolls a per-user summary via an LLM once events pass a threshold",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l3-summarizer",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-memory-l3-summarizer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-tweet-validator",
-     "title": "fizz-tweet-validator",
-     "titleEn": "Counts X (twitter-text) weighted characters and checks tweets against the 280 limit.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-tweet-validator",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-tweet-validator"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-twitch-chat-source",
-     "title": "fizz-twitch-chat-source",
-     "titleEn": "Fizz input component that reads Twitch chat anonymously and streams normalized Comment NDJSON to stdout",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-twitch-chat-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-twitch-chat-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-x-mention-source",
-     "title": "fizz-x-mention-source",
-     "titleEn": "Fizz input component that polls X mentions via an XAPI proxy and streams Comment NDJSON to stdout",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-x-mention-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-x-mention-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-youtube-chat-source",
-     "title": "fizz-youtube-chat-source",
-     "titleEn": "Read-only Fizz component that polls YouTube Live Chat and streams normalized Comment NDJSON to stdout",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-youtube-chat-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-youtube-chat-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/animula",
-     "title": "animula",
-     "titleEn": "AI VTuber framework written in Almide, with a single native Rust host for rendering and I/O",
-     "date": "Apr 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/animula",
-     "tags": [
-      "Almide",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/animula"
-      }
-     ],
-     "order": {
-      "date": "2026-04-17"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-audio-leader-elector",
-     "title": "fizz-audio-leader-elector",
-     "titleEn": "Audio-leader election core that picks one playback leader among multiple viewer tabs.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-audio-leader-elector",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-audio-leader-elector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-bgm-player",
-     "title": "fizz-bgm-player",
-     "titleEn": "Playlist navigation for Fizz BGM: picks the next, previous or shuffled track index from a count.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-bgm-player",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-bgm-player"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-camera-presets",
-     "title": "fizz-camera-presets",
-     "titleEn": "Camera preset core for Fizz: computes face/upper/full camera position and look-at, plus easing.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-camera-presets",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-camera-presets"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-color-tint",
-     "title": "fizz-color-tint",
-     "titleEn": "Pure color-conversion core for recoloring irises in PSD eye textures, built for native and wasm",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-color-tint",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-color-tint"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-command-applier",
-     "title": "fizz-command-applier",
-     "titleEn": "Routing core that maps wire-protocol avatar Command types to their handling subsystem, in Almide",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-command-applier",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-command-applier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-effect-checker",
-     "title": "fizz-effect-checker",
-     "titleEn": "Static checker verifying a plan's used effects fall within a persona's allowed effect set.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-effect-checker",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-effect-checker"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-env-loader",
-     "title": "fizz-env-loader",
-     "titleEn": "Almide core for Fizz that parses .env text into KEY=VALUE pairs, built as a native binary",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-env-loader",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-env-loader"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-dataset",
-     "title": "fizz-eval-dataset",
-     "titleEn": "Schema and row validation for comment/reply eval-set TSVs, written in Almide for native and wasm.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-dataset",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-eval-dataset"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-rubric",
-     "title": "fizz-eval-rubric",
-     "titleEn": "Canonical 7-axis kotodama-eval rubric: axis metadata and composite weights, in Almide.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-rubric",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-eval-rubric"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-score",
-     "title": "fizz-eval-score",
-     "titleEn": "Almide arithmetic core for kotodama-eval score aggregation, built for native and wasm",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-score",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-eval-score"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-expression-applier",
-     "title": "fizz-expression-applier",
-     "titleEn": "Expression-applier core for Fizz: maps emotion names to VRM channels and weights, clamped to [0,1].",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-expression-applier",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-expression-applier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-fbx-rig-normalizer",
-     "title": "fizz-fbx-rig-normalizer",
-     "titleEn": "Rig normalizer core that maps raw FBX bone names to VRM humanoid slots, native and wasm.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-fbx-rig-normalizer",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-fbx-rig-normalizer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-gesture-player",
-     "title": "fizz-gesture-player",
-     "titleEn": "Fizz's DSP core that computes bone offsets for one-shot gestures from a gesture ID and progress u.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-gesture-player",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-gesture-player"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-glb-container",
-     "title": "fizz-glb-container",
-     "titleEn": "Almide core that parses GLB/VRM container headers into chunk offsets and lengths.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-glb-container",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-glb-container"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-http-router",
-     "title": "fizz-http-router",
-     "titleEn": "Fizz HTTP dispatch core mapping (method, path) to a route id via ordered method+prefix matching",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-http-router",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-http-router"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-idle-motion",
-     "title": "fizz-idle-motion",
-     "titleEn": "Idle-motion core computing avatar blink, breath and sway as pure functions of wall-clock time t",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-idle-motion",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-idle-motion"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-layout-scope",
-     "title": "fizz-layout-scope",
-     "titleEn": "Almide library resolving Fizz landscape/portrait scope to namespace position-config keys",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-layout-scope",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-layout-scope"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-liveness-monitor",
-     "title": "fizz-liveness-monitor",
-     "titleEn": "Fizz's liveness core that judges WS connection ping/pong death on every tick, in Almide.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-liveness-monitor",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-liveness-monitor"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l1-ring",
-     "title": "fizz-memory-l1-ring",
-     "titleEn": "Fizz's L1 memory: an in-memory per-user ring of recent MemoryEvents that answers recall instantly.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l1-ring",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-memory-l1-ring"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l2-events",
-     "title": "fizz-memory-l2-events",
-     "titleEn": "L2 persistence layer of Fizz memory: append-only NDJSON event log queryable per user_id",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l2-events",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-memory-l2-events"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-mixamo-retargeter",
-     "title": "fizz-mixamo-retargeter",
-     "titleEn": "Quaternion retargeting core in Almide that maps Mixamo animation onto VRM bones, native and wasm.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-mixamo-retargeter",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-mixamo-retargeter"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-reading-corrector",
-     "title": "fizz-reading-corrector",
-     "titleEn": "Pre-TTS filter for Fizz that replaces kanji with kana to fix readings of names and tricky words",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-reading-corrector",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-reading-corrector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-recall-gate",
-     "title": "fizz-recall-gate",
-     "titleEn": "Fizz recall gate that trims RecallResult to the brain's budget and supplies a memory-less fallback",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-recall-gate",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-recall-gate"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-reply-paginator",
-     "title": "fizz-reply-paginator",
-     "titleEn": "Almide core that splits AI reply text into display chunks at sentence and clause boundaries.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-reply-paginator",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-reply-paginator"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-response-transformer",
-     "title": "fizz-response-transformer",
-     "titleEn": "Catalog lookup and weighted selection of kotodama response transforms, in Almide (native + wasm)",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-response-transformer",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-response-transformer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-session-tracker",
-     "title": "fizz-session-tracker",
-     "titleEn": "Fizz stream session tracker that marks start/end boundaries and counts per-user participation.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-session-tracker",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-session-tracker"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-speak-queue",
-     "title": "fizz-speak-queue",
-     "titleEn": "Almide state machine and boundary-event logic for sequential playback of LLM-streamed TTS clips",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-speak-queue",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-speak-queue"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-trigger-matcher",
-     "title": "fizz-trigger-matcher",
-     "titleEn": "Substring-match engine that picks suggested transform priors from a persona's triggers for an input.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-trigger-matcher",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-trigger-matcher"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-weather-codes",
-     "title": "fizz-weather-codes",
-     "titleEn": "Almide library mapping Open-Meteo WMO weather codes to Japanese TTS labels and detecting weather queries",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-weather-codes",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-weather-codes"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-ws-reconnect",
-     "title": "fizz-ws-reconnect",
-     "titleEn": "Computes Fizz WebSocket reconnect delays using exponential backoff, a cap and equal jitter.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-ws-reconnect",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-ws-reconnect"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-x-dummy-feed",
-     "title": "fizz-x-dummy-feed",
-     "titleEn": "Pure simulation logic of Fizz's dummy X mention feed, written in Almide for native and wasm.",
-     "date": "Jun 2026",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-x-dummy-feed",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/fizz-x-dummy-feed"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
     }
    ]
   },
@@ -5041,15 +2727,15 @@
    "intro": "Minecraft's protocol implemented in Almide from the bottom up (mc-protocol): authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and bots (mc-bot, craftsman) — replacing the layers of node-minecraft-protocol and prismarine in a typed language.",
    "figures": [
     {
-     "value": "26",
+     "value": "25",
      "label": "Repositories"
     },
     {
-     "value": "187",
+     "value": "108",
      "label": "Commits"
     },
     {
-     "value": "3",
+     "value": "2",
      "label": "Languages"
     },
     {
@@ -5060,7 +2746,7 @@
    "years": [
     {
      "name": "2025",
-     "count": 95
+     "count": 16
     },
     {
      "name": "2026",
@@ -5146,40 +2832,6 @@
      ],
      "order": {
       "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/mine-rabbit-bots",
-     "title": "mine-rabbit-bots",
-     "titleEn": "A sandbox, separate from Craftsman, for testing a Mineflyer bot and config on a Paper server",
-     "date": "Nov 2025",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/mine-rabbit-bots",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "79"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/mine-rabbit-bots"
-      }
-     ],
-     "order": {
-      "date": "2025-11-21"
      }
     },
     {
@@ -6290,434 +3942,6 @@
    ]
   },
   {
-   "id": "web",
-   "title": "Parts for the edge and the web",
-   "short": "Edge and web",
-   "intro": "The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare's job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).",
-   "figures": [
-    {
-     "value": "11",
-     "label": "Repositories"
-    },
-    {
-     "value": "122",
-     "label": "Commits"
-    },
-    {
-     "value": "2",
-     "label": "Languages"
-    },
-    {
-     "value": "2024–2026",
-     "label": "Span"
-    }
-   ],
-   "years": [
-    {
-     "name": "2024",
-     "count": 60
-    },
-    {
-     "name": "2025",
-     "count": 26
-    },
-    {
-     "name": "2026",
-     "count": 36
-    }
-   ],
-   "works": [
-    {
-     "image": "plates/shared/Aid-On/aid-on-ui-system.jpg",
-     "readme": {
-      "lead": "A repository named aid-on-ui-system2, apparently a UI system; its README gives no details",
-      "points": [
-       "Written in TypeScript",
-       "Also uses JavaScript",
-       "README contains only the project name"
-      ]
-     },
-     "id": "Aid-On/aid-on-ui-system",
-     "title": "aid-on-ui-system",
-     "titleEn": "A repository named aid-on-ui-system2, apparently a UI system; its README gives no details",
-     "date": "Sep 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-ui-system",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "42"
-      },
-      {
-       "label": "Started",
-       "value": "Jul 2024"
-      },
-      {
-       "label": "Release",
-       "value": "v1.0.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/aid-on-ui-system"
-      },
-      {
-       "label": "Site",
-       "href": "https://aid-on.github.io/aid-on-ui-system/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/nagare",
-     "title": "nagare",
-     "titleEn": "A TypeScript stream library where Stream<T> is a ReadableStream, with reactive operators for the edge",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/nagare",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "edge-computing",
-      "readablestream"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "22"
-      },
-      {
-       "label": "Started",
-       "value": "Dec 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/nagare"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/qwiks",
-     "title": "qwiks",
-     "titleEn": "Hook library that bridges nagare Stream<T> to Qwik Signals for reactive stream handling.",
-     "date": "Sep 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/qwiks",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "8"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/qwiks"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/outline-api-client-ts",
-     "title": "outline-api-client-ts",
-     "titleEn": "A type-safe TypeScript client library for the Outline knowledge base API, built for Node.js.",
-     "date": "Sep 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/outline-api-client-ts",
-     "tags": [
-      "TypeScript",
-      "Shell",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "7"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/outline-api-client-ts"
-      },
-      {
-       "label": "Site",
-       "href": "https://aid-on.github.io/outline-api-client-ts/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/design-system",
-     "title": "design-system",
-     "titleEn": "A type-safe color token system with light/dark theming for Qwik applications.",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/design-system",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "8"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/design-system"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/didoq",
-     "title": "didoq",
-     "titleEn": "Distributed job queue for Cloudflare Workers, D1 and Durable Objects with a fluent API and nagare Stream.",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/didoq",
-     "tags": [
-      "TypeScript",
-      "SQL",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "8"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/didoq"
-      }
-     ],
-     "order": {
-      "date": "2026-06-10"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/auth",
-     "title": "auth",
-     "titleEn": "Edge-native auth library for Cloudflare Workers with a Fluent API, using only Web Crypto.",
-     "date": "Jun 2026",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/auth",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/auth"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/zod-to-markdown",
-     "title": "zod-to-markdown",
-     "titleEn": "A utility function that converts Zod schemas into Markdown documentation.",
-     "date": "Mar 2024",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/zod-to-markdown",
-     "tags": [
-      "JavaScript",
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "6"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2024"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/zod-to-markdown"
-      }
-     ],
-     "order": {
-      "date": "2024-03-26"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/auth-providers-ts",
-     "title": "auth-providers-ts",
-     "titleEn": "Framework-agnostic OAuth 2.0 authentication providers for cloud, edge and server runtimes.",
-     "date": "Aug 2025",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/auth-providers-ts",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/auth-providers-ts"
-      }
-     ],
-     "order": {
-      "date": "2025-08-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/next-auth-providers",
-     "title": "next-auth-providers",
-     "titleEn": "NextAuth.js authentication providers by Aid-On, with LINE Login OAuth 2.0 support",
-     "date": "Aug 2025",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/next-auth-providers",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/next-auth-providers"
-      }
-     ],
-     "order": {
-      "date": "2025-08-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-draft-ui",
-     "title": "aid-on-draft-ui",
-     "titleEn": "A project named aid-on-draft-ui; its README gives only the title and no description",
-     "date": "Sep 2024",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-draft-ui",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "14"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2024"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/aid-on-draft-ui"
-      }
-     ],
-     "order": {
-      "date": "2024-09-01"
-     }
-    }
-   ]
-  },
-  {
    "id": "toolchain",
    "title": "Getting a toolchain in place",
    "short": "Toolchains",
@@ -7132,33 +4356,29 @@
    "id": "sites",
    "title": "Pages made to be looked at",
    "short": "Pages",
-   "intro": "Things that open in a browser and are finished there: a sample portfolio for an artist (hokusai-portfolio) and one for a person (kotorody-portfolio), a timeline of chips and world affairs (chip-war-chronicle), agent benchmarks gathered into one table (agent-bench-matrix), a talk's slides, small apps that look after a body (gulp-coach, environment-health-viewer, tabi-navi), two that play with sound (pitchy, almide-headset-eq), and plain HTML for paperwork (aid-on-contract-generator, aid-on-invoice-generator, aid-on-tax-calculator).",
+   "intro": "Things that open in a browser and are finished there: a sample portfolio for an artist (hokusai-portfolio), a timeline of chips and world affairs (chip-war-chronicle), agent benchmarks gathered into one table (agent-bench-matrix), a talk's slides, small apps that look after a body (gulp-coach, environment-health-viewer, tabi-navi), and two that play with sound (pitchy, almide-headset-eq).",
    "figures": [
     {
-     "value": "13",
+     "value": "9",
      "label": "Repositories"
     },
     {
-     "value": "126",
+     "value": "111",
      "label": "Commits"
     },
     {
-     "value": "4",
+     "value": "3",
      "label": "Languages"
     },
     {
-     "value": "2025–2026",
+     "value": "2026–2026",
      "label": "Span"
     }
    ],
    "years": [
     {
-     "name": "2025",
-     "count": 8
-    },
-    {
      "name": "2026",
-     "count": 118
+     "count": 111
     }
    ],
    "works": [
@@ -7432,38 +4652,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/kotorody-portfolio",
-     "title": "kotorody-portfolio",
-     "titleEn": "Portfolio site of kotorody, a Frontend Engineer at Aid-On, written in HTML.",
-     "date": "May 2026",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/kotorody-portfolio",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "7"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/kotorody-portfolio"
-      }
-     ],
-     "order": {
-      "date": "2026-05-18"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/pitchy",
      "title": "pitchy",
      "titleEn": "Whistle pitch detection toolkit that shows matching chords, plus a whistle-controlled rhythm game",
@@ -7526,104 +4714,6 @@
      "order": {
       "date": "2026-06-11"
      }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-contract-generator",
-     "title": "aid-on-contract-generator",
-     "titleEn": "A pure HTML/CSS/JavaScript web app that generates contracts entirely in the browser, with no build step.",
-     "date": "Jun 2025",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-contract-generator",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/aid-on-contract-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-tax-calculator",
-     "title": "aid-on-tax-calculator",
-     "titleEn": "A Python CLI script that converts between tax-inclusive and tax-exclusive prices under Japan's 10% consumption tax.",
-     "date": "Mar 2025",
-     "format": "Python",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-tax-calculator",
-     "tags": [
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/aid-on-tax-calculator"
-      }
-     ],
-     "order": {
-      "date": "2025-03-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-invoice-generator",
-     "title": "aid-on-invoice-generator",
-     "titleEn": "An invoice generator project; the README gives only the name, aid-on-invoice-generator",
-     "date": "Jun 2025",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-invoice-generator",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/aid-on-invoice-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-02"
-     }
     }
    ]
   },
@@ -7634,23 +4724,27 @@
    "intro": "The small binaries written for the day's work: getting paperwork out of the way (keiri, pdf-burger, resepy, capto, gformiac), looking at an environment and a machine (netcheck, igloc, syncenv, macleap, dns-checker), switching accounts (azprofile, chropen), turning what is written into something you can hand over (pagina, premaid, image-catalog-composer), hearing about a supply-chain attack early (tocsin, tocsin-almd), lifting a UI's structure into a Layout AST (uimodulay), and my own working protocol with the checker that grades against it (O6lvl4-protocol, O6lvl4-vitals).",
    "figures": [
     {
-     "value": "24",
+     "value": "25",
      "label": "Repositories"
     },
     {
-     "value": "195",
+     "value": "201",
      "label": "Commits"
     },
     {
-     "value": "9",
+     "value": "10",
      "label": "Languages"
     },
     {
-     "value": "2025–2026",
+     "value": "2024–2026",
      "label": "Span"
     }
    ],
    "years": [
+    {
+     "name": "2024",
+     "count": 6
+    },
     {
      "name": "2025",
      "count": 31
@@ -8496,6 +5590,39 @@
      "order": {
       "date": "2025-04-01"
      }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/zod-to-markdown",
+     "title": "zod-to-markdown",
+     "titleEn": "A utility function that converts Zod schemas into Markdown documentation.",
+     "date": "Mar 2024",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/zod-to-markdown",
+     "tags": [
+      "JavaScript",
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2024"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/zod-to-markdown"
+      }
+     ],
+     "order": {
+      "date": "2024-03-26"
+     }
     }
    ]
   },
@@ -8873,18 +6000,18 @@
    "id": "lab",
    "title": "Things tried out",
    "short": "Tried out",
-   "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), a set of JavaScript exercises (aid-on-js-training), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
+   "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "37",
+     "value": "31",
      "label": "Repositories"
     },
     {
-     "value": "344",
+     "value": "180",
      "label": "Commits"
     },
     {
-     "value": "12",
+     "value": "11",
      "label": "Languages"
     },
     {
@@ -8903,11 +6030,11 @@
     },
     {
      "name": "2024",
-     "count": 29
+     "count": 18
     },
     {
      "name": "2025",
-     "count": 225
+     "count": 72
     },
     {
      "name": "2026",
@@ -9090,106 +6217,6 @@
      ],
      "order": {
       "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-js-training",
-     "title": "aid-on-js-training",
-     "titleEn": "A beginner JavaScript exercise set with bundled tests that automatically check your answers",
-     "date": "Aug 2025",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-js-training",
-     "tags": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "122"
-      },
-      {
-       "label": "Started",
-       "value": "Nov 2024"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/aid-on-js-training"
-      }
-     ],
-     "order": {
-      "date": "2025-08-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/sandbox-ios-app",
-     "title": "sandbox-ios-app",
-     "titleEn": "A SwiftUI iOS app template with architectural linting, automated CI/CD and TestFlight deployment",
-     "date": "Oct 2025",
-     "format": "Swift",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/sandbox-ios-app",
-     "tags": [
-      "Swift"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/sandbox-ios-app"
-      }
-     ],
-     "order": {
-      "date": "2025-10-12"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/next-pet-diary",
-     "title": "next-pet-diary",
-     "titleEn": "A Next.js project bootstrapped with create-next-app, named next-pet-diary.",
-     "date": "Aug 2025",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/next-pet-diary",
-     "tags": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "25"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/next-pet-diary"
-      }
-     ],
-     "order": {
-      "date": "2025-08-31"
      }
     },
     {
@@ -9620,38 +6647,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/AIChatPractice",
-     "title": "AIChatPractice",
-     "titleEn": "A Swift repository named AIChatPractice, apparently for AI chat practice; it has no README.",
-     "date": "Sep 2025",
-     "format": "Swift",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/AIChatPractice",
-     "tags": [
-      "Swift"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "8"
-      },
-      {
-       "label": "Started",
-       "value": "Jul 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/AIChatPractice"
-      }
-     ],
-     "order": {
-      "date": "2025-09-05"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/golang-cp-solve-sandbox",
      "title": "golang-cp-solve-sandbox",
      "titleEn": "No README; a Go repository whose name suggests a sandbox for competitive programming solutions",
@@ -9810,72 +6805,6 @@
      ],
      "order": {
       "date": "2022-05-08"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/reporting-page-by-calendar-days",
-     "title": "reporting-page-by-calendar-days",
-     "titleEn": "A JavaScript and HTML project for reporting pages by calendar day; the README gives no details.",
-     "date": "Feb 2025",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/reporting-page-by-calendar-days",
-     "tags": [
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/reporting-page-by-calendar-days"
-      }
-     ],
-     "order": {
-      "date": "2025-02-02"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/reporting-page-by-working-days",
-     "title": "reporting-page-by-working-days",
-     "titleEn": "A JavaScript and HTML page for reporting by working days; the README gives no details",
-     "date": "Feb 2025",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/reporting-page-by-working-days",
-     "tags": [
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Feb 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/Aid-On/reporting-page-by-working-days"
-      }
-     ],
-     "order": {
-      "date": "2025-02-02"
      }
     },
     {
@@ -10157,7 +7086,7 @@
     "blocks": [
      {
       "kind": "p",
-      "html": "I also build the foundations applications rely on: tool connections and execution controls for agents, and rate limiting, memory and stream processing for LLMs."
+      "html": "I also build what it takes to run AI for real: porta, which keeps an agent inside the permissions it was granted, and an agent runtime (homullus) and an LLM client (almai) written in Almide."
      }
     ]
    }

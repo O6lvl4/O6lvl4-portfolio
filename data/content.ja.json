@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "262 repos",
+  "life": "175 repos",
   "avatar": "assets/avatar.png",
   "role": "開発の道具を、言語からつくる。",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公開リポジトリ 262 件",
+  "kicker": "公開リポジトリ 175 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
-  "note": "公開リポジトリ 262 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
+  "note": "公開リポジトリ 175 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
   "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。"
  },
  "landing": {
@@ -118,20 +118,20 @@
    {
     "heading": "よく書く言語",
     "items": [
-     "Almide（137）",
-     "JavaScript（75）",
-     "TypeScript（57）",
-     "HTML（29）",
-     "Shell（28）"
+     "Almide（85）",
+     "TypeScript（31）",
+     "JavaScript（30）",
+     "Python（25）",
+     "Shell（25）"
     ]
    },
    {
     "heading": "そのほか",
     "items": [
-     "Python",
-     "CSS",
+     "HTML",
      "Rust",
      "Go",
+     "CSS",
      "C",
      "Lean",
      "Ruby"
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "201件を始めた",
-    "lead": "almide、porta、als、ccgrid ほか197件",
+    "title": "139件を始めた",
+    "lead": "almide、porta、als、ccgrid ほか135件",
     "tags": [
      "Rust",
      "Python",
@@ -152,21 +152,21 @@
    },
    {
     "period": "2025年",
-    "title": "36件を始めた",
-    "lead": "llm-queue-dispatcher、llm-throttle、whenm、templex ほか32件",
+    "title": "14件を始めた",
+    "lead": "igloc、llmine、treesrc、craftsman ほか10件",
     "tags": [
-     "TypeScript",
-     "JavaScript"
+     "Go",
+     "TypeScript"
     ]
    },
    {
     "period": "2024年",
-    "title": "10件を始めた",
-    "lead": "aid-on-ui-system、aid-on-js-training、sandbox-golang-cli、ts-react-tailwindcss-sandbox ほか6件",
+    "title": "7件を始めた",
+    "lead": "sandbox-golang-cli、ts-react-tailwindcss-sandbox、ts-tsnode-sandbox、zod-to-markdown ほか3件",
     "tags": [
+     "Go",
      "TypeScript",
-     "JavaScript",
-     "Go"
+     "JavaScript"
     ]
    },
    {
@@ -208,7 +208,7 @@
   "panel": [
    {
     "key": "org",
-    "value": "6"
+    "value": "5"
    },
    {
     "key": "最初のコミット",
@@ -220,26 +220,26 @@
    },
    {
     "key": "Almide で書いた割合",
-    "value": "46%",
-    "fill": 0.46
+    "value": "39%",
+    "fill": 0.39
    },
    {
     "key": "2026年のコミット",
-    "value": "95%",
-    "fill": 0.95
+    "value": "98%",
+    "fill": 0.98
    }
   ],
   "figures": [
    {
-    "value": "262",
+    "value": "175",
     "label": "公開リポジトリ"
    },
    {
-    "value": "14,543",
+    "value": "14,159",
     "label": "コミット"
    },
    {
-    "value": "19",
+    "value": "18",
     "label": "言語"
    },
    {
@@ -250,18 +250,13 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 121,
+    "count": 69,
     "color": "currentColor"
    },
    {
     "name": "TypeScript",
-    "count": 48,
+    "count": 26,
     "color": "#3178c6"
-   },
-   {
-    "name": "JavaScript",
-    "count": 18,
-    "color": "#f1e05a"
    },
    {
     "name": "Go",
@@ -274,14 +269,19 @@
     "color": "#dea584"
    },
    {
-    "name": "HTML",
+    "name": "JavaScript",
     "count": 10,
-    "color": "#e34c26"
+    "color": "#f1e05a"
    },
    {
     "name": "Python",
-    "count": 9,
+    "count": 8,
     "color": "#3572a5"
+   },
+   {
+    "name": "HTML",
+    "count": 8,
+    "color": "#e34c26"
    },
    {
     "name": "Lean",
@@ -307,11 +307,6 @@
     "name": "Lua",
     "count": 2,
     "color": "#000080"
-   },
-   {
-    "name": "Swift",
-    "count": 2,
-    "color": "#f05138"
    },
    {
     "name": "Racket",
@@ -362,27 +357,18 @@
    {
     "name": "almd-mc",
     "count": 24
-   },
-   {
-    "name": "Aid-On",
-    "count": 87
    }
   ],
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11466,
+    "count": 11750,
     "of": 28
    },
    {
     "name": "O6lvl4",
     "count": 1956,
     "of": 111
-   },
-   {
-    "name": "Aid-On",
-    "count": 670,
-    "of": 87
    },
    {
     "name": "almide-graphics",
@@ -396,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 48,
+    "count": 50,
     "of": 3
    }
   ],
@@ -411,15 +397,15 @@
    },
    {
     "name": "2024",
-    "count": 89
+    "count": 24
    },
    {
     "name": "2025",
-    "count": 549
+    "count": 162
    },
    {
     "name": "2026",
-    "count": 13842
+    "count": 13910
    }
   ]
  },
@@ -435,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "11,297",
+     "value": "11,555",
      "label": "コミット"
     },
     {
@@ -450,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11297
+     "count": 11555
     }
    ],
    "works": [
@@ -480,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "9,108"
+       "value": "9,316"
       },
       {
        "label": "初回",
@@ -527,7 +513,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,461"
+       "value": "1,482"
       },
       {
        "label": "初回",
@@ -549,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-21"
+      "date": "2026-09-22"
      }
     },
     {
@@ -694,7 +680,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "25"
+       "value": "28"
       },
       {
        "label": "初回",
@@ -702,7 +688,7 @@
       },
       {
        "label": "版",
-       "value": "v0.4.0"
+       "value": "v0.4.1"
       }
      ],
      "links": [
@@ -712,7 +698,46 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
+      "date": "2026-09-22"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-dojo",
+     "title": "almide-dojo",
+     "titleEn": "LLM生成コードの修正生存率を毎日測るAlmide用の計測基盤",
+     "date": "2026年9月",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-dojo",
+     "tags": [
+      "HTML",
+      "Almide",
+      "Zig",
+      "almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "226"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/almide-dojo"
+      },
+      {
+       "label": "サイト",
+       "href": "https://almide.github.io/almide-dojo/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-22"
      }
     },
     {
@@ -733,7 +758,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "22"
+       "value": "23"
       },
       {
        "label": "初回",
@@ -751,46 +776,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-dojo",
-     "title": "almide-dojo",
-     "titleEn": "LLM生成コードの修正生存率を毎日測るAlmide用の計測基盤",
-     "date": "2026年8月",
-     "format": "HTML",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-dojo",
-     "tags": [
-      "HTML",
-      "Almide",
-      "almide",
-      "benchmark"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "202"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/almide-dojo"
-      },
-      {
-       "label": "サイト",
-       "href": "https://almide.github.io/almide-dojo/"
-      }
-     ],
-     "order": {
-      "date": "2026-08-17"
+      "date": "2026-09-22"
      }
     },
     {
@@ -918,7 +904,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "7"
+       "value": "8"
       },
       {
        "label": "初回",
@@ -932,7 +918,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
+      "date": "2026-09-22"
      }
     },
     {
@@ -1547,7 +1533,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "874",
+     "value": "900",
      "label": "コミット"
     },
     {
@@ -1566,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 858
+     "count": 884
     }
    ],
    "works": [
@@ -1596,7 +1582,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "179"
+       "value": "205"
       },
       {
        "label": "初回",
@@ -1604,11 +1590,11 @@
       },
       {
        "label": "版",
-       "value": "v0.4.0"
+       "value": "v0.6.1"
       },
       {
        "label": "星",
-       "value": "2"
+       "value": "3"
       }
      ],
      "links": [
@@ -2517,18 +2503,18 @@
    "id": "llm",
    "title": "エージェントと LLM の土台",
    "short": "LLM の土台",
-   "intro": "モデルを実際に使うために要るもの。どのプロバイダにも同じ顔で当たる窓口（unillm・almai）と音声入力の窓口（unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、Almide で書いたエージェントの実行環境（homullus）と Mac を操作する手（manus）、端末から複数のモデルを同じ口で叩く CLI（llmine）、そしてモデルそのものを純 Almide で書いて WASM で走らせたもの（bonsai-almide）。",
+   "intro": "モデルを実際に使うために要るもの。どのプロバイダにも同じ顔で当たる窓口（almai）、Almide で書いたエージェントの実行環境（homullus）と Mac を操作する手（manus）、端末から複数のモデルを同じ口で叩く CLI（llmine）、そしてモデルそのものを純 Almide で書いて WASM で走らせたもの（bonsai-almide）。",
    "figures": [
     {
-     "value": "19",
+     "value": "5",
      "label": "公開リポジトリ"
     },
     {
-     "value": "297",
+     "value": "112",
      "label": "コミット"
     },
     {
-     "value": "3",
+     "value": "2",
      "label": "言語"
     },
     {
@@ -2539,114 +2525,24 @@
    "years": [
     {
      "name": "2025",
-     "count": 148
+     "count": 27
     },
     {
      "name": "2026",
-     "count": 149
+     "count": 85
     }
    ],
    "works": [
     {
-     "image": "plates/ja/Aid-On/llm-queue-dispatcher.jpg",
+     "image": "plates/ja/almide/bonsai-almide.jpg",
      "readme": {
-      "lead": "LLMリクエストをスコアリングで選び出す、レート制限対応のキュー",
+      "lead": "Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ",
       "points": [
-       "多次元スコアリングによる選択",
-       "@aid-on/llm-throttleとの連携",
-       "差し替え可能なストレージ"
+       "Qwen3テンプレートとKVキャッシュ",
+       "温度・top-k・繰り返しペナルティ",
+       "248MBモデルをIndexedDBに保存"
       ]
      },
-     "id": "Aid-On/llm-queue-dispatcher",
-     "title": "llm-queue-dispatcher",
-     "titleEn": "LLMリクエストをスコアリングで選び出す、レート制限対応のキュー",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/llm-queue-dispatcher",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "10"
-      },
-      {
-       "label": "初回",
-       "value": "2025年8月"
-      },
-      {
-       "label": "版",
-       "value": "v1.0.2"
-      },
-      {
-       "label": "星",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/llm-queue-dispatcher"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/llm-throttle",
-     "title": "llm-throttle",
-     "titleEn": "LLM API向けにRPMとTPMを同時制御するレート制限ライブラリ",
-     "date": "2025年8月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/llm-throttle",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "12"
-      },
-      {
-       "label": "初回",
-       "value": "2025年8月"
-      },
-      {
-       "label": "版",
-       "value": "v1.0.1"
-      },
-      {
-       "label": "星",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/llm-throttle"
-      },
-      {
-       "label": "サイト",
-       "href": "https://aid-on.github.io/llm-throttle/"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/bonsai-almide",
      "title": "bonsai-almide",
      "titleEn": "Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ",
@@ -2721,162 +2617,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/whenm",
-     "title": "whenm",
-     "titleEn": "時間と状態変化を理解するスキーマレスな時系列メモリシステム",
-     "date": "2026年2月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/whenm",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "Shell",
-      "ai-memory"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "32"
-      },
-      {
-       "label": "初回",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版",
-       "value": "v0.3.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/whenm"
-      }
-     ],
-     "order": {
-      "date": "2026-02-20"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/templex",
-     "title": "templex",
-     "titleEn": "文章から再利用可能な文章テンプレートを抽出し新規記事を生成するライブラリ",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/templex",
-     "tags": [
-      "TypeScript",
-      "ai",
-      "article-generation",
-      "document-analysis"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "24"
-      },
-      {
-       "label": "初回",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版",
-       "value": "v0.2.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/templex"
-      }
-     ],
-     "order": {
-      "date": "2026-06-12"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fractop",
-     "title": "fractop",
-     "titleEn": "LLMの文脈上限を超える長文を分割・処理・統合するTypeScriptライブラリ",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fractop",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "ai",
-      "chunking"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "19"
-      },
-      {
-       "label": "初回",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版",
-       "value": "v0.6.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fractop"
-      }
-     ],
-     "order": {
-      "date": "2026-06-10"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/iteratop",
-     "title": "iteratop",
-     "titleEn": "LLMと収束ループを組むTypeScript製の反復処理ライブラリ",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/iteratop",
-     "tags": [
-      "TypeScript",
-      "agent",
-      "ai",
-      "builder-pattern"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "18"
-      },
-      {
-       "label": "初回",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版",
-       "value": "v0.3.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/iteratop"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/llmine",
      "title": "llmine",
      "titleEn": "複数のLLMを端末から統一的に使えるCLIツール",
@@ -2913,92 +2653,10 @@
     },
     {
      "image": "",
-     "id": "Aid-On/fuzztok",
-     "title": "fuzztok",
-     "titleEn": "CJK対応の高速・軽量なファジートークン数推定ライブラリ",
-     "date": "2025年8月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fuzztok",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "HTML",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "8"
-      },
-      {
-       "label": "初回",
-       "value": "2025年8月"
-      },
-      {
-       "label": "版",
-       "value": "v1.0.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fuzztok"
-      },
-      {
-       "label": "サイト",
-       "href": "https://aid-on.github.io/fuzztok/"
-      }
-     ],
-     "order": {
-      "date": "2025-08-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/memory-rag",
-     "title": "memory-rag",
-     "titleEn": "Vercel AI SDK対応の、軽量でプロバイダ非依存なインメモリRAGライブラリ",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/memory-rag",
-     "tags": [
-      "TypeScript",
-      "CSS",
-      "JavaScript",
-      "aid-on-libs"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "7"
-      },
-      {
-       "label": "初回",
-       "value": "2025年8月"
-      },
-      {
-       "label": "版",
-       "value": "v1.0.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/memory-rag"
-      }
-     ],
-     "order": {
-      "date": "2025-08-10"
-     }
-    },
-    {
-     "image": "",
      "id": "almide-ai/almai",
      "title": "almai",
      "titleEn": "Almide用のマルチプロバイダLLMクライアント。単一の窓口で各社に対応",
-     "date": "2026年8月",
+     "date": "2026年9月",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/almai",
@@ -3011,7 +2669,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "19"
+       "value": "21"
       },
       {
        "label": "初回",
@@ -3025,71 +2683,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-04"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unillm-vercel-ai-sdk",
-     "title": "unillm-vercel-ai-sdk",
-     "titleEn": "@aid-on/unillmをVercel AI SDKで使うためのLanguageModelV1互換ラッパー",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unillm-vercel-ai-sdk",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "7"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/unillm-vercel-ai-sdk"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/vad",
-     "title": "vad",
-     "titleEn": "ブラウザ向けの音声区間検出。Silero VADとRNNoise雑音抑制を統合",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/vad",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "6"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/vad"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
+      "date": "2026-09-22"
      }
     },
     {
@@ -3123,1914 +2717,6 @@
      "order": {
       "date": "2026-07-07"
      }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unillm",
-     "title": "unillm",
-     "titleEn": "エッジ環境向けに複数のLLMプロバイダを統一APIで扱うTypeScriptライブラリ",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unillm",
-     "tags": [
-      "TypeScript",
-      "ai",
-      "anthropic",
-      "claude"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "29"
-      },
-      {
-       "label": "初回",
-       "value": "2025年12月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/unillm"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/embersm",
-     "title": "embersm",
-     "titleEn": "Cloudflare Workers上でLLMエージェントに長期記憶を与える5層メモリ",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/embersm",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "6"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/embersm"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/synapser",
-     "title": "synapser",
-     "titleEn": "LLMエージェント処理を4フェーズに分ける型安全なTypeScriptパイプライン",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/synapser",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "5"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/synapser"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/unisttp",
-     "title": "unisttp",
-     "titleEn": "Cloudflare Workers AIとGroqを統一的に扱うSTTプロバイダ",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/unisttp",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/unisttp"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    }
-   ]
-  },
-  {
-   "id": "fizz",
-   "title": "AITuber の部品",
-   "short": "AITuber",
-   "intro": "AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。部品の間をつなぐのは共通のプロトコル（fizz-protocol）で、返事の組み立て全体は fizz-brain-orchestrator が受け持ちます。どれも単一責任の純関数で、Almide で書いてあります。",
-   "figures": [
-    {
-     "value": "52",
-     "label": "公開リポジトリ"
-    },
-    {
-     "value": "109",
-     "label": "コミット"
-    },
-    {
-     "value": "1",
-     "label": "言語"
-    },
-    {
-     "value": "2026–2026",
-     "label": "期間"
-    }
-   ],
-   "years": [
-    {
-     "name": "2026",
-     "count": 109
-    }
-   ],
-   "works": [
-    {
-     "image": "plates/ja/Aid-On/fizz-brain-orchestrator.jpg",
-     "readme": {
-      "lead": "コメントを文の断片ストリームに変える Fizz の brain 合成 CLI",
-      "points": [
-       "classify・few-shot・prompt の連結",
-       "fizz-llm-client 経由の LLM 呼び出し",
-       "SentenceFragment を NDJSON で出力"
-      ]
-     },
-     "id": "Aid-On/fizz-brain-orchestrator",
-     "title": "fizz-brain-orchestrator",
-     "titleEn": "コメントを文の断片ストリームに変える Fizz の brain 合成 CLI",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-brain-orchestrator",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-brain-orchestrator"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-conversation-history",
-     "title": "fizz-conversation-history",
-     "titleEn": "直近N ターンだけを保持する窓つき会話履歴の部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-conversation-history",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.1.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-conversation-history"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-llm-client",
-     "title": "fizz-llm-client",
-     "titleEn": "Almide製AITuber「Fizz」向けのマルチプロバイダLLMクライアント",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-llm-client",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-llm-client"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-persona",
-     "title": "fizz-persona",
-     "titleEn": "Almide製AITuber Fizzのpersonaオンディスク形式契約",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-persona",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-persona"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-prompt-builder",
-     "title": "fizz-prompt-builder",
-     "titleEn": "persona・recall・履歴・コメントからLLMのmessages列を組み立てるライブラリ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-prompt-builder",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.1.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-prompt-builder"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-protocol",
-     "title": "fizz-protocol",
-     "titleEn": "Almide製AITuber「Fizz」の各部品が共有するワイヤ契約パッケージ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-protocol",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "7"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.2.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-protocol"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-comment-classifier",
-     "title": "fizz-comment-classifier",
-     "titleEn": "コメント文面からリアクション感情を判定するAlmide製ライブラリ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-comment-classifier",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-comment-classifier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-few-shot-retriever",
-     "title": "fizz-few-shot-retriever",
-     "titleEn": "着弾コメントに似た過去Q/Aを上位k件取得するAlmide製ライブラリ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-few-shot-retriever",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-few-shot-retriever"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-first-time-greeter",
-     "title": "fizz-first-time-greeter",
-     "titleEn": "初見視聴者に自己紹介を一度だけ行う、決定論的なAITuber Fizzの脳部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-first-time-greeter",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-first-time-greeter"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-stream-sentence-parser",
-     "title": "fizz-stream-sentence-parser",
-     "titleEn": "LLM出力を文とタグに分割するFizzの脳部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-stream-sentence-parser",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-stream-sentence-parser"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-thinking-cue-detector",
-     "title": "fizz-thinking-cue-detector",
-     "titleEn": "発話文が思考モーションを出すべきか判定するFizzの脳部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-thinking-cue-detector",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      },
-      {
-       "label": "版",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-thinking-cue-detector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-comment-dedupe",
-     "title": "fizz-comment-dedupe",
-     "titleEn": "commentストリームから既出IDを落とすNDJSONパイプフィルタ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-comment-dedupe",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-comment-dedupe"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-lipsync",
-     "title": "fizz-lipsync",
-     "titleEn": "音声のRMSから滑らかな口の開き値[0,1]を出す口パクDSPコア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-lipsync",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-lipsync"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-manual-comment-input",
-     "title": "fizz-manual-comment-input",
-     "titleEn": "運用者のstdin手入力を正規化Comment NDJSONで流すFizzの入力部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-manual-comment-input",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-manual-comment-input"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-api",
-     "title": "fizz-memory-api",
-     "titleEn": "note/recall/search/wipe/usersをHTTP公開するFizzのmemoryサービス",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-api",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-memory-api"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l3-summarizer",
-     "title": "fizz-memory-l3-summarizer",
-     "titleEn": "閾値超過でLLMがユーザ別要約を更新するFizz記憶層L3",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l3-summarizer",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-memory-l3-summarizer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-tweet-validator",
-     "title": "fizz-tweet-validator",
-     "titleEn": "X(twitter-text)の重み付き文字数を数え280上限を検証するライブラリ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-tweet-validator",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-tweet-validator"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-twitch-chat-source",
-     "title": "fizz-twitch-chat-source",
-     "titleEn": "Twitch チャットを匿名購読し正規化コメントをNDJSONで出力する部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-twitch-chat-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-twitch-chat-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-x-mention-source",
-     "title": "fizz-x-mention-source",
-     "titleEn": "XのメンションをXAPI proxy経由で取得しコメントNDJSONに流す部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-x-mention-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-x-mention-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-youtube-chat-source",
-     "title": "fizz-youtube-chat-source",
-     "titleEn": "YouTube Live Chatを取得しComment NDJSONで出力する読み取り専用部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-youtube-chat-source",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-youtube-chat-source"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/animula",
-     "title": "animula",
-     "titleEn": "Almide製AI VTuberフレームワーク。キャラクターに宿る小さな魂",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/animula",
-     "tags": [
-      "Almide",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/animula"
-      }
-     ],
-     "order": {
-      "date": "2026-04-17"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-audio-leader-elector",
-     "title": "fizz-audio-leader-elector",
-     "titleEn": "複数タブから音声再生リーダーを1つ選ぶ選出コア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-audio-leader-elector",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-audio-leader-elector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-bgm-player",
-     "title": "fizz-bgm-player",
-     "titleEn": "FizzのBGMプレイリストで次/前/シャッフルの曲indexを決める部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-bgm-player",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-bgm-player"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-camera-presets",
-     "title": "fizz-camera-presets",
-     "titleEn": "Fizzのカメラプリセット計算コア。face/upper/fullの目標位置と注視点を算出",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-camera-presets",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-camera-presets"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-color-tint",
-     "title": "fizz-color-tint",
-     "titleEn": "虹彩再着色のための、RGB/HSV純粋色変換コア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-color-tint",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-color-tint"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-command-applier",
-     "title": "fizz-command-applier",
-     "titleEn": "avatar Commandのtypeをサブシステム分類へ対応付ける振り分けコア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-command-applier",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-command-applier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-effect-checker",
-     "title": "fizz-effect-checker",
-     "titleEn": "応答計画のeffectが許可集合に収まるか検証する部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-effect-checker",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-effect-checker"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-env-loader",
-     "title": "fizz-env-loader",
-     "titleEn": "Fizz用の.envテキストをKEY=VALUEペアに解析するAlmide製パースコア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-env-loader",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-env-loader"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-dataset",
-     "title": "fizz-eval-dataset",
-     "titleEn": "コメント/返答評価セットTSVのスキーマと行検証を担う部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-dataset",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-eval-dataset"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-rubric",
-     "title": "fizz-eval-rubric",
-     "titleEn": "kotodama-eval 7軸ルーブリックの軸定義と重みを持つ部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-rubric",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-eval-rubric"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-eval-score",
-     "title": "fizz-eval-score",
-     "titleEn": "kotodama-eval のスコア集計算術を担う Almide 製の単一責任部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-eval-score",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-eval-score"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-expression-applier",
-     "title": "fizz-expression-applier",
-     "titleEn": "emotion名から VRM表情channelと重み比を返し値をクランプするコア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-expression-applier",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-expression-applier"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-fbx-rig-normalizer",
-     "title": "fizz-fbx-rig-normalizer",
-     "titleEn": "生ボーン名をVRM humanoidスロットへ対応付けるリグ正規化コア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-fbx-rig-normalizer",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-fbx-rig-normalizer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-gesture-player",
-     "title": "fizz-gesture-player",
-     "titleEn": "one-shotジェスチャのボーンオフセットを計算するFizzのDSPコア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-gesture-player",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-gesture-player"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-glb-container",
-     "title": "fizz-glb-container",
-     "titleEn": "GLB/VRMコンテナのヘッダを解析し位置と長さを返すAlide製コア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-glb-container",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-glb-container"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-http-router",
-     "title": "fizz-http-router",
-     "titleEn": "(method, path)をroute idに対応付けるFizzのHTTP振り分けコア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-http-router",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-http-router"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-idle-motion",
-     "title": "fizz-idle-motion",
-     "titleEn": "壁時計秒tの純関数で瞬き・呼吸・微揺れを計算するidleモーションコア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-idle-motion",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-idle-motion"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-layout-scope",
-     "title": "fizz-layout-scope",
-     "titleEn": "Fizzの横/縦レイアウトscopeを解決し位置設定の保存先を分けるAlmide製ライブラリ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-layout-scope",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-layout-scope"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-liveness-monitor",
-     "title": "fizz-liveness-monitor",
-     "titleEn": "WS接続のping/pong死活をtickごとに判定するFizzの判定コア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-liveness-monitor",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-liveness-monitor"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l1-ring",
-     "title": "fizz-memory-l1-ring",
-     "titleEn": "user_idごとの直近MemoryEventをメモリ保持し、recallに即答するL1記憶",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l1-ring",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-memory-l1-ring"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-memory-l2-events",
-     "title": "fizz-memory-l2-events",
-     "titleEn": "全MemoryEventをNDJSONでappend-only永続化しuser_idで検索するFizz記憶のL2層",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-memory-l2-events",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-memory-l2-events"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-mixamo-retargeter",
-     "title": "fizz-mixamo-retargeter",
-     "titleEn": "MixamoアニメをVRMボーンへ移す四元数リターゲット計算コア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-mixamo-retargeter",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-mixamo-retargeter"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-reading-corrector",
-     "title": "fizz-reading-corrector",
-     "titleEn": "TTS前段で漢字をかなに置換し、固有名詞の読みを固定する補正フィルタ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-reading-corrector",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-reading-corrector"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-recall-gate",
-     "title": "fizz-recall-gate",
-     "titleEn": "recall結果をbrain用に絞り、記憶なしの代替を返すFizzのゲート",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-recall-gate",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-recall-gate"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-reply-paginator",
-     "title": "fizz-reply-paginator",
-     "titleEn": "AI返答テキストを文の切れ目優先でページ分割するAlmide製コア",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-reply-paginator",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-reply-paginator"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-response-transformer",
-     "title": "fizz-response-transformer",
-     "titleEn": "kotodamaの応答変換カタログ照合と重み付き選択を担うAlmide部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-response-transformer",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-response-transformer"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-session-tracker",
-     "title": "fizz-session-tracker",
-     "titleEn": "配信の開始/終了境界とユーザー別発言数を集計するトラッカ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-session-tracker",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-session-tracker"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-speak-queue",
-     "title": "fizz-speak-queue",
-     "titleEn": "LLM音声クリップの逐次再生を判定する状態機械と境界イベント導出部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-speak-queue",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-speak-queue"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-trigger-matcher",
-     "title": "fizz-trigger-matcher",
-     "titleEn": "入力文から推奨 transform(prior)を選ぶ部分文字列照合エンジン",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-trigger-matcher",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-trigger-matcher"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-weather-codes",
-     "title": "fizz-weather-codes",
-     "titleEn": "WMO天気コードを日本語ラベルに変換し天気の質問を検出するAlmide製ライブラリ",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-weather-codes",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-weather-codes"
-      }
-     ],
-     "order": {
-      "date": "2026-06-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-ws-reconnect",
-     "title": "fizz-ws-reconnect",
-     "titleEn": "Fizz WS再接続の遅延を指数バックオフとjitterで計算する部品",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-ws-reconnect",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-ws-reconnect"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/fizz-x-dummy-feed",
-     "title": "fizz-x-dummy-feed",
-     "titleEn": "Fizzの擬似mentionフィードの純ロジックをAlmideで実装したもの",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/fizz-x-dummy-feed",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/fizz-x-dummy-feed"
-      }
-     ],
-     "order": {
-      "date": "2026-06-14"
-     }
     }
    ]
   },
@@ -5041,15 +2727,15 @@
    "intro": "Minecraft のプロトコルを Almide で下から実装した一式（mc-protocol）。認証、チャンク、NBT、レジストリ、物理、経路探索、インベントリ、PvP、プロキシ、サーバー、そしてボット（mc-bot・craftsman）。node-minecraft-protocol や prismarine の各層を、型のある言語で置き換えていく試みです。",
    "figures": [
     {
-     "value": "26",
+     "value": "25",
      "label": "公開リポジトリ"
     },
     {
-     "value": "187",
+     "value": "108",
      "label": "コミット"
     },
     {
-     "value": "3",
+     "value": "2",
      "label": "言語"
     },
     {
@@ -5060,7 +2746,7 @@
    "years": [
     {
      "name": "2025",
-     "count": 95
+     "count": 16
     },
     {
      "name": "2026",
@@ -5146,40 +2832,6 @@
      ],
      "order": {
       "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/mine-rabbit-bots",
-     "title": "mine-rabbit-bots",
-     "titleEn": "Paper サーバー上で Mineflyer の Bot を検証する、Craftsman 独立のサンドボックス",
-     "date": "2025年11月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/mine-rabbit-bots",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "79"
-      },
-      {
-       "label": "初回",
-       "value": "2025年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/mine-rabbit-bots"
-      }
-     ],
-     "order": {
-      "date": "2025-11-21"
      }
     },
     {
@@ -6290,434 +3942,6 @@
    ]
   },
   {
-   "id": "web",
-   "title": "エッジと Web の部品",
-   "short": "エッジと Web",
-   "intro": "Cloudflare Workers やブラウザで動く層。ReadableStream を包まずそのままリアクティブにする nagare と、その上の橋渡し（Cloudflare のジョブキューに繋ぐ didoq、Qwik に繋ぐ qwiks）、エッジネイティブな認証（auth・auth-providers-ts）、色トークンとテーマのデザインシステム（design-system・aid-on-ui-system）、知識ベース API のクライアント（outline-api-client-ts）。",
-   "figures": [
-    {
-     "value": "11",
-     "label": "公開リポジトリ"
-    },
-    {
-     "value": "122",
-     "label": "コミット"
-    },
-    {
-     "value": "2",
-     "label": "言語"
-    },
-    {
-     "value": "2024–2026",
-     "label": "期間"
-    }
-   ],
-   "years": [
-    {
-     "name": "2024",
-     "count": 60
-    },
-    {
-     "name": "2025",
-     "count": 26
-    },
-    {
-     "name": "2026",
-     "count": 36
-    }
-   ],
-   "works": [
-    {
-     "image": "plates/shared/Aid-On/aid-on-ui-system.jpg",
-     "readme": {
-      "lead": "aid-on-ui-system2という名称のUIシステムのリポジトリ",
-      "points": [
-       "TypeScriptで記述",
-       "JavaScriptを併用",
-       "READMEは名称のみ記載"
-      ]
-     },
-     "id": "Aid-On/aid-on-ui-system",
-     "title": "aid-on-ui-system",
-     "titleEn": "aid-on-ui-system2という名称のUIシステムのリポジトリ",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-ui-system",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "42"
-      },
-      {
-       "label": "初回",
-       "value": "2024年7月"
-      },
-      {
-       "label": "版",
-       "value": "v1.0.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/aid-on-ui-system"
-      },
-      {
-       "label": "サイト",
-       "href": "https://aid-on.github.io/aid-on-ui-system/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/nagare",
-     "title": "nagare",
-     "titleEn": "ReadableStreamそのものにリアクティブ拡張を加えるエッジ向けストリームライブラリ",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/nagare",
-     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "edge-computing",
-      "readablestream"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "22"
-      },
-      {
-       "label": "初回",
-       "value": "2025年12月"
-      },
-      {
-       "label": "版",
-       "value": "v0.2.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/nagare"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/qwiks",
-     "title": "qwiks",
-     "titleEn": "Nagare Stream<T>をQwik Signalへ橋渡しするフックライブラリ",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/qwiks",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "8"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/qwiks"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/outline-api-client-ts",
-     "title": "outline-api-client-ts",
-     "titleEn": "Outline知識ベースAPI向けの型安全なTypeScriptクライアントライブラリ",
-     "date": "2026年9月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/outline-api-client-ts",
-     "tags": [
-      "TypeScript",
-      "Shell",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "7"
-      },
-      {
-       "label": "初回",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/outline-api-client-ts"
-      },
-      {
-       "label": "サイト",
-       "href": "https://aid-on.github.io/outline-api-client-ts/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/design-system",
-     "title": "design-system",
-     "titleEn": "Qwik向けの型安全な色トークンとライト/ダークテーマ管理を提供するデザインシステム",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/design-system",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "8"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/design-system"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/didoq",
-     "title": "didoq",
-     "titleEn": "Cloudflare向けのFluent APIとnagare Stream対応ジョブキュー",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/didoq",
-     "tags": [
-      "TypeScript",
-      "SQL",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "8"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/didoq"
-      }
-     ],
-     "order": {
-      "date": "2026-06-10"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/auth",
-     "title": "auth",
-     "titleEn": "Cloudflare Workers向けの、Fluent API採用のエッジネイティブ認証ライブラリ",
-     "date": "2026年6月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/auth",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/auth"
-      }
-     ],
-     "order": {
-      "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/zod-to-markdown",
-     "title": "zod-to-markdown",
-     "titleEn": "Zodスキーマ��Markdownドキュメントへ変換するユーティリティ関数",
-     "date": "2024年3月",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/zod-to-markdown",
-     "tags": [
-      "JavaScript",
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "6"
-      },
-      {
-       "label": "初回",
-       "value": "2024年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/zod-to-markdown"
-      }
-     ],
-     "order": {
-      "date": "2024-03-26"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/auth-providers-ts",
-     "title": "auth-providers-ts",
-     "titleEn": "フレームワーク非依存のOAuth 2.0認証プロバイダーライブラリ",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/auth-providers-ts",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/auth-providers-ts"
-      }
-     ],
-     "order": {
-      "date": "2025-08-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/next-auth-providers",
-     "title": "next-auth-providers",
-     "titleEn": "LINEログインに対応したNextAuth.js用認証プロバイダ集",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/next-auth-providers",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/next-auth-providers"
-      }
-     ],
-     "order": {
-      "date": "2025-08-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-draft-ui",
-     "title": "aid-on-draft-ui",
-     "titleEn": "aid-on-draft-uiという名前のUIプロジェクト。READMEに説明はない",
-     "date": "2024年9月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-draft-ui",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "14"
-      },
-      {
-       "label": "初回",
-       "value": "2024年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/aid-on-draft-ui"
-      }
-     ],
-     "order": {
-      "date": "2024-09-01"
-     }
-    }
-   ]
-  },
-  {
    "id": "toolchain",
    "title": "言語環境をそろえる",
    "short": "ツールチェーン",
@@ -7132,33 +4356,29 @@
    "id": "sites",
    "title": "見せるためのページ",
    "short": "公開ページ",
-   "intro": "ブラウザで開いて、それで完結するもの。作家のポートフォリオ見本（hokusai-portfolio）と人のポートフォリオ（kotorody-portfolio）、半導体と世界情勢のタイムライン（chip-war-chronicle）、エージェントのベンチを一枚の表にしたもの（agent-bench-matrix）、登壇スライド、体の面倒を見る小さなアプリ（gulp-coach・environment-health-viewer・tabi-navi）、音で遊ぶもの（pitchy・almide-headset-eq）、そして事務のための素の HTML（aid-on-contract-generator・aid-on-invoice-generator・aid-on-tax-calculator）。",
+   "intro": "ブラウザで開いて、それで完結するもの。作家のポートフォリオ見本（hokusai-portfolio）、半導体と世界情勢のタイムライン（chip-war-chronicle）、エージェントのベンチを一枚の表にしたもの（agent-bench-matrix）、登壇スライド、体の面倒を見る小さなアプリ（gulp-coach・environment-health-viewer・tabi-navi）、そして音で遊ぶもの（pitchy・almide-headset-eq）。",
    "figures": [
     {
-     "value": "13",
+     "value": "9",
      "label": "公開リポジトリ"
     },
     {
-     "value": "126",
+     "value": "111",
      "label": "コミット"
     },
     {
-     "value": "4",
+     "value": "3",
      "label": "言語"
     },
     {
-     "value": "2025–2026",
+     "value": "2026–2026",
      "label": "期間"
     }
    ],
    "years": [
     {
-     "name": "2025",
-     "count": 8
-    },
-    {
      "name": "2026",
-     "count": 118
+     "count": 111
     }
    ],
    "works": [
@@ -7432,38 +4652,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/kotorody-portfolio",
-     "title": "kotorody-portfolio",
-     "titleEn": "Aid-OnのフロントエンドエンジニアkotorodyのポートフォリオHTMLサイト",
-     "date": "2026年5月",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/kotorody-portfolio",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "7"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/kotorody-portfolio"
-      }
-     ],
-     "order": {
-      "date": "2026-05-18"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/pitchy",
      "title": "pitchy",
      "titleEn": "口笛の音程をリアルタイムで検出しコードを表示するツールとリズムゲーム",
@@ -7526,104 +4714,6 @@
      "order": {
       "date": "2026-06-11"
      }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-contract-generator",
-     "title": "aid-on-contract-generator",
-     "titleEn": "HTML/CSS/JSのみで動く契約書作成Webアプリ",
-     "date": "2025年6月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-contract-generator",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2025年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/aid-on-contract-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-29"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-tax-calculator",
-     "title": "aid-on-tax-calculator",
-     "titleEn": "日本の消費税10%で税込・税抜価格を相互変換するPython製CLIツール",
-     "date": "2025年3月",
-     "format": "Python",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-tax-calculator",
-     "tags": [
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2025年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/aid-on-tax-calculator"
-      }
-     ],
-     "order": {
-      "date": "2025-03-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-invoice-generator",
-     "title": "aid-on-invoice-generator",
-     "titleEn": "請求書を生成するプロジェクト(READMEは名称のみ記載)",
-     "date": "2025年6月",
-     "format": "HTML",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-invoice-generator",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2025年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/aid-on-invoice-generator"
-      }
-     ],
-     "order": {
-      "date": "2025-06-02"
-     }
     }
    ]
   },
@@ -7634,23 +4724,27 @@
    "intro": "毎日の作業のために書いた小さな実行ファイル。書類を片づけるもの（keiri・pdf-burger・resepy・capto・gformiac）、環境と機械を見るもの（netcheck・igloc・syncenv・macleap・dns-checker）、アカウントを切り替えるもの（azprofile・chropen）、書いたものを渡せる形にするもの（pagina・premaid・image-catalog-composer）、供給網への攻撃を早く知るもの（tocsin・tocsin-almd）、UI の構造を Layout AST に起こすもの（uimodulay）、そして自分の作業規約とその適合チェッカー（O6lvl4-protocol・O6lvl4-vitals）。",
    "figures": [
     {
-     "value": "24",
+     "value": "25",
      "label": "公開リポジトリ"
     },
     {
-     "value": "195",
+     "value": "201",
      "label": "コミット"
     },
     {
-     "value": "9",
+     "value": "10",
      "label": "言語"
     },
     {
-     "value": "2025–2026",
+     "value": "2024–2026",
      "label": "期間"
     }
    ],
    "years": [
+    {
+     "name": "2024",
+     "count": 6
+    },
     {
      "name": "2025",
      "count": 31
@@ -8496,6 +5590,39 @@
      "order": {
       "date": "2025-04-01"
      }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/zod-to-markdown",
+     "title": "zod-to-markdown",
+     "titleEn": "Zodスキーマ��Markdownドキュメントへ変換するユーティリティ関数",
+     "date": "2024年3月",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/zod-to-markdown",
+     "tags": [
+      "JavaScript",
+      "TypeScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2024年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/zod-to-markdown"
+      }
+     ],
+     "order": {
+      "date": "2024-03-26"
+     }
     }
    ]
   },
@@ -8873,18 +6000,18 @@
    "id": "lab",
    "title": "試したもの",
    "short": "試したもの",
-   "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、JavaScript の問題集（aid-on-js-training）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
+   "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
-     "value": "37",
+     "value": "31",
      "label": "公開リポジトリ"
     },
     {
-     "value": "344",
+     "value": "180",
      "label": "コミット"
     },
     {
-     "value": "12",
+     "value": "11",
      "label": "言語"
     },
     {
@@ -8903,11 +6030,11 @@
     },
     {
      "name": "2024",
-     "count": 29
+     "count": 18
     },
     {
      "name": "2025",
-     "count": 225
+     "count": 72
     },
     {
      "name": "2026",
@@ -9090,106 +6217,6 @@
      ],
      "order": {
       "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/aid-on-js-training",
-     "title": "aid-on-js-training",
-     "titleEn": "テスト付きでJavaScriptを段階的に学べる初心者向け問題集",
-     "date": "2025年8月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/aid-on-js-training",
-     "tags": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "122"
-      },
-      {
-       "label": "初回",
-       "value": "2024年11月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/aid-on-js-training"
-      }
-     ],
-     "order": {
-      "date": "2025-08-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/sandbox-ios-app",
-     "title": "sandbox-ios-app",
-     "titleEn": "SwiftUI製iOSアプリのテンプレート。CI/CDとTestFlight配備を自動化",
-     "date": "2025年10月",
-     "format": "Swift",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/sandbox-ios-app",
-     "tags": [
-      "Swift"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2025年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/sandbox-ios-app"
-      }
-     ],
-     "order": {
-      "date": "2025-10-12"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/next-pet-diary",
-     "title": "next-pet-diary",
-     "titleEn": "create-next-appで作成したNext.jsプロジェクト",
-     "date": "2025年8月",
-     "format": "TypeScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/next-pet-diary",
-     "tags": [
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "25"
-      },
-      {
-       "label": "初回",
-       "value": "2025年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/next-pet-diary"
-      }
-     ],
-     "order": {
-      "date": "2025-08-31"
      }
     },
     {
@@ -9620,38 +6647,6 @@
     },
     {
      "image": "",
-     "id": "Aid-On/AIChatPractice",
-     "title": "AIChatPractice",
-     "titleEn": "AIチャットの練習用Swiftリポジトリ(READMEなし)",
-     "date": "2025年9月",
-     "format": "Swift",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/AIChatPractice",
-     "tags": [
-      "Swift"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "8"
-      },
-      {
-       "label": "初回",
-       "value": "2025年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/AIChatPractice"
-      }
-     ],
-     "order": {
-      "date": "2025-09-05"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/golang-cp-solve-sandbox",
      "title": "golang-cp-solve-sandbox",
      "titleEn": "READMEなし。Go製のリポジトリで、競技プログラミングの解答用サンドボックスと名前から読める",
@@ -9810,72 +6805,6 @@
      ],
      "order": {
       "date": "2022-05-08"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/reporting-page-by-calendar-days",
-     "title": "reporting-page-by-calendar-days",
-     "titleEn": "暦日ごとのレポートページを扱うJavaScript/HTMLのプロジェクト",
-     "date": "2025年2月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/reporting-page-by-calendar-days",
-     "tags": [
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2025年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/reporting-page-by-calendar-days"
-      }
-     ],
-     "order": {
-      "date": "2025-02-02"
-     }
-    },
-    {
-     "image": "",
-     "id": "Aid-On/reporting-page-by-working-days",
-     "title": "reporting-page-by-working-days",
-     "titleEn": "営業日ベースでレポートを表示するWebページ",
-     "date": "2025年2月",
-     "format": "JavaScript",
-     "credit": "Aid-On",
-     "url": "https://github.com/Aid-On/reporting-page-by-working-days",
-     "tags": [
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2025年2月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/Aid-On/reporting-page-by-working-days"
-      }
-     ],
-     "order": {
-      "date": "2025-02-02"
      }
     },
     {
@@ -10157,7 +7086,7 @@
     "blocks": [
      {
       "kind": "p",
-      "html": "エージェントが道具を使うための接続や実行制御、LLMを使うための流量制御・記憶・ストリーム処理など、アプリケーションを支える部分もつくっています。"
+      "html": "エージェントを許可した権限の内側で動かす porta、Almide で書いたエージェントの実行環境（homullus）と LLM の窓口（almai）など、AI を実際に動かすための部分もつくっています。"
      }
     ]
    }

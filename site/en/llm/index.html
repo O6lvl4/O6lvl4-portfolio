@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>Agents, and groundwork for LLMs | O6lvl4</title>
-<meta name="description" content="What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).">
+<meta name="description" content="What it takes to actually use a model: one door to every provider (almai), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/llm/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/en/llm/">
 <meta property="og:title" content="Agents, and groundwork for LLMs | O6lvl4">
-<meta property="og:description" content="What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).">
+<meta property="og:description" content="What it takes to actually use a model: one door to every provider (almai), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/en/share/og.jpg">
 <meta property="og:image:alt" content="O6lvl4 — Building developer tools, from the language up.">
 <meta name="twitter:card" content="summary_large_image">
@@ -1679,8 +1679,8 @@ body::after {
     <a class="hdr-callsign" href="../">O6lvl4</a>
     <nav class="hdr-nav" aria-label="Page sections"><a href="../#entry">About</a><a href="../works/">Work</a><a href="../#object">One in full</a><a href="../#breakdown">What I have written</a></nav>
     <div class="hdr-right">
-      <div class="hdr-readout"><span class="hdr-readout-val">262</span><span class="hdr-readout-lbl">repos</span></div>
-      <div class="hdr-readout"><span class="hdr-readout-val">19</span><span class="hdr-readout-lbl">langs</span></div>
+      <div class="hdr-readout"><span class="hdr-readout-val">175</span><span class="hdr-readout-lbl">repos</span></div>
+      <div class="hdr-readout"><span class="hdr-readout-val">18</span><span class="hdr-readout-lbl">langs</span></div>
       <div class="locale-switcher" role="group" aria-label="Language"><span class="locale-btn active" aria-current="true" lang="en">EN</span><a class="locale-btn" href="../../ja/">日本</a><a class="locale-btn" href="../../zh/">中文</a></div>
       <div class="theme-toggle" role="group" aria-label="Colour scheme">
         <button type="button" class="theme-icon-btn" data-theme-set="light" aria-pressed="false" aria-label="Light"><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" width="13" height="13"><circle cx="8" cy="8" r="3"/><line x1="8" y1="1" x2="8" y2="2.5"/><line x1="8" y1="13.5" x2="8" y2="15"/><line x1="1" y1="8" x2="2.5" y2="8"/><line x1="13.5" y1="8" x2="15" y2="8"/><line x1="3.05" y1="3.05" x2="4.1" y2="4.1"/><line x1="11.9" y1="11.9" x2="12.95" y2="12.95"/><line x1="12.95" y1="3.05" x2="11.9" y2="4.1"/><line x1="4.1" y1="11.9" x2="3.05" y2="12.95"/></svg></button>
@@ -1699,20 +1699,20 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">Agents, and groundwork for LLMs</h1>
-        <p class="fam-intro">What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).</p>
+        <p class="fam-intro">What it takes to actually use a model: one door to every provider (almai), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).</p>
         <a class="fam-back" href="../#families">All families</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚄ</span>
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">19</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">297</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">3</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">Span</div></div></div>
+    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">5</div><div class="kpi-label">Repositories</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">112</div><div class="kpi-label">Commits</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2</div><div class="kpi-label">Languages</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2025–2026</div><div class="kpi-label">Span</div></div></div>
     <div>
       <div class="timeline-sub">Commits by year</div>
-      <div class="timeline-chart few" role="img" aria-label="Timeline: 2025 148, 2026 149"><div class="tl-bar-wrap">
-        <span class="tl-count">148</span>
-        <div class="tl-bar" style="height:99.3%" title="2025: 148"></div>
+      <div class="timeline-chart few" role="img" aria-label="Timeline: 2025 27, 2026 85"><div class="tl-bar-wrap">
+        <span class="tl-count">27</span>
+        <div class="tl-bar" style="height:31.8%" title="2025: 27"></div>
       </div><div class="tl-bar-wrap">
-        <span class="tl-count">149</span>
-        <div class="tl-bar current" style="height:100.0%" title="2026: 149"></div>
+        <span class="tl-count">85</span>
+        <div class="tl-bar current" style="height:100.0%" title="2026: 85"></div>
       </div></div>
       <div class="timeline-labels few" aria-hidden="true"><span class="tl-yr">2025</span><span class="tl-yr">2026</span></div>
     </div>
@@ -1724,23 +1724,23 @@ body::after {
       
     </div>
     <div class="object-grid">
-      <div class="object-meta-panel" aria-label="llm-queue-dispatcher">
+      <div class="object-meta-panel" aria-label="bonsai-almide">
       <div class="om-head">
       <span class="om-family">LLM groundwork</span>
-      <span class="om-lang"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
+      <span class="om-lang"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
     </div>
-    <h3 class="om-name">llm-queue-dispatcher</h3>
-    <p class="om-path">Aid-On<span class="om-slash">/</span>llm-queue-dispatcher</p>
-      <dl class="om-figures"><div class="om-fig"><dd class="om-fig-val">10</dd><dt class="om-fig-key">Commits</dt></div><div class="om-fig"><dd class="om-fig-val">Aug 2025</dd><dt class="om-fig-key">Started</dt></div><div class="om-fig"><dd class="om-fig-val">v1.0.2</dd><dt class="om-fig-key">Release</dt></div><div class="om-fig"><dd class="om-fig-val">1</dd><dt class="om-fig-key">Stars</dt></div></dl>
-      <p class="om-updated">Updated<span class="om-updated-val">Aug 2025</span></p>
-    <ul class="om-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li><li class="repo-topic">aid-on-libs</li></ul>
-    <div class="om-links"><a class="om-link" href="https://github.com/Aid-On/llm-queue-dispatcher" target="_blank" rel="noopener noreferrer">Repository</a></div>
+    <h3 class="om-name">bonsai-almide</h3>
+    <p class="om-path">almide<span class="om-slash">/</span>bonsai-almide</p>
+      <dl class="om-figures"><div class="om-fig"><dd class="om-fig-val">35</dd><dt class="om-fig-key">Commits</dt></div><div class="om-fig"><dd class="om-fig-val">Apr 2026</dd><dt class="om-fig-key">Started</dt></div><div class="om-fig"><dd class="om-fig-val">1</dd><dt class="om-fig-key">Stars</dt></div></dl>
+      <p class="om-updated">Updated<span class="om-updated-val">Apr 2026</span></p>
+    <ul class="om-topics"><li class="repo-topic">Almide</li><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li></ul>
+    <div class="om-links"><a class="om-link" href="https://github.com/almide/bonsai-almide" target="_blank" rel="noopener noreferrer">Repository</a></div>
     </div>
-      <article class="readme-panel" aria-label="llm-queue-dispatcher README">
-      <figure class="readme-shot"><img src="../img/plates/en/Aid-On/llm-queue-dispatcher-lo.webp" width="640" height="400" alt="O6lvl4「llm-queue-dispatcher」" loading="lazy" decoding="async"></figure>
-      <h3 class="readme-h1">llm-queue-dispatcher</h3>
-      <p class="readme-p">A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.</p>
-      <h4 class="readme-h2">What it does</h4><ul class="readme-points"><li>Multi-dimensional request scoring</li><li>@aid-on/llm-throttle rate limiter integration</li><li>Pluggable storage adapters, in-memory included</li></ul>
+      <article class="readme-panel" aria-label="bonsai-almide README">
+      <figure class="readme-shot"><img src="../img/plates/en/almide/bonsai-almide-lo.webp" width="640" height="400" alt="O6lvl4「bonsai-almide」" loading="lazy" decoding="async"></figure>
+      <h3 class="readme-h1">bonsai-almide</h3>
+      <p class="readme-p">Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language</p>
+      <h4 class="readme-h2">What it does</h4><ul class="readme-points"><li>Qwen3 chat template with KV cache streaming</li><li>Sampling: temperature, top-k, repetition penalty</li><li>32 KB WASM; 248 MB model cached in IndexedDB</li></ul>
       
     </article>
     </div>
@@ -1749,52 +1749,14 @@ body::after {
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚂ</span>
       <h2 class="section-title" id="heading-works">Work</h2>
-      <span class="section-count">19 / 19</span>
+      <span class="section-count">5 / 5</span>
     </div>
     
     <div class="works-toolbar">
       <div class="sort-bar" role="group" aria-label="Sort"><button type="button" class="sort-btn active" data-sort="date" aria-pressed="true">Recent</button><button type="button" class="sort-btn" data-sort="commits" aria-pressed="false">Commits</button><button type="button" class="sort-btn" data-sort="format" aria-pressed="false">Language</button><button type="button" class="sort-btn" data-sort="name" aria-pressed="false">Name</button></div>
-      <div class="lang-filter-list" role="group" aria-label="Language"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">All</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button></div>
+      <div class="lang-filter-list" role="group" aria-label="Language"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">All</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="TypeScript" aria-pressed="false"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</button></div>
     </div>
-    <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llm-queue-dispatcher" data-date="2025-08-03" data-commits="10" data-rank="0">
-      <a class="repo-row" href="https://github.com/Aid-On/llm-queue-dispatcher" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">llm-queue-dispatcher</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">A queue dispatcher for LLM requests that uses scoring and rate-limit awareness to pick what to process.</p>
-          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">HTML</li><li class="repo-topic">aid-on-libs</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">10<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="JavaScript" data-name="llm-throttle" data-date="2025-08-03" data-commits="12" data-rank="1">
-      <a class="repo-row" href="https://github.com/Aid-On/llm-throttle" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">llm-throttle</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">A TypeScript rate limiting library that controls both RPM and TPM for LLM API calls</p>
-          <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">CSS</li><li class="repo-topic">aid-on-libs</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">12<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="bonsai-almide" data-date="2026-04-22" data-commits="35" data-rank="2">
+    <ul class="repo-list" role="list" aria-label="Work"><li class="repo-item" data-org="llm" data-lang="Almide" data-name="bonsai-almide" data-date="2026-04-22" data-commits="35" data-rank="0">
       <a class="repo-row" href="https://github.com/almide/bonsai-almide" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1813,7 +1775,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="homullus" data-date="2026-05-18" data-commits="28" data-rank="3">
+    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="homullus" data-date="2026-05-18" data-commits="28" data-rank="1">
       <a class="repo-row" href="https://github.com/almide-ai/homullus" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1832,83 +1794,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="whenm" data-date="2026-02-20" data-commits="32" data-rank="4">
-      <a class="repo-row" href="https://github.com/Aid-On/whenm" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">whenm</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">Schemaless temporal memory for AI apps that tracks state changes and answers time-based questions</p>
-          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">Shell</li><li class="repo-topic">ai-memory</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">32<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-02-20">Feb 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="templex" data-date="2026-06-12" data-commits="24" data-rank="5">
-      <a class="repo-row" href="https://github.com/Aid-On/templex" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">templex</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">TypeScript library that extracts reusable writing templates from text with LLMs and generates new articles</p>
-          <ul class="repo-topics"><li class="repo-topic">ai</li><li class="repo-topic">article-generation</li><li class="repo-topic">document-analysis</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">24<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-06-12">Jun 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="fractop" data-date="2026-06-10" data-commits="19" data-rank="6">
-      <a class="repo-row" href="https://github.com/Aid-On/fractop" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">fractop</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">TypeScript library that chunks, processes and merges text too long for an LLM&#39;s context limit.</p>
-          <ul class="repo-topics"><li class="repo-topic">JavaScript</li><li class="repo-topic">ai</li><li class="repo-topic">chunking</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">19<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-06-10">Jun 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="iteratop" data-date="2026-06-11" data-commits="18" data-rank="7">
-      <a class="repo-row" href="https://github.com/Aid-On/iteratop" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">iteratop</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">TypeScript library for convergent iteration loops with LLMs, inspired by Scrum and OODA loops</p>
-          <ul class="repo-topics"><li class="repo-topic">agent</li><li class="repo-topic">ai</li><li class="repo-topic">builder-pattern</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">18<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llmine" data-date="2025-09-21" data-commits="27" data-rank="8">
+    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="llmine" data-date="2025-09-21" data-commits="27" data-rank="2">
       <a class="repo-row" href="https://github.com/O6lvl4/llmine" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1927,45 +1813,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="llm" data-lang="JavaScript" data-name="fuzztok" data-date="2025-08-03" data-commits="8" data-rank="9">
-      <a class="repo-row" href="https://github.com/Aid-On/fuzztok" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">fuzztok</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">Fast, lightweight fuzzy token estimation library for LLM text, with CJK support</p>
-          <ul class="repo-topics"><li class="repo-topic">TypeScript</li><li class="repo-topic">HTML</li><li class="repo-topic">aid-on-libs</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">8<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2025-08-03">Aug 2025</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="memory-rag" data-date="2025-08-10" data-commits="7" data-rank="10">
-      <a class="repo-row" href="https://github.com/Aid-On/memory-rag" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">memory-rag</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">A lightweight, provider-agnostic in-memory RAG library with Vercel AI SDK integration</p>
-          <ul class="repo-topics"><li class="repo-topic">CSS</li><li class="repo-topic">JavaScript</li><li class="repo-topic">aid-on-libs</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2025-08-10">Aug 2025</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="almai" data-date="2026-08-04" data-commits="19" data-rank="11">
+    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="almai" data-date="2026-09-22" data-commits="21" data-rank="3">
       <a class="repo-row" href="https://github.com/almide-ai/almai" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1976,53 +1824,15 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">ai</li><li class="repo-topic">almide</li><li class="repo-topic">anthropic</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">19<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-08-04">Aug 2026</time>
+          <span class="repo-stars">21<span class="repo-meta-unit"> Commits</span></span>
+          <time class="repo-date" datetime="2026-09-22">Sep 2026</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unillm-vercel-ai-sdk" data-date="2026-09-06" data-commits="7" data-rank="12">
-      <a class="repo-row" href="https://github.com/Aid-On/unillm-vercel-ai-sdk" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">unillm-vercel-ai-sdk</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">Vercel AI SDK wrapper for @aid-on/unillm giving LanguageModelV1 compatibility for existing AI SDK code</p>
-          
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">7<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="vad" data-date="2026-09-06" data-commits="6" data-rank="13">
-      <a class="repo-row" href="https://github.com/Aid-On/vad" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">vad</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">Browser voice activity detection using Silero VAD, with optional RNNoise noise suppression</p>
-          
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-09-06">Sep 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="manus" data-date="2026-07-07" data-commits="1" data-rank="14">
+    </li><li class="repo-item" data-org="llm" data-lang="Almide" data-name="manus" data-date="2026-07-07" data-commits="1" data-rank="4">
       <a class="repo-row" href="https://github.com/almide-ai/manus" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2037,82 +1847,6 @@ body::after {
           <time class="repo-date" datetime="2026-07-07">Jul 2026</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unillm" data-date="2026-06-11" data-commits="29" data-rank="15">
-      <a class="repo-row" href="https://github.com/Aid-On/unillm" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">unillm</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">Unified, type-safe TypeScript LLM interface for edge runtimes across multiple providers</p>
-          <ul class="repo-topics"><li class="repo-topic">ai</li><li class="repo-topic">anthropic</li><li class="repo-topic">claude</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">29<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="embersm" data-date="2026-06-11" data-commits="6" data-rank="16">
-      <a class="repo-row" href="https://github.com/Aid-On/embersm" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">embersm</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">Cloudflare Workers-native 5-layer memory system providing long-term memory for LLM agents</p>
-          <ul class="repo-topics"><li class="repo-topic">JavaScript</li></ul>
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">6<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="synapser" data-date="2026-06-11" data-commits="5" data-rank="17">
-      <a class="repo-row" href="https://github.com/Aid-On/synapser" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">synapser</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">Type-safe TypeScript 4-phase pipeline that separates concerns in LLM agent processing</p>
-          
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">5<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
-
-          </div>
-        </div>
-      </a>
-    </li><li class="repo-item" data-org="llm" data-lang="TypeScript" data-name="unisttp" data-date="2026-06-11" data-commits="4" data-rank="18">
-      <a class="repo-row" href="https://github.com/Aid-On/unisttp" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div class="repo-top-line">
-            <span class="repo-name">unisttp</span>
-            <span class="repo-org-tag">Aid-On</span>
-          </div>
-          <p class="repo-desc">Unified speech-to-text provider for Cloudflare Workers AI and Groq via &quot;provider:model&quot; specs</p>
-          
-        </div>
-        <div class="repo-meta">
-          <span class="repo-stars">4<span class="repo-meta-unit"> Commits</span></span>
-          <time class="repo-date" datetime="2026-06-11">Jun 2026</time>
-          <div class="repo-foot">
-            <span class="repo-lang-tag"><span class="lang-dot" style="background:#3178c6;width:5px;height:5px" aria-hidden="true"></span>TypeScript</span>
 
           </div>
         </div>
