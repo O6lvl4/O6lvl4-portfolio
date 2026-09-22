@@ -235,7 +235,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "14,159",
+    "value": "14,185",
     "label": "提交"
    },
    {
@@ -362,7 +362,7 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11750,
+    "count": 11774,
     "of": 28
    },
    {
@@ -382,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 50,
+    "count": 52,
     "of": 3
    }
   ],
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 13910
+    "count": 13936
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "11,555",
+     "value": "11,571",
      "label": "提交"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11555
+     "count": 11571
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "9,316"
+       "value": "9,328"
       },
       {
        "label": "首次",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-09-23"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,482"
+       "value": "1,483"
       },
       {
        "label": "首次",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-09-23"
      }
     },
     {
@@ -625,6 +625,45 @@
     },
     {
      "image": "",
+     "id": "almide/almide-dojo",
+     "title": "almide-dojo",
+     "titleEn": "每日测量Almide中LLM代码的修改存活率",
+     "date": "2026年9月",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-dojo",
+     "tags": [
+      "HTML",
+      "Almide",
+      "Zig",
+      "almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "229"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/almide-dojo"
+      },
+      {
+       "label": "站点",
+       "href": "https://almide.github.io/almide-dojo/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-23"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/almide-grammar",
      "title": "almide-grammar",
      "titleEn": "Almide语法定义的唯一来源模块",
@@ -695,45 +734,6 @@
       {
        "label": "仓库",
        "href": "https://github.com/almide/vscode-almide"
-      }
-     ],
-     "order": {
-      "date": "2026-09-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-dojo",
-     "title": "almide-dojo",
-     "titleEn": "每日测量Almide中LLM代码的修改存活率",
-     "date": "2026年9月",
-     "format": "HTML",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-dojo",
-     "tags": [
-      "HTML",
-      "Almide",
-      "Zig",
-      "almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "226"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/almide-dojo"
-      },
-      {
-       "label": "站点",
-       "href": "https://almide.github.io/almide-dojo/"
       }
      ],
      "order": {
@@ -1533,7 +1533,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "900",
+     "value": "908",
      "label": "提交"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 884
+     "count": 892
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "205"
+       "value": "213"
       },
       {
        "label": "首次",
@@ -1604,7 +1604,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-09-23"
      }
     },
     {
@@ -2510,7 +2510,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "112",
+     "value": "114",
      "label": "提交"
     },
     {
@@ -2529,7 +2529,7 @@
     },
     {
      "name": "2026",
-     "count": 85
+     "count": 87
     }
    ],
    "works": [
@@ -2669,7 +2669,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "21"
+       "value": "23"
       },
       {
        "label": "首次",
@@ -2683,7 +2683,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-09-23"
      }
     },
     {

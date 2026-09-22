@@ -235,7 +235,7 @@
     "label": "Repositories"
    },
    {
-    "value": "14,159",
+    "value": "14,185",
     "label": "Commits"
    },
    {
@@ -362,7 +362,7 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11750,
+    "count": 11774,
     "of": 28
    },
    {
@@ -382,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 50,
+    "count": 52,
     "of": 3
    }
   ],
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 13910
+    "count": 13936
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "11,555",
+     "value": "11,571",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11555
+     "count": 11571
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "9,316"
+       "value": "9,328"
       },
       {
        "label": "Started",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-09-23"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,482"
+       "value": "1,483"
       },
       {
        "label": "Started",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-09-23"
      }
     },
     {
@@ -625,6 +625,45 @@
     },
     {
      "image": "",
+     "id": "almide/almide-dojo",
+     "title": "almide-dojo",
+     "titleEn": "Daily measurement of how often LLM-written code survives modification in Almide, with a harness written in Almide.",
+     "date": "Sep 2026",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-dojo",
+     "tags": [
+      "HTML",
+      "Almide",
+      "Zig",
+      "almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "229"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/almide-dojo"
+      },
+      {
+       "label": "Site",
+       "href": "https://almide.github.io/almide-dojo/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-23"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/almide-grammar",
      "title": "almide-grammar",
      "titleEn": "Single source of truth for Almide syntax: keywords, operators, precedence and TextMate scopes.",
@@ -695,45 +734,6 @@
       {
        "label": "Repository",
        "href": "https://github.com/almide/vscode-almide"
-      }
-     ],
-     "order": {
-      "date": "2026-09-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-dojo",
-     "title": "almide-dojo",
-     "titleEn": "Daily measurement of how often LLM-written code survives modification in Almide, with a harness written in Almide.",
-     "date": "Sep 2026",
-     "format": "HTML",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-dojo",
-     "tags": [
-      "HTML",
-      "Almide",
-      "Zig",
-      "almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "226"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/almide-dojo"
-      },
-      {
-       "label": "Site",
-       "href": "https://almide.github.io/almide-dojo/"
       }
      ],
      "order": {
@@ -1533,7 +1533,7 @@
      "label": "Repositories"
     },
     {
-     "value": "900",
+     "value": "908",
      "label": "Commits"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 884
+     "count": 892
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "205"
+       "value": "213"
       },
       {
        "label": "Started",
@@ -1604,7 +1604,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-09-23"
      }
     },
     {
@@ -2510,7 +2510,7 @@
      "label": "Repositories"
     },
     {
-     "value": "112",
+     "value": "114",
      "label": "Commits"
     },
     {
@@ -2529,7 +2529,7 @@
     },
     {
      "name": "2026",
-     "count": 85
+     "count": 87
     }
    ],
    "works": [
@@ -2669,7 +2669,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "21"
+       "value": "23"
       },
       {
        "label": "Started",
@@ -2683,7 +2683,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-09-23"
      }
     },
     {

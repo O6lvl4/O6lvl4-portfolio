@@ -3147,12 +3147,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 9316,
+  "commits": 9328,
   "years": {
-   "2026": 9316
+   "2026": 9328
   },
   "first": "2026-03-07",
-  "last": "2026-09-22",
+  "last": "2026-09-23",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3184,12 +3184,12 @@
    "Almide"
   ],
   "stars": 3,
-  "commits": 205,
+  "commits": 213,
   "years": {
-   "2026": 205
+   "2026": 213
   },
   "first": "2026-04-07",
-  "last": "2026-09-22",
+  "last": "2026-09-23",
   "tag": "v0.6.1",
   "license": "Apache-2.0",
   "topics": [
@@ -3209,7 +3209,7 @@
    "lang": "text",
    "code": "$ porta run sh -v ./work --read-policy strict --timeout 5 -- …\n  wrote ./work/out.txt              legitimate work goes through\n  read the SSH key       → refused\n  write outside ./work   → refused\n  # a hung command is killed at the deadline → exit 124"
   },
-  "score": 28.1
+  "score": 28.3
  },
  {
   "full": "almide/als",
@@ -3225,12 +3225,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1482,
+  "commits": 1483,
   "years": {
-   "2026": 1482
+   "2026": 1483
   },
   "first": "2026-03-07",
-  "last": "2026-09-22",
+  "last": "2026-09-23",
   "tag": "v1.0.0",
   "license": "NOASSERTION",
   "topics": [
@@ -3277,6 +3277,41 @@
    "code": "---\ntitle: Some page\n---\n\nimport Playground from '../../../components/Playground.astro';\n\n<Playground sample=\"hello-basic\" />\n<Playground sample=\"modules-two-files\" height={560} hide={['fixtures.almd']} />"
   },
   "score": 11.3
+ },
+ {
+  "full": "almide/almide-dojo",
+  "owner": "almide",
+  "name": "almide-dojo",
+  "url": "https://github.com/almide/almide-dojo",
+  "site": "https://almide.github.io/almide-dojo/",
+  "lead": "Daily modification-survival-rate (MSR) measurement ground for Almide. Harness written in Almide itself.",
+  "heading": "Almide Dojo",
+  "language": "HTML",
+  "languages": [
+   "HTML",
+   "Almide",
+   "Zig"
+  ],
+  "stars": 0,
+  "commits": 229,
+  "years": {
+   "2026": 229
+  },
+  "first": "2026-04-12",
+  "last": "2026-09-23",
+  "license": "MIT",
+  "topics": [
+   "almide",
+   "benchmark",
+   "msr",
+   "testing"
+  ],
+  "plate": "site",
+  "sample": {
+   "lang": "",
+   "code": "almide.toml          Package manifest (the harness itself is an Almide package)\nsrc/main.almd        Harness — written in Almide, of course (the daily Almide lane)\nsrc/msr/             The cross-language lane: neutral task model, language plugins, runner\nmsr/                 Its task set (task-set.json), behavior texts, reference solutions\ntasks/               Task bank (prompts + tests + metadata)\nruns/                Per-day results, committed to git (runs/msr/ for the cross-language lane)\ndashboards/          Static site for visualizing trends (GitHub Pages)\nalmide-pin.toml      Which Almide compiler commit we evaluate against\nmalicious-hints.md   Incident log of hint texts that misled models\nMakefile             `make msr`, `make msr-verify`, `make msr-probe`, `make test`"
+  },
+  "score": 9.6
  },
  {
   "full": "almide/almide-grammar",
@@ -3342,41 +3377,6 @@
    "code": "cd vscode\nnpx vsce package\ncode --install-extension almide-lang-*.vsix"
   },
   "score": 9.6
- },
- {
-  "full": "almide/almide-dojo",
-  "owner": "almide",
-  "name": "almide-dojo",
-  "url": "https://github.com/almide/almide-dojo",
-  "site": "https://almide.github.io/almide-dojo/",
-  "lead": "Daily modification-survival-rate (MSR) measurement ground for Almide. Harness written in Almide itself.",
-  "heading": "Almide Dojo",
-  "language": "HTML",
-  "languages": [
-   "HTML",
-   "Almide",
-   "Zig"
-  ],
-  "stars": 0,
-  "commits": 226,
-  "years": {
-   "2026": 226
-  },
-  "first": "2026-04-12",
-  "last": "2026-09-22",
-  "license": "MIT",
-  "topics": [
-   "almide",
-   "benchmark",
-   "msr",
-   "testing"
-  ],
-  "plate": "site",
-  "sample": {
-   "lang": "",
-   "code": "almide.toml          Package manifest (the harness itself is an Almide package)\nsrc/main.almd        Harness — written in Almide, of course (the daily Almide lane)\nsrc/msr/             The cross-language lane: neutral task model, language plugins, runner\nmsr/                 Its task set (task-set.json), behavior texts, reference solutions\ntasks/               Task bank (prompts + tests + metadata)\nruns/                Per-day results, committed to git (runs/msr/ for the cross-language lane)\ndashboards/          Static site for visualizing trends (GitHub Pages)\nalmide-pin.toml      Which Almide compiler commit we evaluate against\nmalicious-hints.md   Incident log of hint texts that misled models\nMakefile             `make msr`, `make msr-verify`, `make msr-probe`, `make test`"
-  },
-  "score": 9.5
  },
  {
   "full": "almide/tree-sitter-almide",
@@ -4279,12 +4279,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 21,
+  "commits": 23,
   "years": {
-   "2026": 21
+   "2026": 23
   },
   "first": "2026-04-12",
-  "last": "2026-09-22",
+  "last": "2026-09-23",
   "topics": [
    "ai",
    "almide",
@@ -4298,7 +4298,7 @@
    "lang": "toml",
    "code": "# almide.toml\n[dependencies]\nalmai = { git = \"https://github.com/almide/almai.git\" }"
   },
-  "score": 5.4
+  "score": 5.5
  },
  {
   "full": "almide-ai/manus",
