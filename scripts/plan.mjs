@@ -9,7 +9,7 @@ import { readFileSync } from "node:fs";
 import { shown } from "./shown.mjs";
 
 const [reposTsv, homeTsv] = process.argv.slice(2);
-const OWNERS = ["O6lvl4", "almide", "almide-graphics", "almide-ai", "almd-mc", "Aid-On"];
+const OWNERS = ["O6lvl4", "almide", "almide-graphics", "almide-ai", "almd-mc"];
 
 /** repos whose command is installed here, so the plate can be its real output */
 const COMMANDS = {

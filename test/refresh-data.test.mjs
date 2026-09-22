@@ -36,7 +36,7 @@ test("refresh discovers new work, excludes removed/private/fork/furniture entrie
       "O6lvl4/private-work\tprivate\tfalse\t-\t0\t2025-01-02\tPrivate",
       "O6lvl4/fork-work\tpublic\ttrue\t-\t0\t2025-01-02\tFork",
       "O6lvl4/.github\tpublic\tfalse\t-\t0\t2025-01-02\tProfile",
-      "Aid-On/.github\tpublic\tfalse\t-\t0\t2025-01-02\tProfile",
+      "almide/.github\tpublic\tfalse\t-\t0\t2025-01-02\tProfile",
       "O6lvl4/O6lvl4-portfolio\tpublic\tfalse\t-\t0\t2025-01-02\tThis site",
       "O6lvl4/dotfiles\tpublic\tfalse\t-\t0\t2025-01-02\tDotfiles",
     ].join("\n"));

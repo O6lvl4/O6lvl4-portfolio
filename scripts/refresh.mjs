@@ -6,7 +6,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { shown } from "./shown.mjs";
 
-const owners = ["O6lvl4", "Aid-On", "almide", "almide-graphics", "almide-ai", "almd-mc"];
+const owners = ["O6lvl4", "almide", "almide-graphics", "almide-ai", "almd-mc"];
 const root = mkdtempSync(join(tmpdir(), "portfolio-refresh-"));
 const env = { ...process.env, PORTFOLIO_CLONES: root, PORTFOLIO_AUTOMATED: "1", GIT_TERMINAL_PROMPT: "0", GIT_LFS_SKIP_SMUDGE: "1" };
 

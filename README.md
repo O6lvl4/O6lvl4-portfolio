@@ -1,10 +1,10 @@
 # O6lvl4-portfolio
 
-Every public repository under **O6lvl4**, **Aid-On**, **almide**, **almide-graphics**, **almide-ai**
-and **almd-mc** — 265 of them — shown one at a time, the way a body of work is shown, in Japanese,
-English and Chinese.
+Every public repository under **O6lvl4**, **almide**, **almide-graphics**, **almide-ai** and
+**almd-mc**, shown one at a time, the way a body of work is shown, in Japanese, English and
+Chinese.
 
-O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ265件を、一つずつ見せるポートフォリオです。日本語・英語・中国語。
+O6lvl4 と almide、almide-* の公開リポジトリを、一つずつ見せるポートフォリオです。日本語・英語・中国語。
 
 **Live:** https://o6lvl4.github.io/O6lvl4-portfolio/ ([ja](https://o6lvl4.github.io/O6lvl4-portfolio/ja/) · [en](https://o6lvl4.github.io/O6lvl4-portfolio/en/) · [zh](https://o6lvl4.github.io/O6lvl4-portfolio/zh/))
 
@@ -14,7 +14,7 @@ O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ265件を、一つ
   every public repository as a line, the ones put forward as plates, one of them opened in full,
   the figures of the lot, and what it is all written in. The proportions are measured from a real
   portfolio's Layout AST, not guessed.
-- **265 lines, read the way you want them.** Filter by org or by language, order by date, commits,
+- **A line per repository, read the way you want them.** Filter by org or by language, order by date, commits,
   language or name, and ask for the rest when the first 28 are not enough. The page renders
   complete without JavaScript; the script only narrows and reorders what is already there.
 - **Named after Ogma.** The god of eloquence and writing, credited with ogham — an alphabet
@@ -27,10 +27,10 @@ O6lvl4 と Aid-On、almide、almide-* の公開リポジトリ265件を、一つ
   snapshot per frame on a page that scrolls hundreds of lines. Everything Latin is set in JetBrains
   Mono, the face code is written in, with Noto Sans Ogham for the stem and Noto Sans JP and SC for
   Japanese and Chinese — all OFL.
-- **Fourteen families, each with its own page.** The work is grouped by what kind of thing it is —
-  languages, the standard library, an agent's tools, LLM groundwork, an AITuber's parts, Minecraft,
-  drawing, the edge and the web, toolchains, knowledge, public pages, tools at hand, other
-  languages, and what was only tried out. A family is a kind of thing and not a place, so `wyve`
+- **Twelve families, each with its own page.** The work is grouped by what kind of thing it is —
+  languages, the standard library, an agent's tools, LLM groundwork, Minecraft, drawing,
+  toolchains, knowledge, public pages, tools at hand, other languages, and what was only tried
+  out. A family is a kind of thing and not a place, so `wyve`
   sits with the language work however little Almide is in it, and a sandbox stays a sandbox however
   many commits it has. Every family has its own page with its own figures, years and repositories.
 - **Every figure comes from the repositories.** The languages, the commits, the years and the counts
@@ -56,7 +56,7 @@ GitHub Actions refreshes and deploys the portfolio every day at **06:23 JST**
 (21:23 UTC), on pushes to `main`, and via **Actions → Deploy to GitHub Pages →
 Run workflow**. Scheduled runs can start later when GitHub is busy.
 
-The build lists public, non-fork repositories for all six owners, clones their
+The build lists public, non-fork repositories for all five owners, clones their
 default-branch histories into a fresh temporary directory, and updates the project
 list, descriptions, languages, stars, tags and deduplicated commit statistics.
 GitHub's own furniture is left out of that list by `scripts/shown.mjs`: an

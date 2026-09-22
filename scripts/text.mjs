@@ -46,7 +46,6 @@ export const TEXT = {
       "almide-graphics": "Almide で絵を描くための層。数学、描画時、UI、VRM/glTF、微分可能プログラミング。",
       "almide-ai": "Almide で書いたエージェント。CLI 実行環境、LLM クライアント、Mac を操作する手。",
       "almd-mc": "Almide で Minecraft のプロトコルを実装した一式。認証、チャンク、NBT、ボット。",
-      "Aid-On": "Aid-On での仕事。LLM を使うための土台（流量制御、統一インターフェース、記憶、ストリーム）と AITuber の部品。",
     },
     about: () => [
       "静的型付け言語 Almide を設計・開発しています。Rustによる言語本体の実装から、標準ライブラリ、エディタ支援、実行環境まで。言語を使える形にするところまで取り組んでいます。",
@@ -83,7 +82,7 @@ export const TEXT = {
         },
         {
           "key": "実行を支える",
-          "value": "porta / LLMの基盤"
+          "value": "porta / homullus"
         },
         {
           "key": "設計と実装",
@@ -97,7 +96,7 @@ export const TEXT = {
       sections: () => [
         { heading: "言語から道具まで", text: "言語の実装から、その言語で使う道具までをつくっています。Almideを中心に、構文解析・コードの読み書き・エージェントの実行環境を開発しています。" },
         { heading: "コードを読む道具", text: "Almideで、構文木をつくるgramideと、関数や型を指定してコードを読めるhewを開発しています。コーディングエージェントが必要なコードを取り出すための道具です。" },
-        { heading: "AIを動かす土台", text: "エージェントが道具を使うための接続や実行制御、LLMを使うための流量制御・記憶・ストリーム処理など、アプリケーションを支える部分もつくっています。" },
+        { heading: "AIを動かす土台", text: "エージェントを許可した権限の内側で動かす porta、Almide で書いたエージェントの実行環境（homullus）と LLM の窓口（almai）など、AI を実際に動かすための部分もつくっています。" },
       ],
       footnote: "数値（コミット数・初回・言語）は手元の clone から測ったものです。コミットは著者日で数え、リポジトリ間で共有している履歴は一度だけ数えています（マージも1件として含みます）。",
     },
@@ -143,7 +142,6 @@ export const TEXT = {
       "almide-graphics": "The layer for drawing in Almide: maths, a graphics runtime, UI, VRM/glTF, and differentiable programming.",
       "almide-ai": "Agents written in Almide: a CLI runtime, an LLM client, and a hand that works a Mac.",
       "almd-mc": "Minecraft's protocol implemented in Almide: authentication, chunks, NBT, and a bot.",
-      "Aid-On": "Work at Aid-On: groundwork for using LLMs (rate limiting, one interface, memory, streams) and the parts of an AITuber.",
     },
     about: () => [
       "I design and develop Almide, a statically typed language. My work spans the implementation in Rust, the standard library, editor support and runtimes: the pieces that make a language usable.",
@@ -180,7 +178,7 @@ export const TEXT = {
         },
         {
           "key": "Execution",
-          "value": "porta / LLM infrastructure"
+          "value": "porta / homullus"
         },
         {
           "key": "Design & build",
@@ -194,7 +192,7 @@ export const TEXT = {
       sections: () => [
         { heading: "From language to tools", text: "I build both a language and the tools used with it. Around Almide, I develop syntax analysis, tools for reading and editing code, and agent runtimes." },
         { heading: "Tools for reading code", text: "In Almide, I build gramide for constructing syntax trees and hew for reading code by named functions and types. These tools help coding agents retrieve the code they need." },
-        { heading: "Infrastructure for AI", text: "I also build the foundations applications rely on: tool connections and execution controls for agents, and rate limiting, memory and stream processing for LLMs." },
+        { heading: "Infrastructure for AI", text: "I also build what it takes to run AI for real: porta, which keeps an agent inside the permissions it was granted, and an agent runtime (homullus) and an LLM client (almai) written in Almide." },
       ],
       footnote: "The figures — commits, first commit, languages — are measured from the clones. Commits are counted by author date, history shared between repositories is counted once, and a merge counts as one commit.",
     },
@@ -240,7 +238,6 @@ export const TEXT = {
       "almide-graphics": "用 Almide 作画的一层：数学、绘图运行时、UI、VRM/glTF、可微编程。",
       "almide-ai": "用 Almide 写的智能体：CLI 运行时、LLM 客户端，以及操作 Mac 的手。",
       "almd-mc": "用 Almide 实现的 Minecraft 协议：认证、区块、NBT 与机器人。",
-      "Aid-On": "在 Aid-On 的工作：使用 LLM 的基础设施（限流、统一接口、记忆、流）与 AITuber 的零件。",
     },
     about: () => [
       "我设计并开发静态类型语言Almide。从用Rust实现语言本体，到标准库、编辑器支持与运行时，构建让语言真正可用的各个部分。",
@@ -277,7 +274,7 @@ export const TEXT = {
         },
         {
           "key": "执行支持",
-          "value": "porta / LLM基础设施"
+          "value": "porta / homullus"
         },
         {
           "key": "设计与实现",
@@ -291,7 +288,7 @@ export const TEXT = {
       sections: () => [
         { heading: "从语言到工具", text: "既开发语言，也开发使用这门语言的工具。围绕Almide，构建语法分析、代码读写工具与智能体运行环境。" },
         { heading: "阅读代码的工具", text: "用Almide开发构建语法树的gramide，以及按函数和类型名称读取代码的hew。这些工具帮助编程智能体提取所需的代码。" },
-        { heading: "AI基础设施", text: "也开发支撑应用的基础部分：智能体的工具连接与执行控制，以及LLM的限流、记忆和流式处理。" },
+        { heading: "AI基础设施", text: "也在做让AI真正跑起来的部分：把智能体限制在所授予权限之内的 porta，以及用 Almide 写的智能体运行时（homullus）与 LLM 客户端（almai）。" },
       ],
       footnote: "提交数、首次提交、语言等数字，均由本地克隆测得。提交按作者日期计数，仓库之间共享的历史只计一次，合并提交计为一次。",
     },

@@ -18,7 +18,6 @@ const ORGS = [
   { id: "almide-graphics", owner: "almide-graphics" },
   { id: "almide-ai", owner: "almide-ai" },
   { id: "almd-mc", owner: "almd-mc" },
-  { id: "aid-on", owner: "Aid-On" },
 ];
 
 /** The work put forward: opened in full wherever it appears, and named on the share card. */

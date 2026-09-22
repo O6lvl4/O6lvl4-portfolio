@@ -9,7 +9,7 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 
 const ROOT = process.env.PORTFOLIO_CLONES ?? join(homedir(), "workspace", "github.com");
-const OWNERS = ["O6lvl4", "Aid-On", "almide", "almide-graphics", "almide-ai", "almd-mc"];
+const OWNERS = ["O6lvl4", "almide", "almide-graphics", "almide-ai", "almd-mc"];
 
 const git = (dir, args, emptyHead = false) => {
   try {

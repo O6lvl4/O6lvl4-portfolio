@@ -55,25 +55,11 @@ export const FAMILIES = [
     short: { ja: "LLM の土台", en: "LLM groundwork", zh: "LLM 基础" },
     name: { ja: "エージェントと LLM の土台", en: "Agents, and groundwork for LLMs", zh: "智能体与 LLM 的基础" },
     intro: {
-      ja: "モデルを実際に使うために要るもの。どのプロバイダにも同じ顔で当たる窓口（unillm・almai）と音声入力の窓口（unisttp）、流量を抑える仕組み（llm-throttle・llm-queue-dispatcher）、長文と反復を扱う層（fractop・iteratop・synapser・templex）、記憶（memory-rag・whenm・embersm）、Almide で書いたエージェントの実行環境（homullus）と Mac を操作する手（manus）、端末から複数のモデルを同じ口で叩く CLI（llmine）、そしてモデルそのものを純 Almide で書いて WASM で走らせたもの（bonsai-almide）。",
-      en: "What it takes to actually use a model: one door to every provider (unillm, almai) and one for speech (unisttp), ways to hold the flow back (llm-throttle, llm-queue-dispatcher), layers for long text and loops (fractop, iteratop, synapser, templex), memory (memory-rag, whenm, embersm), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).",
-      zh: "真正把模型用起来所需要的：对任何供应商都同一张脸的入口（unillm、almai）与语音入口（unisttp）、限流机制（llm-throttle、llm-queue-dispatcher）、处理长文与迭代的层（fractop、iteratop、synapser、templex）、记忆（memory-rag、whenm、embersm）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus）、在终端用同一个口子调多个模型的 CLI（llmine），以及用纯 Almide 写、跑在 WASM 上的模型本身（bonsai-almide）",
+      ja: "モデルを実際に使うために要るもの。どのプロバイダにも同じ顔で当たる窓口（almai）、Almide で書いたエージェントの実行環境（homullus）と Mac を操作する手（manus）、端末から複数のモデルを同じ口で叩く CLI（llmine）、そしてモデルそのものを純 Almide で書いて WASM で走らせたもの（bonsai-almide）。",
+      en: "What it takes to actually use a model: one door to every provider (almai), an agent runtime written in Almide (homullus) with a hand that works a Mac (manus), a CLI that reaches many models through one mouth (llmine), and the model itself written in pure Almide and run as WASM (bonsai-almide).",
+      zh: "真正把模型用起来所需要的：对任何供应商都同一张脸的入口（almai）、用 Almide 写的智能体运行时（homullus）与操作 Mac 的手（manus）、在终端用同一个口子调多个模型的 CLI（llmine），以及用纯 Almide 写、跑在 WASM 上的模型本身（bonsai-almide）",
     },
-    test: (p) =>
-      p.owner === "almide-ai" ||
-      starts(p, "unillm", "llm-") ||
-      named(p, "llmine", "unisttp", "fractop", "iteratop", "synapser", "templex", "memory-rag", "whenm", "embersm", "fuzztok", "vad"),
-  },
-  {
-    id: "fizz",
-    short: { ja: "AITuber", en: "AITuber", zh: "AITuber" },
-    name: { ja: "AITuber の部品", en: "The parts of an AITuber", zh: "AITuber 的零件" },
-    intro: {
-      ja: "AITuber「Fizz」を、ひとつずつ検証できる部品に割ったもの。コメントを読む（取得・重複除去・分類・照合）、返事を組む（persona・記憶 L1〜L3・履歴・文の分割）、体を動かす（口パク・表情・視線・idle・ジェスチャ・VRM リグ）。部品の間をつなぐのは共通のプロトコル（fizz-protocol）で、返事の組み立て全体は fizz-brain-orchestrator が受け持ちます。どれも単一責任の純関数で、Almide で書いてあります。",
-      en: "An AITuber, Fizz, cut into parts that can each be checked on their own: reading the comments (sources, dedupe, classify, match), composing a reply (persona, memory L1–L3, history, sentence splitting), and moving the body (lipsync, expression, gaze, idle, gestures, VRM rig). One shared protocol (fizz-protocol) is what the parts speak, and fizz-brain-orchestrator is what composes a reply out of them. Each is a single-purpose pure function, written in Almide.",
-      zh: "把 AITuber「Fizz」拆成可以逐个验证的零件：读取评论（来源、去重、分类、匹配）、组织回应（persona、记忆 L1–L3、历史、断句），以及驱动身体（口型、表情、注视、待机、手势、VRM 骨骼）。零件之间说的是同一套协议（fizz-protocol），整条回应的组装交给 fizz-brain-orchestrator。每个都是单一职责的纯函数，用 Almide 写成",
-    },
-    test: (p) => starts(p, "fizz-") || named(p, "animula"),
+    test: (p) => p.owner === "almide-ai" || named(p, "llmine"),
   },
   {
     id: "mc",
@@ -84,7 +70,7 @@ export const FAMILIES = [
       en: "Minecraft's protocol implemented in Almide from the bottom up (mc-protocol): authentication, chunks, NBT, the registry, physics, pathfinding, inventory, PvP, a proxy, a server, and bots (mc-bot, craftsman) — replacing the layers of node-minecraft-protocol and prismarine in a typed language.",
       zh: "用 Almide 自底向上实现 Minecraft 协议（mc-protocol）：认证、区块、NBT、注册表、物理、寻路、背包、PvP、代理、服务端，以及机器人（mc-bot、craftsman）——把 node-minecraft-protocol 与 prismarine 的各层用带类型的语言重写",
     },
-    test: (p) => p.owner === "almd-mc" || named(p, "craftsman", "mine-rabbit-bots"),
+    test: (p) => p.owner === "almd-mc" || named(p, "craftsman"),
   },
   {
     id: "graphics",
@@ -96,19 +82,6 @@ export const FAMILIES = [
       zh: "在 Almide 里作画的那一层：GPU 原生 UI（ceangal）与它的动画引擎（ceangal-anime）、从 WASM 驱动 Canvas 与 WebGL（obsid）、纯数学基元（lumen）、VRM/glTF 角色层（cruth）与文件本身的工具箱（nendo）、神经网络基本部件（nn），以及带反向模式 autograd 的可微编程基础（slabhra）",
     },
     test: (p) => p.owner === "almide-graphics",
-  },
-  {
-    id: "web",
-    short: { ja: "エッジと Web", en: "Edge and web", zh: "边缘与 Web" },
-    name: { ja: "エッジと Web の部品", en: "Parts for the edge and the web", zh: "边缘与 Web 的零件" },
-    intro: {
-      ja: "Cloudflare Workers やブラウザで動く層。ReadableStream を包まずそのままリアクティブにする nagare と、その上の橋渡し（Cloudflare のジョブキューに繋ぐ didoq、Qwik に繋ぐ qwiks）、エッジネイティブな認証（auth・auth-providers-ts）、色トークンとテーマのデザインシステム（design-system・aid-on-ui-system）、知識ベース API のクライアント（outline-api-client-ts）。",
-      en: "The layer that runs on Cloudflare Workers and in the browser: nagare, which makes a ReadableStream reactive rather than wrapping it, and the bridges built on it (didoq for Cloudflare's job queues, qwiks for Qwik); edge-native authentication (auth, auth-providers-ts); a design system of colour tokens and themes (design-system, aid-on-ui-system); and a client for a knowledge-base API (outline-api-client-ts).",
-      zh: "跑在 Cloudflare Workers 与浏览器上的那一层：不做包装、直接让 ReadableStream 具备反应式能力的 nagare 及其之上的桥接（接 Cloudflare 任务队列的 didoq、接 Qwik 的 qwiks）、边缘原生认证（auth、auth-providers-ts）、色彩令牌与主题的设计系统（design-system、aid-on-ui-system）、知识库 API 客户端（outline-api-client-ts）",
-    },
-    test: (p) =>
-      starts(p, "aid-on-ui", "aid-on-draft", "next-auth", "auth") ||
-      named(p, "nagare", "qwiks", "didoq", "design-system", "outline-api-client-ts", "unillm-vercel-ai-sdk", "zod-to-markdown"),
   },
   {
     id: "toolchain",
@@ -137,16 +110,15 @@ export const FAMILIES = [
     short: { ja: "公開ページ", en: "Pages", zh: "公开页面" },
     name: { ja: "見せるためのページ", en: "Pages made to be looked at", zh: "给人看的页面" },
     intro: {
-      ja: "ブラウザで開いて、それで完結するもの。作家のポートフォリオ見本（hokusai-portfolio）と人のポートフォリオ（kotorody-portfolio）、半導体と世界情勢のタイムライン（chip-war-chronicle）、エージェントのベンチを一枚の表にしたもの（agent-bench-matrix）、登壇スライド、体の面倒を見る小さなアプリ（gulp-coach・environment-health-viewer・tabi-navi）、音で遊ぶもの（pitchy・almide-headset-eq）、そして事務のための素の HTML（aid-on-contract-generator・aid-on-invoice-generator・aid-on-tax-calculator）。",
-      en: "Things that open in a browser and are finished there: a sample portfolio for an artist (hokusai-portfolio) and one for a person (kotorody-portfolio), a timeline of chips and world affairs (chip-war-chronicle), agent benchmarks gathered into one table (agent-bench-matrix), a talk's slides, small apps that look after a body (gulp-coach, environment-health-viewer, tabi-navi), two that play with sound (pitchy, almide-headset-eq), and plain HTML for paperwork (aid-on-contract-generator, aid-on-invoice-generator, aid-on-tax-calculator).",
-      zh: "在浏览器里打开、到此为止的东西：画家作品集样例（hokusai-portfolio）与某人的作品集（kotorody-portfolio）、半导体与世界局势的时间线（chip-war-chronicle）、把智能体基准汇成一张表（agent-bench-matrix）、演讲幻灯片、照看身体的小应用（gulp-coach、environment-health-viewer、tabi-navi）、玩声音的两个（pitchy、almide-headset-eq），以及为文书写的纯 HTML（aid-on-contract-generator、aid-on-invoice-generator、aid-on-tax-calculator）",
+      ja: "ブラウザで開いて、それで完結するもの。作家のポートフォリオ見本（hokusai-portfolio）、半導体と世界情勢のタイムライン（chip-war-chronicle）、エージェントのベンチを一枚の表にしたもの（agent-bench-matrix）、登壇スライド、体の面倒を見る小さなアプリ（gulp-coach・environment-health-viewer・tabi-navi）、そして音で遊ぶもの（pitchy・almide-headset-eq）。",
+      en: "Things that open in a browser and are finished there: a sample portfolio for an artist (hokusai-portfolio), a timeline of chips and world affairs (chip-war-chronicle), agent benchmarks gathered into one table (agent-bench-matrix), a talk's slides, small apps that look after a body (gulp-coach, environment-health-viewer, tabi-navi), and two that play with sound (pitchy, almide-headset-eq).",
+      zh: "在浏览器里打开、到此为止的东西：画家作品集样例（hokusai-portfolio）、半导体与世界局势的时间线（chip-war-chronicle）、把智能体基准汇成一张表（agent-bench-matrix）、演讲幻灯片、照看身体的小应用（gulp-coach、environment-health-viewer、tabi-navi），以及玩声音的两个（pitchy、almide-headset-eq）",
     },
     test: (p) =>
       starts(p, "O6lvl4-webnight") ||
       named(p,
-        "hokusai-portfolio", "kotorody-portfolio", "chip-war-chronicle", "agent-bench-matrix",
-        "gulp-coach", "environment-health-viewer", "tabi-navi", "pitchy", "almide-headset-eq",
-        "aid-on-contract-generator", "aid-on-invoice-generator", "aid-on-tax-calculator"),
+        "hokusai-portfolio", "chip-war-chronicle", "agent-bench-matrix",
+        "gulp-coach", "environment-health-viewer", "tabi-navi", "pitchy", "almide-headset-eq"),
   },
   {
     id: "tools",
@@ -162,7 +134,7 @@ export const FAMILIES = [
       named(p,
         "gformiac", "tocsin", "tocsin-almd", "uimodulay", "premaid", "pagina", "image-catalog-composer",
         "resepy", "pdf-burger", "keiri", "ytscribe", "grclone", "igloc", "syncenv", "chropen", "azprofile",
-        "capto", "netcheck", "ClipStash", "macleap", "dotfiles", "dns-checker", "connpass-discord-bot"),
+        "capto", "netcheck", "ClipStash", "macleap", "dns-checker", "connpass-discord-bot", "zod-to-markdown"),
   },
   {
     id: "other-langs",
@@ -180,9 +152,9 @@ export const FAMILIES = [
     short: { ja: "試したもの", en: "Tried out", zh: "试过的" },
     name: { ja: "試したもの", en: "Things tried out", zh: "试过的东西" },
     intro: {
-      ja: "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、JavaScript の問題集（aid-on-js-training）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
-      en: "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), a set of JavaScript exercises (aid-on-js-training), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
-      zh: "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide）、JavaScript 习题集（aid-on-js-training），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
+      ja: "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
+      en: "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
+      zh: "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
     },
     test: () => true,
   },
