@@ -120,7 +120,7 @@
     "items": [
      "Almide（85）",
      "TypeScript（31）",
-     "JavaScript（30）",
+     "JavaScript（29）",
      "Python（25）",
      "Shell（25）"
     ]
@@ -235,7 +235,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "14,185",
+    "value": "14,403",
     "label": "提交"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11774,
+    "count": 11965,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1956,
+    "count": 1981,
     "of": 111
    },
    {
@@ -382,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 52,
+    "count": 54,
     "of": 3
    }
   ],
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 13936
+    "count": 14154
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "11,571",
+     "value": "11,747",
      "label": "提交"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11571
+     "count": 11747
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "9,328"
+       "value": "9,463"
       },
       {
        "label": "首次",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-24"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,483"
+       "value": "1,489"
       },
       {
        "label": "首次",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-24"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "229"
+       "value": "258"
       },
       {
        "label": "首次",
@@ -836,7 +836,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "151"
+       "value": "157"
       },
       {
        "label": "首次",
@@ -854,7 +854,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-08"
+      "date": "2026-09-23"
      }
     },
     {
@@ -1529,11 +1529,11 @@
    "intro": "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
    "figures": [
     {
-     "value": "25",
+     "value": "24",
      "label": "公开仓库"
     },
     {
-     "value": "908",
+     "value": "922",
      "label": "提交"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 892
+     "count": 906
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "213"
+       "value": "228"
       },
       {
        "label": "首次",
@@ -1604,7 +1604,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-24"
      }
     },
     {
@@ -1880,6 +1880,44 @@
      ],
      "order": {
       "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/golemide",
+     "title": "golemide",
+     "titleEn": "用Almide编写的编码代理，先观察再编辑并验证",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/golemide",
+     "tags": [
+      "Almide",
+      "Shell",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "59"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/golemide"
+      }
+     ],
+     "order": {
+      "date": "2026-09-23"
      }
     },
     {
@@ -2164,40 +2202,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/golemide",
-     "title": "golemide",
-     "titleEn": "用Almide编写的编码代理，先观察再编辑并验证",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/golemide",
-     "tags": [
-      "Almide",
-      "Shell",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "49"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/golemide"
-      }
-     ],
-     "order": {
-      "date": "2026-09-20"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/ctxgate",
      "title": "ctxgate",
      "titleEn": "Claude Code的上下文防火墙,存档工具输出并压缩展示",
@@ -2258,39 +2262,6 @@
       {
        "label": "仓库",
        "href": "https://github.com/O6lvl4/assay"
-      }
-     ],
-     "order": {
-      "date": "2026-09-13"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/emet",
-     "title": "emet",
-     "titleEn": "核对主张数字、引文与名称的引用闸门",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/emet",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "11"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/emet"
       }
      ],
      "order": {
@@ -2510,7 +2481,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "114",
+     "value": "116",
      "label": "提交"
     },
     {
@@ -2529,7 +2500,7 @@
     },
     {
      "name": "2026",
-     "count": 87
+     "count": 89
     }
    ],
    "works": [
@@ -2669,7 +2640,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "23"
+       "value": "25"
       },
       {
        "label": "首次",
@@ -6003,11 +5974,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "31",
+     "value": "32",
      "label": "公开仓库"
     },
     {
-     "value": "180",
+     "value": "206",
      "label": "提交"
     },
     {
@@ -6038,20 +6009,48 @@
     },
     {
      "name": "2026",
-     "count": 27
+     "count": 53
     }
    ],
    "works": [
     {
-     "image": "plates/zh/O6lvl4/line-bot-private.jpg",
-     "readme": {
-      "lead": "基于AWS SAM的Go语言Lambda函数示例模板",
-      "points": [
-       "Makefile封装sam build",
-       "sam local start-api本地运行",
-       "sam deploy --guided部署"
-      ]
-     },
+     "image": "plates/shared/O6lvl4/comide.jpg",
+     "id": "O6lvl4/comide",
+     "title": "comide",
+     "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/comide",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "26"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.4.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/comide"
+      }
+     ],
+     "order": {
+      "date": "2026-09-23"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/line-bot-private",
      "title": "line-bot-private",
      "titleEn": "基于AWS SAM的Go语言Lambda函数示例模板",

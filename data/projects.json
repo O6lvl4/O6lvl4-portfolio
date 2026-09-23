@@ -414,6 +414,37 @@
   "score": 10.5
  },
  {
+  "full": "O6lvl4/golemide",
+  "owner": "O6lvl4",
+  "name": "golemide",
+  "url": "https://github.com/O6lvl4/golemide",
+  "lead": "A coding agent written in Almide: one static binary, observe-then-edit, every write through a syntax gate",
+  "heading": "{\"ok\":true,\"path\":\"src/lib.rs\",\"bytes\":812,\"checked_by\":\"gramide\",\"matched\":[],\"diff\":\"…\"}",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Shell",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 59,
+  "years": {
+   "2026": 59
+  },
+  "first": "2026-09-08",
+  "last": "2026-09-23",
+  "tag": "v0.2.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1362136465/a64fdb12-9b66-4c14-a97d-af37d81ef089",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build\n./golemide observe --root ../project"
+  },
+  "score": 10.2
+ },
+ {
   "full": "O6lvl4/hew",
   "owner": "O6lvl4",
   "name": "hew",
@@ -515,6 +546,34 @@
    "code": "gramide_javascript check   src/*.js      exit 0 if it parses, else `file:line:col: unexpected X (expected …)`\ngramide_javascript outline app.js        `L12-40 class Widget`, `  L20-24 method Widget.render`, `L50-61 function main`\ngramide_javascript symbols app.js        versioned JSON names, owners, line and byte ranges\ngramide_javascript tags    app.js        definitions and references: a repo map's input\ngramide_javascript map .   --budget 1024 --task \"fix the retry\""
   },
   "score": 9.6
+ },
+ {
+  "full": "O6lvl4/comide",
+  "owner": "O6lvl4",
+  "name": "comide",
+  "url": "https://github.com/O6lvl4/comide",
+  "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 26,
+  "years": {
+   "2026": 26
+  },
+  "first": "2026-09-12",
+  "last": "2026-09-23",
+  "tag": "v0.4.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
+  },
+  "score": 9.5
  },
  {
   "full": "O6lvl4/gramide-typescript",
@@ -1174,35 +1233,6 @@
   "score": 6.1
  },
  {
-  "full": "O6lvl4/golemide",
-  "owner": "O6lvl4",
-  "name": "golemide",
-  "url": "https://github.com/O6lvl4/golemide",
-  "lead": "A coding agent written in Almide: one static binary, observe-then-edit, every write through a syntax gate",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Shell",
-   "Python"
-  ],
-  "stars": 0,
-  "commits": 49,
-  "years": {
-   "2026": 49
-  },
-  "first": "2026-09-08",
-  "last": "2026-09-20",
-  "license": "NOASSERTION",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1362136465/a64fdb12-9b66-4c14-a97d-af37d81ef089",
-  "plate": "og",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build\n./golemide observe --root ../project"
-  },
-  "score": 6
- },
- {
   "full": "O6lvl4/chip-war-chronicle",
   "owner": "O6lvl4",
   "name": "chip-war-chronicle",
@@ -1391,34 +1421,6 @@
   "sample": {
    "lang": "",
    "code": "z(表, モデル) ≒ b(表) + s(表) × a(モデル)\n```\n\n`z` は表ごとに標準化した実測値(高いほど良い向きに揃えたもの)、`a` がモデルの実力、`s` はその表が実力差をどれだけ広げて見せるか、`b` はその表の水準です。`a` と `(b, s)` を交互に最小二乗で解き、`a` を平均50・標準偏差10に直したものが「戦闘力」です。分野ごとにも同じ当てはめをします。\n\n- 実測が3モデルに満たない表と、全員が同じ値の表は、順位を語らないので使いません。\n- 実測の少ないモデルは、説明できなかった残差の大きさに応じて真ん中へ寄せます(縮約)。1回の結果だけで上位に来ない代わりに、誤差が大きく出ます。\n- 空きセルの推定値は、その分野の当てはめをその表の目盛りに戻し、そのボードが実際に見た範囲に収めたものです。\n- **これは推定であって実測ではありません。** ページでは書式を分け、データでも `fit` として実測の表とは別に置いています。`data/tables/` に推定値が混ざることはありません。\n\n## データ"
-  },
-  "score": 5.2
- },
- {
-  "full": "O6lvl4/emet",
-  "owner": "O6lvl4",
-  "name": "emet",
-  "url": "https://github.com/O6lvl4/emet",
-  "lead": "A claim moves only while its figures hold — a citation gate that answers with an exit status. Written in Almide.",
-  "heading": "emet",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 11,
-  "years": {
-   "2026": 11
-  },
-  "first": "2026-09-12",
-  "last": "2026-09-13",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "$ emet claims.json\nok  glm-flash    supported     https://huggingface.co/api/models/zai-org/GLM-5.3-Flash\nok  glm-max      supported     https://huggingface.co/api/models/zai-org/GLM-5.3\nMET tsmc-aug     unsupported   裏が取れない数値 1/2: 5148.1\nMET wrong-figures unsupported  裏が取れない数値 2/2: 7785900000, 5272000000\nMET no-figures   unverifiable  検査できる数値がない\nMET no-source    no_citation   出典が付いていない\n\n6 件中 4 件を止めた\n$ echo $?\n1"
   },
   "score": 5.2
  },
@@ -3147,12 +3149,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 9328,
+  "commits": 9463,
   "years": {
-   "2026": 9328
+   "2026": 9463
   },
   "first": "2026-03-07",
-  "last": "2026-09-23",
+  "last": "2026-09-24",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3184,12 +3186,12 @@
    "Almide"
   ],
   "stars": 3,
-  "commits": 213,
+  "commits": 228,
   "years": {
-   "2026": 213
+   "2026": 228
   },
   "first": "2026-04-07",
-  "last": "2026-09-23",
+  "last": "2026-09-24",
   "tag": "v0.6.1",
   "license": "Apache-2.0",
   "topics": [
@@ -3209,7 +3211,7 @@
    "lang": "text",
    "code": "$ porta run sh -v ./work --read-policy strict --timeout 5 -- …\n  wrote ./work/out.txt              legitimate work goes through\n  read the SSH key       → refused\n  write outside ./work   → refused\n  # a hung command is killed at the deadline → exit 124"
   },
-  "score": 28.3
+  "score": 28.6
  },
  {
   "full": "almide/als",
@@ -3225,12 +3227,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1483,
+  "commits": 1489,
   "years": {
-   "2026": 1483
+   "2026": 1489
   },
   "first": "2026-03-07",
-  "last": "2026-09-23",
+  "last": "2026-09-24",
   "tag": "v1.0.0",
   "license": "NOASSERTION",
   "topics": [
@@ -3293,9 +3295,9 @@
    "Zig"
   ],
   "stars": 0,
-  "commits": 229,
+  "commits": 258,
   "years": {
-   "2026": 229
+   "2026": 258
   },
   "first": "2026-04-12",
   "last": "2026-09-23",
@@ -3309,9 +3311,9 @@
   "plate": "site",
   "sample": {
    "lang": "",
-   "code": "almide.toml          Package manifest (the harness itself is an Almide package)\nsrc/main.almd        Harness — written in Almide, of course (the daily Almide lane)\nsrc/msr/             The cross-language lane: neutral task model, language plugins, runner\nmsr/                 Its task set (task-set.json), behavior texts, reference solutions\ntasks/               Task bank (prompts + tests + metadata)\nruns/                Per-day results, committed to git (runs/msr/ for the cross-language lane)\ndashboards/          Static site for visualizing trends (GitHub Pages)\nalmide-pin.toml      Which Almide compiler commit we evaluate against\nmalicious-hints.md   Incident log of hint texts that misled models\nMakefile             `make msr`, `make msr-verify`, `make msr-probe`, `make test`"
+   "code": "almide.toml          Package manifest (the harness itself is an Almide package)\nsrc/main.almd        Harness — written in Almide, of course (the daily Almide lane)\nsrc/cellstate.almd   The cell states, the rates and the verdicts BOTH lanes speak\nsrc/msr/             The cross-language lane: neutral task model, language plugins, runner\nmsr/                 Its task set (task-set.json), behavior texts, reference solutions\ntasks/               Task bank (prompts + tests + metadata)\nruns/                Per-day results, committed to git (runs/msr/ for the cross-language lane)\ndashboards/          Static site for visualizing trends (GitHub Pages)\nalmide-pin.toml      Which Almide compiler commit we evaluate against\nmalicious-hints.md   Incident log of hint texts that misled models\nMakefile             `make msr`, `make msr-verify`, `make msr-probe`, `make test`"
   },
-  "score": 9.6
+  "score": 10.2
  },
  {
   "full": "almide/almide-grammar",
@@ -3516,12 +3518,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 151,
+  "commits": 157,
   "years": {
-   "2026": 151
+   "2026": 157
   },
   "first": "2026-03-08",
-  "last": "2026-09-08",
+  "last": "2026-09-23",
   "topics": [
    "almide",
    "playground",
@@ -3533,7 +3535,7 @@
    "lang": "",
    "code": "\n## Visual output\n\nThe playground renders what you print. If a program's stdout is an SVG\ndocument (`<svg …>`) or an ASCII PPM image (`P3 …`), the **Visual** tab shows\nit as an image — vectors via a script-disabled blob `<img>`, pixels via a\ncanvas. The same program prints a valid `.svg` / `.ppm` file natively, so the\nbyte-parity harness still applies. See Examples → Graphics (Mandelbrot,\ngenerative SVG).\n\n## Embedding\n\n`?embed=1` renders a minimal chrome for iframes — no header, no AI bar, just\ntabs, editor, output and a slim Run bar with an \"Open in Playground\" escape\nhatch. `&hide=util.almd` hides tabs from the strip while still compiling them\n(Kotlin-style hidden setup code). Combine with `?example=` or `#code=`:"
   },
-  "score": 8
+  "score": 8.1
  },
  {
   "full": "almide/yaml",
@@ -4279,9 +4281,9 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 23,
+  "commits": 25,
   "years": {
-   "2026": 23
+   "2026": 25
   },
   "first": "2026-04-12",
   "last": "2026-09-23",
