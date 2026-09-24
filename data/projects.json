@@ -427,12 +427,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 59,
+  "commits": 63,
   "years": {
-   "2026": 59
+   "2026": 63
   },
   "first": "2026-09-08",
-  "last": "2026-09-23",
+  "last": "2026-09-24",
   "tag": "v0.2.0",
   "license": "NOASSERTION",
   "topics": [],
@@ -442,7 +442,7 @@
    "lang": "sh",
    "code": "almide build\n./golemide observe --root ../project"
   },
-  "score": 10.2
+  "score": 10.3
  },
  {
   "full": "O6lvl4/hew",
@@ -518,6 +518,34 @@
   "score": 9.9
  },
  {
+  "full": "O6lvl4/comide",
+  "owner": "O6lvl4",
+  "name": "comide",
+  "url": "https://github.com/O6lvl4/comide",
+  "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 30,
+  "years": {
+   "2026": 30
+  },
+  "first": "2026-09-12",
+  "last": "2026-09-24",
+  "tag": "v0.4.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
+  },
+  "score": 9.6
+ },
+ {
   "full": "O6lvl4/gramide-javascript",
   "owner": "O6lvl4",
   "name": "gramide-javascript",
@@ -546,34 +574,6 @@
    "code": "gramide_javascript check   src/*.js      exit 0 if it parses, else `file:line:col: unexpected X (expected …)`\ngramide_javascript outline app.js        `L12-40 class Widget`, `  L20-24 method Widget.render`, `L50-61 function main`\ngramide_javascript symbols app.js        versioned JSON names, owners, line and byte ranges\ngramide_javascript tags    app.js        definitions and references: a repo map's input\ngramide_javascript map .   --budget 1024 --task \"fix the retry\""
   },
   "score": 9.6
- },
- {
-  "full": "O6lvl4/comide",
-  "owner": "O6lvl4",
-  "name": "comide",
-  "url": "https://github.com/O6lvl4/comide",
-  "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 26,
-  "years": {
-   "2026": 26
-  },
-  "first": "2026-09-12",
-  "last": "2026-09-23",
-  "tag": "v0.4.0",
-  "license": "NOASSERTION",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
-  "plate": "og",
-  "sample": {
-   "lang": "sh",
-   "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
-  },
-  "score": 9.5
  },
  {
   "full": "O6lvl4/gramide-typescript",
@@ -1289,6 +1289,37 @@
    "code": "[ctxgate] cargo test output: 403 lines / 12 KB → vaulted as ctx:9258de38065e (NOT in context).\n  full text: ctxgate show 9258de38065e [--grep RE | --around RE N | --lines A-B | --tail N]\ncargo test: FAILED — 238 passed, 3 failed, 0 ignored\nfailed:\n  parser::match_nested\n  wasm::rc_release\n── parser::match_nested ──\n  thread 'parser::match_nested' panicked at src/parser.rs:412:9:\n  assertion `left == right` failed"
   },
   "score": 5.7
+ },
+ {
+  "full": "O6lvl4/archgopher",
+  "owner": "O6lvl4",
+  "name": "archgopher",
+  "url": "https://github.com/O6lvl4/archgopher",
+  "site": "https://o6lvl4.github.io/archgopher/",
+  "lead": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+  "heading": "1. Build a declaration from Terraform. No terraform init, plan or credentials.",
+  "language": "Go",
+  "languages": [
+   "Go",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 28,
+  "years": {
+   "2026": 28
+  },
+  "first": "2026-09-24",
+  "last": "2026-09-24",
+  "license": "Apache-2.0",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\n# 1. Build a declaration from Terraform. No terraform init, plan or credentials.\narchgopher tf ./infra -o app.scouter.yaml\n\n# 2. Fill in what Terraform cannot know: the load at the entry and the\n#    assumptions left as null (duration per call, item size, ...).\n$EDITOR app.scouter.yaml\n\n# 3. Read it.\narchgopher scout app.scouter.yaml          # Markdown tables\narchgopher scout app.scouter.yaml --json   # machine-readable\n\n# 4. After Terraform changes, fold them in. Your assumptions, load, notes and\n#    edges stay; only types and attributes follow Terraform.\narchgopher tf ./infra --merge app.scouter.yaml -o app.scouter.yaml"
+  },
+  "score": 5.6
  },
  {
   "full": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
@@ -3149,12 +3180,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 9463,
+  "commits": 9534,
   "years": {
-   "2026": 9463
+   "2026": 9534
   },
   "first": "2026-03-07",
-  "last": "2026-09-24",
+  "last": "2026-09-25",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3186,9 +3217,9 @@
    "Almide"
   ],
   "stars": 3,
-  "commits": 228,
+  "commits": 248,
   "years": {
-   "2026": 228
+   "2026": 248
   },
   "first": "2026-04-07",
   "last": "2026-09-24",
@@ -3211,7 +3242,7 @@
    "lang": "text",
    "code": "$ porta run sh -v ./work --read-policy strict --timeout 5 -- …\n  wrote ./work/out.txt              legitimate work goes through\n  read the SSH key       → refused\n  write outside ./work   → refused\n  # a hung command is killed at the deadline → exit 124"
   },
-  "score": 28.6
+  "score": 29
  },
  {
   "full": "almide/als",
@@ -3288,19 +3319,19 @@
   "site": "https://almide.github.io/almide-dojo/",
   "lead": "Daily modification-survival-rate (MSR) measurement ground for Almide. Harness written in Almide itself.",
   "heading": "Almide Dojo",
-  "language": "HTML",
+  "language": "Almide",
   "languages": [
-   "HTML",
    "Almide",
-   "Zig"
+   "HTML",
+   "Shell"
   ],
   "stars": 0,
-  "commits": 258,
+  "commits": 530,
   "years": {
-   "2026": 258
+   "2026": 530
   },
   "first": "2026-04-12",
-  "last": "2026-09-23",
+  "last": "2026-09-24",
   "license": "MIT",
   "topics": [
    "almide",
@@ -3313,7 +3344,7 @@
    "lang": "",
    "code": "almide.toml          Package manifest (the harness itself is an Almide package)\nsrc/main.almd        Harness — written in Almide, of course (the daily Almide lane)\nsrc/cellstate.almd   The cell states, the rates and the verdicts BOTH lanes speak\nsrc/msr/             The cross-language lane: neutral task model, language plugins, runner\nmsr/                 Its task set (task-set.json), behavior texts, reference solutions\ntasks/               Task bank (prompts + tests + metadata)\nruns/                Per-day results, committed to git (runs/msr/ for the cross-language lane)\ndashboards/          Static site for visualizing trends (GitHub Pages)\nalmide-pin.toml      Which Almide compiler commit we evaluate against\nmalicious-hints.md   Incident log of hint texts that misled models\nMakefile             `make msr`, `make msr-verify`, `make msr-probe`, `make test`"
   },
-  "score": 10.2
+  "score": 11
  },
  {
   "full": "almide/almide-grammar",

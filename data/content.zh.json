@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "175 repos",
+  "life": "176 repos",
   "avatar": "assets/avatar.png",
   "role": "从语言开始，构建开发工具。",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公开仓库 175 个",
+  "kicker": "公开仓库 176 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 175 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
+  "note": "这一页并列了 176 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
   "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
@@ -119,10 +119,10 @@
     "heading": "常写的语言",
     "items": [
      "Almide（85）",
-     "TypeScript（31）",
+     "TypeScript（32）",
      "JavaScript（29）",
-     "Python（25）",
-     "Shell（25）"
+     "Shell（26）",
+     "Python（25）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "开始了 139 个",
-    "lead": "almide、porta、als、ccgrid 等 135 个",
+    "title": "开始了 140 个",
+    "lead": "almide、porta、als、ccgrid 等 136 个",
     "tags": [
      "Rust",
      "Python",
@@ -220,8 +220,8 @@
    },
    {
     "key": "用 Almide 写的比例",
-    "value": "39%",
-    "fill": 0.39
+    "value": "40%",
+    "fill": 0.4
    },
    {
     "key": "2026 年的提交",
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "175",
+    "value": "176",
     "label": "公开仓库"
    },
    {
-    "value": "14,403",
+    "value": "14,802",
     "label": "提交"
    },
    {
@@ -250,7 +250,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 69,
+    "count": 70,
     "color": "currentColor"
    },
    {
@@ -260,7 +260,7 @@
    },
    {
     "name": "Go",
-    "count": 15,
+    "count": 16,
     "color": "#00add8"
    },
    {
@@ -280,7 +280,7 @@
    },
    {
     "name": "HTML",
-    "count": 8,
+    "count": 7,
     "color": "#e34c26"
    },
    {
@@ -340,7 +340,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 111
+    "count": 112
    },
    {
     "name": "almide",
@@ -362,13 +362,13 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11965,
+    "count": 12328,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1981,
-    "of": 111
+    "count": 2017,
+    "of": 112
    },
    {
     "name": "almide-graphics",
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 14154
+    "count": 14553
    }
   ]
  },
@@ -421,11 +421,11 @@
      "label": "公开仓库"
     },
     {
-     "value": "11,747",
+     "value": "12,090",
      "label": "提交"
     },
     {
-     "value": "7",
+     "value": "6",
      "label": "语言"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11747
+     "count": 12090
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "9,463"
+       "value": "9,534"
       },
       {
        "label": "首次",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -629,19 +629,19 @@
      "title": "almide-dojo",
      "titleEn": "每日测量Almide中LLM代码的修改存活率",
      "date": "2026年9月",
-     "format": "HTML",
+     "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-dojo",
      "tags": [
-      "HTML",
       "Almide",
-      "Zig",
+      "HTML",
+      "Shell",
       "almide"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "258"
+       "value": "530"
       },
       {
        "label": "首次",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-24"
      }
     },
     {
@@ -1533,7 +1533,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "922",
+     "value": "946",
      "label": "提交"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 906
+     "count": 930
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "228"
+       "value": "248"
       },
       {
        "label": "首次",
@@ -1899,7 +1899,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "59"
+       "value": "63"
       },
       {
        "label": "首次",
@@ -1917,7 +1917,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-24"
      }
     },
     {
@@ -5974,11 +5974,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "32",
+     "value": "33",
      "label": "公开仓库"
     },
     {
-     "value": "206",
+     "value": "238",
      "label": "提交"
     },
     {
@@ -6009,7 +6009,7 @@
     },
     {
      "name": "2026",
-     "count": 53
+     "count": 85
     }
    ],
    "works": [
@@ -6028,7 +6028,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "26"
+       "value": "30"
       },
       {
        "label": "首次",
@@ -6046,7 +6046,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-24"
      }
     },
     {
@@ -6083,6 +6083,44 @@
      ],
      "order": {
       "date": "2022-10-30"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+     "date": "2026年9月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "28"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-24"
      }
     },
     {

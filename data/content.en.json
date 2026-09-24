@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "175 repos",
+  "life": "176 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "175 public repositories",
+  "kicker": "176 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "175 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "176 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -119,10 +119,10 @@
     "heading": "Most written",
     "items": [
      "Almide（85）",
-     "TypeScript（31）",
+     "TypeScript（32）",
      "JavaScript（29）",
-     "Python（25）",
-     "Shell（25）"
+     "Shell（26）",
+     "Python（25）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "139 started",
-    "lead": "almide, porta, als, ccgrid and 135 more",
+    "title": "140 started",
+    "lead": "almide, porta, als, ccgrid and 136 more",
     "tags": [
      "Rust",
      "Python",
@@ -220,8 +220,8 @@
    },
    {
     "key": "Written in Almide",
-    "value": "39%",
-    "fill": 0.39
+    "value": "40%",
+    "fill": 0.4
    },
    {
     "key": "Commits in 2026",
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "175",
+    "value": "176",
     "label": "Repositories"
    },
    {
-    "value": "14,403",
+    "value": "14,802",
     "label": "Commits"
    },
    {
@@ -250,7 +250,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 69,
+    "count": 70,
     "color": "currentColor"
    },
    {
@@ -260,7 +260,7 @@
    },
    {
     "name": "Go",
-    "count": 15,
+    "count": 16,
     "color": "#00add8"
    },
    {
@@ -280,7 +280,7 @@
    },
    {
     "name": "HTML",
-    "count": 8,
+    "count": 7,
     "color": "#e34c26"
    },
    {
@@ -340,7 +340,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 111
+    "count": 112
    },
    {
     "name": "almide",
@@ -362,13 +362,13 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 11965,
+    "count": 12328,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 1981,
-    "of": 111
+    "count": 2017,
+    "of": 112
    },
    {
     "name": "almide-graphics",
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 14154
+    "count": 14553
    }
   ]
  },
@@ -421,11 +421,11 @@
      "label": "Repositories"
     },
     {
-     "value": "11,747",
+     "value": "12,090",
      "label": "Commits"
     },
     {
-     "value": "7",
+     "value": "6",
      "label": "Languages"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 11747
+     "count": 12090
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "9,463"
+       "value": "9,534"
       },
       {
        "label": "Started",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -629,19 +629,19 @@
      "title": "almide-dojo",
      "titleEn": "Daily measurement of how often LLM-written code survives modification in Almide, with a harness written in Almide.",
      "date": "Sep 2026",
-     "format": "HTML",
+     "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-dojo",
      "tags": [
-      "HTML",
       "Almide",
-      "Zig",
+      "HTML",
+      "Shell",
       "almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "258"
+       "value": "530"
       },
       {
        "label": "Started",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-24"
      }
     },
     {
@@ -1533,7 +1533,7 @@
      "label": "Repositories"
     },
     {
-     "value": "922",
+     "value": "946",
      "label": "Commits"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 906
+     "count": 930
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "228"
+       "value": "248"
       },
       {
        "label": "Started",
@@ -1899,7 +1899,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "59"
+       "value": "63"
       },
       {
        "label": "Started",
@@ -1917,7 +1917,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-24"
      }
     },
     {
@@ -5974,11 +5974,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "32",
+     "value": "33",
      "label": "Repositories"
     },
     {
-     "value": "206",
+     "value": "238",
      "label": "Commits"
     },
     {
@@ -6009,7 +6009,7 @@
     },
     {
      "name": "2026",
-     "count": 53
+     "count": 85
     }
    ],
    "works": [
@@ -6028,7 +6028,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "26"
+       "value": "30"
       },
       {
        "label": "Started",
@@ -6046,7 +6046,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-24"
      }
     },
     {
@@ -6083,6 +6083,44 @@
      ],
      "order": {
       "date": "2022-10-30"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+     "date": "Sep 2026",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "28"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-24"
      }
     },
     {
