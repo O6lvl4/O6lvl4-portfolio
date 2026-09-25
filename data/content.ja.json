@@ -216,7 +216,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "almide · 2026年9月"
+    "value": "archgopher · 2026年9月"
    },
    {
     "key": "Almide で書いた割合",
@@ -235,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "14,802",
+    "value": "14,951",
     "label": "コミット"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12328,
+    "count": 12363,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2017,
+    "count": 2128,
     "of": 112
    },
    {
@@ -382,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 54,
+    "count": 57,
     "of": 3
    }
   ],
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 14553
+    "count": 14702
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "12,090",
+     "value": "12,123",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12090
+     "count": 12123
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "9,534"
+       "value": "9,552"
       },
       {
        "label": "初回",
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,489"
+       "value": "1,491"
       },
       {
        "label": "初回",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "530"
+       "value": "543"
       },
       {
        "label": "初回",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -1533,7 +1533,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "946",
+     "value": "953",
      "label": "コミット"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 930
+     "count": 937
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "248"
+       "value": "250"
       },
       {
        "label": "初回",
@@ -1604,7 +1604,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -1899,7 +1899,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "63"
+       "value": "68"
       },
       {
        "label": "初回",
@@ -1917,7 +1917,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -2481,7 +2481,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "116",
+     "value": "119",
      "label": "コミット"
     },
     {
@@ -2500,20 +2500,59 @@
     },
     {
      "name": "2026",
-     "count": 89
+     "count": 92
     }
    ],
    "works": [
     {
-     "image": "plates/ja/almide/bonsai-almide.jpg",
+     "image": "plates/ja/almide-ai/almai.jpg",
      "readme": {
-      "lead": "Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ",
+      "lead": "Almide用のマルチプロバイダLLMクライアント。単一の窓口で各社に対応",
       "points": [
-       "Qwen3テンプレートとKVキャッシュ",
-       "温度・top-k・繰り返しペナルティ",
-       "248MBモデルをIndexedDBに保存"
+       "8種のプロバイダをprefixで切替",
+       "JSONモードとツール呼び出し",
+       "指数バックオフのcall_retry"
       ]
      },
+     "id": "almide-ai/almai",
+     "title": "almai",
+     "titleEn": "Almide用のマルチプロバイダLLMクライアント。単一の窓口で各社に対応",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "almide-ai",
+     "url": "https://github.com/almide-ai/almai",
+     "tags": [
+      "Almide",
+      "ai",
+      "almide",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "28"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版",
+       "value": "v0.3.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide-ai/almai"
+      }
+     ],
+     "order": {
+      "date": "2026-09-25"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/bonsai-almide",
      "title": "bonsai-almide",
      "titleEn": "Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ",
@@ -2620,41 +2659,6 @@
      ],
      "order": {
       "date": "2025-09-21"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-ai/almai",
-     "title": "almai",
-     "titleEn": "Almide用のマルチプロバイダLLMクライアント。単一の窓口で各社に対応",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "almide-ai",
-     "url": "https://github.com/almide-ai/almai",
-     "tags": [
-      "Almide",
-      "ai",
-      "almide",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "25"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide-ai/almai"
-      }
-     ],
-     "order": {
-      "date": "2026-09-23"
      }
     },
     {
@@ -5978,7 +5982,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "238",
+     "value": "344",
      "label": "コミット"
     },
     {
@@ -6009,7 +6013,7 @@
     },
     {
      "name": "2026",
-     "count": 85
+     "count": 191
     }
    ],
    "works": [
@@ -6028,7 +6032,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "30"
+       "value": "38"
       },
       {
        "label": "初回",
@@ -6046,7 +6050,45 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+     "date": "2026年9月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "126"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-26"
      }
     },
     {
@@ -6083,44 +6125,6 @@
      ],
      "order": {
       "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/archgopher",
-     "title": "archgopher",
-     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-     "date": "2026年9月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/archgopher",
-     "tags": [
-      "Go",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "28"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/archgopher"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/archgopher/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-24"
      }
     },
     {

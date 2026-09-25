@@ -216,7 +216,7 @@
    },
    {
     "key": "最近更新",
-    "value": "almide · 2026年9月"
+    "value": "archgopher · 2026年9月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -235,7 +235,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "14,802",
+    "value": "14,951",
     "label": "提交"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12328,
+    "count": 12363,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2017,
+    "count": 2128,
     "of": 112
    },
    {
@@ -382,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 54,
+    "count": 57,
     "of": 3
    }
   ],
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 14553
+    "count": 14702
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "12,090",
+     "value": "12,123",
      "label": "提交"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12090
+     "count": 12123
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "9,534"
+       "value": "9,552"
       },
       {
        "label": "首次",
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,489"
+       "value": "1,491"
       },
       {
        "label": "首次",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "530"
+       "value": "543"
       },
       {
        "label": "首次",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -1533,7 +1533,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "946",
+     "value": "953",
      "label": "提交"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 930
+     "count": 937
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "248"
+       "value": "250"
       },
       {
        "label": "首次",
@@ -1604,7 +1604,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -1899,7 +1899,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "63"
+       "value": "68"
       },
       {
        "label": "首次",
@@ -1917,7 +1917,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -2481,7 +2481,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "116",
+     "value": "119",
      "label": "提交"
     },
     {
@@ -2500,20 +2500,59 @@
     },
     {
      "name": "2026",
-     "count": 89
+     "count": 92
     }
    ],
    "works": [
     {
-     "image": "plates/zh/almide/bonsai-almide.jpg",
+     "image": "plates/zh/almide-ai/almai.jpg",
      "readme": {
-      "lead": "经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示",
+      "lead": "Almide的多提供商LLM客户端,统一接口",
       "points": [
-       "Qwen3聊天模板与KV缓存",
-       "温度、top-k、重复惩罚采样",
-       "248MB模型缓存于IndexedDB"
+       "按前缀切换8种提供商",
+       "JSON模式与工具调用",
+       "call_retry指数退避重试"
       ]
      },
+     "id": "almide-ai/almai",
+     "title": "almai",
+     "titleEn": "Almide的多提供商LLM客户端,统一接口",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "almide-ai",
+     "url": "https://github.com/almide-ai/almai",
+     "tags": [
+      "Almide",
+      "ai",
+      "almide",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "28"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.3.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-ai/almai"
+      }
+     ],
+     "order": {
+      "date": "2026-09-25"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/bonsai-almide",
      "title": "bonsai-almide",
      "titleEn": "经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示",
@@ -2620,41 +2659,6 @@
      ],
      "order": {
       "date": "2025-09-21"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-ai/almai",
-     "title": "almai",
-     "titleEn": "Almide的多提供商LLM客户端,统一接口",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "almide-ai",
-     "url": "https://github.com/almide-ai/almai",
-     "tags": [
-      "Almide",
-      "ai",
-      "almide",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "25"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide-ai/almai"
-      }
-     ],
-     "order": {
-      "date": "2026-09-23"
      }
     },
     {
@@ -5978,7 +5982,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "238",
+     "value": "344",
      "label": "提交"
     },
     {
@@ -6009,7 +6013,7 @@
     },
     {
      "name": "2026",
-     "count": 85
+     "count": 191
     }
    ],
    "works": [
@@ -6028,7 +6032,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "30"
+       "value": "38"
       },
       {
        "label": "首次",
@@ -6046,7 +6050,45 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+     "date": "2026年9月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "126"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-26"
      }
     },
     {
@@ -6083,44 +6125,6 @@
      ],
      "order": {
       "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/archgopher",
-     "title": "archgopher",
-     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-     "date": "2026年9月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/archgopher",
-     "tags": [
-      "Go",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "28"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/archgopher"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/archgopher/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-24"
      }
     },
     {

@@ -427,12 +427,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 63,
+  "commits": 68,
   "years": {
-   "2026": 63
+   "2026": 68
   },
   "first": "2026-09-08",
-  "last": "2026-09-24",
+  "last": "2026-09-25",
   "tag": "v0.2.0",
   "license": "NOASSERTION",
   "topics": [],
@@ -442,7 +442,7 @@
    "lang": "sh",
    "code": "almide build\n./golemide observe --root ../project"
   },
-  "score": 10.3
+  "score": 10.4
  },
  {
   "full": "O6lvl4/hew",
@@ -528,12 +528,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 30,
+  "commits": 38,
   "years": {
-   "2026": 30
+   "2026": 38
   },
   "first": "2026-09-12",
-  "last": "2026-09-24",
+  "last": "2026-09-25",
   "tag": "v0.4.0",
   "license": "NOASSERTION",
   "topics": [],
@@ -543,7 +543,7 @@
    "lang": "sh",
    "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
   },
-  "score": 9.6
+  "score": 9.8
  },
  {
   "full": "O6lvl4/gramide-javascript",
@@ -755,6 +755,36 @@
    "code": "GitHub Issues ──┐\nHackerNews ─────┤                  ┌──────────┐    ┌──────────┐    ┌────────┐\nGHSA ───────────┼─→ Pre-filter ──→ │ LLM      │──→ │ Scorer   │──→ │ Notify │\nOSV.dev ────────┘   (96% reject)   │ Analysis │    │ (vs deps)│    │        │\n                                   └──────────┘    └──────────┘    └────────┘"
   },
   "score": 8.1
+ },
+ {
+  "full": "O6lvl4/archgopher",
+  "owner": "O6lvl4",
+  "name": "archgopher",
+  "url": "https://github.com/O6lvl4/archgopher",
+  "site": "https://o6lvl4.github.io/archgopher/",
+  "lead": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+  "language": "Go",
+  "languages": [
+   "Go",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 126,
+  "years": {
+   "2026": 126
+  },
+  "first": "2026-09-24",
+  "last": "2026-09-26",
+  "license": "Apache-2.0",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher scout app.scouter.yaml           # read it (--json for machines)"
+  },
+  "score": 7.5
  },
  {
   "full": "O6lvl4/gv",
@@ -1289,37 +1319,6 @@
    "code": "[ctxgate] cargo test output: 403 lines / 12 KB → vaulted as ctx:9258de38065e (NOT in context).\n  full text: ctxgate show 9258de38065e [--grep RE | --around RE N | --lines A-B | --tail N]\ncargo test: FAILED — 238 passed, 3 failed, 0 ignored\nfailed:\n  parser::match_nested\n  wasm::rc_release\n── parser::match_nested ──\n  thread 'parser::match_nested' panicked at src/parser.rs:412:9:\n  assertion `left == right` failed"
   },
   "score": 5.7
- },
- {
-  "full": "O6lvl4/archgopher",
-  "owner": "O6lvl4",
-  "name": "archgopher",
-  "url": "https://github.com/O6lvl4/archgopher",
-  "site": "https://o6lvl4.github.io/archgopher/",
-  "lead": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-  "heading": "1. Build a declaration from Terraform. No terraform init, plan or credentials.",
-  "language": "Go",
-  "languages": [
-   "Go",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 28,
-  "years": {
-   "2026": 28
-  },
-  "first": "2026-09-24",
-  "last": "2026-09-24",
-  "license": "Apache-2.0",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
-  "plate": "og",
-  "sample": {
-   "lang": "sh",
-   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\n# 1. Build a declaration from Terraform. No terraform init, plan or credentials.\narchgopher tf ./infra -o app.scouter.yaml\n\n# 2. Fill in what Terraform cannot know: the load at the entry and the\n#    assumptions left as null (duration per call, item size, ...).\n$EDITOR app.scouter.yaml\n\n# 3. Read it.\narchgopher scout app.scouter.yaml          # Markdown tables\narchgopher scout app.scouter.yaml --json   # machine-readable\n\n# 4. After Terraform changes, fold them in. Your assumptions, load, notes and\n#    edges stay; only types and attributes follow Terraform.\narchgopher tf ./infra --merge app.scouter.yaml -o app.scouter.yaml"
-  },
-  "score": 5.6
  },
  {
   "full": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
@@ -3180,9 +3179,9 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 9534,
+  "commits": 9552,
   "years": {
-   "2026": 9534
+   "2026": 9552
   },
   "first": "2026-03-07",
   "last": "2026-09-25",
@@ -3217,12 +3216,12 @@
    "Almide"
   ],
   "stars": 3,
-  "commits": 248,
+  "commits": 250,
   "years": {
-   "2026": 248
+   "2026": 250
   },
   "first": "2026-04-07",
-  "last": "2026-09-24",
+  "last": "2026-09-25",
   "tag": "v0.6.1",
   "license": "Apache-2.0",
   "topics": [
@@ -3258,12 +3257,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1489,
+  "commits": 1491,
   "years": {
-   "2026": 1489
+   "2026": 1491
   },
   "first": "2026-03-07",
-  "last": "2026-09-24",
+  "last": "2026-09-25",
   "tag": "v1.0.0",
   "license": "NOASSERTION",
   "topics": [
@@ -3326,12 +3325,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 530,
+  "commits": 543,
   "years": {
-   "2026": 530
+   "2026": 543
   },
   "first": "2026-04-12",
-  "last": "2026-09-24",
+  "last": "2026-09-25",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4274,6 +4273,40 @@
   "score": 3.1
  },
  {
+  "full": "almide-ai/almai",
+  "owner": "almide-ai",
+  "name": "almai",
+  "url": "https://github.com/almide-ai/almai",
+  "lead": "Multi-provider LLM client for Almide — one interface, every provider",
+  "heading": "almai",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 28,
+  "years": {
+   "2026": 28
+  },
+  "first": "2026-04-12",
+  "last": "2026-09-25",
+  "tag": "v0.3.1",
+  "topics": [
+   "ai",
+   "almide",
+   "anthropic",
+   "llm",
+   "openai",
+   "openrouter"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "# almide.toml\n[dependencies]\nalmai = { git = \"https://github.com/almide-ai/almai\", tag = \"v0.3.1\" }"
+  },
+  "score": 9.6
+ },
+ {
   "full": "almide-ai/homullus",
   "owner": "almide-ai",
   "name": "homullus",
@@ -4299,39 +4332,6 @@
    "code": "# Pick any tool-calling provider (groq is free-tier, OpenAI-compatible)\nexport GROQ_API_KEY=gsk_...\nMODEL=groq/llama-3.3-70b-versatile almide run src/main.almd"
   },
   "score": 7.6
- },
- {
-  "full": "almide-ai/almai",
-  "owner": "almide-ai",
-  "name": "almai",
-  "url": "https://github.com/almide-ai/almai",
-  "lead": "Multi-provider LLM client for Almide — one interface, every provider",
-  "heading": "almai",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 25,
-  "years": {
-   "2026": 25
-  },
-  "first": "2026-04-12",
-  "last": "2026-09-23",
-  "topics": [
-   "ai",
-   "almide",
-   "anthropic",
-   "llm",
-   "openai",
-   "openrouter"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "# almide.toml\n[dependencies]\nalmai = { git = \"https://github.com/almide/almai.git\" }"
-  },
-  "score": 5.5
  },
  {
   "full": "almide-ai/manus",

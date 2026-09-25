@@ -216,7 +216,7 @@
    },
    {
     "key": "Last touched",
-    "value": "almide · Sep 2026"
+    "value": "archgopher · Sep 2026"
    },
    {
     "key": "Written in Almide",
@@ -235,7 +235,7 @@
     "label": "Repositories"
    },
    {
-    "value": "14,802",
+    "value": "14,951",
     "label": "Commits"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12328,
+    "count": 12363,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2017,
+    "count": 2128,
     "of": 112
    },
    {
@@ -382,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 54,
+    "count": 57,
     "of": 3
    }
   ],
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 14553
+    "count": 14702
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "12,090",
+     "value": "12,123",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12090
+     "count": 12123
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "9,534"
+       "value": "9,552"
       },
       {
        "label": "Started",
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,489"
+       "value": "1,491"
       },
       {
        "label": "Started",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "530"
+       "value": "543"
       },
       {
        "label": "Started",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -1533,7 +1533,7 @@
      "label": "Repositories"
     },
     {
-     "value": "946",
+     "value": "953",
      "label": "Commits"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 930
+     "count": 937
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "248"
+       "value": "250"
       },
       {
        "label": "Started",
@@ -1604,7 +1604,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -1899,7 +1899,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "63"
+       "value": "68"
       },
       {
        "label": "Started",
@@ -1917,7 +1917,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
      }
     },
     {
@@ -2481,7 +2481,7 @@
      "label": "Repositories"
     },
     {
-     "value": "116",
+     "value": "119",
      "label": "Commits"
     },
     {
@@ -2500,20 +2500,59 @@
     },
     {
      "name": "2026",
-     "count": 89
+     "count": 92
     }
    ],
    "works": [
     {
-     "image": "plates/en/almide/bonsai-almide.jpg",
+     "image": "plates/en/almide-ai/almai.jpg",
      "readme": {
-      "lead": "Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language",
+      "lead": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
       "points": [
-       "Qwen3 chat template with KV cache streaming",
-       "Sampling: temperature, top-k, repetition penalty",
-       "32 KB WASM; 248 MB model cached in IndexedDB"
+       "Anthropic, OpenAI, Gemini, Azure, Cloudflare, CLI",
+       "JSON mode and tool calling",
+       "call_retry with exponential backoff"
       ]
      },
+     "id": "almide-ai/almai",
+     "title": "almai",
+     "titleEn": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
+     "date": "Sep 2026",
+     "format": "Almide",
+     "credit": "almide-ai",
+     "url": "https://github.com/almide-ai/almai",
+     "tags": [
+      "Almide",
+      "ai",
+      "almide",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "28"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.3.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide-ai/almai"
+      }
+     ],
+     "order": {
+      "date": "2026-09-25"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/bonsai-almide",
      "title": "bonsai-almide",
      "titleEn": "Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language",
@@ -2620,41 +2659,6 @@
      ],
      "order": {
       "date": "2025-09-21"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-ai/almai",
-     "title": "almai",
-     "titleEn": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "almide-ai",
-     "url": "https://github.com/almide-ai/almai",
-     "tags": [
-      "Almide",
-      "ai",
-      "almide",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "25"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide-ai/almai"
-      }
-     ],
-     "order": {
-      "date": "2026-09-23"
      }
     },
     {
@@ -5978,7 +5982,7 @@
      "label": "Repositories"
     },
     {
-     "value": "238",
+     "value": "344",
      "label": "Commits"
     },
     {
@@ -6009,7 +6013,7 @@
     },
     {
      "name": "2026",
-     "count": 85
+     "count": 191
     }
    ],
    "works": [
@@ -6028,7 +6032,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "30"
+       "value": "38"
       },
       {
        "label": "Started",
@@ -6046,7 +6050,45 @@
       }
      ],
      "order": {
-      "date": "2026-09-24"
+      "date": "2026-09-25"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+     "date": "Sep 2026",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "126"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-26"
      }
     },
     {
@@ -6083,44 +6125,6 @@
      ],
      "order": {
       "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/archgopher",
-     "title": "archgopher",
-     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-     "date": "Sep 2026",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/archgopher",
-     "tags": [
-      "Go",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "28"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/archgopher"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/archgopher/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-24"
      }
     },
     {
