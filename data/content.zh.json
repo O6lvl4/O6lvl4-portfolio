@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "176 repos",
+  "life": "177 repos",
   "avatar": "assets/avatar.png",
   "role": "从语言开始，构建开发工具。",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公开仓库 176 个",
+  "kicker": "公开仓库 177 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 176 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
+  "note": "这一页并列了 177 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
   "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
@@ -118,11 +118,11 @@
    {
     "heading": "常写的语言",
     "items": [
-     "Almide（85）",
+     "Almide（87）",
      "TypeScript（32）",
      "JavaScript（29）",
-     "Shell（26）",
-     "Python（25）"
+     "Python（26）",
+     "Shell（26）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "开始了 140 个",
-    "lead": "almide、porta、als、ccgrid 等 136 个",
+    "title": "开始了 141 个",
+    "lead": "almide、porta、als、ccgrid 等 137 个",
     "tags": [
      "Rust",
      "Python",
@@ -216,7 +216,7 @@
    },
    {
     "key": "最近更新",
-    "value": "archgopher · 2026年9月"
+    "value": "almide · 2026年9月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "176",
+    "value": "177",
     "label": "公开仓库"
    },
    {
-    "value": "14,951",
+    "value": "15,134",
     "label": "提交"
    },
    {
@@ -250,7 +250,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 70,
+    "count": 71,
     "color": "currentColor"
    },
    {
@@ -340,7 +340,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 112
+    "count": 113
    },
    {
     "name": "almide",
@@ -362,13 +362,13 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12363,
+    "count": 12505,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2128,
-    "of": 112
+    "count": 2165,
+    "of": 113
    },
    {
     "name": "almide-graphics",
@@ -382,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 57,
+    "count": 61,
     "of": 3
    }
   ],
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 14702
+    "count": 14885
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "12,123",
+     "value": "12,259",
      "label": "提交"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12123
+     "count": 12259
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "9,552"
+       "value": "9,670"
       },
       {
        "label": "首次",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-25"
+      "date": "2026-09-27"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,491"
+       "value": "1,499"
       },
       {
        "label": "首次",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-25"
+      "date": "2026-09-26"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "543"
+       "value": "551"
       },
       {
        "label": "首次",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-25"
+      "date": "2026-09-26"
      }
     },
     {
@@ -758,7 +758,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "23"
+       "value": "25"
       },
       {
        "label": "首次",
@@ -766,7 +766,7 @@
       },
       {
        "label": "版本",
-       "value": "v0.2.0"
+       "value": "v0.3.1"
       }
      ],
      "links": [
@@ -776,7 +776,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-09-26"
      }
     },
     {
@@ -1533,7 +1533,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "953",
+     "value": "965",
      "label": "提交"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 937
+     "count": 949
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "250"
+       "value": "256"
       },
       {
        "label": "首次",
@@ -1604,7 +1604,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-25"
+      "date": "2026-09-26"
      }
     },
     {
@@ -1899,7 +1899,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "68"
+       "value": "71"
       },
       {
        "label": "首次",
@@ -1907,7 +1907,7 @@
       },
       {
        "label": "版本",
-       "value": "v0.2.0"
+       "value": "v0.2.1"
       }
      ],
      "links": [
@@ -1917,7 +1917,54 @@
       }
      ],
      "order": {
-      "date": "2026-09-25"
+      "date": "2026-09-26"
+     }
+    },
+    {
+     "image": "plates/shared/O6lvl4/codopsy.jpg",
+     "readme": {
+      "lead": "用同一把尺子，为35种语言的代码打分",
+      "points": [
+       "182条规则与复杂度，汇总成A到F的评分",
+       "从不执行代码：单一二进制，无需编译器或语言服务器",
+       "只看差异，质量一下降就让CI失败"
+      ]
+     },
+     "id": "O6lvl4/codopsy",
+     "title": "codopsy",
+     "titleEn": "用同一把尺子，为35种语言的代码打分",
+     "date": "2026年9月",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/codopsy",
+     "tags": [
+      "Rust",
+      "Almide",
+      "Lean",
+      "cli"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "50"
+      },
+      {
+       "label": "首次",
+       "value": "2026年3月"
+      },
+      {
+       "label": "版本",
+       "value": "v2.3.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/codopsy"
+      }
+     ],
+     "order": {
+      "date": "2026-09-26"
      }
     },
     {
@@ -1964,53 +2011,6 @@
      ],
      "order": {
       "date": "2026-09-21"
-     }
-    },
-    {
-     "image": "plates/shared/O6lvl4/codopsy.jpg",
-     "readme": {
-      "lead": "用同一把尺子，为35种语言的代码打分",
-      "points": [
-       "182条规则与复杂度，汇总成A到F的评分",
-       "从不执行代码：单一二进制，无需编译器或语言服务器",
-       "只看差异，质量一下降就让CI失败"
-      ]
-     },
-     "id": "O6lvl4/codopsy",
-     "title": "codopsy",
-     "titleEn": "用同一把尺子，为35种语言的代码打分",
-     "date": "2026年8月",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/codopsy",
-     "tags": [
-      "Rust",
-      "Lean",
-      "Java",
-      "cli"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "47"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      },
-      {
-       "label": "版本",
-       "value": "v2.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/codopsy"
-      }
-     ],
-     "order": {
-      "date": "2026-08-30"
      }
     },
     {
@@ -2481,7 +2481,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "119",
+     "value": "123",
      "label": "提交"
     },
     {
@@ -2500,7 +2500,7 @@
     },
     {
      "name": "2026",
-     "count": 92
+     "count": 96
     }
    ],
    "works": [
@@ -2530,7 +2530,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "28"
+       "value": "32"
       },
       {
        "label": "首次",
@@ -2538,7 +2538,7 @@
       },
       {
        "label": "版本",
-       "value": "v0.3.1"
+       "value": "v0.4.2"
       }
      ],
      "links": [
@@ -2548,7 +2548,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-25"
+      "date": "2026-09-26"
      }
     },
     {
@@ -3626,45 +3626,6 @@
     },
     {
      "image": "",
-     "id": "almide-graphics/nn",
-     "title": "nn",
-     "titleEn": "基于matrix标准库的Almide Transformer与信号处理库",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/nn",
-     "tags": [
-      "Almide",
-      "Python",
-      "Rust",
-      "almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "74"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide-graphics/nn"
-      }
-     ],
-     "order": {
-      "date": "2026-06-28"
-     }
-    },
-    {
-     "image": "",
      "id": "almide-graphics/obsid",
      "title": "obsid",
      "titleEn": "面向Almide的图形运行时，通过WASM支持2D、WebGL与3D",
@@ -3704,6 +3665,45 @@
      ],
      "order": {
       "date": "2026-07-25"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/nn",
+     "title": "nn",
+     "titleEn": "基于matrix标准库的Almide Transformer与信号处理库",
+     "date": "2026年6月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/nn",
+     "tags": [
+      "Almide",
+      "Python",
+      "Rust",
+      "almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "74"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-graphics/nn"
+      }
+     ],
+     "order": {
+      "date": "2026-06-28"
      }
     },
     {
@@ -3927,7 +3927,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "186",
+     "value": "187",
      "label": "提交"
     },
     {
@@ -3942,7 +3942,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 186
+     "count": 187
     }
    ],
    "works": [
@@ -4109,7 +4109,7 @@
      "id": "O6lvl4/homebrew-tap",
      "title": "homebrew-tap",
      "titleEn": "@O6lvl4 的 Homebrew formula 仓库",
-     "date": "2026年8月",
+     "date": "2026年9月",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/homebrew-tap",
@@ -4122,7 +4122,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "56"
+       "value": "57"
       },
       {
        "label": "首次",
@@ -4136,7 +4136,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-08"
+      "date": "2026-09-26"
      }
     }
    ]
@@ -5978,11 +5978,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "33",
+     "value": "34",
      "label": "公开仓库"
     },
     {
-     "value": "344",
+     "value": "374",
      "label": "提交"
     },
     {
@@ -6013,7 +6013,7 @@
     },
     {
      "name": "2026",
-     "count": 191
+     "count": 221
     }
    ],
    "works": [
@@ -6032,7 +6032,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "38"
+       "value": "41"
       },
       {
        "label": "首次",
@@ -6040,7 +6040,7 @@
       },
       {
        "label": "版本",
-       "value": "v0.4.0"
+       "value": "v0.4.1"
       }
      ],
      "links": [
@@ -6050,7 +6050,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-25"
+      "date": "2026-09-26"
      }
     },
     {
@@ -6070,7 +6070,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "126"
+       "value": "141"
       },
       {
        "label": "首次",
@@ -6190,6 +6190,40 @@
      ],
      "order": {
       "date": "2026-07-31"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/ogumatic-module-design",
+     "title": "ogumatic-module-design",
+     "titleEn": "モジュールを役割の段で切り、正を札・証拠・資料に置き、コードを生成物として扱う設計術",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/ogumatic-module-design",
+     "tags": [
+      "Almide",
+      "Go",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "12"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/ogumatic-module-design"
+      }
+     ],
+     "order": {
+      "date": "2026-09-26"
      }
     },
     {
