@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "177 repos",
+  "life": "178 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "177 public repositories",
+  "kicker": "178 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "177 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "178 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -118,11 +118,11 @@
    {
     "heading": "Most written",
     "items": [
-     "Almide（87）",
+     "Almide（88）",
      "TypeScript（32）",
      "JavaScript（29）",
-     "Python（26）",
-     "Shell（26）"
+     "Python（27）",
+     "Shell（27）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "141 started",
-    "lead": "almide, porta, als, ccgrid and 137 more",
+    "title": "142 started",
+    "lead": "almide, porta, als, ccgrid and 138 more",
     "tags": [
      "Rust",
      "Python",
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "177",
+    "value": "178",
     "label": "Repositories"
    },
    {
-    "value": "15,134",
+    "value": "15,321",
     "label": "Commits"
    },
    {
@@ -250,7 +250,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 71,
+    "count": 72,
     "color": "currentColor"
    },
    {
@@ -340,7 +340,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 113
+    "count": 114
    },
    {
     "name": "almide",
@@ -362,13 +362,13 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12505,
+    "count": 12678,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2165,
-    "of": 113
+    "count": 2177,
+    "of": 114
    },
    {
     "name": "almide-graphics",
@@ -382,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 61,
+    "count": 63,
     "of": 3
    }
   ],
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 14885
+    "count": 15072
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "12,259",
+     "value": "12,426",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12259
+     "count": 12426
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "9,670"
+       "value": "9,828"
       },
       {
        "label": "Started",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-27"
+      "date": "2026-09-28"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,499"
+       "value": "1,504"
       },
       {
        "label": "Started",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-28"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "551"
+       "value": "553"
       },
       {
        "label": "Started",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-28"
      }
     },
     {
@@ -836,7 +836,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "157"
+       "value": "159"
       },
       {
        "label": "Started",
@@ -854,7 +854,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-27"
      }
     },
     {
@@ -1533,7 +1533,7 @@
      "label": "Repositories"
     },
     {
-     "value": "965",
+     "value": "972",
      "label": "Commits"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 949
+     "count": 956
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "256"
+       "value": "262"
       },
       {
        "label": "Started",
@@ -1604,7 +1604,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -1899,7 +1899,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "71"
+       "value": "72"
       },
       {
        "label": "Started",
@@ -1907,7 +1907,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.2.1"
+       "value": "v0.3.0"
       }
      ],
      "links": [
@@ -1917,7 +1917,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -2481,7 +2481,7 @@
      "label": "Repositories"
     },
     {
-     "value": "123",
+     "value": "125",
      "label": "Commits"
     },
     {
@@ -2500,7 +2500,7 @@
     },
     {
      "name": "2026",
-     "count": 96
+     "count": 98
     }
    ],
    "works": [
@@ -2530,7 +2530,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "32"
+       "value": "34"
       },
       {
        "label": "Started",
@@ -2538,7 +2538,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.4.2"
+       "value": "v0.5.0"
       }
      ],
      "links": [
@@ -2548,7 +2548,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -5083,41 +5083,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/ytscribe",
-     "title": "ytscribe",
-     "titleEn": "A CLI that transcribes YouTube URLs: subtitles first, local Whisper fallback, optional LLM cleanup",
-     "date": "Jun 2026",
-     "format": "Python",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/ytscribe",
-     "tags": [
-      "Python",
-      "cli",
-      "python",
-      "subtitles"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/ytscribe"
-      }
-     ],
-     "order": {
-      "date": "2026-06-29"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/pagina",
      "title": "pagina",
      "titleEn": "Rust engine that converts HTML with CSS Paged Media into PDF, built on Servo components",
@@ -5502,6 +5467,41 @@
      ],
      "order": {
       "date": "2026-05-12"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/ytscribe",
+     "title": "ytscribe",
+     "titleEn": "A CLI that transcribes YouTube URLs: subtitles first, local Whisper fallback, optional LLM cleanup",
+     "date": "Jun 2026",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/ytscribe",
+     "tags": [
+      "Python",
+      "cli",
+      "python",
+      "subtitles"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/ytscribe"
+      }
+     ],
+     "order": {
+      "date": "2026-06-29"
      }
     },
     {
@@ -5978,11 +5978,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "34",
+     "value": "35",
      "label": "Repositories"
     },
     {
-     "value": "374",
+     "value": "385",
      "label": "Commits"
     },
     {
@@ -6013,7 +6013,7 @@
     },
     {
      "name": "2026",
-     "count": 221
+     "count": 232
     }
    ],
    "works": [
@@ -6027,12 +6027,14 @@
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/comide",
      "tags": [
-      "Almide"
+      "Almide",
+      "Python",
+      "Shell"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "41"
+       "value": "44"
       },
       {
        "label": "Started",
@@ -6040,7 +6042,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.4.1"
+       "value": "v0.5.0"
       }
      ],
      "links": [
@@ -6050,7 +6052,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -6070,7 +6072,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "141"
+       "value": "146"
       },
       {
        "label": "Started",
@@ -6088,7 +6090,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -6258,6 +6260,38 @@
      ],
      "order": {
       "date": "2026-07-31"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/onogoro",
+     "title": "onogoro",
+     "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
+     "date": "Sep 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onogoro",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/onogoro"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {

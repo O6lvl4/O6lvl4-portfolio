@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "177 repos",
+  "life": "178 repos",
   "avatar": "assets/avatar.png",
   "role": "開発の道具を、言語からつくる。",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公開リポジトリ 177 件",
+  "kicker": "公開リポジトリ 178 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
-  "note": "公開リポジトリ 177 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
+  "note": "公開リポジトリ 178 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
   "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。"
  },
  "landing": {
@@ -118,11 +118,11 @@
    {
     "heading": "よく書く言語",
     "items": [
-     "Almide（87）",
+     "Almide（88）",
      "TypeScript（32）",
      "JavaScript（29）",
-     "Python（26）",
-     "Shell（26）"
+     "Python（27）",
+     "Shell（27）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "141件を始めた",
-    "lead": "almide、porta、als、ccgrid ほか137件",
+    "title": "142件を始めた",
+    "lead": "almide、porta、als、ccgrid ほか138件",
     "tags": [
      "Rust",
      "Python",
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "177",
+    "value": "178",
     "label": "公開リポジトリ"
    },
    {
-    "value": "15,134",
+    "value": "15,321",
     "label": "コミット"
    },
    {
@@ -250,7 +250,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 71,
+    "count": 72,
     "color": "currentColor"
    },
    {
@@ -340,7 +340,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 113
+    "count": 114
    },
    {
     "name": "almide",
@@ -362,13 +362,13 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12505,
+    "count": 12678,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2165,
-    "of": 113
+    "count": 2177,
+    "of": 114
    },
    {
     "name": "almide-graphics",
@@ -382,7 +382,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 61,
+    "count": 63,
     "of": 3
    }
   ],
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 14885
+    "count": 15072
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "12,259",
+     "value": "12,426",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12259
+     "count": 12426
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "9,670"
+       "value": "9,828"
       },
       {
        "label": "初回",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-27"
+      "date": "2026-09-28"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,499"
+       "value": "1,504"
       },
       {
        "label": "初回",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-28"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "551"
+       "value": "553"
       },
       {
        "label": "初回",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-28"
      }
     },
     {
@@ -836,7 +836,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "157"
+       "value": "159"
       },
       {
        "label": "初回",
@@ -854,7 +854,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-23"
+      "date": "2026-09-27"
      }
     },
     {
@@ -1533,7 +1533,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "965",
+     "value": "972",
      "label": "コミット"
     },
     {
@@ -1552,7 +1552,7 @@
     },
     {
      "name": "2026",
-     "count": 949
+     "count": 956
     }
    ],
    "works": [
@@ -1582,7 +1582,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "256"
+       "value": "262"
       },
       {
        "label": "初回",
@@ -1604,7 +1604,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -1899,7 +1899,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "71"
+       "value": "72"
       },
       {
        "label": "初回",
@@ -1907,7 +1907,7 @@
       },
       {
        "label": "版",
-       "value": "v0.2.1"
+       "value": "v0.3.0"
       }
      ],
      "links": [
@@ -1917,7 +1917,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -2481,7 +2481,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "123",
+     "value": "125",
      "label": "コミット"
     },
     {
@@ -2500,7 +2500,7 @@
     },
     {
      "name": "2026",
-     "count": 96
+     "count": 98
     }
    ],
    "works": [
@@ -2530,7 +2530,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "32"
+       "value": "34"
       },
       {
        "label": "初回",
@@ -2538,7 +2538,7 @@
       },
       {
        "label": "版",
-       "value": "v0.4.2"
+       "value": "v0.5.0"
       }
      ],
      "links": [
@@ -2548,7 +2548,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -5083,41 +5083,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/ytscribe",
-     "title": "ytscribe",
-     "titleEn": "YouTube URLから字幕優先・Whisper代替で文字起こしするCLI",
-     "date": "2026年6月",
-     "format": "Python",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/ytscribe",
-     "tags": [
-      "Python",
-      "cli",
-      "python",
-      "subtitles"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/ytscribe"
-      }
-     ],
-     "order": {
-      "date": "2026-06-29"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/pagina",
      "title": "pagina",
      "titleEn": "HTMLとCSS Paged MediaをPDFに変換するRust製エンジン",
@@ -5502,6 +5467,41 @@
      ],
      "order": {
       "date": "2026-05-12"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/ytscribe",
+     "title": "ytscribe",
+     "titleEn": "YouTube URLから字幕優先・Whisper代替で文字起こしするCLI",
+     "date": "2026年6月",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/ytscribe",
+     "tags": [
+      "Python",
+      "cli",
+      "python",
+      "subtitles"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "2"
+      },
+      {
+       "label": "初回",
+       "value": "2026年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/ytscribe"
+      }
+     ],
+     "order": {
+      "date": "2026-06-29"
      }
     },
     {
@@ -5978,11 +5978,11 @@
    "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
-     "value": "34",
+     "value": "35",
      "label": "公開リポジトリ"
     },
     {
-     "value": "374",
+     "value": "385",
      "label": "コミット"
     },
     {
@@ -6013,7 +6013,7 @@
     },
     {
      "name": "2026",
-     "count": 221
+     "count": 232
     }
    ],
    "works": [
@@ -6027,12 +6027,14 @@
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/comide",
      "tags": [
-      "Almide"
+      "Almide",
+      "Python",
+      "Shell"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "41"
+       "value": "44"
       },
       {
        "label": "初回",
@@ -6040,7 +6042,7 @@
       },
       {
        "label": "版",
-       "value": "v0.4.1"
+       "value": "v0.5.0"
       }
      ],
      "links": [
@@ -6050,7 +6052,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -6070,7 +6072,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "141"
+       "value": "146"
       },
       {
        "label": "初回",
@@ -6088,7 +6090,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-09-27"
      }
     },
     {
@@ -6258,6 +6260,38 @@
      ],
      "order": {
       "date": "2026-07-31"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/onogoro",
+     "title": "onogoro",
+     "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onogoro",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "3"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/onogoro"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {

@@ -427,13 +427,13 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 71,
+  "commits": 72,
   "years": {
-   "2026": 71
+   "2026": 72
   },
   "first": "2026-09-08",
-  "last": "2026-09-26",
-  "tag": "v0.2.1",
+  "last": "2026-09-27",
+  "tag": "v0.3.0",
   "license": "NOASSERTION",
   "topics": [],
   "og": "https://repository-images.githubusercontent.com/1362136465/a64fdb12-9b66-4c14-a97d-af37d81ef089",
@@ -525,16 +525,18 @@
   "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
   "language": "Almide",
   "languages": [
-   "Almide"
+   "Almide",
+   "Python",
+   "Shell"
   ],
   "stars": 0,
-  "commits": 41,
+  "commits": 44,
   "years": {
-   "2026": 41
+   "2026": 44
   },
   "first": "2026-09-12",
-  "last": "2026-09-26",
-  "tag": "v0.4.1",
+  "last": "2026-09-27",
+  "tag": "v0.5.0",
   "license": "NOASSERTION",
   "topics": [],
   "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
@@ -543,7 +545,7 @@
    "lang": "sh",
    "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
   },
-  "score": 9.8
+  "score": 9.9
  },
  {
   "full": "O6lvl4/gramide-javascript",
@@ -770,12 +772,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 141,
+  "commits": 146,
   "years": {
-   "2026": 141
+   "2026": 146
   },
   "first": "2026-09-24",
-  "last": "2026-09-26",
+  "last": "2026-09-27",
   "license": "Apache-2.0",
   "topics": [],
   "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
@@ -784,7 +786,7 @@
    "lang": "sh",
    "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher scout app.scouter.yaml           # read it (--json for machines)"
   },
-  "score": 7.8
+  "score": 7.9
  },
  {
   "full": "O6lvl4/gv",
@@ -1623,6 +1625,32 @@
   "score": 5.1
  },
  {
+  "full": "O6lvl4/onogoro",
+  "owner": "O6lvl4",
+  "name": "onogoro",
+  "url": "https://github.com/O6lvl4/onogoro",
+  "lead": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 3,
+  "years": {
+   "2026": 3
+  },
+  "first": "2026-09-27",
+  "last": "2026-09-27",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "onogoro                       # comide's conversation, every tool's command confined\nonogoro -p \"fix the tests\"    # one request; any of comide's arguments work"
+  },
+  "score": 5.1
+ },
+ {
   "full": "O6lvl4/almide-audio-poc",
   "owner": "O6lvl4",
   "name": "almide-audio-poc",
@@ -1683,41 +1711,6 @@
   "sample": {
    "lang": "bash",
    "code": "hugo server                      # http://localhost:1313/hokusai-portfolio/\nhugo --minify --gc               # into public/"
-  },
-  "score": 5
- },
- {
-  "full": "O6lvl4/ytscribe",
-  "owner": "O6lvl4",
-  "name": "ytscribe",
-  "url": "https://github.com/O6lvl4/ytscribe",
-  "lead": "Transcribe any YouTube URL — subtitles first, Whisper fallback, optional LLM cleanup",
-  "heading": "ytscribe",
-  "language": "Python",
-  "languages": [
-   "Python"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-06-29",
-  "last": "2026-06-29",
-  "license": "MIT",
-  "topics": [
-   "cli",
-   "python",
-   "subtitles",
-   "transcription",
-   "whisper",
-   "youtube",
-   "yt-dlp"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "# as a uv tool (recommended)\nuv tool install git+https://github.com/O6lvl4/ytscribe\n\n# or with pipx\npipx install git+https://github.com/O6lvl4/ytscribe\n\n# or just grab the single module and run it\ncurl -fsSL https://raw.githubusercontent.com/O6lvl4/ytscribe/main/ytscribe/__init__.py -o ~/.local/bin/ytscribe\nchmod +x ~/.local/bin/ytscribe"
   },
   "score": 5
  },
@@ -2413,6 +2406,41 @@
   "last": "2026-05-12",
   "topics": [],
   "plate": "code",
+  "score": 3
+ },
+ {
+  "full": "O6lvl4/ytscribe",
+  "owner": "O6lvl4",
+  "name": "ytscribe",
+  "url": "https://github.com/O6lvl4/ytscribe",
+  "lead": "Transcribe any YouTube URL — subtitles first, Whisper fallback, optional LLM cleanup",
+  "heading": "ytscribe",
+  "language": "Python",
+  "languages": [
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-06-29",
+  "last": "2026-06-29",
+  "license": "MIT",
+  "topics": [
+   "cli",
+   "python",
+   "subtitles",
+   "transcription",
+   "whisper",
+   "youtube",
+   "yt-dlp"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "# as a uv tool (recommended)\nuv tool install git+https://github.com/O6lvl4/ytscribe\n\n# or with pipx\npipx install git+https://github.com/O6lvl4/ytscribe\n\n# or just grab the single module and run it\ncurl -fsSL https://raw.githubusercontent.com/O6lvl4/ytscribe/main/ytscribe/__init__.py -o ~/.local/bin/ytscribe\nchmod +x ~/.local/bin/ytscribe"
+  },
   "score": 3
  },
  {
@@ -3207,12 +3235,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 9670,
+  "commits": 9828,
   "years": {
-   "2026": 9670
+   "2026": 9828
   },
   "first": "2026-03-07",
-  "last": "2026-09-27",
+  "last": "2026-09-28",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3244,12 +3272,12 @@
    "Almide"
   ],
   "stars": 3,
-  "commits": 256,
+  "commits": 262,
   "years": {
-   "2026": 256
+   "2026": 262
   },
   "first": "2026-04-07",
-  "last": "2026-09-26",
+  "last": "2026-09-27",
   "tag": "v0.6.1",
   "license": "Apache-2.0",
   "topics": [
@@ -3267,9 +3295,9 @@
   "plate": "og",
   "sample": {
    "lang": "text",
-   "code": "$ porta run sh -v ./work --read-policy strict --timeout 5 -- …\n  wrote ./work/out.txt              legitimate work goes through\n  read the SSH key       → refused\n  write outside ./work   → refused\n  # a hung command is killed at the deadline → exit 124"
+   "code": "$ porta run sh -v ./work --no-net -- -c 'echo ok > out.txt; cat ~/.ssh/id_ed25519; echo x > ~/elsewhere.txt; curl https://example.com'\ncat: /Users/me/.ssh/id_ed25519: Operation not permitted\nsh: /Users/me/elsewhere.txt: Operation not permitted\ncurl: (6) Could not resolve host: example.com\n[porta] the sandbox refused this run 3 times; what each would have needed:\n  file-read-data /Users/me/.ssh/id_ed25519\n    → closed by the preset or --deny-read; no mount reopens it\n  file-write-create /Users/me/elsewhere.txt\n    → -v /Users/me\n  …"
   },
-  "score": 29.1
+  "score": 29.2
  },
  {
   "full": "almide/als",
@@ -3285,12 +3313,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1499,
+  "commits": 1504,
   "years": {
-   "2026": 1499
+   "2026": 1504
   },
   "first": "2026-03-07",
-  "last": "2026-09-26",
+  "last": "2026-09-28",
   "tag": "v1.0.0",
   "license": "NOASSERTION",
   "topics": [
@@ -3353,12 +3381,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 551,
+  "commits": 553,
   "years": {
-   "2026": 551
+   "2026": 553
   },
   "first": "2026-04-12",
-  "last": "2026-09-26",
+  "last": "2026-09-28",
   "license": "MIT",
   "topics": [
    "almide",
@@ -3576,12 +3604,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 157,
+  "commits": 159,
   "years": {
-   "2026": 157
+   "2026": 159
   },
   "first": "2026-03-08",
-  "last": "2026-09-23",
+  "last": "2026-09-27",
   "topics": [
    "almide",
    "playground",
@@ -3593,7 +3621,7 @@
    "lang": "",
    "code": "\n## Visual output\n\nThe playground renders what you print. If a program's stdout is an SVG\ndocument (`<svg …>`) or an ASCII PPM image (`P3 …`), the **Visual** tab shows\nit as an image — vectors via a script-disabled blob `<img>`, pixels via a\ncanvas. The same program prints a valid `.svg` / `.ppm` file natively, so the\nbyte-parity harness still applies. See Examples → Graphics (Mandelbrot,\ngenerative SVG).\n\n## Embedding\n\n`?embed=1` renders a minimal chrome for iframes — no header, no AI bar, just\ntabs, editor, output and a slim Run bar with an \"Open in Playground\" escape\nhatch. `&hide=util.almd` hides tabs from the strip while still compiling them\n(Kotlin-style hidden setup code). Combine with `?example=` or `#code=`:"
   },
-  "score": 8.1
+  "score": 8.2
  },
  {
   "full": "almide/yaml",
@@ -4312,13 +4340,13 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 32,
+  "commits": 34,
   "years": {
-   "2026": 32
+   "2026": 34
   },
   "first": "2026-04-12",
-  "last": "2026-09-26",
-  "tag": "v0.4.2",
+  "last": "2026-09-27",
+  "tag": "v0.5.0",
   "topics": [
    "ai",
    "almide",
@@ -4330,9 +4358,9 @@
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "# almide.toml\n[dependencies]\nalmai = { git = \"https://github.com/almide-ai/almai\", tag = \"v0.3.1\" }"
+   "code": "# almide.toml\n[dependencies]\nalmai = { git = \"https://github.com/almide-ai/almai\", tag = \"v0.5.0\" }"
   },
-  "score": 9.6
+  "score": 9.7
  },
  {
   "full": "almide-ai/homullus",
