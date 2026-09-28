@@ -1528,14 +1528,14 @@
    "id": "agent-tools",
    "title": "エージェントの道具",
    "short": "エージェントの道具",
-   "intro": "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide とそれに編集を任せる対話エージェント comide、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
+   "intro": "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide とそれに編集を任せる対話エージェント comide、その道具呼び出しを一つずつ閉じ込める onogoro、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
    "figures": [
     {
-     "value": "25",
+     "value": "26",
      "label": "公開リポジトリ"
     },
     {
-     "value": "1,016",
+     "value": "1,019",
      "label": "コミット"
     },
     {
@@ -1554,7 +1554,7 @@
     },
     {
      "name": "2026",
-     "count": 1000
+     "count": 1003
     }
    ],
    "works": [
@@ -2388,6 +2388,38 @@
      ],
      "order": {
       "date": "2026-09-11"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/onogoro",
+     "title": "onogoro",
+     "titleEn": "コーディングエージェントの作業場。道具はカーネルが強制するサンドボックスで動き、鍵は外に置いたまま",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onogoro",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "3"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/onogoro"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {
@@ -5661,18 +5693,18 @@
    "id": "other-langs",
    "title": "他の言語で書く",
    "short": "他の言語で",
-   "intro": "自作言語の外で書いたもの。Lean 4 の定理を TypeScript のプロパティテストに落とすもの（lean2ts）、Lean を Rust に落とすバックエンド（lean4-rust-backend）、その手前の証明の練習（hello-lean4・lean-lang-sandbox・lean4-practice・fizzbuzz-lean4-lib・fizzbuzz-lean4-cli）、Zig の型で消えるゼロコスト関数型ツールキット（zfp）、Ruby の並行境界を OpenTelemetry で覗くもの（sashiko）。",
+   "intro": "自作言語の外で書いたもの。Lean 4 の定理を TypeScript のプロパティテストに落とすもの（lean2ts）、Lean を Rust に落とすバックエンド（lean4-rust-backend）、その手前の証明の練習（hello-lean4・lean-lang-sandbox・lean4-practice・fizzbuzz-lean4-lib・fizzbuzz-lean4-cli）、Zig の型で消えるゼロコスト関数型ツールキット（zfp）、Ruby の並行境界を OpenTelemetry で覗くもの（sashiko）、Terraform の構成に負荷を流して費用と余力を読む Go の道具（archgopher）。",
    "figures": [
     {
-     "value": "9",
+     "value": "10",
      "label": "公開リポジトリ"
     },
     {
-     "value": "103",
+     "value": "249",
      "label": "コミット"
     },
     {
-     "value": "5",
+     "value": "6",
      "label": "言語"
     },
     {
@@ -5683,7 +5715,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 103
+     "count": 249
     }
    ],
    "works": [
@@ -5826,6 +5858,44 @@
      ],
      "order": {
       "date": "2026-03-02"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "つくる前に構成を読む。Terraform に想定の負荷を流し、費用・余力・遅延・可用性を見積もる",
+     "date": "2026年9月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "146"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {
@@ -6034,11 +6104,11 @@
    "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
-     "value": "34",
+     "value": "32",
      "label": "公開リポジトリ"
     },
     {
-     "value": "341",
+     "value": "192",
      "label": "コミット"
     },
     {
@@ -6069,50 +6139,20 @@
     },
     {
      "name": "2026",
-     "count": 188
+     "count": 39
     }
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/archgopher.jpg",
-     "id": "O6lvl4/archgopher",
-     "title": "archgopher",
-     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-     "date": "2026年9月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/archgopher",
-     "tags": [
-      "Go",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "146"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/archgopher"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/archgopher/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
-     }
-    },
-    {
-     "image": "",
+     "image": "plates/ja/O6lvl4/line-bot-private.jpg",
+     "readme": {
+      "lead": "AWS SAMで作るGo製Lambda関数のサンプルテンプレート",
+      "points": [
+       "sam buildを包むMakefile",
+       "sam local start-apiでのローカル実行",
+       "sam deploy --guidedでのデプロイ"
+      ]
+     },
      "id": "O6lvl4/line-bot-private",
      "title": "line-bot-private",
      "titleEn": "AWS SAMで作るGo製Lambda関数のサンプルテンプレート",
@@ -6278,38 +6318,6 @@
      ],
      "order": {
       "date": "2026-07-31"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/onogoro",
-     "title": "onogoro",
-     "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onogoro",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/onogoro"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
      }
     },
     {

@@ -42,13 +42,13 @@ export const FAMILIES = [
     short: { ja: "エージェントの道具", en: "Agent tools", zh: "智能体工具" },
     name: { ja: "エージェントの道具", en: "Tools for coding agents", zh: "给编码智能体的工具" },
     intro: {
-      ja: "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide とそれに編集を任せる対話エージェント comide、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
-      en: "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence and comide, a terminal agent, hands its edits to golemide, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
-      zh: "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide 与把编辑交给它的对话智能体 comide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
+      ja: "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide とそれに編集を任せる対話エージェント comide、その道具呼び出しを一つずつ閉じ込める onogoro、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
+      en: "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence and comide, a terminal agent, hands its edits to golemide, onogoro confines each of its tool calls, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
+      zh: "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide 与把编辑交给它的对话智能体 comide、把它的每次工具调用逐一关进沙箱的 onogoro、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
     },
     test: (p) =>
       starts(p, "gramide", "codopsy") ||
-      named(p, "hew", "ctxgate", "porta", "golemide", "comide", "assay", "emet", "ccgrid", "cdev", "ccp", "treesrc", "onomly", "imoduru", "cairn", "onetool"),
+      named(p, "hew", "ctxgate", "porta", "golemide", "comide", "onogoro", "assay", "emet", "ccgrid", "cdev", "ccp", "treesrc", "onomly", "imoduru", "cairn", "onetool"),
   },
   {
     id: "llm",
@@ -141,11 +141,11 @@ export const FAMILIES = [
     short: { ja: "他の言語で", en: "Other languages", zh: "别的语言" },
     name: { ja: "他の言語で書く", en: "Writing in other languages", zh: "用别的语言写" },
     intro: {
-      ja: "自作言語の外で書いたもの。Lean 4 の定理を TypeScript のプロパティテストに落とすもの（lean2ts）、Lean を Rust に落とすバックエンド（lean4-rust-backend）、その手前の証明の練習（hello-lean4・lean-lang-sandbox・lean4-practice・fizzbuzz-lean4-lib・fizzbuzz-lean4-cli）、Zig の型で消えるゼロコスト関数型ツールキット（zfp）、Ruby の並行境界を OpenTelemetry で覗くもの（sashiko）。",
-      en: "Written outside my own language: lean2ts turns Lean 4 theorems into TypeScript property tests, lean4-rust-backend lowers Lean to Rust, and before either of those comes the practice (hello-lean4, lean-lang-sandbox, lean4-practice, fizzbuzz-lean4-lib, fizzbuzz-lean4-cli); zfp is a zero-cost functional toolkit that disappears into Zig's types; sashiko watches Ruby's concurrency boundaries through OpenTelemetry.",
-      zh: "在自制语言之外写的东西：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、把 Lean 降到 Rust 的后端（lean4-rust-backend）、在这之前的证明练习（hello-lean4、lean-lang-sandbox、lean4-practice、fizzbuzz-lean4-lib、fizzbuzz-lean4-cli）、在 Zig 的类型里消失的零成本函数式工具箱（zfp），以及用 OpenTelemetry 看 Ruby 并发边界的 sashiko",
+      ja: "自作言語の外で書いたもの。Lean 4 の定理を TypeScript のプロパティテストに落とすもの（lean2ts）、Lean を Rust に落とすバックエンド（lean4-rust-backend）、その手前の証明の練習（hello-lean4・lean-lang-sandbox・lean4-practice・fizzbuzz-lean4-lib・fizzbuzz-lean4-cli）、Zig の型で消えるゼロコスト関数型ツールキット（zfp）、Ruby の並行境界を OpenTelemetry で覗くもの（sashiko）、Terraform の構成に負荷を流して費用と余力を読む Go の道具（archgopher）。",
+      en: "Written outside my own language: lean2ts turns Lean 4 theorems into TypeScript property tests, lean4-rust-backend lowers Lean to Rust, and before either of those comes the practice (hello-lean4, lean-lang-sandbox, lean4-practice, fizzbuzz-lean4-lib, fizzbuzz-lean4-cli); zfp is a zero-cost functional toolkit that disappears into Zig's types; sashiko watches Ruby's concurrency boundaries through OpenTelemetry; archgopher, in Go, pushes the expected load through a Terraform architecture and reads its cost and headroom.",
+      zh: "在自制语言之外写的东西：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、把 Lean 降到 Rust 的后端（lean4-rust-backend）、在这之前的证明练习（hello-lean4、lean-lang-sandbox、lean4-practice、fizzbuzz-lean4-lib、fizzbuzz-lean4-cli）、在 Zig 的类型里消失的零成本函数式工具箱（zfp），用 OpenTelemetry 看 Ruby 并发边界的 sashiko，以及把预期负载灌进 Terraform 架构、读出成本与余量的 Go 工具 archgopher",
     },
-    test: (p) => starts(p, "lean", "hello-lean", "fizzbuzz-lean") || named(p, "zfp", "sashiko"),
+    test: (p) => starts(p, "lean", "hello-lean", "fizzbuzz-lean") || named(p, "zfp", "sashiko", "archgopher"),
   },
   {
     id: "lab",

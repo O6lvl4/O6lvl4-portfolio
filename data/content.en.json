@@ -1528,14 +1528,14 @@
    "id": "agent-tools",
    "title": "Tools for coding agents",
    "short": "Agent tools",
-   "intro": "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence and comide, a terminal agent, hands its edits to golemide, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
+   "intro": "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence and comide, a terminal agent, hands its edits to golemide, onogoro confines each of its tool calls, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
    "figures": [
     {
-     "value": "25",
+     "value": "26",
      "label": "Repositories"
     },
     {
-     "value": "1,016",
+     "value": "1,019",
      "label": "Commits"
     },
     {
@@ -1554,7 +1554,7 @@
     },
     {
      "name": "2026",
-     "count": 1000
+     "count": 1003
     }
    ],
    "works": [
@@ -2388,6 +2388,38 @@
      ],
      "order": {
       "date": "2026-09-11"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/onogoro",
+     "title": "onogoro",
+     "titleEn": "A world for coding agents to work in: tools run in a sandbox the kernel enforces, and the keys stay outside it",
+     "date": "Sep 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onogoro",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/onogoro"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {
@@ -5661,18 +5693,18 @@
    "id": "other-langs",
    "title": "Writing in other languages",
    "short": "Other languages",
-   "intro": "Written outside my own language: lean2ts turns Lean 4 theorems into TypeScript property tests, lean4-rust-backend lowers Lean to Rust, and before either of those comes the practice (hello-lean4, lean-lang-sandbox, lean4-practice, fizzbuzz-lean4-lib, fizzbuzz-lean4-cli); zfp is a zero-cost functional toolkit that disappears into Zig's types; sashiko watches Ruby's concurrency boundaries through OpenTelemetry.",
+   "intro": "Written outside my own language: lean2ts turns Lean 4 theorems into TypeScript property tests, lean4-rust-backend lowers Lean to Rust, and before either of those comes the practice (hello-lean4, lean-lang-sandbox, lean4-practice, fizzbuzz-lean4-lib, fizzbuzz-lean4-cli); zfp is a zero-cost functional toolkit that disappears into Zig's types; sashiko watches Ruby's concurrency boundaries through OpenTelemetry; archgopher, in Go, pushes the expected load through a Terraform architecture and reads its cost and headroom.",
    "figures": [
     {
-     "value": "9",
+     "value": "10",
      "label": "Repositories"
     },
     {
-     "value": "103",
+     "value": "249",
      "label": "Commits"
     },
     {
-     "value": "5",
+     "value": "6",
      "label": "Languages"
     },
     {
@@ -5683,7 +5715,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 103
+     "count": 249
     }
    ],
    "works": [
@@ -5826,6 +5858,44 @@
      ],
      "order": {
       "date": "2026-03-02"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "Read an architecture before you build it: push the expected load through Terraform and read cost, headroom, latency and availability",
+     "date": "Sep 2026",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "146"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {
@@ -6034,11 +6104,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "34",
+     "value": "32",
      "label": "Repositories"
     },
     {
-     "value": "341",
+     "value": "192",
      "label": "Commits"
     },
     {
@@ -6069,50 +6139,20 @@
     },
     {
      "name": "2026",
-     "count": 188
+     "count": 39
     }
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/archgopher.jpg",
-     "id": "O6lvl4/archgopher",
-     "title": "archgopher",
-     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-     "date": "Sep 2026",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/archgopher",
-     "tags": [
-      "Go",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "146"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/archgopher"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/archgopher/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
-     }
-    },
-    {
-     "image": "",
+     "image": "plates/en/O6lvl4/line-bot-private.jpg",
+     "readme": {
+      "lead": "A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.",
+      "points": [
+       "Makefile wrapping sam build",
+       "Local API via sam local start-api",
+       "Deploy with sam deploy --guided"
+      ]
+     },
      "id": "O6lvl4/line-bot-private",
      "title": "line-bot-private",
      "titleEn": "A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.",
@@ -6278,38 +6318,6 @@
      ],
      "order": {
       "date": "2026-07-31"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/onogoro",
-     "title": "onogoro",
-     "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onogoro",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/onogoro"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
      }
     },
     {

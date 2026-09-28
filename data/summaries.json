@@ -4626,5 +4626,57 @@
     "可跑在 Cloudflare、OpenAI 兼容服务、Anthropic、Gemini、本地服务器或你的 Claude 登录上"
    ]
   }
+ },
+ "O6lvl4/archgopher": {
+  "ja": {
+   "what": "つくる前に構成を読む。Terraform に想定の負荷を流し、費用・余力・遅延・可用性を見積もる",
+   "points": [
+    "AWS・Azure・Google Cloud・Cloudflare・ConoHa VPS の Terraform をグラフにする",
+    "月 3,000 万リクエストが来たら、どの資源がいくらかかり、どこから先に詰まるかを出す",
+    "プルリクエストに費用と余力の差分をコメントし、構成図も書き出す"
+   ]
+  },
+  "en": {
+   "what": "Read an architecture before you build it: push the expected load through Terraform and read cost, headroom, latency and availability",
+   "points": [
+    "Turns Terraform for AWS, Azure, Google Cloud, Cloudflare and ConoHa VPS into a graph",
+    "If 30 million requests a month arrive, says what each resource costs and where it runs out of room first",
+    "Comments the cost and headroom diff on pull requests, and draws the architecture diagram"
+   ]
+  },
+  "zh": {
+   "what": "建之前先读架构：把预期负载灌进 Terraform，估算成本、余量、延迟与可用性",
+   "points": [
+    "把 AWS、Azure、Google Cloud、Cloudflare、ConoHa VPS 的 Terraform 变成图",
+    "每月 3000 万请求到来时，每个资源花多少钱、哪里最先撑不住",
+    "在拉取请求里评论成本与余量的差异，并导出架构图"
+   ]
+  }
+ },
+ "O6lvl4/onogoro": {
+  "ja": {
+   "what": "コーディングエージェントの作業場。道具はカーネルが強制するサンドボックスで動き、鍵は外に置いたまま",
+   "points": [
+    "comide の道具呼び出しを一つずつ porta に閉じ込める",
+    "中には鍵を渡さず、porta のプロキシがモデルのホスト宛てのときだけ本物に差し替える",
+    "書き込めるのはプロジェクトだけ、ネットワークも閉じられる"
+   ]
+  },
+  "en": {
+   "what": "A world for coding agents to work in: tools run in a sandbox the kernel enforces, and the keys stay outside it",
+   "points": [
+    "Confines each of comide's tool calls with porta, one call at a time",
+    "No key goes inside: porta's proxy swaps placeholders for the real key on the model's host alone",
+    "Only the project is writable, and the network can be closed"
+   ]
+  },
+  "zh": {
+   "what": "给编码智能体干活的地方：工具在内核强制的沙箱里运行，密钥留在外面",
+   "points": [
+    "用 porta 把 comide 的每次工具调用逐一关起来",
+    "密钥不进沙箱：porta 的代理只在发往模型主机时把占位符换成真密钥",
+    "只有项目可写，网络也可以关闭"
+   ]
+  }
  }
 }

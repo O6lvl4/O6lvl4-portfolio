@@ -1528,14 +1528,14 @@
    "id": "agent-tools",
    "title": "给编码智能体的工具",
    "short": "智能体工具",
-   "intro": "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide 与把编辑交给它的对话智能体 comide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
+   "intro": "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide 与把编辑交给它的对话智能体 comide、把它的每次工具调用逐一关进沙箱的 onogoro、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
    "figures": [
     {
-     "value": "25",
+     "value": "26",
      "label": "公开仓库"
     },
     {
-     "value": "1,016",
+     "value": "1,019",
      "label": "提交"
     },
     {
@@ -1554,7 +1554,7 @@
     },
     {
      "name": "2026",
-     "count": 1000
+     "count": 1003
     }
    ],
    "works": [
@@ -2388,6 +2388,38 @@
      ],
      "order": {
       "date": "2026-09-11"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/onogoro",
+     "title": "onogoro",
+     "titleEn": "给编码智能体干活的地方：工具在内核强制的沙箱里运行，密钥留在外面",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onogoro",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "3"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/onogoro"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {
@@ -5661,18 +5693,18 @@
    "id": "other-langs",
    "title": "用别的语言写",
    "short": "别的语言",
-   "intro": "在自制语言之外写的东西：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、把 Lean 降到 Rust 的后端（lean4-rust-backend）、在这之前的证明练习（hello-lean4、lean-lang-sandbox、lean4-practice、fizzbuzz-lean4-lib、fizzbuzz-lean4-cli）、在 Zig 的类型里消失的零成本函数式工具箱（zfp），以及用 OpenTelemetry 看 Ruby 并发边界的 sashiko",
+   "intro": "在自制语言之外写的东西：把 Lean 4 定理变成 TypeScript 属性测试的 lean2ts、把 Lean 降到 Rust 的后端（lean4-rust-backend）、在这之前的证明练习（hello-lean4、lean-lang-sandbox、lean4-practice、fizzbuzz-lean4-lib、fizzbuzz-lean4-cli）、在 Zig 的类型里消失的零成本函数式工具箱（zfp），用 OpenTelemetry 看 Ruby 并发边界的 sashiko，以及把预期负载灌进 Terraform 架构、读出成本与余量的 Go 工具 archgopher",
    "figures": [
     {
-     "value": "9",
+     "value": "10",
      "label": "公开仓库"
     },
     {
-     "value": "103",
+     "value": "249",
      "label": "提交"
     },
     {
-     "value": "5",
+     "value": "6",
      "label": "语言"
     },
     {
@@ -5683,7 +5715,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 103
+     "count": 249
     }
    ],
    "works": [
@@ -5826,6 +5858,44 @@
      ],
      "order": {
       "date": "2026-03-02"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "建之前先读架构：把预期负载灌进 Terraform，估算成本、余量、延迟与可用性",
+     "date": "2026年9月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "146"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {
@@ -6034,11 +6104,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "34",
+     "value": "32",
      "label": "公开仓库"
     },
     {
-     "value": "341",
+     "value": "192",
      "label": "提交"
     },
     {
@@ -6069,50 +6139,20 @@
     },
     {
      "name": "2026",
-     "count": 188
+     "count": 39
     }
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/archgopher.jpg",
-     "id": "O6lvl4/archgopher",
-     "title": "archgopher",
-     "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-     "date": "2026年9月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/archgopher",
-     "tags": [
-      "Go",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "146"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/archgopher"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/archgopher/"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
-     }
-    },
-    {
-     "image": "",
+     "image": "plates/zh/O6lvl4/line-bot-private.jpg",
+     "readme": {
+      "lead": "基于AWS SAM的Go语言Lambda函数示例模板",
+      "points": [
+       "Makefile封装sam build",
+       "sam local start-api本地运行",
+       "sam deploy --guided部署"
+      ]
+     },
      "id": "O6lvl4/line-bot-private",
      "title": "line-bot-private",
      "titleEn": "基于AWS SAM的Go语言Lambda函数示例模板",
@@ -6278,38 +6318,6 @@
      ],
      "order": {
       "date": "2026-07-31"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/onogoro",
-     "title": "onogoro",
-     "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onogoro",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/onogoro"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
      }
     },
     {
