@@ -121,7 +121,7 @@
      "Almide（88）",
      "TypeScript（32）",
      "JavaScript（29）",
-     "Python（27）",
+     "Python（28）",
      "Shell（27）"
     ]
    },
@@ -145,7 +145,6 @@
     "lead": "almide、porta、als、ccgrid ほか138件",
     "tags": [
      "Rust",
-     "Python",
      "Almide",
      "TypeScript"
     ]
@@ -218,7 +217,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "almide · 2026年9月"
+    "value": "golemide · 2026年9月"
    },
    {
     "key": "Almide で書いた割合",
@@ -237,7 +236,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "15,321",
+    "value": "15,491",
     "label": "コミット"
    },
    {
@@ -252,7 +251,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 72,
+    "count": 71,
     "color": "currentColor"
    },
    {
@@ -267,7 +266,7 @@
    },
    {
     "name": "Rust",
-    "count": 10,
+    "count": 11,
     "color": "#dea584"
    },
    {
@@ -364,12 +363,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12678,
+    "count": 12813,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2177,
+    "count": 2211,
     "of": 114
    },
    {
@@ -384,7 +383,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 63,
+    "count": 64,
     "of": 3
    }
   ],
@@ -407,7 +406,7 @@
    },
    {
     "name": "2026",
-    "count": 15072
+    "count": 15242
    }
   ]
  },
@@ -423,7 +422,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "12,426",
+     "value": "12,552",
      "label": "コミット"
     },
     {
@@ -438,7 +437,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12426
+     "count": 12552
     }
    ],
    "works": [
@@ -468,7 +467,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "9,828"
+       "value": "9,944"
       },
       {
        "label": "初回",
@@ -494,7 +493,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -515,7 +514,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,504"
+       "value": "1,511"
       },
       {
        "label": "初回",
@@ -643,7 +642,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "553"
+       "value": "556"
       },
       {
        "label": "初回",
@@ -1535,7 +1534,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "1,019",
+     "value": "1,054",
      "label": "コミット"
     },
     {
@@ -1554,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 1003
+     "count": 1038
     }
    ],
    "works": [
@@ -1572,19 +1571,19 @@
      "title": "porta",
      "titleEn": "許可した権限だけで、エージェントを動かす",
      "date": "2026年9月",
-     "format": "Python",
+     "format": "Rust",
      "credit": "almide",
      "url": "https://github.com/almide/porta",
      "tags": [
-      "Python",
       "Rust",
+      "Python",
       "Almide",
       "ai-agent"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "262"
+       "value": "271"
       },
       {
        "label": "初回",
@@ -1606,7 +1605,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-27"
+      "date": "2026-09-28"
      }
     },
     {
@@ -1909,7 +1908,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "72"
+       "value": "79"
       },
       {
        "label": "初回",
@@ -1927,7 +1926,53 @@
       }
      ],
      "order": {
-      "date": "2026-09-27"
+      "date": "2026-09-29"
+     }
+    },
+    {
+     "image": "plates/shared/O6lvl4/comide.jpg",
+     "readme": {
+      "lead": "ターミナルで対話するコーディングエージェント。Claude Code、Codex、Aider の系譜",
+      "points": [
+       "何を見て何を変えるかを決め、編集とテストは golemide に任せる",
+       "道具はすでにあるプログラム：hew・gramide・golemide・ctxgate",
+       "Cloudflare・OpenAI 互換・Anthropic・Gemini・ローカル、どのモデルでも動く"
+      ]
+     },
+     "id": "O6lvl4/comide",
+     "title": "comide",
+     "titleEn": "ターミナルで対話するコーディングエージェント。Claude Code、Codex、Aider の系譜",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/comide",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "57"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版",
+       "value": "v0.5.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/comide"
+      }
+     ],
+     "order": {
+      "date": "2026-09-29"
      }
     },
     {
@@ -2021,52 +2066,6 @@
      ],
      "order": {
       "date": "2026-09-21"
-     }
-    },
-    {
-     "image": "plates/shared/O6lvl4/comide.jpg",
-     "readme": {
-      "lead": "ターミナルで対話するコーディングエージェント。Claude Code、Codex、Aider の系譜",
-      "points": [
-       "何を見て何を変えるかを決め、編集とテストは golemide に任せる",
-       "道具はすでにあるプログラム：hew・gramide・golemide・ctxgate",
-       "Cloudflare・OpenAI 互換・Anthropic・Gemini・ローカル、どのモデルでも動く"
-      ]
-     },
-     "id": "O6lvl4/comide",
-     "title": "comide",
-     "titleEn": "ターミナルで対話するコーディングエージェント。Claude Code、Codex、Aider の系譜",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/comide",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "44"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      },
-      {
-       "label": "版",
-       "value": "v0.5.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/comide"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
      }
     },
     {
@@ -2359,6 +2358,39 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/onogoro",
+     "title": "onogoro",
+     "titleEn": "コーディングエージェントの作業場。道具はカーネルが強制するサンドボックスで動き、鍵は外に置いたまま",
+     "date": "2026年9月",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onogoro",
+     "tags": [
+      "Python",
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "9"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/onogoro"
+      }
+     ],
+     "order": {
+      "date": "2026-09-29"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/codopsy-almd",
      "title": "codopsy-almd",
      "titleEn": "gramideの構文解析からAlideの複雑度を測るCLI",
@@ -2388,38 +2420,6 @@
      ],
      "order": {
       "date": "2026-09-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/onogoro",
-     "title": "onogoro",
-     "titleEn": "コーディングエージェントの作業場。道具はカーネルが強制するサンドボックスで動き、鍵は外に置いたまま",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onogoro",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/onogoro"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
      }
     },
     {
@@ -2569,7 +2569,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "125",
+     "value": "126",
      "label": "コミット"
     },
     {
@@ -2588,7 +2588,7 @@
     },
     {
      "name": "2026",
-     "count": 98
+     "count": 99
     }
    ],
    "works": [
@@ -2618,7 +2618,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "34"
+       "value": "35"
       },
       {
        "label": "初回",
@@ -2636,7 +2636,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-27"
+      "date": "2026-09-28"
      }
     },
     {
@@ -5700,7 +5700,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "249",
+     "value": "257",
      "label": "コミット"
     },
     {
@@ -5715,7 +5715,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 249
+     "count": 257
     }
    ],
    "works": [
@@ -5877,7 +5877,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "146"
+       "value": "154"
       },
       {
        "label": "初回",
@@ -5895,7 +5895,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-27"
+      "date": "2026-09-28"
      }
     },
     {

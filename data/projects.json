@@ -390,6 +390,37 @@
   "score": 10.9
  },
  {
+  "full": "O6lvl4/golemide",
+  "owner": "O6lvl4",
+  "name": "golemide",
+  "url": "https://github.com/O6lvl4/golemide",
+  "lead": "A coding agent written in Almide: one static binary, observe-then-edit, every write through a syntax gate",
+  "heading": "{\"ok\":true,\"path\":\"src/lib.rs\",\"bytes\":812,\"checked_by\":\"gramide\",\"matched\":[],\"diff\":\"…\"}",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Shell",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 79,
+  "years": {
+   "2026": 79
+  },
+  "first": "2026-09-08",
+  "last": "2026-09-29",
+  "tag": "v0.3.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1362136465/a64fdb12-9b66-4c14-a97d-af37d81ef089",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build\n./golemide observe --root ../project"
+  },
+  "score": 10.6
+ },
+ {
   "full": "O6lvl4/O6lvl4-knowledge",
   "owner": "O6lvl4",
   "name": "O6lvl4-knowledge",
@@ -414,35 +445,34 @@
   "score": 10.5
  },
  {
-  "full": "O6lvl4/golemide",
+  "full": "O6lvl4/comide",
   "owner": "O6lvl4",
-  "name": "golemide",
-  "url": "https://github.com/O6lvl4/golemide",
-  "lead": "A coding agent written in Almide: one static binary, observe-then-edit, every write through a syntax gate",
-  "heading": "{\"ok\":true,\"path\":\"src/lib.rs\",\"bytes\":812,\"checked_by\":\"gramide\",\"matched\":[],\"diff\":\"…\"}",
+  "name": "comide",
+  "url": "https://github.com/O6lvl4/comide",
+  "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
   "language": "Almide",
   "languages": [
    "Almide",
-   "Shell",
-   "Python"
+   "Python",
+   "Shell"
   ],
   "stars": 0,
-  "commits": 72,
+  "commits": 57,
   "years": {
-   "2026": 72
+   "2026": 57
   },
-  "first": "2026-09-08",
-  "last": "2026-09-27",
-  "tag": "v0.3.0",
+  "first": "2026-09-12",
+  "last": "2026-09-29",
+  "tag": "v0.5.0",
   "license": "NOASSERTION",
   "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1362136465/a64fdb12-9b66-4c14-a97d-af37d81ef089",
+  "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
   "plate": "og",
   "sample": {
    "lang": "sh",
-   "code": "almide build\n./golemide observe --root ../project"
+   "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
   },
-  "score": 10.4
+  "score": 10.1
  },
  {
   "full": "O6lvl4/codopsy",
@@ -516,36 +546,6 @@
    "code": "hew src/lower.rs --symbol lower_match       one function, found by name\nhew src/lower.rs --grep \"Expr::Match\" --around 4   matches with context, labelled by enclosing fn\nhew src/lower.rs --lines 120-160            a range, numbered\nhew outline src/lower.rs                    the table of contents\nhew grep \"unwrap()\" src                     grep that folds repeats and names the symbol\nhew tree src --depth 2                      a directory, skipping vcs / build / deps"
   },
   "score": 10
- },
- {
-  "full": "O6lvl4/comide",
-  "owner": "O6lvl4",
-  "name": "comide",
-  "url": "https://github.com/O6lvl4/comide",
-  "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 44,
-  "years": {
-   "2026": 44
-  },
-  "first": "2026-09-12",
-  "last": "2026-09-27",
-  "tag": "v0.5.0",
-  "license": "NOASSERTION",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
-  "plate": "og",
-  "sample": {
-   "lang": "sh",
-   "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
-  },
-  "score": 9.9
  },
  {
   "full": "O6lvl4/gramide-javascript",
@@ -705,6 +705,36 @@
   "score": 8.1
  },
  {
+  "full": "O6lvl4/archgopher",
+  "owner": "O6lvl4",
+  "name": "archgopher",
+  "url": "https://github.com/O6lvl4/archgopher",
+  "site": "https://o6lvl4.github.io/archgopher/",
+  "lead": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+  "language": "Go",
+  "languages": [
+   "Go",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 154,
+  "years": {
+   "2026": 154
+  },
+  "first": "2026-09-24",
+  "last": "2026-09-28",
+  "license": "Apache-2.0",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher scout app.scouter.yaml           # read it (--json for machines)\narchgopher export app.scouter.yaml -o app.png # draw it: .svg, .png or .html by extension"
+  },
+  "score": 8.1
+ },
+ {
   "full": "O6lvl4/ccp",
   "owner": "O6lvl4",
   "name": "ccp",
@@ -757,36 +787,6 @@
    "code": "GitHub Issues ──┐\nHackerNews ─────┤                  ┌──────────┐    ┌──────────┐    ┌────────┐\nGHSA ───────────┼─→ Pre-filter ──→ │ LLM      │──→ │ Scorer   │──→ │ Notify │\nOSV.dev ────────┘   (96% reject)   │ Analysis │    │ (vs deps)│    │        │\n                                   └──────────┘    └──────────┘    └────────┘"
   },
   "score": 8.1
- },
- {
-  "full": "O6lvl4/archgopher",
-  "owner": "O6lvl4",
-  "name": "archgopher",
-  "url": "https://github.com/O6lvl4/archgopher",
-  "site": "https://o6lvl4.github.io/archgopher/",
-  "lead": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-  "language": "Go",
-  "languages": [
-   "Go",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 146,
-  "years": {
-   "2026": 146
-  },
-  "first": "2026-09-24",
-  "last": "2026-09-27",
-  "license": "Apache-2.0",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
-  "plate": "og",
-  "sample": {
-   "lang": "sh",
-   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher scout app.scouter.yaml           # read it (--json for machines)"
-  },
-  "score": 7.9
  },
  {
   "full": "O6lvl4/gv",
@@ -1540,6 +1540,33 @@
   "score": 5.2
  },
  {
+  "full": "O6lvl4/onogoro",
+  "owner": "O6lvl4",
+  "name": "onogoro",
+  "url": "https://github.com/O6lvl4/onogoro",
+  "lead": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
+  "language": "Python",
+  "languages": [
+   "Python",
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 9,
+  "years": {
+   "2026": 9
+  },
+  "first": "2026-09-27",
+  "last": "2026-09-29",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "onogoro                       # comide's conversation, every tool's command confined\nonogoro -p \"fix the tests\"    # one request; any of comide's arguments work"
+  },
+  "score": 5.2
+ },
+ {
   "full": "O6lvl4/codopsy-almd",
   "owner": "O6lvl4",
   "name": "codopsy-almd",
@@ -1621,32 +1648,6 @@
   "sample": {
    "lang": "bash",
    "code": "# Go 側 (go.mod が go 1.27rc2 を指しているので、Go 1.21+ ならツールチェーンが自動取得される)\ngo run ./01-generic-methods\n\n# almide 側 (https://github.com/almide/almide)\nalmide run 01-generic-methods/main.almd\n\n# 全部まとめて\n./demo.sh"
-  },
-  "score": 5.1
- },
- {
-  "full": "O6lvl4/onogoro",
-  "owner": "O6lvl4",
-  "name": "onogoro",
-  "url": "https://github.com/O6lvl4/onogoro",
-  "lead": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-09-27",
-  "last": "2026-09-27",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "onogoro                       # comide's conversation, every tool's command confined\nonogoro -p \"fix the tests\"    # one request; any of comide's arguments work"
   },
   "score": 5.1
  },
@@ -3235,12 +3236,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 9828,
+  "commits": 9944,
   "years": {
-   "2026": 9828
+   "2026": 9944
   },
   "first": "2026-03-07",
-  "last": "2026-09-28",
+  "last": "2026-09-29",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3265,19 +3266,19 @@
   "name": "porta",
   "url": "https://github.com/almide/porta",
   "lead": "Sandboxed runtime for AI agents. WASM isolation + OS-level sandbox. Run Claude Code, Python, or any command with filesystem/network restrictions. No Docker required.",
-  "language": "Python",
+  "language": "Rust",
   "languages": [
-   "Python",
    "Rust",
+   "Python",
    "Almide"
   ],
   "stars": 3,
-  "commits": 262,
+  "commits": 271,
   "years": {
-   "2026": 262
+   "2026": 271
   },
   "first": "2026-04-07",
-  "last": "2026-09-27",
+  "last": "2026-09-28",
   "tag": "v0.6.1",
   "license": "Apache-2.0",
   "topics": [
@@ -3297,7 +3298,7 @@
    "lang": "text",
    "code": "$ porta run sh -v ./work --no-net -- -c 'echo ok > out.txt; cat ~/.ssh/id_ed25519; echo x > ~/elsewhere.txt; curl https://example.com'\ncat: /Users/me/.ssh/id_ed25519: Operation not permitted\nsh: /Users/me/elsewhere.txt: Operation not permitted\ncurl: (6) Could not resolve host: example.com\n[porta] the sandbox refused this run 3 times; what each would have needed:\n  file-read-data /Users/me/.ssh/id_ed25519\n    → closed by the preset or --deny-read; no mount reopens it\n  file-write-create /Users/me/elsewhere.txt\n    → -v /Users/me\n  …"
   },
-  "score": 29.2
+  "score": 29.4
  },
  {
   "full": "almide/als",
@@ -3313,9 +3314,9 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1504,
+  "commits": 1511,
   "years": {
-   "2026": 1504
+   "2026": 1511
   },
   "first": "2026-03-07",
   "last": "2026-09-28",
@@ -3381,9 +3382,9 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 553,
+  "commits": 556,
   "years": {
-   "2026": 553
+   "2026": 556
   },
   "first": "2026-04-12",
   "last": "2026-09-28",
@@ -4340,12 +4341,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 34,
+  "commits": 35,
   "years": {
-   "2026": 34
+   "2026": 35
   },
   "first": "2026-04-12",
-  "last": "2026-09-27",
+  "last": "2026-09-28",
   "tag": "v0.5.0",
   "topics": [
    "ai",
