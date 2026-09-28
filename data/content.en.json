@@ -1887,16 +1887,16 @@
     {
      "image": "plates/shared/O6lvl4/golemide.jpg",
      "readme": {
-      "lead": "Read the project, make the edit, run the tests: a coding agent that works from evidence",
+      "lead": "Read, edit, run the tests: a coding agent that solves more than Aider on the same model",
       "points": [
-       "Looks at source, diagnostics and test results before choosing what to change",
-       "Every edit is syntax-checked before it is written",
-       "Retries until your verify command passes, and moves to a stronger model when stuck"
+       "75.1% on Aider's 225-exercise polyglot benchmark for $0.45; Aider, same model and container: 67.1%",
+       "Given eight attempts, all 64 Rust and Python exercises, for $0.23",
+       "Every edit is syntax-checked before it is written"
       ]
      },
      "id": "O6lvl4/golemide",
      "title": "golemide",
-     "titleEn": "Read the project, make the edit, run the tests: a coding agent that works from evidence",
+     "titleEn": "Read, edit, run the tests: a coding agent that solves more than Aider on the same model",
      "date": "Sep 2026",
      "format": "Almide",
      "credit": "O6lvl4",
