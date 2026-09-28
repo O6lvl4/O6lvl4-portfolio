@@ -203,7 +203,9 @@
    "almide/almide",
    "O6lvl4/hew",
    "almide/porta",
-   "O6lvl4/codopsy"
+   "O6lvl4/codopsy",
+   "O6lvl4/golemide",
+   "O6lvl4/comide"
   ],
   "panel": [
    {
@@ -1526,14 +1528,14 @@
    "id": "agent-tools",
    "title": "エージェントの道具",
    "short": "エージェントの道具",
-   "intro": "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
+   "intro": "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide とそれに編集を任せる対話エージェント comide、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
    "figures": [
     {
-     "value": "24",
+     "value": "25",
      "label": "公開リポジトリ"
     },
     {
-     "value": "972",
+     "value": "1,016",
      "label": "コミット"
     },
     {
@@ -1552,7 +1554,7 @@
     },
     {
      "name": "2026",
-     "count": 956
+     "count": 1000
     }
    ],
    "works": [
@@ -1883,10 +1885,18 @@
      }
     },
     {
-     "image": "",
+     "image": "plates/shared/O6lvl4/golemide.jpg",
+     "readme": {
+      "lead": "プロジェクトを読み、編集し、テストを回す。証拠から直すコーディングエージェント",
+      "points": [
+       "ソース・診断・テスト結果を見てから、どこを直すか決める",
+       "書き込む前に構文を検査し、壊れた編集はファイルに残さない",
+       "検証コマンドが通るまで試し直し、行き詰まれば強いモデルに替える"
+      ]
+     },
      "id": "O6lvl4/golemide",
      "title": "golemide",
-     "titleEn": "証拠に基づき編集し検証するAlmide製コーディングエージェント",
+     "titleEn": "プロジェクトを読み、編集し、テストを回す。証拠から直すコーディングエージェント",
      "date": "2026年9月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2011,6 +2021,52 @@
      ],
      "order": {
       "date": "2026-09-21"
+     }
+    },
+    {
+     "image": "plates/shared/O6lvl4/comide.jpg",
+     "readme": {
+      "lead": "ターミナルで対話するコーディングエージェント。Claude Code、Codex、Aider の系譜",
+      "points": [
+       "何を見て何を変えるかを決め、編集とテストは golemide に任せる",
+       "道具はすでにあるプログラム：hew・gramide・golemide・ctxgate",
+       "Cloudflare・OpenAI 互換・Anthropic・Gemini・ローカル、どのモデルでも動く"
+      ]
+     },
+     "id": "O6lvl4/comide",
+     "title": "comide",
+     "titleEn": "ターミナルで対話するコーディングエージェント。Claude Code、Codex、Aider の系譜",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/comide",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "44"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版",
+       "value": "v0.5.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/comide"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {
@@ -5978,11 +6034,11 @@
    "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
-     "value": "35",
+     "value": "34",
      "label": "公開リポジトリ"
     },
     {
-     "value": "385",
+     "value": "341",
      "label": "コミット"
     },
     {
@@ -6013,50 +6069,12 @@
     },
     {
      "name": "2026",
-     "count": 232
+     "count": 188
     }
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/comide.jpg",
-     "id": "O6lvl4/comide",
-     "title": "comide",
-     "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/comide",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "44"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      },
-      {
-       "label": "版",
-       "value": "v0.5.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/comide"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
-     }
-    },
-    {
-     "image": "",
+     "image": "plates/shared/O6lvl4/archgopher.jpg",
      "id": "O6lvl4/archgopher",
      "title": "archgopher",
      "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",

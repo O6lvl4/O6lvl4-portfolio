@@ -203,7 +203,9 @@
    "almide/almide",
    "O6lvl4/hew",
    "almide/porta",
-   "O6lvl4/codopsy"
+   "O6lvl4/codopsy",
+   "O6lvl4/golemide",
+   "O6lvl4/comide"
   ],
   "panel": [
    {
@@ -1526,14 +1528,14 @@
    "id": "agent-tools",
    "title": "给编码智能体的工具",
    "short": "智能体工具",
-   "intro": "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
+   "intro": "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide 与把编辑交给它的对话智能体 comide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
    "figures": [
     {
-     "value": "24",
+     "value": "25",
      "label": "公开仓库"
     },
     {
-     "value": "972",
+     "value": "1,016",
      "label": "提交"
     },
     {
@@ -1552,7 +1554,7 @@
     },
     {
      "name": "2026",
-     "count": 956
+     "count": 1000
     }
    ],
    "works": [
@@ -1883,10 +1885,18 @@
      }
     },
     {
-     "image": "",
+     "image": "plates/shared/O6lvl4/golemide.jpg",
+     "readme": {
+      "lead": "读项目、改代码、跑测试：依据证据工作的编码智能体",
+      "points": [
+       "先看源码、诊断和测试结果，再决定改哪里",
+       "每次编辑都先过语法检查再写入",
+       "重试直到验证命令通过，卡住时换用更强的模型"
+      ]
+     },
      "id": "O6lvl4/golemide",
      "title": "golemide",
-     "titleEn": "用Almide编写的编码代理，先观察再编辑并验证",
+     "titleEn": "读项目、改代码、跑测试：依据证据工作的编码智能体",
      "date": "2026年9月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2011,6 +2021,52 @@
      ],
      "order": {
       "date": "2026-09-21"
+     }
+    },
+    {
+     "image": "plates/shared/O6lvl4/comide.jpg",
+     "readme": {
+      "lead": "终端里的编码智能体，与 Claude Code、Codex、Aider 一脉相承",
+      "points": [
+       "决定看什么、改什么；编辑与测试交给 golemide",
+       "工具都是现成的程序：hew、gramide、golemide、ctxgate",
+       "可跑在 Cloudflare、OpenAI 兼容服务、Anthropic、Gemini、本地服务器或你的 Claude 登录上"
+      ]
+     },
+     "id": "O6lvl4/comide",
+     "title": "comide",
+     "titleEn": "终端里的编码智能体，与 Claude Code、Codex、Aider 一脉相承",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/comide",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "44"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.5.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/comide"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {
@@ -5978,11 +6034,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "35",
+     "value": "34",
      "label": "公开仓库"
     },
     {
-     "value": "385",
+     "value": "341",
      "label": "提交"
     },
     {
@@ -6013,50 +6069,12 @@
     },
     {
      "name": "2026",
-     "count": 232
+     "count": 188
     }
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/comide.jpg",
-     "id": "O6lvl4/comide",
-     "title": "comide",
-     "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/comide",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "44"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.5.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/comide"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
-     }
-    },
-    {
-     "image": "",
+     "image": "plates/shared/O6lvl4/archgopher.jpg",
      "id": "O6lvl4/archgopher",
      "title": "archgopher",
      "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",

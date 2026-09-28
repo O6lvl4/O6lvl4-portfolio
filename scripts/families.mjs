@@ -42,13 +42,13 @@ export const FAMILIES = [
     short: { ja: "エージェントの道具", en: "Agent tools", zh: "智能体工具" },
     name: { ja: "エージェントの道具", en: "Tools for coding agents", zh: "给编码智能体的工具" },
     intro: {
-      ja: "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
-      en: "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
-      zh: "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
+      ja: "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide とそれに編集を任せる対話エージェント comide、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
+      en: "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence and comide, a terminal agent, hands its edits to golemide, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
+      zh: "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide 与把编辑交给它的对话智能体 comide、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
     },
     test: (p) =>
       starts(p, "gramide", "codopsy") ||
-      named(p, "hew", "ctxgate", "porta", "golemide", "assay", "emet", "ccgrid", "cdev", "ccp", "treesrc", "onomly", "imoduru", "cairn", "onetool"),
+      named(p, "hew", "ctxgate", "porta", "golemide", "comide", "assay", "emet", "ccgrid", "cdev", "ccp", "treesrc", "onomly", "imoduru", "cairn", "onetool"),
   },
   {
     id: "llm",

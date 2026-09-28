@@ -203,7 +203,9 @@
    "almide/almide",
    "O6lvl4/hew",
    "almide/porta",
-   "O6lvl4/codopsy"
+   "O6lvl4/codopsy",
+   "O6lvl4/golemide",
+   "O6lvl4/comide"
   ],
   "panel": [
    {
@@ -1526,14 +1528,14 @@
    "id": "agent-tools",
    "title": "Tools for coding agents",
    "short": "Agent tools",
-   "intro": "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
+   "intro": "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence and comide, a terminal agent, hands its edits to golemide, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
    "figures": [
     {
-     "value": "24",
+     "value": "25",
      "label": "Repositories"
     },
     {
-     "value": "972",
+     "value": "1,016",
      "label": "Commits"
     },
     {
@@ -1552,7 +1554,7 @@
     },
     {
      "name": "2026",
-     "count": 956
+     "count": 1000
     }
    ],
    "works": [
@@ -1883,10 +1885,18 @@
      }
     },
     {
-     "image": "",
+     "image": "plates/shared/O6lvl4/golemide.jpg",
+     "readme": {
+      "lead": "Read the project, make the edit, run the tests: a coding agent that works from evidence",
+      "points": [
+       "Looks at source, diagnostics and test results before choosing what to change",
+       "Every edit is syntax-checked before it is written",
+       "Retries until your verify command passes, and moves to a stronger model when stuck"
+      ]
+     },
      "id": "O6lvl4/golemide",
      "title": "golemide",
-     "titleEn": "A coding agent in Almide that observes a repo, edits with syntax checks, and re-runs tests.",
+     "titleEn": "Read the project, make the edit, run the tests: a coding agent that works from evidence",
      "date": "Sep 2026",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2011,6 +2021,52 @@
      ],
      "order": {
       "date": "2026-09-21"
+     }
+    },
+    {
+     "image": "plates/shared/O6lvl4/comide.jpg",
+     "readme": {
+      "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
+      "points": [
+       "Decides what to look at and what to change; golemide makes the edit and runs the tests",
+       "Its tools are programs that already exist: hew, gramide, golemide, ctxgate",
+       "Runs on Cloudflare, any OpenAI-compatible service, Anthropic, Gemini, a local server or your Claude login"
+      ]
+     },
+     "id": "O6lvl4/comide",
+     "title": "comide",
+     "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
+     "date": "Sep 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/comide",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "44"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.5.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/comide"
+      }
+     ],
+     "order": {
+      "date": "2026-09-27"
      }
     },
     {
@@ -5978,11 +6034,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "35",
+     "value": "34",
      "label": "Repositories"
     },
     {
-     "value": "385",
+     "value": "341",
      "label": "Commits"
     },
     {
@@ -6013,50 +6069,12 @@
     },
     {
      "name": "2026",
-     "count": 232
+     "count": 188
     }
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/comide.jpg",
-     "id": "O6lvl4/comide",
-     "title": "comide",
-     "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/comide",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "44"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.5.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/comide"
-      }
-     ],
-     "order": {
-      "date": "2026-09-27"
-     }
-    },
-    {
-     "image": "",
+     "image": "plates/shared/O6lvl4/archgopher.jpg",
      "id": "O6lvl4/archgopher",
      "title": "archgopher",
      "titleEn": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",

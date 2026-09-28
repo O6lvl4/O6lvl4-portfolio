@@ -989,27 +989,27 @@
  },
  "O6lvl4/golemide": {
   "ja": {
-   "what": "証拠に基づき編集し検証するAlmide製コーディングエージェント",
+   "what": "プロジェクトを読み、編集し、テストを回す。証拠から直すコーディングエージェント",
    "points": [
-    "observe後に編集する流れ",
-    "書き込み前の構文チェック",
-    "単一ネイティブバイナリ"
+    "ソース・診断・テスト結果を見てから、どこを直すか決める",
+    "書き込む前に構文を検査し、壊れた編集はファイルに残さない",
+    "検証コマンドが通るまで試し直し、行き詰まれば強いモデルに替える"
    ]
   },
   "en": {
-   "what": "A coding agent in Almide that observes a repo, edits with syntax checks, and re-runs tests.",
+   "what": "Read the project, make the edit, run the tests: a coding agent that works from evidence",
    "points": [
-    "observe, solve and polish commands",
-    "Syntax check before every write",
-    "Single native binary with optional tools"
+    "Looks at source, diagnostics and test results before choosing what to change",
+    "Every edit is syntax-checked before it is written",
+    "Retries until your verify command passes, and moves to a stronger model when stuck"
    ]
   },
   "zh": {
-   "what": "用Almide编写的编码代理，先观察再编辑并验证",
+   "what": "读项目、改代码、跑测试：依据证据工作的编码智能体",
    "points": [
-    "observe、solve、polish命令",
-    "写入前语法检查",
-    "单一原生二进制文件"
+    "先看源码、诊断和测试结果，再决定改哪里",
+    "每次编辑都先过语法检查再写入",
+    "重试直到验证命令通过，卡住时换用更强的模型"
    ]
   }
  },
@@ -4598,6 +4598,32 @@
     "以Almide编写",
     "实现flying-squid",
     "轻量Minecraft服务器"
+   ]
+  }
+ },
+ "O6lvl4/comide": {
+  "ja": {
+   "what": "ターミナルで対話するコーディングエージェント。Claude Code、Codex、Aider の系譜",
+   "points": [
+    "何を見て何を変えるかを決め、編集とテストは golemide に任せる",
+    "道具はすでにあるプログラム：hew・gramide・golemide・ctxgate",
+    "Cloudflare・OpenAI 互換・Anthropic・Gemini・ローカル、どのモデルでも動く"
+   ]
+  },
+  "en": {
+   "what": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
+   "points": [
+    "Decides what to look at and what to change; golemide makes the edit and runs the tests",
+    "Its tools are programs that already exist: hew, gramide, golemide, ctxgate",
+    "Runs on Cloudflare, any OpenAI-compatible service, Anthropic, Gemini, a local server or your Claude login"
+   ]
+  },
+  "zh": {
+   "what": "终端里的编码智能体，与 Claude Code、Codex、Aider 一脉相承",
+   "points": [
+    "决定看什么、改什么；编辑与测试交给 golemide",
+    "工具都是现成的程序：hew、gramide、golemide、ctxgate",
+    "可跑在 Cloudflare、OpenAI 兼容服务、Anthropic、Gemini、本地服务器或你的 Claude 登录上"
    ]
   }
  }
