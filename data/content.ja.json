@@ -122,7 +122,7 @@
      "TypeScript（32）",
      "JavaScript（29）",
      "Python（28）",
-     "Shell（27）"
+     "Shell（28）"
     ]
    },
    {
@@ -217,7 +217,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "golemide · 2026年9月"
+    "value": "almide · 2026年9月"
    },
    {
     "key": "Almide で書いた割合",
@@ -236,7 +236,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "15,491",
+    "value": "15,730",
     "label": "コミット"
    },
    {
@@ -363,12 +363,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12813,
+    "count": 13032,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2211,
+    "count": 2231,
     "of": 114
    },
    {
@@ -406,7 +406,7 @@
    },
    {
     "name": "2026",
-    "count": 15242
+    "count": 15481
    }
   ]
  },
@@ -422,7 +422,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "12,552",
+     "value": "12,770",
      "label": "コミット"
     },
     {
@@ -437,7 +437,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12552
+     "count": 12770
     }
    ],
    "works": [
@@ -467,7 +467,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "9,944"
+       "value": "10,161"
       },
       {
        "label": "初回",
@@ -493,7 +493,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-09-30"
      }
     },
     {
@@ -642,7 +642,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "556"
+       "value": "557"
       },
       {
        "label": "初回",
@@ -660,7 +660,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -1530,11 +1530,11 @@
    "intro": "モデルがコードを読み、直し、測るための道具。構造で読む hew、構文木をつくる gramide と各言語のパッケージ、質を採点する codopsy、文脈を守る ctxgate、エージェントを閉じ込める porta、証拠に基づいて編集する golemide とそれに編集を任せる対話エージェント comide、その道具呼び出しを一つずつ閉じ込める onogoro、主張を出典と照合する emet、複数のエージェントを束ねる ccgrid。どれも自分の作業で毎日使うものから始まっています。",
    "figures": [
     {
-     "value": "26",
+     "value": "25",
      "label": "公開リポジトリ"
     },
     {
-     "value": "1,054",
+     "value": "1,050",
      "label": "コミット"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 1038
+     "count": 1034
     }
    ],
    "works": [
@@ -1583,7 +1583,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "271"
+       "value": "272"
       },
       {
        "label": "初回",
@@ -1605,7 +1605,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -1908,7 +1908,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "79"
+       "value": "81"
       },
       {
        "label": "初回",
@@ -1954,7 +1954,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "57"
+       "value": "59"
       },
       {
        "label": "初回",
@@ -2354,39 +2354,6 @@
      ],
      "order": {
       "date": "2026-09-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/onogoro",
-     "title": "onogoro",
-     "titleEn": "コーディングエージェントの作業場。道具はカーネルが強制するサンドボックスで動き、鍵は外に置いたまま",
-     "date": "2026年9月",
-     "format": "Python",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onogoro",
-     "tags": [
-      "Python",
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "9"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/onogoro"
-      }
-     ],
-     "order": {
-      "date": "2026-09-29"
      }
     },
     {
@@ -5700,7 +5667,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "257",
+     "value": "260",
      "label": "コミット"
     },
     {
@@ -5715,7 +5682,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 257
+     "count": 260
     }
    ],
    "works": [
@@ -5877,7 +5844,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "154"
+       "value": "157"
       },
       {
        "label": "初回",
@@ -5895,7 +5862,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -6104,11 +6071,11 @@
    "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
-     "value": "32",
+     "value": "33",
      "label": "公開リポジトリ"
     },
     {
-     "value": "192",
+     "value": "214",
      "label": "コミット"
     },
     {
@@ -6139,20 +6106,50 @@
     },
     {
      "name": "2026",
-     "count": 39
+     "count": 61
     }
    ],
    "works": [
     {
-     "image": "plates/ja/O6lvl4/line-bot-private.jpg",
-     "readme": {
-      "lead": "AWS SAMで作るGo製Lambda関数のサンプルテンプレート",
-      "points": [
-       "sam buildを包むMakefile",
-       "sam local start-apiでのローカル実行",
-       "sam deploy --guidedでのデプロイ"
-      ]
-     },
+     "image": "plates/ja/O6lvl4/aitrium.jpg",
+     "id": "O6lvl4/aitrium",
+     "title": "aitrium",
+     "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
+     "date": "2026年9月",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/aitrium",
+     "tags": [
+      "Python",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "22"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版",
+       "value": "v0.3.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/aitrium"
+      }
+     ],
+     "order": {
+      "date": "2026-09-29"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/line-bot-private",
      "title": "line-bot-private",
      "titleEn": "AWS SAMで作るGo製Lambda関数のサンプルテンプレート",

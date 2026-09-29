@@ -403,9 +403,9 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 79,
+  "commits": 81,
   "years": {
-   "2026": 79
+   "2026": 81
   },
   "first": "2026-09-08",
   "last": "2026-09-29",
@@ -457,9 +457,9 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 57,
+  "commits": 59,
   "years": {
-   "2026": 57
+   "2026": 59
   },
   "first": "2026-09-12",
   "last": "2026-09-29",
@@ -472,7 +472,7 @@
    "lang": "sh",
    "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
   },
-  "score": 10.1
+  "score": 10.2
  },
  {
   "full": "O6lvl4/codopsy",
@@ -608,6 +608,35 @@
   "score": 9.5
  },
  {
+  "full": "O6lvl4/aitrium",
+  "owner": "O6lvl4",
+  "name": "aitrium",
+  "url": "https://github.com/O6lvl4/aitrium",
+  "lead": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
+  "language": "Python",
+  "languages": [
+   "Python",
+   "Almide",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 22,
+  "years": {
+   "2026": 22
+  },
+  "first": "2026-09-27",
+  "last": "2026-09-29",
+  "tag": "v0.3.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "curl -fsSL https://raw.githubusercontent.com/O6lvl4/aitrium/main/install.sh | sh"
+  },
+  "score": 9.4
+ },
+ {
   "full": "O6lvl4/onomly",
   "owner": "O6lvl4",
   "name": "onomly",
@@ -718,12 +747,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 154,
+  "commits": 157,
   "years": {
-   "2026": 154
+   "2026": 157
   },
   "first": "2026-09-24",
-  "last": "2026-09-28",
+  "last": "2026-09-29",
   "license": "Apache-2.0",
   "topics": [],
   "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
@@ -1536,33 +1565,6 @@
   "sample": {
    "lang": "",
    "code": "LLM ──toolUse──▶ MCP client ──▶ onetool-mcp ──▶ OneTool ──▶ Provider ──▶ API\n                     ▲               │              │\n                     └─ elicitation ─┘         policy / validate /\n                    (ask the human)            redact / shrink"
-  },
-  "score": 5.2
- },
- {
-  "full": "O6lvl4/onogoro",
-  "owner": "O6lvl4",
-  "name": "onogoro",
-  "url": "https://github.com/O6lvl4/onogoro",
-  "lead": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
-  "language": "Python",
-  "languages": [
-   "Python",
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 9,
-  "years": {
-   "2026": 9
-  },
-  "first": "2026-09-27",
-  "last": "2026-09-29",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "onogoro                       # comide's conversation, every tool's command confined\nonogoro -p \"fix the tests\"    # one request; any of comide's arguments work"
   },
   "score": 5.2
  },
@@ -3236,12 +3238,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 9944,
+  "commits": 10161,
   "years": {
-   "2026": 9944
+   "2026": 10161
   },
   "first": "2026-03-07",
-  "last": "2026-09-29",
+  "last": "2026-09-30",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3273,12 +3275,12 @@
    "Almide"
   ],
   "stars": 3,
-  "commits": 271,
+  "commits": 272,
   "years": {
-   "2026": 271
+   "2026": 272
   },
   "first": "2026-04-07",
-  "last": "2026-09-28",
+  "last": "2026-09-29",
   "tag": "v0.6.1",
   "license": "Apache-2.0",
   "topics": [
@@ -3382,12 +3384,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 556,
+  "commits": 557,
   "years": {
-   "2026": 556
+   "2026": 557
   },
   "first": "2026-04-12",
-  "last": "2026-09-28",
+  "last": "2026-09-29",
   "license": "MIT",
   "topics": [
    "almide",

@@ -122,7 +122,7 @@
      "TypeScript（32）",
      "JavaScript（29）",
      "Python（28）",
-     "Shell（27）"
+     "Shell（28）"
     ]
    },
    {
@@ -217,7 +217,7 @@
    },
    {
     "key": "Last touched",
-    "value": "golemide · Sep 2026"
+    "value": "almide · Sep 2026"
    },
    {
     "key": "Written in Almide",
@@ -236,7 +236,7 @@
     "label": "Repositories"
    },
    {
-    "value": "15,491",
+    "value": "15,730",
     "label": "Commits"
    },
    {
@@ -363,12 +363,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12813,
+    "count": 13032,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2211,
+    "count": 2231,
     "of": 114
    },
    {
@@ -406,7 +406,7 @@
    },
    {
     "name": "2026",
-    "count": 15242
+    "count": 15481
    }
   ]
  },
@@ -422,7 +422,7 @@
      "label": "Repositories"
     },
     {
-     "value": "12,552",
+     "value": "12,770",
      "label": "Commits"
     },
     {
@@ -437,7 +437,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12552
+     "count": 12770
     }
    ],
    "works": [
@@ -467,7 +467,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "9,944"
+       "value": "10,161"
       },
       {
        "label": "Started",
@@ -493,7 +493,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-09-30"
      }
     },
     {
@@ -642,7 +642,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "556"
+       "value": "557"
       },
       {
        "label": "Started",
@@ -660,7 +660,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -1530,11 +1530,11 @@
    "intro": "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence and comide, a terminal agent, hands its edits to golemide, onogoro confines each of its tool calls, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
    "figures": [
     {
-     "value": "26",
+     "value": "25",
      "label": "Repositories"
     },
     {
-     "value": "1,054",
+     "value": "1,050",
      "label": "Commits"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 1038
+     "count": 1034
     }
    ],
    "works": [
@@ -1583,7 +1583,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "271"
+       "value": "272"
       },
       {
        "label": "Started",
@@ -1605,7 +1605,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -1908,7 +1908,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "79"
+       "value": "81"
       },
       {
        "label": "Started",
@@ -1954,7 +1954,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "57"
+       "value": "59"
       },
       {
        "label": "Started",
@@ -2354,39 +2354,6 @@
      ],
      "order": {
       "date": "2026-09-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/onogoro",
-     "title": "onogoro",
-     "titleEn": "A world for coding agents to work in: tools run in a sandbox the kernel enforces, and the keys stay outside it",
-     "date": "Sep 2026",
-     "format": "Python",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onogoro",
-     "tags": [
-      "Python",
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "9"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/onogoro"
-      }
-     ],
-     "order": {
-      "date": "2026-09-29"
      }
     },
     {
@@ -5700,7 +5667,7 @@
      "label": "Repositories"
     },
     {
-     "value": "257",
+     "value": "260",
      "label": "Commits"
     },
     {
@@ -5715,7 +5682,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 257
+     "count": 260
     }
    ],
    "works": [
@@ -5877,7 +5844,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "154"
+       "value": "157"
       },
       {
        "label": "Started",
@@ -5895,7 +5862,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -6104,11 +6071,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "32",
+     "value": "33",
      "label": "Repositories"
     },
     {
-     "value": "192",
+     "value": "214",
      "label": "Commits"
     },
     {
@@ -6139,20 +6106,50 @@
     },
     {
      "name": "2026",
-     "count": 39
+     "count": 61
     }
    ],
    "works": [
     {
-     "image": "plates/en/O6lvl4/line-bot-private.jpg",
-     "readme": {
-      "lead": "A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.",
-      "points": [
-       "Makefile wrapping sam build",
-       "Local API via sam local start-api",
-       "Deploy with sam deploy --guided"
-      ]
-     },
+     "image": "plates/en/O6lvl4/aitrium.jpg",
+     "id": "O6lvl4/aitrium",
+     "title": "aitrium",
+     "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
+     "date": "Sep 2026",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/aitrium",
+     "tags": [
+      "Python",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "22"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.3.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/aitrium"
+      }
+     ],
+     "order": {
+      "date": "2026-09-29"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/line-bot-private",
      "title": "line-bot-private",
      "titleEn": "A sample AWS SAM template for a Go Lambda function behind API Gateway, with build and deploy steps.",

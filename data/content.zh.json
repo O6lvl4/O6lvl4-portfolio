@@ -122,7 +122,7 @@
      "TypeScript（32）",
      "JavaScript（29）",
      "Python（28）",
-     "Shell（27）"
+     "Shell（28）"
     ]
    },
    {
@@ -217,7 +217,7 @@
    },
    {
     "key": "最近更新",
-    "value": "golemide · 2026年9月"
+    "value": "almide · 2026年9月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -236,7 +236,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "15,491",
+    "value": "15,730",
     "label": "提交"
    },
    {
@@ -363,12 +363,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 12813,
+    "count": 13032,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2211,
+    "count": 2231,
     "of": 114
    },
    {
@@ -406,7 +406,7 @@
    },
    {
     "name": "2026",
-    "count": 15242
+    "count": 15481
    }
   ]
  },
@@ -422,7 +422,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "12,552",
+     "value": "12,770",
      "label": "提交"
     },
     {
@@ -437,7 +437,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12552
+     "count": 12770
     }
    ],
    "works": [
@@ -467,7 +467,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "9,944"
+       "value": "10,161"
       },
       {
        "label": "首次",
@@ -493,7 +493,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-09-30"
      }
     },
     {
@@ -642,7 +642,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "556"
+       "value": "557"
       },
       {
        "label": "首次",
@@ -660,7 +660,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -1530,11 +1530,11 @@
    "intro": "让模型读代码、改代码、量代码的工具：按结构阅读的 hew、构建语法树的 gramide 及各语言包、给质量评分的 codopsy、守住上下文的 ctxgate、把智能体关进沙箱的 porta、依据证据编辑的 golemide 与把编辑交给它的对话智能体 comide、把它的每次工具调用逐一关进沙箱的 onogoro、把主张与出处核对的 emet、把多个智能体编成一队的 ccgrid。每一个都源自当天的实际需要",
    "figures": [
     {
-     "value": "26",
+     "value": "25",
      "label": "公开仓库"
     },
     {
-     "value": "1,054",
+     "value": "1,050",
      "label": "提交"
     },
     {
@@ -1553,7 +1553,7 @@
     },
     {
      "name": "2026",
-     "count": 1038
+     "count": 1034
     }
    ],
    "works": [
@@ -1583,7 +1583,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "271"
+       "value": "272"
       },
       {
        "label": "首次",
@@ -1605,7 +1605,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -1908,7 +1908,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "79"
+       "value": "81"
       },
       {
        "label": "首次",
@@ -1954,7 +1954,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "57"
+       "value": "59"
       },
       {
        "label": "首次",
@@ -2354,39 +2354,6 @@
      ],
      "order": {
       "date": "2026-09-03"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/onogoro",
-     "title": "onogoro",
-     "titleEn": "给编码智能体干活的地方：工具在内核强制的沙箱里运行，密钥留在外面",
-     "date": "2026年9月",
-     "format": "Python",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onogoro",
-     "tags": [
-      "Python",
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "9"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/onogoro"
-      }
-     ],
-     "order": {
-      "date": "2026-09-29"
      }
     },
     {
@@ -5700,7 +5667,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "257",
+     "value": "260",
      "label": "提交"
     },
     {
@@ -5715,7 +5682,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 257
+     "count": 260
     }
    ],
    "works": [
@@ -5877,7 +5844,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "154"
+       "value": "157"
       },
       {
        "label": "首次",
@@ -5895,7 +5862,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-29"
      }
     },
     {
@@ -6104,11 +6071,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "32",
+     "value": "33",
      "label": "公开仓库"
     },
     {
-     "value": "192",
+     "value": "214",
      "label": "提交"
     },
     {
@@ -6139,20 +6106,50 @@
     },
     {
      "name": "2026",
-     "count": 39
+     "count": 61
     }
    ],
    "works": [
     {
-     "image": "plates/zh/O6lvl4/line-bot-private.jpg",
-     "readme": {
-      "lead": "基于AWS SAM的Go语言Lambda函数示例模板",
-      "points": [
-       "Makefile封装sam build",
-       "sam local start-api本地运行",
-       "sam deploy --guided部署"
-      ]
-     },
+     "image": "plates/zh/O6lvl4/aitrium.jpg",
+     "id": "O6lvl4/aitrium",
+     "title": "aitrium",
+     "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
+     "date": "2026年9月",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/aitrium",
+     "tags": [
+      "Python",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "22"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.3.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/aitrium"
+      }
+     ],
+     "order": {
+      "date": "2026-09-29"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/line-bot-private",
      "title": "line-bot-private",
      "titleEn": "基于AWS SAM的Go语言Lambda函数示例模板",
