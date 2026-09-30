@@ -38,7 +38,7 @@ const OGHAM = "᚛ᚑᚌᚋᚐ᚜";
  * project shows it, rather than a screenshot of anything.
  */
 const LOGOS = {
-  "almide/almide": { file: "assets/almide-banner.jpg", tint: "#08080a", type: "image/jpeg" },
+  "almide/almide": { file: "assets/almide-cover.png", tint: "#f7fafa", type: "image/png" },
 };
 
 const SOURCE = {
