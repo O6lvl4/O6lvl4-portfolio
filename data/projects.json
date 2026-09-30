@@ -548,6 +548,36 @@
   "score": 10
  },
  {
+  "full": "O6lvl4/sprid",
+  "owner": "O6lvl4",
+  "name": "sprid",
+  "url": "https://github.com/O6lvl4/sprid",
+  "lead": "A terminal emulator written in Almide, with scrollback under a hard memory budget",
+  "heading": "sprid",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Rust",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 44,
+  "years": {
+   "2026": 44
+  },
+  "first": "2026-09-30",
+  "last": "2026-10-01",
+  "tag": "v0.2.0",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
+  },
+  "score": 9.9
+ },
+ {
   "full": "O6lvl4/gramide-javascript",
   "owner": "O6lvl4",
   "name": "gramide-javascript",
@@ -3238,12 +3268,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 10161,
+  "commits": 10424,
   "years": {
-   "2026": 10161
+   "2026": 10424
   },
   "first": "2026-03-07",
-  "last": "2026-09-30",
+  "last": "2026-10-01",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3255,7 +3285,8 @@
    "statically-typed",
    "webassembly"
   ],
-  "plate": "site",
+  "og": "https://repository-images.githubusercontent.com/1175180941/d70734f5-a0a1-4ff7-b413-db5e28d28780",
+  "plate": "og",
   "sample": {
    "lang": "almd",
    "code": "type Shape =\n  | Circle(Float)\n  | Square(Float)\n  | Triangle(Float, Float)   // the edit\n\nfn area(s: Shape) -> Float =\n  match s {\n    Circle(r) => 3.14159 * r * r\n    Square(w) => w * w\n  }"
@@ -3316,12 +3347,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1511,
+  "commits": 1520,
   "years": {
-   "2026": 1511
+   "2026": 1520
   },
   "first": "2026-03-07",
-  "last": "2026-09-28",
+  "last": "2026-09-30",
   "tag": "v1.0.0",
   "license": "NOASSERTION",
   "topics": [
@@ -3349,15 +3380,15 @@
   "languages": [
    "JavaScript",
    "TypeScript",
-   "Almide"
+   "CSS"
   ],
   "stars": 1,
-  "commits": 64,
+  "commits": 66,
   "years": {
-   "2026": 64
+   "2026": 66
   },
   "first": "2026-03-27",
-  "last": "2026-09-07",
+  "last": "2026-10-01",
   "topics": [
    "almide",
    "documentation"
@@ -3384,12 +3415,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 557,
+  "commits": 558,
   "years": {
-   "2026": 557
+   "2026": 558
   },
   "first": "2026-04-12",
-  "last": "2026-09-29",
+  "last": "2026-09-30",
   "license": "MIT",
   "topics": [
    "almide",
@@ -3607,12 +3638,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 159,
+  "commits": 164,
   "years": {
-   "2026": 159
+   "2026": 164
   },
   "first": "2026-03-08",
-  "last": "2026-09-27",
+  "last": "2026-10-01",
   "topics": [
    "almide",
    "playground",
@@ -3624,7 +3655,7 @@
    "lang": "",
    "code": "\n## Visual output\n\nThe playground renders what you print. If a program's stdout is an SVG\ndocument (`<svg …>`) or an ASCII PPM image (`P3 …`), the **Visual** tab shows\nit as an image — vectors via a script-disabled blob `<img>`, pixels via a\ncanvas. The same program prints a valid `.svg` / `.ppm` file natively, so the\nbyte-parity harness still applies. See Examples → Graphics (Mandelbrot,\ngenerative SVG).\n\n## Embedding\n\n`?embed=1` renders a minimal chrome for iframes — no header, no AI bar, just\ntabs, editor, output and a slim Run bar with an \"Open in Playground\" escape\nhatch. `&hide=util.almd` hides tabs from the strip while still compiling them\n(Kotlin-style hidden setup code). Combine with `?example=` or `#code=`:"
   },
-  "score": 8.2
+  "score": 8.3
  },
  {
   "full": "almide/yaml",
@@ -3757,12 +3788,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 54,
+  "commits": 55,
   "years": {
-   "2026": 54
+   "2026": 55
   },
   "first": "2026-03-28",
-  "last": "2026-07-25",
+  "last": "2026-10-01",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4082,13 +4113,14 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 95,
+  "commits": 96,
   "years": {
-   "2026": 95
+   "2026": 96
   },
   "first": "2026-05-08",
-  "last": "2026-07-27",
+  "last": "2026-09-30",
   "tag": "v0.1.0",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -4096,6 +4128,42 @@
    "code": "git clone https://github.com/O6lvl4/nendo.git\ncd nendo\npip install -e ."
   },
   "score": 10.9
+ },
+ {
+  "full": "almide-graphics/nn",
+  "owner": "almide-graphics",
+  "name": "nn",
+  "url": "https://github.com/almide-graphics/nn",
+  "lead": "Neural network primitives for Almide — built on matrix stdlib",
+  "heading": "nn — Neural Network primitives for Almide",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Rust"
+  ],
+  "stars": 0,
+  "commits": 75,
+  "years": {
+   "2026": 75
+  },
+  "first": "2026-04-12",
+  "last": "2026-09-30",
+  "tag": "v0.1.0",
+  "license": "MIT",
+  "topics": [
+   "almide",
+   "machine-learning",
+   "matrix",
+   "neural-network",
+   "wasm"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide build src/whisper.almd -o whisper          # native\nalmide build src/whisper.almd -o whisper.wasm --target wasm\nalmide run examples/_bench_attn_f32.almd\nalmide test                                       # nn/src tests"
+  },
+  "score": 10.5
  },
  {
   "full": "almide-graphics/obsid",
@@ -4112,13 +4180,14 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 48,
+  "commits": 49,
   "years": {
-   "2026": 48
+   "2026": 49
   },
   "first": "2026-04-09",
-  "last": "2026-07-25",
+  "last": "2026-09-30",
   "tag": "v0.2.0",
+  "license": "MIT",
   "topics": [
    "3d",
    "almide",
@@ -4134,41 +4203,6 @@
   "score": 10
  },
  {
-  "full": "almide-graphics/nn",
-  "owner": "almide-graphics",
-  "name": "nn",
-  "url": "https://github.com/almide-graphics/nn",
-  "lead": "Neural network primitives for Almide — built on matrix stdlib",
-  "heading": "nn — Neural Network primitives for Almide",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Rust"
-  ],
-  "stars": 0,
-  "commits": 74,
-  "years": {
-   "2026": 74
-  },
-  "first": "2026-04-12",
-  "last": "2026-06-28",
-  "tag": "v0.1.0",
-  "topics": [
-   "almide",
-   "machine-learning",
-   "matrix",
-   "neural-network",
-   "wasm"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide build src/whisper.almd -o whisper          # native\nalmide build src/whisper.almd -o whisper.wasm --target wasm\nalmide run examples/_bench_attn_f32.almd\nalmide test                                       # nn/src tests"
-  },
-  "score": 8.5
- },
- {
   "full": "almide-graphics/lumen",
   "owner": "almide-graphics",
   "name": "lumen",
@@ -4180,13 +4214,14 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 2,
+  "commits": 3,
   "years": {
-   "2026": 2
+   "2026": 3
   },
   "first": "2026-04-12",
-  "last": "2026-04-12",
+  "last": "2026-09-30",
   "tag": "v0.1.0",
+  "license": "MIT",
   "topics": [
    "almide",
    "graphics",
@@ -4199,7 +4234,36 @@
    "lang": "toml",
    "code": "[dependencies]\nlumen = { git = \"https://github.com/almide/lumen.git\" }"
   },
-  "score": 7
+  "score": 9.1
+ },
+ {
+  "full": "almide-graphics/snaidhm",
+  "owner": "almide-graphics",
+  "name": "snaidhm",
+  "url": "https://github.com/almide-graphics/snaidhm",
+  "lead": "Compute-shader-first 2D/3D renderer for Almide. Celtic knot of paths.",
+  "heading": "snaidhm",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript",
+   "Rust"
+  ],
+  "stars": 0,
+  "commits": 127,
+  "years": {
+   "2026": 127
+  },
+  "first": "2026-05-13",
+  "last": "2026-09-30",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "snaidhm\n├── gpu/       WebGPU abstraction, frame arena, pipeline management\n├── path/      2D path renderer (flatten → tile → sort → fine raster)\n├── mesh/      3D vertex pipeline\n├── text/      Font reader (OpenType/TrueType → glyph outlines → Path)\n└── image/     Texture decode"
+  },
+  "score": 7.5
  },
  {
   "full": "almide-graphics/ceangal",
@@ -4208,6 +4272,7 @@
   "url": "https://github.com/almide-graphics/ceangal",
   "site": "https://almide-graphics.github.io/ceangal/",
   "lead": "UI framework for Almide — layout, widget, interaction layer on top of snaidhm",
+  "heading": "assemble into the directory you serve",
   "language": "Almide",
   "languages": [
    "Almide",
@@ -4215,12 +4280,12 @@
    "HTML"
   ],
   "stars": 0,
-  "commits": 72,
+  "commits": 97,
   "years": {
-   "2026": 72
+   "2026": 97
   },
   "first": "2026-05-13",
-  "last": "2026-07-25",
+  "last": "2026-09-30",
   "license": "MIT",
   "topics": [],
   "plate": "site",
@@ -4228,81 +4293,36 @@
    "lang": "",
    "code": "ceangal  ← layout, widget, interaction\n  └─ snaidhm  ← GPU path renderer, SDF text, images\n       └─ lumen  ← vec, mat, color, quat\n            └─ almide  ← language, WASM/WGSL codegen"
   },
-  "score": 6.4
+  "score": 6.9
  },
  {
-  "full": "almide-graphics/cruth",
+  "full": "almide-graphics/almide-shell",
   "owner": "almide-graphics",
-  "name": "cruth",
-  "url": "https://github.com/almide-graphics/cruth",
-  "lead": "VRM/glTF character layer for Almide — parse, geometry, morph targets, expressions. Renderer-agnostic (cruth = form, Irish).",
-  "heading": "cruth",
+  "name": "almide-shell",
+  "url": "https://github.com/almide-graphics/almide-shell",
+  "lead": "A desktop shell for Hyprland written in Almide — bar, launcher, notifications",
+  "heading": "almide-shell",
   "language": "Almide",
   "languages": [
    "Almide",
-   "JavaScript"
+   "Shell",
+   "Python"
   ],
   "stars": 0,
-  "commits": 2,
+  "commits": 21,
   "years": {
-   "2026": 2
+   "2026": 21
   },
-  "first": "2026-07-28",
-  "last": "2026-07-28",
+  "first": "2026-09-29",
+  "last": "2026-09-30",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "almide",
-   "code": "import cruth\n\n// Stage the file into cruth's arena, then read it in place.\nlet prims = cruth.open_staged(file_length)\nlet verts = cruth.build_all()\ncruth.compute_bounds()\nlet exprs = cruth.index_expressions()\n\n// Upload however you like — cruth only hands out pointers.\nupload(cruth.vertex_ptr(), verts * 32, cruth.index_ptr(), cruth.built_index_count())\n\n// Drive the face.\ncruth.clear_target_weights()\ncruth.set_expression(mouth_a, 0.8)\ncruth.apply_morphs()"
+   "code": "let LEFT: List[Module] = [Workspaces]\nlet CENTER: List[Module] = [Clock(\"%a %b %d  %H:%M\")]\nlet RIGHT: List[Module] = [Volume, Battery]"
   },
-  "score": 5
- },
- {
-  "full": "almide-graphics/ceangal-anime",
-  "owner": "almide-graphics",
-  "name": "ceangal-anime",
-  "url": "https://github.com/almide-graphics/ceangal-anime",
-  "lead": "Animation engine for Almide — anime.js-inspired tween/easing/timeline/stagger",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "HTML"
-  ],
-  "stars": 0,
-  "commits": 6,
-  "years": {
-   "2026": 6
-  },
-  "first": "2026-05-18",
-  "last": "2026-05-18",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "almide",
-   "code": "import ceangal_anime.easing as ease\nimport ceangal_anime.tween as tw\nimport ceangal_anime.timeline as tl\nimport ceangal_anime.stagger as stag\n\n// Single tween\nlet t0 = tw.create(0.0, 100.0, 800.0)\nlet t1 = tw.with_easing(t0, ease.OUT_ELASTIC)\nlet t2 = tw.with_delay(t1, 200.0)\n\n// Tick each frame\nlet t3 = tw.tick(t2, 16.0)\nlet value = tw.value(t3)  // → current interpolated value\n\n// Timeline\nlet timeline = tl.create()\n  |> tl.add(tw.create(0.0, 1.0, 500.0), 0.0)\n  |> tl.sequence(tw.create(0.0, 1.0, 500.0))\n\n// Stagger delays\nlet delay = stag.from_center(index, total, 60.0)"
-  },
-  "score": 3.1
- },
- {
-  "full": "almide-graphics/ceangal-native",
-  "owner": "almide-graphics",
-  "name": "ceangal-native",
-  "url": "https://github.com/almide-graphics/ceangal-native",
-  "lead": "Native wgpu backend for ceangal — proof of concept",
-  "language": "Rust",
-  "languages": [
-   "Rust"
-  ],
-  "stars": 0,
-  "commits": 5,
-  "years": {
-   "2026": 5
-  },
-  "first": "2026-05-19",
-  "last": "2026-05-19",
-  "topics": [],
-  "plate": "code",
-  "score": 3.1
+  "score": 5.4
  },
  {
   "full": "almide-graphics/slabhra",
@@ -4317,19 +4337,97 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 7,
+  "commits": 8,
   "years": {
-   "2026": 7
+   "2026": 8
   },
   "first": "2026-06-15",
-  "last": "2026-06-16",
+  "last": "2026-09-30",
+  "license": "MIT",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "",
    "code": "slabhra/\n  src/\n    tape.almd     reverse-mode autograd tape (flat, in-place O(1) append, depth-ordered backward)\n    ops.almd      ops + their vjp (gradients delegate to the same forward kernels)\n    optim.almd    SGD, Adam\n    nn.almd       layers / modules            (later)\n  examples/\n    mlp/          tiny MLP, verified against PyTorch\n    dlgn/         differentiable logic-gate networks (gate-count / depth Pareto)"
   },
-  "score": 3.1
+  "score": 5.2
+ },
+ {
+  "full": "almide-graphics/ceangal-anime",
+  "owner": "almide-graphics",
+  "name": "ceangal-anime",
+  "url": "https://github.com/almide-graphics/ceangal-anime",
+  "lead": "Animation engine for Almide — anime.js-inspired tween/easing/timeline/stagger",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "HTML"
+  ],
+  "stars": 0,
+  "commits": 7,
+  "years": {
+   "2026": 7
+  },
+  "first": "2026-05-18",
+  "last": "2026-09-30",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import ceangal_anime.easing as ease\nimport ceangal_anime.tween as tw\nimport ceangal_anime.timeline as tl\nimport ceangal_anime.stagger as stag\n\n// Single tween\nlet t0 = tw.create(0.0, 100.0, 800.0)\nlet t1 = tw.with_easing(t0, ease.OUT_ELASTIC)\nlet t2 = tw.with_delay(t1, 200.0)\n\n// Tick each frame\nlet t3 = tw.tick(t2, 16.0)\nlet value = tw.value(t3)  // → current interpolated value\n\n// Timeline\nlet timeline = tl.create()\n  |> tl.add(tw.create(0.0, 1.0, 500.0), 0.0)\n  |> tl.sequence(tw.create(0.0, 1.0, 500.0))\n\n// Stagger delays\nlet delay = stag.from_center(index, total, 60.0)"
+  },
+  "score": 5.1
+ },
+ {
+  "full": "almide-graphics/ceangal-native",
+  "owner": "almide-graphics",
+  "name": "ceangal-native",
+  "url": "https://github.com/almide-graphics/ceangal-native",
+  "lead": "Native wgpu backend for ceangal — proof of concept",
+  "language": "Rust",
+  "languages": [
+   "Rust"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-05-19",
+  "last": "2026-09-30",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
+ },
+ {
+  "full": "almide-graphics/cruth",
+  "owner": "almide-graphics",
+  "name": "cruth",
+  "url": "https://github.com/almide-graphics/cruth",
+  "lead": "VRM/glTF character layer for Almide — parse, geometry, morph targets, expressions. Renderer-agnostic (cruth = form, Irish).",
+  "heading": "cruth",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 3,
+  "years": {
+   "2026": 3
+  },
+  "first": "2026-07-28",
+  "last": "2026-09-30",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import cruth\n\n// Stage the file into cruth's arena, then read it in place.\nlet prims = cruth.open_staged(file_length)\nlet verts = cruth.build_all()\ncruth.compute_bounds()\nlet exprs = cruth.index_expressions()\n\n// Upload however you like — cruth only hands out pointers.\nupload(cruth.vertex_ptr(), verts * 32, cruth.index_ptr(), cruth.built_index_count())\n\n// Drive the face.\ncruth.clear_target_weights()\ncruth.set_expression(mouth_a, 0.8)\ncruth.apply_morphs()"
+  },
+  "score": 5.1
  },
  {
   "full": "almide-ai/almai",

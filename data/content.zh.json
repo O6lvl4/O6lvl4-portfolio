@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "178 repos",
+  "life": "181 repos",
   "avatar": "assets/avatar.png",
   "role": "从语言开始，构建开发工具。",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公开仓库 178 个",
+  "kicker": "公开仓库 181 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 178 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
+  "note": "这一页并列了 181 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
   "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
@@ -118,18 +118,18 @@
    {
     "heading": "常写的语言",
     "items": [
-     "Almide（88）",
+     "Almide（90）",
      "TypeScript（32）",
-     "JavaScript（29）",
-     "Python（28）",
-     "Shell（28）"
+     "Python（30）",
+     "JavaScript（30）",
+     "Shell（29）"
     ]
    },
    {
     "heading": "其他",
     "items": [
-     "HTML",
      "Rust",
+     "HTML",
      "Go",
      "CSS",
      "C",
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "开始了 142 个",
-    "lead": "almide、porta、als、ccgrid 等 138 个",
+    "title": "开始了 145 个",
+    "lead": "almide、porta、als、ccgrid 等 141 个",
     "tags": [
      "Rust",
      "Almide",
@@ -217,12 +217,12 @@
    },
    {
     "key": "最近更新",
-    "value": "almide · 2026年9月"
+    "value": "sprid · 2026年10月"
    },
    {
     "key": "用 Almide 写的比例",
-    "value": "40%",
-    "fill": 0.4
+    "value": "41%",
+    "fill": 0.41
    },
    {
     "key": "2026 年的提交",
@@ -232,11 +232,11 @@
   ],
   "figures": [
    {
-    "value": "178",
+    "value": "181",
     "label": "公开仓库"
    },
    {
-    "value": "15,730",
+    "value": "16,236",
     "label": "提交"
    },
    {
@@ -251,7 +251,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 71,
+    "count": 74,
     "color": "currentColor"
    },
    {
@@ -341,7 +341,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 114
+    "count": 115
    },
    {
     "name": "almide",
@@ -349,7 +349,7 @@
    },
    {
     "name": "almide-graphics",
-    "count": 9
+    "count": 11
    },
    {
     "name": "almide-ai",
@@ -363,18 +363,18 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 13032,
+    "count": 13313,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2231,
-    "of": 114
+    "count": 2275,
+    "of": 115
    },
    {
     "name": "almide-graphics",
-    "count": 311,
-    "of": 9
+    "count": 492,
+    "of": 11
    },
    {
     "name": "almd-mc",
@@ -406,7 +406,7 @@
    },
    {
     "name": "2026",
-    "count": 15481
+    "count": 15987
    }
   ]
  },
@@ -422,7 +422,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "12,770",
+     "value": "13,051",
      "label": "提交"
     },
     {
@@ -437,7 +437,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 12770
+     "count": 13051
     }
    ],
    "works": [
@@ -454,7 +454,7 @@
      "id": "almide/almide",
      "title": "almide",
      "titleEn": "无论被AI改写多少次，代码都能继续通过的语言",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Rust",
      "credit": "almide",
      "url": "https://github.com/almide/almide",
@@ -467,7 +467,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "10,161"
+       "value": "10,424"
       },
       {
        "label": "首次",
@@ -493,7 +493,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-10-01"
      }
     },
     {
@@ -514,7 +514,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,511"
+       "value": "1,520"
       },
       {
        "label": "首次",
@@ -536,7 +536,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-09-30"
      }
     },
     {
@@ -586,20 +586,20 @@
      "id": "almide/docs",
      "title": "docs",
      "titleEn": "Almide语言文档站,示例可在浏览器运行",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/docs",
      "tags": [
       "JavaScript",
       "TypeScript",
-      "Almide",
+      "CSS",
       "almide"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "64"
+       "value": "66"
       },
       {
        "label": "首次",
@@ -621,7 +621,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-07"
+      "date": "2026-10-01"
      }
     },
     {
@@ -642,7 +642,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "557"
+       "value": "558"
       },
       {
        "label": "首次",
@@ -660,7 +660,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-09-30"
      }
     },
     {
@@ -824,7 +824,7 @@
      "id": "almide/playground",
      "title": "playground",
      "titleEn": "在浏览器中编写并运行Almide代码的在线playground",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/playground",
@@ -837,7 +837,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "159"
+       "value": "164"
       },
       {
        "label": "首次",
@@ -855,7 +855,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-27"
+      "date": "2026-10-01"
      }
     },
     {
@@ -863,7 +863,7 @@
      "id": "almide/almide-lander",
      "title": "almide-lander",
      "titleEn": "将Almide模块导出为21种语言原生包的工具",
-     "date": "2026年7月",
+     "date": "2026年10月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-lander",
@@ -876,7 +876,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "54"
+       "value": "55"
       },
       {
        "label": "首次",
@@ -890,7 +890,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-25"
+      "date": "2026-10-01"
      }
     },
     {
@@ -3610,11 +3610,11 @@
    "intro": "在 Almide 里作画的那一层：GPU 原生 UI（ceangal）与它的动画引擎（ceangal-anime）、从 WASM 驱动 Canvas 与 WebGL（obsid）、纯数学基元（lumen）、VRM/glTF 角色层（cruth）与文件本身的工具箱（nendo）、神经网络基本部件（nn），以及带反向模式 autograd 的可微编程基础（slabhra）",
    "figures": [
     {
-     "value": "9",
+     "value": "11",
      "label": "公开仓库"
     },
     {
-     "value": "311",
+     "value": "492",
      "label": "提交"
     },
     {
@@ -3629,7 +3629,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 311
+     "count": 492
     }
    ],
    "works": [
@@ -3646,7 +3646,7 @@
      "id": "almide-graphics/nendo",
      "title": "nendo",
      "titleEn": "用于检查、编辑和定制3D头像的工具包",
-     "date": "2026年7月",
+     "date": "2026年9月",
      "format": "HTML",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/nendo",
@@ -3658,7 +3658,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "95"
+       "value": "96"
       },
       {
        "label": "首次",
@@ -3676,7 +3676,46 @@
       }
      ],
      "order": {
-      "date": "2026-07-27"
+      "date": "2026-09-30"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/nn",
+     "title": "nn",
+     "titleEn": "基于matrix标准库的Almide Transformer与信号处理库",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/nn",
+     "tags": [
+      "Almide",
+      "Python",
+      "Rust",
+      "almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "75"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-graphics/nn"
+      }
+     ],
+     "order": {
+      "date": "2026-09-30"
      }
     },
     {
@@ -3684,7 +3723,7 @@
      "id": "almide-graphics/obsid",
      "title": "obsid",
      "titleEn": "面向Almide的图形运行时，通过WASM支持2D、WebGL与3D",
-     "date": "2026年7月",
+     "date": "2026年9月",
      "format": "JavaScript",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/obsid",
@@ -3697,7 +3736,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "48"
+       "value": "49"
       },
       {
        "label": "首次",
@@ -3719,46 +3758,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-graphics/nn",
-     "title": "nn",
-     "titleEn": "基于matrix标准库的Almide Transformer与信号处理库",
-     "date": "2026年6月",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/nn",
-     "tags": [
-      "Almide",
-      "Python",
-      "Rust",
-      "almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "74"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide-graphics/nn"
-      }
-     ],
-     "order": {
-      "date": "2026-06-28"
+      "date": "2026-09-30"
      }
     },
     {
@@ -3766,7 +3766,7 @@
      "id": "almide-graphics/lumen",
      "title": "lumen",
      "titleEn": "Almide的纯图形数学基础库",
-     "date": "2026年4月",
+     "date": "2026年9月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/lumen",
@@ -3779,7 +3779,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "2"
+       "value": "3"
       },
       {
        "label": "首次",
@@ -3797,7 +3797,41 @@
       }
      ],
      "order": {
-      "date": "2026-04-12"
+      "date": "2026-09-30"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/snaidhm",
+     "title": "snaidhm",
+     "titleEn": "Compute-shader-first 2D/3D renderer for Almide. Celtic knot of paths.",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/snaidhm",
+     "tags": [
+      "Almide",
+      "JavaScript",
+      "Rust"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "127"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-graphics/snaidhm"
+      }
+     ],
+     "order": {
+      "date": "2026-09-30"
      }
     },
     {
@@ -3805,7 +3839,7 @@
      "id": "almide-graphics/ceangal",
      "title": "ceangal",
      "titleEn": "面向Almide的GPU原生UI框架",
-     "date": "2026年7月",
+     "date": "2026年9月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/ceangal",
@@ -3817,7 +3851,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "72"
+       "value": "97"
       },
       {
        "label": "首次",
@@ -3835,40 +3869,74 @@
       }
      ],
      "order": {
-      "date": "2026-07-25"
+      "date": "2026-09-30"
      }
     },
     {
      "image": "",
-     "id": "almide-graphics/cruth",
-     "title": "cruth",
-     "titleEn": "Almide的VRM/glTF角色层，含解析与表情",
-     "date": "2026年7月",
+     "id": "almide-graphics/almide-shell",
+     "title": "almide-shell",
+     "titleEn": "A desktop shell for Hyprland written in Almide — bar, launcher, notifications",
+     "date": "2026年9月",
      "format": "Almide",
      "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/cruth",
+     "url": "https://github.com/almide-graphics/almide-shell",
      "tags": [
       "Almide",
-      "JavaScript"
+      "Shell",
+      "Python"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "2"
+       "value": "21"
       },
       {
        "label": "首次",
-       "value": "2026年7月"
+       "value": "2026年9月"
       }
      ],
      "links": [
       {
        "label": "仓库",
-       "href": "https://github.com/almide-graphics/cruth"
+       "href": "https://github.com/almide-graphics/almide-shell"
       }
      ],
      "order": {
-      "date": "2026-07-28"
+      "date": "2026-09-30"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/slabhra",
+     "title": "slabhra",
+     "titleEn": "Almide原生的可微编程库,含反向自动微分",
+     "date": "2026年9月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/slabhra",
+     "tags": [
+      "Almide",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "8"
+      },
+      {
+       "label": "首次",
+       "value": "2026年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-graphics/slabhra"
+      }
+     ],
+     "order": {
+      "date": "2026-09-30"
      }
     },
     {
@@ -3876,13 +3944,45 @@
      "id": "almide-graphics/ceangal-anime",
      "title": "ceangal-anime",
      "titleEn": "受anime.js启发的Almide动画引擎",
-     "date": "2026年5月",
+     "date": "2026年9月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/ceangal-anime",
      "tags": [
       "Almide",
       "HTML"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "7"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-graphics/ceangal-anime"
+      }
+     ],
+     "order": {
+      "date": "2026-09-30"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/ceangal-native",
+     "title": "ceangal-native",
+     "titleEn": "ceangal的原生wgpu后端概念验证",
+     "date": "2026年9月",
+     "format": "Rust",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/ceangal-native",
+     "tags": [
+      "Rust"
      ],
      "stats": [
       {
@@ -3897,76 +3997,44 @@
      "links": [
       {
        "label": "仓库",
-       "href": "https://github.com/almide-graphics/ceangal-anime"
-      }
-     ],
-     "order": {
-      "date": "2026-05-18"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-graphics/ceangal-native",
-     "title": "ceangal-native",
-     "titleEn": "ceangal的原生wgpu后端概念验证",
-     "date": "2026年5月",
-     "format": "Rust",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/ceangal-native",
-     "tags": [
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "5"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
        "href": "https://github.com/almide-graphics/ceangal-native"
       }
      ],
      "order": {
-      "date": "2026-05-19"
+      "date": "2026-09-30"
      }
     },
     {
      "image": "",
-     "id": "almide-graphics/slabhra",
-     "title": "slabhra",
-     "titleEn": "Almide原生的可微编程库,含反向自动微分",
-     "date": "2026年6月",
+     "id": "almide-graphics/cruth",
+     "title": "cruth",
+     "titleEn": "Almide的VRM/glTF角色层，含解析与表情",
+     "date": "2026年9月",
      "format": "Almide",
      "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/slabhra",
+     "url": "https://github.com/almide-graphics/cruth",
      "tags": [
       "Almide",
-      "Python"
+      "JavaScript"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "7"
+       "value": "3"
       },
       {
        "label": "首次",
-       "value": "2026年6月"
+       "value": "2026年7月"
       }
      ],
      "links": [
       {
        "label": "仓库",
-       "href": "https://github.com/almide-graphics/slabhra"
+       "href": "https://github.com/almide-graphics/cruth"
       }
      ],
      "order": {
-      "date": "2026-06-16"
+      "date": "2026-09-30"
      }
     }
    ]
@@ -6071,11 +6139,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "33",
+     "value": "34",
      "label": "公开仓库"
     },
     {
-     "value": "214",
+     "value": "258",
      "label": "提交"
     },
     {
@@ -6106,12 +6174,50 @@
     },
     {
      "name": "2026",
-     "count": 61
+     "count": 105
     }
    ],
    "works": [
     {
-     "image": "plates/zh/O6lvl4/aitrium.jpg",
+     "image": "plates/zh/O6lvl4/sprid.jpg",
+     "id": "O6lvl4/sprid",
+     "title": "sprid",
+     "titleEn": "A terminal emulator written in Almide, with scrollback under a hard memory budget",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/sprid",
+     "tags": [
+      "Almide",
+      "Rust",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "44"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      },
+      {
+       "label": "版本",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/sprid"
+      }
+     ],
+     "order": {
+      "date": "2026-10-01"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/aitrium",
      "title": "aitrium",
      "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
