@@ -142,11 +142,10 @@
    {
     "period": "2026年",
     "title": "145件を始めた",
-    "lead": "almide、porta、als、ccgrid ほか141件",
+    "lead": "almide、porta、als、sprid ほか141件",
     "tags": [
      "Rust",
-     "Almide",
-     "TypeScript"
+     "Almide"
     ]
    },
    {
@@ -217,7 +216,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "sprid · 2026年10月"
+    "value": "almide · 2026年10月"
    },
    {
     "key": "Almide で書いた割合",
@@ -236,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "16,236",
+    "value": "16,488",
     "label": "コミット"
    },
    {
@@ -363,17 +362,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 13313,
+    "count": 13477,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2275,
+    "count": 2337,
     "of": 115
    },
    {
     "name": "almide-graphics",
-    "count": 492,
+    "count": 518,
     "of": 11
    },
    {
@@ -406,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 15987
+    "count": 16239
    }
   ]
  },
@@ -422,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "13,051",
+     "value": "13,215",
      "label": "コミット"
     },
     {
@@ -437,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 13051
+     "count": 13215
     }
    ],
    "works": [
@@ -467,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "10,424"
+       "value": "10,582"
       },
       {
        "label": "初回",
@@ -493,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-01"
+      "date": "2026-10-02"
      }
     },
     {
@@ -501,7 +500,7 @@
      "id": "almide/als",
      "title": "als",
      "titleEn": "Almide言語の規範的意味論と適合性コーパスを保持し、任意のalmideバイナリを判定する仕様リポジトリ",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/als",
@@ -514,7 +513,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,520"
+       "value": "1,523"
       },
       {
        "label": "初回",
@@ -536,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-10-01"
      }
     },
     {
@@ -599,7 +598,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "66"
+       "value": "67"
       },
       {
        "label": "初回",
@@ -629,7 +628,7 @@
      "id": "almide/almide-dojo",
      "title": "almide-dojo",
      "titleEn": "LLM生成コードの修正生存率を毎日測るAlmide用の計測基盤",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-dojo",
@@ -642,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "558"
+       "value": "559"
       },
       {
        "label": "初回",
@@ -660,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-10-01"
      }
     },
     {
@@ -831,13 +830,13 @@
      "tags": [
       "JavaScript",
       "Almide",
-      "Rust",
+      "HTML",
       "almide"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "164"
+       "value": "165"
       },
       {
        "label": "初回",
@@ -3614,7 +3613,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "492",
+     "value": "518",
      "label": "コミット"
     },
     {
@@ -3629,7 +3628,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 492
+     "count": 518
     }
    ],
    "works": [
@@ -3805,7 +3804,7 @@
      "id": "almide-graphics/snaidhm",
      "title": "snaidhm",
      "titleEn": "Compute-shader-first 2D/3D renderer for Almide. Celtic knot of paths.",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/snaidhm",
@@ -3817,7 +3816,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "127"
+       "value": "153"
       },
       {
        "label": "初回",
@@ -3831,7 +3830,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-10-01"
      }
     },
     {
@@ -6143,7 +6142,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "258",
+     "value": "320",
      "label": "コミット"
     },
     {
@@ -6174,12 +6173,12 @@
     },
     {
      "name": "2026",
-     "count": 105
+     "count": 167
     }
    ],
    "works": [
     {
-     "image": "plates/ja/O6lvl4/sprid.jpg",
+     "image": "plates/shared/O6lvl4/sprid.jpg",
      "id": "O6lvl4/sprid",
      "title": "sprid",
      "titleEn": "A terminal emulator written in Almide, with scrollback under a hard memory budget",
@@ -6195,7 +6194,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "44"
+       "value": "106"
       },
       {
        "label": "初回",
@@ -6203,7 +6202,11 @@
       },
       {
        "label": "版",
-       "value": "v0.2.0"
+       "value": "v0.9.0"
+      },
+      {
+       "label": "星",
+       "value": "1"
       }
      ],
      "links": [

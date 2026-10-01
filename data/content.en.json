@@ -142,11 +142,10 @@
    {
     "period": "2026",
     "title": "145 started",
-    "lead": "almide, porta, als, ccgrid and 141 more",
+    "lead": "almide, porta, als, sprid and 141 more",
     "tags": [
      "Rust",
-     "Almide",
-     "TypeScript"
+     "Almide"
     ]
    },
    {
@@ -217,7 +216,7 @@
    },
    {
     "key": "Last touched",
-    "value": "sprid · Oct 2026"
+    "value": "almide · Oct 2026"
    },
    {
     "key": "Written in Almide",
@@ -236,7 +235,7 @@
     "label": "Repositories"
    },
    {
-    "value": "16,236",
+    "value": "16,488",
     "label": "Commits"
    },
    {
@@ -363,17 +362,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 13313,
+    "count": 13477,
     "of": 28
    },
    {
     "name": "O6lvl4",
-    "count": 2275,
+    "count": 2337,
     "of": 115
    },
    {
     "name": "almide-graphics",
-    "count": 492,
+    "count": 518,
     "of": 11
    },
    {
@@ -406,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 15987
+    "count": 16239
    }
   ]
  },
@@ -422,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "13,051",
+     "value": "13,215",
      "label": "Commits"
     },
     {
@@ -437,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 13051
+     "count": 13215
     }
    ],
    "works": [
@@ -467,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "10,424"
+       "value": "10,582"
       },
       {
        "label": "Started",
@@ -493,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-01"
+      "date": "2026-10-02"
      }
     },
     {
@@ -501,7 +500,7 @@
      "id": "almide/als",
      "title": "als",
      "titleEn": "Normative semantics, contract ledger and conformance corpus that judge any almide binary; no compiler.",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/als",
@@ -514,7 +513,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,520"
+       "value": "1,523"
       },
       {
        "label": "Started",
@@ -536,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-10-01"
      }
     },
     {
@@ -599,7 +598,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "66"
+       "value": "67"
       },
       {
        "label": "Started",
@@ -629,7 +628,7 @@
      "id": "almide/almide-dojo",
      "title": "almide-dojo",
      "titleEn": "Daily measurement of how often LLM-written code survives modification in Almide, with a harness written in Almide.",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-dojo",
@@ -642,7 +641,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "558"
+       "value": "559"
       },
       {
        "label": "Started",
@@ -660,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-10-01"
      }
     },
     {
@@ -831,13 +830,13 @@
      "tags": [
       "JavaScript",
       "Almide",
-      "Rust",
+      "HTML",
       "almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "164"
+       "value": "165"
       },
       {
        "label": "Started",
@@ -3614,7 +3613,7 @@
      "label": "Repositories"
     },
     {
-     "value": "492",
+     "value": "518",
      "label": "Commits"
     },
     {
@@ -3629,7 +3628,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 492
+     "count": 518
     }
    ],
    "works": [
@@ -3805,7 +3804,7 @@
      "id": "almide-graphics/snaidhm",
      "title": "snaidhm",
      "titleEn": "Compute-shader-first 2D/3D renderer for Almide. Celtic knot of paths.",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/snaidhm",
@@ -3817,7 +3816,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "127"
+       "value": "153"
       },
       {
        "label": "Started",
@@ -3831,7 +3830,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-10-01"
      }
     },
     {
@@ -6143,7 +6142,7 @@
      "label": "Repositories"
     },
     {
-     "value": "258",
+     "value": "320",
      "label": "Commits"
     },
     {
@@ -6174,12 +6173,12 @@
     },
     {
      "name": "2026",
-     "count": 105
+     "count": 167
     }
    ],
    "works": [
     {
-     "image": "plates/en/O6lvl4/sprid.jpg",
+     "image": "plates/shared/O6lvl4/sprid.jpg",
      "id": "O6lvl4/sprid",
      "title": "sprid",
      "titleEn": "A terminal emulator written in Almide, with scrollback under a hard memory budget",
@@ -6195,7 +6194,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "44"
+       "value": "106"
       },
       {
        "label": "Started",
@@ -6203,7 +6202,11 @@
       },
       {
        "label": "Release",
-       "value": "v0.2.0"
+       "value": "v0.9.0"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
       }
      ],
      "links": [
