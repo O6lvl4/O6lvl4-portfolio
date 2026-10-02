@@ -12,13 +12,13 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 106,
+  "commits": 113,
   "years": {
-   "2026": 106
+   "2026": 113
   },
   "first": "2026-09-30",
-  "last": "2026-10-01",
-  "tag": "v0.9.0",
+  "last": "2026-10-02",
+  "tag": "v0.9.1",
   "license": "MIT",
   "topics": [],
   "og": "https://repository-images.githubusercontent.com/1396854648/67b18ab5-6a91-4516-a715-c191dd353c52",
@@ -27,7 +27,7 @@
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 16.1
+  "score": 16.3
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -3268,12 +3268,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 10582,
+  "commits": 10643,
   "years": {
-   "2026": 10582
+   "2026": 10643
   },
   "first": "2026-03-07",
-  "last": "2026-10-02",
+  "last": "2026-10-03",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3383,12 +3383,12 @@
    "CSS"
   ],
   "stars": 1,
-  "commits": 67,
+  "commits": 68,
   "years": {
-   "2026": 67
+   "2026": 68
   },
   "first": "2026-03-27",
-  "last": "2026-10-01",
+  "last": "2026-10-02",
   "topics": [
    "almide",
    "documentation"
@@ -3398,7 +3398,7 @@
    "lang": "mdx",
    "code": "---\ntitle: Some page\n---\n\nimport Playground from '../../../components/Playground.astro';\n\n<Playground sample=\"hello-basic\" />\n<Playground sample=\"modules-two-files\" height={560} hide={['fixtures.almd']} />"
   },
-  "score": 11.3
+  "score": 11.4
  },
  {
   "full": "almide/almide-dojo",
@@ -3415,12 +3415,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 559,
+  "commits": 560,
   "years": {
-   "2026": 559
+   "2026": 560
   },
   "first": "2026-04-12",
-  "last": "2026-10-01",
+  "last": "2026-10-02",
   "license": "MIT",
   "topics": [
    "almide",
@@ -3638,12 +3638,12 @@
    "HTML"
   ],
   "stars": 0,
-  "commits": 165,
+  "commits": 166,
   "years": {
-   "2026": 165
+   "2026": 166
   },
   "first": "2026-03-08",
-  "last": "2026-10-01",
+  "last": "2026-10-02",
   "topics": [
    "almide",
    "playground",
