@@ -3268,12 +3268,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 10643,
+  "commits": 10771,
   "years": {
-   "2026": 10643
+   "2026": 10771
   },
   "first": "2026-03-07",
-  "last": "2026-10-03",
+  "last": "2026-10-04",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3306,12 +3306,12 @@
    "Almide"
   ],
   "stars": 3,
-  "commits": 272,
+  "commits": 278,
   "years": {
-   "2026": 272
+   "2026": 278
   },
   "first": "2026-04-07",
-  "last": "2026-09-29",
+  "last": "2026-10-03",
   "tag": "v0.6.1",
   "license": "Apache-2.0",
   "topics": [
@@ -3331,7 +3331,7 @@
    "lang": "text",
    "code": "$ porta run sh -v ./work --no-net -- -c 'echo ok > out.txt; cat ~/.ssh/id_ed25519; echo x > ~/elsewhere.txt; curl https://example.com'\ncat: /Users/me/.ssh/id_ed25519: Operation not permitted\nsh: /Users/me/elsewhere.txt: Operation not permitted\ncurl: (6) Could not resolve host: example.com\n[porta] the sandbox refused this run 3 times; what each would have needed:\n  file-read-data /Users/me/.ssh/id_ed25519\n    → closed by the preset or --deny-read; no mount reopens it\n  file-write-create /Users/me/elsewhere.txt\n    → -v /Users/me\n  …"
   },
-  "score": 29.4
+  "score": 29.6
  },
  {
   "full": "almide/als",
@@ -3347,12 +3347,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1523,
+  "commits": 1528,
   "years": {
-   "2026": 1523
+   "2026": 1528
   },
   "first": "2026-03-07",
-  "last": "2026-10-01",
+  "last": "2026-10-03",
   "tag": "v1.0.0",
   "license": "NOASSERTION",
   "topics": [
@@ -3415,12 +3415,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 560,
+  "commits": 561,
   "years": {
-   "2026": 560
+   "2026": 561
   },
   "first": "2026-04-12",
-  "last": "2026-10-02",
+  "last": "2026-10-03",
   "license": "MIT",
   "topics": [
    "almide",
