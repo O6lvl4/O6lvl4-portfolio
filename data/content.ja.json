@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "181 repos",
+  "life": "183 repos",
   "avatar": "assets/avatar.png",
   "role": "開発の道具を、言語からつくる。",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公開リポジトリ 181 件",
+  "kicker": "公開リポジトリ 183 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
-  "note": "公開リポジトリ 181 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
+  "note": "公開リポジトリ 183 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
   "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。"
  },
  "landing": {
@@ -118,11 +118,11 @@
    {
     "heading": "よく書く言語",
     "items": [
-     "Almide（90）",
+     "Almide（92）",
      "TypeScript（32）",
+     "JavaScript（32）",
      "Python（30）",
-     "JavaScript（30）",
-     "Shell（29）"
+     "Shell（30）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "145件を始めた",
-    "lead": "almide、porta、als、sprid ほか141件",
+    "title": "147件を始めた",
+    "lead": "almide、porta、als、sprid ほか143件",
     "tags": [
      "Rust",
      "Almide"
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "181",
+    "value": "183",
     "label": "公開リポジトリ"
    },
    {
-    "value": "16,699",
+    "value": "17,005",
     "label": "コミット"
    },
    {
@@ -250,7 +250,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 74,
+    "count": 75,
     "color": "currentColor"
    },
    {
@@ -270,7 +270,7 @@
    },
    {
     "name": "JavaScript",
-    "count": 10,
+    "count": 11,
     "color": "#f1e05a"
    },
    {
@@ -344,11 +344,11 @@
    },
    {
     "name": "almide",
-    "count": 28
+    "count": 29
    },
    {
     "name": "almide-graphics",
-    "count": 11
+    "count": 12
    },
    {
     "name": "almide-ai",
@@ -362,18 +362,18 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 13681,
-    "of": 28
+    "count": 13951,
+    "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2344,
+    "count": 2346,
     "of": 115
    },
    {
     "name": "almide-graphics",
-    "count": 518,
-    "of": 11
+    "count": 552,
+    "of": 12
    },
    {
     "name": "almd-mc",
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 16450
+    "count": 16756
    }
   ]
  },
@@ -417,11 +417,11 @@
    "intro": "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。もう一つの言語は wyve — LLVM IR の一層上に静的な意味論を置き、最適化器に契約を書かせるもので、Racket で書いてあります。",
    "figures": [
     {
-     "value": "17",
+     "value": "18",
      "label": "公開リポジトリ"
     },
     {
-     "value": "13,413",
+     "value": "13,678",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 13413
+     "count": 13678
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "10,771"
+       "value": "11,017"
       },
       {
        "label": "初回",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-10-05"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "561"
+       "value": "562"
       },
       {
        "label": "初回",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-03"
+      "date": "2026-10-04"
      }
     },
     {
@@ -890,6 +890,40 @@
      ],
      "order": {
       "date": "2026-10-01"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/cloud-examples",
+     "title": "cloud-examples",
+     "titleEn": "One small JSON API, one shared Almide implementation, three execution routes:",
+     "date": "2026年10月",
+     "format": "JavaScript",
+     "credit": "almide",
+     "url": "https://github.com/almide/cloud-examples",
+     "tags": [
+      "JavaScript",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "18"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/cloud-examples"
+      }
+     ],
+     "order": {
+      "date": "2026-10-04"
      }
     },
     {
@@ -1533,7 +1567,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "1,056",
+     "value": "1,061",
      "label": "コミット"
     },
     {
@@ -1552,7 +1586,7 @@
     },
     {
      "name": "2026",
-     "count": 1040
+     "count": 1045
     }
    ],
    "works": [
@@ -1582,7 +1616,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "278"
+       "value": "283"
       },
       {
        "label": "初回",
@@ -1604,7 +1638,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-03"
+      "date": "2026-10-04"
      }
     },
     {
@@ -3609,11 +3643,11 @@
    "intro": "Almide で絵を描くための層。GPU ネイティブの UI（ceangal）とそのアニメーション（ceangal-anime）、Canvas と WebGL を WASM から叩くもの（obsid）、純粋な数学プリミティブ（lumen）、VRM/glTF のキャラクター層（cruth）とファイルそのものの道具箱（nendo）、ニューラルネットの基本部品（nn）、リバースモード autograd の微分可能プログラミング基盤（slabhra）。",
    "figures": [
     {
-     "value": "11",
+     "value": "12",
      "label": "公開リポジトリ"
     },
     {
-     "value": "518",
+     "value": "552",
      "label": "コミット"
     },
     {
@@ -3628,7 +3662,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 518
+     "count": 552
     }
    ],
    "works": [
@@ -3869,6 +3903,40 @@
      ],
      "order": {
       "date": "2026-09-30"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/ceangal2",
+     "title": "ceangal2",
+     "titleEn": "ceangal rebuilt for every platform: one Almide program on web, iOS, macOS, Android, Windows, Linux — and the Almide Playground on top",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/ceangal2",
+     "tags": [
+      "Almide",
+      "Rust",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "34"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide-graphics/ceangal2"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
      }
     },
     {
@@ -4564,38 +4632,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
-     "titleEn": "Almideで見るWebAssemblyの現在地を語る登壇スライド",
-     "date": "2026年7月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "27"
-      },
-      {
-       "label": "初回",
-       "value": "2026年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
-      }
-     ],
-     "order": {
-      "date": "2026-07-06"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/agent-bench-matrix",
      "title": "agent-bench-matrix",
      "titleEn": "エージェント向けベンチマークの公開リーダーボードを、モデル別に一枚の表へまとめたもの",
@@ -4669,6 +4705,38 @@
      ],
      "order": {
       "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
+     "titleEn": "Almideで見るWebAssemblyの現在地を語る登壇スライド",
+     "date": "2026年7月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "27"
+      },
+      {
+       "label": "初回",
+       "value": "2026年7月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
+      }
+     ],
+     "order": {
+      "date": "2026-07-06"
      }
     },
     {
@@ -6142,7 +6210,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "327",
+     "value": "329",
      "label": "コミット"
     },
     {
@@ -6173,7 +6241,7 @@
     },
     {
      "name": "2026",
-     "count": 174
+     "count": 176
     }
    ],
    "works": [
@@ -6194,7 +6262,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "113"
+       "value": "115"
       },
       {
        "label": "初回",
@@ -6216,7 +6284,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-02"
+      "date": "2026-10-04"
      }
     },
     {

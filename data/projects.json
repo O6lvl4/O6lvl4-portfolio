@@ -12,12 +12,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 113,
+  "commits": 115,
   "years": {
-   "2026": 113
+   "2026": 115
   },
   "first": "2026-09-30",
-  "last": "2026-10-02",
+  "last": "2026-10-04",
   "tag": "v0.9.1",
   "license": "MIT",
   "topics": [],
@@ -1382,28 +1382,6 @@
   "score": 5.7
  },
  {
-  "full": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-  "owner": "O6lvl4",
-  "name": "O6lvl4-webnight-miyazaki-20260703-slide",
-  "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-  "lead": "Webナイト宮崎 2026-07-03 登壇スライド — WASM x Almide",
-  "heading": "WASM x Almide — Webナイト宮崎 2026-07-03",
-  "language": "HTML",
-  "languages": [
-   "HTML"
-  ],
-  "stars": 0,
-  "commits": 27,
-  "years": {
-   "2026": 27
-  },
-  "first": "2026-07-03",
-  "last": "2026-07-06",
-  "topics": [],
-  "plate": "code",
-  "score": 5.5
- },
- {
   "full": "O6lvl4/almide-otel-demo",
   "owner": "O6lvl4",
   "name": "almide-otel-demo",
@@ -1774,6 +1752,28 @@
    "code": "cargo install --path crates/pagina-cli\n```\n\n## Usage"
   },
   "score": 3.7
+ },
+ {
+  "full": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+  "owner": "O6lvl4",
+  "name": "O6lvl4-webnight-miyazaki-20260703-slide",
+  "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+  "lead": "Webナイト宮崎 2026-07-03 登壇スライド — WASM x Almide",
+  "heading": "WASM x Almide — Webナイト宮崎 2026-07-03",
+  "language": "HTML",
+  "languages": [
+   "HTML"
+  ],
+  "stars": 0,
+  "commits": 27,
+  "years": {
+   "2026": 27
+  },
+  "first": "2026-07-03",
+  "last": "2026-07-06",
+  "topics": [],
+  "plate": "code",
+  "score": 3.5
  },
  {
   "full": "O6lvl4/graph-garden",
@@ -3268,12 +3268,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 10771,
+  "commits": 11017,
   "years": {
-   "2026": 10771
+   "2026": 11017
   },
   "first": "2026-03-07",
-  "last": "2026-10-04",
+  "last": "2026-10-05",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3285,7 +3285,7 @@
    "statically-typed",
    "webassembly"
   ],
-  "og": "https://repository-images.githubusercontent.com/1175180941/d70734f5-a0a1-4ff7-b413-db5e28d28780",
+  "og": "https://repository-images.githubusercontent.com/1175180941/9fb2ea87-22dd-4fc1-bd73-ddd3c5181e17",
   "plate": "og",
   "sample": {
    "lang": "almd",
@@ -3306,12 +3306,12 @@
    "Almide"
   ],
   "stars": 3,
-  "commits": 278,
+  "commits": 283,
   "years": {
-   "2026": 278
+   "2026": 283
   },
   "first": "2026-04-07",
-  "last": "2026-10-03",
+  "last": "2026-10-04",
   "tag": "v0.6.1",
   "license": "Apache-2.0",
   "topics": [
@@ -3331,7 +3331,7 @@
    "lang": "text",
    "code": "$ porta run sh -v ./work --no-net -- -c 'echo ok > out.txt; cat ~/.ssh/id_ed25519; echo x > ~/elsewhere.txt; curl https://example.com'\ncat: /Users/me/.ssh/id_ed25519: Operation not permitted\nsh: /Users/me/elsewhere.txt: Operation not permitted\ncurl: (6) Could not resolve host: example.com\n[porta] the sandbox refused this run 3 times; what each would have needed:\n  file-read-data /Users/me/.ssh/id_ed25519\n    → closed by the preset or --deny-read; no mount reopens it\n  file-write-create /Users/me/elsewhere.txt\n    → -v /Users/me\n  …"
   },
-  "score": 29.6
+  "score": 29.7
  },
  {
   "full": "almide/als",
@@ -3415,12 +3415,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 561,
+  "commits": 562,
   "years": {
-   "2026": 561
+   "2026": 562
   },
   "first": "2026-04-12",
-  "last": "2026-10-03",
+  "last": "2026-10-04",
   "license": "MIT",
   "topics": [
    "almide",
@@ -3807,6 +3807,35 @@
    "code": "# Native FFI — 21 languages via cdylib + byte-buffer protocol\nalmide run src/main.almd -- --lang python mylib.almd\nalmide run src/main.almd -- --lang python,go,swift mylib.almd   # multiple at once\nalmide run src/main.almd -- --list                               # show all 21\nalmide run src/main.almd -- --dry-run --lang ruby mylib.almd     # preview\n\n# WebAssembly + JS/TS — npm-publishable bundle (delegates to almide-wasm-bindgen)\nalmide run src/main.almd -- --target wasm --outdir dist mylib.almd\nalmide run src/main.almd -- --target wasm --outdir dist --pkg-version 1.0.0 mylib.almd\nalmide run src/main.almd -- --target wasm --outdir dist --publish-dry-run mylib.almd\nalmide run src/main.almd -- --target wasm --outdir dist --publish mylib.almd"
   },
   "score": 6.1
+ },
+ {
+  "full": "almide/cloud-examples",
+  "owner": "almide",
+  "name": "cloud-examples",
+  "url": "https://github.com/almide/cloud-examples",
+  "lead": "One small JSON API, one shared Almide implementation, three execution routes:",
+  "heading": "cloud-examples",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "Almide",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 18,
+  "years": {
+   "2026": 18
+  },
+  "first": "2026-10-04",
+  "last": "2026-10-04",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "./scripts/install-almide.sh  # downloads the pinned release and checks its sha256 (seconds)\nnpm ci\nnpm run build\nnpm test\nPORT=8080 ./build/server"
+  },
+  "score": 5.4
  },
  {
   "full": "almide/almide-agents",
@@ -4294,6 +4323,35 @@
    "code": "ceangal  ← layout, widget, interaction\n  └─ snaidhm  ← GPU path renderer, SDF text, images\n       └─ lumen  ← vec, mat, color, quat\n            └─ almide  ← language, WASM/WGSL codegen"
   },
   "score": 6.9
+ },
+ {
+  "full": "almide-graphics/ceangal2",
+  "owner": "almide-graphics",
+  "name": "ceangal2",
+  "url": "https://github.com/almide-graphics/ceangal2",
+  "lead": "ceangal rebuilt for every platform: one Almide program on web, iOS, macOS, Android, Windows, Linux — and the Almide Playground on top",
+  "heading": "ceangal2",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Rust",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 34,
+  "years": {
+   "2026": 34
+  },
+  "first": "2026-10-04",
+  "last": "2026-10-05",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "apps/playground   the Almide Playground (editor, runner, user GUI programs)\napps/demo         the M0 demo\nceangal/          UI framework: views, flex layout, events, text, widgets\n  native/         Rust host for native builds (window, input, IME, storage…)\nsnaidhm/          renderer: instanced SDF quads, glyph atlas, images\n  native/gpu.rs   wgpu implementation of the gpu namespace\nhosts/web/        JS host (WebGPU) — the same ABI for browsers\nabi/              generated ABI manifest (tools/gen_bindings.py)\nstore/            store listings, assets, checklists"
+  },
+  "score": 5.7
  },
  {
   "full": "almide-graphics/almide-shell",

@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "181 repos",
+  "life": "183 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "181 public repositories",
+  "kicker": "183 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "181 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "183 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -118,11 +118,11 @@
    {
     "heading": "Most written",
     "items": [
-     "Almide（90）",
+     "Almide（92）",
      "TypeScript（32）",
+     "JavaScript（32）",
      "Python（30）",
-     "JavaScript（30）",
-     "Shell（29）"
+     "Shell（30）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "145 started",
-    "lead": "almide, porta, als, sprid and 141 more",
+    "title": "147 started",
+    "lead": "almide, porta, als, sprid and 143 more",
     "tags": [
      "Rust",
      "Almide"
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "181",
+    "value": "183",
     "label": "Repositories"
    },
    {
-    "value": "16,699",
+    "value": "17,005",
     "label": "Commits"
    },
    {
@@ -250,7 +250,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 74,
+    "count": 75,
     "color": "currentColor"
    },
    {
@@ -270,7 +270,7 @@
    },
    {
     "name": "JavaScript",
-    "count": 10,
+    "count": 11,
     "color": "#f1e05a"
    },
    {
@@ -344,11 +344,11 @@
    },
    {
     "name": "almide",
-    "count": 28
+    "count": 29
    },
    {
     "name": "almide-graphics",
-    "count": 11
+    "count": 12
    },
    {
     "name": "almide-ai",
@@ -362,18 +362,18 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 13681,
-    "of": 28
+    "count": 13951,
+    "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2344,
+    "count": 2346,
     "of": 115
    },
    {
     "name": "almide-graphics",
-    "count": 518,
-    "of": 11
+    "count": 552,
+    "of": 12
    },
    {
     "name": "almd-mc",
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 16450
+    "count": 16756
    }
   ]
  },
@@ -417,11 +417,11 @@
    "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). The other language here is wyve: a static semantics one layer above LLVM IR, where the optimizer has to write down its contracts — written in Racket.",
    "figures": [
     {
-     "value": "17",
+     "value": "18",
      "label": "Repositories"
     },
     {
-     "value": "13,413",
+     "value": "13,678",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 13413
+     "count": 13678
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "10,771"
+       "value": "11,017"
       },
       {
        "label": "Started",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-10-05"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "561"
+       "value": "562"
       },
       {
        "label": "Started",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-03"
+      "date": "2026-10-04"
      }
     },
     {
@@ -890,6 +890,40 @@
      ],
      "order": {
       "date": "2026-10-01"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/cloud-examples",
+     "title": "cloud-examples",
+     "titleEn": "One small JSON API, one shared Almide implementation, three execution routes:",
+     "date": "Oct 2026",
+     "format": "JavaScript",
+     "credit": "almide",
+     "url": "https://github.com/almide/cloud-examples",
+     "tags": [
+      "JavaScript",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "18"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/cloud-examples"
+      }
+     ],
+     "order": {
+      "date": "2026-10-04"
      }
     },
     {
@@ -1533,7 +1567,7 @@
      "label": "Repositories"
     },
     {
-     "value": "1,056",
+     "value": "1,061",
      "label": "Commits"
     },
     {
@@ -1552,7 +1586,7 @@
     },
     {
      "name": "2026",
-     "count": 1040
+     "count": 1045
     }
    ],
    "works": [
@@ -1582,7 +1616,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "278"
+       "value": "283"
       },
       {
        "label": "Started",
@@ -1604,7 +1638,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-03"
+      "date": "2026-10-04"
      }
     },
     {
@@ -3609,11 +3643,11 @@
    "intro": "The layer for drawing in Almide: a GPU-native UI (ceangal) and its animation engine (ceangal-anime), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth) with a toolkit for the files themselves (nendo), neural-network primitives (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).",
    "figures": [
     {
-     "value": "11",
+     "value": "12",
      "label": "Repositories"
     },
     {
-     "value": "518",
+     "value": "552",
      "label": "Commits"
     },
     {
@@ -3628,7 +3662,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 518
+     "count": 552
     }
    ],
    "works": [
@@ -3869,6 +3903,40 @@
      ],
      "order": {
       "date": "2026-09-30"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/ceangal2",
+     "title": "ceangal2",
+     "titleEn": "ceangal rebuilt for every platform: one Almide program on web, iOS, macOS, Android, Windows, Linux — and the Almide Playground on top",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/ceangal2",
+     "tags": [
+      "Almide",
+      "Rust",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "34"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide-graphics/ceangal2"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
      }
     },
     {
@@ -4564,38 +4632,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
-     "titleEn": "Talk slides on the state of WebAssembly, seen through the Almide language, for Webナイト宮崎",
-     "date": "Jul 2026",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
-     "tags": [
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "27"
-      },
-      {
-       "label": "Started",
-       "value": "Jul 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
-      }
-     ],
-     "order": {
-      "date": "2026-07-06"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/agent-bench-matrix",
      "title": "agent-bench-matrix",
      "titleEn": "A single table gathering public agent-benchmark leaderboards by model, with every number sourced.",
@@ -4669,6 +4705,38 @@
      ],
      "order": {
       "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "title": "O6lvl4-webnight-miyazaki-20260703-slide",
+     "titleEn": "Talk slides on the state of WebAssembly, seen through the Almide language, for Webナイト宮崎",
+     "date": "Jul 2026",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide",
+     "tags": [
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "27"
+      },
+      {
+       "label": "Started",
+       "value": "Jul 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/O6lvl4-webnight-miyazaki-20260703-slide"
+      }
+     ],
+     "order": {
+      "date": "2026-07-06"
      }
     },
     {
@@ -6142,7 +6210,7 @@
      "label": "Repositories"
     },
     {
-     "value": "327",
+     "value": "329",
      "label": "Commits"
     },
     {
@@ -6173,7 +6241,7 @@
     },
     {
      "name": "2026",
-     "count": 174
+     "count": 176
     }
    ],
    "works": [
@@ -6194,7 +6262,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "113"
+       "value": "115"
       },
       {
        "label": "Started",
@@ -6216,7 +6284,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-02"
+      "date": "2026-10-04"
      }
     },
     {
