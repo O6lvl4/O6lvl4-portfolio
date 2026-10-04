@@ -4678,5 +4678,187 @@
     "只有项目可写，网络也可以关闭"
    ]
   }
+ },
+ "O6lvl4/sprid": {
+  "ja": {
+   "what": "長いCLI作業向けの軽量なmacOS・Linux端末",
+   "points": [
+    "メモリ上限付きスクロール履歴",
+    "カーソル位置での日本語入力",
+    "タブと画面分割"
+   ]
+  },
+  "en": {
+   "what": "A lightweight macOS and Linux terminal for long interactive CLI sessions",
+   "points": [
+    "Memory-bounded scrollback",
+    "In-place Japanese input",
+    "Tabs and split panes"
+   ]
+  },
+  "zh": {
+   "what": "面向长时间CLI操作的轻量终端",
+   "points": [
+    "有内存上限的滚动历史",
+    "光标处日语输入",
+    "标签页与分屏"
+   ]
+  }
+ },
+ "O6lvl4/aitrium": {
+  "ja": {
+   "what": "コードエージェントの道具をカーネルで隔離する実行環境",
+   "points": [
+    "comideとportaの組み合わせ",
+    "ツール呼び出しごとに隔離",
+    "標準設定でモデルAPIキーを外部保持"
+   ]
+  },
+  "en": {
+   "what": "A runtime that confines a coding agent's tools with the operating system's kernel",
+   "points": [
+    "comide and porta working together",
+    "A sandbox for each tool call",
+    "Model API keys outside the sandbox by default"
+   ]
+  },
+  "zh": {
+   "what": "由内核隔离编程智能体工具的运行环境",
+   "points": [
+    "comide与porta的组合",
+    "工具调用级隔离",
+    "默认留在沙箱外的模型API密钥"
+   ]
+  }
+ },
+ "O6lvl4/ogumatic-module-design": {
+  "ja": {
+   "what": "役割で境界を切り、札と証拠を正とするモジュール設計術",
+   "points": [
+    "六役でモジュールを分類",
+    "box.yamlとogumatic.yamlの仕様",
+    "ogumatic eyeによる機械検査"
+   ]
+  },
+  "en": {
+   "what": "A module design method grounded in role boundaries, cards and evidence",
+   "points": [
+    "Six module roles",
+    "box.yaml and ogumatic.yaml specifications",
+    "Machine checks with ogumatic eye"
+   ]
+  },
+  "zh": {
+   "what": "以角色边界、卡片和证据为准的模块设计方法",
+   "points": [
+    "六种模块角色",
+    "模块卡片与项目地图规范",
+    "ogumatic eye自动检查"
+   ]
+  }
+ },
+ "almide/cloud-examples": {
+  "ja": {
+   "what": "同じAlmideのJSON APIを複数クラウドで動かす例",
+   "points": [
+    "ネイティブHTTPとコンテナ",
+    "WasmとJavaScriptホスト",
+    "ストレージを使う共通API"
+   ]
+  },
+  "en": {
+   "what": "Examples of one shared Almide JSON API across multiple cloud execution routes",
+   "points": [
+    "Native HTTP and Linux containers",
+    "Wasm with JavaScript hosts and Node adapters",
+    "Shared application logic with storage"
+   ]
+  },
+  "zh": {
+   "what": "在多种云运行方式下复用Almide API的示例",
+   "points": [
+    "原生HTTP与Linux容器",
+    "Wasm与JS宿主及Node适配器",
+    "含存储读写的共用逻辑"
+   ]
+  }
+ },
+ "almide-graphics/snaidhm": {
+  "ja": {
+   "what": "WebGPUを軸にしたAlmide向け2D・3D描画基盤",
+   "points": [
+    "計算シェーダー中心の設計",
+    "Almideでフォントを読み取り",
+    "WaylandとCPU描画にも対応"
+   ]
+  },
+  "en": {
+   "what": "A WebGPU-based 2D and 3D rendering foundation for Almide",
+   "points": [
+    "Compute-shader-first design",
+    "Font parsing written in Almide",
+    "Wayland windows and CPU drawing"
+   ]
+  },
+  "zh": {
+   "what": "基于WebGPU的Almide二维与三维绘制基础",
+   "points": [
+    "以计算着色器为主的设计",
+    "Almide编写的字体解析器",
+    "Wayland窗口与CPU绘制"
+   ]
+  }
+ },
+ "almide-graphics/ceangal2": {
+  "ja": {
+   "what": "同じAlmideプログラムをWebと各OSで動かすUI基盤",
+   "points": [
+    "snaidhmでピクセルを描画",
+    "共通ABIを各プラットフォームで実装",
+    "Almide Playgroundを同梱"
+   ]
+  },
+  "en": {
+   "what": "A UI framework for running one Almide program across the web and native platforms",
+   "points": [
+    "Pixels drawn by snaidhm",
+    "A shared host ABI across platforms",
+    "An Almide Playground built on the framework"
+   ]
+  },
+  "zh": {
+   "what": "让同一Almide程序跨Web与原生平台运行的UI框架",
+   "points": [
+    "snaidhm像素绘制",
+    "跨平台统一宿主ABI",
+    "Almide Playground"
+   ]
+  }
+ },
+ "almide-graphics/almide-shell": {
+  "ja": {
+   "what": "Almideで書いたHyprland向けデスクトップシェル",
+   "points": [
+    "ワークスペースと時計のバー",
+    "通知とアプリランチャー",
+    "音量と明るさの画面表示"
+   ]
+  },
+  "en": {
+   "what": "A desktop shell for Hyprland written in Almide",
+   "points": [
+    "A bar with workspaces and a clock",
+    "Notifications and an application launcher",
+    "On-screen volume and brightness controls"
+   ]
+  },
+  "zh": {
+   "what": "用Almide编写的Hyprland桌面外壳",
+   "points": [
+    "工作区与时钟状态栏",
+    "通知与应用启动器",
+    "音量和亮度屏幕显示"
+   ]
+  }
  }
 }
