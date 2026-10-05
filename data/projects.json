@@ -377,49 +377,6 @@
   "score": 11.6
  },
  {
-  "full": "O6lvl4/qusp",
-  "owner": "O6lvl4",
-  "name": "qusp",
-  "url": "https://github.com/O6lvl4/qusp",
-  "lead": "Every language toolchain in superposition. cd collapses to one.",
-  "heading": "qusp",
-  "language": "Rust",
-  "languages": [
-   "Rust",
-   "Shell",
-   "Python"
-  ],
-  "stars": 0,
-  "commits": 95,
-  "years": {
-   "2026": 95
-  },
-  "first": "2026-04-28",
-  "last": "2026-07-07",
-  "tag": "v0.32.1",
-  "license": "MIT",
-  "topics": [
-   "asdf",
-   "cli",
-   "developer-tools",
-   "devtools",
-   "mise",
-   "multi-language",
-   "nix",
-   "rust",
-   "toolchain",
-   "toolchain-manager",
-   "uv",
-   "version-manager"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "brew install O6lvl4/tap/qusp\n```\n\n### Cargo"
-  },
-  "score": 10.9
- },
- {
   "full": "O6lvl4/golemide",
   "owner": "O6lvl4",
   "name": "golemide",
@@ -701,6 +658,49 @@
   "score": 9.3
  },
  {
+  "full": "O6lvl4/qusp",
+  "owner": "O6lvl4",
+  "name": "qusp",
+  "url": "https://github.com/O6lvl4/qusp",
+  "lead": "Every language toolchain in superposition. cd collapses to one.",
+  "heading": "qusp",
+  "language": "Rust",
+  "languages": [
+   "Rust",
+   "Shell",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 95,
+  "years": {
+   "2026": 95
+  },
+  "first": "2026-04-28",
+  "last": "2026-07-07",
+  "tag": "v0.32.1",
+  "license": "MIT",
+  "topics": [
+   "asdf",
+   "cli",
+   "developer-tools",
+   "devtools",
+   "mise",
+   "multi-language",
+   "nix",
+   "rust",
+   "toolchain",
+   "toolchain-manager",
+   "uv",
+   "version-manager"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "brew install O6lvl4/tap/qusp\n```\n\n### Cargo"
+  },
+  "score": 8.9
+ },
+ {
   "full": "O6lvl4/lean2ts",
   "owner": "O6lvl4",
   "name": "lean2ts",
@@ -737,6 +737,36 @@
   "score": 8.5
  },
  {
+  "full": "O6lvl4/archgopher",
+  "owner": "O6lvl4",
+  "name": "archgopher",
+  "url": "https://github.com/O6lvl4/archgopher",
+  "site": "https://o6lvl4.github.io/archgopher/",
+  "lead": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+  "language": "Go",
+  "languages": [
+   "Go",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 160,
+  "years": {
+   "2026": 160
+  },
+  "first": "2026-09-24",
+  "last": "2026-10-05",
+  "license": "Apache-2.0",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher scout app.scouter.yaml           # read it (--json for machines)\narchgopher export app.scouter.yaml -o app.png # draw it: .svg, .png or .html by extension"
+  },
+  "score": 8.2
+ },
+ {
   "full": "O6lvl4/almide-headset-eq",
   "owner": "O6lvl4",
   "name": "almide-headset-eq",
@@ -760,36 +790,6 @@
   "sample": {
    "lang": "bash",
    "code": "almide test                 # DSP の数式的正しさを検証(6 テスト)\nalmide run                  # デモ: インパルス応答 + 各バンド中心の実測ゲインを表示\nalmide build src/eq.almd --target wasm --release -o dist/headset_eq.wasm"
-  },
-  "score": 8.1
- },
- {
-  "full": "O6lvl4/archgopher",
-  "owner": "O6lvl4",
-  "name": "archgopher",
-  "url": "https://github.com/O6lvl4/archgopher",
-  "site": "https://o6lvl4.github.io/archgopher/",
-  "lead": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-  "language": "Go",
-  "languages": [
-   "Go",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 157,
-  "years": {
-   "2026": 157
-  },
-  "first": "2026-09-24",
-  "last": "2026-09-29",
-  "license": "Apache-2.0",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
-  "plate": "og",
-  "sample": {
-   "lang": "sh",
-   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher scout app.scouter.yaml           # read it (--json for machines)\narchgopher export app.scouter.yaml -o app.png # draw it: .svg, .png or .html by extension"
   },
   "score": 8.1
  },
@@ -1334,21 +1334,49 @@
   "language": "TypeScript",
   "languages": [
    "TypeScript",
-   "CSS",
-   "JavaScript"
+   "JavaScript",
+   "CSS"
   ],
   "stars": 0,
-  "commits": 43,
+  "commits": 51,
   "years": {
-   "2026": 43
+   "2026": 51
   },
   "first": "2026-09-07",
-  "last": "2026-09-20",
+  "last": "2026-10-05",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "ts",
    "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
+  },
+  "score": 6
+ },
+ {
+  "full": "O6lvl4/arlk",
+  "owner": "O6lvl4",
+  "name": "arlk",
+  "url": "https://github.com/O6lvl4/arlk",
+  "lead": "Arlk: a proof language with a small trusted core, written in Almide",
+  "heading": "Arlk(アルク)",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Shell",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 47,
+  "years": {
+   "2026": 47
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "room logic\n\nsymbol Prop: Type\nsymbol Prf(p: Prop) -> Type\nsymbol imp(a: Prop, b: Prop) -> Prop\nrule Prf(imp(a, b)) = Prf(a) -> Prf(b)  where a: Prop, b: Prop\n\n// Thanks to the rule, a proof of an implication is just a function.\ntheorem s(a: Prop, b: Prop, c: Prop) -> Prf(imp(imp(a, imp(b, c)), imp(imp(a, b), imp(a, c)))) =\n  (f: Prf(imp(a, imp(b, c))), g: Prf(imp(a, b)), x: Prf(a)) => f(x, g(x))\n\naxioms s"
   },
   "score": 5.9
  },
@@ -1380,6 +1408,35 @@
    "code": "[ctxgate] cargo test output: 403 lines / 12 KB → vaulted as ctx:9258de38065e (NOT in context).\n  full text: ctxgate show 9258de38065e [--grep RE | --around RE N | --lines A-B | --tail N]\ncargo test: FAILED — 238 passed, 3 failed, 0 ignored\nfailed:\n  parser::match_nested\n  wasm::rc_release\n── parser::match_nested ──\n  thread 'parser::match_nested' panicked at src/parser.rs:412:9:\n  assertion `left == right` failed"
   },
   "score": 5.7
+ },
+ {
+  "full": "O6lvl4/agent-bench-matrix",
+  "owner": "O6lvl4",
+  "name": "agent-bench-matrix",
+  "url": "https://github.com/O6lvl4/agent-bench-matrix",
+  "site": "https://o6lvl4.github.io/agent-bench-matrix/",
+  "lead": "エージェント向けベンチマークの公開リーダーボードを、モデル・エージェント別に一枚の表へ。数字はすべて各ボードの公開データから取得し、出典付き。",
+  "heading": "Agent Bench Matrix",
+  "language": "HTML",
+  "languages": [
+   "HTML",
+   "JavaScript",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 14,
+  "years": {
+   "2026": 14
+  },
+  "first": "2026-09-14",
+  "last": "2026-10-05",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "",
+   "code": "z(表, モデル) ≒ b(表) + s(表) × a(モデル)\n```\n\n`z` は表ごとに標準化した実測値(高いほど良い向きに揃えたもの)、`a` がモデルの実力、`s` はその表が実力差をどれだけ広げて見せるか、`b` はその表の水準です。`a` と `(b, s)` を交互に最小二乗で解き、`a` を平均50・標準偏差10に直したものが「戦闘力」です。分野ごとにも同じ当てはめをします。\n\n- 実測が3モデルに満たない表と、全員が同じ値の表は、順位を語らないので使いません。\n- 実測の少ないモデルは、説明できなかった残差の大きさに応じて真ん中へ寄せます(縮約)。1回の結果だけで上位に来ない代わりに、誤差が大きく出ます。\n- 空きセルの推定値は、その分野の当てはめをその表の目盛りに戻し、そのボードが実際に見た範囲に収めたものです。\n- **これは推定であって実測ではありません。** ページでは書式を分け、データでも `fit` として実測の表とは別に置いています。`data/tables/` に推定値が混ざることはありません。\n\n## データ"
+  },
+  "score": 5.3
  },
  {
   "full": "O6lvl4/almide-otel-demo",
@@ -1463,35 +1520,6 @@
    "code": "$ uimodulay https://playwright.dev --ai --depth 2\n\nPage\n├── Header [row 2]\n│   ├── Nav [row 6]\n│   └── Toolbar [row 4]\n├── Hero\n│   ├── Heading \"enables reliable web automation…\"\n│   ├── Paragraph \"One API to drive Chromium, Fire…\"\n│   └── CTA [row 2]\n├── Main\n│   ├── CardGrid [row 3]\n│   ├── Feature\n│   ├── Feature\n│   ├── Feature\n│   ├── BrowserSupport\n│   └── Showcase\n└── Footer\n    ├── LinkColumns [row 3]\n    └── Copyright \"Copyright © 2026 Microsoft\""
   },
   "score": 5.3
- },
- {
-  "full": "O6lvl4/agent-bench-matrix",
-  "owner": "O6lvl4",
-  "name": "agent-bench-matrix",
-  "url": "https://github.com/O6lvl4/agent-bench-matrix",
-  "site": "https://o6lvl4.github.io/agent-bench-matrix/",
-  "lead": "エージェント向けベンチマークの公開リーダーボードを、モデル・エージェント別に一枚の表へ。数字はすべて各ボードの公開データから取得し、出典付き。",
-  "heading": "Agent Bench Matrix",
-  "language": "HTML",
-  "languages": [
-   "HTML",
-   "JavaScript",
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 10,
-  "years": {
-   "2026": 10
-  },
-  "first": "2026-09-14",
-  "last": "2026-09-20",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "",
-   "code": "z(表, モデル) ≒ b(表) + s(表) × a(モデル)\n```\n\n`z` は表ごとに標準化した実測値(高いほど良い向きに揃えたもの)、`a` がモデルの実力、`s` はその表が実力差をどれだけ広げて見せるか、`b` はその表の水準です。`a` と `(b, s)` を交互に最小二乗で解き、`a` を平均50・標準偏差10に直したものが「戦闘力」です。分野ごとにも同じ当てはめをします。\n\n- 実測が3モデルに満たない表と、全員が同じ値の表は、順位を語らないので使いません。\n- 実測の少ないモデルは、説明できなかった残差の大きさに応じて真ん中へ寄せます(縮約)。1回の結果だけで上位に来ない代わりに、誤差が大きく出ます。\n- 空きセルの推定値は、その分野の当てはめをその表の目盛りに戻し、そのボードが実際に見た範囲に収めたものです。\n- **これは推定であって実測ではありません。** ページでは書式を分け、データでも `fit` として実測の表とは別に置いています。`data/tables/` に推定値が混ざることはありません。\n\n## データ"
-  },
-  "score": 5.2
  },
  {
   "full": "O6lvl4/go1.26-vs-go1.27",
@@ -1687,6 +1715,226 @@
    "lang": "",
    "code": "audio-poc/\n├── almide.toml            package manifest\n├── src/\n│   └── main.almd          Almide synth source (~30 LOC)\n├── host/\n│   ├── index.html         UI (play button + freq/harmonics/volume sliders)\n│   ├── app.js             main thread: AudioContext, load worklet, wire UI\n│   ├── synth-worklet.js   audio thread: compiles WASM, runs process()\n│   └── synth.wasm         ← build output\n├── build.sh               almide build --target wasm\n├── serve.sh               localhost static server (port 8765)\n└── README.md              this file"
   },
+  "score": 5
+ },
+ {
+  "full": "O6lvl4/gramide-c",
+  "owner": "O6lvl4",
+  "name": "gramide-c",
+  "url": "https://github.com/O6lvl4/gramide-c",
+  "lead": "C grammar for Gramide",
+  "heading": "gramide-c",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "C"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-05",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "score": 5
+ },
+ {
+  "full": "O6lvl4/gramide-csharp",
+  "owner": "O6lvl4",
+  "name": "gramide-csharp",
+  "url": "https://github.com/O6lvl4/gramide-csharp",
+  "lead": "C# grammar for Gramide",
+  "heading": "gramide-csharp",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "C#"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-05",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build cli/main.almd -o gramide_csharp\n./gramide_csharp symbols fixtures/valid/model.cs\n./gramide_csharp outline fixtures/valid/statements.cs\n./gramide_csharp gen-table > src/table.almd\nci/check.sh"
+  },
+  "score": 5
+ },
+ {
+  "full": "O6lvl4/gramide-css",
+  "owner": "O6lvl4",
+  "name": "gramide-css",
+  "url": "https://github.com/O6lvl4/gramide-css",
+  "lead": "CSS grammar for Gramide",
+  "heading": "gramide-css 0.1.0",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-05",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test\nalmide build cli/main.almd -o gramide_css\n./gramide_css gen-table | diff -u src/table.almd -\n./gramide_css symbols fixtures/components.css"
+  },
+  "score": 5
+ },
+ {
+  "full": "O6lvl4/gramide-java",
+  "owner": "O6lvl4",
+  "name": "gramide-java",
+  "url": "https://github.com/O6lvl4/gramide-java",
+  "lead": "Java grammar for Gramide",
+  "heading": "gramide-java",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Java"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-05",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build cli/main.almd -o gramide_java\n./gramide_java symbols fixtures/valid/model.java\n./gramide_java outline fixtures/valid/statements.java\n./gramide_java gen-table > src/table.almd\nci/check.sh"
+  },
+  "score": 5
+ },
+ {
+  "full": "O6lvl4/gramide-json",
+  "owner": "O6lvl4",
+  "name": "gramide-json",
+  "url": "https://github.com/O6lvl4/gramide-json",
+  "lead": "JSON grammar for Gramide",
+  "heading": "gramide-json",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-05",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "score": 5
+ },
+ {
+  "full": "O6lvl4/gramide-lua",
+  "owner": "O6lvl4",
+  "name": "gramide-lua",
+  "url": "https://github.com/O6lvl4/gramide-lua",
+  "lead": "Lua grammar for Gramide",
+  "heading": "gramide-lua 0.1.0",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Lua"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-05",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test\nalmide build cli/main.almd -o gramide_lua\n./gramide_lua gen-table | diff -u src/table.almd -\n./gramide_lua symbols fixtures/module.lua"
+  },
+  "score": 5
+ },
+ {
+  "full": "O6lvl4/gramide-sql",
+  "owner": "O6lvl4",
+  "name": "gramide-sql",
+  "url": "https://github.com/O6lvl4/gramide-sql",
+  "lead": "SQL grammar for Gramide",
+  "heading": "gramide-sql 0.1.0",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "SQL"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-05",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test\nalmide build cli/main.almd -o gramide_sql\n./gramide_sql gen-table | diff -u src/table.almd -\n./gramide_sql symbols fixtures/schema.sql\npython3 ci/oracle.py ./gramide_sql"
+  },
+  "score": 5
+ },
+ {
+  "full": "O6lvl4/gramide-toml",
+  "owner": "O6lvl4",
+  "name": "gramide-toml",
+  "url": "https://github.com/O6lvl4/gramide-toml",
+  "lead": "TOML grammar for Gramide",
+  "heading": "gramide-toml",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-05",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
   "score": 5
  },
  {
@@ -3268,12 +3516,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 11017,
+  "commits": 11160,
   "years": {
-   "2026": 11017
+   "2026": 11160
   },
   "first": "2026-03-07",
-  "last": "2026-10-05",
+  "last": "2026-10-06",
   "tag": "v0.60.0-rc3",
   "license": "NOASSERTION",
   "topics": [
@@ -3347,12 +3595,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1528,
+  "commits": 1534,
   "years": {
-   "2026": 1528
+   "2026": 1534
   },
   "first": "2026-03-07",
-  "last": "2026-10-03",
+  "last": "2026-10-06",
   "tag": "v1.0.0",
   "license": "NOASSERTION",
   "topics": [
@@ -3415,12 +3663,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 562,
+  "commits": 563,
   "years": {
-   "2026": 562
+   "2026": 563
   },
   "first": "2026-04-12",
-  "last": "2026-10-04",
+  "last": "2026-10-05",
   "license": "MIT",
   "topics": [
    "almide",
@@ -3638,12 +3886,12 @@
    "HTML"
   ],
   "stars": 0,
-  "commits": 166,
+  "commits": 167,
   "years": {
-   "2026": 166
+   "2026": 167
   },
   "first": "2026-03-08",
-  "last": "2026-10-02",
+  "last": "2026-10-05",
   "topics": [
    "almide",
    "playground",
@@ -4159,6 +4407,36 @@
   "score": 10.9
  },
  {
+  "full": "almide-graphics/ceangal2",
+  "owner": "almide-graphics",
+  "name": "ceangal2",
+  "url": "https://github.com/almide-graphics/ceangal2",
+  "lead": "ceangal rebuilt for every platform: one Almide program on web, iOS, macOS, Android, Windows, Linux — and the Almide Playground on top",
+  "heading": "ceangal2",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Rust",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 83,
+  "years": {
+   "2026": 83
+  },
+  "first": "2026-10-04",
+  "last": "2026-10-06",
+  "tag": "v0.2.0",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "cli/              the ceangal CLI: new, dev, build, run, doctor (docs/adr/0006, 0007)\napps/playground   the Almide Playground (editor, runner, user GUI programs)\napps/todo         the demo app\napps/demo         the M0 demo\nceangal/          UI framework: views, flex layout, events, text, widgets\n  native/         Rust host for native builds (window, input, IME, storage…)\nsnaidhm/          renderer: instanced SDF quads, glyph atlas, images\n  native/gpu.rs   wgpu implementation of the gpu namespace\nhosts/web/        JS host (WebGPU) — the same ABI for browsers\nabi/              generated ABI manifest (tools/gen_bindings.py)\ntools/            per-platform build and packaging scripts the CLI runs\nstore/            store listings, assets, checklists\ndocs/guide        the guide; docs/api, the generated API reference"
+  },
+  "score": 10.7
+ },
+ {
   "full": "almide-graphics/nn",
   "owner": "almide-graphics",
   "name": "nn",
@@ -4172,12 +4450,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 75,
+  "commits": 81,
   "years": {
-   "2026": 75
+   "2026": 81
   },
   "first": "2026-04-12",
-  "last": "2026-09-30",
+  "last": "2026-10-05",
   "tag": "v0.1.0",
   "license": "MIT",
   "topics": [
@@ -4192,7 +4470,7 @@
    "lang": "bash",
    "code": "almide build src/whisper.almd -o whisper          # native\nalmide build src/whisper.almd -o whisper.wasm --target wasm\nalmide run examples/_bench_attn_f32.almd\nalmide test                                       # nn/src tests"
   },
-  "score": 10.5
+  "score": 10.6
  },
  {
   "full": "almide-graphics/obsid",
@@ -4270,7 +4548,7 @@
   "owner": "almide-graphics",
   "name": "snaidhm",
   "url": "https://github.com/almide-graphics/snaidhm",
-  "lead": "Compute-shader-first 2D/3D renderer for Almide. Celtic knot of paths.",
+  "lead": "Moved to almide-graphics/ceangal2 (archived)",
   "heading": "snaidhm",
   "language": "Almide",
   "languages": [
@@ -4279,12 +4557,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 153,
+  "commits": 154,
   "years": {
-   "2026": 153
+   "2026": 154
   },
   "first": "2026-05-13",
-  "last": "2026-10-01",
+  "last": "2026-10-05",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4300,7 +4578,7 @@
   "name": "ceangal",
   "url": "https://github.com/almide-graphics/ceangal",
   "site": "https://almide-graphics.github.io/ceangal/",
-  "lead": "UI framework for Almide — layout, widget, interaction layer on top of snaidhm",
+  "lead": "Moved to almide-graphics/ceangal2 (archived)",
   "heading": "assemble into the directory you serve",
   "language": "Almide",
   "languages": [
@@ -4309,12 +4587,12 @@
    "HTML"
   ],
   "stars": 0,
-  "commits": 97,
+  "commits": 98,
   "years": {
-   "2026": 97
+   "2026": 98
   },
   "first": "2026-05-13",
-  "last": "2026-09-30",
+  "last": "2026-10-05",
   "license": "MIT",
   "topics": [],
   "plate": "site",
@@ -4322,36 +4600,7 @@
    "lang": "",
    "code": "ceangal  ← layout, widget, interaction\n  └─ snaidhm  ← GPU path renderer, SDF text, images\n       └─ lumen  ← vec, mat, color, quat\n            └─ almide  ← language, WASM/WGSL codegen"
   },
-  "score": 6.9
- },
- {
-  "full": "almide-graphics/ceangal2",
-  "owner": "almide-graphics",
-  "name": "ceangal2",
-  "url": "https://github.com/almide-graphics/ceangal2",
-  "lead": "ceangal rebuilt for every platform: one Almide program on web, iOS, macOS, Android, Windows, Linux — and the Almide Playground on top",
-  "heading": "ceangal2",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Rust",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 34,
-  "years": {
-   "2026": 34
-  },
-  "first": "2026-10-04",
-  "last": "2026-10-05",
-  "license": "MIT",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "apps/playground   the Almide Playground (editor, runner, user GUI programs)\napps/demo         the M0 demo\nceangal/          UI framework: views, flex layout, events, text, widgets\n  native/         Rust host for native builds (window, input, IME, storage…)\nsnaidhm/          renderer: instanced SDF quads, glyph atlas, images\n  native/gpu.rs   wgpu implementation of the gpu namespace\nhosts/web/        JS host (WebGPU) — the same ABI for browsers\nabi/              generated ABI manifest (tools/gen_bindings.py)\nstore/            store listings, assets, checklists"
-  },
-  "score": 5.7
+  "score": 7
  },
  {
   "full": "almide-graphics/almide-shell",
@@ -4438,22 +4687,49 @@
   "score": 5.1
  },
  {
+  "full": "almide-graphics/ceangal-hello",
+  "owner": "almide-graphics",
+  "name": "ceangal-hello",
+  "url": "https://github.com/almide-graphics/ceangal-hello",
+  "lead": "The ceangal starter app, built for every platform from one Almide source",
+  "heading": "Ceangal Hello",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 3,
+  "years": {
+   "2026": 3
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-05",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "curl -fsSL https://raw.githubusercontent.com/almide-graphics/ceangal2/main/install.sh | sh\nceangal dev            # http://localhost:8000, rebuilt and reloaded on save\nceangal dev macos      # the desktop app, restarted on save (or linux / windows)\nceangal run ios        # or android\nceangal build android  # store packages: web macos ios android linux windows"
+  },
+  "score": 5.1
+ },
+ {
   "full": "almide-graphics/ceangal-native",
   "owner": "almide-graphics",
   "name": "ceangal-native",
   "url": "https://github.com/almide-graphics/ceangal-native",
-  "lead": "Native wgpu backend for ceangal — proof of concept",
+  "lead": "Moved to almide-graphics/ceangal2 (archived)",
+  "heading": "ceangal-native",
   "language": "Rust",
   "languages": [
    "Rust"
   ],
   "stars": 0,
-  "commits": 6,
+  "commits": 7,
   "years": {
-   "2026": 6
+   "2026": 7
   },
   "first": "2026-05-19",
-  "last": "2026-09-30",
+  "last": "2026-10-05",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4573,7 +4849,7 @@
    "lang": "sh",
    "code": "almide build src/main.almd -o manus     # compile to a native binary\nexport ANTHROPIC_API_KEY=sk-ant-...\n./manus \"open Safari and search for the Almide language\""
   },
-  "score": 5
+  "score": 3
  },
  {
   "full": "almd-mc/mc-protocol",

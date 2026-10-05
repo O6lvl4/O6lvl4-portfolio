@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "183 repos",
+  "life": "193 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "183 public repositories",
+  "kicker": "193 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "183 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "193 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -118,11 +118,11 @@
    {
     "heading": "Most written",
     "items": [
-     "Almide（92）",
+     "Almide（101）",
+     "Python（40）",
+     "Shell（33）",
      "TypeScript（32）",
-     "JavaScript（32）",
-     "Python（30）",
-     "Shell（30）"
+     "JavaScript（32）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "147 started",
-    "lead": "almide, porta, als, sprid and 143 more",
+    "title": "157 started",
+    "lead": "almide, porta, als, sprid and 153 more",
     "tags": [
      "Rust",
      "Almide"
@@ -216,12 +216,12 @@
    },
    {
     "key": "Last touched",
-    "value": "almide · Oct 2026"
+    "value": "arlk · Oct 2026"
    },
    {
     "key": "Written in Almide",
-    "value": "41%",
-    "fill": 0.41
+    "value": "44%",
+    "fill": 0.44
    },
    {
     "key": "Commits in 2026",
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "183",
+    "value": "193",
     "label": "Repositories"
    },
    {
-    "value": "17,005",
+    "value": "17,295",
     "label": "Commits"
    },
    {
@@ -250,7 +250,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 75,
+    "count": 85,
     "color": "currentColor"
    },
    {
@@ -264,14 +264,14 @@
     "color": "#00add8"
    },
    {
-    "name": "Rust",
-    "count": 11,
-    "color": "#dea584"
-   },
-   {
     "name": "JavaScript",
     "count": 11,
     "color": "#f1e05a"
+   },
+   {
+    "name": "Rust",
+    "count": 11,
+    "color": "#dea584"
    },
    {
     "name": "Python",
@@ -340,7 +340,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 115
+    "count": 124
    },
    {
     "name": "almide",
@@ -348,7 +348,7 @@
    },
    {
     "name": "almide-graphics",
-    "count": 12
+    "count": 13
    },
    {
     "name": "almide-ai",
@@ -362,18 +362,18 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 13951,
+    "count": 14102,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2346,
-    "of": 115
+    "count": 2424,
+    "of": 124
    },
    {
     "name": "almide-graphics",
-    "count": 552,
-    "of": 12
+    "count": 613,
+    "of": 13
    },
    {
     "name": "almd-mc",
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 16756
+    "count": 17046
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "13,678",
+     "value": "13,829",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 13678
+     "count": 13829
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "11,017"
+       "value": "11,160"
       },
       {
        "label": "Started",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-10-06"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,528"
+       "value": "1,534"
       },
       {
        "label": "Started",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-03"
+      "date": "2026-10-06"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "562"
+       "value": "563"
       },
       {
        "label": "Started",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-10-05"
      }
     },
     {
@@ -836,7 +836,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "166"
+       "value": "167"
       },
       {
        "label": "Started",
@@ -854,7 +854,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-02"
+      "date": "2026-10-05"
      }
     },
     {
@@ -896,7 +896,7 @@
      "image": "",
      "id": "almide/cloud-examples",
      "title": "cloud-examples",
-     "titleEn": "One small JSON API, one shared Almide implementation, three execution routes:",
+     "titleEn": "Examples of one shared Almide JSON API across multiple cloud execution routes",
      "date": "Oct 2026",
      "format": "JavaScript",
      "credit": "almide",
@@ -1563,11 +1563,11 @@
    "intro": "What a model needs to read, fix and measure code: hew reads by structure, gramide builds syntax trees with a package per language, codopsy grades quality, ctxgate keeps the context, porta boxes an agent in, golemide edits on evidence and comide, a terminal agent, hands its edits to golemide, onogoro confines each of its tool calls, emet checks a claim against its source, ccgrid runs a team of them. Each started as something needed that day.",
    "figures": [
     {
-     "value": "25",
+     "value": "33",
      "label": "Repositories"
     },
     {
-     "value": "1,061",
+     "value": "1,077",
      "label": "Commits"
     },
     {
@@ -1586,7 +1586,7 @@
     },
     {
      "name": "2026",
-     "count": 1045
+     "count": 1061
     }
    ],
    "works": [
@@ -2420,6 +2420,278 @@
      ],
      "order": {
       "date": "2026-09-11"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-c",
+     "title": "gramide-c",
+     "titleEn": "C grammar for Gramide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-c",
+     "tags": [
+      "Almide",
+      "Python",
+      "C"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-c"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-csharp",
+     "title": "gramide-csharp",
+     "titleEn": "C# grammar for Gramide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-csharp",
+     "tags": [
+      "Almide",
+      "Python",
+      "C#"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-csharp"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-css",
+     "title": "gramide-css",
+     "titleEn": "CSS grammar for Gramide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-css",
+     "tags": [
+      "Almide",
+      "Python",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-css"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-java",
+     "title": "gramide-java",
+     "titleEn": "Java grammar for Gramide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-java",
+     "tags": [
+      "Almide",
+      "Python",
+      "Java"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-java"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-json",
+     "title": "gramide-json",
+     "titleEn": "JSON grammar for Gramide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-json",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-json"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-lua",
+     "title": "gramide-lua",
+     "titleEn": "Lua grammar for Gramide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-lua",
+     "tags": [
+      "Almide",
+      "Python",
+      "Lua"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-lua"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-sql",
+     "title": "gramide-sql",
+     "titleEn": "SQL grammar for Gramide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-sql",
+     "tags": [
+      "Almide",
+      "Python",
+      "SQL"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-sql"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-toml",
+     "title": "gramide-toml",
+     "titleEn": "TOML grammar for Gramide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-toml",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-toml"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
      }
     },
     {
@@ -3643,11 +3915,11 @@
    "intro": "The layer for drawing in Almide: a GPU-native UI (ceangal) and its animation engine (ceangal-anime), Canvas and WebGL driven from WASM (obsid), pure maths primitives (lumen), a VRM/glTF character layer (cruth) with a toolkit for the files themselves (nendo), neural-network primitives (nn), and a differentiable-programming base with reverse-mode autograd (slabhra).",
    "figures": [
     {
-     "value": "12",
+     "value": "13",
      "label": "Repositories"
     },
     {
-     "value": "552",
+     "value": "613",
      "label": "Commits"
     },
     {
@@ -3662,7 +3934,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 552
+     "count": 613
     }
    ],
    "works": [
@@ -3714,10 +3986,48 @@
     },
     {
      "image": "",
+     "id": "almide-graphics/ceangal2",
+     "title": "ceangal2",
+     "titleEn": "A UI framework for running one Almide program across the web and native platforms",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/ceangal2",
+     "tags": [
+      "Almide",
+      "Rust",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "83"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide-graphics/ceangal2"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide-graphics/nn",
      "title": "nn",
      "titleEn": "Transformer and signal-processing library in Almide, built on the matrix stdlib, with Whisper inference",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/nn",
@@ -3730,7 +4040,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "75"
+       "value": "81"
       },
       {
        "label": "Started",
@@ -3748,7 +4058,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-10-05"
      }
     },
     {
@@ -3837,7 +4147,7 @@
      "image": "",
      "id": "almide-graphics/snaidhm",
      "title": "snaidhm",
-     "titleEn": "Compute-shader-first 2D/3D renderer for Almide. Celtic knot of paths.",
+     "titleEn": "A WebGPU-based 2D and 3D rendering foundation for Almide",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "almide-graphics",
@@ -3850,7 +4160,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "153"
+       "value": "154"
       },
       {
        "label": "Started",
@@ -3864,7 +4174,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-01"
+      "date": "2026-10-05"
      }
     },
     {
@@ -3872,7 +4182,7 @@
      "id": "almide-graphics/ceangal",
      "title": "ceangal",
      "titleEn": "GPU-native UI framework for Almide: layout, widgets and interaction on top of snaidhm",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/ceangal",
@@ -3884,7 +4194,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "97"
+       "value": "98"
       },
       {
        "label": "Started",
@@ -3902,40 +4212,6 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-graphics/ceangal2",
-     "title": "ceangal2",
-     "titleEn": "ceangal rebuilt for every platform: one Almide program on web, iOS, macOS, Android, Windows, Linux — and the Almide Playground on top",
-     "date": "Oct 2026",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/ceangal2",
-     "tags": [
-      "Almide",
-      "Rust",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "34"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide-graphics/ceangal2"
-      }
-     ],
-     "order": {
       "date": "2026-10-05"
      }
     },
@@ -3943,7 +4219,7 @@
      "image": "",
      "id": "almide-graphics/almide-shell",
      "title": "almide-shell",
-     "titleEn": "A desktop shell for Hyprland written in Almide — bar, launcher, notifications",
+     "titleEn": "A desktop shell for Hyprland written in Almide",
      "date": "Sep 2026",
      "format": "Almide",
      "credit": "almide-graphics",
@@ -4041,10 +4317,42 @@
     },
     {
      "image": "",
+     "id": "almide-graphics/ceangal-hello",
+     "title": "ceangal-hello",
+     "titleEn": "The ceangal starter app, built for every platform from one Almide source",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/ceangal-hello",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide-graphics/ceangal-hello"
+      }
+     ],
+     "order": {
+      "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
      "id": "almide-graphics/ceangal-native",
      "title": "ceangal-native",
      "titleEn": "Proof-of-concept native wgpu backend for ceangal, written in Rust",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "Rust",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/ceangal-native",
@@ -4054,7 +4362,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "7"
       },
       {
        "label": "Started",
@@ -4068,7 +4376,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-10-05"
      }
     },
     {
@@ -4528,7 +4836,7 @@
      "label": "Repositories"
     },
     {
-     "value": "111",
+     "value": "123",
      "label": "Commits"
     },
     {
@@ -4543,7 +4851,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 111
+     "count": 123
     }
    ],
    "works": [
@@ -4597,19 +4905,19 @@
      "id": "O6lvl4/chip-war-chronicle",
      "title": "chip-war-chronicle",
      "titleEn": "Swimlane timeline of semiconductors and world affairs, 2018–2026, with sourced events and causal links.",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "TypeScript",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/chip-war-chronicle",
      "tags": [
       "TypeScript",
-      "CSS",
-      "JavaScript"
+      "JavaScript",
+      "CSS"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "43"
+       "value": "51"
       },
       {
        "label": "Started",
@@ -4627,7 +4935,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-10-05"
      }
     },
     {
@@ -4635,19 +4943,19 @@
      "id": "O6lvl4/agent-bench-matrix",
      "title": "agent-bench-matrix",
      "titleEn": "A single table gathering public agent-benchmark leaderboards by model, with every number sourced.",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "HTML",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/agent-bench-matrix",
      "tags": [
       "HTML",
       "JavaScript",
-      "Almide"
+      "Python"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "10"
+       "value": "14"
       },
       {
        "label": "Started",
@@ -4665,7 +4973,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-10-05"
      }
     },
     {
@@ -5802,7 +6110,7 @@
      "label": "Repositories"
     },
     {
-     "value": "260",
+     "value": "263",
      "label": "Commits"
     },
     {
@@ -5817,7 +6125,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 260
+     "count": 263
     }
    ],
    "works": [
@@ -5967,7 +6275,7 @@
      "id": "O6lvl4/archgopher",
      "title": "archgopher",
      "titleEn": "Read an architecture before you build it: push the expected load through Terraform and read cost, headroom, latency and availability",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "Go",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/archgopher",
@@ -5979,7 +6287,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "157"
+       "value": "160"
       },
       {
        "label": "Started",
@@ -5997,7 +6305,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-10-05"
      }
     },
     {
@@ -6206,11 +6514,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "34",
+     "value": "35",
      "label": "Repositories"
     },
     {
-     "value": "329",
+     "value": "376",
      "label": "Commits"
     },
     {
@@ -6241,15 +6549,23 @@
     },
     {
      "name": "2026",
-     "count": 176
+     "count": 223
     }
    ],
    "works": [
     {
      "image": "plates/shared/O6lvl4/sprid.jpg",
+     "readme": {
+      "lead": "A lightweight macOS and Linux terminal for long interactive CLI sessions",
+      "points": [
+       "Memory-bounded scrollback",
+       "In-place Japanese input",
+       "Tabs and split panes"
+      ]
+     },
      "id": "O6lvl4/sprid",
      "title": "sprid",
-     "titleEn": "A terminal emulator written in Almide, with scrollback under a hard memory budget",
+     "titleEn": "A lightweight macOS and Linux terminal for long interactive CLI sessions",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -6291,7 +6607,7 @@
      "image": "",
      "id": "O6lvl4/aitrium",
      "title": "aitrium",
-     "titleEn": "A world for coding agents: tools run in a kernel-enforced sandbox, keys stay outside it. comide + porta.",
+     "titleEn": "A runtime that confines a coding agent's tools with the operating system's kernel",
      "date": "Sep 2026",
      "format": "Python",
      "credit": "O6lvl4",
@@ -6363,6 +6679,40 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/arlk",
+     "title": "arlk",
+     "titleEn": "Arlk: a proof language with a small trusted core, written in Almide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/arlk",
+     "tags": [
+      "Almide",
+      "Shell",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "47"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/arlk"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/almide-otel-demo",
      "title": "almide-otel-demo",
      "titleEn": "A from-scratch OpenTelemetry tracing SDK in pure Almide, with a two-service trace demo in Jaeger",
@@ -6430,7 +6780,7 @@
      "image": "",
      "id": "O6lvl4/ogumatic-module-design",
      "title": "ogumatic-module-design",
-     "titleEn": "モジュールを役割の段で切り、正を札・証拠・資料に置き、コードを生成物として扱う設計術",
+     "titleEn": "A module design method grounded in role boundaries, cards and evidence",
      "date": "Sep 2026",
      "format": "Almide",
      "credit": "O6lvl4",
