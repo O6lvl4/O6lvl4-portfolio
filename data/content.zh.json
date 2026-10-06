@@ -120,8 +120,8 @@
     "items": [
      "Almide（101）",
      "Python（40）",
-     "Shell（33）",
      "TypeScript（32）",
+     "Shell（32）",
      "JavaScript（32）"
     ]
    },
@@ -216,7 +216,7 @@
    },
    {
     "key": "最近更新",
-    "value": "arlk · 2026年10月"
+    "value": "gramide · 2026年10月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -235,7 +235,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "17,295",
+    "value": "17,461",
     "label": "提交"
    },
    {
@@ -362,17 +362,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 14102,
+    "count": 14175,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2424,
+    "count": 2480,
     "of": 124
    },
    {
     "name": "almide-graphics",
-    "count": 613,
+    "count": 650,
     "of": 13
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 17046
+    "count": 17212
    }
   ]
  },
@@ -414,14 +414,14 @@
    "id": "almide",
    "title": "做语言",
    "short": "语言",
-   "intro": "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。另一门语言是 wyve：在 LLVM IR 之上一层放置静态语义，让优化器把契约写下来，用 Racket 写成",
+   "intro": "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。Arlk是用Almide编写、追踪定理前提的证明语言。用Racket编写的wyve在LLVM IR之上放置静态语义，让优化器记录契约。",
    "figures": [
     {
-     "value": "18",
+     "value": "19",
      "label": "公开仓库"
     },
     {
-     "value": "13,829",
+     "value": "13,981",
      "label": "提交"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 13829
+     "count": 13981
     }
    ],
    "works": [
@@ -466,15 +466,15 @@
      "stats": [
       {
        "label": "提交",
-       "value": "11,160"
+       "value": "11,230"
       },
       {
        "label": "首次",
        "value": "2026年3月"
       },
       {
-       "label": "版本",
-       "value": "v0.60.0-rc3"
+       "label": "发行版",
+       "value": "v0.66.0"
       },
       {
        "label": "星标",
@@ -513,14 +513,14 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,534"
+       "value": "1,536"
       },
       {
        "label": "首次",
        "value": "2026年3月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v1.0.0"
       },
       {
@@ -562,7 +562,7 @@
        "value": "2026年6月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.0.7"
       },
       {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "563"
+       "value": "564"
       },
       {
        "label": "首次",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-10-06"
      }
     },
     {
@@ -687,7 +687,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.0"
       }
      ],
@@ -726,7 +726,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.4.1"
       }
      ],
@@ -765,8 +765,8 @@
        "value": "2026年3月"
       },
       {
-       "label": "版本",
-       "value": "v0.3.1"
+       "label": "发行版",
+       "value": "v0.1.0"
       }
      ],
      "links": [
@@ -855,6 +855,40 @@
      ],
      "order": {
       "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/arlk",
+     "title": "arlk",
+     "titleEn": "用Almide编写、追踪证明前提的语言",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/arlk",
+     "tags": [
+      "Almide",
+      "Shell",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "79"
+      },
+      {
+       "label": "首次",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/arlk"
+      }
+     ],
+     "order": {
+      "date": "2026-10-07"
      }
     },
     {
@@ -1186,7 +1220,7 @@
        "value": "2026年8月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.0"
       }
      ],
@@ -1225,7 +1259,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.2.0"
       }
      ],
@@ -1262,7 +1296,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.2.0"
       }
      ],
@@ -1299,7 +1333,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.2.0"
       }
      ],
@@ -1338,7 +1372,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.0"
       }
      ],
@@ -1567,7 +1601,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "1,077",
+     "value": "1,099",
      "label": "提交"
     },
     {
@@ -1586,7 +1620,7 @@
     },
     {
      "name": "2026",
-     "count": 1061
+     "count": 1083
     }
    ],
    "works": [
@@ -1623,8 +1657,8 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
-       "value": "v0.6.1"
+       "label": "发行版",
+       "value": "v0.6.17"
       },
       {
        "label": "星标",
@@ -1693,26 +1727,26 @@
      "id": "O6lvl4/gramide",
      "title": "gramide",
      "titleEn": "面向编码智能体的Almide语法树引擎",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide",
      "tags": [
       "Almide",
       "Python",
-      "Shell"
+      "C"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "174"
+       "value": "181"
       },
       {
        "label": "首次",
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.2.11"
       }
      ],
@@ -1723,7 +1757,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-10-07"
      }
     },
     {
@@ -1731,7 +1765,7 @@
      "id": "O6lvl4/gramide-cli",
      "title": "gramide-cli",
      "titleEn": "面向编码智能体的语法树命令行工具gramide",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide-cli",
@@ -1743,14 +1777,14 @@
      "stats": [
       {
        "label": "提交",
-       "value": "136"
+       "value": "143"
       },
       {
        "label": "首次",
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.4.16"
       }
      ],
@@ -1761,7 +1795,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-10-07"
      }
     },
     {
@@ -1788,7 +1822,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.14"
       }
      ],
@@ -1826,7 +1860,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.14"
       }
      ],
@@ -1864,7 +1898,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.13"
       }
      ],
@@ -1902,7 +1936,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.16"
       }
      ],
@@ -1948,7 +1982,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.3.0"
       }
      ],
@@ -1994,7 +2028,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.5.0"
       }
      ],
@@ -2041,7 +2075,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v2.3.1"
       }
      ],
@@ -2087,7 +2121,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.4.17"
       }
      ],
@@ -2125,7 +2159,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.3.13"
       }
      ],
@@ -2163,7 +2197,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.3.13"
       }
      ],
@@ -2202,7 +2236,7 @@
        "value": "2026年8月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.4.0"
       }
      ],
@@ -2274,7 +2308,7 @@
        "value": "2025年3月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v1.0.2"
       }
      ],
@@ -2358,6 +2392,40 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/gramide-json",
+     "title": "gramide-json",
+     "titleEn": "为gramide验证JSON语法并读取结构",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-json",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "8"
+      },
+      {
+       "label": "首次",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/gramide-json"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/onetool",
      "title": "onetool",
      "titleEn": "用四个通用工具封装任意API的MCP框架",
@@ -2424,9 +2492,43 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/gramide-java",
+     "title": "gramide-java",
+     "titleEn": "为gramide读取Java语法子集",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-java",
+     "tags": [
+      "Almide",
+      "Python",
+      "Java"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "4"
+      },
+      {
+       "label": "首次",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/gramide-java"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/gramide-c",
      "title": "gramide-c",
-     "titleEn": "C grammar for Gramide",
+     "titleEn": "为gramide读取C语法子集",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2460,7 +2562,7 @@
      "image": "",
      "id": "O6lvl4/gramide-csharp",
      "title": "gramide-csharp",
-     "titleEn": "C# grammar for Gramide",
+     "titleEn": "为gramide读取C#语法子集",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2494,7 +2596,7 @@
      "image": "",
      "id": "O6lvl4/gramide-css",
      "title": "gramide-css",
-     "titleEn": "CSS grammar for Gramide",
+     "titleEn": "为gramide读取CSS结构语法子集",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2526,77 +2628,9 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/gramide-java",
-     "title": "gramide-java",
-     "titleEn": "Java grammar for Gramide",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-java",
-     "tags": [
-      "Almide",
-      "Python",
-      "Java"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/gramide-java"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-json",
-     "title": "gramide-json",
-     "titleEn": "JSON grammar for Gramide",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-json",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/gramide-json"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/gramide-lua",
      "title": "gramide-lua",
-     "titleEn": "Lua grammar for Gramide",
+     "titleEn": "为gramide读取Lua 5.4核心语法结构",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2630,7 +2664,7 @@
      "image": "",
      "id": "O6lvl4/gramide-sql",
      "title": "gramide-sql",
-     "titleEn": "SQL grammar for Gramide",
+     "titleEn": "为gramide读取SQLite风格SQL语法子集",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2664,7 +2698,7 @@
      "image": "",
      "id": "O6lvl4/gramide-toml",
      "title": "gramide-toml",
-     "titleEn": "TOML grammar for Gramide",
+     "titleEn": "为gramide读取TOML 1.0核心语法结构",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2897,7 +2931,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.5.0"
       }
      ],
@@ -2971,7 +3005,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.3.0"
       }
      ],
@@ -3007,7 +3041,7 @@
        "value": "2025年2月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v1.0.6"
       }
      ],
@@ -3119,7 +3153,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.2.0"
       }
      ],
@@ -3155,7 +3189,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.0"
       }
      ],
@@ -3919,7 +3953,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "613",
+     "value": "650",
      "label": "提交"
     },
     {
@@ -3934,20 +3968,58 @@
    "years": [
     {
      "name": "2026",
-     "count": 613
+     "count": 650
     }
    ],
    "works": [
     {
-     "image": "plates/zh/almide-graphics/nendo.jpg",
+     "image": "plates/zh/almide-graphics/ceangal2.jpg",
      "readme": {
-      "lead": "用于检查、编辑和定制3D头像的工具包",
+      "lead": "让同一Almide程序跨Web与原生平台运行的UI框架",
       "points": [
-       "支持VRM 0.x/1.0的命令行",
-       "浏览器3D角色编辑器",
-       "Blender联动FBX转VRM"
+       "snaidhm像素绘制",
+       "跨平台统一宿主ABI",
+       "Almide Playground"
       ]
      },
+     "id": "almide-graphics/ceangal2",
+     "title": "ceangal2",
+     "titleEn": "让同一Almide程序跨Web与原生平台运行的UI框架",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/ceangal2",
+     "tags": [
+      "Almide",
+      "Rust",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "120"
+      },
+      {
+       "label": "首次",
+       "value": "2026年10月"
+      },
+      {
+       "label": "发行版",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-graphics/ceangal2"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide-graphics/nendo",
      "title": "nendo",
      "titleEn": "用于检查、编辑和定制3D头像的工具包",
@@ -3970,7 +4042,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.1.0"
       }
      ],
@@ -3986,47 +4058,9 @@
     },
     {
      "image": "",
-     "id": "almide-graphics/ceangal2",
-     "title": "ceangal2",
-     "titleEn": "让同一Almide程序跨Web与原生平台运行的UI框架",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/ceangal2",
-     "tags": [
-      "Almide",
-      "Rust",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "83"
-      },
-      {
-       "label": "首次",
-       "value": "2026年10月"
-      },
-      {
-       "label": "版本",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide-graphics/ceangal2"
-      }
-     ],
-     "order": {
-      "date": "2026-10-06"
-     }
-    },
-    {
-     "image": "",
      "id": "almide-graphics/nn",
      "title": "nn",
-     "titleEn": "基于matrix标准库的Almide Transformer与信号处理库",
+     "titleEn": "面向Almide的Whisper与Qwen推理库",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "almide-graphics",
@@ -4047,7 +4081,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.0"
       }
      ],
@@ -4086,7 +4120,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.2.0"
       }
      ],
@@ -4129,7 +4163,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.0"
       }
      ],
@@ -4319,7 +4353,7 @@
      "image": "",
      "id": "almide-graphics/ceangal-hello",
      "title": "ceangal-hello",
-     "titleEn": "The ceangal starter app, built for every platform from one Almide source",
+     "titleEn": "用单一Almide源码构建六平台ceangal计数器",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "almide-graphics",
@@ -4477,7 +4511,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.32.1"
       }
      ],
@@ -4516,7 +4550,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.6.0"
       }
      ],
@@ -4549,8 +4583,8 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
-       "value": "php-8.2.31"
+       "label": "发行版",
+       "value": "php-8.3.35"
       }
      ],
      "links": [
@@ -4588,8 +4622,8 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
-       "value": "v0.2.0"
+       "label": "发行版",
+       "value": "v0.1.0"
       }
      ],
      "links": [
@@ -4740,7 +4774,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.2.0"
       }
      ],
@@ -4776,7 +4810,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.0.5"
       }
      ],
@@ -4836,7 +4870,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "123",
+     "value": "125",
      "label": "提交"
     },
     {
@@ -4851,7 +4885,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 123
+     "count": 125
     }
    ],
    "works": [
@@ -4917,7 +4951,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "51"
+       "value": "53"
       },
       {
        "label": "首次",
@@ -4935,7 +4969,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-10-06"
      }
     },
     {
@@ -5336,7 +5370,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.1"
       }
      ],
@@ -5372,7 +5406,7 @@
        "value": "2025年12月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.0"
       }
      ],
@@ -5411,7 +5445,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版本",
+       "label": "标签",
        "value": "v0.1.0"
       }
      ],
@@ -5450,7 +5484,7 @@
        "value": "2026年2月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.3.0"
       }
      ],
@@ -5489,7 +5523,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v1.0.0"
       }
      ],
@@ -6162,7 +6196,7 @@
        "value": "2026年2月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.1.0"
       },
       {
@@ -6209,7 +6243,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.2.0"
       },
       {
@@ -6330,7 +6364,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.1.0"
       }
      ],
@@ -6514,11 +6548,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "35",
+     "value": "34",
      "label": "公开仓库"
     },
     {
-     "value": "376",
+     "value": "329",
      "label": "提交"
     },
     {
@@ -6549,7 +6583,7 @@
     },
     {
      "name": "2026",
-     "count": 223
+     "count": 176
     }
    ],
    "works": [
@@ -6585,7 +6619,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.9.1"
       },
       {
@@ -6627,7 +6661,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版本",
+       "label": "发行版",
        "value": "v0.3.0"
       }
      ],
@@ -6675,40 +6709,6 @@
      ],
      "order": {
       "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/arlk",
-     "title": "arlk",
-     "titleEn": "Arlk: a proof language with a small trusted core, written in Almide",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/arlk",
-     "tags": [
-      "Almide",
-      "Shell",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "47"
-      },
-      {
-       "label": "首次",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/arlk"
-      }
-     ],
-     "order": {
-      "date": "2026-10-06"
      }
     },
     {

@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
 <title>做语言 | O6lvl4</title>
-<meta name="description" content="静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。另一门语言是 wyve：在 LLVM IR 之上一层放置静态语义，让优化器把契约写下来，用 Racket 写成">
+<meta name="description" content="静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。Arlk是用Almide编写、追踪定理前提的证明语言。用Racket编写的wyve在LLVM IR之上放置静态语义，让优化器记录契约。">
 <meta name="theme-color" content="light-dark(oklch(0.985 0.002 250), oklch(0.09 0.004 260))">
 <meta property="og:site_name" content="O6lvl4">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/almide/"><link rel="canonical" href="https://o6lvl4.github.io/O6lvl4-portfolio/zh/almide/">
 <meta property="og:title" content="做语言 | O6lvl4">
-<meta property="og:description" content="静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。另一门语言是 wyve：在 LLVM IR 之上一层放置静态语义，让优化器把契约写下来，用 Racket 写成">
+<meta property="og:description" content="静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。Arlk是用Almide编写、追踪定理前提的证明语言。用Racket编写的wyve在LLVM IR之上放置静态语义，让优化器记录契约。">
 <meta property="og:image" content="https://o6lvl4.github.io/O6lvl4-portfolio/zh/share/og.jpg">
 <meta property="og:image:alt" content="O6lvl4 — 从语言开始，构建开发工具。">
 <meta name="twitter:card" content="summary_large_image">
@@ -1699,12 +1699,12 @@ body::after {
     <div class="fam-hero">
       <div>
         <h1 class="entry-name">做语言</h1>
-        <p class="fam-intro">静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。另一门语言是 wyve：在 LLVM IR 之上一层放置静态语义，让优化器把契约写下来，用 Racket 写成</p>
+        <p class="fam-intro">静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。Arlk是用Almide编写、追踪定理前提的证明语言。用Racket编写的wyve在LLVM IR之上放置静态语义，让优化器记录契约。</p>
         <a class="fam-back" href="../#families">全部系列</a>
       </div>
       <span class="fam-hero-mark" aria-hidden="true">ᚁ</span>
     </div>
-    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">18</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">13,829</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">6</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">年份</div></div></div>
+    <div class="overview-kpis" role="list"><div class="kpi-card" role="listitem"><div class="kpi-val">19</div><div class="kpi-label">公开仓库</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">13,981</div><div class="kpi-label">提交</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">6</div><div class="kpi-label">语言</div></div><div class="kpi-card" role="listitem"><div class="kpi-val">2026–2026</div><div class="kpi-label">年份</div></div></div>
     
   </section>
         <section id="object" class="section" aria-labelledby="heading-object">
@@ -1721,7 +1721,7 @@ body::after {
     </div>
     <h3 class="om-name">almide</h3>
     <p class="om-path">almide<span class="om-slash">/</span>almide</p>
-      <dl class="om-figures"><div class="om-fig"><dd class="om-fig-val">11,160</dd><dt class="om-fig-key">提交</dt></div><div class="om-fig"><dd class="om-fig-val">2026年3月</dd><dt class="om-fig-key">首次</dt></div><div class="om-fig"><dd class="om-fig-val">v0.60.0-rc3</dd><dt class="om-fig-key">版本</dt></div><div class="om-fig"><dd class="om-fig-val">34</dd><dt class="om-fig-key">星标</dt></div></dl>
+      <dl class="om-figures"><div class="om-fig"><dd class="om-fig-val">11,230</dd><dt class="om-fig-key">提交</dt></div><div class="om-fig"><dd class="om-fig-val">2026年3月</dd><dt class="om-fig-key">首次</dt></div><div class="om-fig"><dd class="om-fig-val">v0.66.0</dd><dt class="om-fig-key">发行版</dt></div><div class="om-fig"><dd class="om-fig-val">34</dd><dt class="om-fig-key">星标</dt></div></dl>
       <p class="om-updated">更新<span class="om-updated-val">2026年10月</span></p>
     <ul class="om-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
     <div class="om-links"><a class="om-link" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">仓库</a><a class="om-link" href="https://almide.github.io/docs/" target="_blank" rel="noopener noreferrer">站点</a></div>
@@ -1739,14 +1739,14 @@ body::after {
     <div class="section-head">
       <span class="ogham-mark" aria-hidden="true">ᚂ</span>
       <h2 class="section-title" id="heading-works">作品</h2>
-      <span class="section-count">18 / 18</span>
+      <span class="section-count">19 / 19</span>
     </div>
     
     <div class="works-toolbar">
       <div class="sort-bar" role="group" aria-label="排序"><button type="button" class="sort-btn active" data-sort="date" aria-pressed="true">按更新</button><button type="button" class="sort-btn" data-sort="commits" aria-pressed="false">按提交</button><button type="button" class="sort-btn" data-sort="format" aria-pressed="false">按语言</button><button type="button" class="sort-btn" data-sort="name" aria-pressed="false">按名称</button></div>
       <div class="lang-filter-list" role="group" aria-label="语言"><button type="button" class="lang-chip active" data-lang="" aria-pressed="true">全部</button><button type="button" class="lang-chip" data-lang="Rust" aria-pressed="false"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</button><button type="button" class="lang-chip" data-lang="Almide" aria-pressed="false"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</button><button type="button" class="lang-chip" data-lang="Racket" aria-pressed="false"><span class="lang-dot" style="background:#3c5caa;width:5px;height:5px" aria-hidden="true"></span>Racket</button><button type="button" class="lang-chip" data-lang="JavaScript" aria-pressed="false"><span class="lang-dot" style="background:#f1e05a;width:5px;height:5px" aria-hidden="true"></span>JavaScript</button><button type="button" class="lang-chip" data-lang="C" aria-pressed="false"><span class="lang-dot" style="background:#555555;width:5px;height:5px" aria-hidden="true"></span>C</button><button type="button" class="lang-chip" data-lang="Shell" aria-pressed="false"><span class="lang-dot" style="background:#89e051;width:5px;height:5px" aria-hidden="true"></span>Shell</button></div>
     </div>
-    <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-10-06" data-commits="11160" data-rank="0">
+    <ul class="repo-list" role="list" aria-label="作品"><li class="repo-item" data-org="almide" data-lang="Rust" data-name="almide" data-date="2026-10-06" data-commits="11230" data-rank="0">
       <a class="repo-row" href="https://github.com/almide/almide" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1757,7 +1757,7 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Almide</li><li class="repo-topic">Shell</li><li class="repo-topic">code-generation</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">11,160<span class="repo-meta-unit"> 提交</span></span>
+          <span class="repo-stars">11,230<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-10-06">2026年10月</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:#dea584;width:5px;height:5px" aria-hidden="true"></span>Rust</span>
@@ -1765,7 +1765,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="als" data-date="2026-10-06" data-commits="1534" data-rank="1">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="als" data-date="2026-10-06" data-commits="1536" data-rank="1">
       <a class="repo-row" href="https://github.com/almide/als" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1776,7 +1776,7 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">Rust</li><li class="repo-topic">Python</li><li class="repo-topic">almide</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">1,534<span class="repo-meta-unit"> 提交</span></span>
+          <span class="repo-stars">1,536<span class="repo-meta-unit"> 提交</span></span>
           <time class="repo-date" datetime="2026-10-06">2026年10月</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
@@ -1822,7 +1822,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-dojo" data-date="2026-10-05" data-commits="563" data-rank="4">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-dojo" data-date="2026-10-06" data-commits="564" data-rank="4">
       <a class="repo-row" href="https://github.com/almide/almide-dojo" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1833,8 +1833,8 @@ body::after {
           <ul class="repo-topics"><li class="repo-topic">HTML</li><li class="repo-topic">Shell</li><li class="repo-topic">almide</li></ul>
         </div>
         <div class="repo-meta">
-          <span class="repo-stars">563<span class="repo-meta-unit"> 提交</span></span>
-          <time class="repo-date" datetime="2026-10-05">2026年10月</time>
+          <span class="repo-stars">564<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-10-06">2026年10月</time>
           <div class="repo-foot">
             <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
 
@@ -1936,7 +1936,26 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-lander" data-date="2026-10-01" data-commits="55" data-rank="10">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="arlk" data-date="2026-10-07" data-commits="79" data-rank="10">
+      <a class="repo-row" href="https://github.com/O6lvl4/arlk" target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="repo-top-line">
+            <span class="repo-name">arlk</span>
+            <span class="repo-org-tag">O6lvl4</span>
+          </div>
+          <p class="repo-desc">用Almide编写、追踪证明前提的语言</p>
+          <ul class="repo-topics"><li class="repo-topic">Shell</li><li class="repo-topic">Python</li></ul>
+        </div>
+        <div class="repo-meta">
+          <span class="repo-stars">79<span class="repo-meta-unit"> 提交</span></span>
+          <time class="repo-date" datetime="2026-10-07">2026年10月</time>
+          <div class="repo-foot">
+            <span class="repo-lang-tag"><span class="lang-dot" style="background:currentColor;width:5px;height:5px" aria-hidden="true"></span>Almide</span>
+
+          </div>
+        </div>
+      </a>
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-lander" data-date="2026-10-01" data-commits="55" data-rank="11">
       <a class="repo-row" href="https://github.com/almide/almide-lander" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1955,7 +1974,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="cloud-examples" data-date="2026-10-04" data-commits="18" data-rank="11">
+    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="cloud-examples" data-date="2026-10-04" data-commits="18" data-rank="12">
       <a class="repo-row" href="https://github.com/almide/cloud-examples" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1974,7 +1993,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="" data-name="almide-agents" data-date="2026-09-22" data-commits="8" data-rank="12">
+    </li><li class="repo-item" data-org="almide" data-lang="" data-name="almide-agents" data-date="2026-09-22" data-commits="8" data-rank="13">
       <a class="repo-row" href="https://github.com/almide/almide-agents" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -1993,7 +2012,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-web" data-date="2026-07-25" data-commits="3" data-rank="13">
+    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-web" data-date="2026-07-25" data-commits="3" data-rank="14">
       <a class="repo-row" href="https://github.com/almide/almide-web" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2012,7 +2031,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="parsegen" data-date="2026-08-17" data-commits="3" data-rank="14">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="parsegen" data-date="2026-08-17" data-commits="3" data-rank="15">
       <a class="repo-row" href="https://github.com/almide/parsegen" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2031,7 +2050,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-wasm-bindgen" data-date="2026-04-15" data-commits="24" data-rank="15">
+    </li><li class="repo-item" data-org="almide" data-lang="Almide" data-name="almide-wasm-bindgen" data-date="2026-04-15" data-commits="24" data-rank="16">
       <a class="repo-row" href="https://github.com/almide/almide-wasm-bindgen" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2050,7 +2069,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="Shell" data-name="almide-examples" data-date="2026-03-07" data-commits="1" data-rank="16">
+    </li><li class="repo-item" data-org="almide" data-lang="Shell" data-name="almide-examples" data-date="2026-03-07" data-commits="1" data-rank="17">
       <a class="repo-row" href="https://github.com/O6lvl4/almide-examples" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">
@@ -2069,7 +2088,7 @@ body::after {
           </div>
         </div>
       </a>
-    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-js" data-date="2026-04-15" data-commits="1" data-rank="17">
+    </li><li class="repo-item" data-org="almide" data-lang="JavaScript" data-name="almide-js" data-date="2026-04-15" data-commits="1" data-rank="18">
       <a class="repo-row" href="https://github.com/almide/almide-js" target="_blank" rel="noopener noreferrer">
         <div>
           <div class="repo-top-line">

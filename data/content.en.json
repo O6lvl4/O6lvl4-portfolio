@@ -120,8 +120,8 @@
     "items": [
      "Almide（101）",
      "Python（40）",
-     "Shell（33）",
      "TypeScript（32）",
+     "Shell（32）",
      "JavaScript（32）"
     ]
    },
@@ -216,7 +216,7 @@
    },
    {
     "key": "Last touched",
-    "value": "arlk · Oct 2026"
+    "value": "gramide · Oct 2026"
    },
    {
     "key": "Written in Almide",
@@ -235,7 +235,7 @@
     "label": "Repositories"
    },
    {
-    "value": "17,295",
+    "value": "17,461",
     "label": "Commits"
    },
    {
@@ -362,17 +362,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 14102,
+    "count": 14175,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2424,
+    "count": 2480,
     "of": 124
    },
    {
     "name": "almide-graphics",
-    "count": 613,
+    "count": 650,
     "of": 13
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 17046
+    "count": 17212
    }
   ]
  },
@@ -414,14 +414,14 @@
    "id": "almide",
    "title": "Making languages",
    "short": "Languages",
-   "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). The other language here is wyve: a static semantics one layer above LLVM IR, where the optimizer has to write down its contracts — written in Racket.",
+   "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). Arlk is a proof language written in Almide that tracks a theorem's assumptions. wyve, written in Racket, puts static semantics above LLVM IR and asks the optimizer to record its contracts.",
    "figures": [
     {
-     "value": "18",
+     "value": "19",
      "label": "Repositories"
     },
     {
-     "value": "13,829",
+     "value": "13,981",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 13829
+     "count": 13981
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "11,160"
+       "value": "11,230"
       },
       {
        "label": "Started",
@@ -474,7 +474,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.60.0-rc3"
+       "value": "v0.66.0"
       },
       {
        "label": "Stars",
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,534"
+       "value": "1,536"
       },
       {
        "label": "Started",
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "563"
+       "value": "564"
       },
       {
        "label": "Started",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-10-06"
      }
     },
     {
@@ -687,7 +687,7 @@
        "value": "Mar 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.0"
       }
      ],
@@ -766,7 +766,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.3.1"
+       "value": "v0.1.0"
       }
      ],
      "links": [
@@ -855,6 +855,40 @@
      ],
      "order": {
       "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/arlk",
+     "title": "arlk",
+     "titleEn": "A proof language in Almide that tracks the assumptions behind checked proofs",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/arlk",
+     "tags": [
+      "Almide",
+      "Shell",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "79"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/arlk"
+      }
+     ],
+     "order": {
+      "date": "2026-10-07"
      }
     },
     {
@@ -1186,7 +1220,7 @@
        "value": "Aug 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.0"
       }
      ],
@@ -1225,7 +1259,7 @@
        "value": "Mar 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.2.0"
       }
      ],
@@ -1262,7 +1296,7 @@
        "value": "May 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.2.0"
       }
      ],
@@ -1299,7 +1333,7 @@
        "value": "May 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.2.0"
       }
      ],
@@ -1338,7 +1372,7 @@
        "value": "Apr 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.0"
       }
      ],
@@ -1567,7 +1601,7 @@
      "label": "Repositories"
     },
     {
-     "value": "1,077",
+     "value": "1,099",
      "label": "Commits"
     },
     {
@@ -1586,7 +1620,7 @@
     },
     {
      "name": "2026",
-     "count": 1061
+     "count": 1083
     }
    ],
    "works": [
@@ -1624,7 +1658,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.6.1"
+       "value": "v0.6.17"
       },
       {
        "label": "Stars",
@@ -1693,26 +1727,26 @@
      "id": "O6lvl4/gramide",
      "title": "gramide",
      "titleEn": "Syntax-tree engine in Almide for coding agents: lexer, grammar-driven parser, readers, CLI library",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide",
      "tags": [
       "Almide",
       "Python",
-      "Shell"
+      "C"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "174"
+       "value": "181"
       },
       {
        "label": "Started",
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.2.11"
       }
      ],
@@ -1723,7 +1757,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-10-07"
      }
     },
     {
@@ -1731,7 +1765,7 @@
      "id": "O6lvl4/gramide-cli",
      "title": "gramide-cli",
      "titleEn": "The gramide binary: syntax trees for coding agents, composing the engine and language packages.",
-     "date": "Sep 2026",
+     "date": "Oct 2026",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide-cli",
@@ -1743,14 +1777,14 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "136"
+       "value": "143"
       },
       {
        "label": "Started",
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.4.16"
       }
      ],
@@ -1761,7 +1795,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-10-07"
      }
     },
     {
@@ -1788,7 +1822,7 @@
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.14"
       }
      ],
@@ -1826,7 +1860,7 @@
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.14"
       }
      ],
@@ -1864,7 +1898,7 @@
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.13"
       }
      ],
@@ -1902,7 +1936,7 @@
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.16"
       }
      ],
@@ -1948,7 +1982,7 @@
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.3.0"
       }
      ],
@@ -1994,7 +2028,7 @@
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.5.0"
       }
      ],
@@ -2087,7 +2121,7 @@
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.4.17"
       }
      ],
@@ -2125,7 +2159,7 @@
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.3.13"
       }
      ],
@@ -2163,7 +2197,7 @@
        "value": "Sep 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.3.13"
       }
      ],
@@ -2358,6 +2392,40 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/gramide-json",
+     "title": "gramide-json",
+     "titleEn": "Validates JSON syntax and reads its structure for gramide.",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-json",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "8"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-json"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/onetool",
      "title": "onetool",
      "titleEn": "A framework that fronts any API's operations with four generic MCP tools instead of one per endpoint",
@@ -2424,9 +2492,43 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/gramide-java",
+     "title": "gramide-java",
+     "titleEn": "Reads a core subset of Java syntax for gramide.",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-java",
+     "tags": [
+      "Almide",
+      "Python",
+      "Java"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "4"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-java"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/gramide-c",
      "title": "gramide-c",
-     "titleEn": "C grammar for Gramide",
+     "titleEn": "Reads a core subset of C syntax for gramide.",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2460,7 +2562,7 @@
      "image": "",
      "id": "O6lvl4/gramide-csharp",
      "title": "gramide-csharp",
-     "titleEn": "C# grammar for Gramide",
+     "titleEn": "Reads a core subset of C# syntax for gramide.",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2494,7 +2596,7 @@
      "image": "",
      "id": "O6lvl4/gramide-css",
      "title": "gramide-css",
-     "titleEn": "CSS grammar for Gramide",
+     "titleEn": "Reads a structural subset of CSS for gramide.",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2526,77 +2628,9 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/gramide-java",
-     "title": "gramide-java",
-     "titleEn": "Java grammar for Gramide",
-     "date": "Oct 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-java",
-     "tags": [
-      "Almide",
-      "Python",
-      "Java"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/gramide-java"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-json",
-     "title": "gramide-json",
-     "titleEn": "JSON grammar for Gramide",
-     "date": "Oct 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-json",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/gramide-json"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/gramide-lua",
      "title": "gramide-lua",
-     "titleEn": "Lua grammar for Gramide",
+     "titleEn": "Reads a core subset of Lua 5.4 syntax for gramide.",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2630,7 +2664,7 @@
      "image": "",
      "id": "O6lvl4/gramide-sql",
      "title": "gramide-sql",
-     "titleEn": "SQL grammar for Gramide",
+     "titleEn": "Reads a SQLite-style SQL syntax subset for gramide.",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2664,7 +2698,7 @@
      "image": "",
      "id": "O6lvl4/gramide-toml",
      "title": "gramide-toml",
-     "titleEn": "TOML grammar for Gramide",
+     "titleEn": "Reads core TOML 1.0 structures for gramide.",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2897,7 +2931,7 @@
        "value": "Apr 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.5.0"
       }
      ],
@@ -3119,7 +3153,7 @@
        "value": "May 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.2.0"
       }
      ],
@@ -3155,7 +3189,7 @@
        "value": "May 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.0"
       }
      ],
@@ -3919,7 +3953,7 @@
      "label": "Repositories"
     },
     {
-     "value": "613",
+     "value": "650",
      "label": "Commits"
     },
     {
@@ -3934,20 +3968,58 @@
    "years": [
     {
      "name": "2026",
-     "count": 613
+     "count": 650
     }
    ],
    "works": [
     {
-     "image": "plates/en/almide-graphics/nendo.jpg",
+     "image": "plates/en/almide-graphics/ceangal2.jpg",
      "readme": {
-      "lead": "Avatar sculpting toolkit to inspect, edit and visually customize VRM 3D avatar files",
+      "lead": "A UI framework for running one Almide program across the web and native platforms",
       "points": [
-       "CLI: inspect, validate, meta, migrate, bake",
-       "Browser editor for parts, shape, face, textures",
-       "Blender headless FBX-to-VRM conversion"
+       "Pixels drawn by snaidhm",
+       "A shared host ABI across platforms",
+       "An Almide Playground built on the framework"
       ]
      },
+     "id": "almide-graphics/ceangal2",
+     "title": "ceangal2",
+     "titleEn": "A UI framework for running one Almide program across the web and native platforms",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/ceangal2",
+     "tags": [
+      "Almide",
+      "Rust",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "120"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide-graphics/ceangal2"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide-graphics/nendo",
      "title": "nendo",
      "titleEn": "Avatar sculpting toolkit to inspect, edit and visually customize VRM 3D avatar files",
@@ -3986,47 +4058,9 @@
     },
     {
      "image": "",
-     "id": "almide-graphics/ceangal2",
-     "title": "ceangal2",
-     "titleEn": "A UI framework for running one Almide program across the web and native platforms",
-     "date": "Oct 2026",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/ceangal2",
-     "tags": [
-      "Almide",
-      "Rust",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "83"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide-graphics/ceangal2"
-      }
-     ],
-     "order": {
-      "date": "2026-10-06"
-     }
-    },
-    {
-     "image": "",
      "id": "almide-graphics/nn",
      "title": "nn",
-     "titleEn": "Transformer and signal-processing library in Almide, built on the matrix stdlib, with Whisper inference",
+     "titleEn": "Inference for Almide: Whisper plus Qwen CPU execution",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "almide-graphics",
@@ -4047,7 +4081,7 @@
        "value": "Apr 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.0"
       }
      ],
@@ -4129,7 +4163,7 @@
        "value": "Apr 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.0"
       }
      ],
@@ -4319,7 +4353,7 @@
      "image": "",
      "id": "almide-graphics/ceangal-hello",
      "title": "ceangal-hello",
-     "titleEn": "The ceangal starter app, built for every platform from one Almide source",
+     "titleEn": "A ceangal counter built for six platforms from one Almide source.",
      "date": "Oct 2026",
      "format": "Almide",
      "credit": "almide-graphics",
@@ -4550,7 +4584,7 @@
       },
       {
        "label": "Release",
-       "value": "php-8.2.31"
+       "value": "php-8.3.35"
       }
      ],
      "links": [
@@ -4589,7 +4623,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.2.0"
+       "value": "v0.1.0"
       }
      ],
      "links": [
@@ -4836,7 +4870,7 @@
      "label": "Repositories"
     },
     {
-     "value": "123",
+     "value": "125",
      "label": "Commits"
     },
     {
@@ -4851,7 +4885,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 123
+     "count": 125
     }
    ],
    "works": [
@@ -4917,7 +4951,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "51"
+       "value": "53"
       },
       {
        "label": "Started",
@@ -4935,7 +4969,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-10-06"
      }
     },
     {
@@ -5336,7 +5370,7 @@
        "value": "Apr 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.1"
       }
      ],
@@ -5372,7 +5406,7 @@
        "value": "Dec 2025"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.0"
       }
      ],
@@ -5411,7 +5445,7 @@
        "value": "Mar 2026"
       },
       {
-       "label": "Release",
+       "label": "Tag",
        "value": "v0.1.0"
       }
      ],
@@ -6514,11 +6548,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "35",
+     "value": "34",
      "label": "Repositories"
     },
     {
-     "value": "376",
+     "value": "329",
      "label": "Commits"
     },
     {
@@ -6549,7 +6583,7 @@
     },
     {
      "name": "2026",
-     "count": 223
+     "count": 176
     }
    ],
    "works": [
@@ -6675,40 +6709,6 @@
      ],
      "order": {
       "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/arlk",
-     "title": "arlk",
-     "titleEn": "Arlk: a proof language with a small trusted core, written in Almide",
-     "date": "Oct 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/arlk",
-     "tags": [
-      "Almide",
-      "Shell",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "47"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/arlk"
-      }
-     ],
-     "order": {
-      "date": "2026-10-06"
      }
     },
     {

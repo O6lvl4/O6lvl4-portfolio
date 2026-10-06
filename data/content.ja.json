@@ -120,8 +120,8 @@
     "items": [
      "Almide（101）",
      "Python（40）",
-     "Shell（33）",
      "TypeScript（32）",
+     "Shell（32）",
      "JavaScript（32）"
     ]
    },
@@ -216,7 +216,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "arlk · 2026年10月"
+    "value": "gramide · 2026年10月"
    },
    {
     "key": "Almide で書いた割合",
@@ -235,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "17,295",
+    "value": "17,461",
     "label": "コミット"
    },
    {
@@ -362,17 +362,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 14102,
+    "count": 14175,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2424,
+    "count": 2480,
     "of": 124
    },
    {
     "name": "almide-graphics",
-    "count": 613,
+    "count": 650,
     "of": 13
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 17046
+    "count": 17212
    }
   ]
  },
@@ -414,14 +414,14 @@
    "id": "almide",
    "title": "言語をつくる",
    "short": "言語",
-   "intro": "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。もう一つの言語は wyve — LLVM IR の一層上に静的な意味論を置き、最適化器に契約を書かせるもので、Racket で書いてあります。",
+   "intro": "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。Almideで書いた証明言語Arlkもここに含みます。wyveは、LLVM IRの一層上に静的な意味論を置き、最適化器に契約を書かせるRacket製の言語です。",
    "figures": [
     {
-     "value": "18",
+     "value": "19",
      "label": "公開リポジトリ"
     },
     {
-     "value": "13,829",
+     "value": "13,981",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 13829
+     "count": 13981
     }
    ],
    "works": [
@@ -466,15 +466,15 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "11,160"
+       "value": "11,230"
       },
       {
        "label": "初回",
        "value": "2026年3月"
       },
       {
-       "label": "版",
-       "value": "v0.60.0-rc3"
+       "label": "リリース",
+       "value": "v0.66.0"
       },
       {
        "label": "星",
@@ -513,14 +513,14 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,534"
+       "value": "1,536"
       },
       {
        "label": "初回",
        "value": "2026年3月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v1.0.0"
       },
       {
@@ -562,7 +562,7 @@
        "value": "2026年6月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.0.7"
       },
       {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "563"
+       "value": "564"
       },
       {
        "label": "初回",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-10-06"
      }
     },
     {
@@ -687,7 +687,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.0"
       }
      ],
@@ -726,7 +726,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.4.1"
       }
      ],
@@ -765,8 +765,8 @@
        "value": "2026年3月"
       },
       {
-       "label": "版",
-       "value": "v0.3.1"
+       "label": "リリース",
+       "value": "v0.1.0"
       }
      ],
      "links": [
@@ -855,6 +855,40 @@
      ],
      "order": {
       "date": "2026-10-05"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/arlk",
+     "title": "arlk",
+     "titleEn": "複数の論理を扱い、証明の前提を追うAlmide製の証明言語",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/arlk",
+     "tags": [
+      "Almide",
+      "Shell",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "79"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/arlk"
+      }
+     ],
+     "order": {
+      "date": "2026-10-07"
      }
     },
     {
@@ -1186,7 +1220,7 @@
        "value": "2026年8月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.0"
       }
      ],
@@ -1225,7 +1259,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.2.0"
       }
      ],
@@ -1262,7 +1296,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.2.0"
       }
      ],
@@ -1299,7 +1333,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.2.0"
       }
      ],
@@ -1338,7 +1372,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.0"
       }
      ],
@@ -1567,7 +1601,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "1,077",
+     "value": "1,099",
      "label": "コミット"
     },
     {
@@ -1586,7 +1620,7 @@
     },
     {
      "name": "2026",
-     "count": 1061
+     "count": 1083
     }
    ],
    "works": [
@@ -1623,8 +1657,8 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
-       "value": "v0.6.1"
+       "label": "リリース",
+       "value": "v0.6.17"
       },
       {
        "label": "星",
@@ -1693,26 +1727,26 @@
      "id": "O6lvl4/gramide",
      "title": "gramide",
      "titleEn": "Almide製の、コーディングエージェント向け構文木エンジン",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide",
      "tags": [
       "Almide",
       "Python",
-      "Shell"
+      "C"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "174"
+       "value": "181"
       },
       {
        "label": "初回",
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.2.11"
       }
      ],
@@ -1723,7 +1757,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-10-07"
      }
     },
     {
@@ -1731,7 +1765,7 @@
      "id": "O6lvl4/gramide-cli",
      "title": "gramide-cli",
      "titleEn": "コーディングエージェント向けに構文木を提供するgramideコマンド",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide-cli",
@@ -1743,14 +1777,14 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "136"
+       "value": "143"
       },
       {
        "label": "初回",
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.4.16"
       }
      ],
@@ -1761,7 +1795,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-10-07"
      }
     },
     {
@@ -1788,7 +1822,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.14"
       }
      ],
@@ -1826,7 +1860,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.14"
       }
      ],
@@ -1864,7 +1898,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.13"
       }
      ],
@@ -1902,7 +1936,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.16"
       }
      ],
@@ -1948,7 +1982,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.3.0"
       }
      ],
@@ -1994,7 +2028,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.5.0"
       }
      ],
@@ -2041,7 +2075,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v2.3.1"
       }
      ],
@@ -2087,7 +2121,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.4.17"
       }
      ],
@@ -2125,7 +2159,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.3.13"
       }
      ],
@@ -2163,7 +2197,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.3.13"
       }
      ],
@@ -2202,7 +2236,7 @@
        "value": "2026年8月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.4.0"
       }
      ],
@@ -2274,7 +2308,7 @@
        "value": "2025年3月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v1.0.2"
       }
      ],
@@ -2358,6 +2392,40 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/gramide-json",
+     "title": "gramide-json",
+     "titleEn": "gramide向けにJSON構文を検証し、構造を読み取る",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-json",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-json"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/onetool",
      "title": "onetool",
      "titleEn": "任意のAPIを4つの汎用ツールでMCPに公開するフレームワーク",
@@ -2424,9 +2492,43 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/gramide-java",
+     "title": "gramide-java",
+     "titleEn": "gramide向けにJavaの構文サブセットを読み取る",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-java",
+     "tags": [
+      "Almide",
+      "Python",
+      "Java"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "4"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-java"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/gramide-c",
      "title": "gramide-c",
-     "titleEn": "C grammar for Gramide",
+     "titleEn": "gramide向けにCの構文サブセットを読み取る",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2460,7 +2562,7 @@
      "image": "",
      "id": "O6lvl4/gramide-csharp",
      "title": "gramide-csharp",
-     "titleEn": "C# grammar for Gramide",
+     "titleEn": "gramide向けにC#の構文サブセットを読み取る",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2494,7 +2596,7 @@
      "image": "",
      "id": "O6lvl4/gramide-css",
      "title": "gramide-css",
-     "titleEn": "CSS grammar for Gramide",
+     "titleEn": "gramide向けにCSSの構造的な構文サブセットを読み取る",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2526,77 +2628,9 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/gramide-java",
-     "title": "gramide-java",
-     "titleEn": "Java grammar for Gramide",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-java",
-     "tags": [
-      "Almide",
-      "Python",
-      "Java"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-java"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-json",
-     "title": "gramide-json",
-     "titleEn": "JSON grammar for Gramide",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-json",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-json"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/gramide-lua",
      "title": "gramide-lua",
-     "titleEn": "Lua grammar for Gramide",
+     "titleEn": "gramide向けにLua 5.4の主要構文を読み取る",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2630,7 +2664,7 @@
      "image": "",
      "id": "O6lvl4/gramide-sql",
      "title": "gramide-sql",
-     "titleEn": "SQL grammar for Gramide",
+     "titleEn": "gramide向けにSQLite系SQLの主要構文を読み取る",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2664,7 +2698,7 @@
      "image": "",
      "id": "O6lvl4/gramide-toml",
      "title": "gramide-toml",
-     "titleEn": "TOML grammar for Gramide",
+     "titleEn": "gramide向けにTOML 1.0の主要構文を読み取る",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "O6lvl4",
@@ -2897,7 +2931,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.5.0"
       }
      ],
@@ -2971,7 +3005,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.3.0"
       }
      ],
@@ -3007,7 +3041,7 @@
        "value": "2025年2月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v1.0.6"
       }
      ],
@@ -3119,7 +3153,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.2.0"
       }
      ],
@@ -3155,7 +3189,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.0"
       }
      ],
@@ -3919,7 +3953,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "613",
+     "value": "650",
      "label": "コミット"
     },
     {
@@ -3934,20 +3968,58 @@
    "years": [
     {
      "name": "2026",
-     "count": 613
+     "count": 650
     }
    ],
    "works": [
     {
-     "image": "plates/ja/almide-graphics/nendo.jpg",
+     "image": "plates/ja/almide-graphics/ceangal2.jpg",
      "readme": {
-      "lead": "3Dアバターファイルを検査・編集・カスタマイズするツールキット",
+      "lead": "同じAlmideプログラムをWebと各OSで動かすUI基盤",
       "points": [
-       "VRM 0.x/1.0対応のCLIとGLB解析",
-       "ブラウザ上の3Dキャラクターエディタ",
-       "Blender連携とFBXからVRMへの変換"
+       "snaidhmでピクセルを描画",
+       "共通ABIを各プラットフォームで実装",
+       "Almide Playgroundを同梱"
       ]
      },
+     "id": "almide-graphics/ceangal2",
+     "title": "ceangal2",
+     "titleEn": "同じAlmideプログラムをWebと各OSで動かすUI基盤",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/ceangal2",
+     "tags": [
+      "Almide",
+      "Rust",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "120"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "リリース",
+       "value": "v0.2.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide-graphics/ceangal2"
+      }
+     ],
+     "order": {
+      "date": "2026-10-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide-graphics/nendo",
      "title": "nendo",
      "titleEn": "3Dアバターファイルを検査・編集・カスタマイズするツールキット",
@@ -3970,7 +4042,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.1.0"
       }
      ],
@@ -3986,47 +4058,9 @@
     },
     {
      "image": "",
-     "id": "almide-graphics/ceangal2",
-     "title": "ceangal2",
-     "titleEn": "同じAlmideプログラムをWebと各OSで動かすUI基盤",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/ceangal2",
-     "tags": [
-      "Almide",
-      "Rust",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "83"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      },
-      {
-       "label": "版",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide-graphics/ceangal2"
-      }
-     ],
-     "order": {
-      "date": "2026-10-06"
-     }
-    },
-    {
-     "image": "",
      "id": "almide-graphics/nn",
      "title": "nn",
-     "titleEn": "Almide製matrix stdlib上のTransformer・信号処理ライブラリ",
+     "titleEn": "WhisperとQwenを動かすAlmide向け推論ライブラリ",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "almide-graphics",
@@ -4047,7 +4081,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.0"
       }
      ],
@@ -4086,7 +4120,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.2.0"
       }
      ],
@@ -4129,7 +4163,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.0"
       }
      ],
@@ -4319,7 +4353,7 @@
      "image": "",
      "id": "almide-graphics/ceangal-hello",
      "title": "ceangal-hello",
-     "titleEn": "The ceangal starter app, built for every platform from one Almide source",
+     "titleEn": "単一Almideソースから6環境向けに作るceangalカウンター",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "almide-graphics",
@@ -4477,7 +4511,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.32.1"
       }
      ],
@@ -4516,7 +4550,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.6.0"
       }
      ],
@@ -4549,8 +4583,8 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
-       "value": "php-8.2.31"
+       "label": "リリース",
+       "value": "php-8.3.35"
       }
      ],
      "links": [
@@ -4588,8 +4622,8 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
-       "value": "v0.2.0"
+       "label": "リリース",
+       "value": "v0.1.0"
       }
      ],
      "links": [
@@ -4740,7 +4774,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.2.0"
       }
      ],
@@ -4776,7 +4810,7 @@
        "value": "2026年5月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.0.5"
       }
      ],
@@ -4836,7 +4870,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "123",
+     "value": "125",
      "label": "コミット"
     },
     {
@@ -4851,7 +4885,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 123
+     "count": 125
     }
    ],
    "works": [
@@ -4917,7 +4951,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "51"
+       "value": "53"
       },
       {
        "label": "初回",
@@ -4935,7 +4969,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-10-06"
      }
     },
     {
@@ -5336,7 +5370,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.1"
       }
      ],
@@ -5372,7 +5406,7 @@
        "value": "2025年12月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.0"
       }
      ],
@@ -5411,7 +5445,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版",
+       "label": "タグ",
        "value": "v0.1.0"
       }
      ],
@@ -5450,7 +5484,7 @@
        "value": "2026年2月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.3.0"
       }
      ],
@@ -5489,7 +5523,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v1.0.0"
       }
      ],
@@ -6162,7 +6196,7 @@
        "value": "2026年2月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.1.0"
       },
       {
@@ -6209,7 +6243,7 @@
        "value": "2026年4月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.2.0"
       },
       {
@@ -6330,7 +6364,7 @@
        "value": "2026年3月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.1.0"
       }
      ],
@@ -6514,11 +6548,11 @@
    "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
-     "value": "35",
+     "value": "34",
      "label": "公開リポジトリ"
     },
     {
-     "value": "376",
+     "value": "329",
      "label": "コミット"
     },
     {
@@ -6549,7 +6583,7 @@
     },
     {
      "name": "2026",
-     "count": 223
+     "count": 176
     }
    ],
    "works": [
@@ -6585,7 +6619,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.9.1"
       },
       {
@@ -6627,7 +6661,7 @@
        "value": "2026年9月"
       },
       {
-       "label": "版",
+       "label": "リリース",
        "value": "v0.3.0"
       }
      ],
@@ -6675,40 +6709,6 @@
      ],
      "order": {
       "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/arlk",
-     "title": "arlk",
-     "titleEn": "Arlk: a proof language with a small trusted core, written in Almide",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/arlk",
-     "tags": [
-      "Almide",
-      "Shell",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "47"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/arlk"
-      }
-     ],
-     "order": {
-      "date": "2026-10-06"
      }
     },
     {
