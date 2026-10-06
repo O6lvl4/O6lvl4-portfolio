@@ -4886,5 +4886,239 @@
     "用axioms显示依赖前提"
    ]
   }
+ },
+ "O6lvl4/gramide-c": {
+  "ja": {
+   "what": "gramide向けにCの構文サブセットを読み取る",
+   "points": [
+    "関数・型・変数のシンボル抽出",
+    "元ソースのバイト範囲",
+    "Cソースとヘッダー（.c・.h）"
+   ]
+  },
+  "en": {
+   "what": "Reads a core subset of C syntax for gramide.",
+   "points": [
+    "Function, type and variable symbols",
+    "Original-source byte ranges",
+    "C source and header files (.c, .h)"
+   ]
+  },
+  "zh": {
+   "what": "为gramide读取C语法子集",
+   "points": [
+    "函数、类型与变量符号",
+    "原始源码字节范围",
+    "C源文件与头文件（.c、.h）"
+   ]
+  }
+ },
+ "O6lvl4/gramide-csharp": {
+  "ja": {
+   "what": "gramide向けにC#の構文サブセットを読み取る",
+   "points": [
+    "名前空間・型・メンバーのシンボル",
+    "元ソースのバイト範囲",
+    "C#ソースファイル（.cs）"
+   ]
+  },
+  "en": {
+   "what": "Reads a core subset of C# syntax for gramide.",
+   "points": [
+    "Namespace, type and member symbols",
+    "Original-source byte ranges",
+    "C# source files (.cs)"
+   ]
+  },
+  "zh": {
+   "what": "为gramide读取C#语法子集",
+   "points": [
+    "命名空间、类型与成员符号",
+    "原始源码字节范围",
+    "C#源文件（.cs）"
+   ]
+  }
+ },
+ "O6lvl4/gramide-css": {
+  "ja": {
+   "what": "gramide向けにCSSの構造的な構文サブセットを読み取る",
+   "points": [
+    "ルール・プロパティ・@規則のシンボル",
+    "入れ子ルールとカスタムプロパティ",
+    "CSSスタイルシート（.css）"
+   ]
+  },
+  "en": {
+   "what": "Reads a structural subset of CSS for gramide.",
+   "points": [
+    "Rule, property and at-rule symbols",
+    "Nested rules and custom properties",
+    "CSS stylesheets (.css)"
+   ]
+  },
+  "zh": {
+   "what": "为gramide读取CSS结构语法子集",
+   "points": [
+    "规则、属性与@规则符号",
+    "嵌套规则与自定义属性",
+    "CSS样式表（.css）"
+   ]
+  }
+ },
+ "O6lvl4/gramide-java": {
+  "ja": {
+   "what": "gramide向けにJavaの構文サブセットを読み取る",
+   "points": [
+    "クラス・レコード・メソッドのシンボル",
+    "元ソースのバイト範囲",
+    "Javaソースファイル（.java）"
+   ]
+  },
+  "en": {
+   "what": "Reads a core subset of Java syntax for gramide.",
+   "points": [
+    "Class, record and method symbols",
+    "Original-source byte ranges",
+    "Java source files (.java)"
+   ]
+  },
+  "zh": {
+   "what": "为gramide读取Java语法子集",
+   "points": [
+    "类、记录类与方法符号",
+    "原始源码字节范围",
+    "Java源文件（.java）"
+   ]
+  }
+ },
+ "O6lvl4/gramide-json": {
+  "ja": {
+   "what": "gramide向けにJSON構文を検証し、構造を読み取る",
+   "points": [
+    "RFC 8259に基づく構文検証",
+    "オブジェクト・配列・ペアの構文木",
+    "引用符とエスケープを保つキー一覧"
+   ]
+  },
+  "en": {
+   "what": "Validates JSON syntax and reads its structure for gramide.",
+   "points": [
+    "RFC 8259 syntax validation",
+    "Object, array and key-value pair parsing",
+    "Object keys with original quotes and escapes"
+   ]
+  },
+  "zh": {
+   "what": "为gramide验证JSON语法并读取结构",
+   "points": [
+    "RFC 8259语法检查",
+    "对象、数组与键值对解析",
+    "保留引号和转义的键名"
+   ]
+  }
+ },
+ "O6lvl4/gramide-lua": {
+  "ja": {
+   "what": "gramide向けにLua 5.4の主要構文を読み取る",
+   "points": [
+    "名前付き関数・局所変数・ラベルの抽出",
+    "テーブル構築と制御フローの構文",
+    "元ソースに対応するUTF-8バイト範囲"
+   ]
+  },
+  "en": {
+   "what": "Reads a core subset of Lua 5.4 syntax for gramide.",
+   "points": [
+    "Named-function, local-binding and label symbols",
+    "Table constructors and control-flow syntax",
+    "UTF-8 byte ranges in the original source"
+   ]
+  },
+  "zh": {
+   "what": "为gramide读取Lua 5.4核心语法结构",
+   "points": [
+    "具名函数、局部绑定与标签符号",
+    "表构造和控制流语法",
+    "原始源码的UTF-8字节范围"
+   ]
+  }
+ },
+ "O6lvl4/gramide-sql": {
+  "ja": {
+   "what": "gramide向けにSQLite系SQLの主要構文を読み取る",
+   "points": [
+    "DDL・問い合わせ・更新文の構文",
+    "テーブル・列・CTEのシンボル抽出",
+    "大小文字を区別しないASCIIキーワード"
+   ]
+  },
+  "en": {
+   "what": "Reads a SQLite-style SQL syntax subset for gramide.",
+   "points": [
+    "DDL, queries and data modification syntax",
+    "Symbols for tables, columns and CTEs",
+    "Case-insensitive ASCII keywords"
+   ]
+  },
+  "zh": {
+   "what": "为gramide读取SQLite风格SQL语法子集",
+   "points": [
+    "定义、查询和数据修改语法",
+    "表、列和CTE符号提取",
+    "大小写不敏感的ASCII关键字"
+   ]
+  }
+ },
+ "O6lvl4/gramide-toml": {
+  "ja": {
+   "what": "gramide向けにTOML 1.0の主要構文を読み取る",
+   "points": [
+    "キーとテーブル見出しの構造抽出",
+    "配列・インラインテーブル・複数行文字列",
+    "UTF-8バイト範囲とCRLF行番号"
+   ]
+  },
+  "en": {
+   "what": "Reads core TOML 1.0 structures for gramide.",
+   "points": [
+    "Structural symbols for keys and table headers",
+    "Arrays, inline tables and multiline strings",
+    "UTF-8 source ranges and CRLF-aware line numbers"
+   ]
+  },
+  "zh": {
+   "what": "为gramide读取TOML 1.0核心语法结构",
+   "points": [
+    "键和表头的结构符号",
+    "数组、内联表和多行字符串",
+    "UTF-8范围与CRLF行号"
+   ]
+  }
+ },
+ "almide-graphics/ceangal-hello": {
+  "ja": {
+   "what": "単一Almideソースから6環境向けに作るceangalカウンター",
+   "points": [
+    "ボタン操作で数値を加算",
+    "保存時の再ビルドと再読み込み",
+    "6環境向けの共通CI設定"
+   ]
+  },
+  "en": {
+   "what": "A ceangal counter built for six platforms from one Almide source.",
+   "points": [
+    "Button-driven counter",
+    "Save-triggered rebuilds and reloads",
+    "Reusable CI workflow targeting six platforms"
+   ]
+  },
+  "zh": {
+   "what": "用单一Almide源码构建六平台ceangal计数器",
+   "points": [
+    "按钮递增计数器",
+    "保存触发的重建与重载",
+    "六平台共用CI工作流"
+   ]
+  }
  }
 }
