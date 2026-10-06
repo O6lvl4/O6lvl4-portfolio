@@ -28,7 +28,7 @@ export const TEXT = {
       briefLead: "系統ごとに、いちばん手を入れているものを一つずつ。残りは一覧で見られます。",
       listLead: "言語をつくり、その上に道具を重ねる。開発ツールからAIの基盤、小さな実験まで、これまでにつくってきたものをまとめました。気になる分野からご覧ください。",
     },
-    stats: { commits: "コミット", first: "初回", tag: "版", stars: "星" },
+    stats: { commits: "コミット", first: "初回", tag: "タグ", release: "リリース", stars: "星" },
     links: { repo: "リポジトリ", site: "サイト" },
     figures: { repos: "公開リポジトリ", commits: "コミット", langs: "言語", years: "年", span: "期間" },
     panel: {
@@ -124,7 +124,7 @@ export const TEXT = {
       briefLead: "One from each family, the one most worked on. The rest are in the list.",
       listLead: "A language, the tools built on it, and the experiments along the way. Explore my work in developer tools, AI infrastructure and more, starting with a field that interests you.",
     },
-    stats: { commits: "Commits", first: "Started", tag: "Release", stars: "Stars" },
+    stats: { commits: "Commits", first: "Started", tag: "Tag", release: "Release", stars: "Stars" },
     links: { repo: "Repository", site: "Site" },
     figures: { repos: "Repositories", commits: "Commits", langs: "Languages", years: "Years", span: "Span" },
     panel: {
@@ -220,7 +220,7 @@ export const TEXT = {
       briefLead: "每个系列各取一个：最常动手的那个。其余都在列表里。",
       listLead: "创造语言，再用它构建工具。从开发工具、AI基础设施到小型实验，这里汇集了我一路做过的项目。从感兴趣的领域开始浏览吧。",
     },
-    stats: { commits: "提交", first: "首次", tag: "版本", stars: "星标" },
+    stats: { commits: "提交", first: "首次", tag: "标签", release: "发行版", stars: "星标" },
     links: { repo: "仓库", site: "站点" },
     figures: { repos: "公开仓库", commits: "提交", langs: "语言", years: "年数", span: "年份" },
     panel: {

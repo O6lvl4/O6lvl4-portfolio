@@ -3719,27 +3719,27 @@
  },
  "almide-graphics/nn": {
   "ja": {
-   "what": "Almide製matrix stdlib上のTransformer・信号処理ライブラリ",
+   "what": "WhisperとQwenを動かすAlmide向け推論ライブラリ",
    "points": [
-    "Whisper tinyのネイティブ/WASM推論",
-    "GGUF/GGML重みローダーとBPE tokenizer",
-    "WAV・mel・FFTの音声前処理"
+    "Whisper tinyのnative・Wasm推論",
+    "Qwen3-0.6BのCPU推論",
+    "固定条件の性能比較と元実装との数値照合"
    ]
   },
   "en": {
-   "what": "Transformer and signal-processing library in Almide, built on the matrix stdlib, with Whisper inference",
+   "what": "Inference for Almide: Whisper plus Qwen CPU execution",
    "points": [
-    "Whisper tiny end-to-end, native and WASM",
-    "GGUF/GGML loaders and BPE tokenizer",
-    "WAV decode, mel spectrogram and FFT"
+    "Whisper tiny inference on native and Wasm",
+    "Qwen3-0.6B CPU prefill and decode",
+    "Pinned CPU benchmarks and original-nn parity checks"
    ]
   },
   "zh": {
-   "what": "基于matrix标准库的Almide Transformer与信号处理库",
+   "what": "面向Almide的Whisper与Qwen推理库",
    "points": [
-    "Whisper tiny原生与WASM推理",
-    "GGUF/GGML加载器与BPE分词",
-    "WAV解码、mel谱与FFT"
+    "Whisper原生与Wasm推理",
+    "Qwen3-0.6B CPU推理",
+    "固定条件基准与原实现数值对照"
    ]
   }
  },
@@ -4858,6 +4858,32 @@
     "工作区与时钟状态栏",
     "通知与应用启动器",
     "音量和亮度屏幕显示"
+   ]
+  }
+ },
+ "O6lvl4/arlk": {
+  "ja": {
+   "what": "複数の論理を扱い、証明の前提を追うAlmide製の証明言語",
+   "points": [
+    "論理をroomで分けて記述",
+    "Lean・Rocq等の証明を取り込む",
+    "axiomsで依存する前提を表示"
+   ]
+  },
+  "en": {
+   "what": "A proof language in Almide that tracks the assumptions behind checked proofs",
+   "points": [
+    "Separate logical theories in rooms",
+    "Import proofs from Lean, Rocq, Metamath and HOL",
+    "Inspect assumptions with axioms"
+   ]
+  },
+  "zh": {
+   "what": "用Almide编写、追踪证明前提的语言",
+   "points": [
+    "用room隔离逻辑理论",
+    "导入多种证明系统的证明",
+    "用axioms显示依赖前提"
    ]
   }
  }

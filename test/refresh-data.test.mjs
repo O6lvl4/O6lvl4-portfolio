@@ -23,6 +23,7 @@ test("refresh discovers new work, excludes removed/private/fork/furniture entrie
     writeFileSync(join(source, "README.md"), "# New work\n\nA newly published project with enough README text to become its portfolio description automatically.\n");
     git(["-C", source, "add", "."]);
     git(["-C", source, "commit", "-m", "First work"]);
+    git(["-C", source, "tag", "v0.60.0-rc3"]);
     git(["clone", source, join(root, "O6lvl4/shared-history")]);
     git(["init", join(root, "O6lvl4/empty-work")]);
     const mined = execFileSync(process.execPath, [resolve("scripts/mine.mjs")], { cwd: root, env, encoding: "utf8" });
@@ -40,7 +41,7 @@ test("refresh discovers new work, excludes removed/private/fork/furniture entrie
       "O6lvl4/O6lvl4-portfolio\tpublic\tfalse\t-\t0\t2025-01-02\tThis site",
       "O6lvl4/dotfiles\tpublic\tfalse\t-\t0\t2025-01-02\tDotfiles",
     ].join("\n"));
-    writeFileSync(join(root, "home.tsv"), "O6lvl4/new-work\t\t\t\thttps://repository-images.githubusercontent.com/1/preview\n");
+    writeFileSync(join(root, "home.tsv"), "O6lvl4/new-work\t\t\t\thttps://repository-images.githubusercontent.com/1/preview\tv0.66.0\thttps://github.com/O6lvl4/new-work/releases/tag/v0.66.0\t2026-10-03T01:14:41Z\n");
     writeFileSync(join(root, "data/projects.json"), JSON.stringify([{ full: "O6lvl4/deleted-work" }]));
     const projects = JSON.parse(execFileSync(process.execPath, [resolve("scripts/plan.mjs"), "repos.tsv", "home.tsv"], { cwd: root, env, encoding: "utf8" }));
     assert.deepEqual(projects.map((p) => p.full).sort(), ["O6lvl4/new-work", "O6lvl4/shared-history"]);
@@ -51,6 +52,9 @@ test("refresh discovers new work, excludes removed/private/fork/furniture entrie
     assert.equal(projects.find((p) => p.name === "new-work").plate, "og");
     assert.equal(projects.find((p) => p.name === "new-work").og, "https://repository-images.githubusercontent.com/1/preview");
     assert.equal(projects.find((p) => p.name === "shared-history").plate, "code");
+    assert.equal(projects.find((p) => p.name === "new-work").tag, "v0.60.0-rc3");
+    assert.equal(projects.find((p) => p.name === "new-work").release.tag, "v0.66.0");
+    assert.equal(projects.find((p) => p.name === "shared-history").release, undefined);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

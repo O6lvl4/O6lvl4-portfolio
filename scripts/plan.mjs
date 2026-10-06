@@ -35,7 +35,7 @@ for (const r of tsv(reposTsv, ["full", "visibility", "fork", "language", "stars"
   if (r.visibility === "public" && r.fork === "false" && shown(r.full)) github.set(r.full, r);
 }
 const extra = new Map();
-for (const r of tsv(homeTsv, ["full", "site", "license", "topics", "og"])) extra.set(r.full, r);
+for (const r of tsv(homeTsv, ["full", "site", "license", "topics", "og", "releaseTag", "releaseUrl", "releasePublishedAt"])) extra.set(r.full, r);
 
 const mined = new Map(JSON.parse(readFileSync("data/repos.json", "utf8")).map((m) => [m.full, m]));
 
@@ -108,6 +108,7 @@ for (const [full, g] of github) {
   const [owner, name] = full.split("/");
   if (!OWNERS.includes(owner)) continue;
   const m = mined.get(full) ?? {};
+  const metadata = extra.get(full);
   const site = siteOf(full);
   const terminal = help(full);
   const langs = (m.languages ?? []).slice(0, 3).map((l) => l.name);
@@ -125,6 +126,7 @@ for (const [full, g] of github) {
     first: m.first ?? "",
     last: m.last ?? g.pushed,
     tag: m.tag,
+    release: metadata?.releaseTag ? { tag: metadata.releaseTag, url: metadata.releaseUrl, publishedAt: metadata.releasePublishedAt } : undefined,
     license: extra.get(full)?.license || undefined,
     topics: (extra.get(full)?.topics ?? "").split(",").filter(Boolean),
     og: extra.get(full)?.og || undefined,
