@@ -82,12 +82,17 @@ function readmeOf(p) {
   return { lead: s.what, points: s.points ?? [] };
 }
 
+function versionStat(p) {
+  if (p.release) return { label: t.stats.release, value: p.release.tag };
+  return p.tag ? { label: t.stats.tag, value: p.tag } : undefined;
+}
+
 function work(p) {
   const s = summaries[p.full]?.[lang];
   const stats = [
     { label: t.stats.commits, value: p.commits.toLocaleString("en-US") },
     p.first ? { label: t.stats.first, value: t.date(p.first) } : undefined,
-    p.tag ? { label: t.stats.tag, value: p.tag } : undefined,
+    versionStat(p),
     p.stars ? { label: t.stats.stars, value: String(p.stars) } : undefined,
   ].filter(Boolean);
   const links = [{ label: t.links.repo, href: p.url }];

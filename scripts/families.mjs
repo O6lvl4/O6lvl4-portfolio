@@ -18,9 +18,9 @@ export const FAMILIES = [
     short: { ja: "言語", en: "Languages", zh: "语言" },
     name: { ja: "言語をつくる", en: "Making languages", zh: "做语言" },
     intro: {
-      ja: "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。もう一つの言語は wyve — LLVM IR の一層上に静的な意味論を置き、最適化器に契約を書かせるもので、Racket で書いてあります。",
-      en: "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). The other language here is wyve: a static semantics one layer above LLVM IR, where the optimizer has to write down its contracts — written in Racket.",
-      zh: "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。另一门语言是 wyve：在 LLVM IR 之上一层放置静态语义，让优化器把契约写下来，用 Racket 写成",
+      ja: "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。Almideで書いた証明言語Arlkもここに含みます。wyveは、LLVM IRの一層上に静的な意味論を置き、最適化器に契約を書かせるRacket製の言語です。",
+      en: "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). Arlk is a proof language written in Almide that tracks a theorem's assumptions. wyve, written in Racket, puts static semantics above LLVM IR and asks the optimizer to record its contracts.",
+      zh: "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。Arlk是用Almide编写、追踪定理前提的证明语言。用Racket编写的wyve在LLVM IR之上放置静态语义，让优化器记录契约。",
     },
     test: (p) =>
       (p.owner === "almide" && !STDLIB.includes(p.name)) ||
@@ -169,6 +169,7 @@ const STDLIB = ["aes", "base64", "bigint", "csv", "dfa", "rsa", "sha1", "svg", "
  * the rest of the LLM groundwork. Everything else is decided by the rules above, in order.
  */
 const ASSIGNED = {
+  "O6lvl4/arlk": "almide",
   "almide/porta": "agent-tools",
   "almide/bonsai-almide": "llm",
 };

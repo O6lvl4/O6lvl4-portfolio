@@ -38,8 +38,7 @@ O6lvl4 と almide、almide-* の公開リポジトリを、一つずつ見せる
   history shared between repositories is counted once — the page says so in its own footnote.
 - **Plates from the projects' own material.** The work opened in full shows its own plate: the
   social preview its author uploaded on GitHub, its site as it renders, its command as it answers,
-  or a summary of what its README says it does — taken from that README alone, in each of the three
-  languages. Nothing is drawn or mocked up.
+  or a summary of its README and checked-in verification records, in each of the three languages. Nothing is drawn or mocked up.
 - **English first, with Japanese and Chinese translations.** The root respects a saved language
   choice, then the browser's preferred languages, falling back to `/en/`. It uses the English
   share card. Direct language URLs stay in that language; the switcher remembers manual choices.
@@ -56,9 +55,16 @@ GitHub Actions refreshes and deploys the portfolio every day at **06:23 JST**
 (21:23 UTC), on pushes to `main`, and via **Actions → Deploy to GitHub Pages →
 Run workflow**. Scheduled runs can start later when GitHub is busy.
 
+Pull requests run the same quality, refresh and browser checks without deploying.
+Only `main` can deploy.
+
 The build lists public, non-fork repositories for all five owners, clones their
 default-branch histories into a fresh temporary directory, and updates the project
-list, descriptions, languages, stars, tags and deduplicated commit statistics.
+list, descriptions, languages, stars, tags, published releases and deduplicated commit statistics.
+Release labels use GitHub’s latest published non-draft, non-prerelease release,
+independently of tags in the default-branch clone. A repository without such a
+release shows its collected tag as a tag. A failed or incomplete metadata lookup
+stops the refresh, preserving the last successful deployment.
 GitHub's own furniture is left out of that list by `scripts/shown.mjs`: an
 organisation's `.github` profile, this site's own repository and the dotfiles drawer
 are never cloned, counted or shown.
@@ -73,7 +79,8 @@ the last successful build's time and repository count.
 No personal token or AI key is required: the workflow uses its own `GITHUB_TOKEN`,
 which reads the public repository inventory and, in the build job alone, writes the
 refreshed `data/` and `site/` back to `main`. Existing translations in
-`data/summaries.json` are maintained editorially; new projects use their GitHub
+`data/summaries.json` are maintained editorially; the nn CPU/Qwen summary also draws on
+its [checked-in benchmark record](https://github.com/almide-graphics/nn/blob/c632f2b0cf0bc8d6eec66483b1832635800bd3e5/docs/benchmarks/cpu-final-results.md). New projects use their GitHub
 description or README excerpt in all languages until translations are added.
 Nothing writes a summary automatically: a scheduled run keeps one issue, **Projects
 without a summary**, listing the projects still waiting for one, and closes it when
