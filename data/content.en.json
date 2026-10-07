@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "193 repos",
+  "life": "194 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "193 public repositories",
+  "kicker": "194 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "193 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "194 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -120,9 +120,9 @@
     "items": [
      "Almide（101）",
      "Python（40）",
-     "TypeScript（32）",
-     "Shell（32）",
-     "JavaScript（32）"
+     "TypeScript（33）",
+     "JavaScript（33）",
+     "Shell（32）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "157 started",
-    "lead": "almide, porta, als, sprid and 153 more",
+    "title": "158 started",
+    "lead": "almide, porta, als, sprid and 154 more",
     "tags": [
      "Rust",
      "Almide"
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "193",
+    "value": "194",
     "label": "Repositories"
    },
    {
-    "value": "17,461",
+    "value": "17,585",
     "label": "Commits"
    },
    {
@@ -255,7 +255,7 @@
    },
    {
     "name": "TypeScript",
-    "count": 26,
+    "count": 27,
     "color": "#3178c6"
    },
    {
@@ -340,7 +340,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 124
+    "count": 125
    },
    {
     "name": "almide",
@@ -362,17 +362,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 14175,
+    "count": 14251,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2480,
-    "of": 124
+    "count": 2523,
+    "of": 125
    },
    {
     "name": "almide-graphics",
-    "count": 650,
+    "count": 655,
     "of": 13
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 17212
+    "count": 17336
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "13,981",
+     "value": "14,078",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 13981
+     "count": 14078
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "11,230"
+       "value": "11,305"
       },
       {
        "label": "Started",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-06"
+      "date": "2026-10-07"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "564"
+       "value": "565"
       },
       {
        "label": "Started",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-06"
+      "date": "2026-10-07"
      }
     },
     {
@@ -874,7 +874,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "79"
+       "value": "100"
       },
       {
        "label": "Started",
@@ -3953,7 +3953,7 @@
      "label": "Repositories"
     },
     {
-     "value": "650",
+     "value": "655",
      "label": "Commits"
     },
     {
@@ -3968,7 +3968,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 650
+     "count": 655
     }
    ],
    "works": [
@@ -3997,7 +3997,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "120"
+       "value": "125"
       },
       {
        "label": "Started",
@@ -4015,7 +4015,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-06"
+      "date": "2026-10-07"
      }
     },
     {
@@ -4870,7 +4870,7 @@
      "label": "Repositories"
     },
     {
-     "value": "125",
+     "value": "129",
      "label": "Commits"
     },
     {
@@ -4885,7 +4885,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 125
+     "count": 129
     }
    ],
    "works": [
@@ -4951,7 +4951,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "53"
+       "value": "55"
       },
       {
        "label": "Started",
@@ -4969,7 +4969,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-06"
+      "date": "2026-10-07"
      }
     },
     {
@@ -4989,7 +4989,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "14"
+       "value": "16"
       },
       {
        "label": "Started",
@@ -5007,7 +5007,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-10-07"
      }
     },
     {
@@ -6548,11 +6548,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "34",
+     "value": "35",
      "label": "Repositories"
     },
     {
-     "value": "329",
+     "value": "347",
      "label": "Commits"
     },
     {
@@ -6583,7 +6583,7 @@
     },
     {
      "name": "2026",
-     "count": 176
+     "count": 194
     }
    ],
    "works": [
@@ -6709,6 +6709,40 @@
      ],
      "order": {
       "date": "2022-10-30"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/cyber-incident-chronicle",
+     "title": "cyber-incident-chronicle",
+     "titleEn": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+     "date": "Oct 2026",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+     "tags": [
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "18"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/cyber-incident-chronicle"
+      }
+     ],
+     "order": {
+      "date": "2026-10-07"
      }
     },
     {

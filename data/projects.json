@@ -1245,6 +1245,34 @@
   "score": 7.1
  },
  {
+  "full": "O6lvl4/arlk",
+  "owner": "O6lvl4",
+  "name": "arlk",
+  "url": "https://github.com/O6lvl4/arlk",
+  "lead": "Arlk: a proof language with a small trusted core, written in Almide",
+  "heading": "Arlk",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Shell",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 100,
+  "years": {
+   "2026": 100
+  },
+  "first": "2026-10-05",
+  "last": "2026-10-07",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build src/main.almd -o arlk\n./arlk qed examples/logic.arlk"
+  },
+  "score": 7
+ },
+ {
   "full": "O6lvl4/ClipStash",
   "owner": "O6lvl4",
   "name": "ClipStash",
@@ -1315,34 +1343,6 @@
    "code": "# 例: macOS ARM64\ntar xzf hello-macos-arm64.tar.gz\n./hello-macos-arm64"
   },
   "score": 7
- },
- {
-  "full": "O6lvl4/arlk",
-  "owner": "O6lvl4",
-  "name": "arlk",
-  "url": "https://github.com/O6lvl4/arlk",
-  "lead": "Arlk: a proof language with a small trusted core, written in Almide",
-  "heading": "Arlk(アルク)",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Shell",
-   "Python"
-  ],
-  "stars": 0,
-  "commits": 79,
-  "years": {
-   "2026": 79
-  },
-  "first": "2026-10-05",
-  "last": "2026-10-07",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "room logic\n\nsymbol Prop: Type\nsymbol Prf(p: Prop) -> Type\nsymbol imp(a: Prop, b: Prop) -> Prop\nrule Prf(imp(a, b)) = Prf(a) -> Prf(b)  where a: Prop, b: Prop\n\n// Thanks to the rule, a proof of an implication is just a function.\ntheorem s(a: Prop, b: Prop, c: Prop) -> Prf(imp(imp(a, imp(b, c)), imp(imp(a, b), imp(a, c)))) =\n  (f: Prf(imp(a, imp(b, c))), g: Prf(imp(a, b)), x: Prf(a)) => f(x, g(x))\n\naxioms s"
-  },
-  "score": 6.6
  },
  {
   "full": "O6lvl4/llmine",
@@ -1423,12 +1423,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 53,
+  "commits": 55,
   "years": {
-   "2026": 53
+   "2026": 55
   },
   "first": "2026-09-07",
-  "last": "2026-10-06",
+  "last": "2026-10-07",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1500,6 +1500,34 @@
   "score": 5.7
  },
  {
+  "full": "O6lvl4/cyber-incident-chronicle",
+  "owner": "O6lvl4",
+  "name": "cyber-incident-chronicle",
+  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+  "heading": "Cyber Incident Chronicle",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "CSS",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 18,
+  "years": {
+   "2026": 18
+  },
+  "first": "2026-10-07",
+  "last": "2026-10-07",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "pnpm install --frozen-lockfile\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
+  },
+  "score": 5.4
+ },
+ {
   "full": "O6lvl4/agent-bench-matrix",
   "owner": "O6lvl4",
   "name": "agent-bench-matrix",
@@ -1514,12 +1542,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 14,
+  "commits": 16,
   "years": {
-   "2026": 14
+   "2026": 16
   },
   "first": "2026-09-14",
-  "last": "2026-10-05",
+  "last": "2026-10-07",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3606,12 +3634,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 11230,
+  "commits": 11305,
   "years": {
-   "2026": 11230
+   "2026": 11305
   },
   "first": "2026-03-07",
-  "last": "2026-10-06",
+  "last": "2026-10-07",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.66.0",
@@ -3768,12 +3796,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 564,
+  "commits": 565,
   "years": {
-   "2026": 564
+   "2026": 565
   },
   "first": "2026-04-12",
-  "last": "2026-10-06",
+  "last": "2026-10-07",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4505,12 +4533,12 @@
    "JavaScript"
   ],
   "stars": 0,
-  "commits": 120,
+  "commits": 125,
   "years": {
-   "2026": 120
+   "2026": 125
   },
   "first": "2026-10-04",
-  "last": "2026-10-06",
+  "last": "2026-10-07",
   "tag": "v0.2.0",
   "release": {
    "tag": "v0.2.0",
@@ -4524,7 +4552,7 @@
    "lang": "",
    "code": "cli/              the ceangal CLI: new, dev, build, run, doctor (docs/adr/0006, 0007)\napps/playground   the Almide Playground (editor, runner, user GUI programs)\napps/todo         the demo app\napps/demo         the M0 demo\nceangal/          UI framework: views, flex layout, events, text, widgets\n  native/         Rust host for native builds (window, input, IME, storage…)\nsnaidhm/          renderer: instanced SDF quads, glyph atlas, images\n  native/gpu.rs   wgpu implementation of the gpu namespace\nhosts/web/        JS host (WebGPU) — the same ABI for browsers\nabi/              generated ABI manifest (tools/gen_bindings.py)\ntools/            per-platform build and packaging scripts the CLI runs\nstore/            store listings, assets, checklists\ndocs/guide        the guide; docs/api, the generated API reference"
   },
-  "score": 11.4
+  "score": 11.5
  },
  {
   "full": "almide-graphics/nendo",
