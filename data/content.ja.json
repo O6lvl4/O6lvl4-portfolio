@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "194 repos",
+  "life": "195 repos",
   "avatar": "assets/avatar.png",
   "role": "開発の道具を、言語からつくる。",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公開リポジトリ 194 件",
+  "kicker": "公開リポジトリ 195 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
-  "note": "公開リポジトリ 194 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
+  "note": "公開リポジトリ 195 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
   "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。"
  },
  "landing": {
@@ -120,8 +120,8 @@
     "items": [
      "Almide（101）",
      "Python（40）",
+     "JavaScript（34）",
      "TypeScript（33）",
-     "JavaScript（33）",
      "Shell（32）"
     ]
    },
@@ -130,8 +130,8 @@
     "items": [
      "Rust",
      "HTML",
-     "Go",
      "CSS",
+     "Go",
      "C",
      "Lean",
      "Ruby"
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "158件を始めた",
-    "lead": "almide、porta、als、sprid ほか154件",
+    "title": "159件を始めた",
+    "lead": "almide、porta、als、sprid ほか155件",
     "tags": [
      "Rust",
      "Almide"
@@ -216,7 +216,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "gramide · 2026年10月"
+    "value": "almide · 2026年10月"
    },
    {
     "key": "Almide で書いた割合",
@@ -231,11 +231,11 @@
   ],
   "figures": [
    {
-    "value": "194",
+    "value": "195",
     "label": "公開リポジトリ"
    },
    {
-    "value": "17,585",
+    "value": "17,720",
     "label": "コミット"
    },
    {
@@ -255,7 +255,7 @@
    },
    {
     "name": "TypeScript",
-    "count": 27,
+    "count": 26,
     "color": "#3178c6"
    },
    {
@@ -265,7 +265,7 @@
    },
    {
     "name": "JavaScript",
-    "count": 11,
+    "count": 13,
     "color": "#f1e05a"
    },
    {
@@ -340,7 +340,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 125
+    "count": 126
    },
    {
     "name": "almide",
@@ -362,13 +362,13 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 14251,
+    "count": 14310,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2523,
-    "of": 125
+    "count": 2599,
+    "of": 126
    },
    {
     "name": "almide-graphics",
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 17336
+    "count": 17471
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "14,078",
+     "value": "14,137",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 14078
+     "count": 14137
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "11,305"
+       "value": "11,363"
       },
       {
        "label": "初回",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-07"
+      "date": "2026-10-09"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "565"
+       "value": "566"
       },
       {
        "label": "初回",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-07"
+      "date": "2026-10-08"
      }
     },
     {
@@ -4459,7 +4459,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "187",
+     "value": "193",
      "label": "コミット"
     },
     {
@@ -4474,7 +4474,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 187
+     "count": 193
     }
    ],
    "works": [
@@ -4491,7 +4491,7 @@
      "id": "O6lvl4/qusp",
      "title": "qusp",
      "titleEn": "qusp.tomlで23言語のツールチェーンを並列導入するRust製マネージャ",
-     "date": "2026年7月",
+     "date": "2026年10月",
      "format": "Rust",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/qusp",
@@ -4504,7 +4504,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "95"
+       "value": "100"
       },
       {
        "label": "初回",
@@ -4512,7 +4512,7 @@
       },
       {
        "label": "リリース",
-       "value": "v0.32.1"
+       "value": "v0.32.2"
       }
      ],
      "links": [
@@ -4522,7 +4522,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-07"
+      "date": "2026-10-08"
      }
     },
     {
@@ -4641,7 +4641,7 @@
      "id": "O6lvl4/homebrew-tap",
      "title": "homebrew-tap",
      "titleEn": "@O6lvl4のHomebrewフォーミュラを配布するtap",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/homebrew-tap",
@@ -4654,7 +4654,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "57"
+       "value": "58"
       },
       {
        "label": "初回",
@@ -4668,7 +4668,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-26"
+      "date": "2026-10-08"
      }
     }
    ]
@@ -6548,11 +6548,11 @@
    "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
-     "value": "35",
+     "value": "36",
      "label": "公開リポジトリ"
     },
     {
-     "value": "347",
+     "value": "417",
      "label": "コミット"
     },
     {
@@ -6583,7 +6583,7 @@
     },
     {
      "name": "2026",
-     "count": 194
+     "count": 264
     }
    ],
    "works": [
@@ -6612,7 +6612,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "115"
+       "value": "118"
       },
       {
        "label": "初回",
@@ -6620,7 +6620,7 @@
       },
       {
        "label": "リリース",
-       "value": "v0.9.1"
+       "value": "v0.9.2"
       },
       {
        "label": "星",
@@ -6634,7 +6634,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-10-08"
      }
     },
     {
@@ -6715,20 +6715,20 @@
      "image": "",
      "id": "O6lvl4/cyber-incident-chronicle",
      "title": "cyber-incident-chronicle",
-     "titleEn": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+     "titleEn": "企業のサイバー被害とライブラリの脆弱性を一次資料でたどるタイムライン",
      "date": "2026年10月",
-     "format": "TypeScript",
+     "format": "JavaScript",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
      "tags": [
+      "JavaScript",
       "TypeScript",
-      "CSS",
-      "JavaScript"
+      "CSS"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "18"
+       "value": "66"
       },
       {
        "label": "初回",
@@ -6742,7 +6742,45 @@
       }
      ],
      "order": {
-      "date": "2026-10-07"
+      "date": "2026-10-08"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/ruby-kaigi-kaigi-2027-lab",
+     "title": "ruby-kaigi-kaigi-2027-lab",
+     "titleEn": "RubyKaigiKaigi 2027は、RubyKaigi 2027 宮崎開催の公開情報を読むための非公式ガイドです。公式に掲載された日程・会場、会場公式のアクセス情報、確認範囲内でまだ見つからない詳細、提案の確認リストを分けて掲載しています。情報確認日は 2026年10月8日です。個人による非公式のまとめであり、主催者の承認・提携を示すものではありません。",
+     "date": "2026年10月",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab",
+     "tags": [
+      "JavaScript",
+      "CSS",
+      "Ruby"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "19"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/ruby-kaigi-kaigi-2027-lab/"
+      }
+     ],
+     "order": {
+      "date": "2026-10-08"
      }
     },
     {

@@ -12,17 +12,17 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 115,
+  "commits": 118,
   "years": {
-   "2026": 115
+   "2026": 118
   },
   "first": "2026-09-30",
-  "last": "2026-10-04",
-  "tag": "v0.9.1",
+  "last": "2026-10-08",
+  "tag": "v0.9.2",
   "release": {
-   "tag": "v0.9.1",
-   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.1",
-   "publishedAt": "2026-10-02T02:13:24Z"
+   "tag": "v0.9.2",
+   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.2",
+   "publishedAt": "2026-10-08T07:23:16Z"
   },
   "license": "MIT",
   "topics": [],
@@ -32,7 +32,7 @@
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 16.3
+  "score": 16.4
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -397,6 +397,54 @@
   "score": 11.6
  },
  {
+  "full": "O6lvl4/qusp",
+  "owner": "O6lvl4",
+  "name": "qusp",
+  "url": "https://github.com/O6lvl4/qusp",
+  "lead": "Every language toolchain in superposition. cd collapses to one.",
+  "heading": "qusp",
+  "language": "Rust",
+  "languages": [
+   "Rust",
+   "Shell",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 100,
+  "years": {
+   "2026": 100
+  },
+  "first": "2026-04-28",
+  "last": "2026-10-08",
+  "tag": "v0.32.2",
+  "release": {
+   "tag": "v0.32.2",
+   "url": "https://github.com/O6lvl4/qusp/releases/tag/v0.32.2",
+   "publishedAt": "2026-10-08T02:27:41Z"
+  },
+  "license": "MIT",
+  "topics": [
+   "asdf",
+   "cli",
+   "developer-tools",
+   "devtools",
+   "mise",
+   "multi-language",
+   "nix",
+   "rust",
+   "toolchain",
+   "toolchain-manager",
+   "uv",
+   "version-manager"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "brew install O6lvl4/tap/qusp\n```\n\n### Cargo"
+  },
+  "score": 11
+ },
+ {
   "full": "O6lvl4/golemide",
   "owner": "O6lvl4",
   "name": "golemide",
@@ -691,54 +739,6 @@
    "code": "$ onomly onomly\n=== onomly ===\nnpm ✅  crates.io ✅  RubyGems ✅  Homebrew ✅  GitHub ✅\n.com ✅  .ai ✅  .io ✅  .dev ✅  .org ✅\nonly PyPI taken\n→ verdict: clear on every registry and every domain"
   },
   "score": 9.3
- },
- {
-  "full": "O6lvl4/qusp",
-  "owner": "O6lvl4",
-  "name": "qusp",
-  "url": "https://github.com/O6lvl4/qusp",
-  "lead": "Every language toolchain in superposition. cd collapses to one.",
-  "heading": "qusp",
-  "language": "Rust",
-  "languages": [
-   "Rust",
-   "Shell",
-   "Python"
-  ],
-  "stars": 0,
-  "commits": 95,
-  "years": {
-   "2026": 95
-  },
-  "first": "2026-04-28",
-  "last": "2026-07-07",
-  "tag": "v0.32.1",
-  "release": {
-   "tag": "v0.32.1",
-   "url": "https://github.com/O6lvl4/qusp/releases/tag/v0.32.1",
-   "publishedAt": "2026-07-07T11:30:29Z"
-  },
-  "license": "MIT",
-  "topics": [
-   "asdf",
-   "cli",
-   "developer-tools",
-   "devtools",
-   "mise",
-   "multi-language",
-   "nix",
-   "rust",
-   "toolchain",
-   "toolchain-manager",
-   "uv",
-   "version-manager"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "brew install O6lvl4/tap/qusp\n```\n\n### Cargo"
-  },
-  "score": 8.9
  },
  {
   "full": "O6lvl4/lean2ts",
@@ -1378,6 +1378,34 @@
   "score": 6.5
  },
  {
+  "full": "O6lvl4/cyber-incident-chronicle",
+  "owner": "O6lvl4",
+  "name": "cyber-incident-chronicle",
+  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+  "heading": "Cyber Incident Chronicle",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 66,
+  "years": {
+   "2026": 66
+  },
+  "first": "2026-10-07",
+  "last": "2026-10-08",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
+  },
+  "score": 6.3
+ },
+ {
   "full": "O6lvl4/treesrc",
   "owner": "O6lvl4",
   "name": "treesrc",
@@ -1409,6 +1437,39 @@
   "score": 6.3
  },
  {
+  "full": "O6lvl4/homebrew-tap",
+  "owner": "O6lvl4",
+  "name": "homebrew-tap",
+  "url": "https://github.com/O6lvl4/homebrew-tap",
+  "lead": "Homebrew formulae by @O6lvl4 — brew install O6lvl4/tap/gv",
+  "heading": "homebrew-tap",
+  "language": "Python",
+  "languages": [
+   "Python",
+   "Ruby"
+  ],
+  "stars": 0,
+  "commits": 58,
+  "years": {
+   "2026": 58
+  },
+  "first": "2026-04-27",
+  "last": "2026-10-08",
+  "topics": [
+   "developer-tools",
+   "golang",
+   "gv",
+   "homebrew",
+   "homebrew-tap"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "brew tap O6lvl4/tap\nbrew install gv\n```\n\nOr in one step:"
+  },
+  "score": 6.2
+ },
+ {
   "full": "O6lvl4/chip-war-chronicle",
   "owner": "O6lvl4",
   "name": "chip-war-chronicle",
@@ -1434,39 +1495,6 @@
   "sample": {
    "lang": "ts",
    "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
-  },
-  "score": 6.1
- },
- {
-  "full": "O6lvl4/homebrew-tap",
-  "owner": "O6lvl4",
-  "name": "homebrew-tap",
-  "url": "https://github.com/O6lvl4/homebrew-tap",
-  "lead": "Homebrew formulae by @O6lvl4 — brew install O6lvl4/tap/gv",
-  "heading": "homebrew-tap",
-  "language": "Python",
-  "languages": [
-   "Python",
-   "Ruby"
-  ],
-  "stars": 0,
-  "commits": 57,
-  "years": {
-   "2026": 57
-  },
-  "first": "2026-04-27",
-  "last": "2026-09-26",
-  "topics": [
-   "developer-tools",
-   "golang",
-   "gv",
-   "homebrew",
-   "homebrew-tap"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "brew tap O6lvl4/tap\nbrew install gv\n```\n\nOr in one step:"
   },
   "score": 6.1
  },
@@ -1500,30 +1528,31 @@
   "score": 5.7
  },
  {
-  "full": "O6lvl4/cyber-incident-chronicle",
+  "full": "O6lvl4/ruby-kaigi-kaigi-2027-lab",
   "owner": "O6lvl4",
-  "name": "cyber-incident-chronicle",
-  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
-  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
-  "heading": "Cyber Incident Chronicle",
-  "language": "TypeScript",
+  "name": "ruby-kaigi-kaigi-2027-lab",
+  "url": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab",
+  "site": "https://o6lvl4.github.io/ruby-kaigi-kaigi-2027-lab/",
+  "lead": "RubyKaigiKaigi 2027は、RubyKaigi 2027 宮崎開催の公開情報を読むための非公式ガイドです。公式に掲載された日程・会場、会場公式のアクセス情報、確認範囲内でまだ見つからない詳細、提案の確認リストを分けて掲載しています。情報確認日は 2026年10月8日です。個人による非公式のまとめであり、主催者の承認・提携を示すものではありません。",
+  "heading": "RubyKaigiKaigi 2027",
+  "language": "JavaScript",
   "languages": [
-   "TypeScript",
+   "JavaScript",
    "CSS",
-   "JavaScript"
+   "Ruby"
   ],
   "stars": 0,
-  "commits": 18,
+  "commits": 19,
   "years": {
-   "2026": 18
+   "2026": 19
   },
-  "first": "2026-10-07",
-  "last": "2026-10-07",
+  "first": "2026-10-08",
+  "last": "2026-10-08",
   "topics": [],
-  "plate": "code",
+  "plate": "site",
   "sample": {
    "lang": "sh",
-   "code": "pnpm install --frozen-lockfile\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
+   "code": "npm ci\nnpm run setup:runtime\nnpm run dev"
   },
   "score": 5.4
  },
@@ -3634,12 +3663,12 @@
    "Shell"
   ],
   "stars": 34,
-  "commits": 11305,
+  "commits": 11363,
   "years": {
-   "2026": 11305
+   "2026": 11363
   },
   "first": "2026-03-07",
-  "last": "2026-10-07",
+  "last": "2026-10-09",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.66.0",
@@ -3796,12 +3825,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 565,
+  "commits": 566,
   "years": {
-   "2026": 565
+   "2026": 566
   },
   "first": "2026-04-12",
-  "last": "2026-10-07",
+  "last": "2026-10-08",
   "license": "MIT",
   "topics": [
    "almide",
