@@ -5120,5 +5120,57 @@
     "六平台共用CI工作流"
    ]
   }
+ },
+ "O6lvl4/cyber-incident-chronicle": {
+  "ja": {
+   "what": "企業のサイバー被害とライブラリの脆弱性を一次資料でたどるタイムライン",
+   "points": [
+    "企業事案と脆弱性の独立した時間軸",
+    "影響・業種・攻撃種別による絞り込み",
+    "DuckDB-WASMで端末内SQL照会"
+   ]
+  },
+  "en": {
+   "what": "Timelines of corporate cyber incidents and library vulnerabilities, using primary sources.",
+   "points": [
+    "Separate incident and vulnerability timelines",
+    "Filters by impact, industry and attack type",
+    "On-device SQL queries with DuckDB-WASM"
+   ]
+  },
+  "zh": {
+   "what": "以一手资料追踪企业网络事件与库漏洞的时间线",
+   "points": [
+    "事件与漏洞的独立时间线",
+    "按影响、行业与攻击类型筛选",
+    "DuckDB-WASM本地查询"
+   ]
+  }
+ },
+ "O6lvl4/ruby-kaigi-lab": {
+  "ja": {
+   "what": "架空の候補登録でRailsとデータベースのWasm連携を試す個人プロトタイプ",
+   "points": [
+    "Ruby上のRails検証と候補登録",
+    "Active RecordからPGliteへ保存",
+    "DuckDB-Wasmによる種類別集計"
+   ]
+  },
+  "en": {
+   "what": "A personal prototype linking Rails and Wasm databases to register fictional venue options.",
+   "points": [
+    "Rails validation and venue registration in Ruby",
+    "Active Record persistence through PGlite",
+    "Category aggregates with DuckDB-Wasm"
+   ]
+  },
+  "zh": {
+   "what": "以虚构场地登记试验Rails与Wasm数据库联动的个人原型",
+   "points": [
+    "Ruby中Rails验证与登记",
+    "经Active Record保存数据",
+    "DuckDB-Wasm分类汇总"
+   ]
+  }
  }
 }
