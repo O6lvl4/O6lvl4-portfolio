@@ -5146,5 +5146,31 @@
     "DuckDB-WASM本地查询"
    ]
   }
+ },
+ "O6lvl4/ruby-kaigi-lab": {
+  "ja": {
+   "what": "架空の候補登録でRailsとデータベースのWasm連携を試す個人プロトタイプ",
+   "points": [
+    "Ruby上のRails検証と候補登録",
+    "Active RecordからPGliteへ保存",
+    "DuckDB-Wasmによる種類別集計"
+   ]
+  },
+  "en": {
+   "what": "A personal prototype linking Rails and Wasm databases to register fictional venue options.",
+   "points": [
+    "Rails validation and venue registration in Ruby",
+    "Active Record persistence through PGlite",
+    "Category aggregates with DuckDB-Wasm"
+   ]
+  },
+  "zh": {
+   "what": "以虚构场地登记试验Rails与Wasm数据库联动的个人原型",
+   "points": [
+    "Ruby中Rails验证与登记",
+    "经Active Record保存数据",
+    "DuckDB-Wasm分类汇总"
+   ]
+  }
  }
 }
