@@ -216,7 +216,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "almide · 2026年10月"
+    "value": "cyber-incident-chronicle · 2026年10月"
    },
    {
     "key": "Almide で書いた割合",
@@ -235,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "17,720",
+    "value": "17,829",
     "label": "コミット"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 14310,
+    "count": 14400,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2599,
+    "count": 2618,
     "of": 126
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 17471
+    "count": 17580
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "14,137",
+     "value": "14,227",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 14137
+     "count": 14227
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "11,363"
+       "value": "11,452"
       },
       {
        "label": "初回",
@@ -478,7 +478,7 @@
       },
       {
        "label": "星",
-       "value": "34"
+       "value": "35"
       }
      ],
      "links": [
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-09"
+      "date": "2026-10-10"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "566"
+       "value": "567"
       },
       {
        "label": "初回",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-08"
+      "date": "2026-10-09"
      }
     },
     {
@@ -4870,7 +4870,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "129",
+     "value": "133",
      "label": "コミット"
     },
     {
@@ -4885,7 +4885,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 129
+     "count": 133
     }
    ],
    "works": [
@@ -4951,7 +4951,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "55"
+       "value": "57"
       },
       {
        "label": "初回",
@@ -4969,7 +4969,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-07"
+      "date": "2026-10-09"
      }
     },
     {
@@ -4989,7 +4989,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "16"
+       "value": "18"
       },
       {
        "label": "初回",
@@ -5007,7 +5007,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-07"
+      "date": "2026-10-09"
      }
     },
     {
@@ -6552,7 +6552,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "417",
+     "value": "432",
      "label": "コミット"
     },
     {
@@ -6583,7 +6583,7 @@
     },
     {
      "name": "2026",
-     "count": 264
+     "count": 279
     }
    ],
    "works": [
@@ -6635,6 +6635,48 @@
      ],
      "order": {
       "date": "2026-10-08"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/ruby-kaigi-kaigi-2027-lab",
+     "title": "ruby-kaigi-kaigi-2027-lab",
+     "titleEn": "RubyKaigi 2027（宮崎）の公開情報を読むための、個人による非公式ガイドです。主催者の承認・提携を示すものではありません。",
+     "date": "2026年10月",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab",
+     "tags": [
+      "JavaScript",
+      "CSS",
+      "Ruby"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "27"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "リリース",
+       "value": "rails-runtime-r2"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/ruby-kaigi-kaigi-2027-lab/"
+      }
+     ],
+     "order": {
+      "date": "2026-10-09"
      }
     },
     {
@@ -6728,7 +6770,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "66"
+       "value": "73"
       },
       {
        "label": "初回",
@@ -6742,45 +6784,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-08"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/ruby-kaigi-kaigi-2027-lab",
-     "title": "ruby-kaigi-kaigi-2027-lab",
-     "titleEn": "RubyKaigiKaigi 2027は、RubyKaigi 2027 宮崎開催の公開情報を読むための非公式ガイドです。公式に掲載された日程・会場、会場公式のアクセス情報、確認範囲内でまだ見つからない詳細、提案の確認リストを分けて掲載しています。情報確認日は 2026年10月8日です。個人による非公式のまとめであり、主催者の承認・提携を示すものではありません。",
-     "date": "2026年10月",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab",
-     "tags": [
-      "JavaScript",
-      "CSS",
-      "Ruby"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "19"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/ruby-kaigi-kaigi-2027-lab/"
-      }
-     ],
-     "order": {
-      "date": "2026-10-08"
+      "date": "2026-10-10"
      }
     },
     {

@@ -668,6 +668,41 @@
   "score": 9.5
  },
  {
+  "full": "O6lvl4/ruby-kaigi-kaigi-2027-lab",
+  "owner": "O6lvl4",
+  "name": "ruby-kaigi-kaigi-2027-lab",
+  "url": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab",
+  "site": "https://o6lvl4.github.io/ruby-kaigi-kaigi-2027-lab/",
+  "lead": "RubyKaigi 2027（宮崎）の公開情報を読むための、個人による非公式ガイドです。主催者の承認・提携を示すものではありません。",
+  "heading": "RubyKaigiKaigi 2027",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "CSS",
+   "Ruby"
+  ],
+  "stars": 0,
+  "commits": 27,
+  "years": {
+   "2026": 27
+  },
+  "first": "2026-10-08",
+  "last": "2026-10-09",
+  "tag": "rails-runtime-r2",
+  "release": {
+   "tag": "rails-runtime-r2",
+   "url": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab/releases/tag/rails-runtime-r2",
+   "publishedAt": "2026-10-09T04:08:54Z"
+  },
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "sh",
+   "code": "npm ci\nnpm run setup:runtime   # Ruby/Wasm ランタイムを取得（SHA-256 を検証）\nnpm run dev"
+  },
+  "score": 9.5
+ },
+ {
   "full": "O6lvl4/aitrium",
   "owner": "O6lvl4",
   "name": "aitrium",
@@ -1345,6 +1380,34 @@
   "score": 7
  },
  {
+  "full": "O6lvl4/cyber-incident-chronicle",
+  "owner": "O6lvl4",
+  "name": "cyber-incident-chronicle",
+  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+  "heading": "Cyber Incident Chronicle",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 73,
+  "years": {
+   "2026": 73
+  },
+  "first": "2026-10-07",
+  "last": "2026-10-10",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
+  },
+  "score": 6.5
+ },
+ {
   "full": "O6lvl4/llmine",
   "owner": "O6lvl4",
   "name": "llmine",
@@ -1376,34 +1439,6 @@
    "code": "npm install -g llmine\n```\n\n### Install from Source\n\n#### 1. Clone the repository"
   },
   "score": 6.5
- },
- {
-  "full": "O6lvl4/cyber-incident-chronicle",
-  "owner": "O6lvl4",
-  "name": "cyber-incident-chronicle",
-  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
-  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
-  "heading": "Cyber Incident Chronicle",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 66,
-  "years": {
-   "2026": 66
-  },
-  "first": "2026-10-07",
-  "last": "2026-10-08",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
-  },
-  "score": 6.3
  },
  {
   "full": "O6lvl4/treesrc",
@@ -1484,12 +1519,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 55,
+  "commits": 57,
   "years": {
-   "2026": 55
+   "2026": 57
   },
   "first": "2026-09-07",
-  "last": "2026-10-07",
+  "last": "2026-10-09",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1528,35 +1563,6 @@
   "score": 5.7
  },
  {
-  "full": "O6lvl4/ruby-kaigi-kaigi-2027-lab",
-  "owner": "O6lvl4",
-  "name": "ruby-kaigi-kaigi-2027-lab",
-  "url": "https://github.com/O6lvl4/ruby-kaigi-kaigi-2027-lab",
-  "site": "https://o6lvl4.github.io/ruby-kaigi-kaigi-2027-lab/",
-  "lead": "RubyKaigiKaigi 2027は、RubyKaigi 2027 宮崎開催の公開情報を読むための非公式ガイドです。公式に掲載された日程・会場、会場公式のアクセス情報、確認範囲内でまだ見つからない詳細、提案の確認リストを分けて掲載しています。情報確認日は 2026年10月8日です。個人による非公式のまとめであり、主催者の承認・提携を示すものではありません。",
-  "heading": "RubyKaigiKaigi 2027",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "CSS",
-   "Ruby"
-  ],
-  "stars": 0,
-  "commits": 19,
-  "years": {
-   "2026": 19
-  },
-  "first": "2026-10-08",
-  "last": "2026-10-08",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "sh",
-   "code": "npm ci\nnpm run setup:runtime\nnpm run dev"
-  },
-  "score": 5.4
- },
- {
   "full": "O6lvl4/agent-bench-matrix",
   "owner": "O6lvl4",
   "name": "agent-bench-matrix",
@@ -1571,19 +1577,19 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 16,
+  "commits": 18,
   "years": {
-   "2026": 16
+   "2026": 18
   },
   "first": "2026-09-14",
-  "last": "2026-10-07",
+  "last": "2026-10-09",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "",
    "code": "z(表, モデル) ≒ b(表) + s(表) × a(モデル)\n```\n\n`z` は表ごとに標準化した実測値(高いほど良い向きに揃えたもの)、`a` がモデルの実力、`s` はその表が実力差をどれだけ広げて見せるか、`b` はその表の水準です。`a` と `(b, s)` を交互に最小二乗で解き、`a` を平均50・標準偏差10に直したものが「戦闘力」です。分野ごとにも同じ当てはめをします。\n\n- 実測が3モデルに満たない表と、全員が同じ値の表は、順位を語らないので使いません。\n- 実測の少ないモデルは、説明できなかった残差の大きさに応じて真ん中へ寄せます(縮約)。1回の結果だけで上位に来ない代わりに、誤差が大きく出ます。\n- 空きセルの推定値は、その分野の当てはめをその表の目盛りに戻し、そのボードが実際に見た範囲に収めたものです。\n- **これは推定であって実測ではありません。** ページでは書式を分け、データでも `fit` として実測の表とは別に置いています。`data/tables/` に推定値が混ざることはありません。\n\n## データ"
   },
-  "score": 5.3
+  "score": 5.4
  },
  {
   "full": "O6lvl4/almide-otel-demo",
@@ -3662,13 +3668,13 @@
    "Almide",
    "Shell"
   ],
-  "stars": 34,
-  "commits": 11363,
+  "stars": 35,
+  "commits": 11452,
   "years": {
-   "2026": 11363
+   "2026": 11452
   },
   "first": "2026-03-07",
-  "last": "2026-10-09",
+  "last": "2026-10-10",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.66.0",
@@ -3691,7 +3697,7 @@
    "lang": "almd",
    "code": "type Shape =\n  | Circle(Float)\n  | Square(Float)\n  | Triangle(Float, Float)   // the edit\n\nfn area(s: Shape) -> Float =\n  match s {\n    Circle(r) => 3.14159 * r * r\n    Square(w) => w * w\n  }"
   },
-  "score": 185
+  "score": 190
  },
  {
   "full": "almide/porta",
@@ -3825,12 +3831,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 566,
+  "commits": 567,
   "years": {
-   "2026": 566
+   "2026": 567
   },
   "first": "2026-04-12",
-  "last": "2026-10-08",
+  "last": "2026-10-09",
   "license": "MIT",
   "topics": [
    "almide",
