@@ -1472,6 +1472,35 @@
   "score": 6.3
  },
  {
+  "full": "O6lvl4/chip-war-chronicle",
+  "owner": "O6lvl4",
+  "name": "chip-war-chronicle",
+  "url": "https://github.com/O6lvl4/chip-war-chronicle",
+  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
+  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
+  "heading": "Chip War Chronicle — 半導体と世界情勢",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 59,
+  "years": {
+   "2026": 59
+  },
+  "first": "2026-09-07",
+  "last": "2026-10-10",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "ts",
+   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
+  },
+  "score": 6.2
+ },
+ {
   "full": "O6lvl4/homebrew-tap",
   "owner": "O6lvl4",
   "name": "homebrew-tap",
@@ -1503,35 +1532,6 @@
    "code": "brew tap O6lvl4/tap\nbrew install gv\n```\n\nOr in one step:"
   },
   "score": 6.2
- },
- {
-  "full": "O6lvl4/chip-war-chronicle",
-  "owner": "O6lvl4",
-  "name": "chip-war-chronicle",
-  "url": "https://github.com/O6lvl4/chip-war-chronicle",
-  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
-  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
-  "heading": "Chip War Chronicle — 半導体と世界情勢",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 57,
-  "years": {
-   "2026": 57
-  },
-  "first": "2026-09-07",
-  "last": "2026-10-09",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "ts",
-   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
-  },
-  "score": 6.1
  },
  {
   "full": "O6lvl4/ctxgate",
@@ -1577,12 +1577,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 18,
+  "commits": 20,
   "years": {
-   "2026": 18
+   "2026": 20
   },
   "first": "2026-09-14",
-  "last": "2026-10-09",
+  "last": "2026-10-10",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3669,17 +3669,17 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 11452,
+  "commits": 11483,
   "years": {
-   "2026": 11452
+   "2026": 11483
   },
   "first": "2026-03-07",
   "last": "2026-10-10",
   "tag": "v0.60.0-rc3",
   "release": {
-   "tag": "v0.66.0",
-   "url": "https://github.com/almide/almide/releases/tag/v0.66.0",
-   "publishedAt": "2026-10-03T01:14:41Z"
+   "tag": "v0.67.1",
+   "url": "https://github.com/almide/almide/releases/tag/v0.67.1",
+   "publishedAt": "2026-10-10T09:32:46Z"
   },
   "license": "NOASSERTION",
   "topics": [
@@ -3831,12 +3831,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 567,
+  "commits": 568,
   "years": {
-   "2026": 567
+   "2026": 568
   },
   "first": "2026-04-12",
-  "last": "2026-10-09",
+  "last": "2026-10-10",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4064,12 +4064,12 @@
    "HTML"
   ],
   "stars": 0,
-  "commits": 167,
+  "commits": 170,
   "years": {
-   "2026": 167
+   "2026": 170
   },
   "first": "2026-03-08",
-  "last": "2026-10-05",
+  "last": "2026-10-10",
   "topics": [
    "almide",
    "playground",
@@ -4081,7 +4081,7 @@
    "lang": "",
    "code": "\n## Visual output\n\nThe playground renders what you print. If a program's stdout is an SVG\ndocument (`<svg …>`) or an ASCII PPM image (`P3 …`), the **Visual** tab shows\nit as an image — vectors via a script-disabled blob `<img>`, pixels via a\ncanvas. The same program prints a valid `.svg` / `.ppm` file natively, so the\nbyte-parity harness still applies. See Examples → Graphics (Mandelbrot,\ngenerative SVG).\n\n## Embedding\n\n`?embed=1` renders a minimal chrome for iframes — no header, no AI bar, just\ntabs, editor, output and a slim Run bar with an \"Open in Playground\" escape\nhatch. `&hide=util.almd` hides tabs from the strip while still compiling them\n(Kotlin-style hidden setup code). Combine with `?example=` or `#code=`:"
   },
-  "score": 8.3
+  "score": 8.4
  },
  {
   "full": "almide/yaml",
