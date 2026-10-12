@@ -825,12 +825,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 160,
+  "commits": 162,
   "years": {
-   "2026": 160
+   "2026": 162
   },
   "first": "2026-09-24",
-  "last": "2026-10-05",
+  "last": "2026-10-12",
   "license": "Apache-2.0",
   "topics": [],
   "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
@@ -1393,12 +1393,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 73,
+  "commits": 75,
   "years": {
-   "2026": 73
+   "2026": 75
   },
   "first": "2026-10-07",
-  "last": "2026-10-10",
+  "last": "2026-10-12",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1441,6 +1441,35 @@
   "score": 6.5
  },
  {
+  "full": "O6lvl4/chip-war-chronicle",
+  "owner": "O6lvl4",
+  "name": "chip-war-chronicle",
+  "url": "https://github.com/O6lvl4/chip-war-chronicle",
+  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
+  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
+  "heading": "Chip War Chronicle — 半導体と世界情勢",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 63,
+  "years": {
+   "2026": 63
+  },
+  "first": "2026-09-07",
+  "last": "2026-10-12",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "ts",
+   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
+  },
+  "score": 6.3
+ },
+ {
   "full": "O6lvl4/treesrc",
   "owner": "O6lvl4",
   "name": "treesrc",
@@ -1470,35 +1499,6 @@
    "code": "npm install -g treesrc\n```\n\nor use it temporarily without installing:"
   },
   "score": 6.3
- },
- {
-  "full": "O6lvl4/chip-war-chronicle",
-  "owner": "O6lvl4",
-  "name": "chip-war-chronicle",
-  "url": "https://github.com/O6lvl4/chip-war-chronicle",
-  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
-  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
-  "heading": "Chip War Chronicle — 半導体と世界情勢",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 61,
-  "years": {
-   "2026": 61
-  },
-  "first": "2026-09-07",
-  "last": "2026-10-11",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "ts",
-   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
-  },
-  "score": 6.2
  },
  {
   "full": "O6lvl4/homebrew-tap",
@@ -3669,12 +3669,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 11539,
+  "commits": 11643,
   "years": {
-   "2026": 11539
+   "2026": 11643
   },
   "first": "2026-03-07",
-  "last": "2026-10-12",
+  "last": "2026-10-13",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3758,12 +3758,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1536,
+  "commits": 1539,
   "years": {
-   "2026": 1536
+   "2026": 1539
   },
   "first": "2026-03-07",
-  "last": "2026-10-06",
+  "last": "2026-10-13",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3831,12 +3831,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 569,
+  "commits": 570,
   "years": {
-   "2026": 569
+   "2026": 570
   },
   "first": "2026-04-12",
-  "last": "2026-10-11",
+  "last": "2026-10-12",
   "license": "MIT",
   "topics": [
    "almide",
