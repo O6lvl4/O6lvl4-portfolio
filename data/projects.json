@@ -1393,19 +1393,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 77,
+  "commits": 81,
   "years": {
-   "2026": 77
+   "2026": 81
   },
   "first": "2026-10-07",
-  "last": "2026-10-13",
+  "last": "2026-10-14",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "sh",
    "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
-  "score": 6.5
+  "score": 6.6
  },
  {
   "full": "O6lvl4/llmine",
@@ -1455,19 +1455,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 65,
+  "commits": 69,
   "years": {
-   "2026": 65
+   "2026": 69
   },
   "first": "2026-09-07",
-  "last": "2026-10-13",
+  "last": "2026-10-14",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "ts",
    "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
   },
-  "score": 6.3
+  "score": 6.4
  },
  {
   "full": "O6lvl4/treesrc",
@@ -1577,12 +1577,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 24,
+  "commits": 26,
   "years": {
-   "2026": 24
+   "2026": 26
   },
   "first": "2026-09-14",
-  "last": "2026-10-13",
+  "last": "2026-10-14",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -2243,33 +2243,6 @@
   "score": 3.3
  },
  {
-  "full": "O6lvl4/craftsman",
-  "owner": "O6lvl4",
-  "name": "craftsman",
-  "url": "https://github.com/O6lvl4/craftsman",
-  "lead": "Minecraft サーバー管理の最小・堅牢な CLI。Craftsman 2.0 では TypeScript + Ink によるモダンなインターフェースを採用し、パイプ可能な出力と対話的フローの両立、フェイルセーフな運用を実現しました。Docker 版 itzg/minecraft-server を第一級の実行プロバイダとして扱い、Pak（旧 cartridge）単位で冪等的な起動・停止・バックアップ・ロールバックを提供します。",
-  "heading": "Craftsman",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 16,
-  "years": {
-   "2025": 16
-  },
-  "first": "2025-09-14",
-  "last": "2025-10-14",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "   npm run install:global\n   ```\n\n   開発用にローカルリンクする場合は"
-  },
-  "score": 3.3
- },
- {
   "full": "O6lvl4/macleap",
   "owner": "O6lvl4",
   "name": "macleap",
@@ -2900,6 +2873,33 @@
   "sample": {
    "lang": "bash",
    "code": "npm install\n```\n\n## ビルド\n\nFennelコードを単一のLuaファイルにコンパイル:"
+  },
+  "score": 2.3
+ },
+ {
+  "full": "O6lvl4/craftsman",
+  "owner": "O6lvl4",
+  "name": "craftsman",
+  "url": "https://github.com/O6lvl4/craftsman",
+  "lead": "Minecraft サーバー管理の最小・堅牢な CLI。Craftsman 2.0 では TypeScript + Ink によるモダンなインターフェースを採用し、パイプ可能な出力と対話的フローの両立、フェイルセーフな運用を実現しました。Docker 版 itzg/minecraft-server を第一級の実行プロバイダとして扱い、Pak（旧 cartridge）単位で冪等的な起動・停止・バックアップ・ロールバックを提供します。",
+  "heading": "Craftsman",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 16,
+  "years": {
+   "2025": 16
+  },
+  "first": "2025-09-14",
+  "last": "2025-10-14",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "   npm run install:global\n   ```\n\n   開発用にローカルリンクする場合は"
   },
   "score": 2.3
  },
@@ -3669,12 +3669,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 11744,
+  "commits": 11856,
   "years": {
-   "2026": 11744
+   "2026": 11856
   },
   "first": "2026-03-07",
-  "last": "2026-10-13",
+  "last": "2026-10-14",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3758,12 +3758,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1545,
+  "commits": 1553,
   "years": {
-   "2026": 1545
+   "2026": 1553
   },
   "first": "2026-03-07",
-  "last": "2026-10-13",
+  "last": "2026-10-14",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3831,12 +3831,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 571,
+  "commits": 572,
   "years": {
-   "2026": 571
+   "2026": 572
   },
   "first": "2026-04-12",
-  "last": "2026-10-13",
+  "last": "2026-10-14",
   "license": "MIT",
   "topics": [
    "almide",

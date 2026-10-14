@@ -151,7 +151,7 @@
    {
     "period": "2025年",
     "title": "14件を始めた",
-    "lead": "igloc、llmine、treesrc、craftsman ほか10件",
+    "lead": "igloc、llmine、treesrc、syncenv ほか10件",
     "tags": [
      "Go",
      "TypeScript"
@@ -235,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "18,157",
+    "value": "18,288",
     "label": "コミット"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 14708,
+    "count": 14829,
     "of": 29
    },
    {
     "name": "O6lvl4",
-    "count": 2638,
+    "count": 2648,
     "of": 126
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 17908
+    "count": 18039
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "14,535",
+     "value": "14,656",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 14535
+     "count": 14656
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "11,744"
+       "value": "11,856"
       },
       {
        "label": "初回",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-13"
+      "date": "2026-10-14"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,545"
+       "value": "1,553"
       },
       {
        "label": "初回",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-13"
+      "date": "2026-10-14"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "571"
+       "value": "572"
       },
       {
        "label": "初回",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-13"
+      "date": "2026-10-14"
      }
     },
     {
@@ -3205,39 +3205,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/craftsman",
-     "title": "craftsman",
-     "titleEn": "Docker上のMinecraftサーバーをPak単位で管理する堅牢なCLI",
-     "date": "2025年10月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/craftsman",
-     "tags": [
-      "TypeScript",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "16"
-      },
-      {
-       "label": "初回",
-       "value": "2025年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/craftsman"
-      }
-     ],
-     "order": {
-      "date": "2025-10-14"
-     }
-    },
-    {
-     "image": "",
      "id": "almd-mc/mc-bot",
      "title": "mc-bot",
      "titleEn": "Almideで書かれたMinecraftボットのフレームワーク",
@@ -3938,6 +3905,39 @@
      ],
      "order": {
       "date": "2026-05-24"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/craftsman",
+     "title": "craftsman",
+     "titleEn": "Docker上のMinecraftサーバーをPak単位で管理する堅牢なCLI",
+     "date": "2025年10月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/craftsman",
+     "tags": [
+      "TypeScript",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "16"
+      },
+      {
+       "label": "初回",
+       "value": "2025年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/craftsman"
+      }
+     ],
+     "order": {
+      "date": "2025-10-14"
      }
     }
    ]
@@ -4870,7 +4870,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "147",
+     "value": "153",
      "label": "コミット"
     },
     {
@@ -4885,7 +4885,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 147
+     "count": 153
     }
    ],
    "works": [
@@ -4951,7 +4951,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "65"
+       "value": "69"
       },
       {
        "label": "初回",
@@ -4969,7 +4969,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-13"
+      "date": "2026-10-14"
      }
     },
     {
@@ -4989,7 +4989,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "24"
+       "value": "26"
       },
       {
        "label": "初回",
@@ -5007,7 +5007,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-13"
+      "date": "2026-10-14"
      }
     },
     {
@@ -6552,7 +6552,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "436",
+     "value": "440",
      "label": "コミット"
     },
     {
@@ -6583,7 +6583,7 @@
     },
     {
      "name": "2026",
-     "count": 283
+     "count": 287
     }
    ],
    "works": [
@@ -6770,7 +6770,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "77"
+       "value": "81"
       },
       {
        "label": "初回",
@@ -6784,7 +6784,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-13"
+      "date": "2026-10-14"
      }
     },
     {
