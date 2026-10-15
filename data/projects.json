@@ -1393,19 +1393,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 81,
+  "commits": 83,
   "years": {
-   "2026": 81
+   "2026": 83
   },
   "first": "2026-10-07",
-  "last": "2026-10-14",
+  "last": "2026-10-15",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "sh",
    "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
-  "score": 6.6
+  "score": 6.7
  },
  {
   "full": "O6lvl4/llmine",
@@ -3669,12 +3669,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 11856,
+  "commits": 11917,
   "years": {
-   "2026": 11856
+   "2026": 11917
   },
   "first": "2026-03-07",
-  "last": "2026-10-14",
+  "last": "2026-10-15",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3831,12 +3831,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 572,
+  "commits": 573,
   "years": {
-   "2026": 572
+   "2026": 573
   },
   "first": "2026-04-12",
-  "last": "2026-10-14",
+  "last": "2026-10-15",
   "license": "MIT",
   "topics": [
    "almide",
