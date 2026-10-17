@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "192 repos",
+  "life": "194 repos",
   "avatar": "assets/avatar.png",
   "role": "从语言开始，构建开发工具。",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公开仓库 192 个",
+  "kicker": "公开仓库 194 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 192 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
+  "note": "这一页并列了 194 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
   "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
@@ -118,11 +118,11 @@
    {
     "heading": "常写的语言",
     "items": [
-     "Almide（101）",
+     "Almide（103）",
      "Python（38）",
      "TypeScript（33）",
-     "JavaScript（33）",
-     "Shell（32）"
+     "Shell（33）",
+     "JavaScript（33）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "开始了 159 个",
-    "lead": "almide、porta、als、sprid 等 155 个",
+    "title": "开始了 161 个",
+    "lead": "almide、porta、als、sprid 等 157 个",
     "tags": [
      "Rust",
      "Almide"
@@ -215,12 +215,12 @@
    },
    {
     "key": "最近更新",
-    "value": "sprid · 2026年10月"
+    "value": "llm · 2026年10月"
    },
    {
     "key": "用 Almide 写的比例",
-    "value": "44%",
-    "fill": 0.44
+    "value": "45%",
+    "fill": 0.45
    },
    {
     "key": "2026 年的提交",
@@ -230,11 +230,11 @@
   ],
   "figures": [
    {
-    "value": "192",
+    "value": "194",
     "label": "公开仓库"
    },
    {
-    "value": "18,481",
+    "value": "18,670",
     "label": "提交"
    },
    {
@@ -249,7 +249,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 85,
+    "count": 87,
     "color": "currentColor"
    },
    {
@@ -343,7 +343,7 @@
    },
    {
     "name": "almide",
-    "count": 29
+    "count": 31
    },
    {
     "name": "almide-graphics",
@@ -361,12 +361,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 14988,
-    "of": 29
+    "count": 15173,
+    "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2679,
+    "count": 2683,
     "of": 123
    },
    {
@@ -404,7 +404,7 @@
    },
    {
     "name": "2026",
-    "count": 18236
+    "count": 18425
    }
   ]
  },
@@ -416,11 +416,11 @@
    "intro": "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。Arlk是用Almide编写、追踪定理前提的证明语言。用Racket编写的wyve在LLVM IR之上放置静态语义，让优化器记录契约。",
    "figures": [
     {
-     "value": "19",
+     "value": "21",
      "label": "公开仓库"
     },
     {
-     "value": "14,815",
+     "value": "15,000",
      "label": "提交"
     },
     {
@@ -435,7 +435,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 14815
+     "count": 15000
     }
    ],
    "works": [
@@ -465,7 +465,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "12,010"
+       "value": "12,178"
       },
       {
        "label": "首次",
@@ -491,7 +491,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -512,7 +512,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,556"
+       "value": "1,570"
       },
       {
        "label": "首次",
@@ -534,7 +534,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -640,7 +640,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "574"
+       "value": "575"
       },
       {
        "label": "首次",
@@ -658,7 +658,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -776,6 +776,79 @@
      ],
      "order": {
       "date": "2026-09-26"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/llm",
+     "title": "llm",
+     "titleEn": "LLM provider streaming clients (OpenAI, Anthropic) for Almide",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/llm",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "1"
+      },
+      {
+       "label": "首次",
+       "value": "2026年10月"
+      },
+      {
+       "label": "标签",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/llm"
+      }
+     ],
+     "order": {
+      "date": "2026-10-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/nnlib",
+     "title": "nnlib",
+     "titleEn": "Neural-network kernels for Almide (attention, RoPE, norms, activations, Q1_0/Q8_0, Qwen3 blocks)",
+     "date": "2026年10月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/nnlib",
+     "tags": [
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "1"
+      },
+      {
+       "label": "首次",
+       "value": "2026年10月"
+      },
+      {
+       "label": "标签",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/nnlib"
+      }
+     ],
+     "order": {
+      "date": "2026-10-18"
      }
     },
     {
@@ -4869,7 +4942,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "154",
+     "value": "155",
      "label": "提交"
     },
     {
@@ -4884,7 +4957,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 154
+     "count": 155
     }
    ],
    "works": [
@@ -4950,7 +5023,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "70"
+       "value": "71"
       },
       {
        "label": "首次",
@@ -4968,7 +5041,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -6551,7 +6624,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "470",
+     "value": "473",
      "label": "提交"
     },
     {
@@ -6582,7 +6655,7 @@
     },
     {
      "name": "2026",
-     "count": 321
+     "count": 324
     }
    ],
    "works": [
@@ -6640,7 +6713,7 @@
      "image": "",
      "id": "O6lvl4/ruby-kaigi-kaigi-2027-lab",
      "title": "ruby-kaigi-kaigi-2027-lab",
-     "titleEn": "RubyKaigi 2027（宮崎）の公開情報を読むための、個人による非公式ガイドです。主催者の承認・提携を示すものではありません。",
+     "titleEn": "RubyKaigi 2027宫崎非官方指南",
      "date": "2026年10月",
      "format": "JavaScript",
      "credit": "O6lvl4",
@@ -6653,7 +6726,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "39"
+       "value": "41"
       },
       {
        "label": "首次",
@@ -6675,7 +6748,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -6769,7 +6842,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "84"
+       "value": "85"
       },
       {
        "label": "首次",
@@ -6783,7 +6856,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {

@@ -11,7 +11,7 @@
  "artist": {
   "name": "O6lvl4",
   "nameEn": "PUBLIC WORK",
-  "life": "192 repos",
+  "life": "194 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -104,9 +104,9 @@
   "first": true
  },
  "home": {
-  "kicker": "192 public repositories",
+  "kicker": "194 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "192 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "194 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -118,11 +118,11 @@
    {
     "heading": "Most written",
     "items": [
-     "Almide（101）",
+     "Almide（103）",
      "Python（38）",
      "TypeScript（33）",
-     "JavaScript（33）",
-     "Shell（32）"
+     "Shell（33）",
+     "JavaScript（33）"
     ]
    },
    {
@@ -141,8 +141,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "159 started",
-    "lead": "almide, porta, als, sprid and 155 more",
+    "title": "161 started",
+    "lead": "almide, porta, als, sprid and 157 more",
     "tags": [
      "Rust",
      "Almide"
@@ -215,12 +215,12 @@
    },
    {
     "key": "Last touched",
-    "value": "sprid · Oct 2026"
+    "value": "llm · Oct 2026"
    },
    {
     "key": "Written in Almide",
-    "value": "44%",
-    "fill": 0.44
+    "value": "45%",
+    "fill": 0.45
    },
    {
     "key": "Commits in 2026",
@@ -230,11 +230,11 @@
   ],
   "figures": [
    {
-    "value": "192",
+    "value": "194",
     "label": "Repositories"
    },
    {
-    "value": "18,481",
+    "value": "18,670",
     "label": "Commits"
    },
    {
@@ -249,7 +249,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 85,
+    "count": 87,
     "color": "currentColor"
    },
    {
@@ -343,7 +343,7 @@
    },
    {
     "name": "almide",
-    "count": 29
+    "count": 31
    },
    {
     "name": "almide-graphics",
@@ -361,12 +361,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 14988,
-    "of": 29
+    "count": 15173,
+    "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2679,
+    "count": 2683,
     "of": 123
    },
    {
@@ -404,7 +404,7 @@
    },
    {
     "name": "2026",
-    "count": 18236
+    "count": 18425
    }
   ]
  },
@@ -416,11 +416,11 @@
    "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). Arlk is a proof language written in Almide that tracks a theorem's assumptions. wyve, written in Racket, puts static semantics above LLVM IR and asks the optimizer to record its contracts.",
    "figures": [
     {
-     "value": "19",
+     "value": "21",
      "label": "Repositories"
     },
     {
-     "value": "14,815",
+     "value": "15,000",
      "label": "Commits"
     },
     {
@@ -435,7 +435,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 14815
+     "count": 15000
     }
    ],
    "works": [
@@ -465,7 +465,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "12,010"
+       "value": "12,178"
       },
       {
        "label": "Started",
@@ -491,7 +491,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -512,7 +512,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,556"
+       "value": "1,570"
       },
       {
        "label": "Started",
@@ -534,7 +534,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -640,7 +640,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "574"
+       "value": "575"
       },
       {
        "label": "Started",
@@ -658,7 +658,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -776,6 +776,79 @@
      ],
      "order": {
       "date": "2026-09-26"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/llm",
+     "title": "llm",
+     "titleEn": "LLM provider streaming clients (OpenAI, Anthropic) for Almide",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/llm",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      },
+      {
+       "label": "Tag",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/llm"
+      }
+     ],
+     "order": {
+      "date": "2026-10-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/nnlib",
+     "title": "nnlib",
+     "titleEn": "Neural-network kernels for Almide (attention, RoPE, norms, activations, Q1_0/Q8_0, Qwen3 blocks)",
+     "date": "Oct 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/nnlib",
+     "tags": [
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      },
+      {
+       "label": "Tag",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/nnlib"
+      }
+     ],
+     "order": {
+      "date": "2026-10-18"
      }
     },
     {
@@ -4869,7 +4942,7 @@
      "label": "Repositories"
     },
     {
-     "value": "154",
+     "value": "155",
      "label": "Commits"
     },
     {
@@ -4884,7 +4957,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 154
+     "count": 155
     }
    ],
    "works": [
@@ -4950,7 +5023,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "70"
+       "value": "71"
       },
       {
        "label": "Started",
@@ -4968,7 +5041,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -6551,7 +6624,7 @@
      "label": "Repositories"
     },
     {
-     "value": "470",
+     "value": "473",
      "label": "Commits"
     },
     {
@@ -6582,7 +6655,7 @@
     },
     {
      "name": "2026",
-     "count": 321
+     "count": 324
     }
    ],
    "works": [
@@ -6640,7 +6713,7 @@
      "image": "",
      "id": "O6lvl4/ruby-kaigi-kaigi-2027-lab",
      "title": "ruby-kaigi-kaigi-2027-lab",
-     "titleEn": "RubyKaigi 2027（宮崎）の公開情報を読むための、個人による非公式ガイドです。主催者の承認・提携を示すものではありません。",
+     "titleEn": "An unofficial guide to public information about RubyKaigi 2027 in Miyazaki.",
      "date": "Oct 2026",
      "format": "JavaScript",
      "credit": "O6lvl4",
@@ -6653,7 +6726,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "39"
+       "value": "41"
       },
       {
        "label": "Started",
@@ -6675,7 +6748,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {
@@ -6769,7 +6842,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "84"
+       "value": "85"
       },
       {
        "label": "Started",
@@ -6783,7 +6856,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-17"
      }
     },
     {

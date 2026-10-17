@@ -622,12 +622,12 @@
    "Ruby"
   ],
   "stars": 0,
-  "commits": 39,
+  "commits": 41,
   "years": {
-   "2026": 39
+   "2026": 41
   },
   "first": "2026-10-08",
-  "last": "2026-10-16",
+  "last": "2026-10-17",
   "tag": "rails-runtime-r2",
   "release": {
    "tag": "rails-runtime-r2",
@@ -1393,12 +1393,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 84,
+  "commits": 85,
   "years": {
-   "2026": 84
+   "2026": 85
   },
   "first": "2026-10-07",
-  "last": "2026-10-16",
+  "last": "2026-10-17",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1455,12 +1455,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 70,
+  "commits": 71,
   "years": {
-   "2026": 70
+   "2026": 71
   },
   "first": "2026-09-07",
-  "last": "2026-10-16",
+  "last": "2026-10-17",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3601,12 +3601,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 12010,
+  "commits": 12178,
   "years": {
-   "2026": 12010
+   "2026": 12178
   },
   "first": "2026-03-07",
-  "last": "2026-10-16",
+  "last": "2026-10-17",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3690,12 +3690,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1556,
+  "commits": 1570,
   "years": {
-   "2026": 1556
+   "2026": 1570
   },
   "first": "2026-03-07",
-  "last": "2026-10-16",
+  "last": "2026-10-17",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 574,
+  "commits": 575,
   "years": {
-   "2026": 574
+   "2026": 575
   },
   "first": "2026-04-12",
-  "last": "2026-10-16",
+  "last": "2026-10-17",
   "license": "MIT",
   "topics": [
    "almide",
@@ -3920,6 +3920,63 @@
    "code": "import dfa\n\n// Compile a pattern set. Index in the list becomes the token id;\n// a length tie goes to the lower id, so list keywords first.\nfn compile(patterns: List[String]) -> Result[Dfa, String]\n\n// Longest pattern matching at `at`, or none. Matches AT the position —\n// it never searches forward; that is the caller's loop.\nfn scan(dfa: Dfa, input: String, at: Int) -> Match?\n\n// Match { id: Int, len: Int }"
   },
   "score": 9.1
+ },
+ {
+  "full": "almide/llm",
+  "owner": "almide",
+  "name": "llm",
+  "url": "https://github.com/almide/llm",
+  "lead": "LLM provider streaming clients (OpenAI, Anthropic) for Almide",
+  "heading": "almide/llm",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-10-18",
+  "last": "2026-10-18",
+  "tag": "v0.1.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide add almide/llm@v0.1.0\n```\n\nThis adds the dependency to your `almide.toml`:"
+  },
+  "score": 9
+ },
+ {
+  "full": "almide/nnlib",
+  "owner": "almide",
+  "name": "nnlib",
+  "url": "https://github.com/almide/nnlib",
+  "lead": "Neural-network kernels for Almide (attention, RoPE, norms, activations, Q1_0/Q8_0, Qwen3 blocks)",
+  "heading": "almide/nnlib",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-10-18",
+  "last": "2026-10-18",
+  "tag": "v0.1.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide add almide/nnlib@v0.1.0\n```\n\nwhich adds to `almide.toml`:"
+  },
+  "score": 9
  },
  {
   "full": "almide/almide-bindgen",
