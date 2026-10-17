@@ -5173,4 +5173,31 @@
    ]
   }
  }
+,
+"O6lvl4/ruby-kaigi-kaigi-2027-lab": {
+ "ja": {
+  "what": "RubyKaigi 2027宮崎の公開情報をまとめる非公式ガイド",
+  "points": [
+   "宮崎の地図・アクセス・飲食店",
+   "過去開催・ノベルティの資料",
+   "Ruby/Wasm上のRails描画"
+  ]
+ },
+ "en": {
+  "what": "An unofficial guide to public information about RubyKaigi 2027 in Miyazaki.",
+  "points": [
+   "Miyazaki maps, access and dining",
+   "Past events and novelty archives",
+   "Rails rendering on Ruby/Wasm"
+  ]
+ },
+ "zh": {
+  "what": "RubyKaigi 2027宫崎非官方指南",
+  "points": [
+   "宫崎地图、交通与餐饮",
+   "历届活动与纪念品资料",
+   "Ruby/Wasm渲染Rails"
+  ]
+ }
+}
 }
