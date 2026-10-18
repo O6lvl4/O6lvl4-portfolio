@@ -5198,5 +5198,57 @@
     "Ruby/Wasm渲染Rails"
    ]
   }
+ },
+ "almide/llm": {
+  "ja": {
+   "what": "Almide向けLLMストリーミングクライアント",
+   "points": [
+    "OpenAI互換・Anthropic対応",
+    "テキスト断片の逐次通知と共通JSON応答",
+    "呼び出し全体と無通信時間の制限"
+   ]
+  },
+  "en": {
+   "what": "Streaming LLM clients for Almide with a shared response format.",
+   "points": [
+    "OpenAI-compatible and Anthropic APIs",
+    "Text-delta callbacks and unified JSON responses",
+    "Per-call total and idle time limits"
+   ]
+  },
+  "zh": {
+   "what": "Almide的LLM流式客户端",
+   "points": [
+    "OpenAI兼容及Anthropic",
+    "文本片段回调与统一JSON响应",
+    "单次调用总时限与空闲时限"
+   ]
+  }
+ },
+ "almide/nnlib": {
+  "ja": {
+   "what": "Almide向けニューラルネットワーク演算ライブラリ",
+   "points": [
+    "アテンションとRoPE位置埋め込み",
+    "Q1_0・Q8_0量子化重みの演算",
+    "Qwen3デコーダ層とKVキャッシュ"
+   ]
+  },
+  "en": {
+   "what": "Neural-network kernels for Almide, from attention to Qwen3 decoder layers.",
+   "points": [
+    "Attention and rotary position embeddings",
+    "Q1_0 and Q8_0 quantized-weight operations",
+    "Qwen3 decoder layers with KV caches"
+   ]
+  },
+  "zh": {
+   "what": "Almide神经网络计算库",
+   "points": [
+    "注意力与RoPE位置编码",
+    "Q1_0和Q8_0量化权重运算",
+    "带KV缓存的Qwen3解码层"
+   ]
+  }
  }
 }
