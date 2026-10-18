@@ -215,7 +215,7 @@
    },
    {
     "key": "最近更新",
-    "value": "llm · 2026年10月"
+    "value": "almide · 2026年10月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -234,7 +234,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "18,670",
+    "value": "19,108",
     "label": "提交"
    },
    {
@@ -361,12 +361,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 15173,
+    "count": 15600,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2683,
+    "count": 2693,
     "of": 123
    },
    {
@@ -381,7 +381,7 @@
    },
    {
     "name": "almide-ai",
-    "count": 64,
+    "count": 65,
     "of": 3
    }
   ],
@@ -404,7 +404,7 @@
    },
    {
     "name": "2026",
-    "count": 18425
+    "count": 18863
    }
   ]
  },
@@ -420,7 +420,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "15,000",
+     "value": "15,427",
      "label": "提交"
     },
     {
@@ -435,7 +435,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 15000
+     "count": 15427
     }
    ],
    "works": [
@@ -465,7 +465,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "12,178"
+       "value": "12,580"
       },
       {
        "label": "首次",
@@ -491,7 +491,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-17"
+      "date": "2026-10-19"
      }
     },
     {
@@ -512,7 +512,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,570"
+       "value": "1,594"
       },
       {
        "label": "首次",
@@ -534,7 +534,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-17"
+      "date": "2026-10-18"
      }
     },
     {
@@ -640,7 +640,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "575"
+       "value": "576"
       },
       {
        "label": "首次",
@@ -658,7 +658,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-17"
+      "date": "2026-10-18"
      }
     },
     {
@@ -782,7 +782,7 @@
      "image": "",
      "id": "almide/llm",
      "title": "llm",
-     "titleEn": "LLM provider streaming clients (OpenAI, Anthropic) for Almide",
+     "titleEn": "Almide的LLM流式客户端",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "almide",
@@ -818,7 +818,7 @@
      "image": "",
      "id": "almide/nnlib",
      "title": "nnlib",
-     "titleEn": "Neural-network kernels for Almide (attention, RoPE, norms, activations, Q1_0/Q8_0, Qwen3 blocks)",
+     "titleEn": "Almide神经网络计算库",
      "date": "2026年10月",
      "format": "Almide",
      "credit": "almide",
@@ -2947,7 +2947,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "126",
+     "value": "127",
      "label": "提交"
     },
     {
@@ -2966,7 +2966,7 @@
     },
     {
      "name": "2026",
-     "count": 99
+     "count": 100
     }
    ],
    "works": [
@@ -2983,7 +2983,7 @@
      "id": "almide-ai/almai",
      "title": "almai",
      "titleEn": "Almide的多提供商LLM客户端,统一接口",
-     "date": "2026年9月",
+     "date": "2026年10月",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/almai",
@@ -2996,7 +2996,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "35"
+       "value": "36"
       },
       {
        "label": "首次",
@@ -3014,7 +3014,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-28"
+      "date": "2026-10-18"
      }
     },
     {
@@ -4942,7 +4942,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "155",
+     "value": "158",
      "label": "提交"
     },
     {
@@ -4957,7 +4957,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 155
+     "count": 158
     }
    ],
    "works": [
@@ -5023,7 +5023,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "71"
+       "value": "72"
       },
       {
        "label": "首次",
@@ -5041,7 +5041,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-17"
+      "date": "2026-10-18"
      }
     },
     {
@@ -5061,7 +5061,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "26"
+       "value": "28"
       },
       {
        "label": "首次",
@@ -5079,7 +5079,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-14"
+      "date": "2026-10-18"
      }
     },
     {
@@ -6624,7 +6624,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "473",
+     "value": "480",
      "label": "提交"
     },
     {
@@ -6655,7 +6655,7 @@
     },
     {
      "name": "2026",
-     "count": 324
+     "count": 331
     }
    ],
    "works": [
@@ -6842,7 +6842,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "85"
+       "value": "92"
       },
       {
        "label": "首次",
@@ -6856,7 +6856,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-17"
+      "date": "2026-10-18"
      }
     },
     {
