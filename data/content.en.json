@@ -215,7 +215,7 @@
    },
    {
     "key": "Last touched",
-    "value": "almide · Oct 2026"
+    "value": "ruby-kaigi-kaigi-2027-lab · Oct 2026"
    },
    {
     "key": "Written in Almide",
@@ -234,7 +234,7 @@
     "label": "Repositories"
    },
    {
-    "value": "19,108",
+    "value": "19,217",
     "label": "Commits"
    },
    {
@@ -361,17 +361,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 15600,
+    "count": 15689,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2693,
+    "count": 2711,
     "of": 123
    },
    {
     "name": "almide-graphics",
-    "count": 658,
+    "count": 660,
     "of": 13
    },
    {
@@ -404,7 +404,7 @@
    },
    {
     "name": "2026",
-    "count": 18863
+    "count": 18972
    }
   ]
  },
@@ -420,7 +420,7 @@
      "label": "Repositories"
     },
     {
-     "value": "15,427",
+     "value": "15,516",
      "label": "Commits"
     },
     {
@@ -435,7 +435,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 15427
+     "count": 15516
     }
    ],
    "works": [
@@ -465,7 +465,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "12,580"
+       "value": "12,662"
       },
       {
        "label": "Started",
@@ -512,7 +512,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,594"
+       "value": "1,600"
       },
       {
        "label": "Started",
@@ -534,7 +534,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-18"
+      "date": "2026-10-19"
      }
     },
     {
@@ -640,7 +640,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "576"
+       "value": "577"
       },
       {
        "label": "Started",
@@ -658,7 +658,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-18"
+      "date": "2026-10-19"
      }
     },
     {
@@ -4025,7 +4025,7 @@
      "label": "Repositories"
     },
     {
-     "value": "658",
+     "value": "660",
      "label": "Commits"
     },
     {
@@ -4040,7 +4040,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 658
+     "count": 660
     }
    ],
    "works": [
@@ -4266,7 +4266,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "157"
+       "value": "159"
       },
       {
        "label": "Started",
@@ -4280,7 +4280,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-16"
+      "date": "2026-10-19"
      }
     },
     {
@@ -4942,7 +4942,7 @@
      "label": "Repositories"
     },
     {
-     "value": "158",
+     "value": "159",
      "label": "Commits"
     },
     {
@@ -4957,7 +4957,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 158
+     "count": 159
     }
    ],
    "works": [
@@ -5023,7 +5023,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "72"
+       "value": "73"
       },
       {
        "label": "Started",
@@ -5041,7 +5041,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-18"
+      "date": "2026-10-19"
      }
     },
     {
@@ -6216,7 +6216,7 @@
      "label": "Repositories"
     },
     {
-     "value": "265",
+     "value": "273",
      "label": "Commits"
     },
     {
@@ -6231,7 +6231,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 265
+     "count": 273
     }
    ],
    "works": [
@@ -6393,7 +6393,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "162"
+       "value": "170"
       },
       {
        "label": "Started",
@@ -6411,7 +6411,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-12"
+      "date": "2026-10-19"
      }
     },
     {
@@ -6624,7 +6624,7 @@
      "label": "Repositories"
     },
     {
-     "value": "480",
+     "value": "489",
      "label": "Commits"
     },
     {
@@ -6655,7 +6655,7 @@
     },
     {
      "name": "2026",
-     "count": 331
+     "count": 340
     }
    ],
    "works": [
@@ -6726,7 +6726,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "41"
+       "value": "48"
       },
       {
        "label": "Started",
@@ -6748,7 +6748,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-17"
+      "date": "2026-10-19"
      }
     },
     {
@@ -6842,7 +6842,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "92"
+       "value": "94"
       },
       {
        "label": "Started",
@@ -6856,7 +6856,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-18"
+      "date": "2026-10-19"
      }
     },
     {

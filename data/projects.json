@@ -622,12 +622,12 @@
    "Ruby"
   ],
   "stars": 0,
-  "commits": 41,
+  "commits": 48,
   "years": {
-   "2026": 41
+   "2026": 48
   },
   "first": "2026-10-08",
-  "last": "2026-10-17",
+  "last": "2026-10-19",
   "tag": "rails-runtime-r2",
   "release": {
    "tag": "rails-runtime-r2",
@@ -640,7 +640,7 @@
    "lang": "sh",
    "code": "npm ci\nnpm run setup:runtime   # Ruby/Wasm ランタイムを取得（SHA-256 を検証）\nnpm run dev"
   },
-  "score": 9.8
+  "score": 10
  },
  {
   "full": "O6lvl4/gramide-javascript",
@@ -825,21 +825,21 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 162,
+  "commits": 170,
   "years": {
-   "2026": 162
+   "2026": 170
   },
   "first": "2026-09-24",
-  "last": "2026-10-12",
+  "last": "2026-10-19",
   "license": "Apache-2.0",
   "topics": [],
   "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
   "plate": "og",
   "sample": {
    "lang": "sh",
-   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher scout app.scouter.yaml           # read it (--json for machines)\narchgopher export app.scouter.yaml -o app.png # draw it: .svg, .png or .html by extension"
+   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher scout app.scouter.yaml           # read it (--json for machines)\narchgopher reconcile app.scouter.yaml --bill costs.json  # put the reading next to the bill, service by service\narchgopher export app.scouter.yaml -o app.png # draw it: .svg, .png or .html by extension"
   },
-  "score": 8.2
+  "score": 8.4
  },
  {
   "full": "O6lvl4/almide-headset-eq",
@@ -1393,19 +1393,48 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 92,
+  "commits": 94,
   "years": {
-   "2026": 92
+   "2026": 94
   },
   "first": "2026-10-07",
-  "last": "2026-10-18",
+  "last": "2026-10-19",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "sh",
    "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
-  "score": 6.8
+  "score": 6.9
+ },
+ {
+  "full": "O6lvl4/chip-war-chronicle",
+  "owner": "O6lvl4",
+  "name": "chip-war-chronicle",
+  "url": "https://github.com/O6lvl4/chip-war-chronicle",
+  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
+  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
+  "heading": "Chip War Chronicle — 半導体と世界情勢",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 73,
+  "years": {
+   "2026": 73
+  },
+  "first": "2026-09-07",
+  "last": "2026-10-19",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "ts",
+   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
+  },
+  "score": 6.5
  },
  {
   "full": "O6lvl4/llmine",
@@ -1439,35 +1468,6 @@
    "code": "npm install -g llmine\n```\n\n### Install from Source\n\n#### 1. Clone the repository"
   },
   "score": 6.5
- },
- {
-  "full": "O6lvl4/chip-war-chronicle",
-  "owner": "O6lvl4",
-  "name": "chip-war-chronicle",
-  "url": "https://github.com/O6lvl4/chip-war-chronicle",
-  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
-  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
-  "heading": "Chip War Chronicle — 半導体と世界情勢",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 72,
-  "years": {
-   "2026": 72
-  },
-  "first": "2026-09-07",
-  "last": "2026-10-18",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "ts",
-   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
-  },
-  "score": 6.4
  },
  {
   "full": "O6lvl4/treesrc",
@@ -3601,9 +3601,9 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 12580,
+  "commits": 12662,
   "years": {
-   "2026": 12580
+   "2026": 12662
   },
   "first": "2026-03-07",
   "last": "2026-10-19",
@@ -3690,12 +3690,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1594,
+  "commits": 1600,
   "years": {
-   "2026": 1594
+   "2026": 1600
   },
   "first": "2026-03-07",
-  "last": "2026-10-18",
+  "last": "2026-10-19",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 576,
+  "commits": 577,
   "years": {
-   "2026": 576
+   "2026": 577
   },
   "first": "2026-04-12",
-  "last": "2026-10-18",
+  "last": "2026-10-19",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4739,12 +4739,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 157,
+  "commits": 159,
   "years": {
-   "2026": 157
+   "2026": 159
   },
   "first": "2026-05-13",
-  "last": "2026-10-16",
+  "last": "2026-10-19",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4752,7 +4752,7 @@
    "lang": "",
    "code": "snaidhm\n├── gpu/       WebGPU abstraction, frame arena, pipeline management\n├── path/      2D path renderer (flatten → tile → sort → fine raster)\n├── mesh/      3D vertex pipeline\n├── text/      Font reader (OpenType/TrueType → glyph outlines → Path)\n└── image/     Texture decode"
   },
-  "score": 8.1
+  "score": 8.2
  },
  {
   "full": "almide-graphics/ceangal",
