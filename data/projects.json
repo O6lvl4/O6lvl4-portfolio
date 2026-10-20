@@ -186,12 +186,12 @@
    "C"
   ],
   "stars": 0,
-  "commits": 181,
+  "commits": 187,
   "years": {
-   "2026": 181
+   "2026": 187
   },
   "first": "2026-09-08",
-  "last": "2026-10-07",
+  "last": "2026-10-20",
   "tag": "v0.2.11",
   "license": "NOASSERTION",
   "topics": [],
@@ -200,7 +200,7 @@
    "lang": "",
    "code": "gramide                 this repository: engine, contract, readers, command line\ngramide_almide   .almd       one repository per language, each depending on the engine\ngramide_go       .go         https://github.com/O6lvl4/gramide-go\ngramide_rust     .rs         https://github.com/O6lvl4/gramide-rust\ngramide_python   .py .pyi    https://github.com/O6lvl4/gramide-python\ngramide-cli                  the `gramide` command: every package above, composed in one file"
   },
-  "score": 12.6
+  "score": 12.7
  },
  {
   "full": "O6lvl4/sashiko",
@@ -260,12 +260,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 143,
+  "commits": 145,
   "years": {
-   "2026": 32
+   "2026": 34
   },
   "first": "2026-09-08",
-  "last": "2026-10-07",
+  "last": "2026-10-20",
   "tag": "v0.4.16",
   "license": "NOASSERTION",
   "topics": [],
@@ -1422,12 +1422,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 73,
+  "commits": 74,
   "years": {
-   "2026": 73
+   "2026": 74
   },
   "first": "2026-09-07",
-  "last": "2026-10-19",
+  "last": "2026-10-20",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3593,7 +3593,7 @@
   "name": "almide",
   "url": "https://github.com/almide/almide",
   "site": "https://almide.github.io/docs/",
-  "lead": "A statically-typed programming language optimized for LLM code generation. Compiles to Rust and WebAssembly.",
+  "lead": "A statically-typed language built for LLMs to write correctly. When the model is wrong, the compiler names the fix. Builds native binaries and WebAssembly from one source.",
   "language": "Rust",
   "languages": [
    "Rust",
@@ -3601,12 +3601,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 12662,
+  "commits": 12722,
   "years": {
-   "2026": 12662
+   "2026": 12722
   },
   "first": "2026-03-07",
-  "last": "2026-10-19",
+  "last": "2026-10-20",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 577,
+  "commits": 578,
   "years": {
-   "2026": 577
+   "2026": 578
   },
   "first": "2026-04-12",
-  "last": "2026-10-19",
+  "last": "2026-10-20",
   "license": "MIT",
   "topics": [
    "almide",
