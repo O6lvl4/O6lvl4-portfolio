@@ -12,27 +12,27 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 137,
+  "commits": 159,
   "years": {
-   "2026": 137
+   "2026": 159
   },
   "first": "2026-09-30",
-  "last": "2026-10-16",
-  "tag": "v0.9.6",
+  "last": "2026-10-21",
+  "tag": "v0.9.11",
   "release": {
-   "tag": "v0.9.6",
-   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.6",
-   "publishedAt": "2026-10-16T09:23:09Z"
+   "tag": "v0.9.11",
+   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.11",
+   "publishedAt": "2026-10-21T05:46:12Z"
   },
   "license": "MIT",
   "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1396854648/67b18ab5-6a91-4516-a715-c191dd353c52",
+  "og": "https://repository-images.githubusercontent.com/1396854648/e554a9aa-e274-463e-8015-3dce1876c6cb",
   "plate": "og",
   "sample": {
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 16.7
+  "score": 17.2
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -1422,12 +1422,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 74,
+  "commits": 75,
   "years": {
-   "2026": 74
+   "2026": 75
   },
   "first": "2026-09-07",
-  "last": "2026-10-20",
+  "last": "2026-10-21",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1577,12 +1577,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 28,
+  "commits": 30,
   "years": {
-   "2026": 28
+   "2026": 30
   },
   "first": "2026-09-14",
-  "last": "2026-10-18",
+  "last": "2026-10-21",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3601,12 +3601,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 12722,
+  "commits": 12752,
   "years": {
-   "2026": 12722
+   "2026": 12752
   },
   "first": "2026-03-07",
-  "last": "2026-10-20",
+  "last": "2026-10-22",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3690,12 +3690,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1600,
+  "commits": 1601,
   "years": {
-   "2026": 1600
+   "2026": 1601
   },
   "first": "2026-03-07",
-  "last": "2026-10-19",
+  "last": "2026-10-21",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 578,
+  "commits": 579,
   "years": {
-   "2026": 578
+   "2026": 579
   },
   "first": "2026-04-12",
-  "last": "2026-10-20",
+  "last": "2026-10-21",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4739,12 +4739,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 159,
+  "commits": 164,
   "years": {
-   "2026": 159
+   "2026": 164
   },
   "first": "2026-05-13",
-  "last": "2026-10-19",
+  "last": "2026-10-21",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4752,7 +4752,7 @@
    "lang": "",
    "code": "snaidhm\n├── gpu/       WebGPU abstraction, frame arena, pipeline management\n├── path/      2D path renderer (flatten → tile → sort → fine raster)\n├── mesh/      3D vertex pipeline\n├── text/      Font reader (OpenType/TrueType → glyph outlines → Path)\n└── image/     Texture decode"
   },
-  "score": 8.2
+  "score": 8.3
  },
  {
   "full": "almide-graphics/ceangal",
