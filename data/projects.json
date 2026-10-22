@@ -12,17 +12,17 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 159,
+  "commits": 186,
   "years": {
-   "2026": 159
+   "2026": 186
   },
   "first": "2026-09-30",
-  "last": "2026-10-21",
-  "tag": "v0.9.11",
+  "last": "2026-10-22",
+  "tag": "v0.9.20",
   "release": {
-   "tag": "v0.9.11",
-   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.11",
-   "publishedAt": "2026-10-21T05:46:12Z"
+   "tag": "v0.9.20",
+   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.20",
+   "publishedAt": "2026-10-22T12:55:08Z"
   },
   "license": "MIT",
   "topics": [],
@@ -32,7 +32,7 @@
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 17.2
+  "score": 17.7
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -1116,6 +1116,34 @@
   "score": 7.2
  },
  {
+  "full": "O6lvl4/cyber-incident-chronicle",
+  "owner": "O6lvl4",
+  "name": "cyber-incident-chronicle",
+  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+  "heading": "Cyber Incident Chronicle",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 108,
+  "years": {
+   "2026": 108
+  },
+  "first": "2026-10-07",
+  "last": "2026-10-22",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
+  },
+  "score": 7.2
+ },
+ {
   "full": "O6lvl4/igloc",
   "owner": "O6lvl4",
   "name": "igloc",
@@ -1380,34 +1408,6 @@
   "score": 7
  },
  {
-  "full": "O6lvl4/cyber-incident-chronicle",
-  "owner": "O6lvl4",
-  "name": "cyber-incident-chronicle",
-  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
-  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
-  "heading": "Cyber Incident Chronicle",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 94,
-  "years": {
-   "2026": 94
-  },
-  "first": "2026-10-07",
-  "last": "2026-10-19",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
-  },
-  "score": 6.9
- },
- {
   "full": "O6lvl4/chip-war-chronicle",
   "owner": "O6lvl4",
   "name": "chip-war-chronicle",
@@ -1422,12 +1422,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 75,
+  "commits": 76,
   "years": {
-   "2026": 75
+   "2026": 76
   },
   "first": "2026-09-07",
-  "last": "2026-10-21",
+  "last": "2026-10-22",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1577,12 +1577,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 30,
+  "commits": 32,
   "years": {
-   "2026": 30
+   "2026": 32
   },
   "first": "2026-09-14",
-  "last": "2026-10-21",
+  "last": "2026-10-22",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3601,9 +3601,9 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 12752,
+  "commits": 12783,
   "years": {
-   "2026": 12752
+   "2026": 12783
   },
   "first": "2026-03-07",
   "last": "2026-10-22",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 579,
+  "commits": 580,
   "years": {
-   "2026": 579
+   "2026": 580
   },
   "first": "2026-04-12",
-  "last": "2026-10-21",
+  "last": "2026-10-22",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4739,12 +4739,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 164,
+  "commits": 166,
   "years": {
-   "2026": 164
+   "2026": 166
   },
   "first": "2026-05-13",
-  "last": "2026-10-21",
+  "last": "2026-10-22",
   "license": "MIT",
   "topics": [],
   "plate": "code",

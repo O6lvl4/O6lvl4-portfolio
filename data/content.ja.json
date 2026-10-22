@@ -215,7 +215,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "almide · 2026年10月"
+    "value": "sprid · 2026年10月"
    },
    {
     "key": "Almide で書いた割合",
@@ -234,7 +234,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "19,349",
+    "value": "19,427",
     "label": "コミット"
    },
    {
@@ -361,17 +361,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 15782,
+    "count": 15814,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2745,
+    "count": 2789,
     "of": 123
    },
    {
     "name": "almide-graphics",
-    "count": 665,
+    "count": 667,
     "of": 13
    },
    {
@@ -404,7 +404,7 @@
    },
    {
     "name": "2026",
-    "count": 19104
+    "count": 19182
    }
   ]
  },
@@ -420,7 +420,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "15,609",
+     "value": "15,641",
      "label": "コミット"
     },
     {
@@ -435,7 +435,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 15609
+     "count": 15641
     }
    ],
    "works": [
@@ -465,7 +465,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "12,752"
+       "value": "12,783"
       },
       {
        "label": "初回",
@@ -640,7 +640,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "579"
+       "value": "580"
       },
       {
        "label": "初回",
@@ -658,7 +658,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-21"
+      "date": "2026-10-22"
      }
     },
     {
@@ -4025,7 +4025,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "665",
+     "value": "667",
      "label": "コミット"
     },
     {
@@ -4040,7 +4040,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 665
+     "count": 667
     }
    ],
    "works": [
@@ -4266,7 +4266,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "164"
+       "value": "166"
       },
       {
        "label": "初回",
@@ -4280,7 +4280,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-21"
+      "date": "2026-10-22"
      }
     },
     {
@@ -4942,7 +4942,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "163",
+     "value": "166",
      "label": "コミット"
     },
     {
@@ -4957,7 +4957,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 163
+     "count": 166
     }
    ],
    "works": [
@@ -5023,7 +5023,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "75"
+       "value": "76"
       },
       {
        "label": "初回",
@@ -5041,7 +5041,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-21"
+      "date": "2026-10-22"
      }
     },
     {
@@ -5061,7 +5061,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "30"
+       "value": "32"
       },
       {
        "label": "初回",
@@ -5079,7 +5079,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-21"
+      "date": "2026-10-22"
      }
     },
     {
@@ -6624,7 +6624,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "511",
+     "value": "552",
      "label": "コミット"
     },
     {
@@ -6655,7 +6655,7 @@
     },
     {
      "name": "2026",
-     "count": 362
+     "count": 403
     }
    ],
    "works": [
@@ -6684,7 +6684,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "159"
+       "value": "186"
       },
       {
        "label": "初回",
@@ -6692,7 +6692,7 @@
       },
       {
        "label": "リリース",
-       "value": "v0.9.11"
+       "value": "v0.9.20"
       },
       {
        "label": "星",
@@ -6706,7 +6706,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-21"
+      "date": "2026-10-22"
      }
     },
     {
@@ -6791,6 +6791,40 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/cyber-incident-chronicle",
+     "title": "cyber-incident-chronicle",
+     "titleEn": "企業のサイバー被害とライブラリの脆弱性を一次資料でたどるタイムライン",
+     "date": "2026年10月",
+     "format": "JavaScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+     "tags": [
+      "JavaScript",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "108"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/cyber-incident-chronicle"
+      }
+     ],
+     "order": {
+      "date": "2026-10-22"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/line-bot-private",
      "title": "line-bot-private",
      "titleEn": "AWS SAMで作るGo製Lambda関数のサンプルテンプレート",
@@ -6823,40 +6857,6 @@
      ],
      "order": {
       "date": "2022-10-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/cyber-incident-chronicle",
-     "title": "cyber-incident-chronicle",
-     "titleEn": "企業のサイバー被害とライブラリの脆弱性を一次資料でたどるタイムライン",
-     "date": "2026年10月",
-     "format": "JavaScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
-     "tags": [
-      "JavaScript",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "94"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/cyber-incident-chronicle"
-      }
-     ],
-     "order": {
-      "date": "2026-10-19"
      }
     },
     {
