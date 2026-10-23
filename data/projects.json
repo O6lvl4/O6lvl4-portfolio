@@ -247,6 +247,37 @@
   "score": 12.4
  },
  {
+  "full": "O6lvl4/php-build-standalone",
+  "owner": "O6lvl4",
+  "name": "php-build-standalone",
+  "url": "https://github.com/O6lvl4/php-build-standalone",
+  "lead": "Pre-built static PHP binaries for every platform. No apt, no brew, no Docker.",
+  "heading": "php-build-standalone",
+  "language": "",
+  "languages": [],
+  "stars": 1,
+  "commits": 13,
+  "years": {
+   "2026": 13
+  },
+  "first": "2026-04-29",
+  "last": "2026-04-29",
+  "tag": "php-8.2.31",
+  "release": {
+   "tag": "php-8.3.35",
+   "url": "https://github.com/O6lvl4/php-build-standalone/releases/tag/php-8.3.35",
+   "publishedAt": "2026-10-05T06:56:53Z"
+  },
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "bcmath, calendar, ctype, curl, dom, fileinfo, filter, iconv,\njson, mbstring, mysqlnd, mysqli, openssl, pdo, pdo_mysql,\npdo_sqlite, phar, posix, readline, session, simplexml,\nsockets, sodium, tokenizer, xml, xmlreader, xmlwriter,\nzip, zlib"
+  },
+  "score": 12.3
+ },
+ {
   "full": "O6lvl4/gramide-cli",
   "owner": "O6lvl4",
   "name": "gramide-cli",
@@ -1052,33 +1083,30 @@
   "score": 7.4
  },
  {
-  "full": "O6lvl4/php-build-standalone",
+  "full": "O6lvl4/cyber-incident-chronicle",
   "owner": "O6lvl4",
-  "name": "php-build-standalone",
-  "url": "https://github.com/O6lvl4/php-build-standalone",
-  "lead": "Pre-built static PHP binaries for every platform. No apt, no brew, no Docker.",
-  "heading": "php-build-standalone",
-  "language": "",
-  "languages": [],
+  "name": "cyber-incident-chronicle",
+  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+  "heading": "Cyber Incident Chronicle",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "TypeScript",
+   "CSS"
+  ],
   "stars": 0,
-  "commits": 13,
+  "commits": 115,
   "years": {
-   "2026": 13
+   "2026": 115
   },
-  "first": "2026-04-29",
-  "last": "2026-04-29",
-  "tag": "php-8.2.31",
-  "release": {
-   "tag": "php-8.3.35",
-   "url": "https://github.com/O6lvl4/php-build-standalone/releases/tag/php-8.3.35",
-   "publishedAt": "2026-10-05T06:56:53Z"
-  },
-  "license": "MIT",
+  "first": "2026-10-07",
+  "last": "2026-10-23",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "",
-   "code": "bcmath, calendar, ctype, curl, dom, fileinfo, filter, iconv,\njson, mbstring, mysqlnd, mysqli, openssl, pdo, pdo_mysql,\npdo_sqlite, phar, posix, readline, session, simplexml,\nsockets, sodium, tokenizer, xml, xmlreader, xmlwriter,\nzip, zlib"
+   "lang": "sh",
+   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
   "score": 7.3
  },
@@ -1112,34 +1140,6 @@
   "sample": {
    "lang": "bash",
    "code": "# Install Almide once\ncurl -fsSL https://raw.githubusercontent.com/almide/almide/main/tools/install.sh | sh\n\n# Then install awen\nalmide install github.com/O6lvl4/awen"
-  },
-  "score": 7.2
- },
- {
-  "full": "O6lvl4/cyber-incident-chronicle",
-  "owner": "O6lvl4",
-  "name": "cyber-incident-chronicle",
-  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
-  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
-  "heading": "Cyber Incident Chronicle",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 108,
-  "years": {
-   "2026": 108
-  },
-  "first": "2026-10-07",
-  "last": "2026-10-22",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
   "score": 7.2
  },
@@ -1422,12 +1422,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 76,
+  "commits": 77,
   "years": {
-   "2026": 76
+   "2026": 77
   },
   "first": "2026-09-07",
-  "last": "2026-10-22",
+  "last": "2026-10-23",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1895,34 +1895,6 @@
    "code": "almide build cli/main.almd -o gramide_java\n./gramide_java symbols fixtures/valid/model.java\n./gramide_java outline fixtures/valid/statements.java\n./gramide_java gen-table > src/table.almd\nci/check.sh"
   },
   "score": 5.1
- },
- {
-  "full": "O6lvl4/almide-audio-poc",
-  "owner": "O6lvl4",
-  "name": "almide-audio-poc",
-  "url": "https://github.com/O6lvl4/almide-audio-poc",
-  "lead": "8-harmonic additive synth in a 2,637-byte Almide WASM, running inside an AudioWorklet",
-  "heading": "audio-poc — Almide → AudioWorklet proof of concept",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "HTML",
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-07-03",
-  "last": "2026-07-25",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "audio-poc/\n├── almide.toml            package manifest\n├── src/\n│   └── main.almd          Almide synth source (~30 LOC)\n├── host/\n│   ├── index.html         UI (play button + freq/harmonics/volume sliders)\n│   ├── app.js             main thread: AudioContext, load worklet, wire UI\n│   ├── synth-worklet.js   audio thread: compiles WASM, runs process()\n│   └── synth.wasm         ← build output\n├── build.sh               almide build --target wasm\n├── serve.sh               localhost static server (port 8765)\n└── README.md              this file"
-  },
-  "score": 5
  },
  {
   "full": "O6lvl4/gramide-c",
@@ -2614,6 +2586,34 @@
   "topics": [],
   "plate": "code",
   "score": 3.1
+ },
+ {
+  "full": "O6lvl4/almide-audio-poc",
+  "owner": "O6lvl4",
+  "name": "almide-audio-poc",
+  "url": "https://github.com/O6lvl4/almide-audio-poc",
+  "lead": "8-harmonic additive synth in a 2,637-byte Almide WASM, running inside an AudioWorklet",
+  "heading": "audio-poc — Almide → AudioWorklet proof of concept",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "HTML",
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-07-03",
+  "last": "2026-07-25",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "audio-poc/\n├── almide.toml            package manifest\n├── src/\n│   └── main.almd          Almide synth source (~30 LOC)\n├── host/\n│   ├── index.html         UI (play button + freq/harmonics/volume sliders)\n│   ├── app.js             main thread: AudioContext, load worklet, wire UI\n│   ├── synth-worklet.js   audio thread: compiles WASM, runs process()\n│   └── synth.wasm         ← build output\n├── build.sh               almide build --target wasm\n├── serve.sh               localhost static server (port 8765)\n└── README.md              this file"
+  },
+  "score": 3
  },
  {
   "full": "O6lvl4/almide-examples",
@@ -3601,12 +3601,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 12783,
+  "commits": 12865,
   "years": {
-   "2026": 12783
+   "2026": 12865
   },
   "first": "2026-03-07",
-  "last": "2026-10-22",
+  "last": "2026-10-23",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 580,
+  "commits": 581,
   "years": {
-   "2026": 580
+   "2026": 581
   },
   "first": "2026-04-12",
-  "last": "2026-10-22",
+  "last": "2026-10-23",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4305,64 +4305,6 @@
   "score": 5.1
  },
  {
-  "full": "almide/almide-web",
-  "owner": "almide",
-  "name": "almide-web",
-  "url": "https://github.com/almide/almide-web",
-  "lead": "Browser API bindings for Almide WASM (DOM, fetch, storage, timer, console)",
-  "heading": "almide-web",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "Almide",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-05-16",
-  "last": "2026-07-25",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "almide",
-   "code": "import almide-web.dom as dom\nimport almide-web.fetch as fetch\n\nlet url = dom.str(\"https://api.example.com/data\")\nlet req_id = fetch.get(url)"
-  },
-  "score": 5.1
- },
- {
-  "full": "almide/base64",
-  "owner": "almide",
-  "name": "base64",
-  "url": "https://github.com/almide/base64",
-  "lead": "Base64 encoding and decoding for Almide. Standard and URL-safe variants.",
-  "heading": "almide/base64",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 6,
-  "years": {
-   "2026": 6
-  },
-  "first": "2026-03-29",
-  "last": "2026-07-25",
-  "topics": [
-   "almide",
-   "base64",
-   "encoding"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide add almide/base64\n```\n\n## Usage"
-  },
-  "score": 5.1
- },
- {
   "full": "almide/parsegen",
   "owner": "almide",
   "name": "parsegen",
@@ -4442,6 +4384,64 @@
    "code": "almide add almide/toml\n```\n\n## Usage\n\n```almide\nimport toml\n\n// Parse TOML text\nlet config = toml.parse(\"\"\"\n[server]\nhost = \"localhost\"\nport = 8080\ndebug = false\n\"\"\")!\n\n// Stringify Value to TOML\nlet text = toml.stringify(config)"
   },
   "score": 3.2
+ },
+ {
+  "full": "almide/almide-web",
+  "owner": "almide",
+  "name": "almide-web",
+  "url": "https://github.com/almide/almide-web",
+  "lead": "Browser API bindings for Almide WASM (DOM, fetch, storage, timer, console)",
+  "heading": "almide-web",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "Almide",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 3,
+  "years": {
+   "2026": 3
+  },
+  "first": "2026-05-16",
+  "last": "2026-07-25",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import almide-web.dom as dom\nimport almide-web.fetch as fetch\n\nlet url = dom.str(\"https://api.example.com/data\")\nlet req_id = fetch.get(url)"
+  },
+  "score": 3.1
+ },
+ {
+  "full": "almide/base64",
+  "owner": "almide",
+  "name": "base64",
+  "url": "https://github.com/almide/base64",
+  "lead": "Base64 encoding and decoding for Almide. Standard and URL-safe variants.",
+  "heading": "almide/base64",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-03-29",
+  "last": "2026-07-25",
+  "topics": [
+   "almide",
+   "base64",
+   "encoding"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide add almide/base64\n```\n\n## Usage"
+  },
+  "score": 3.1
  },
  {
   "full": "almide/bigint",

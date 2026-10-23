@@ -215,7 +215,7 @@
    },
    {
     "key": "最近更新",
-    "value": "sprid · 2026年10月"
+    "value": "cyber-incident-chronicle · 2026年10月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -234,7 +234,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "19,427",
+    "value": "19,518",
     "label": "提交"
    },
    {
@@ -361,12 +361,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 15814,
+    "count": 15897,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2789,
+    "count": 2797,
     "of": 123
    },
    {
@@ -404,7 +404,7 @@
    },
    {
     "name": "2026",
-    "count": 19182
+    "count": 19273
    }
   ]
  },
@@ -420,7 +420,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "15,641",
+     "value": "15,724",
      "label": "提交"
     },
     {
@@ -435,7 +435,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 15641
+     "count": 15724
     }
    ],
    "works": [
@@ -465,7 +465,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "12,783"
+       "value": "12,865"
       },
       {
        "label": "首次",
@@ -491,7 +491,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-22"
+      "date": "2026-10-23"
      }
     },
     {
@@ -640,7 +640,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "580"
+       "value": "581"
       },
       {
        "label": "首次",
@@ -658,7 +658,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-22"
+      "date": "2026-10-23"
      }
     },
     {
@@ -1063,40 +1063,6 @@
     },
     {
      "image": "",
-     "id": "almide/almide-web",
-     "title": "almide-web",
-     "titleEn": "面向Almide WASM应用的浏览器API绑定",
-     "date": "2026年7月",
-     "format": "JavaScript",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-web",
-     "tags": [
-      "JavaScript",
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/almide-web"
-      }
-     ],
-     "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/parsegen",
      "title": "parsegen",
      "titleEn": "Almide编写的tree-sitter兼容解析器生成器",
@@ -1160,6 +1126,40 @@
      ],
      "order": {
       "date": "2026-04-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-web",
+     "title": "almide-web",
+     "titleEn": "面向Almide WASM应用的浏览器API绑定",
+     "date": "2026年7月",
+     "format": "JavaScript",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-web",
+     "tags": [
+      "JavaScript",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "3"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/almide-web"
+      }
+     ],
+     "order": {
+      "date": "2026-07-25"
      }
     },
     {
@@ -1493,41 +1493,6 @@
     },
     {
      "image": "",
-     "id": "almide/base64",
-     "title": "base64",
-     "titleEn": "Almide的纯Almide实现Base64编解码库",
-     "date": "2026年7月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/base64",
-     "tags": [
-      "Almide",
-      "almide",
-      "base64",
-      "encoding"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "6"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/base64"
-      }
-     ],
-     "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/toml",
      "title": "toml",
      "titleEn": "Almide 的 TOML v1.0 解析与序列化库,集成 Codec",
@@ -1559,6 +1524,41 @@
      ],
      "order": {
       "date": "2026-04-12"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/base64",
+     "title": "base64",
+     "titleEn": "Almide的纯Almide实现Base64编解码库",
+     "date": "2026年7月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/base64",
+     "tags": [
+      "Almide",
+      "almide",
+      "base64",
+      "encoding"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/base64"
+      }
+     ],
+     "order": {
+      "date": "2026-07-25"
      }
     },
     {
@@ -4551,15 +4551,52 @@
    ],
    "works": [
     {
-     "image": "plates/zh/O6lvl4/qusp.jpg",
+     "image": "plates/zh/O6lvl4/php-build-standalone.jpg",
      "readme": {
-      "lead": "由qusp.toml驱动的多语言工具链管理器",
+      "lead": "面向各平台的预构建静态PHP二进制文件",
       "points": [
-       "23个原生Rust后端并行安装",
-       "符号链接、qusp run、shell钩子",
-       "每次安装均校验哈希"
+       "支持macOS与Linux四个目标",
+       "内置适配Laravel的扩展",
+       "GitHub Releases附sha256校验"
       ]
      },
+     "id": "O6lvl4/php-build-standalone",
+     "title": "php-build-standalone",
+     "titleEn": "面向各平台的预构建静态PHP二进制文件",
+     "date": "2026年4月",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/php-build-standalone",
+     "tags": [],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "13"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      },
+      {
+       "label": "发行版",
+       "value": "php-8.3.35"
+      },
+      {
+       "label": "星标",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/php-build-standalone"
+      }
+     ],
+     "order": {
+      "date": "2026-04-29"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/qusp",
      "title": "qusp",
      "titleEn": "由qusp.toml驱动的多语言工具链管理器",
@@ -4634,39 +4671,6 @@
      ],
      "order": {
       "date": "2026-04-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/php-build-standalone",
-     "title": "php-build-standalone",
-     "titleEn": "面向各平台的预构建静态PHP二进制文件",
-     "date": "2026年4月",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/php-build-standalone",
-     "tags": [],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "13"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      },
-      {
-       "label": "发行版",
-       "value": "php-8.3.35"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/php-build-standalone"
-      }
-     ],
-     "order": {
-      "date": "2026-04-29"
      }
     },
     {
@@ -4942,7 +4946,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "166",
+     "value": "167",
      "label": "提交"
     },
     {
@@ -4957,7 +4961,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 166
+     "count": 167
     }
    ],
    "works": [
@@ -5023,7 +5027,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "76"
+       "value": "77"
       },
       {
        "label": "首次",
@@ -5041,7 +5045,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-22"
+      "date": "2026-10-23"
      }
     },
     {
@@ -6624,7 +6628,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "552",
+     "value": "559",
      "label": "提交"
     },
     {
@@ -6655,7 +6659,7 @@
     },
     {
      "name": "2026",
-     "count": 403
+     "count": 410
     }
    ],
    "works": [
@@ -6806,7 +6810,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "108"
+       "value": "115"
       },
       {
        "label": "首次",
@@ -6820,7 +6824,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-22"
+      "date": "2026-10-23"
      }
     },
     {

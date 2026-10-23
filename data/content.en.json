@@ -215,7 +215,7 @@
    },
    {
     "key": "Last touched",
-    "value": "sprid · Oct 2026"
+    "value": "cyber-incident-chronicle · Oct 2026"
    },
    {
     "key": "Written in Almide",
@@ -234,7 +234,7 @@
     "label": "Repositories"
    },
    {
-    "value": "19,427",
+    "value": "19,518",
     "label": "Commits"
    },
    {
@@ -361,12 +361,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 15814,
+    "count": 15897,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2789,
+    "count": 2797,
     "of": 123
    },
    {
@@ -404,7 +404,7 @@
    },
    {
     "name": "2026",
-    "count": 19182
+    "count": 19273
    }
   ]
  },
@@ -420,7 +420,7 @@
      "label": "Repositories"
     },
     {
-     "value": "15,641",
+     "value": "15,724",
      "label": "Commits"
     },
     {
@@ -435,7 +435,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 15641
+     "count": 15724
     }
    ],
    "works": [
@@ -465,7 +465,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "12,783"
+       "value": "12,865"
       },
       {
        "label": "Started",
@@ -491,7 +491,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-22"
+      "date": "2026-10-23"
      }
     },
     {
@@ -640,7 +640,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "580"
+       "value": "581"
       },
       {
        "label": "Started",
@@ -658,7 +658,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-22"
+      "date": "2026-10-23"
      }
     },
     {
@@ -1063,40 +1063,6 @@
     },
     {
      "image": "",
-     "id": "almide/almide-web",
-     "title": "almide-web",
-     "titleEn": "Browser API bindings for Almide WASM apps, bridging Almide code to DOM, fetch and timers.",
-     "date": "Jul 2026",
-     "format": "JavaScript",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-web",
-     "tags": [
-      "JavaScript",
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/almide-web"
-      }
-     ],
-     "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/parsegen",
      "title": "parsegen",
      "titleEn": "Pure-Almide, tree-sitter compatible parser generator that reads grammar.json to build syntax trees",
@@ -1160,6 +1126,40 @@
      ],
      "order": {
       "date": "2026-04-15"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-web",
+     "title": "almide-web",
+     "titleEn": "Browser API bindings for Almide WASM apps, bridging Almide code to DOM, fetch and timers.",
+     "date": "Jul 2026",
+     "format": "JavaScript",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-web",
+     "tags": [
+      "JavaScript",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "3"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/almide-web"
+      }
+     ],
+     "order": {
+      "date": "2026-07-25"
      }
     },
     {
@@ -1493,41 +1493,6 @@
     },
     {
      "image": "",
-     "id": "almide/base64",
-     "title": "base64",
-     "titleEn": "Pure Almide Base64 encoding and decoding library, with standard and URL-safe variants.",
-     "date": "Jul 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/base64",
-     "tags": [
-      "Almide",
-      "almide",
-      "base64",
-      "encoding"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "6"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/base64"
-      }
-     ],
-     "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/toml",
      "title": "toml",
      "titleEn": "TOML v1.0 parser and serializer for Almide, written in pure Almide with Codec integration",
@@ -1559,6 +1524,41 @@
      ],
      "order": {
       "date": "2026-04-12"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/base64",
+     "title": "base64",
+     "titleEn": "Pure Almide Base64 encoding and decoding library, with standard and URL-safe variants.",
+     "date": "Jul 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/base64",
+     "tags": [
+      "Almide",
+      "almide",
+      "base64",
+      "encoding"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/base64"
+      }
+     ],
+     "order": {
+      "date": "2026-07-25"
      }
     },
     {
@@ -4551,15 +4551,52 @@
    ],
    "works": [
     {
-     "image": "plates/en/O6lvl4/qusp.jpg",
+     "image": "plates/en/O6lvl4/php-build-standalone.jpg",
      "readme": {
-      "lead": "A native-Rust multi-language toolchain manager driven by qusp.toml, locked in qusp.lock.",
+      "lead": "Pre-built static PHP binaries for every platform, needing no apt, brew or Docker to run.",
       "points": [
-       "23 native Rust backends, installed in parallel",
-       "Symlink farm, qusp run, or mise-style hook",
-       "Publisher hash verified on every install"
+       "4 targets: macOS and Linux, arm64 and x86_64",
+       "29 extensions baked in for Laravel and Symfony",
+       "GitHub Releases with sha256 checksums"
       ]
      },
+     "id": "O6lvl4/php-build-standalone",
+     "title": "php-build-standalone",
+     "titleEn": "Pre-built static PHP binaries for every platform, needing no apt, brew or Docker to run.",
+     "date": "Apr 2026",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/php-build-standalone",
+     "tags": [],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "13"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      },
+      {
+       "label": "Release",
+       "value": "php-8.3.35"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/php-build-standalone"
+      }
+     ],
+     "order": {
+      "date": "2026-04-29"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/qusp",
      "title": "qusp",
      "titleEn": "A native-Rust multi-language toolchain manager driven by qusp.toml, locked in qusp.lock.",
@@ -4634,39 +4671,6 @@
      ],
      "order": {
       "date": "2026-04-28"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/php-build-standalone",
-     "title": "php-build-standalone",
-     "titleEn": "Pre-built static PHP binaries for every platform, needing no apt, brew or Docker to run.",
-     "date": "Apr 2026",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/php-build-standalone",
-     "tags": [],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "13"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      },
-      {
-       "label": "Release",
-       "value": "php-8.3.35"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/php-build-standalone"
-      }
-     ],
-     "order": {
-      "date": "2026-04-29"
      }
     },
     {
@@ -4942,7 +4946,7 @@
      "label": "Repositories"
     },
     {
-     "value": "166",
+     "value": "167",
      "label": "Commits"
     },
     {
@@ -4957,7 +4961,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 166
+     "count": 167
     }
    ],
    "works": [
@@ -5023,7 +5027,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "76"
+       "value": "77"
       },
       {
        "label": "Started",
@@ -5041,7 +5045,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-22"
+      "date": "2026-10-23"
      }
     },
     {
@@ -6624,7 +6628,7 @@
      "label": "Repositories"
     },
     {
-     "value": "552",
+     "value": "559",
      "label": "Commits"
     },
     {
@@ -6655,7 +6659,7 @@
     },
     {
      "name": "2026",
-     "count": 403
+     "count": 410
     }
    ],
    "works": [
@@ -6806,7 +6810,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "108"
+       "value": "115"
       },
       {
        "label": "Started",
@@ -6820,7 +6824,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-22"
+      "date": "2026-10-23"
      }
     },
     {
