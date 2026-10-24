@@ -12,17 +12,17 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 186,
+  "commits": 195,
   "years": {
-   "2026": 186
+   "2026": 195
   },
   "first": "2026-09-30",
-  "last": "2026-10-22",
-  "tag": "v0.9.20",
+  "last": "2026-10-24",
+  "tag": "v0.9.23",
   "release": {
-   "tag": "v0.9.20",
-   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.20",
-   "publishedAt": "2026-10-22T12:55:08Z"
+   "tag": "v0.9.23",
+   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.23",
+   "publishedAt": "2026-10-24T02:03:45Z"
   },
   "license": "MIT",
   "topics": [],
@@ -32,7 +32,7 @@
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 17.7
+  "score": 17.9
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -954,6 +954,34 @@
   "score": 8.1
  },
  {
+  "full": "O6lvl4/cyber-incident-chronicle",
+  "owner": "O6lvl4",
+  "name": "cyber-incident-chronicle",
+  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+  "heading": "Cyber Incident Chronicle",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 120,
+  "years": {
+   "2026": 120
+  },
+  "first": "2026-10-07",
+  "last": "2026-10-24",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
+  },
+  "score": 7.4
+ },
+ {
   "full": "O6lvl4/gv",
   "owner": "O6lvl4",
   "name": "gv",
@@ -1081,34 +1109,6 @@
    "code": "# Clone + install + link globally\ngit clone https://github.com/O6lvl4/premaid.git\ncd premaid\nnpm install\nnpm run build\nnpm link   # exposes `premaid` on your PATH"
   },
   "score": 7.4
- },
- {
-  "full": "O6lvl4/cyber-incident-chronicle",
-  "owner": "O6lvl4",
-  "name": "cyber-incident-chronicle",
-  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
-  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
-  "heading": "Cyber Incident Chronicle",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 115,
-  "years": {
-   "2026": 115
-  },
-  "first": "2026-10-07",
-  "last": "2026-10-23",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
-  },
-  "score": 7.3
  },
  {
   "full": "O6lvl4/awen",
@@ -1422,19 +1422,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 77,
+  "commits": 78,
   "years": {
-   "2026": 77
+   "2026": 78
   },
   "first": "2026-09-07",
-  "last": "2026-10-23",
+  "last": "2026-10-24",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "ts",
    "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
   },
-  "score": 6.5
+  "score": 6.6
  },
  {
   "full": "O6lvl4/llmine",
@@ -3601,12 +3601,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 12865,
+  "commits": 13051,
   "years": {
-   "2026": 12865
+   "2026": 13051
   },
   "first": "2026-03-07",
-  "last": "2026-10-23",
+  "last": "2026-10-25",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3690,12 +3690,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1601,
+  "commits": 1662,
   "years": {
-   "2026": 1601
+   "2026": 1662
   },
   "first": "2026-03-07",
-  "last": "2026-10-21",
+  "last": "2026-10-25",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 581,
+  "commits": 582,
   "years": {
-   "2026": 581
+   "2026": 582
   },
   "first": "2026-04-12",
-  "last": "2026-10-23",
+  "last": "2026-10-24",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4739,12 +4739,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 166,
+  "commits": 170,
   "years": {
-   "2026": 166
+   "2026": 170
   },
   "first": "2026-05-13",
-  "last": "2026-10-22",
+  "last": "2026-10-24",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4752,7 +4752,7 @@
    "lang": "",
    "code": "snaidhm\n├── gpu/       WebGPU abstraction, frame arena, pipeline management\n├── path/      2D path renderer (flatten → tile → sort → fine raster)\n├── mesh/      3D vertex pipeline\n├── text/      Font reader (OpenType/TrueType → glyph outlines → Path)\n└── image/     Texture decode"
   },
-  "score": 8.3
+  "score": 8.4
  },
  {
   "full": "almide-graphics/ceangal",
