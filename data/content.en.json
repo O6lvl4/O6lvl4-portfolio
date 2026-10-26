@@ -215,7 +215,7 @@
    },
    {
     "key": "Last touched",
-    "value": "cyber-incident-chronicle · Oct 2026"
+    "value": "als · Oct 2026"
    },
    {
     "key": "Written in Almide",
@@ -234,7 +234,7 @@
     "label": "Repositories"
    },
    {
-    "value": "19,881",
+    "value": "19,959",
     "label": "Commits"
    },
    {
@@ -361,12 +361,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 16232,
+    "count": 16304,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2821,
+    "count": 2827,
     "of": 123
    },
    {
@@ -404,7 +404,7 @@
    },
    {
     "name": "2026",
-    "count": 19636
+    "count": 19714
    }
   ]
  },
@@ -420,7 +420,7 @@
      "label": "Repositories"
     },
     {
-     "value": "16,059",
+     "value": "16,131",
      "label": "Commits"
     },
     {
@@ -435,7 +435,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 16059
+     "count": 16131
     }
    ],
    "works": [
@@ -512,7 +512,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,699"
+       "value": "1,770"
       },
       {
        "label": "Started",
@@ -534,7 +534,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-25"
+      "date": "2026-10-27"
      }
     },
     {
@@ -640,7 +640,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "583"
+       "value": "584"
       },
       {
        "label": "Started",
@@ -658,7 +658,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-25"
+      "date": "2026-10-26"
      }
     },
     {
@@ -4578,7 +4578,7 @@
       },
       {
        "label": "Release",
-       "value": "php-8.3.35"
+       "value": "php-8.4.27"
       },
       {
        "label": "Stars",
@@ -4946,7 +4946,7 @@
      "label": "Repositories"
     },
     {
-     "value": "175",
+     "value": "176",
      "label": "Commits"
     },
     {
@@ -4961,7 +4961,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 175
+     "count": 176
     }
    ],
    "works": [
@@ -5027,7 +5027,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "79"
+       "value": "80"
       },
       {
        "label": "Started",
@@ -5045,7 +5045,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-25"
+      "date": "2026-10-26"
      }
     },
     {
@@ -6628,7 +6628,7 @@
      "label": "Repositories"
     },
     {
-     "value": "575",
+     "value": "580",
      "label": "Commits"
     },
     {
@@ -6659,7 +6659,7 @@
     },
     {
      "name": "2026",
-     "count": 426
+     "count": 431
     }
    ],
    "works": [
@@ -6688,7 +6688,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "195"
+       "value": "198"
       },
       {
        "label": "Started",
@@ -6696,7 +6696,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.9.23"
+       "value": "v0.9.24"
       },
       {
        "label": "Stars",
@@ -6710,7 +6710,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-24"
+      "date": "2026-10-26"
      }
     },
     {
@@ -6810,7 +6810,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "122"
+       "value": "124"
       },
       {
        "label": "Started",
@@ -6824,7 +6824,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-25"
+      "date": "2026-10-26"
      }
     },
     {

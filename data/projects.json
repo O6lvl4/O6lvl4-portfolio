@@ -12,17 +12,17 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 195,
+  "commits": 198,
   "years": {
-   "2026": 195
+   "2026": 198
   },
   "first": "2026-09-30",
-  "last": "2026-10-24",
-  "tag": "v0.9.23",
+  "last": "2026-10-26",
+  "tag": "v0.9.24",
   "release": {
-   "tag": "v0.9.23",
-   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.23",
-   "publishedAt": "2026-10-24T02:03:45Z"
+   "tag": "v0.9.24",
+   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.24",
+   "publishedAt": "2026-10-26T00:54:16Z"
   },
   "license": "MIT",
   "topics": [],
@@ -32,7 +32,7 @@
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 17.9
+  "score": 18
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -264,9 +264,9 @@
   "last": "2026-04-29",
   "tag": "php-8.2.31",
   "release": {
-   "tag": "php-8.3.35",
-   "url": "https://github.com/O6lvl4/php-build-standalone/releases/tag/php-8.3.35",
-   "publishedAt": "2026-10-05T06:56:53Z"
+   "tag": "php-8.4.27",
+   "url": "https://github.com/O6lvl4/php-build-standalone/releases/tag/php-8.4.27",
+   "publishedAt": "2026-10-26T06:55:19Z"
   },
   "license": "MIT",
   "topics": [],
@@ -967,19 +967,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 122,
+  "commits": 124,
   "years": {
-   "2026": 122
+   "2026": 124
   },
   "first": "2026-10-07",
-  "last": "2026-10-25",
+  "last": "2026-10-26",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "sh",
    "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
-  "score": 7.4
+  "score": 7.5
  },
  {
   "full": "O6lvl4/gv",
@@ -1422,12 +1422,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 79,
+  "commits": 80,
   "years": {
-   "2026": 79
+   "2026": 80
   },
   "first": "2026-09-07",
-  "last": "2026-10-25",
+  "last": "2026-10-26",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3690,12 +3690,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1699,
+  "commits": 1770,
   "years": {
-   "2026": 1699
+   "2026": 1770
   },
   "first": "2026-03-07",
-  "last": "2026-10-25",
+  "last": "2026-10-27",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 583,
+  "commits": 584,
   "years": {
-   "2026": 583
+   "2026": 584
   },
   "first": "2026-04-12",
-  "last": "2026-10-25",
+  "last": "2026-10-26",
   "license": "MIT",
   "topics": [
    "almide",
