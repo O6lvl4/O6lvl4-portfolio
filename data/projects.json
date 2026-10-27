@@ -967,12 +967,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 124,
+  "commits": 126,
   "years": {
-   "2026": 124
+   "2026": 126
   },
   "first": "2026-10-07",
-  "last": "2026-10-26",
+  "last": "2026-10-27",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1422,12 +1422,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 80,
+  "commits": 81,
   "years": {
-   "2026": 80
+   "2026": 81
   },
   "first": "2026-09-07",
-  "last": "2026-10-26",
+  "last": "2026-10-27",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3690,12 +3690,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1770,
+  "commits": 1800,
   "years": {
-   "2026": 1770
+   "2026": 1800
   },
   "first": "2026-03-07",
-  "last": "2026-10-27",
+  "last": "2026-10-28",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 584,
+  "commits": 585,
   "years": {
-   "2026": 584
+   "2026": 585
   },
   "first": "2026-04-12",
-  "last": "2026-10-26",
+  "last": "2026-10-27",
   "license": "MIT",
   "topics": [
    "almide",
@@ -3954,7 +3954,7 @@
   "owner": "almide",
   "name": "nnlib",
   "url": "https://github.com/almide/nnlib",
-  "lead": "Neural-network kernels for Almide (attention, RoPE, norms, activations, Q1_0/Q8_0, Qwen3 blocks)",
+  "lead": "Archived: moved to module nn.kernels of almide-graphics/nn",
   "heading": "almide/nnlib",
   "language": "Almide",
   "languages": [
@@ -3962,12 +3962,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 1,
+  "commits": 2,
   "years": {
-   "2026": 1
+   "2026": 2
   },
   "first": "2026-10-18",
-  "last": "2026-10-18",
+  "last": "2026-10-27",
   "tag": "v0.1.0",
   "license": "NOASSERTION",
   "topics": [],
