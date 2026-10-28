@@ -151,10 +151,11 @@
    {
     "period": "2025",
     "title": "14 started",
-    "lead": "igloc, llmine, treesrc, syncenv and 10 more",
+    "lead": "igloc, llmine, treesrc, cct-fennel-sandbox and 10 more",
     "tags": [
      "Go",
-     "TypeScript"
+     "TypeScript",
+     "Lua"
     ]
    },
    {
@@ -215,7 +216,7 @@
    },
    {
     "key": "Last touched",
-    "value": "als · Oct 2026"
+    "value": "sprid · Oct 2026"
    },
    {
     "key": "Written in Almide",
@@ -234,7 +235,7 @@
     "label": "Repositories"
    },
    {
-    "value": "19,994",
+    "value": "20,890",
     "label": "Commits"
    },
    {
@@ -361,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 16336,
+    "count": 17227,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2830,
+    "count": 2835,
     "of": 123
    },
    {
@@ -404,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 19749
+    "count": 20645
    }
   ]
  },
@@ -420,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "16,163",
+     "value": "17,054",
      "label": "Commits"
     },
     {
@@ -435,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 16163
+     "count": 17054
     }
    ],
    "works": [
@@ -465,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "13,100"
+       "value": "13,951"
       },
       {
        "label": "Started",
@@ -491,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-25"
+      "date": "2026-10-28"
      }
     },
     {
@@ -512,7 +513,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,800"
+       "value": "1,839"
       },
       {
        "label": "Started",
@@ -640,7 +641,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "585"
+       "value": "586"
       },
       {
        "label": "Started",
@@ -658,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-27"
+      "date": "2026-10-28"
      }
     },
     {
@@ -4946,7 +4947,7 @@
      "label": "Repositories"
     },
     {
-     "value": "177",
+     "value": "178",
      "label": "Commits"
     },
     {
@@ -4961,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 177
+     "count": 178
     }
    ],
    "works": [
@@ -5027,7 +5028,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "81"
+       "value": "82"
       },
       {
        "label": "Started",
@@ -5045,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-27"
+      "date": "2026-10-28"
      }
     },
     {
@@ -5792,39 +5793,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/syncenv",
-     "title": "syncenv",
-     "titleEn": "A CLI that syncs environment config files with cloud storage, versioned by Git tag or branch",
-     "date": "Oct 2025",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/syncenv",
-     "tags": [
-      "Go",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "11"
-      },
-      {
-       "label": "Started",
-       "value": "Oct 2025"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/syncenv"
-      }
-     ],
-     "order": {
-      "date": "2025-10-28"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/dns-checker",
      "title": "dns-checker",
      "titleEn": "DNS record checker written in MoonBit for verifying email-sending domain setup.",
@@ -6110,6 +6078,39 @@
      ],
      "order": {
       "date": "2026-06-29"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/syncenv",
+     "title": "syncenv",
+     "titleEn": "A CLI that syncs environment config files with cloud storage, versioned by Git tag or branch",
+     "date": "Oct 2025",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/syncenv",
+     "tags": [
+      "Go",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "11"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2025"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/syncenv"
+      }
+     ],
+     "order": {
+      "date": "2025-10-28"
      }
     },
     {
@@ -6628,7 +6629,7 @@
      "label": "Repositories"
     },
     {
-     "value": "582",
+     "value": "586",
      "label": "Commits"
     },
     {
@@ -6659,7 +6660,7 @@
     },
     {
      "name": "2026",
-     "count": 433
+     "count": 437
     }
    ],
    "works": [
@@ -6688,7 +6689,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "198"
+       "value": "202"
       },
       {
        "label": "Started",
@@ -6696,7 +6697,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.9.24"
+       "value": "v0.9.25"
       },
       {
        "label": "Stars",
@@ -6710,7 +6711,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-26"
+      "date": "2026-10-28"
      }
     },
     {

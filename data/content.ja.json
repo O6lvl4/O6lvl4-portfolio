@@ -151,10 +151,11 @@
    {
     "period": "2025年",
     "title": "14件を始めた",
-    "lead": "igloc、llmine、treesrc、syncenv ほか10件",
+    "lead": "igloc、llmine、treesrc、cct-fennel-sandbox ほか10件",
     "tags": [
      "Go",
-     "TypeScript"
+     "TypeScript",
+     "Lua"
     ]
    },
    {
@@ -215,7 +216,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "als · 2026年10月"
+    "value": "sprid · 2026年10月"
    },
    {
     "key": "Almide で書いた割合",
@@ -234,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "19,994",
+    "value": "20,890",
     "label": "コミット"
    },
    {
@@ -361,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 16336,
+    "count": 17227,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2830,
+    "count": 2835,
     "of": 123
    },
    {
@@ -404,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 19749
+    "count": 20645
    }
   ]
  },
@@ -420,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "16,163",
+     "value": "17,054",
      "label": "コミット"
     },
     {
@@ -435,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 16163
+     "count": 17054
     }
    ],
    "works": [
@@ -465,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "13,100"
+       "value": "13,951"
       },
       {
        "label": "初回",
@@ -491,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-25"
+      "date": "2026-10-28"
      }
     },
     {
@@ -512,7 +513,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,800"
+       "value": "1,839"
       },
       {
        "label": "初回",
@@ -640,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "585"
+       "value": "586"
       },
       {
        "label": "初回",
@@ -658,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-27"
+      "date": "2026-10-28"
      }
     },
     {
@@ -4946,7 +4947,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "177",
+     "value": "178",
      "label": "コミット"
     },
     {
@@ -4961,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 177
+     "count": 178
     }
    ],
    "works": [
@@ -5027,7 +5028,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "81"
+       "value": "82"
       },
       {
        "label": "初回",
@@ -5045,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-27"
+      "date": "2026-10-28"
      }
     },
     {
@@ -5792,39 +5793,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/syncenv",
-     "title": "syncenv",
-     "titleEn": "Gitタグ単位で環境設定ファイルをクラウドと同期するCLIツール",
-     "date": "2025年10月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/syncenv",
-     "tags": [
-      "Go",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "11"
-      },
-      {
-       "label": "初回",
-       "value": "2025年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/syncenv"
-      }
-     ],
-     "order": {
-      "date": "2025-10-28"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/dns-checker",
      "title": "dns-checker",
      "titleEn": "MoonBit製のメール送信ドメイン向けDNSレコードチェッカー",
@@ -6110,6 +6078,39 @@
      ],
      "order": {
       "date": "2026-06-29"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/syncenv",
+     "title": "syncenv",
+     "titleEn": "Gitタグ単位で環境設定ファイルをクラウドと同期するCLIツール",
+     "date": "2025年10月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/syncenv",
+     "tags": [
+      "Go",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "11"
+      },
+      {
+       "label": "初回",
+       "value": "2025年10月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/syncenv"
+      }
+     ],
+     "order": {
+      "date": "2025-10-28"
      }
     },
     {
@@ -6628,7 +6629,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "582",
+     "value": "586",
      "label": "コミット"
     },
     {
@@ -6659,7 +6660,7 @@
     },
     {
      "name": "2026",
-     "count": 433
+     "count": 437
     }
    ],
    "works": [
@@ -6688,7 +6689,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "198"
+       "value": "202"
       },
       {
        "label": "初回",
@@ -6696,7 +6697,7 @@
       },
       {
        "label": "リリース",
-       "value": "v0.9.24"
+       "value": "v0.9.25"
       },
       {
        "label": "星",
@@ -6710,7 +6711,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-26"
+      "date": "2026-10-28"
      }
     },
     {

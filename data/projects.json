@@ -12,17 +12,17 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 198,
+  "commits": 202,
   "years": {
-   "2026": 198
+   "2026": 202
   },
   "first": "2026-09-30",
-  "last": "2026-10-26",
-  "tag": "v0.9.24",
+  "last": "2026-10-28",
+  "tag": "v0.9.25",
   "release": {
-   "tag": "v0.9.24",
-   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.24",
-   "publishedAt": "2026-10-26T00:54:16Z"
+   "tag": "v0.9.25",
+   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.25",
+   "publishedAt": "2026-10-27T23:58:44Z"
   },
   "license": "MIT",
   "topics": [],
@@ -1422,12 +1422,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 81,
+  "commits": 82,
   "years": {
-   "2026": 81
+   "2026": 82
   },
   "first": "2026-09-07",
-  "last": "2026-10-27",
+  "last": "2026-10-28",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -2396,34 +2396,6 @@
   "score": 3.2
  },
  {
-  "full": "O6lvl4/syncenv",
-  "owner": "O6lvl4",
-  "name": "syncenv",
-  "url": "https://github.com/O6lvl4/syncenv",
-  "lead": "Version-controlled environment files management with cloud storage (AWS S3, Azure Blob, Google Cloud Storage). Sync .env files across teams with Git integration and AES-256 encryption.",
-  "heading": "syncenv",
-  "language": "Go",
-  "languages": [
-   "Go",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 11,
-  "years": {
-   "2025": 11
-  },
-  "first": "2025-10-28",
-  "last": "2025-10-28",
-  "license": "MIT",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "go install github.com/O6lvl4/syncenv/cmd/syncenv@latest"
-  },
-  "score": 3.2
- },
- {
   "full": "O6lvl4/dns-checker",
   "owner": "O6lvl4",
   "name": "dns-checker",
@@ -2951,6 +2923,34 @@
   "sample": {
    "lang": "bash",
    "code": "npx create-next-app@latest your_application_name --typescript"
+  },
+  "score": 2.2
+ },
+ {
+  "full": "O6lvl4/syncenv",
+  "owner": "O6lvl4",
+  "name": "syncenv",
+  "url": "https://github.com/O6lvl4/syncenv",
+  "lead": "Version-controlled environment files management with cloud storage (AWS S3, Azure Blob, Google Cloud Storage). Sync .env files across teams with Git integration and AES-256 encryption.",
+  "heading": "syncenv",
+  "language": "Go",
+  "languages": [
+   "Go",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 11,
+  "years": {
+   "2025": 11
+  },
+  "first": "2025-10-28",
+  "last": "2025-10-28",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "go install github.com/O6lvl4/syncenv/cmd/syncenv@latest"
   },
   "score": 2.2
  },
@@ -3601,12 +3601,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 13100,
+  "commits": 13951,
   "years": {
-   "2026": 13100
+   "2026": 13951
   },
   "first": "2026-03-07",
-  "last": "2026-10-25",
+  "last": "2026-10-28",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3690,9 +3690,9 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1800,
+  "commits": 1839,
   "years": {
-   "2026": 1800
+   "2026": 1839
   },
   "first": "2026-03-07",
   "last": "2026-10-28",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 585,
+  "commits": 586,
   "years": {
-   "2026": 585
+   "2026": 586
   },
   "first": "2026-04-12",
-  "last": "2026-10-27",
+  "last": "2026-10-28",
   "license": "MIT",
   "topics": [
    "almide",
