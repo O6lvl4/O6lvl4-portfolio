@@ -216,7 +216,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "sprid · 2026年10月"
+    "value": "als · 2026年10月"
    },
    {
     "key": "Almide で書いた割合",
@@ -235,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "20,890",
+    "value": "21,229",
     "label": "コミット"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17227,
+    "count": 17561,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2835,
+    "count": 2840,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 20645
+    "count": 20984
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "17,054",
+     "value": "17,388",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17054
+     "count": 17388
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "13,951"
+       "value": "14,262"
       },
       {
        "label": "初回",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-28"
+      "date": "2026-10-29"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,839"
+       "value": "1,861"
       },
       {
        "label": "初回",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-28"
+      "date": "2026-10-30"
      }
     },
     {
@@ -641,7 +641,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "586"
+       "value": "587"
       },
       {
        "label": "初回",
@@ -659,7 +659,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-28"
+      "date": "2026-10-29"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "178",
+     "value": "181",
      "label": "コミット"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 178
+     "count": 181
     }
    ],
    "works": [
@@ -5028,7 +5028,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "82"
+       "value": "83"
       },
       {
        "label": "初回",
@@ -5046,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-28"
+      "date": "2026-10-29"
      }
     },
     {
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "38"
+       "value": "40"
       },
       {
        "label": "初回",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-25"
+      "date": "2026-10-29"
      }
     },
     {
@@ -6629,7 +6629,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "586",
+     "value": "588",
      "label": "コミット"
     },
     {
@@ -6660,7 +6660,7 @@
     },
     {
      "name": "2026",
-     "count": 437
+     "count": 439
     }
    ],
    "works": [
@@ -6811,7 +6811,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "126"
+       "value": "128"
       },
       {
        "label": "初回",
@@ -6825,7 +6825,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-27"
+      "date": "2026-10-29"
      }
     },
     {
@@ -6898,39 +6898,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/go1.26-vs-go1.27",
-     "title": "go1.26-vs-go1.27",
-     "titleEn": "Go 1.26と1.27の書き方を並べて比べる、実行可能なbefore/after集",
-     "date": "2026年7月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/go1.26-vs-go1.27",
-     "tags": [
-      "Go",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "8"
-      },
-      {
-       "label": "初回",
-       "value": "2026年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/go1.26-vs-go1.27"
-      }
-     ],
-     "order": {
-      "date": "2026-07-31"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/ogumatic-module-design",
      "title": "ogumatic-module-design",
      "titleEn": "役割で境界を切り、札と証拠を正とするモジュール設計術",
@@ -6961,6 +6928,39 @@
      ],
      "order": {
       "date": "2026-09-26"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/go1.26-vs-go1.27",
+     "title": "go1.26-vs-go1.27",
+     "titleEn": "Go 1.26と1.27の書き方を並べて比べる、実行可能なbefore/after集",
+     "date": "2026年7月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/go1.26-vs-go1.27",
+     "tags": [
+      "Go",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年7月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/go1.26-vs-go1.27"
+      }
+     ],
+     "order": {
+      "date": "2026-07-31"
      }
     },
     {

@@ -967,19 +967,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 126,
+  "commits": 128,
   "years": {
-   "2026": 126
+   "2026": 128
   },
   "first": "2026-10-07",
-  "last": "2026-10-27",
+  "last": "2026-10-29",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "sh",
    "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
-  "score": 7.5
+  "score": 7.6
  },
  {
   "full": "O6lvl4/gv",
@@ -1422,19 +1422,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 82,
+  "commits": 83,
   "years": {
-   "2026": 82
+   "2026": 83
   },
   "first": "2026-09-07",
-  "last": "2026-10-28",
+  "last": "2026-10-29",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "ts",
    "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
   },
-  "score": 6.6
+  "score": 6.7
  },
  {
   "full": "O6lvl4/llmine",
@@ -1548,12 +1548,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 38,
+  "commits": 40,
   "years": {
-   "2026": 38
+   "2026": 40
   },
   "first": "2026-09-14",
-  "last": "2026-10-25",
+  "last": "2026-10-29",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1673,33 +1673,6 @@
    "code": "$ uimodulay https://playwright.dev --ai --depth 2\n\nPage\n├── Header [row 2]\n│   ├── Nav [row 6]\n│   └── Toolbar [row 4]\n├── Hero\n│   ├── Heading \"enables reliable web automation…\"\n│   ├── Paragraph \"One API to drive Chromium, Fire…\"\n│   └── CTA [row 2]\n├── Main\n│   ├── CardGrid [row 3]\n│   ├── Feature\n│   ├── Feature\n│   ├── Feature\n│   ├── BrowserSupport\n│   └── Showcase\n└── Footer\n    ├── LinkColumns [row 3]\n    └── Copyright \"Copyright © 2026 Microsoft\""
   },
   "score": 5.3
- },
- {
-  "full": "O6lvl4/go1.26-vs-go1.27",
-  "owner": "O6lvl4",
-  "name": "go1.26-vs-go1.27",
-  "url": "https://github.com/O6lvl4/go1.26-vs-go1.27",
-  "lead": "How you wrote it in Go 1.26 vs how you write it in Go 1.27 — runnable before/after pairs for Miyazaki.go Sneak Peek #5",
-  "heading": "Go 1.26 → 1.27 Before / After",
-  "language": "Go",
-  "languages": [
-   "Go",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 8,
-  "years": {
-   "2026": 8
-  },
-  "first": "2026-07-31",
-  "last": "2026-07-31",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "# go.mod が go 1.27rc2 を指しているので、Go 1.21+ ならツールチェーンが自動取得される\ngo run ./01-generic-methods/before\ngo run ./01-generic-methods/after\n\n# 全部まとめて (14 のツール系以外)\n./demo.sh\n\n# ツールチェーン系 (go test の stdversion / go mod tidy / go fix / go doc)\n./14-tools/demo.sh"
-  },
-  "score": 5.2
  },
  {
   "full": "O6lvl4/gramide-json",
@@ -1836,34 +1809,6 @@
   "sample": {
    "lang": "sh",
    "code": "CONNPASS_API_KEY=... go run ./cmd/connpass-search -group miyazaki-go\nCONNPASS_API_KEY=... go run ./cmd/connpass-search -keyword Go -prefecture miyazaki -json"
-  },
-  "score": 5.1
- },
- {
-  "full": "O6lvl4/go1.27-vs-almide",
-  "owner": "O6lvl4",
-  "name": "go1.27-vs-almide",
-  "url": "https://github.com/O6lvl4/go1.27-vs-almide",
-  "lead": "Go 1.27 new features side-by-side with almide 0.41 — notes for Miyazaki.go Go v1.27rc Sneak Peek #5",
-  "heading": "Go 1.27 × almide",
-  "language": "Go",
-  "languages": [
-   "Go",
-   "Almide",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-07-31",
-  "last": "2026-07-31",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "# Go 側 (go.mod が go 1.27rc2 を指しているので、Go 1.21+ ならツールチェーンが自動取得される)\ngo run ./01-generic-methods\n\n# almide 側 (https://github.com/almide/almide)\nalmide run 01-generic-methods/main.almd\n\n# 全部まとめて\n./demo.sh"
   },
   "score": 5.1
  },
@@ -2314,6 +2259,33 @@
   "score": 3.2
  },
  {
+  "full": "O6lvl4/go1.26-vs-go1.27",
+  "owner": "O6lvl4",
+  "name": "go1.26-vs-go1.27",
+  "url": "https://github.com/O6lvl4/go1.26-vs-go1.27",
+  "lead": "How you wrote it in Go 1.26 vs how you write it in Go 1.27 — runnable before/after pairs for Miyazaki.go Sneak Peek #5",
+  "heading": "Go 1.26 → 1.27 Before / After",
+  "language": "Go",
+  "languages": [
+   "Go",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-07-31",
+  "last": "2026-07-31",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "# go.mod が go 1.27rc2 を指しているので、Go 1.21+ ならツールチェーンが自動取得される\ngo run ./01-generic-methods/before\ngo run ./01-generic-methods/after\n\n# 全部まとめて (14 のツール系以外)\n./demo.sh\n\n# ツールチェーン系 (go test の stdversion / go mod tidy / go fix / go doc)\n./14-tools/demo.sh"
+  },
+  "score": 3.2
+ },
+ {
   "full": "O6lvl4/gulp-coach",
   "owner": "O6lvl4",
   "name": "gulp-coach",
@@ -2421,6 +2393,34 @@
   "sample": {
    "lang": "bash",
    "code": "git clone git@github.com:O6lvl4/dns-checker.git\ncd dns-checker\nmake install"
+  },
+  "score": 3.1
+ },
+ {
+  "full": "O6lvl4/go1.27-vs-almide",
+  "owner": "O6lvl4",
+  "name": "go1.27-vs-almide",
+  "url": "https://github.com/O6lvl4/go1.27-vs-almide",
+  "lead": "Go 1.27 new features side-by-side with almide 0.41 — notes for Miyazaki.go Go v1.27rc Sneak Peek #5",
+  "heading": "Go 1.27 × almide",
+  "language": "Go",
+  "languages": [
+   "Go",
+   "Almide",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 4,
+  "years": {
+   "2026": 4
+  },
+  "first": "2026-07-31",
+  "last": "2026-07-31",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "# Go 側 (go.mod が go 1.27rc2 を指しているので、Go 1.21+ ならツールチェーンが自動取得される)\ngo run ./01-generic-methods\n\n# almide 側 (https://github.com/almide/almide)\nalmide run 01-generic-methods/main.almd\n\n# 全部まとめて\n./demo.sh"
   },
   "score": 3.1
  },
@@ -3601,12 +3601,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 13951,
+  "commits": 14262,
   "years": {
-   "2026": 13951
+   "2026": 14262
   },
   "first": "2026-03-07",
-  "last": "2026-10-28",
+  "last": "2026-10-29",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3690,12 +3690,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1839,
+  "commits": 1861,
   "years": {
-   "2026": 1839
+   "2026": 1861
   },
   "first": "2026-03-07",
-  "last": "2026-10-28",
+  "last": "2026-10-30",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3763,12 +3763,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 586,
+  "commits": 587,
   "years": {
-   "2026": 586
+   "2026": 587
   },
   "first": "2026-04-12",
-  "last": "2026-10-28",
+  "last": "2026-10-29",
   "license": "MIT",
   "topics": [
    "almide",
