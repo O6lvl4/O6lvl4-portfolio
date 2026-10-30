@@ -216,7 +216,7 @@
    },
    {
     "key": "Last touched",
-    "value": "als · Oct 2026"
+    "value": "archgopher · Oct 2026"
    },
    {
     "key": "Written in Almide",
@@ -235,7 +235,7 @@
     "label": "Repositories"
    },
    {
-    "value": "21,229",
+    "value": "21,288",
     "label": "Commits"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17561,
+    "count": 17606,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2840,
+    "count": 2854,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 20984
+    "count": 21043
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "17,388",
+     "value": "17,433",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17388
+     "count": 17433
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "14,262"
+       "value": "14,270"
       },
       {
        "label": "Started",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-10-30"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,861"
+       "value": "1,876"
       },
       {
        "label": "Started",
@@ -598,7 +598,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "68"
+       "value": "81"
       },
       {
        "label": "Started",
@@ -620,7 +620,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-02"
+      "date": "2026-10-30"
      }
     },
     {
@@ -909,7 +909,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "170"
+       "value": "179"
       },
       {
        "label": "Started",
@@ -927,7 +927,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-10"
+      "date": "2026-10-30"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "Repositories"
     },
     {
-     "value": "181",
+     "value": "184",
      "label": "Commits"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 181
+     "count": 184
     }
    ],
    "works": [
@@ -5028,7 +5028,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "83"
+       "value": "84"
       },
       {
        "label": "Started",
@@ -5046,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-10-30"
      }
     },
     {
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "40"
+       "value": "42"
       },
       {
        "label": "Started",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-10-30"
      }
     },
     {
@@ -6221,7 +6221,7 @@
      "label": "Repositories"
     },
     {
-     "value": "273",
+     "value": "284",
      "label": "Commits"
     },
     {
@@ -6236,7 +6236,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 273
+     "count": 284
     }
    ],
    "works": [
@@ -6344,6 +6344,44 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "Read an architecture before you build it: push the expected load through Terraform and read cost, headroom, latency and availability",
+     "date": "Oct 2026",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "181"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "Site",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-10-30"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/lean2ts",
      "title": "lean2ts",
      "titleEn": "Converts Lean 4 specs into TypeScript types, function stubs and fast-check property tests.",
@@ -6379,44 +6417,6 @@
      ],
      "order": {
       "date": "2026-03-02"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/archgopher",
-     "title": "archgopher",
-     "titleEn": "Read an architecture before you build it: push the expected load through Terraform and read cost, headroom, latency and availability",
-     "date": "Oct 2026",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/archgopher",
-     "tags": [
-      "Go",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "170"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/archgopher"
-      },
-      {
-       "label": "Site",
-       "href": "https://o6lvl4.github.io/archgopher/"
-      }
-     ],
-     "order": {
-      "date": "2026-10-19"
      }
     },
     {

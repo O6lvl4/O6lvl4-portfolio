@@ -807,6 +807,36 @@
   "score": 9.3
  },
  {
+  "full": "O6lvl4/archgopher",
+  "owner": "O6lvl4",
+  "name": "archgopher",
+  "url": "https://github.com/O6lvl4/archgopher",
+  "site": "https://o6lvl4.github.io/archgopher/",
+  "lead": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
+  "language": "Go",
+  "languages": [
+   "Go",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 181,
+  "years": {
+   "2026": 181
+  },
+  "first": "2026-09-24",
+  "last": "2026-10-30",
+  "license": "Apache-2.0",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher review ./infra                   # where the shape departs from known practices\narchgopher scout app.scouter.yaml           # read it (--json for machines)\narchgopher reconcile app.scouter.yaml --bill costs.json  # put the reading next to the bill, service by service\narchgopher export app.scouter.yaml -o app.png # draw it: .svg, .png or .html by extension"
+  },
+  "score": 8.6
+ },
+ {
   "full": "O6lvl4/lean2ts",
   "owner": "O6lvl4",
   "name": "lean2ts",
@@ -841,36 +871,6 @@
    "code": "                    ┌─────────────────────────┐\n  pricing.lean      │  Lean 4 compiler        │\n  ─────────────────▶│  Proves theorems ✓      │\n                    └──────────┬──────────────┘\n                               │\n                    ┌──────────▼──────────────┐\n  npx lean2ts       │  lean2ts                │\n  ─────────────────▶│  Generates TypeScript   │\n                    └──────────┬──────────────┘\n                               │\n               ┌───────────────┼───────────────┐\n               ▼               ▼               ▼\n          types.ts        stubs.ts     properties.test.ts\n       (interfaces,    (function      (theorems become\n        unions)         signatures)    fast-check tests)"
   },
   "score": 8.5
- },
- {
-  "full": "O6lvl4/archgopher",
-  "owner": "O6lvl4",
-  "name": "archgopher",
-  "url": "https://github.com/O6lvl4/archgopher",
-  "site": "https://o6lvl4.github.io/archgopher/",
-  "lead": "Read an architecture before you build it: push load through your Terraform and see cost, headroom, latency and availability per resource.",
-  "language": "Go",
-  "languages": [
-   "Go",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 170,
-  "years": {
-   "2026": 170
-  },
-  "first": "2026-09-24",
-  "last": "2026-10-19",
-  "license": "Apache-2.0",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1384534479/40a6a204-53e8-4952-81b7-5064c8f486f5",
-  "plate": "og",
-  "sample": {
-   "lang": "sh",
-   "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher scout app.scouter.yaml           # read it (--json for machines)\narchgopher reconcile app.scouter.yaml --bill costs.json  # put the reading next to the bill, service by service\narchgopher export app.scouter.yaml -o app.png # draw it: .svg, .png or .html by extension"
-  },
-  "score": 8.4
  },
  {
   "full": "O6lvl4/almide-headset-eq",
@@ -1422,12 +1422,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 83,
+  "commits": 84,
   "years": {
-   "2026": 83
+   "2026": 84
   },
   "first": "2026-09-07",
-  "last": "2026-10-29",
+  "last": "2026-10-30",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1548,12 +1548,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 40,
+  "commits": 42,
   "years": {
-   "2026": 40
+   "2026": 42
   },
   "first": "2026-09-14",
-  "last": "2026-10-29",
+  "last": "2026-10-30",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3601,12 +3601,12 @@
    "Shell"
   ],
   "stars": 35,
-  "commits": 14262,
+  "commits": 14270,
   "years": {
-   "2026": 14262
+   "2026": 14270
   },
   "first": "2026-03-07",
-  "last": "2026-10-29",
+  "last": "2026-10-30",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3690,9 +3690,9 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1861,
+  "commits": 1876,
   "years": {
-   "2026": 1861
+   "2026": 1876
   },
   "first": "2026-03-07",
   "last": "2026-10-30",
@@ -3731,12 +3731,12 @@
    "CSS"
   ],
   "stars": 1,
-  "commits": 68,
+  "commits": 81,
   "years": {
-   "2026": 68
+   "2026": 81
   },
   "first": "2026-03-27",
-  "last": "2026-10-02",
+  "last": "2026-10-30",
   "topics": [
    "almide",
    "documentation"
@@ -3746,7 +3746,7 @@
    "lang": "mdx",
    "code": "---\ntitle: Some page\n---\n\nimport Playground from '../../../components/Playground.astro';\n\n<Playground sample=\"hello-basic\" />\n<Playground sample=\"modules-two-files\" height={560} hide={['fixtures.almd']} />"
   },
-  "score": 11.4
+  "score": 11.6
  },
  {
   "full": "almide/almide-dojo",
@@ -4053,12 +4053,12 @@
    "HTML"
   ],
   "stars": 0,
-  "commits": 170,
+  "commits": 179,
   "years": {
-   "2026": 170
+   "2026": 179
   },
   "first": "2026-03-08",
-  "last": "2026-10-10",
+  "last": "2026-10-30",
   "topics": [
    "almide",
    "playground",
@@ -4070,7 +4070,7 @@
    "lang": "",
    "code": "\n## Visual output\n\nThe playground renders what you print. If a program's stdout is an SVG\ndocument (`<svg …>`) or an ASCII PPM image (`P3 …`), the **Visual** tab shows\nit as an image — vectors via a script-disabled blob `<img>`, pixels via a\ncanvas. The same program prints a valid `.svg` / `.ppm` file natively, so the\nbyte-parity harness still applies. See Examples → Graphics (Mandelbrot,\ngenerative SVG).\n\n## Embedding\n\n`?embed=1` renders a minimal chrome for iframes — no header, no AI bar, just\ntabs, editor, output and a slim Run bar with an \"Open in Playground\" escape\nhatch. `&hide=util.almd` hides tabs from the strip while still compiling them\n(Kotlin-style hidden setup code). Combine with `?example=` or `#code=`:"
   },
-  "score": 8.4
+  "score": 8.6
  },
  {
   "full": "almide/yaml",

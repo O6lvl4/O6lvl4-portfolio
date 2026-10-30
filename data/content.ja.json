@@ -216,7 +216,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "als · 2026年10月"
+    "value": "archgopher · 2026年10月"
    },
    {
     "key": "Almide で書いた割合",
@@ -235,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "21,229",
+    "value": "21,288",
     "label": "コミット"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17561,
+    "count": 17606,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2840,
+    "count": 2854,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 20984
+    "count": 21043
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "17,388",
+     "value": "17,433",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17388
+     "count": 17433
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "14,262"
+       "value": "14,270"
       },
       {
        "label": "初回",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-10-30"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,861"
+       "value": "1,876"
       },
       {
        "label": "初回",
@@ -598,7 +598,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "68"
+       "value": "81"
       },
       {
        "label": "初回",
@@ -620,7 +620,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-02"
+      "date": "2026-10-30"
      }
     },
     {
@@ -909,7 +909,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "170"
+       "value": "179"
       },
       {
        "label": "初回",
@@ -927,7 +927,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-10"
+      "date": "2026-10-30"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "181",
+     "value": "184",
      "label": "コミット"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 181
+     "count": 184
     }
    ],
    "works": [
@@ -5028,7 +5028,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "83"
+       "value": "84"
       },
       {
        "label": "初回",
@@ -5046,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-10-30"
      }
     },
     {
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "40"
+       "value": "42"
       },
       {
        "label": "初回",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-10-30"
      }
     },
     {
@@ -6221,7 +6221,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "273",
+     "value": "284",
      "label": "コミット"
     },
     {
@@ -6236,7 +6236,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 273
+     "count": 284
     }
    ],
    "works": [
@@ -6344,6 +6344,44 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "つくる前に構成を読む。Terraform に想定の負荷を流し、費用・余力・遅延・可用性を見積もる",
+     "date": "2026年10月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "181"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "サイト",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-10-30"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/lean2ts",
      "title": "lean2ts",
      "titleEn": "Lean 4の仕様をTypeScriptの型・スタブ・fast-checkテストへ変換するツール",
@@ -6379,44 +6417,6 @@
      ],
      "order": {
       "date": "2026-03-02"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/archgopher",
-     "title": "archgopher",
-     "titleEn": "つくる前に構成を読む。Terraform に想定の負荷を流し、費用・余力・遅延・可用性を見積もる",
-     "date": "2026年10月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/archgopher",
-     "tags": [
-      "Go",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "170"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/archgopher"
-      },
-      {
-       "label": "サイト",
-       "href": "https://o6lvl4.github.io/archgopher/"
-      }
-     ],
-     "order": {
-      "date": "2026-10-19"
      }
     },
     {

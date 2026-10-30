@@ -216,7 +216,7 @@
    },
    {
     "key": "最近更新",
-    "value": "als · 2026年10月"
+    "value": "archgopher · 2026年10月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -235,7 +235,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "21,229",
+    "value": "21,288",
     "label": "提交"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17561,
+    "count": 17606,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2840,
+    "count": 2854,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 20984
+    "count": 21043
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "17,388",
+     "value": "17,433",
      "label": "提交"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17388
+     "count": 17433
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "14,262"
+       "value": "14,270"
       },
       {
        "label": "首次",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-10-30"
      }
     },
     {
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,861"
+       "value": "1,876"
       },
       {
        "label": "首次",
@@ -598,7 +598,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "68"
+       "value": "81"
       },
       {
        "label": "首次",
@@ -620,7 +620,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-02"
+      "date": "2026-10-30"
      }
     },
     {
@@ -909,7 +909,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "170"
+       "value": "179"
       },
       {
        "label": "首次",
@@ -927,7 +927,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-10"
+      "date": "2026-10-30"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "181",
+     "value": "184",
      "label": "提交"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 181
+     "count": 184
     }
    ],
    "works": [
@@ -5028,7 +5028,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "83"
+       "value": "84"
       },
       {
        "label": "首次",
@@ -5046,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-10-30"
      }
     },
     {
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "40"
+       "value": "42"
       },
       {
        "label": "首次",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-10-30"
      }
     },
     {
@@ -6221,7 +6221,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "273",
+     "value": "284",
      "label": "提交"
     },
     {
@@ -6236,7 +6236,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 273
+     "count": 284
     }
    ],
    "works": [
@@ -6344,6 +6344,44 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/archgopher",
+     "title": "archgopher",
+     "titleEn": "建之前先读架构：把预期负载灌进 Terraform，估算成本、余量、延迟与可用性",
+     "date": "2026年10月",
+     "format": "Go",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/archgopher",
+     "tags": [
+      "Go",
+      "TypeScript",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "181"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/archgopher"
+      },
+      {
+       "label": "站点",
+       "href": "https://o6lvl4.github.io/archgopher/"
+      }
+     ],
+     "order": {
+      "date": "2026-10-30"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/lean2ts",
      "title": "lean2ts",
      "titleEn": "将Lean 4规约转换为TypeScript类型与属性测试",
@@ -6379,44 +6417,6 @@
      ],
      "order": {
       "date": "2026-03-02"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/archgopher",
-     "title": "archgopher",
-     "titleEn": "建之前先读架构：把预期负载灌进 Terraform，估算成本、余量、延迟与可用性",
-     "date": "2026年10月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/archgopher",
-     "tags": [
-      "Go",
-      "TypeScript",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "170"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/archgopher"
-      },
-      {
-       "label": "站点",
-       "href": "https://o6lvl4.github.io/archgopher/"
-      }
-     ],
-     "order": {
-      "date": "2026-10-19"
      }
     },
     {
