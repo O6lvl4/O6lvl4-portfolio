@@ -216,7 +216,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "archgopher · 2026年10月"
+    "value": "cyber-incident-chronicle · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
@@ -235,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "21,288",
+    "value": "21,334",
     "label": "コミット"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17606,
+    "count": 17643,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2854,
+    "count": 2863,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 21043
+    "count": 21089
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "17,433",
+     "value": "17,470",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17433
+     "count": 17470
     }
    ],
    "works": [
@@ -453,7 +453,7 @@
      "id": "almide/almide",
      "title": "almide",
      "titleEn": "AIに何度書き換えられても、コードが通り続ける言語",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Rust",
      "credit": "almide",
      "url": "https://github.com/almide/almide",
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "14,270"
+       "value": "14,307"
       },
       {
        "label": "初回",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-11-01"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "184",
+     "value": "187",
      "label": "コミット"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 184
+     "count": 187
     }
    ],
    "works": [
@@ -5028,7 +5028,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "84"
+       "value": "85"
       },
       {
        "label": "初回",
@@ -5046,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-10-31"
      }
     },
     {
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "42"
+       "value": "44"
       },
       {
        "label": "初回",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-10-31"
      }
     },
     {
@@ -6629,7 +6629,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "588",
+     "value": "594",
      "label": "コミット"
     },
     {
@@ -6660,7 +6660,7 @@
     },
     {
      "name": "2026",
-     "count": 439
+     "count": 445
     }
    ],
    "works": [
@@ -6799,7 +6799,7 @@
      "id": "O6lvl4/cyber-incident-chronicle",
      "title": "cyber-incident-chronicle",
      "titleEn": "企業のサイバー被害とライブラリの脆弱性を一次資料でたどるタイムライン",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "JavaScript",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
@@ -6811,7 +6811,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "128"
+       "value": "134"
       },
       {
        "label": "初回",
@@ -6825,7 +6825,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-11-01"
      }
     },
     {

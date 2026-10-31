@@ -216,7 +216,7 @@
    },
    {
     "key": "Last touched",
-    "value": "archgopher · Oct 2026"
+    "value": "cyber-incident-chronicle · Nov 2026"
    },
    {
     "key": "Written in Almide",
@@ -235,7 +235,7 @@
     "label": "Repositories"
    },
    {
-    "value": "21,288",
+    "value": "21,334",
     "label": "Commits"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17606,
+    "count": 17643,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2854,
+    "count": 2863,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 21043
+    "count": 21089
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "17,433",
+     "value": "17,470",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17433
+     "count": 17470
     }
    ],
    "works": [
@@ -453,7 +453,7 @@
      "id": "almide/almide",
      "title": "almide",
      "titleEn": "A statically typed language built for one thing: code that survives AI edits",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "Rust",
      "credit": "almide",
      "url": "https://github.com/almide/almide",
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "14,270"
+       "value": "14,307"
       },
       {
        "label": "Started",
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-11-01"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "Repositories"
     },
     {
-     "value": "184",
+     "value": "187",
      "label": "Commits"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 184
+     "count": 187
     }
    ],
    "works": [
@@ -5028,7 +5028,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "84"
+       "value": "85"
       },
       {
        "label": "Started",
@@ -5046,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-10-31"
      }
     },
     {
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "42"
+       "value": "44"
       },
       {
        "label": "Started",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-10-31"
      }
     },
     {
@@ -6629,7 +6629,7 @@
      "label": "Repositories"
     },
     {
-     "value": "588",
+     "value": "594",
      "label": "Commits"
     },
     {
@@ -6660,7 +6660,7 @@
     },
     {
      "name": "2026",
-     "count": 439
+     "count": 445
     }
    ],
    "works": [
@@ -6799,7 +6799,7 @@
      "id": "O6lvl4/cyber-incident-chronicle",
      "title": "cyber-incident-chronicle",
      "titleEn": "Timelines of corporate cyber incidents and library vulnerabilities, using primary sources.",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "JavaScript",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
@@ -6811,7 +6811,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "128"
+       "value": "134"
       },
       {
        "label": "Started",
@@ -6825,7 +6825,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-11-01"
      }
     },
     {
