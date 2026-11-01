@@ -235,7 +235,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "21,334",
+    "value": "21,387",
     "label": "提交"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17643,
+    "count": 17691,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2863,
+    "count": 2868,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 21089
+    "count": 21142
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "17,470",
+     "value": "17,518",
      "label": "提交"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17470
+     "count": 17518
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "14,307"
+       "value": "14,314"
       },
       {
        "label": "首次",
@@ -500,7 +500,7 @@
      "id": "almide/als",
      "title": "als",
      "titleEn": "Almide语言规范与一致性语料库，可评判任意almide二进制",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/als",
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,876"
+       "value": "1,915"
       },
       {
        "label": "首次",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-11-01"
      }
     },
     {
@@ -585,7 +585,7 @@
      "id": "almide/docs",
      "title": "docs",
      "titleEn": "Almide语言文档站,示例可在浏览器运行",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/docs",
@@ -598,7 +598,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "81"
+       "value": "83"
       },
       {
        "label": "首次",
@@ -620,7 +620,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-11-01"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "187",
+     "value": "192",
      "label": "提交"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 187
+     "count": 192
     }
    ],
    "works": [
@@ -5016,7 +5016,7 @@
      "id": "O6lvl4/chip-war-chronicle",
      "title": "chip-war-chronicle",
      "titleEn": "半导体与世界局势的泳道时间线",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "TypeScript",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/chip-war-chronicle",
@@ -5028,7 +5028,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "85"
+       "value": "86"
       },
       {
        "label": "首次",
@@ -5046,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-31"
+      "date": "2026-11-01"
      }
     },
     {
@@ -5054,7 +5054,7 @@
      "id": "O6lvl4/agent-bench-matrix",
      "title": "agent-bench-matrix",
      "titleEn": "把智能体基准公开榜单按模型汇成一张表",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "HTML",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/agent-bench-matrix",
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "44"
+       "value": "48"
       },
       {
        "label": "首次",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-31"
+      "date": "2026-11-01"
      }
     },
     {

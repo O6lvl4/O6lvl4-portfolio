@@ -235,7 +235,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "21,334",
+    "value": "21,387",
     "label": "コミット"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17643,
+    "count": 17691,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2863,
+    "count": 2868,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 21089
+    "count": 21142
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "17,470",
+     "value": "17,518",
      "label": "コミット"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17470
+     "count": 17518
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "14,307"
+       "value": "14,314"
       },
       {
        "label": "初回",
@@ -500,7 +500,7 @@
      "id": "almide/als",
      "title": "als",
      "titleEn": "Almide言語の規範的意味論と適合性コーパスを保持し、任意のalmideバイナリを判定する仕様リポジトリ",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/als",
@@ -513,7 +513,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,876"
+       "value": "1,915"
       },
       {
        "label": "初回",
@@ -535,7 +535,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-11-01"
      }
     },
     {
@@ -585,7 +585,7 @@
      "id": "almide/docs",
      "title": "docs",
      "titleEn": "Almide言語のドキュメントサイト。ブラウザで実行できるサンプルを備える",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/docs",
@@ -598,7 +598,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "81"
+       "value": "83"
       },
       {
        "label": "初回",
@@ -620,7 +620,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-11-01"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "187",
+     "value": "192",
      "label": "コミット"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 187
+     "count": 192
     }
    ],
    "works": [
@@ -5016,7 +5016,7 @@
      "id": "O6lvl4/chip-war-chronicle",
      "title": "chip-war-chronicle",
      "titleEn": "半導体・政策・地政学を並べ因果を読む番組表型タイムライン",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "TypeScript",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/chip-war-chronicle",
@@ -5028,7 +5028,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "85"
+       "value": "86"
       },
       {
        "label": "初回",
@@ -5046,7 +5046,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-31"
+      "date": "2026-11-01"
      }
     },
     {
@@ -5054,7 +5054,7 @@
      "id": "O6lvl4/agent-bench-matrix",
      "title": "agent-bench-matrix",
      "titleEn": "エージェント向けベンチマークの公開リーダーボードを、モデル別に一枚の表へまとめたもの",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "HTML",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/agent-bench-matrix",
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "44"
+       "value": "48"
       },
       {
        "label": "初回",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-31"
+      "date": "2026-11-01"
      }
     },
     {
