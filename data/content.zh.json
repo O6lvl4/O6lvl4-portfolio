@@ -235,7 +235,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "21,387",
+    "value": "22,272",
     "label": "提交"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17691,
+    "count": 18573,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2868,
+    "count": 2871,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 21142
+    "count": 22027
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "17,518",
+     "value": "18,400",
      "label": "提交"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17518
+     "count": 18400
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "14,314"
+       "value": "15,196"
       },
       {
        "label": "首次",
@@ -478,7 +478,7 @@
       },
       {
        "label": "星标",
-       "value": "35"
+       "value": "36"
       }
      ],
      "links": [
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-01"
+      "date": "2026-11-02"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "192",
+     "value": "194",
      "label": "提交"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 192
+     "count": 194
     }
    ],
    "works": [
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "48"
+       "value": "50"
       },
       {
        "label": "首次",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-01"
+      "date": "2026-11-02"
      }
     },
     {
@@ -6241,15 +6241,54 @@
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/zfp.jpg",
+     "image": "plates/zh/O6lvl4/lean2ts.jpg",
      "readme": {
-      "lead": "基于Zig原生类型的零开销函数式工具库",
+      "lead": "将Lean 4规约转换为TypeScript类型与属性测试",
       "points": [
-       "直接作用于?T的option",
-       "pipe与compose函数组合",
-       "monoid与slice折叠"
+       "由structure/inductive生成类型",
+       "theorem转为fast-check测试",
+       "由def生成函数桩"
       ]
      },
+     "id": "O6lvl4/lean2ts",
+     "title": "lean2ts",
+     "titleEn": "将Lean 4规约转换为TypeScript类型与属性测试",
+     "date": "2026年3月",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean2ts",
+     "tags": [
+      "TypeScript",
+      "Lean",
+      "code-generation",
+      "fast-check"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "25"
+      },
+      {
+       "label": "首次",
+       "value": "2026年3月"
+      },
+      {
+       "label": "星标",
+       "value": "2"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/lean2ts"
+      }
+     ],
+     "order": {
+      "date": "2026-03-02"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/zfp",
      "title": "zfp",
      "titleEn": "基于Zig原生类型的零开销函数式工具库",
@@ -6378,45 +6417,6 @@
      ],
      "order": {
       "date": "2026-10-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean2ts",
-     "title": "lean2ts",
-     "titleEn": "将Lean 4规约转换为TypeScript类型与属性测试",
-     "date": "2026年3月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean2ts",
-     "tags": [
-      "TypeScript",
-      "Lean",
-      "code-generation",
-      "fast-check"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "25"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      },
-      {
-       "label": "星标",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/lean2ts"
-      }
-     ],
-     "order": {
-      "date": "2026-03-02"
      }
     },
     {
@@ -6629,7 +6629,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "594",
+     "value": "595",
      "label": "提交"
     },
     {
@@ -6660,7 +6660,7 @@
     },
     {
      "name": "2026",
-     "count": 445
+     "count": 446
     }
    ],
    "works": [
@@ -6811,7 +6811,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "134"
+       "value": "135"
       },
       {
        "label": "首次",
@@ -6825,7 +6825,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-01"
+      "date": "2026-11-02"
      }
     },
     {
@@ -6866,38 +6866,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/almide-otel-demo",
-     "title": "almide-otel-demo",
-     "titleEn": "纯Almide自研的OpenTelemetry追踪SDK及Jaeger双服务演示",
-     "date": "2026年8月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/almide-otel-demo",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "13"
-      },
-      {
-       "label": "首次",
-       "value": "2026年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/almide-otel-demo"
-      }
-     ],
-     "order": {
-      "date": "2026-08-04"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/ogumatic-module-design",
      "title": "ogumatic-module-design",
      "titleEn": "以角色边界、卡片和证据为准的模块设计方法",
@@ -6928,6 +6896,38 @@
      ],
      "order": {
       "date": "2026-09-26"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/almide-otel-demo",
+     "title": "almide-otel-demo",
+     "titleEn": "纯Almide自研的OpenTelemetry追踪SDK及Jaeger双服务演示",
+     "date": "2026年8月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/almide-otel-demo",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "13"
+      },
+      {
+       "label": "首次",
+       "value": "2026年8月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/almide-otel-demo"
+      }
+     ],
+     "order": {
+      "date": "2026-08-04"
      }
     },
     {

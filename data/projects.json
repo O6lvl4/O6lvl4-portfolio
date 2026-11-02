@@ -105,6 +105,42 @@
   "score": 14.2
  },
  {
+  "full": "O6lvl4/lean2ts",
+  "owner": "O6lvl4",
+  "name": "lean2ts",
+  "url": "https://github.com/O6lvl4/lean2ts",
+  "lead": "Convert Lean 4 theorems into TypeScript property-based tests (fast-check) — prove once, test everywhere",
+  "heading": "OpenAI",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "Lean"
+  ],
+  "stars": 2,
+  "commits": 25,
+  "years": {
+   "2026": 25
+  },
+  "first": "2026-03-01",
+  "last": "2026-03-02",
+  "license": "MIT",
+  "topics": [
+   "code-generation",
+   "fast-check",
+   "formal-verification",
+   "lean4",
+   "property-based-testing",
+   "theorem-prover",
+   "typescript"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "                    ┌─────────────────────────┐\n  pricing.lean      │  Lean 4 compiler        │\n  ─────────────────▶│  Proves theorems ✓      │\n                    └──────────┬──────────────┘\n                               │\n                    ┌──────────▼──────────────┐\n  npx lean2ts       │  lean2ts                │\n  ─────────────────▶│  Generates TypeScript   │\n                    └──────────┬──────────────┘\n                               │\n               ┌───────────────┼───────────────┐\n               ▼               ▼               ▼\n          types.ts        stubs.ts     properties.test.ts\n       (interfaces,    (function      (theorems become\n        unions)         signatures)    fast-check tests)"
+  },
+  "score": 13.5
+ },
+ {
   "full": "O6lvl4/gformiac",
   "owner": "O6lvl4",
   "name": "gformiac",
@@ -837,42 +873,6 @@
   "score": 8.6
  },
  {
-  "full": "O6lvl4/lean2ts",
-  "owner": "O6lvl4",
-  "name": "lean2ts",
-  "url": "https://github.com/O6lvl4/lean2ts",
-  "lead": "Convert Lean 4 theorems into TypeScript property-based tests (fast-check) — prove once, test everywhere",
-  "heading": "OpenAI",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "Lean"
-  ],
-  "stars": 1,
-  "commits": 25,
-  "years": {
-   "2026": 25
-  },
-  "first": "2026-03-01",
-  "last": "2026-03-02",
-  "license": "MIT",
-  "topics": [
-   "code-generation",
-   "fast-check",
-   "formal-verification",
-   "lean4",
-   "property-based-testing",
-   "theorem-prover",
-   "typescript"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "                    ┌─────────────────────────┐\n  pricing.lean      │  Lean 4 compiler        │\n  ─────────────────▶│  Proves theorems ✓      │\n                    └──────────┬──────────────┘\n                               │\n                    ┌──────────▼──────────────┐\n  npx lean2ts       │  lean2ts                │\n  ─────────────────▶│  Generates TypeScript   │\n                    └──────────┬──────────────┘\n                               │\n               ┌───────────────┼───────────────┐\n               ▼               ▼               ▼\n          types.ts        stubs.ts     properties.test.ts\n       (interfaces,    (function      (theorems become\n        unions)         signatures)    fast-check tests)"
-  },
-  "score": 8.5
- },
- {
   "full": "O6lvl4/almide-headset-eq",
   "owner": "O6lvl4",
   "name": "almide-headset-eq",
@@ -967,12 +967,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 134,
+  "commits": 135,
   "years": {
-   "2026": 134
+   "2026": 135
   },
   "first": "2026-10-07",
-  "last": "2026-11-01",
+  "last": "2026-11-02",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1548,12 +1548,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 48,
+  "commits": 50,
   "years": {
-   "2026": 48
+   "2026": 50
   },
   "first": "2026-09-14",
-  "last": "2026-11-01",
+  "last": "2026-11-02",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1590,33 +1590,6 @@
    "code": "[ctxgate] cargo test output: 403 lines / 12 KB → vaulted as ctx:9258de38065e (NOT in context).\n  full text: ctxgate show 9258de38065e [--grep RE | --around RE N | --lines A-B | --tail N]\ncargo test: FAILED — 238 passed, 3 failed, 0 ignored\nfailed:\n  parser::match_nested\n  wasm::rc_release\n── parser::match_nested ──\n  thread 'parser::match_nested' panicked at src/parser.rs:412:9:\n  assertion `left == right` failed"
   },
   "score": 5.7
- },
- {
-  "full": "O6lvl4/almide-otel-demo",
-  "owner": "O6lvl4",
-  "name": "almide-otel-demo",
-  "url": "https://github.com/O6lvl4/almide-otel-demo",
-  "lead": "A from-scratch OpenTelemetry tracing SDK in pure Almide + a two-service distributed trace in Jaeger",
-  "heading": "almide-otel-demo",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 13,
-  "years": {
-   "2026": 13
-  },
-  "first": "2026-08-03",
-  "last": "2026-08-04",
-  "license": "MIT",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "almide-checkout    checkout         50.3ms   root\nalmide-checkout    GET /inventory   37.7ms   └─ client span\nalmide-inventory   GET /inventory   30.1ms      └─ server span, linked via traceparent\nalmide-inventory   SELECT items     30.1ms         └─ simulated DB work"
-  },
-  "score": 5.3
  },
  {
   "full": "O6lvl4/assay",
@@ -2114,6 +2087,33 @@
   "topics": [],
   "plate": "code",
   "score": 3.4
+ },
+ {
+  "full": "O6lvl4/almide-otel-demo",
+  "owner": "O6lvl4",
+  "name": "almide-otel-demo",
+  "url": "https://github.com/O6lvl4/almide-otel-demo",
+  "lead": "A from-scratch OpenTelemetry tracing SDK in pure Almide + a two-service distributed trace in Jaeger",
+  "heading": "almide-otel-demo",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 13,
+  "years": {
+   "2026": 13
+  },
+  "first": "2026-08-03",
+  "last": "2026-08-04",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "almide-checkout    checkout         50.3ms   root\nalmide-checkout    GET /inventory   37.7ms   └─ client span\nalmide-inventory   GET /inventory   30.1ms      └─ server span, linked via traceparent\nalmide-inventory   SELECT items     30.1ms         └─ simulated DB work"
+  },
+  "score": 3.3
  },
  {
   "full": "O6lvl4/codopsy-ts",
@@ -3600,13 +3600,13 @@
    "Almide",
    "Shell"
   ],
-  "stars": 35,
-  "commits": 14314,
+  "stars": 36,
+  "commits": 15196,
   "years": {
-   "2026": 14314
+   "2026": 15196
   },
   "first": "2026-03-07",
-  "last": "2026-11-01",
+  "last": "2026-11-02",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3629,7 +3629,7 @@
    "lang": "almd",
    "code": "type Shape =\n  | Circle(Float)\n  | Square(Float)\n  | Triangle(Float, Float)   // the edit\n\nfn area(s: Shape) -> Float =\n  match s {\n    Circle(r) => 3.14159 * r * r\n    Square(w) => w * w\n  }"
   },
-  "score": 190
+  "score": 195
  },
  {
   "full": "almide/porta",

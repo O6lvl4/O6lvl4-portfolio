@@ -235,7 +235,7 @@
     "label": "Repositories"
    },
    {
-    "value": "21,387",
+    "value": "22,272",
     "label": "Commits"
    },
    {
@@ -362,12 +362,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 17691,
+    "count": 18573,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2868,
+    "count": 2871,
     "of": 123
    },
    {
@@ -405,7 +405,7 @@
    },
    {
     "name": "2026",
-    "count": 21142
+    "count": 22027
    }
   ]
  },
@@ -421,7 +421,7 @@
      "label": "Repositories"
     },
     {
-     "value": "17,518",
+     "value": "18,400",
      "label": "Commits"
     },
     {
@@ -436,7 +436,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 17518
+     "count": 18400
     }
    ],
    "works": [
@@ -466,7 +466,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "14,314"
+       "value": "15,196"
       },
       {
        "label": "Started",
@@ -478,7 +478,7 @@
       },
       {
        "label": "Stars",
-       "value": "35"
+       "value": "36"
       }
      ],
      "links": [
@@ -492,7 +492,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-01"
+      "date": "2026-11-02"
      }
     },
     {
@@ -4947,7 +4947,7 @@
      "label": "Repositories"
     },
     {
-     "value": "192",
+     "value": "194",
      "label": "Commits"
     },
     {
@@ -4962,7 +4962,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 192
+     "count": 194
     }
    ],
    "works": [
@@ -5066,7 +5066,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "48"
+       "value": "50"
       },
       {
        "label": "Started",
@@ -5084,7 +5084,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-01"
+      "date": "2026-11-02"
      }
     },
     {
@@ -6241,15 +6241,54 @@
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/zfp.jpg",
+     "image": "plates/en/O6lvl4/lean2ts.jpg",
      "readme": {
-      "lead": "Zero-cost functional programming toolkit for Zig, working directly on native ?T and E!T",
+      "lead": "Converts Lean 4 specs into TypeScript types, function stubs and fast-check property tests.",
       "points": [
-       "option and result on native ?T and E!T",
-       "pipe and compose for function pipelines",
-       "Named monoids and slice folds"
+       "Types from structure and inductive",
+       "Theorems become fast-check property tests",
+       "Function stubs generated from def"
       ]
      },
+     "id": "O6lvl4/lean2ts",
+     "title": "lean2ts",
+     "titleEn": "Converts Lean 4 specs into TypeScript types, function stubs and fast-check property tests.",
+     "date": "Mar 2026",
+     "format": "TypeScript",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean2ts",
+     "tags": [
+      "TypeScript",
+      "Lean",
+      "code-generation",
+      "fast-check"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "25"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      },
+      {
+       "label": "Stars",
+       "value": "2"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/lean2ts"
+      }
+     ],
+     "order": {
+      "date": "2026-03-02"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/zfp",
      "title": "zfp",
      "titleEn": "Zero-cost functional programming toolkit for Zig, working directly on native ?T and E!T",
@@ -6378,45 +6417,6 @@
      ],
      "order": {
       "date": "2026-10-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/lean2ts",
-     "title": "lean2ts",
-     "titleEn": "Converts Lean 4 specs into TypeScript types, function stubs and fast-check property tests.",
-     "date": "Mar 2026",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean2ts",
-     "tags": [
-      "TypeScript",
-      "Lean",
-      "code-generation",
-      "fast-check"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "25"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      },
-      {
-       "label": "Stars",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/lean2ts"
-      }
-     ],
-     "order": {
-      "date": "2026-03-02"
      }
     },
     {
@@ -6629,7 +6629,7 @@
      "label": "Repositories"
     },
     {
-     "value": "594",
+     "value": "595",
      "label": "Commits"
     },
     {
@@ -6660,7 +6660,7 @@
     },
     {
      "name": "2026",
-     "count": 445
+     "count": 446
     }
    ],
    "works": [
@@ -6811,7 +6811,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "134"
+       "value": "135"
       },
       {
        "label": "Started",
@@ -6825,7 +6825,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-01"
+      "date": "2026-11-02"
      }
     },
     {
@@ -6866,38 +6866,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/almide-otel-demo",
-     "title": "almide-otel-demo",
-     "titleEn": "A from-scratch OpenTelemetry tracing SDK in pure Almide, with a two-service trace demo in Jaeger",
-     "date": "Aug 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/almide-otel-demo",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "13"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/almide-otel-demo"
-      }
-     ],
-     "order": {
-      "date": "2026-08-04"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/ogumatic-module-design",
      "title": "ogumatic-module-design",
      "titleEn": "A module design method grounded in role boundaries, cards and evidence",
@@ -6928,6 +6896,38 @@
      ],
      "order": {
       "date": "2026-09-26"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/almide-otel-demo",
+     "title": "almide-otel-demo",
+     "titleEn": "A from-scratch OpenTelemetry tracing SDK in pure Almide, with a two-service trace demo in Jaeger",
+     "date": "Aug 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/almide-otel-demo",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "13"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/almide-otel-demo"
+      }
+     ],
+     "order": {
+      "date": "2026-08-04"
      }
     },
     {
