@@ -8,6 +8,7 @@ export const TEXT = {
   ja: {
     role: "開発の道具を、言語からつくる。",
     lead: "Almideと、コードを書く人やエージェントのための道具を開発しています。",
+    realName: "本寺 広海",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公開リポジトリ ${n} 件`,
     description: () => `必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。`,
@@ -104,6 +105,7 @@ export const TEXT = {
   en: {
     role: "Building developer tools, from the language up.",
     lead: "I build Almide and tools for the people and agents writing code.",
+    realName: "Hiromi Motodera",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `${n} public repositories`,
     description: () => `I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it.`,
@@ -200,6 +202,7 @@ export const TEXT = {
   zh: {
     role: "从语言开始，构建开发工具。",
     lead: "我开发Almide，以及供开发者和编程智能体使用的工具。",
+    realName: "本寺广海",
     nameEn: "PUBLIC WORK",
     kicker: (n) => `公开仓库 ${n} 个`,
     description: () => `需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。`,

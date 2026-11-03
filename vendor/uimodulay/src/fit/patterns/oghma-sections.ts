@@ -25,7 +25,7 @@ function avatar(ctx: PageCtx): string {
   const { artist } = ctx.site.content;
   if (!artist.avatar) return "";
   const ext = artist.avatar.slice(artist.avatar.lastIndexOf("."));
-  return `<img class="profile-avatar" src="${ctx.root}mark${esc(ext)}" width="96" height="96" alt="${esc(artist.name)}">`;
+  return `<img class="profile-avatar" src="${ctx.root}mark${esc(ext)}" width="96" height="96" alt="${esc(artist.realName ?? artist.name)}">`;
 }
 
 /**
@@ -43,7 +43,7 @@ function profile(ctx: PageCtx): string {
       <div class="profile-head">
         ${avatar(ctx)}
         <div>
-          <div class="profile-name">${esc(c.artist.name)}</div>
+          <div class="profile-name">${esc(c.artist.realName ?? c.artist.name)}</div>
           ${c.artist.role ? `<div class="profile-role">${esc(c.artist.role)}</div>` : ""}
         </div>
       </div>

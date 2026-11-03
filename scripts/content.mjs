@@ -245,6 +245,7 @@ const content = {
   share: { image: "og.jpg", alt: `O6lvl4 — ${t.role}` },
   artist: {
     name: "O6lvl4",
+    realName: t.realName,
     nameEn: t.nameEn,
     life: `${total} repos`,
     avatar: "assets/avatar.png",

@@ -141,6 +141,8 @@ export interface Content {
    */
   artist: {
     name: string;
+    /** The maker's legal name, shown on the profile card above the handle when given. */
+    realName?: string;
     nameEn?: string;
     life?: string;
     seal?: [string, string];

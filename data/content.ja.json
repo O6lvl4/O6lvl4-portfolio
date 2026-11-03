@@ -10,6 +10,7 @@
  },
  "artist": {
   "name": "O6lvl4",
+  "realName": "本寺 広海",
   "nameEn": "PUBLIC WORK",
   "life": "194 repos",
   "avatar": "assets/avatar.png",
@@ -6665,7 +6666,7 @@
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/sprid.jpg",
+     "image": "plates/ja/O6lvl4/sprid.jpg",
      "readme": {
       "lead": "長いCLI作業向けの軽量なmacOS・Linux端末",
       "points": [
