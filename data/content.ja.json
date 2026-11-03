@@ -217,7 +217,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "cyber-incident-chronicle · 2026年11月"
+    "value": "almide · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
@@ -236,7 +236,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "22,272",
+    "value": "22,446",
     "label": "コミット"
    },
    {
@@ -363,12 +363,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 18573,
+    "count": 18743,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2871,
+    "count": 2875,
     "of": 123
    },
    {
@@ -406,7 +406,7 @@
    },
    {
     "name": "2026",
-    "count": 22027
+    "count": 22201
    }
   ]
  },
@@ -422,7 +422,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "18,400",
+     "value": "18,568",
      "label": "コミット"
     },
     {
@@ -437,7 +437,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 18400
+     "count": 18568
     }
    ],
    "works": [
@@ -467,7 +467,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "15,196"
+       "value": "15,356"
       },
       {
        "label": "初回",
@@ -493,7 +493,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-02"
+      "date": "2026-11-04"
      }
     },
     {
@@ -514,7 +514,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,915"
+       "value": "1,923"
       },
       {
        "label": "初回",
@@ -536,7 +536,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-01"
+      "date": "2026-11-03"
      }
     },
     {
@@ -1244,7 +1244,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "65",
+     "value": "67",
      "label": "コミット"
     },
     {
@@ -1259,7 +1259,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 65
+     "count": 67
     }
    ],
    "works": [
@@ -1306,6 +1306,45 @@
      ],
      "order": {
       "date": "2026-08-17"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/svg",
+     "title": "svg",
+     "titleEn": "Almide向けの純Almide製SVGドキュメント生成ライブラリ",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/svg",
+     "tags": [
+      "Almide",
+      "almide",
+      "codegen",
+      "svg"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "5"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/svg"
+      }
+     ],
+     "order": {
+      "date": "2026-11-03"
      }
     },
     {
@@ -1419,45 +1458,6 @@
      ],
      "order": {
       "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/svg",
-     "title": "svg",
-     "titleEn": "Almide向けの純Almide製SVGドキュメント生成ライブラリ",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/svg",
-     "tags": [
-      "Almide",
-      "almide",
-      "codegen",
-      "svg"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      },
-      {
-       "label": "タグ",
-       "value": "v0.1.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/svg"
-      }
-     ],
-     "order": {
-      "date": "2026-04-12"
      }
     },
     {
@@ -4948,7 +4948,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "194",
+     "value": "197",
      "label": "コミット"
     },
     {
@@ -4963,7 +4963,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 194
+     "count": 197
     }
    ],
    "works": [
@@ -5029,7 +5029,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "86"
+       "value": "88"
       },
       {
        "label": "初回",
@@ -5047,7 +5047,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-01"
+      "date": "2026-11-03"
      }
     },
     {
@@ -5067,7 +5067,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "50"
+       "value": "51"
       },
       {
        "label": "初回",
@@ -5085,7 +5085,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-02"
+      "date": "2026-11-03"
      }
     },
     {
@@ -6630,7 +6630,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "595",
+     "value": "596",
      "label": "コミット"
     },
     {
@@ -6661,12 +6661,12 @@
     },
     {
      "name": "2026",
-     "count": 446
+     "count": 447
     }
    ],
    "works": [
     {
-     "image": "plates/ja/O6lvl4/sprid.jpg",
+     "image": "plates/shared/O6lvl4/sprid.jpg",
      "readme": {
       "lead": "長いCLI作業向けの軽量なmacOS・Linux端末",
       "points": [
@@ -6812,7 +6812,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "135"
+       "value": "136"
       },
       {
        "label": "初回",
@@ -6826,7 +6826,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-02"
+      "date": "2026-11-03"
      }
     },
     {

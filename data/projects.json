@@ -967,12 +967,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 135,
+  "commits": 136,
   "years": {
-   "2026": 135
+   "2026": 136
   },
   "first": "2026-10-07",
-  "last": "2026-11-02",
+  "last": "2026-11-03",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1422,19 +1422,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 86,
+  "commits": 88,
   "years": {
-   "2026": 86
+   "2026": 88
   },
   "first": "2026-09-07",
-  "last": "2026-11-01",
+  "last": "2026-11-03",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "ts",
    "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
   },
-  "score": 6.7
+  "score": 6.8
  },
  {
   "full": "O6lvl4/llmine",
@@ -1548,12 +1548,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 50,
+  "commits": 51,
   "years": {
-   "2026": 50
+   "2026": 51
   },
   "first": "2026-09-14",
-  "last": "2026-11-02",
+  "last": "2026-11-03",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3601,12 +3601,12 @@
    "Shell"
   ],
   "stars": 36,
-  "commits": 15196,
+  "commits": 15356,
   "years": {
-   "2026": 15196
+   "2026": 15356
   },
   "first": "2026-03-07",
-  "last": "2026-11-02",
+  "last": "2026-11-04",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.67.1",
@@ -3690,12 +3690,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1915,
+  "commits": 1923,
   "years": {
-   "2026": 1915
+   "2026": 1923
   },
   "first": "2026-03-07",
-  "last": "2026-11-01",
+  "last": "2026-11-03",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3918,6 +3918,38 @@
   "sample": {
    "lang": "almide",
    "code": "import dfa\n\n// Compile a pattern set. Index in the list becomes the token id;\n// a length tie goes to the lower id, so list keywords first.\nfn compile(patterns: List[String]) -> Result[Dfa, String]\n\n// Longest pattern matching at `at`, or none. Matches AT the position —\n// it never searches forward; that is the caller's loop.\nfn scan(dfa: Dfa, input: String, at: Int) -> Match?\n\n// Match { id: Int, len: Int }"
+  },
+  "score": 9.1
+ },
+ {
+  "full": "almide/svg",
+  "owner": "almide",
+  "name": "svg",
+  "url": "https://github.com/almide/svg",
+  "lead": "SVG generation library for Almide",
+  "heading": "almide/svg",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 5,
+  "years": {
+   "2026": 5
+  },
+  "first": "2026-04-08",
+  "last": "2026-11-03",
+  "tag": "v0.1.1",
+  "topics": [
+   "almide",
+   "codegen",
+   "svg",
+   "wasm"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide add svg@v0.1.0\n```\n\n## Usage\n\n```almide\nimport svg\nimport svg.path\n\nlet chart = svg.doc(800.0, 600.0, [\n  svg.rect(10.0, 10.0, 200.0, 100.0)\n    |> svg.fill(\"#4A90D9\")\n    |> svg.rx(8.0),\n  svg.circle(400.0, 200.0, 60.0)\n    |> svg.stroke(\"#333\")\n    |> svg.fill(\"none\")\n    |> svg.stroke_width(2.0),\n  svg.text(400.0, 350.0, \"Hello SVG\")\n    |> svg.text_anchor(\"middle\")\n    |> svg.font_size(24.0),\n  svg.path(path.d([\n    path.move_to(500.0, 50.0),\n    path.cubic(550.0, 20.0, 600.0, 80.0, 650.0, 50.0),\n    path.close(),\n  ])) |> svg.fill(\"#E74C3C\"),\n])\n\n// Write to file or serve over HTTP\nfs.write(\"chart.svg\", svg.render(chart))"
   },
   "score": 9.1
  },
@@ -4156,38 +4188,6 @@
   "sample": {
    "lang": "almide",
    "code": "import sha1\nimport bytes\n\nlet digest = sha1.hash(bytes.from_string(\"hello\"))\nlet hex = sha1.hex(digest)  // \"aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d\""
-  },
-  "score": 7.1
- },
- {
-  "full": "almide/svg",
-  "owner": "almide",
-  "name": "svg",
-  "url": "https://github.com/almide/svg",
-  "lead": "SVG generation library for Almide",
-  "heading": "almide/svg",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-04-08",
-  "last": "2026-04-12",
-  "tag": "v0.1.0",
-  "topics": [
-   "almide",
-   "codegen",
-   "svg",
-   "wasm"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide add svg@v0.1.0\n```\n\n## Usage\n\n```almide\nimport svg\nimport svg.path\n\nlet chart = svg.doc(800.0, 600.0, [\n  svg.rect(10.0, 10.0, 200.0, 100.0)\n    |> svg.fill(\"#4A90D9\")\n    |> svg.rx(8.0),\n  svg.circle(400.0, 200.0, 60.0)\n    |> svg.stroke(\"#333\")\n    |> svg.fill(\"none\")\n    |> svg.stroke_width(2.0),\n  svg.text(400.0, 350.0, \"Hello SVG\")\n    |> svg.text_anchor(\"middle\")\n    |> svg.font_size(24.0),\n  svg.path(path.d([\n    path.move_to(500.0, 50.0),\n    path.cubic(550.0, 20.0, 600.0, 80.0, 650.0, 50.0),\n    path.close(),\n  ])) |> svg.fill(\"#E74C3C\"),\n])\n\n// Write to file or serve over HTTP\nfs.write(\"chart.svg\", svg.render(chart))"
   },
   "score": 7.1
  },
