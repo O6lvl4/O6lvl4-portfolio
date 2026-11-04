@@ -236,7 +236,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "22,446",
+    "value": "22,908",
     "label": "提交"
    },
    {
@@ -363,12 +363,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 18743,
+    "count": 19202,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2875,
+    "count": 2878,
     "of": 123
    },
    {
@@ -406,7 +406,7 @@
    },
    {
     "name": "2026",
-    "count": 22201
+    "count": 22663
    }
   ]
  },
@@ -422,7 +422,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "18,568",
+     "value": "19,027",
      "label": "提交"
     },
     {
@@ -437,7 +437,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 18568
+     "count": 19027
     }
    ],
    "works": [
@@ -467,7 +467,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "15,356"
+       "value": "15,808"
       },
       {
        "label": "首次",
@@ -493,7 +493,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-04"
+      "date": "2026-11-05"
      }
     },
     {
@@ -629,7 +629,7 @@
      "id": "almide/almide-dojo",
      "title": "almide-dojo",
      "titleEn": "每日测量Almide中LLM代码的修改存活率",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-dojo",
@@ -642,7 +642,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "587"
+       "value": "594"
       },
       {
        "label": "首次",
@@ -660,7 +660,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-29"
+      "date": "2026-11-04"
      }
     },
     {
@@ -1462,39 +1462,6 @@
     },
     {
      "image": "",
-     "id": "almide/almide-sqlite",
-     "title": "almide-sqlite",
-     "titleEn": "面向Almide的SQLite3数据库访问库",
-     "date": "2026年8月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-sqlite",
-     "tags": [
-      "Almide",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "6"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/almide-sqlite"
-      }
-     ],
-     "order": {
-      "date": "2026-08-06"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/toml",
      "title": "toml",
      "titleEn": "Almide 的 TOML v1.0 解析与序列化库,集成 Codec",
@@ -1526,6 +1493,39 @@
      ],
      "order": {
       "date": "2026-04-12"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-sqlite",
+     "title": "almide-sqlite",
+     "titleEn": "面向Almide的SQLite3数据库访问库",
+     "date": "2026年8月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-sqlite",
+     "tags": [
+      "Almide",
+      "Rust"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/almide-sqlite"
+      }
+     ],
+     "order": {
+      "date": "2026-08-06"
      }
     },
     {
@@ -4948,7 +4948,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "197",
+     "value": "199",
      "label": "提交"
     },
     {
@@ -4963,7 +4963,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 197
+     "count": 199
     }
    ],
    "works": [
@@ -5029,7 +5029,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "88"
+       "value": "89"
       },
       {
        "label": "首次",
@@ -5047,7 +5047,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-03"
+      "date": "2026-11-04"
      }
     },
     {
@@ -5067,7 +5067,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "51"
+       "value": "52"
       },
       {
        "label": "首次",
@@ -5085,7 +5085,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-03"
+      "date": "2026-11-04"
      }
     },
     {
@@ -6630,7 +6630,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "596",
+     "value": "597",
      "label": "提交"
     },
     {
@@ -6661,7 +6661,7 @@
     },
     {
      "name": "2026",
-     "count": 447
+     "count": 448
     }
    ],
    "works": [
@@ -6812,7 +6812,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "136"
+       "value": "137"
       },
       {
        "label": "首次",
@@ -6826,7 +6826,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-03"
+      "date": "2026-11-04"
      }
     },
     {
