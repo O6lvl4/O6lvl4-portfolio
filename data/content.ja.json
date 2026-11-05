@@ -217,7 +217,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "almide · 2026年11月"
+    "value": "gramide · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
@@ -236,7 +236,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "22,908",
+    "value": "23,207",
     "label": "コミット"
    },
    {
@@ -363,12 +363,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 19202,
+    "count": 19423,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2878,
+    "count": 2956,
     "of": 123
    },
    {
@@ -406,7 +406,7 @@
    },
    {
     "name": "2026",
-    "count": 22663
+    "count": 22962
    }
   ]
  },
@@ -422,7 +422,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "19,027",
+     "value": "19,248",
      "label": "コミット"
     },
     {
@@ -437,7 +437,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 19027
+     "count": 19248
     }
    ],
    "works": [
@@ -467,7 +467,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "15,808"
+       "value": "16,026"
       },
       {
        "label": "初回",
@@ -475,7 +475,7 @@
       },
       {
        "label": "リリース",
-       "value": "v0.67.1"
+       "value": "v0.69.0"
       },
       {
        "label": "星",
@@ -493,7 +493,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -642,7 +642,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "594"
+       "value": "595"
       },
       {
        "label": "初回",
@@ -660,7 +660,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-04"
+      "date": "2026-11-05"
      }
     },
     {
@@ -897,7 +897,7 @@
      "id": "almide/playground",
      "title": "playground",
      "titleEn": "ブラウザ上でAlmideコードを書いて実行できるオンラインplayground",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/playground",
@@ -910,7 +910,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "179"
+       "value": "181"
       },
       {
        "label": "初回",
@@ -928,7 +928,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-30"
+      "date": "2026-11-05"
      }
     },
     {
@@ -1675,7 +1675,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "1,107",
+     "value": "1,182",
      "label": "コミット"
     },
     {
@@ -1694,7 +1694,7 @@
     },
     {
      "name": "2026",
-     "count": 1091
+     "count": 1166
     }
    ],
    "works": [
@@ -1801,7 +1801,7 @@
      "id": "O6lvl4/gramide",
      "title": "gramide",
      "titleEn": "Almide製の、コーディングエージェント向け構文木エンジン",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide",
@@ -1813,7 +1813,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "187"
+       "value": "193"
       },
       {
        "label": "初回",
@@ -1821,7 +1821,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.2.11"
+       "value": "v0.2.12"
       }
      ],
      "links": [
@@ -1831,7 +1831,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-20"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1839,7 +1839,7 @@
      "id": "O6lvl4/gramide-cli",
      "title": "gramide-cli",
      "titleEn": "コーディングエージェント向けに構文木を提供するgramideコマンド",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide-cli",
@@ -1851,7 +1851,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "145"
+       "value": "149"
       },
       {
        "label": "初回",
@@ -1859,7 +1859,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.4.16"
+       "value": "v0.4.17"
       }
      ],
      "links": [
@@ -1869,7 +1869,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-20"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1877,7 +1877,7 @@
      "id": "O6lvl4/gramide-almide",
      "title": "gramide-almide",
      "titleEn": "gramide向けAlmide用の字句仕様・文法・記号規則を一つにまとめたパッケージ",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide-almide",
@@ -1889,7 +1889,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "128"
+       "value": "133"
       },
       {
        "label": "初回",
@@ -1897,7 +1897,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.1.14"
+       "value": "v0.1.15"
       }
      ],
      "links": [
@@ -1907,7 +1907,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1915,7 +1915,7 @@
      "id": "O6lvl4/gramide-go",
      "title": "gramide-go",
      "titleEn": "Go用のgramide文法一式を収めたAlmideパッケージ",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide-go",
@@ -1927,7 +1927,45 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "129"
+       "value": "133"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.15"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-go"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-python",
+     "title": "gramide-python",
+     "titleEn": "gramide-cli向けのPython 3.14対応。字句解析から編集中の回復までを担う",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-python",
+     "tags": [
+      "Almide",
+      "Python",
+      "C"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "135"
       },
       {
        "label": "初回",
@@ -1941,49 +1979,11 @@
      "links": [
       {
        "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-go"
-      }
-     ],
-     "order": {
-      "date": "2026-09-18"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-python",
-     "title": "gramide-python",
-     "titleEn": "gramide-cli向けのPython 3.14対応。字句解析から編集中の回復までを担う",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-python",
-     "tags": [
-      "Almide",
-      "Python",
-      "C"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "131"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      },
-      {
-       "label": "タグ",
-       "value": "v0.1.13"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
        "href": "https://github.com/O6lvl4/gramide-python"
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1991,7 +1991,7 @@
      "id": "O6lvl4/gramide-rust",
      "title": "gramide-rust",
      "titleEn": "gramide-cli向けRust文法一式を収めたAlmideパッケージ",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide-rust",
@@ -2003,7 +2003,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "130"
+       "value": "134"
       },
       {
        "label": "初回",
@@ -2011,7 +2011,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.1.16"
+       "value": "v0.1.17"
       }
      ],
      "links": [
@@ -2021,7 +2021,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2117,6 +2117,52 @@
      }
     },
     {
+     "image": "plates/shared/O6lvl4/hew.jpg",
+     "readme": {
+      "lead": "コードを、モデルが読むべき形で読む。エージェント向けの cat/grep/sed",
+      "points": [
+       "関数や型を名前で指定すると、その部分だけを返す",
+       "行番号とサイズ付きで、頼んでいない行は読ませない",
+       "grep は重複をたたみ、どの関数の中かを添える"
+      ]
+     },
+     "id": "O6lvl4/hew",
+     "title": "hew",
+     "titleEn": "コードを、モデルが読むべき形で読む。エージェント向けの cat/grep/sed",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/hew",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "57"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.4.18"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/hew"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
      "image": "plates/shared/O6lvl4/codopsy.jpg",
      "readme": {
       "lead": "35言語のコードを、ひとつの物差しで採点する",
@@ -2164,57 +2210,11 @@
      }
     },
     {
-     "image": "plates/shared/O6lvl4/hew.jpg",
-     "readme": {
-      "lead": "コードを、モデルが読むべき形で読む。エージェント向けの cat/grep/sed",
-      "points": [
-       "関数や型を名前で指定すると、その部分だけを返す",
-       "行番号とサイズ付きで、頼んでいない行は読ませない",
-       "grep は重複をたたみ、どの関数の中かを添える"
-      ]
-     },
-     "id": "O6lvl4/hew",
-     "title": "hew",
-     "titleEn": "コードを、モデルが読むべき形で読む。エージェント向けの cat/grep/sed",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/hew",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "50"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      },
-      {
-       "label": "タグ",
-       "value": "v0.4.17"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/hew"
-      }
-     ],
-     "order": {
-      "date": "2026-09-21"
-     }
-    },
-    {
      "image": "",
      "id": "O6lvl4/gramide-javascript",
      "title": "gramide-javascript",
      "titleEn": "gramide用のJavaScript言語パッケージ。構文検査と宣言抽出を行う",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide-javascript",
@@ -2226,7 +2226,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "31"
+       "value": "35"
       },
       {
        "label": "初回",
@@ -2234,7 +2234,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.3.13"
+       "value": "v0.3.14"
       }
      ],
      "links": [
@@ -2244,7 +2244,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2252,7 +2252,7 @@
      "id": "O6lvl4/gramide-typescript",
      "title": "gramide-typescript",
      "titleEn": "gramideのTypeScript言語パッケージ。文法を公式パーサと照合して検証する",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/gramide-typescript",
@@ -2264,7 +2264,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "24"
+       "value": "28"
       },
       {
        "label": "初回",
@@ -2272,7 +2272,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.3.13"
+       "value": "v0.3.14"
       }
      ],
      "links": [
@@ -2282,7 +2282,45 @@
       }
      ],
      "order": {
-      "date": "2026-09-18"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-json",
+     "title": "gramide-json",
+     "titleEn": "gramide向けにJSON構文を検証し、構造を読み取る",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-json",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "13"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-json"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -2322,6 +2360,272 @@
      ],
      "order": {
       "date": "2026-09-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-java",
+     "title": "gramide-java",
+     "titleEn": "gramide向けにJavaの構文サブセットを読み取る",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-java",
+     "tags": [
+      "Almide",
+      "Python",
+      "Java"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-java"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-c",
+     "title": "gramide-c",
+     "titleEn": "gramide向けにCの構文サブセットを読み取る",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-c",
+     "tags": [
+      "Almide",
+      "Python",
+      "C"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-c"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-csharp",
+     "title": "gramide-csharp",
+     "titleEn": "gramide向けにC#の構文サブセットを読み取る",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-csharp",
+     "tags": [
+      "Almide",
+      "Python",
+      "C#"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-csharp"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-css",
+     "title": "gramide-css",
+     "titleEn": "gramide向けにCSSの構造的な構文サブセットを読み取る",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-css",
+     "tags": [
+      "Almide",
+      "Python",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-css"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-lua",
+     "title": "gramide-lua",
+     "titleEn": "gramide向けにLua 5.4の主要構文を読み取る",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-lua",
+     "tags": [
+      "Almide",
+      "Python",
+      "Lua"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-lua"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-sql",
+     "title": "gramide-sql",
+     "titleEn": "gramide向けにSQLite系SQLの主要構文を読み取る",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-sql",
+     "tags": [
+      "Almide",
+      "Python",
+      "SQL"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-sql"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-toml",
+     "title": "gramide-toml",
+     "titleEn": "gramide向けにTOML 1.0の主要構文を読み取る",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-toml",
+     "tags": [
+      "Almide",
+      "Python",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-toml"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -2466,40 +2770,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/gramide-json",
-     "title": "gramide-json",
-     "titleEn": "gramide向けにJSON構文を検証し、構造を読み取る",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-json",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "8"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-json"
-      }
-     ],
-     "order": {
-      "date": "2026-10-06"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/onetool",
      "title": "onetool",
      "titleEn": "任意のAPIを4つの汎用ツールでMCPに公開するフレームワーク",
@@ -2562,244 +2832,6 @@
      ],
      "order": {
       "date": "2026-09-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-java",
-     "title": "gramide-java",
-     "titleEn": "gramide向けにJavaの構文サブセットを読み取る",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-java",
-     "tags": [
-      "Almide",
-      "Python",
-      "Java"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-java"
-      }
-     ],
-     "order": {
-      "date": "2026-10-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-c",
-     "title": "gramide-c",
-     "titleEn": "gramide向けにCの構文サブセットを読み取る",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-c",
-     "tags": [
-      "Almide",
-      "Python",
-      "C"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-c"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-csharp",
-     "title": "gramide-csharp",
-     "titleEn": "gramide向けにC#の構文サブセットを読み取る",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-csharp",
-     "tags": [
-      "Almide",
-      "Python",
-      "C#"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-csharp"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-css",
-     "title": "gramide-css",
-     "titleEn": "gramide向けにCSSの構造的な構文サブセットを読み取る",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-css",
-     "tags": [
-      "Almide",
-      "Python",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-css"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-lua",
-     "title": "gramide-lua",
-     "titleEn": "gramide向けにLua 5.4の主要構文を読み取る",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-lua",
-     "tags": [
-      "Almide",
-      "Python",
-      "Lua"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-lua"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-sql",
-     "title": "gramide-sql",
-     "titleEn": "gramide向けにSQLite系SQLの主要構文を読み取る",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-sql",
-     "tags": [
-      "Almide",
-      "Python",
-      "SQL"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-sql"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-toml",
-     "title": "gramide-toml",
-     "titleEn": "gramide向けにTOML 1.0の主要構文を読み取る",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-toml",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年10月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-toml"
-      }
-     ],
-     "order": {
-      "date": "2026-10-05"
      }
     },
     {
@@ -4948,7 +4980,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "199",
+     "value": "201",
      "label": "コミット"
     },
     {
@@ -4963,7 +4995,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 199
+     "count": 201
     }
    ],
    "works": [
@@ -5029,7 +5061,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "89"
+       "value": "90"
       },
       {
        "label": "初回",
@@ -5047,7 +5079,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-04"
+      "date": "2026-11-05"
      }
     },
     {
@@ -5067,7 +5099,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "52"
+       "value": "53"
       },
       {
        "label": "初回",
@@ -5085,7 +5117,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-04"
+      "date": "2026-11-05"
      }
     },
     {
@@ -6630,7 +6662,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "597",
+     "value": "598",
      "label": "コミット"
     },
     {
@@ -6661,7 +6693,7 @@
     },
     {
      "name": "2026",
-     "count": 448
+     "count": 449
     }
    ],
    "works": [
@@ -6812,7 +6844,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "137"
+       "value": "138"
       },
       {
        "label": "初回",
@@ -6826,7 +6858,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-04"
+      "date": "2026-11-05"
      }
     },
     {

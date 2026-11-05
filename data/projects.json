@@ -168,6 +168,36 @@
   "score": 13.2
  },
  {
+  "full": "O6lvl4/gramide",
+  "owner": "O6lvl4",
+  "name": "gramide",
+  "url": "https://github.com/O6lvl4/gramide",
+  "lead": "The engine of gramide: a lexer, a parser that interprets a grammar value, the tree, the readers and the command line as a library, in Almide",
+  "heading": "gramide",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "C"
+  ],
+  "stars": 0,
+  "commits": 193,
+  "years": {
+   "2026": 193
+  },
+  "first": "2026-09-08",
+  "last": "2026-11-06",
+  "tag": "v0.2.12",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "gramide                 this repository: engine, contract, readers, command line\ngramide_almide   .almd       one repository per language, each depending on the engine\ngramide_go       .go         https://github.com/O6lvl4/gramide-go\ngramide_rust     .rs         https://github.com/O6lvl4/gramide-rust\ngramide_python   .py .pyi    https://github.com/O6lvl4/gramide-python\ngramide-cli                  the `gramide` command: every package above, composed in one file"
+  },
+  "score": 12.9
+ },
+ {
   "full": "O6lvl4/zfp",
   "owner": "O6lvl4",
   "name": "zfp",
@@ -207,36 +237,6 @@
    "code": "const option = @import(\"zfp\").option;\n\n// Before — nesting grows with every step\nfn process(input: ?[]const u8) ?i32 {\n    if (input) |s| {\n        const n = std.fmt.parseInt(i32, s, 10) catch return null;\n        if (n > 0) return n * 2;\n    }\n    return null;\n}\n\n// After — flat pipeline, same machine code\nfn process(input: ?[]const u8) ?i32 {\n    return option.andThen(\n        option.andThen(input, parseInt),\n        doubleIfPositive,\n    );\n}"
   },
   "score": 12.9
- },
- {
-  "full": "O6lvl4/gramide",
-  "owner": "O6lvl4",
-  "name": "gramide",
-  "url": "https://github.com/O6lvl4/gramide",
-  "lead": "The engine of gramide: a lexer, a parser that interprets a grammar value, the tree, the readers and the command line as a library, in Almide",
-  "heading": "gramide",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "C"
-  ],
-  "stars": 0,
-  "commits": 187,
-  "years": {
-   "2026": 187
-  },
-  "first": "2026-09-08",
-  "last": "2026-10-20",
-  "tag": "v0.2.11",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "gramide                 this repository: engine, contract, readers, command line\ngramide_almide   .almd       one repository per language, each depending on the engine\ngramide_go       .go         https://github.com/O6lvl4/gramide-go\ngramide_rust     .rs         https://github.com/O6lvl4/gramide-rust\ngramide_python   .py .pyi    https://github.com/O6lvl4/gramide-python\ngramide-cli                  the `gramide` command: every package above, composed in one file"
-  },
-  "score": 12.7
  },
  {
   "full": "O6lvl4/sashiko",
@@ -327,13 +327,13 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 145,
+  "commits": 149,
   "years": {
-   "2026": 34
+   "2026": 38
   },
   "first": "2026-09-08",
-  "last": "2026-10-20",
-  "tag": "v0.4.16",
+  "last": "2026-11-06",
+  "tag": "v0.4.17",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -341,7 +341,7 @@
    "lang": "",
    "code": "almide install github.com/O6lvl4/gramide-cli --name gramide      # one native binary → ~/.local/bin/gramide"
   },
-  "score": 11.9
+  "score": 12
  },
  {
   "full": "O6lvl4/gramide-almide",
@@ -357,13 +357,13 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 128,
+  "commits": 133,
   "years": {
-   "2026": 17
+   "2026": 22
   },
   "first": "2026-09-08",
-  "last": "2026-09-18",
-  "tag": "v0.1.14",
+  "last": "2026-11-06",
+  "tag": "v0.1.15",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -371,7 +371,7 @@
    "lang": "",
    "code": "almide build cli/main.almd -o gramide_almide     # gramide over .almd alone\n./gramide_almide check src/*.almd\n./gramide_almide outline src/parser.almd\n./gramide_almide gen-table > src/table.almd      # after any change to the grammar"
   },
-  "score": 11.6
+  "score": 11.7
  },
  {
   "full": "O6lvl4/gramide-go",
@@ -387,13 +387,13 @@
    "C"
   ],
   "stars": 0,
-  "commits": 129,
+  "commits": 133,
   "years": {
-   "2026": 18
+   "2026": 22
   },
   "first": "2026-09-08",
-  "last": "2026-09-18",
-  "tag": "v0.1.14",
+  "last": "2026-11-06",
+  "tag": "v0.1.15",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -401,7 +401,7 @@
    "lang": "",
    "code": "almide build cli/main.almd -o gramide_go     # gramide over .go alone\n./gramide_go check $(go env GOROOT)/src/go/parser/*.go\n./gramide_go outline main.go                 # `L5-5 method Shape.Area`: a method named with its receiver\n./gramide_go gen-table > src/table.almd      # after any change to the grammar"
   },
-  "score": 11.6
+  "score": 11.7
  },
  {
   "full": "O6lvl4/gramide-python",
@@ -417,13 +417,13 @@
    "C"
   ],
   "stars": 0,
-  "commits": 131,
+  "commits": 135,
   "years": {
-   "2026": 20
+   "2026": 24
   },
   "first": "2026-09-08",
-  "last": "2026-09-18",
-  "tag": "v0.1.13",
+  "last": "2026-11-06",
+  "tag": "v0.1.14",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -431,7 +431,7 @@
    "lang": "",
    "code": "almide build cli/main.almd -o gramide_python       # gramide over .py and .pyi alone\n./gramide_python check $(python3.14 -c 'import sysconfig;print(sysconfig.get_path(\"stdlib\"))')/*.py\n./gramide_python outline inspect.py                # `L2-3 method A.m`; nested: `Outer.Inner.method`\n./gramide_python symbols-recovered editing.py      # declarations untouched by the damage, and where the damage is\n./gramide_python gen-table > src/table.almd        # after any change to the grammar"
   },
-  "score": 11.6
+  "score": 11.7
  },
  {
   "full": "O6lvl4/gramide-rust",
@@ -447,13 +447,13 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 130,
+  "commits": 134,
   "years": {
-   "2026": 19
+   "2026": 23
   },
   "first": "2026-09-08",
-  "last": "2026-09-18",
-  "tag": "v0.1.16",
+  "last": "2026-11-06",
+  "tag": "v0.1.17",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -461,7 +461,7 @@
    "lang": "",
    "code": "almide build cli/main.almd -o gramide_rust     # gramide over .rs alone\n./gramide_rust check src/*.rs\n./gramide_rust outline src/lib.rs              # `L4-4 method S::fmt` under `L3-5 impl fmt::Display for S`\n./gramide_rust gen-table > src/table.almd      # after any change to the grammar"
   },
-  "score": 11.6
+  "score": 11.7
  },
  {
   "full": "O6lvl4/qusp",
@@ -597,6 +597,37 @@
   "score": 10.2
  },
  {
+  "full": "O6lvl4/hew",
+  "owner": "O6lvl4",
+  "name": "hew",
+  "url": "https://github.com/O6lvl4/hew",
+  "lead": "Read code the way a model should: structure-aware cat/grep/sed for coding agents, in Almide",
+  "heading": "hew",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 57,
+  "years": {
+   "2026": 57
+  },
+  "first": "2026-09-06",
+  "last": "2026-11-06",
+  "tag": "v0.4.18",
+  "license": "NOASSERTION",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1358833168/97f03155-a39e-4a50-9760-a4f56cd011c7",
+  "plate": "og",
+  "sample": {
+   "lang": "",
+   "code": "hew src/lower.rs --symbol lower_match       one function, found by name\nhew src/lower.rs --grep \"Expr::Match\" --around 4   matches with context, labelled by enclosing fn\nhew src/lower.rs --lines 120-160            a range, numbered\nhew outline src/lower.rs                    the table of contents\nhew grep \"unwrap()\" src                     grep that folds repeats and names the symbol\nhew tree src --depth 2                      a directory, skipping vcs / build / deps"
+  },
+  "score": 10.1
+ },
+ {
   "full": "O6lvl4/codopsy",
   "owner": "O6lvl4",
   "name": "codopsy",
@@ -640,37 +671,6 @@
   "sample": {
    "lang": "console",
    "code": "$ codopsy analyze ./src -v\nAnalyzing ./src ...\nFound 2 source file(s).\n  ✗ ./src/Proof.lean (complexity: 1, cognitive: 0, issues: 1 error)\n      score A (91/100) — complexity 35/35, issues 31/40, structure 25/25\n  ✗ ./src/parser.ts (complexity: 6, cognitive: 11, issues: 1 error, 3 warnings)\n      score B (80/100) — complexity 35/35, issues 20/40, structure 25/25\n\n=== Analysis Summary ===\n  Quality Score:  B (84/100)\n  Files analyzed: 2\n  Total issues:   6\n    Error:   2\n    Warning: 3\n    Info:    1\n  Avg complexity: 2.7\n  Max complexity: 6 (parse in ./src/parser.ts)\n  Scoring thresholds: cyclomatic >10, cognitive >15"
-  },
-  "score": 10
- },
- {
-  "full": "O6lvl4/hew",
-  "owner": "O6lvl4",
-  "name": "hew",
-  "url": "https://github.com/O6lvl4/hew",
-  "lead": "Read code the way a model should: structure-aware cat/grep/sed for coding agents, in Almide",
-  "heading": "hew",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 50,
-  "years": {
-   "2026": 50
-  },
-  "first": "2026-09-06",
-  "last": "2026-09-21",
-  "tag": "v0.4.17",
-  "license": "NOASSERTION",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1358833168/97f03155-a39e-4a50-9760-a4f56cd011c7",
-  "plate": "og",
-  "sample": {
-   "lang": "",
-   "code": "hew src/lower.rs --symbol lower_match       one function, found by name\nhew src/lower.rs --grep \"Expr::Match\" --around 4   matches with context, labelled by enclosing fn\nhew src/lower.rs --lines 120-160            a range, numbered\nhew outline src/lower.rs                    the table of contents\nhew grep \"unwrap()\" src                     grep that folds repeats and names the symbol\nhew tree src --depth 2                      a directory, skipping vcs / build / deps"
   },
   "score": 10
  },
@@ -723,13 +723,13 @@
    "C"
   ],
   "stars": 0,
-  "commits": 31,
+  "commits": 35,
   "years": {
-   "2026": 31
+   "2026": 35
   },
   "first": "2026-09-16",
-  "last": "2026-09-18",
-  "tag": "v0.3.13",
+  "last": "2026-11-06",
+  "tag": "v0.3.14",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -737,7 +737,7 @@
    "lang": "",
    "code": "gramide_javascript check   src/*.js      exit 0 if it parses, else `file:line:col: unexpected X (expected …)`\ngramide_javascript outline app.js        `L12-40 class Widget`, `  L20-24 method Widget.render`, `L50-61 function main`\ngramide_javascript symbols app.js        versioned JSON names, owners, line and byte ranges\ngramide_javascript tags    app.js        definitions and references: a repo map's input\ngramide_javascript map .   --budget 1024 --task \"fix the retry\""
   },
-  "score": 9.6
+  "score": 9.7
  },
  {
   "full": "O6lvl4/gramide-typescript",
@@ -753,13 +753,13 @@
    "JavaScript"
   ],
   "stars": 0,
-  "commits": 24,
+  "commits": 28,
   "years": {
-   "2026": 24
+   "2026": 28
   },
   "first": "2026-09-16",
-  "last": "2026-09-18",
-  "tag": "v0.3.13",
+  "last": "2026-11-06",
+  "tag": "v0.3.14",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -767,7 +767,7 @@
    "lang": "",
    "code": "gramide_typescript check   src/*.ts      exit 0 if it parses, else `file:line:col: unexpected X (expected …)`\ngramide_typescript outline app.ts        `L12-40 class Widget`, `  L20-24 method Widget.render`, `L50-61 interface Props`\ngramide_typescript symbols app.ts        versioned JSON names, owners, line and byte ranges\ngramide_typescript tags    app.ts        definitions and references: a repo map's input\ngramide_typescript map .   --budget 1024 --task \"fix the retry\""
   },
-  "score": 9.5
+  "score": 9.6
  },
  {
   "full": "O6lvl4/aitrium",
@@ -802,6 +802,32 @@
    "code": "curl -fsSL https://raw.githubusercontent.com/O6lvl4/aitrium/main/install.sh | sh"
   },
   "score": 9.4
+ },
+ {
+  "full": "O6lvl4/gramide-json",
+  "owner": "O6lvl4",
+  "name": "gramide-json",
+  "url": "https://github.com/O6lvl4/gramide-json",
+  "lead": "JSON grammar for Gramide",
+  "heading": "gramide-json",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 13,
+  "years": {
+   "2026": 13
+  },
+  "first": "2026-10-05",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "score": 9.3
  },
  {
   "full": "O6lvl4/onomly",
@@ -841,6 +867,208 @@
    "code": "$ onomly onomly\n=== onomly ===\nnpm ✅  crates.io ✅  RubyGems ✅  Homebrew ✅  GitHub ✅\n.com ✅  .ai ✅  .io ✅  .dev ✅  .org ✅\nonly PyPI taken\n→ verdict: clear on every registry and every domain"
   },
   "score": 9.3
+ },
+ {
+  "full": "O6lvl4/gramide-java",
+  "owner": "O6lvl4",
+  "name": "gramide-java",
+  "url": "https://github.com/O6lvl4/gramide-java",
+  "lead": "Java grammar for Gramide",
+  "heading": "gramide-java",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Java"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-10-05",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build cli/main.almd -o gramide_java\n./gramide_java symbols fixtures/valid/model.java\n./gramide_java outline fixtures/valid/statements.java\n./gramide_java gen-table > src/table.almd\nci/check.sh"
+  },
+  "score": 9.2
+ },
+ {
+  "full": "O6lvl4/gramide-c",
+  "owner": "O6lvl4",
+  "name": "gramide-c",
+  "url": "https://github.com/O6lvl4/gramide-c",
+  "lead": "C grammar for Gramide",
+  "heading": "gramide-c",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "C"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-10-05",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "score": 9.1
+ },
+ {
+  "full": "O6lvl4/gramide-csharp",
+  "owner": "O6lvl4",
+  "name": "gramide-csharp",
+  "url": "https://github.com/O6lvl4/gramide-csharp",
+  "lead": "C# grammar for Gramide",
+  "heading": "gramide-csharp",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "C#"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-10-05",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build cli/main.almd -o gramide_csharp\n./gramide_csharp symbols fixtures/valid/model.cs\n./gramide_csharp outline fixtures/valid/statements.cs\n./gramide_csharp gen-table > src/table.almd\nci/check.sh"
+  },
+  "score": 9.1
+ },
+ {
+  "full": "O6lvl4/gramide-css",
+  "owner": "O6lvl4",
+  "name": "gramide-css",
+  "url": "https://github.com/O6lvl4/gramide-css",
+  "lead": "CSS grammar for Gramide",
+  "heading": "gramide-css 0.1.0",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-10-05",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test\nalmide build cli/main.almd -o gramide_css\n./gramide_css gen-table | diff -u src/table.almd -\n./gramide_css symbols fixtures/components.css"
+  },
+  "score": 9.1
+ },
+ {
+  "full": "O6lvl4/gramide-lua",
+  "owner": "O6lvl4",
+  "name": "gramide-lua",
+  "url": "https://github.com/O6lvl4/gramide-lua",
+  "lead": "Lua grammar for Gramide",
+  "heading": "gramide-lua 0.1.0",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Lua"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-10-05",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test\nalmide build cli/main.almd -o gramide_lua\n./gramide_lua gen-table | diff -u src/table.almd -\n./gramide_lua symbols fixtures/module.lua"
+  },
+  "score": 9.1
+ },
+ {
+  "full": "O6lvl4/gramide-sql",
+  "owner": "O6lvl4",
+  "name": "gramide-sql",
+  "url": "https://github.com/O6lvl4/gramide-sql",
+  "lead": "SQL grammar for Gramide",
+  "heading": "gramide-sql 0.1.0",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "SQL"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-10-05",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide test\nalmide build cli/main.almd -o gramide_sql\n./gramide_sql gen-table | diff -u src/table.almd -\n./gramide_sql symbols fixtures/schema.sql\npython3 ci/oracle.py ./gramide_sql"
+  },
+  "score": 9.1
+ },
+ {
+  "full": "O6lvl4/gramide-toml",
+  "owner": "O6lvl4",
+  "name": "gramide-toml",
+  "url": "https://github.com/O6lvl4/gramide-toml",
+  "lead": "TOML grammar for Gramide",
+  "heading": "gramide-toml",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-10-05",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "score": 9.1
  },
  {
   "full": "O6lvl4/archgopher",
@@ -967,19 +1195,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 137,
+  "commits": 138,
   "years": {
-   "2026": 137
+   "2026": 138
   },
   "first": "2026-10-07",
-  "last": "2026-11-04",
+  "last": "2026-11-05",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "sh",
    "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
-  "score": 7.7
+  "score": 7.8
  },
  {
   "full": "O6lvl4/gv",
@@ -1422,12 +1650,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 89,
+  "commits": 90,
   "years": {
-   "2026": 89
+   "2026": 90
   },
   "first": "2026-09-07",
-  "last": "2026-11-04",
+  "last": "2026-11-05",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1548,19 +1776,19 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 52,
+  "commits": 53,
   "years": {
-   "2026": 52
+   "2026": 53
   },
   "first": "2026-09-14",
-  "last": "2026-11-04",
+  "last": "2026-11-05",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "",
    "code": "z(表, モデル) ≒ b(表) + s(表) × a(モデル)\n```\n\n`z` は表ごとに標準化した実測値(高いほど良い向きに揃えたもの)、`a` がモデルの実力、`s` はその表が実力差をどれだけ広げて見せるか、`b` はその表の水準です。`a` と `(b, s)` を交互に最小二乗で解き、`a` を平均50・標準偏差10に直したものが「戦闘力」です。分野ごとにも同じ当てはめをします。\n\n- 実測が3モデルに満たない表と、全員が同じ値の表は、順位を語らないので使いません。\n- 実測の少ないモデルは、説明できなかった残差の大きさに応じて真ん中へ寄せます(縮約)。1回の結果だけで上位に来ない代わりに、誤差が大きく出ます。\n- 空きセルの推定値は、その分野の当てはめをその表の目盛りに戻し、そのボードが実際に見た範囲に収めたものです。\n- **これは推定であって実測ではありません。** ページでは書式を分け、データでも `fit` として実測の表とは別に置いています。`data/tables/` に推定値が混ざることはありません。\n\n## データ"
   },
-  "score": 6
+  "score": 6.1
  },
  {
   "full": "O6lvl4/ctxgate",
@@ -1646,31 +1874,6 @@
    "code": "$ uimodulay https://playwright.dev --ai --depth 2\n\nPage\n├── Header [row 2]\n│   ├── Nav [row 6]\n│   └── Toolbar [row 4]\n├── Hero\n│   ├── Heading \"enables reliable web automation…\"\n│   ├── Paragraph \"One API to drive Chromium, Fire…\"\n│   └── CTA [row 2]\n├── Main\n│   ├── CardGrid [row 3]\n│   ├── Feature\n│   ├── Feature\n│   ├── Feature\n│   ├── BrowserSupport\n│   └── Showcase\n└── Footer\n    ├── LinkColumns [row 3]\n    └── Copyright \"Copyright © 2026 Microsoft\""
   },
   "score": 5.3
- },
- {
-  "full": "O6lvl4/gramide-json",
-  "owner": "O6lvl4",
-  "name": "gramide-json",
-  "url": "https://github.com/O6lvl4/gramide-json",
-  "lead": "JSON grammar for Gramide",
-  "heading": "gramide-json",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 8,
-  "years": {
-   "2026": 8
-  },
-  "first": "2026-10-05",
-  "last": "2026-10-06",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "score": 5.2
  },
  {
   "full": "O6lvl4/ogumatic-module-design",
@@ -1784,201 +1987,6 @@
    "code": "CONNPASS_API_KEY=... go run ./cmd/connpass-search -group miyazaki-go\nCONNPASS_API_KEY=... go run ./cmd/connpass-search -keyword Go -prefecture miyazaki -json"
   },
   "score": 5.1
- },
- {
-  "full": "O6lvl4/gramide-java",
-  "owner": "O6lvl4",
-  "name": "gramide-java",
-  "url": "https://github.com/O6lvl4/gramide-java",
-  "lead": "Java grammar for Gramide",
-  "heading": "gramide-java",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Java"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-10-05",
-  "last": "2026-10-06",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build cli/main.almd -o gramide_java\n./gramide_java symbols fixtures/valid/model.java\n./gramide_java outline fixtures/valid/statements.java\n./gramide_java gen-table > src/table.almd\nci/check.sh"
-  },
-  "score": 5.1
- },
- {
-  "full": "O6lvl4/gramide-c",
-  "owner": "O6lvl4",
-  "name": "gramide-c",
-  "url": "https://github.com/O6lvl4/gramide-c",
-  "lead": "C grammar for Gramide",
-  "heading": "gramide-c",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "C"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-10-05",
-  "last": "2026-10-05",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "score": 5
- },
- {
-  "full": "O6lvl4/gramide-csharp",
-  "owner": "O6lvl4",
-  "name": "gramide-csharp",
-  "url": "https://github.com/O6lvl4/gramide-csharp",
-  "lead": "C# grammar for Gramide",
-  "heading": "gramide-csharp",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "C#"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-10-05",
-  "last": "2026-10-05",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build cli/main.almd -o gramide_csharp\n./gramide_csharp symbols fixtures/valid/model.cs\n./gramide_csharp outline fixtures/valid/statements.cs\n./gramide_csharp gen-table > src/table.almd\nci/check.sh"
-  },
-  "score": 5
- },
- {
-  "full": "O6lvl4/gramide-css",
-  "owner": "O6lvl4",
-  "name": "gramide-css",
-  "url": "https://github.com/O6lvl4/gramide-css",
-  "lead": "CSS grammar for Gramide",
-  "heading": "gramide-css 0.1.0",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-10-05",
-  "last": "2026-10-05",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test\nalmide build cli/main.almd -o gramide_css\n./gramide_css gen-table | diff -u src/table.almd -\n./gramide_css symbols fixtures/components.css"
-  },
-  "score": 5
- },
- {
-  "full": "O6lvl4/gramide-lua",
-  "owner": "O6lvl4",
-  "name": "gramide-lua",
-  "url": "https://github.com/O6lvl4/gramide-lua",
-  "lead": "Lua grammar for Gramide",
-  "heading": "gramide-lua 0.1.0",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Lua"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-10-05",
-  "last": "2026-10-05",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test\nalmide build cli/main.almd -o gramide_lua\n./gramide_lua gen-table | diff -u src/table.almd -\n./gramide_lua symbols fixtures/module.lua"
-  },
-  "score": 5
- },
- {
-  "full": "O6lvl4/gramide-sql",
-  "owner": "O6lvl4",
-  "name": "gramide-sql",
-  "url": "https://github.com/O6lvl4/gramide-sql",
-  "lead": "SQL grammar for Gramide",
-  "heading": "gramide-sql 0.1.0",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "SQL"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-10-05",
-  "last": "2026-10-05",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide test\nalmide build cli/main.almd -o gramide_sql\n./gramide_sql gen-table | diff -u src/table.almd -\n./gramide_sql symbols fixtures/schema.sql\npython3 ci/oracle.py ./gramide_sql"
-  },
-  "score": 5
- },
- {
-  "full": "O6lvl4/gramide-toml",
-  "owner": "O6lvl4",
-  "name": "gramide-toml",
-  "url": "https://github.com/O6lvl4/gramide-toml",
-  "lead": "TOML grammar for Gramide",
-  "heading": "gramide-toml",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-10-05",
-  "last": "2026-10-05",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "score": 5
  },
  {
   "full": "O6lvl4/hokusai-portfolio",
@@ -3601,17 +3609,17 @@
    "Shell"
   ],
   "stars": 36,
-  "commits": 15808,
+  "commits": 16026,
   "years": {
-   "2026": 15808
+   "2026": 16026
   },
   "first": "2026-03-07",
-  "last": "2026-11-05",
+  "last": "2026-11-06",
   "tag": "v0.60.0-rc3",
   "release": {
-   "tag": "v0.67.1",
-   "url": "https://github.com/almide/almide/releases/tag/v0.67.1",
-   "publishedAt": "2026-10-10T09:32:46Z"
+   "tag": "v0.69.0",
+   "url": "https://github.com/almide/almide/releases/tag/v0.69.0",
+   "publishedAt": "2026-11-05T19:47:23Z"
   },
   "license": "NOASSERTION",
   "topics": [
@@ -3763,12 +3771,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 594,
+  "commits": 595,
   "years": {
-   "2026": 594
+   "2026": 595
   },
   "first": "2026-04-12",
-  "last": "2026-11-04",
+  "last": "2026-11-05",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4085,12 +4093,12 @@
    "HTML"
   ],
   "stars": 0,
-  "commits": 179,
+  "commits": 181,
   "years": {
-   "2026": 179
+   "2026": 181
   },
   "first": "2026-03-08",
-  "last": "2026-10-30",
+  "last": "2026-11-05",
   "topics": [
    "almide",
    "playground",
