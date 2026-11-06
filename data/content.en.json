@@ -119,11 +119,11 @@
    {
     "heading": "Most written",
     "items": [
-     "Almide（103）",
-     "Python（38）",
-     "TypeScript（33）",
-     "Shell（33）",
-     "JavaScript（33）"
+     "Almide（104）",
+     "Python（39）",
+     "Shell（35）",
+     "JavaScript（33）",
+     "TypeScript（32）"
     ]
    },
    {
@@ -152,8 +152,9 @@
    {
     "period": "2025",
     "title": "14 started",
-    "lead": "igloc, llmine, treesrc, cct-fennel-sandbox and 10 more",
+    "lead": "treesrc, igloc, llmine, cct-fennel-sandbox and 10 more",
     "tags": [
+     "Almide",
      "Go",
      "TypeScript",
      "Lua"
@@ -217,12 +218,12 @@
    },
    {
     "key": "Last touched",
-    "value": "gramide · Nov 2026"
+    "value": "sprid · Nov 2026"
    },
    {
     "key": "Written in Almide",
-    "value": "45%",
-    "fill": 0.45
+    "value": "46%",
+    "fill": 0.46
    },
    {
     "key": "Commits in 2026",
@@ -236,7 +237,7 @@
     "label": "Repositories"
    },
    {
-    "value": "23,207",
+    "value": "23,736",
     "label": "Commits"
    },
    {
@@ -251,17 +252,17 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 87,
+    "count": 89,
     "color": "currentColor"
    },
    {
     "name": "TypeScript",
-    "count": 26,
+    "count": 25,
     "color": "#3178c6"
    },
    {
     "name": "Go",
-    "count": 16,
+    "count": 15,
     "color": "#00add8"
    },
    {
@@ -363,27 +364,27 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 19423,
+    "count": 19655,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2956,
+    "count": 3090,
     "of": 123
    },
    {
     "name": "almide-graphics",
-    "count": 671,
+    "count": 720,
     "of": 13
    },
    {
     "name": "almd-mc",
-    "count": 92,
+    "count": 193,
     "of": 24
    },
    {
     "name": "almide-ai",
-    "count": 65,
+    "count": 78,
     "of": 3
    }
   ],
@@ -406,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 22962
+    "count": 23491
    }
   ]
  },
@@ -422,7 +423,7 @@
      "label": "Repositories"
     },
     {
-     "value": "19,248",
+     "value": "19,433",
      "label": "Commits"
     },
     {
@@ -437,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 19248
+     "count": 19433
     }
    ],
    "works": [
@@ -467,7 +468,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "16,026"
+       "value": "16,137"
       },
       {
        "label": "Started",
@@ -514,7 +515,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,923"
+       "value": "1,929"
       },
       {
        "label": "Started",
@@ -536,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-03"
+      "date": "2026-11-06"
      }
     },
     {
@@ -626,6 +627,45 @@
     },
     {
      "image": "",
+     "id": "almide/almide-bindgen",
+     "title": "almide-bindgen",
+     "titleEn": "Universal FFI binding generator library for Almide, written entirely in Almide",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-bindgen",
+     "tags": [
+      "Almide",
+      "Shell",
+      "almide",
+      "bindgen"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "54"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/almide-bindgen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/almide-dojo",
      "title": "almide-dojo",
      "titleEn": "Daily measurement of how often LLM-written code survives modification in Almide, with a harness written in Almide.",
@@ -642,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "595"
+       "value": "606"
       },
       {
        "label": "Started",
@@ -660,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -707,7 +747,7 @@
      "id": "almide/vscode-almide",
      "title": "vscode-almide",
      "titleEn": "VS Code extension for Almide (.almd files), with a TextMate grammar generated from Almide source",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/vscode-almide",
@@ -720,7 +760,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "28"
+       "value": "30"
       },
       {
        "label": "Started",
@@ -738,7 +778,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-11-06"
      }
     },
     {
@@ -785,7 +825,7 @@
      "id": "almide/llm",
      "title": "llm",
      "titleEn": "Streaming LLM clients for Almide with a shared response format.",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/llm",
@@ -795,7 +835,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1"
+       "value": "9"
       },
       {
        "label": "Started",
@@ -803,7 +843,7 @@
       },
       {
        "label": "Tag",
-       "value": "v0.1.0"
+       "value": "v0.2.0"
       }
      ],
      "links": [
@@ -813,7 +853,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -851,45 +891,6 @@
      ],
      "order": {
       "date": "2026-10-27"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-bindgen",
-     "title": "almide-bindgen",
-     "titleEn": "Universal FFI binding generator library for Almide, written entirely in Almide",
-     "date": "Apr 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-bindgen",
-     "tags": [
-      "Almide",
-      "almide",
-      "bindgen",
-      "code-generation"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "33"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      },
-      {
-       "label": "Stars",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/almide-bindgen"
-      }
-     ],
-     "order": {
-      "date": "2026-04-12"
      }
     },
     {
@@ -936,7 +937,7 @@
      "id": "O6lvl4/arlk",
      "title": "arlk",
      "titleEn": "A proof language in Almide that tracks the assumptions behind checked proofs",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/arlk",
@@ -948,7 +949,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "100"
+       "value": "102"
       },
       {
        "label": "Started",
@@ -962,7 +963,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-07"
+      "date": "2026-11-06"
      }
     },
     {
@@ -970,7 +971,7 @@
      "id": "almide/almide-lander",
      "title": "almide-lander",
      "titleEn": "Package exporter that compiles Almide modules into native libraries for 21 languages plus npm/Wasm",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-lander",
@@ -983,7 +984,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "55"
+       "value": "64"
       },
       {
        "label": "Started",
@@ -997,7 +998,41 @@
       }
      ],
      "order": {
-      "date": "2026-10-01"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-wasm-bindgen",
+     "title": "almide-wasm-bindgen",
+     "titleEn": "Library that generates WebAssembly and JS/TS bindings for Almide, written in Almide",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-wasm-bindgen",
+     "tags": [
+      "Almide",
+      "JavaScript",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "28"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/almide-wasm-bindgen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -1005,7 +1040,7 @@
      "id": "almide/cloud-examples",
      "title": "cloud-examples",
      "titleEn": "Examples of one shared Almide JSON API across multiple cloud execution routes",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/cloud-examples",
@@ -1017,7 +1052,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "18"
+       "value": "21"
       },
       {
        "label": "Started",
@@ -1031,7 +1066,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1065,111 +1100,10 @@
     },
     {
      "image": "",
-     "id": "almide/parsegen",
-     "title": "parsegen",
-     "titleEn": "Pure-Almide, tree-sitter compatible parser generator that reads grammar.json to build syntax trees",
-     "date": "Aug 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/parsegen",
-     "tags": [
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/parsegen"
-      }
-     ],
-     "order": {
-      "date": "2026-08-17"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-wasm-bindgen",
-     "title": "almide-wasm-bindgen",
-     "titleEn": "Library that generates WebAssembly and JS/TS bindings for Almide, written in Almide",
-     "date": "Apr 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-wasm-bindgen",
-     "tags": [
-      "Almide",
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "24"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/almide-wasm-bindgen"
-      }
-     ],
-     "order": {
-      "date": "2026-04-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-web",
-     "title": "almide-web",
-     "titleEn": "Browser API bindings for Almide WASM apps, bridging Almide code to DOM, fetch and timers.",
-     "date": "Jul 2026",
-     "format": "JavaScript",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-web",
-     "tags": [
-      "JavaScript",
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/almide-web"
-      }
-     ],
-     "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/almide-examples",
      "title": "almide-examples",
      "titleEn": "Example programs and a mini-git benchmark implementation for the Almide programming language",
-     "date": "Mar 2026",
+     "date": "Nov 2026",
      "format": "Shell",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/almide-examples",
@@ -1180,7 +1114,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1"
+       "value": "4"
       },
       {
        "label": "Started",
@@ -1194,7 +1128,74 @@
       }
      ],
      "order": {
-      "date": "2026-03-07"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-web",
+     "title": "almide-web",
+     "titleEn": "Browser API bindings for Almide WASM apps, bridging Almide code to DOM, fetch and timers.",
+     "date": "Nov 2026",
+     "format": "JavaScript",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-web",
+     "tags": [
+      "JavaScript",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/almide-web"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/parsegen",
+     "title": "parsegen",
+     "titleEn": "Pure-Almide, tree-sitter compatible parser generator that reads grammar.json to build syntax trees",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/parsegen",
+     "tags": [
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "5"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/parsegen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -1244,7 +1245,7 @@
      "label": "Repositories"
     },
     {
-     "value": "67",
+     "value": "96",
      "label": "Commits"
     },
     {
@@ -1259,24 +1260,61 @@
    "years": [
     {
      "name": "2026",
-     "count": 67
+     "count": 96
     }
    ],
    "works": [
     {
-     "image": "plates/en/almide/dfa.jpg",
+     "image": "plates/en/almide/aes.jpg",
      "readme": {
-      "lead": "Multi-pattern DFA matcher for Almide: compiles a regex set into one leftmost-longest automaton.",
+      "lead": "AES-128-CFB8 encryption library for Almide, using AES-NI on Rust and pure Almide on WASM",
       "points": [
-       "Leftmost-longest matching in linear time",
-       "One fused automaton for N patterns",
-       "Pure Almide, no @extern, native and WASM"
+       "AES-NI acceleration on the Rust target",
+       "Pure Almide fallback for WASM",
+       "new_cfb8, cfb8_encrypt, cfb8_decrypt API"
       ]
      },
+     "id": "almide/aes",
+     "title": "aes",
+     "titleEn": "AES-128-CFB8 encryption library for Almide, using AES-NI on Rust and pure Almide on WASM",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/aes",
+     "tags": [
+      "Almide",
+      "Rust"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "9"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      },
+      {
+       "label": "Tag",
+       "value": "v0.2.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/aes"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/dfa",
      "title": "dfa",
      "titleEn": "Multi-pattern DFA matcher for Almide: compiles a regex set into one leftmost-longest automaton.",
-     "date": "Aug 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/dfa",
@@ -1287,7 +1325,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "11"
       },
       {
        "label": "Started",
@@ -1295,7 +1333,7 @@
       },
       {
        "label": "Tag",
-       "value": "v0.1.0"
+       "value": "v0.1.1"
       }
      ],
      "links": [
@@ -1305,7 +1343,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-17"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1326,7 +1364,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "5"
+       "value": "11"
       },
       {
        "label": "Started",
@@ -1334,7 +1372,7 @@
       },
       {
        "label": "Tag",
-       "value": "v0.1.1"
+       "value": "v0.2.0"
       }
      ],
      "links": [
@@ -1344,7 +1382,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-03"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1352,7 +1390,7 @@
      "id": "almide/yaml",
      "title": "yaml",
      "titleEn": "Pure Almide YAML parser and serializer for Almide, with Codec integration for typed records",
-     "date": "May 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/yaml",
@@ -1365,7 +1403,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "10"
+       "value": "12"
       },
       {
        "label": "Started",
@@ -1373,7 +1411,7 @@
       },
       {
        "label": "Tag",
-       "value": "v0.2.0"
+       "value": "v0.2.1"
       }
      ],
      "links": [
@@ -1383,44 +1421,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/aes",
-     "title": "aes",
-     "titleEn": "AES-128-CFB8 encryption library for Almide, using AES-NI on Rust and pure Almide on WASM",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/aes",
-     "tags": [
-      "Almide",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "7"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      },
-      {
-       "label": "Tag",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/aes"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1428,7 +1429,7 @@
      "id": "almide/sha1",
      "title": "sha1",
      "titleEn": "SHA-1 hash library for Almide, native-accelerated on Rust with a pure Almide WASM fallback",
-     "date": "May 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/sha1",
@@ -1439,7 +1440,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "4"
+       "value": "6"
       },
       {
        "label": "Started",
@@ -1447,7 +1448,7 @@
       },
       {
        "label": "Tag",
-       "value": "v0.2.0"
+       "value": "v0.2.1"
       }
      ],
      "links": [
@@ -1457,42 +1458,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/toml",
-     "title": "toml",
-     "titleEn": "TOML v1.0 parser and serializer for Almide, written in pure Almide with Codec integration",
-     "date": "Apr 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/toml",
-     "tags": [
-      "Almide",
-      "almide",
-      "parser",
-      "toml"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "9"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/toml"
-      }
-     ],
-     "order": {
-      "date": "2026-04-12"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1500,7 +1466,7 @@
      "id": "almide/almide-sqlite",
      "title": "almide-sqlite",
      "titleEn": "SQLite3 database access library for the Almide language, installed with almide add",
-     "date": "Aug 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-sqlite",
@@ -1511,7 +1477,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "8"
       },
       {
        "label": "Started",
@@ -1525,7 +1491,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-06"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1533,7 +1499,7 @@
      "id": "almide/base64",
      "title": "base64",
      "titleEn": "Pure Almide Base64 encoding and decoding library, with standard and URL-safe variants.",
-     "date": "Jul 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/base64",
@@ -1546,7 +1512,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "8"
       },
       {
        "label": "Started",
@@ -1560,39 +1526,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/bigint",
-     "title": "bigint",
-     "titleEn": "Arbitrary-precision unsigned integer arithmetic library for the Almide language",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/bigint",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide/bigint"
-      }
-     ],
-     "order": {
-      "date": "2026-05-21"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1600,7 +1534,7 @@
      "id": "almide/csv",
      "title": "csv",
      "titleEn": "Pure Almide CSV parser and serializer with RFC 4180 support, for the Almide language",
-     "date": "Apr 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/csv",
@@ -1613,7 +1547,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "8"
       },
       {
        "label": "Started",
@@ -1627,7 +1561,74 @@
       }
      ],
      "order": {
-      "date": "2026-04-12"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/toml",
+     "title": "toml",
+     "titleEn": "TOML v1.0 parser and serializer for Almide, written in pure Almide with Codec integration",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/toml",
+     "tags": [
+      "Almide",
+      "almide",
+      "parser",
+      "toml"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "11"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/toml"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/bigint",
+     "title": "bigint",
+     "titleEn": "Arbitrary-precision unsigned integer arithmetic library for the Almide language",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/bigint",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/bigint"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -1635,7 +1636,7 @@
      "id": "almide/rsa",
      "title": "rsa",
      "titleEn": "An Almide library for RSA PKCS1v15 encryption with DER key parsing.",
-     "date": "May 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/rsa",
@@ -1645,7 +1646,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "4"
+       "value": "6"
       },
       {
        "label": "Started",
@@ -1659,7 +1660,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-21"
+      "date": "2026-11-06"
      }
     }
    ]
@@ -1675,7 +1676,7 @@
      "label": "Repositories"
     },
     {
-     "value": "1,182",
+     "value": "1,286",
      "label": "Commits"
     },
     {
@@ -1694,7 +1695,7 @@
     },
     {
      "name": "2026",
-     "count": 1166
+     "count": 1270
     }
    ],
    "works": [
@@ -1711,7 +1712,7 @@
      "id": "almide/porta",
      "title": "porta",
      "titleEn": "Run an agent with only the permissions you actually granted it",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "Rust",
      "credit": "almide",
      "url": "https://github.com/almide/porta",
@@ -1724,7 +1725,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "283"
+       "value": "304"
       },
       {
        "label": "Started",
@@ -1746,7 +1747,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1813,7 +1814,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "193"
+       "value": "196"
       },
       {
        "label": "Started",
@@ -1851,7 +1852,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "149"
+       "value": "152"
       },
       {
        "label": "Started",
@@ -1866,6 +1867,44 @@
       {
        "label": "Repository",
        "href": "https://github.com/O6lvl4/gramide-cli"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-python",
+     "title": "gramide-python",
+     "titleEn": "Python 3.14 support for gramide-cli: lexer, grammar, symbol rules and edit-time recovery, checked against CPython",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-python",
+     "tags": [
+      "Almide",
+      "Python",
+      "C"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "138"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      },
+      {
+       "label": "Tag",
+       "value": "v0.1.14"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-python"
       }
      ],
      "order": {
@@ -1889,7 +1928,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "133"
+       "value": "136"
       },
       {
        "label": "Started",
@@ -1927,7 +1966,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "133"
+       "value": "136"
       },
       {
        "label": "Started",
@@ -1942,44 +1981,6 @@
       {
        "label": "Repository",
        "href": "https://github.com/O6lvl4/gramide-go"
-      }
-     ],
-     "order": {
-      "date": "2026-11-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-python",
-     "title": "gramide-python",
-     "titleEn": "Python 3.14 support for gramide-cli: lexer, grammar, symbol rules and edit-time recovery, checked against CPython",
-     "date": "Nov 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-python",
-     "tags": [
-      "Almide",
-      "Python",
-      "C"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "135"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      },
-      {
-       "label": "Tag",
-       "value": "v0.1.14"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/gramide-python"
       }
      ],
      "order": {
@@ -2003,7 +2004,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "134"
+       "value": "137"
       },
       {
        "label": "Started",
@@ -2037,7 +2038,7 @@
      "id": "O6lvl4/golemide",
      "title": "golemide",
      "titleEn": "Read, edit, run the tests: a coding agent that solves more than Aider on the same model",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/golemide",
@@ -2049,7 +2050,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "81"
+       "value": "93"
       },
       {
        "label": "Started",
@@ -2067,7 +2068,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2083,7 +2084,7 @@
      "id": "O6lvl4/comide",
      "title": "comide",
      "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/comide",
@@ -2095,7 +2096,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "59"
+       "value": "64"
       },
       {
        "label": "Started",
@@ -2113,7 +2114,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2141,7 +2142,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "57"
+       "value": "60"
       },
       {
        "label": "Started",
@@ -2226,7 +2227,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "35"
+       "value": "38"
       },
       {
        "label": "Started",
@@ -2264,7 +2265,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "28"
+       "value": "31"
       },
       {
        "label": "Started",
@@ -2279,6 +2280,45 @@
       {
        "label": "Repository",
        "href": "https://github.com/O6lvl4/gramide-typescript"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/onomly",
+     "title": "onomly",
+     "titleEn": "Claude Code skill that runs due diligence on product-name candidates and returns a verdict report",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onomly",
+     "tags": [
+      "Almide",
+      "almide",
+      "claude-code",
+      "claude-skill"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "19"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.4.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/onomly"
       }
      ],
      "order": {
@@ -2302,7 +2342,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "13"
+       "value": "16"
       },
       {
        "label": "Started",
@@ -2325,75 +2365,36 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/onomly",
-     "title": "onomly",
-     "titleEn": "Claude Code skill that runs due diligence on product-name candidates and returns a verdict report",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onomly",
-     "tags": [
-      "Almide",
-      "almide",
-      "claude-code",
-      "claude-skill"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "15"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.4.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/onomly"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-java",
-     "title": "gramide-java",
-     "titleEn": "Reads a core subset of Java syntax for gramide.",
+     "id": "O6lvl4/treesrc",
+     "title": "treesrc",
+     "titleEn": "A TypeScript CLI that shows directory trees and file contents, respecting .gitignore rules",
      "date": "Nov 2026",
      "format": "Almide",
      "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-java",
+     "url": "https://github.com/O6lvl4/treesrc",
      "tags": [
       "Almide",
       "Python",
-      "Java"
+      "Shell"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "8"
+       "value": "17"
       },
       {
        "label": "Started",
-       "value": "Oct 2026"
+       "value": "Mar 2025"
       },
       {
-       "label": "Tag",
-       "value": "v0.1.1"
+       "label": "Release",
+       "value": "v1.0.2"
       }
      ],
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/O6lvl4/gramide-java"
+       "href": "https://github.com/O6lvl4/treesrc"
       }
      ],
      "order": {
@@ -2417,7 +2418,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "Started",
@@ -2455,7 +2456,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "Started",
@@ -2493,7 +2494,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "Started",
@@ -2508,6 +2509,44 @@
       {
        "label": "Repository",
        "href": "https://github.com/O6lvl4/gramide-css"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-java",
+     "title": "gramide-java",
+     "titleEn": "Reads a core subset of Java syntax for gramide.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-java",
+     "tags": [
+      "Almide",
+      "Python",
+      "Java"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "11"
+      },
+      {
+       "label": "Started",
+       "value": "Oct 2026"
+      },
+      {
+       "label": "Tag",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/gramide-java"
       }
      ],
      "order": {
@@ -2531,7 +2570,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "Started",
@@ -2569,7 +2608,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "Started",
@@ -2607,7 +2646,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "Started",
@@ -2666,46 +2705,10 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/treesrc",
-     "title": "treesrc",
-     "titleEn": "A TypeScript CLI that shows directory trees and file contents, respecting .gitignore rules",
-     "date": "Apr 2025",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/treesrc",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "14"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2025"
-      },
-      {
-       "label": "Release",
-       "value": "v1.0.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/treesrc"
-      }
-     ],
-     "order": {
-      "date": "2025-04-01"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/ctxgate",
      "title": "ctxgate",
      "titleEn": "Context firewall for Claude Code and Codex CLI that vaults tool outputs and shows the model compressed views",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/ctxgate",
@@ -2717,7 +2720,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "36"
+       "value": "40"
       },
       {
        "label": "Started",
@@ -2731,7 +2734,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2739,7 +2742,7 @@
      "id": "O6lvl4/assay",
      "title": "assay",
      "titleEn": "Stores coding-agent benchmark figures with their qualifiers intact, plus a harness to measure missing ones.",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/assay",
@@ -2751,7 +2754,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "17"
+       "value": "19"
       },
       {
        "label": "Started",
@@ -2765,7 +2768,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-13"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2806,7 +2809,7 @@
      "id": "O6lvl4/codopsy-almd",
      "title": "codopsy-almd",
      "titleEn": "CLI that measures Almide code complexity from gramide's parse, skipping files not fully parsed",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/codopsy-almd",
@@ -2817,7 +2820,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "4"
+       "value": "6"
       },
       {
        "label": "Started",
@@ -2831,7 +2834,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-11"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2981,7 +2984,7 @@
      "label": "Repositories"
     },
     {
-     "value": "127",
+     "value": "142",
      "label": "Commits"
     },
     {
@@ -3000,63 +3003,24 @@
     },
     {
      "name": "2026",
-     "count": 100
+     "count": 115
     }
    ],
    "works": [
     {
-     "image": "plates/en/almide-ai/almai.jpg",
+     "image": "plates/en/almide/bonsai-almide.jpg",
      "readme": {
-      "lead": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
+      "lead": "Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language",
       "points": [
-       "Anthropic, OpenAI, Gemini, Azure, Cloudflare, CLI",
-       "JSON mode and tool calling",
-       "call_retry with exponential backoff"
+       "Qwen3 chat template with KV cache streaming",
+       "Sampling: temperature, top-k, repetition penalty",
+       "32 KB WASM; 248 MB model cached in IndexedDB"
       ]
      },
-     "id": "almide-ai/almai",
-     "title": "almai",
-     "titleEn": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
-     "date": "Oct 2026",
-     "format": "Almide",
-     "credit": "almide-ai",
-     "url": "https://github.com/almide-ai/almai",
-     "tags": [
-      "Almide",
-      "ai",
-      "almide",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "36"
-      },
-      {
-       "label": "Started",
-       "value": "Apr 2026"
-      },
-      {
-       "label": "Tag",
-       "value": "v0.5.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide-ai/almai"
-      }
-     ],
-     "order": {
-      "date": "2026-10-18"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/bonsai-almide",
      "title": "bonsai-almide",
      "titleEn": "Browser chat demo running the Bonsai 1-bit LLM compiled to WASM through the Almide language",
-     "date": "Apr 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/bonsai-almide",
@@ -3068,7 +3032,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "35"
+       "value": "37"
       },
       {
        "label": "Started",
@@ -3086,7 +3050,46 @@
       }
      ],
      "order": {
-      "date": "2026-04-22"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-ai/almai",
+     "title": "almai",
+     "titleEn": "Multi-provider LLM client for Almide: one interface for every provider, pure Almide.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almide-ai",
+     "url": "https://github.com/almide-ai/almai",
+     "tags": [
+      "Almide",
+      "ai",
+      "almide",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "41"
+      },
+      {
+       "label": "Started",
+       "value": "Apr 2026"
+      },
+      {
+       "label": "Tag",
+       "value": "v0.6.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide-ai/almai"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -3094,7 +3097,7 @@
      "id": "almide-ai/homullus",
      "title": "homullus",
      "titleEn": "Modular AI agent CLI runtime written in Almide, built on almai for multiple LLM providers",
-     "date": "May 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/homullus",
@@ -3104,7 +3107,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "28"
+       "value": "33"
       },
       {
        "label": "Started",
@@ -3122,7 +3125,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -3166,7 +3169,7 @@
      "id": "almide-ai/manus",
      "title": "manus",
      "titleEn": "A computer-use agent in Almide that lets Claude see and control a real macOS desktop.",
-     "date": "Jul 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/manus",
@@ -3176,7 +3179,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1"
+       "value": "4"
       },
       {
        "label": "Started",
@@ -3190,7 +3193,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-07"
+      "date": "2026-11-06"
      }
     }
    ]
@@ -3206,7 +3209,7 @@
      "label": "Repositories"
     },
     {
-     "value": "108",
+     "value": "209",
      "label": "Commits"
     },
     {
@@ -3225,7 +3228,7 @@
     },
     {
      "name": "2026",
-     "count": 92
+     "count": 193
     }
    ],
    "works": [
@@ -3242,7 +3245,7 @@
      "id": "almd-mc/mc-protocol",
      "title": "mc-protocol",
      "titleEn": "Minecraft protocol implementation in Almide: TCP, packet framing, encryption, compression",
-     "date": "May 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almd-mc",
      "url": "https://github.com/almd-mc/mc-protocol",
@@ -3252,7 +3255,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "15"
+       "value": "23"
       },
       {
        "label": "Started",
@@ -3270,7 +3273,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
@@ -3278,7 +3281,7 @@
      "id": "almd-mc/mc-bot-cli",
      "title": "mc-bot-cli",
      "titleEn": "A command-line interface for the Almide Minecraft bot, written in Almide.",
-     "date": "May 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almd-mc",
      "url": "https://github.com/almd-mc/mc-bot-cli",
@@ -3288,7 +3291,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "5"
+       "value": "11"
       },
       {
        "label": "Started",
@@ -3306,7 +3309,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
@@ -3314,10 +3317,42 @@
      "id": "almd-mc/mc-bot",
      "title": "mc-bot",
      "titleEn": "Minecraft bot framework in Almide handling authentication, login, NeoForge handshake and keep alive",
-     "date": "May 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almd-mc",
      "url": "https://github.com/almd-mc/mc-bot",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "16"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-bot"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-auth",
+     "title": "mc-auth",
+     "titleEn": "Minecraft auth module for the Almide language, installed as a git dependency",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-auth",
      "tags": [
       "Almide"
      ],
@@ -3334,29 +3369,29 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-bot"
+       "href": "https://github.com/almd-mc/mc-auth"
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
      "image": "",
-     "id": "almd-mc/mc-auth",
-     "title": "mc-auth",
-     "titleEn": "Minecraft auth module for the Almide language, installed as a git dependency",
-     "date": "May 2026",
+     "id": "almd-mc/mc-chat",
+     "title": "mc-chat",
+     "titleEn": "A Minecraft chat module for the Almide language, installed as a git dependency.",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-auth",
+     "url": "https://github.com/almd-mc/mc-chat",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "4"
+       "value": "9"
       },
       {
        "label": "Started",
@@ -3366,11 +3401,523 @@
      "links": [
       {
        "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-auth"
+       "href": "https://github.com/almd-mc/mc-chat"
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-chunk",
+     "title": "mc-chunk",
+     "titleEn": "A Minecraft chunk module for the Almide language, installed as a git dependency.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-chunk",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "8"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-chunk"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-entity",
+     "title": "mc-entity",
+     "titleEn": "A Minecraft entity module for the Almide language, installed as a git dependency.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-entity",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "8"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-entity"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-item",
+     "title": "mc-item",
+     "titleEn": "A Minecraft item module for the Almide programming language.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-item",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "8"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-item"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-nbt",
+     "title": "mc-nbt",
+     "titleEn": "A Minecraft NBT module for the Almide programming language.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-nbt",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "10"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-nbt"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-pathfinder",
+     "title": "mc-pathfinder",
+     "titleEn": "An Almide implementation of mineflayer-pathfinder: A* pathfinding for Minecraft bots",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-pathfinder",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "8"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-pathfinder"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-registry",
+     "title": "mc-registry",
+     "titleEn": "A Minecraft registry module for the Almide language, installable as a git dependency.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-registry",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "8"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-registry"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-world",
+     "title": "mc-world",
+     "titleEn": "A Minecraft world module for the Almide programming language.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-world",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "8"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-world"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/neoforge",
+     "title": "neoforge",
+     "titleEn": "A Minecraft neoforge module for the Almide language, installed as a git dependency.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/neoforge",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "12"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/neoforge"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-bot-ai",
+     "title": "mc-bot-ai",
+     "titleEn": "AI integration layer for Minecraft bots, covering Phase 5 Intelligence with almai",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-bot-ai",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "7"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-bot-ai"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-collect",
+     "title": "mc-collect",
+     "titleEn": "Block collection automation for Minecraft bots, an Almide implementation of mineflayer-collectblock",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-collect",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "7"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-collect"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-inventory",
+     "title": "mc-inventory",
+     "titleEn": "Inventory window management for Minecraft bots, an Almide implementation of prismarine-windows",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-inventory",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-inventory"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-physics",
+     "title": "mc-physics",
+     "titleEn": "Minecraft physics simulation library for Almide, equivalent to prismarine-physics.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-physics",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "5"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-physics"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-proxy",
+     "title": "mc-proxy",
+     "titleEn": "Minecraft proxy foundation, an Almide implementation of prismarine-proxy.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-proxy",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-proxy"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-pvp",
+     "title": "mc-pvp",
+     "titleEn": "PvP combat utilities for Minecraft bots, an Almide implementation of mineflayer-pvp",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-pvp",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-pvp"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-server",
+     "title": "mc-server",
+     "titleEn": "Almide implementation of node-minecraft-protocol's server mode, a Minecraft server protocol base",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-server",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-server"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-server-impl",
+     "title": "mc-server-impl",
+     "titleEn": "A lightweight Minecraft server implementation, an Almide implementation of flying-squid",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-server-impl",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "6"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almd-mc/mc-server-impl"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -3399,358 +3946,6 @@
       {
        "label": "Repository",
        "href": "https://github.com/almd-mc/mc-block"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-bot-ai",
-     "title": "mc-bot-ai",
-     "titleEn": "AI integration layer for Minecraft bots, covering Phase 5 Intelligence with almai",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-bot-ai",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-bot-ai"
-      }
-     ],
-     "order": {
-      "date": "2026-05-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-chat",
-     "title": "mc-chat",
-     "titleEn": "A Minecraft chat module for the Almide language, installed as a git dependency.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-chat",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "5"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-chat"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-chunk",
-     "title": "mc-chunk",
-     "titleEn": "A Minecraft chunk module for the Almide language, installed as a git dependency.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-chunk",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-chunk"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-entity",
-     "title": "mc-entity",
-     "titleEn": "A Minecraft entity module for the Almide language, installed as a git dependency.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-entity",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-entity"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-item",
-     "title": "mc-item",
-     "titleEn": "A Minecraft item module for the Almide programming language.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-item",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-item"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-nbt",
-     "title": "mc-nbt",
-     "titleEn": "A Minecraft NBT module for the Almide programming language.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-nbt",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "5"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-nbt"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-pathfinder",
-     "title": "mc-pathfinder",
-     "titleEn": "An Almide implementation of mineflayer-pathfinder: A* pathfinding for Minecraft bots",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-pathfinder",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-pathfinder"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-registry",
-     "title": "mc-registry",
-     "titleEn": "A Minecraft registry module for the Almide language, installable as a git dependency.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-registry",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-registry"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-world",
-     "title": "mc-world",
-     "titleEn": "A Minecraft world module for the Almide programming language.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-world",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-world"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/neoforge",
-     "title": "neoforge",
-     "titleEn": "A Minecraft neoforge module for the Almide language, installed as a git dependency.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/neoforge",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "5"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/neoforge"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-collect",
-     "title": "mc-collect",
-     "titleEn": "Block collection automation for Minecraft bots, an Almide implementation of mineflayer-collectblock",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-collect",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-collect"
       }
      ],
      "order": {
@@ -3791,134 +3986,6 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-inventory",
-     "title": "mc-inventory",
-     "titleEn": "Inventory window management for Minecraft bots, an Almide implementation of prismarine-windows",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-inventory",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-inventory"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-physics",
-     "title": "mc-physics",
-     "titleEn": "Minecraft physics simulation library for Almide, equivalent to prismarine-physics.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-physics",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-physics"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-proxy",
-     "title": "mc-proxy",
-     "titleEn": "Minecraft proxy foundation, an Almide implementation of prismarine-proxy.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-proxy",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-proxy"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-pvp",
-     "title": "mc-pvp",
-     "titleEn": "PvP combat utilities for Minecraft bots, an Almide implementation of mineflayer-pvp",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-pvp",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-pvp"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
      "id": "almd-mc/mc-recipe",
      "title": "mc-recipe",
      "titleEn": "Minecraft crafting recipes for Almide, an equivalent of prismarine-recipe.",
@@ -3943,70 +4010,6 @@
       {
        "label": "Repository",
        "href": "https://github.com/almd-mc/mc-recipe"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-server",
-     "title": "mc-server",
-     "titleEn": "Almide implementation of node-minecraft-protocol's server mode, a Minecraft server protocol base",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-server",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-server"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-server-impl",
-     "title": "mc-server-impl",
-     "titleEn": "A lightweight Minecraft server implementation, an Almide implementation of flying-squid",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-server-impl",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almd-mc/mc-server-impl"
       }
      ],
      "order": {
@@ -4059,7 +4062,7 @@
      "label": "Repositories"
     },
     {
-     "value": "671",
+     "value": "720",
      "label": "Commits"
     },
     {
@@ -4074,7 +4077,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 671
+     "count": 720
     }
    ],
    "works": [
@@ -4129,7 +4132,7 @@
      "id": "almide-graphics/nendo",
      "title": "nendo",
      "titleEn": "Avatar sculpting toolkit to inspect, edit and visually customize VRM 3D avatar files",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "HTML",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/nendo",
@@ -4141,7 +4144,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "96"
+       "value": "107"
       },
       {
        "label": "Started",
@@ -4159,7 +4162,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4167,7 +4170,7 @@
      "id": "almide-graphics/nn",
      "title": "nn",
      "titleEn": "Inference for Almide: Whisper plus Qwen CPU execution",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/nn",
@@ -4180,7 +4183,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "81"
+       "value": "88"
       },
       {
        "label": "Started",
@@ -4188,7 +4191,7 @@
       },
       {
        "label": "Tag",
-       "value": "v0.1.0"
+       "value": "v0.2.0"
       }
      ],
      "links": [
@@ -4198,7 +4201,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4206,20 +4209,20 @@
      "id": "almide-graphics/obsid",
      "title": "obsid",
      "titleEn": "Graphics runtime for Almide providing Canvas 2D, WebGL and 3D mesh rendering via WASM",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "JavaScript",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/obsid",
      "tags": [
       "JavaScript",
-      "Almide",
       "Rust",
+      "Almide",
       "3d"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "49"
+       "value": "56"
       },
       {
        "label": "Started",
@@ -4241,7 +4244,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4249,7 +4252,7 @@
      "id": "almide-graphics/lumen",
      "title": "lumen",
      "titleEn": "Pure graphics math primitives for Almide that use no @extern(wasm) and run on every target",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/lumen",
@@ -4262,7 +4265,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "3"
+       "value": "5"
       },
       {
        "label": "Started",
@@ -4280,7 +4283,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4288,7 +4291,7 @@
      "id": "almide-graphics/snaidhm",
      "title": "snaidhm",
      "titleEn": "A WebGPU-based 2D and 3D rendering foundation for Almide",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/snaidhm",
@@ -4300,7 +4303,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "170"
+       "value": "175"
       },
       {
        "label": "Started",
@@ -4314,7 +4317,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-24"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4360,7 +4363,7 @@
      "id": "almide-graphics/almide-shell",
      "title": "almide-shell",
      "titleEn": "A desktop shell for Hyprland written in Almide",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/almide-shell",
@@ -4372,7 +4375,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "21"
+       "value": "28"
       },
       {
        "label": "Started",
@@ -4386,40 +4389,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-graphics/slabhra",
-     "title": "slabhra",
-     "titleEn": "Differentiable programming library for Almide: reverse-mode autograd, tensors and optimizers",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/slabhra",
-     "tags": [
-      "Almide",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "8"
-      },
-      {
-       "label": "Started",
-       "value": "Jun 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide-graphics/slabhra"
-      }
-     ],
-     "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4427,7 +4397,7 @@
      "id": "almide-graphics/ceangal-anime",
      "title": "ceangal-anime",
      "titleEn": "Pure-WASM animation engine for Almide with anime.js-inspired tween, easing, timeline and stagger",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/ceangal-anime",
@@ -4438,7 +4408,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "7"
+       "value": "10"
       },
       {
        "label": "Started",
@@ -4452,7 +4422,73 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/cruth",
+     "title": "cruth",
+     "titleEn": "Renderer-agnostic VRM/glTF character layer for Almide: parsing, geometry, morphs, expressions",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/cruth",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "8"
+      },
+      {
+       "label": "Started",
+       "value": "Jul 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide-graphics/cruth"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/slabhra",
+     "title": "slabhra",
+     "titleEn": "Differentiable programming library for Almide: reverse-mode autograd, tensors and optimizers",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/slabhra",
+     "tags": [
+      "Almide",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "10"
+      },
+      {
+       "label": "Started",
+       "value": "Jun 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide-graphics/slabhra"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -4517,39 +4553,6 @@
      ],
      "order": {
       "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-graphics/cruth",
-     "title": "cruth",
-     "titleEn": "Renderer-agnostic VRM/glTF character layer for Almide: parsing, geometry, morphs, expressions",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/cruth",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "3"
-      },
-      {
-       "label": "Started",
-       "value": "Jul 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/almide-graphics/cruth"
-      }
-     ],
-     "order": {
-      "date": "2026-09-30"
      }
     }
    ]
@@ -4794,7 +4797,7 @@
      "label": "Repositories"
     },
     {
-     "value": "327",
+     "value": "330",
      "label": "Commits"
     },
     {
@@ -4809,7 +4812,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 327
+     "count": 330
     }
    ],
    "works": [
@@ -4861,6 +4864,42 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/awen",
+     "title": "awen",
+     "titleEn": "Knowledge-retention CLI that runs SM-2 spaced repetition on a markdown vault, written in Almide",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/awen",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "14"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v0.0.5"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/awen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/memre",
      "title": "memre",
      "titleEn": "Native macOS desktop app for AI-powered spaced repetition flashcards, with local-first storage.",
@@ -4896,42 +4935,6 @@
      ],
      "order": {
       "date": "2026-04-27"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/awen",
-     "title": "awen",
-     "titleEn": "Knowledge-retention CLI that runs SM-2 spaced repetition on a markdown vault, written in Almide",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/awen",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "11"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v0.0.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/awen"
-      }
-     ],
-     "order": {
-      "date": "2026-05-04"
      }
     },
     {
@@ -4980,7 +4983,7 @@
      "label": "Repositories"
     },
     {
-     "value": "201",
+     "value": "212",
      "label": "Commits"
     },
     {
@@ -4995,7 +4998,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 201
+     "count": 212
     }
    ],
    "works": [
@@ -5012,7 +5015,7 @@
      "id": "O6lvl4/almide-headset-eq",
      "title": "almide-headset-eq",
      "titleEn": "Parametric EQ of cascaded RBJ biquads in Almide, correcting the CYBER CY-P5GMWHS headset's sound",
-     "date": "Jun 2026",
+     "date": "Nov 2026",
      "format": "HTML",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/almide-headset-eq",
@@ -5023,7 +5026,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "4"
+       "value": "7"
       },
       {
        "label": "Started",
@@ -5041,7 +5044,7 @@
       }
      ],
      "order": {
-      "date": "2026-06-19"
+      "date": "2026-11-06"
      }
     },
     {
@@ -5061,7 +5064,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "90"
+       "value": "91"
       },
       {
        "label": "Started",
@@ -5079,7 +5082,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -5099,7 +5102,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "53"
+       "value": "60"
       },
       {
        "label": "Started",
@@ -5117,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -5345,7 +5348,7 @@
      "label": "Repositories"
     },
     {
-     "value": "201",
+     "value": "212",
      "label": "Commits"
     },
     {
@@ -5368,7 +5371,7 @@
     },
     {
      "name": "2026",
-     "count": 164
+     "count": 175
     }
    ],
    "works": [
@@ -5648,6 +5651,38 @@
      }
     },
     {
+     "image": "",
+     "id": "O6lvl4/O6lvl4-vitals",
+     "title": "O6lvl4-vitals",
+     "titleEn": "An almide CLI that quantitatively checks daily life data against the 14 O6lvl4-protocol rules.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-vitals",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "14"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/O6lvl4-vitals"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
      "image": "plates/en/O6lvl4/uimodulay.jpg",
      "readme": {
       "lead": "Semantic UI structure analyzer that turns a URL into the modules a designer would draw, not the DOM",
@@ -5687,6 +5722,38 @@
      ],
      "order": {
       "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/tocsin-almd",
+     "title": "tocsin-almd",
+     "titleEn": "Almide implementation of Tocsin, a supply chain attack early warning tool.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/tocsin-almd",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "9"
+      },
+      {
+       "label": "Started",
+       "value": "May 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/tocsin-almd"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -5790,38 +5857,6 @@
      ],
      "order": {
       "date": "2026-06-19"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-vitals",
-     "title": "O6lvl4-vitals",
-     "titleEn": "An almide CLI that quantitatively checks daily life data against the 14 O6lvl4-protocol rules.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-vitals",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "10"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/O6lvl4-vitals"
-      }
-     ],
-     "order": {
-      "date": "2026-05-07"
      }
     },
     {
@@ -6044,38 +6079,6 @@
      ],
      "order": {
       "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/tocsin-almd",
-     "title": "tocsin-almd",
-     "titleEn": "Almide implementation of Tocsin, a supply chain attack early warning tool.",
-     "date": "May 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/tocsin-almd",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "2"
-      },
-      {
-       "label": "Started",
-       "value": "May 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/tocsin-almd"
-      }
-     ],
-     "order": {
-      "date": "2026-05-12"
      }
     },
     {
@@ -6662,7 +6665,7 @@
      "label": "Repositories"
     },
     {
-     "value": "598",
+     "value": "619",
      "label": "Commits"
     },
     {
@@ -6693,7 +6696,7 @@
     },
     {
      "name": "2026",
-     "count": 449
+     "count": 470
     }
    ],
    "works": [
@@ -6710,7 +6713,7 @@
      "id": "O6lvl4/sprid",
      "title": "sprid",
      "titleEn": "A lightweight macOS and Linux terminal for long interactive CLI sessions",
-     "date": "Oct 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/sprid",
@@ -6722,7 +6725,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "202"
+       "value": "209"
       },
       {
        "label": "Started",
@@ -6744,7 +6747,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-28"
+      "date": "2026-11-06"
      }
     },
     {
@@ -6794,7 +6797,7 @@
      "id": "O6lvl4/aitrium",
      "title": "aitrium",
      "titleEn": "A runtime that confines a coding agent's tools with the operating system's kernel",
-     "date": "Sep 2026",
+     "date": "Nov 2026",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/aitrium",
@@ -6806,7 +6809,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "22"
+       "value": "25"
       },
       {
        "label": "Started",
@@ -6824,7 +6827,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-11-06"
      }
     },
     {
@@ -6844,7 +6847,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "138"
+       "value": "140"
       },
       {
        "label": "Started",
@@ -6858,7 +6861,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -6899,44 +6902,10 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/ogumatic-module-design",
-     "title": "ogumatic-module-design",
-     "titleEn": "A module design method grounded in role boundaries, cards and evidence",
-     "date": "Sep 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/ogumatic-module-design",
-     "tags": [
-      "Almide",
-      "Go",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "12"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/ogumatic-module-design"
-      }
-     ],
-     "order": {
-      "date": "2026-09-26"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/almide-otel-demo",
      "title": "almide-otel-demo",
      "titleEn": "A from-scratch OpenTelemetry tracing SDK in pure Almide, with a two-service trace demo in Jaeger",
-     "date": "Aug 2026",
+     "date": "Nov 2026",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/almide-otel-demo",
@@ -6946,7 +6915,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "13"
+       "value": "17"
       },
       {
        "label": "Started",
@@ -6960,7 +6929,75 @@
       }
      ],
      "order": {
-      "date": "2026-08-04"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/ogumatic-module-design",
+     "title": "ogumatic-module-design",
+     "titleEn": "A module design method grounded in role boundaries, cards and evidence",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/ogumatic-module-design",
+     "tags": [
+      "Almide",
+      "Go",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "14"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/ogumatic-module-design"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/go1.27-vs-almide",
+     "title": "go1.27-vs-almide",
+     "titleEn": "Notes comparing Go 1.27 new features with the almide 0.41 language, for a Miyazaki.go meetup",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/go1.27-vs-almide",
+     "tags": [
+      "Almide",
+      "Go",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "7"
+      },
+      {
+       "label": "Started",
+       "value": "Jul 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/go1.27-vs-almide"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -6990,40 +7027,6 @@
       {
        "label": "Repository",
        "href": "https://github.com/O6lvl4/go1.26-vs-go1.27"
-      }
-     ],
-     "order": {
-      "date": "2026-07-31"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/go1.27-vs-almide",
-     "title": "go1.27-vs-almide",
-     "titleEn": "Notes comparing Go 1.27 new features with the almide 0.41 language, for a Miyazaki.go meetup",
-     "date": "Jul 2026",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/go1.27-vs-almide",
-     "tags": [
-      "Go",
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "4"
-      },
-      {
-       "label": "Started",
-       "value": "Jul 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/go1.27-vs-almide"
       }
      ],
      "order": {

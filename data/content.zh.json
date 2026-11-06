@@ -119,11 +119,11 @@
    {
     "heading": "常写的语言",
     "items": [
-     "Almide（103）",
-     "Python（38）",
-     "TypeScript（33）",
-     "Shell（33）",
-     "JavaScript（33）"
+     "Almide（104）",
+     "Python（39）",
+     "Shell（35）",
+     "JavaScript（33）",
+     "TypeScript（32）"
     ]
    },
    {
@@ -152,8 +152,9 @@
    {
     "period": "2025年",
     "title": "开始了 14 个",
-    "lead": "igloc、llmine、treesrc、cct-fennel-sandbox 等 10 个",
+    "lead": "treesrc、igloc、llmine、cct-fennel-sandbox 等 10 个",
     "tags": [
+     "Almide",
      "Go",
      "TypeScript",
      "Lua"
@@ -217,12 +218,12 @@
    },
    {
     "key": "最近更新",
-    "value": "gramide · 2026年11月"
+    "value": "sprid · 2026年11月"
    },
    {
     "key": "用 Almide 写的比例",
-    "value": "45%",
-    "fill": 0.45
+    "value": "46%",
+    "fill": 0.46
    },
    {
     "key": "2026 年的提交",
@@ -236,7 +237,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "23,207",
+    "value": "23,736",
     "label": "提交"
    },
    {
@@ -251,17 +252,17 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 87,
+    "count": 89,
     "color": "currentColor"
    },
    {
     "name": "TypeScript",
-    "count": 26,
+    "count": 25,
     "color": "#3178c6"
    },
    {
     "name": "Go",
-    "count": 16,
+    "count": 15,
     "color": "#00add8"
    },
    {
@@ -363,27 +364,27 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 19423,
+    "count": 19655,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2956,
+    "count": 3090,
     "of": 123
    },
    {
     "name": "almide-graphics",
-    "count": 671,
+    "count": 720,
     "of": 13
    },
    {
     "name": "almd-mc",
-    "count": 92,
+    "count": 193,
     "of": 24
    },
    {
     "name": "almide-ai",
-    "count": 65,
+    "count": 78,
     "of": 3
    }
   ],
@@ -406,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 22962
+    "count": 23491
    }
   ]
  },
@@ -422,7 +423,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "19,248",
+     "value": "19,433",
      "label": "提交"
     },
     {
@@ -437,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 19248
+     "count": 19433
     }
    ],
    "works": [
@@ -467,7 +468,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "16,026"
+       "value": "16,137"
       },
       {
        "label": "首次",
@@ -514,7 +515,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,923"
+       "value": "1,929"
       },
       {
        "label": "首次",
@@ -536,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-03"
+      "date": "2026-11-06"
      }
     },
     {
@@ -626,6 +627,45 @@
     },
     {
      "image": "",
+     "id": "almide/almide-bindgen",
+     "title": "almide-bindgen",
+     "titleEn": "用Almide编写的通用FFI绑定生成库",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-bindgen",
+     "tags": [
+      "Almide",
+      "Shell",
+      "almide",
+      "bindgen"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "54"
+      },
+      {
+       "label": "首次",
+       "value": "2026年3月"
+      },
+      {
+       "label": "星标",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/almide-bindgen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/almide-dojo",
      "title": "almide-dojo",
      "titleEn": "每日测量Almide中LLM代码的修改存活率",
@@ -642,7 +682,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "595"
+       "value": "606"
       },
       {
        "label": "首次",
@@ -660,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -707,7 +747,7 @@
      "id": "almide/vscode-almide",
      "title": "vscode-almide",
      "titleEn": "面向Almide语言.almd文件的VS Code扩展",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/vscode-almide",
@@ -720,7 +760,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "28"
+       "value": "30"
       },
       {
        "label": "首次",
@@ -738,7 +778,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-11-06"
      }
     },
     {
@@ -785,7 +825,7 @@
      "id": "almide/llm",
      "title": "llm",
      "titleEn": "Almide的LLM流式客户端",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/llm",
@@ -795,7 +835,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1"
+       "value": "9"
       },
       {
        "label": "首次",
@@ -803,7 +843,7 @@
       },
       {
        "label": "标签",
-       "value": "v0.1.0"
+       "value": "v0.2.0"
       }
      ],
      "links": [
@@ -813,7 +853,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -851,45 +891,6 @@
      ],
      "order": {
       "date": "2026-10-27"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-bindgen",
-     "title": "almide-bindgen",
-     "titleEn": "用Almide编写的通用FFI绑定生成库",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-bindgen",
-     "tags": [
-      "Almide",
-      "almide",
-      "bindgen",
-      "code-generation"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "33"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      },
-      {
-       "label": "星标",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/almide-bindgen"
-      }
-     ],
-     "order": {
-      "date": "2026-04-12"
      }
     },
     {
@@ -936,7 +937,7 @@
      "id": "O6lvl4/arlk",
      "title": "arlk",
      "titleEn": "用Almide编写、追踪证明前提的语言",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/arlk",
@@ -948,7 +949,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "100"
+       "value": "102"
       },
       {
        "label": "首次",
@@ -962,7 +963,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-07"
+      "date": "2026-11-06"
      }
     },
     {
@@ -970,7 +971,7 @@
      "id": "almide/almide-lander",
      "title": "almide-lander",
      "titleEn": "将Almide模块导出为21种语言原生包的工具",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-lander",
@@ -983,7 +984,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "55"
+       "value": "64"
       },
       {
        "label": "首次",
@@ -997,7 +998,41 @@
       }
      ],
      "order": {
-      "date": "2026-10-01"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-wasm-bindgen",
+     "title": "almide-wasm-bindgen",
+     "titleEn": "为Almide生成WASM与JS/TS绑定的库",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-wasm-bindgen",
+     "tags": [
+      "Almide",
+      "JavaScript",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "28"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/almide-wasm-bindgen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -1005,7 +1040,7 @@
      "id": "almide/cloud-examples",
      "title": "cloud-examples",
      "titleEn": "在多种云运行方式下复用Almide API的示例",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/cloud-examples",
@@ -1017,7 +1052,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "18"
+       "value": "21"
       },
       {
        "label": "首次",
@@ -1031,7 +1066,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1065,111 +1100,10 @@
     },
     {
      "image": "",
-     "id": "almide/parsegen",
-     "title": "parsegen",
-     "titleEn": "Almide编写的tree-sitter兼容解析器生成器",
-     "date": "2026年8月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/parsegen",
-     "tags": [
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/parsegen"
-      }
-     ],
-     "order": {
-      "date": "2026-08-17"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-wasm-bindgen",
-     "title": "almide-wasm-bindgen",
-     "titleEn": "为Almide生成WASM与JS/TS绑定的库",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-wasm-bindgen",
-     "tags": [
-      "Almide",
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "24"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/almide-wasm-bindgen"
-      }
-     ],
-     "order": {
-      "date": "2026-04-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-web",
-     "title": "almide-web",
-     "titleEn": "面向Almide WASM应用的浏览器API绑定",
-     "date": "2026年7月",
-     "format": "JavaScript",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-web",
-     "tags": [
-      "JavaScript",
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/almide-web"
-      }
-     ],
-     "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/almide-examples",
      "title": "almide-examples",
      "titleEn": "Almide语言的示例程序与mini-git基准实现",
-     "date": "2026年3月",
+     "date": "2026年11月",
      "format": "Shell",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/almide-examples",
@@ -1180,7 +1114,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1"
+       "value": "4"
       },
       {
        "label": "首次",
@@ -1194,7 +1128,74 @@
       }
      ],
      "order": {
-      "date": "2026-03-07"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-web",
+     "title": "almide-web",
+     "titleEn": "面向Almide WASM应用的浏览器API绑定",
+     "date": "2026年11月",
+     "format": "JavaScript",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-web",
+     "tags": [
+      "JavaScript",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/almide-web"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/parsegen",
+     "title": "parsegen",
+     "titleEn": "Almide编写的tree-sitter兼容解析器生成器",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/parsegen",
+     "tags": [
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "5"
+      },
+      {
+       "label": "首次",
+       "value": "2026年8月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/parsegen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -1244,7 +1245,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "67",
+     "value": "96",
      "label": "提交"
     },
     {
@@ -1259,24 +1260,61 @@
    "years": [
     {
      "name": "2026",
-     "count": 67
+     "count": 96
     }
    ],
    "works": [
     {
-     "image": "plates/zh/almide/dfa.jpg",
+     "image": "plates/zh/almide/aes.jpg",
      "readme": {
-      "lead": "Almide的多模式DFA匹配库,将正则集编译为单一自动机",
+      "lead": "面向Almide的AES-128-CFB8加密库",
       "points": [
-       "线性时间最左最长匹配",
-       "多模式融合为单一自动机",
-       "纯Almide,支持WASM"
+       "Rust目标使用AES-NI加速",
+       "WASM使用纯Almide回退",
+       "new_cfb8与cfb8加解密API"
       ]
      },
+     "id": "almide/aes",
+     "title": "aes",
+     "titleEn": "面向Almide的AES-128-CFB8加密库",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/aes",
+     "tags": [
+      "Almide",
+      "Rust"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "9"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      },
+      {
+       "label": "标签",
+       "value": "v0.2.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/aes"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/dfa",
      "title": "dfa",
      "titleEn": "Almide的多模式DFA匹配库,将正则集编译为单一自动机",
-     "date": "2026年8月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/dfa",
@@ -1287,7 +1325,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "11"
       },
       {
        "label": "首次",
@@ -1295,7 +1333,7 @@
       },
       {
        "label": "标签",
-       "value": "v0.1.0"
+       "value": "v0.1.1"
       }
      ],
      "links": [
@@ -1305,7 +1343,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-17"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1326,7 +1364,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "5"
+       "value": "11"
       },
       {
        "label": "首次",
@@ -1334,7 +1372,7 @@
       },
       {
        "label": "标签",
-       "value": "v0.1.1"
+       "value": "v0.2.0"
       }
      ],
      "links": [
@@ -1344,7 +1382,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-03"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1352,7 +1390,7 @@
      "id": "almide/yaml",
      "title": "yaml",
      "titleEn": "Almide 的纯 Almide YAML 解析与序列化库，支持 Codec",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/yaml",
@@ -1365,7 +1403,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "10"
+       "value": "12"
       },
       {
        "label": "首次",
@@ -1373,7 +1411,7 @@
       },
       {
        "label": "标签",
-       "value": "v0.2.0"
+       "value": "v0.2.1"
       }
      ],
      "links": [
@@ -1383,44 +1421,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/aes",
-     "title": "aes",
-     "titleEn": "面向Almide的AES-128-CFB8加密库",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/aes",
-     "tags": [
-      "Almide",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "7"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      },
-      {
-       "label": "标签",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/aes"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1428,7 +1429,7 @@
      "id": "almide/sha1",
      "title": "sha1",
      "titleEn": "面向Almide的SHA-1哈希库",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/sha1",
@@ -1439,7 +1440,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "4"
+       "value": "6"
       },
       {
        "label": "首次",
@@ -1447,7 +1448,7 @@
       },
       {
        "label": "标签",
-       "value": "v0.2.0"
+       "value": "v0.2.1"
       }
      ],
      "links": [
@@ -1457,42 +1458,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/toml",
-     "title": "toml",
-     "titleEn": "Almide 的 TOML v1.0 解析与序列化库,集成 Codec",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/toml",
-     "tags": [
-      "Almide",
-      "almide",
-      "parser",
-      "toml"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "9"
-      },
-      {
-       "label": "首次",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/toml"
-      }
-     ],
-     "order": {
-      "date": "2026-04-12"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1500,7 +1466,7 @@
      "id": "almide/almide-sqlite",
      "title": "almide-sqlite",
      "titleEn": "面向Almide的SQLite3数据库访问库",
-     "date": "2026年8月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-sqlite",
@@ -1511,7 +1477,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "8"
       },
       {
        "label": "首次",
@@ -1525,7 +1491,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-06"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1533,7 +1499,7 @@
      "id": "almide/base64",
      "title": "base64",
      "titleEn": "Almide的纯Almide实现Base64编解码库",
-     "date": "2026年7月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/base64",
@@ -1546,7 +1512,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "8"
       },
       {
        "label": "首次",
@@ -1560,39 +1526,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/bigint",
-     "title": "bigint",
-     "titleEn": "面向Almide的任意精度无符号整数运算库",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/bigint",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/bigint"
-      }
-     ],
-     "order": {
-      "date": "2026-05-21"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1600,7 +1534,7 @@
      "id": "almide/csv",
      "title": "csv",
      "titleEn": "Almide 的 CSV 解析与序列化库,支持 RFC 4180",
-     "date": "2026年4月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/csv",
@@ -1613,7 +1547,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "8"
       },
       {
        "label": "首次",
@@ -1627,7 +1561,74 @@
       }
      ],
      "order": {
-      "date": "2026-04-12"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/toml",
+     "title": "toml",
+     "titleEn": "Almide 的 TOML v1.0 解析与序列化库,集成 Codec",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/toml",
+     "tags": [
+      "Almide",
+      "almide",
+      "parser",
+      "toml"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "11"
+      },
+      {
+       "label": "首次",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/toml"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/bigint",
+     "title": "bigint",
+     "titleEn": "面向Almide的任意精度无符号整数运算库",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/bigint",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/bigint"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -1635,7 +1636,7 @@
      "id": "almide/rsa",
      "title": "rsa",
      "titleEn": "面向Almide的RSA PKCS1v15加密与DER密钥解析库",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/rsa",
@@ -1645,7 +1646,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "4"
+       "value": "6"
       },
       {
        "label": "首次",
@@ -1659,7 +1660,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-21"
+      "date": "2026-11-06"
      }
     }
    ]
@@ -1675,7 +1676,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "1,182",
+     "value": "1,286",
      "label": "提交"
     },
     {
@@ -1694,7 +1695,7 @@
     },
     {
      "name": "2026",
-     "count": 1166
+     "count": 1270
     }
    ],
    "works": [
@@ -1711,7 +1712,7 @@
      "id": "almide/porta",
      "title": "porta",
      "titleEn": "只用你授予的权限来运行智能体",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Rust",
      "credit": "almide",
      "url": "https://github.com/almide/porta",
@@ -1724,7 +1725,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "283"
+       "value": "304"
       },
       {
        "label": "首次",
@@ -1746,7 +1747,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1813,7 +1814,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "193"
+       "value": "196"
       },
       {
        "label": "首次",
@@ -1851,7 +1852,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "149"
+       "value": "152"
       },
       {
        "label": "首次",
@@ -1866,6 +1867,44 @@
       {
        "label": "仓库",
        "href": "https://github.com/O6lvl4/gramide-cli"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-python",
+     "title": "gramide-python",
+     "titleEn": "gramide-cli的Python 3.14支持,含词法、文法与编辑恢复",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-python",
+     "tags": [
+      "Almide",
+      "Python",
+      "C"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "138"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      },
+      {
+       "label": "标签",
+       "value": "v0.1.14"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/gramide-python"
       }
      ],
      "order": {
@@ -1889,7 +1928,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "133"
+       "value": "136"
       },
       {
        "label": "首次",
@@ -1927,7 +1966,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "133"
+       "value": "136"
       },
       {
        "label": "首次",
@@ -1942,44 +1981,6 @@
       {
        "label": "仓库",
        "href": "https://github.com/O6lvl4/gramide-go"
-      }
-     ],
-     "order": {
-      "date": "2026-11-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-python",
-     "title": "gramide-python",
-     "titleEn": "gramide-cli的Python 3.14支持,含词法、文法与编辑恢复",
-     "date": "2026年11月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-python",
-     "tags": [
-      "Almide",
-      "Python",
-      "C"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "135"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      },
-      {
-       "label": "标签",
-       "value": "v0.1.14"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/gramide-python"
       }
      ],
      "order": {
@@ -2003,7 +2004,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "134"
+       "value": "137"
       },
       {
        "label": "首次",
@@ -2037,7 +2038,7 @@
      "id": "O6lvl4/golemide",
      "title": "golemide",
      "titleEn": "读、改、跑测试：同一模型下比 Aider 解出更多题的编码智能体",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/golemide",
@@ -2049,7 +2050,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "81"
+       "value": "93"
       },
       {
        "label": "首次",
@@ -2067,7 +2068,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2083,7 +2084,7 @@
      "id": "O6lvl4/comide",
      "title": "comide",
      "titleEn": "终端里的编码智能体，与 Claude Code、Codex、Aider 一脉相承",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/comide",
@@ -2095,7 +2096,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "59"
+       "value": "64"
       },
       {
        "label": "首次",
@@ -2113,7 +2114,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2141,7 +2142,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "57"
+       "value": "60"
       },
       {
        "label": "首次",
@@ -2226,7 +2227,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "35"
+       "value": "38"
       },
       {
        "label": "首次",
@@ -2264,7 +2265,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "28"
+       "value": "31"
       },
       {
        "label": "首次",
@@ -2279,6 +2280,45 @@
       {
        "label": "仓库",
        "href": "https://github.com/O6lvl4/gramide-typescript"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/onomly",
+     "title": "onomly",
+     "titleEn": "检验产品名候选的Claude Code技能",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onomly",
+     "tags": [
+      "Almide",
+      "almide",
+      "claude-code",
+      "claude-skill"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "19"
+      },
+      {
+       "label": "首次",
+       "value": "2026年8月"
+      },
+      {
+       "label": "发行版",
+       "value": "v0.4.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/onomly"
       }
      ],
      "order": {
@@ -2302,7 +2342,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "13"
+       "value": "16"
       },
       {
        "label": "首次",
@@ -2325,75 +2365,36 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/onomly",
-     "title": "onomly",
-     "titleEn": "检验产品名候选的Claude Code技能",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onomly",
-     "tags": [
-      "Almide",
-      "almide",
-      "claude-code",
-      "claude-skill"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "15"
-      },
-      {
-       "label": "首次",
-       "value": "2026年8月"
-      },
-      {
-       "label": "发行版",
-       "value": "v0.4.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/onomly"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-java",
-     "title": "gramide-java",
-     "titleEn": "为gramide读取Java语法子集",
+     "id": "O6lvl4/treesrc",
+     "title": "treesrc",
+     "titleEn": "遵循.gitignore显示目录结构与文件内容的CLI",
      "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-java",
+     "url": "https://github.com/O6lvl4/treesrc",
      "tags": [
       "Almide",
       "Python",
-      "Java"
+      "Shell"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "8"
+       "value": "17"
       },
       {
        "label": "首次",
-       "value": "2026年10月"
+       "value": "2025年3月"
       },
       {
-       "label": "标签",
-       "value": "v0.1.1"
+       "label": "发行版",
+       "value": "v1.0.2"
       }
      ],
      "links": [
       {
        "label": "仓库",
-       "href": "https://github.com/O6lvl4/gramide-java"
+       "href": "https://github.com/O6lvl4/treesrc"
       }
      ],
      "order": {
@@ -2417,7 +2418,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "首次",
@@ -2455,7 +2456,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "首次",
@@ -2493,7 +2494,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "首次",
@@ -2508,6 +2509,44 @@
       {
        "label": "仓库",
        "href": "https://github.com/O6lvl4/gramide-css"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-java",
+     "title": "gramide-java",
+     "titleEn": "为gramide读取Java语法子集",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-java",
+     "tags": [
+      "Almide",
+      "Python",
+      "Java"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "11"
+      },
+      {
+       "label": "首次",
+       "value": "2026年10月"
+      },
+      {
+       "label": "标签",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/gramide-java"
       }
      ],
      "order": {
@@ -2531,7 +2570,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "首次",
@@ -2569,7 +2608,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "首次",
@@ -2607,7 +2646,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "首次",
@@ -2666,46 +2705,10 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/treesrc",
-     "title": "treesrc",
-     "titleEn": "遵循.gitignore显示目录结构与文件内容的CLI",
-     "date": "2025年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/treesrc",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "14"
-      },
-      {
-       "label": "首次",
-       "value": "2025年3月"
-      },
-      {
-       "label": "发行版",
-       "value": "v1.0.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/treesrc"
-      }
-     ],
-     "order": {
-      "date": "2025-04-01"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/ctxgate",
      "title": "ctxgate",
      "titleEn": "Claude Code的上下文防火墙,存档工具输出并压缩展示",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/ctxgate",
@@ -2717,7 +2720,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "36"
+       "value": "40"
       },
       {
        "label": "首次",
@@ -2731,7 +2734,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2739,7 +2742,7 @@
      "id": "O6lvl4/assay",
      "title": "assay",
      "titleEn": "保留限定条件的编码智能体基准数据及测评工具",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/assay",
@@ -2751,7 +2754,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "17"
+       "value": "19"
       },
       {
        "label": "首次",
@@ -2765,7 +2768,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-13"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2806,7 +2809,7 @@
      "id": "O6lvl4/codopsy-almd",
      "title": "codopsy-almd",
      "titleEn": "基于gramide解析度量Almide复杂度",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/codopsy-almd",
@@ -2817,7 +2820,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "4"
+       "value": "6"
       },
       {
        "label": "首次",
@@ -2831,7 +2834,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-11"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2981,7 +2984,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "127",
+     "value": "142",
      "label": "提交"
     },
     {
@@ -3000,63 +3003,24 @@
     },
     {
      "name": "2026",
-     "count": 100
+     "count": 115
     }
    ],
    "works": [
     {
-     "image": "plates/zh/almide-ai/almai.jpg",
+     "image": "plates/zh/almide/bonsai-almide.jpg",
      "readme": {
-      "lead": "Almide的多提供商LLM客户端,统一接口",
+      "lead": "经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示",
       "points": [
-       "按前缀切换8种提供商",
-       "JSON模式与工具调用",
-       "call_retry指数退避重试"
+       "Qwen3聊天模板与KV缓存",
+       "温度、top-k、重复惩罚采样",
+       "248MB模型缓存于IndexedDB"
       ]
      },
-     "id": "almide-ai/almai",
-     "title": "almai",
-     "titleEn": "Almide的多提供商LLM客户端,统一接口",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "almide-ai",
-     "url": "https://github.com/almide-ai/almai",
-     "tags": [
-      "Almide",
-      "ai",
-      "almide",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "36"
-      },
-      {
-       "label": "首次",
-       "value": "2026年4月"
-      },
-      {
-       "label": "标签",
-       "value": "v0.5.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide-ai/almai"
-      }
-     ],
-     "order": {
-      "date": "2026-10-18"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/bonsai-almide",
      "title": "bonsai-almide",
      "titleEn": "经Almide编译为WASM的Bonsai 1比特LLM浏览器聊天演示",
-     "date": "2026年4月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/bonsai-almide",
@@ -3068,7 +3032,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "35"
+       "value": "37"
       },
       {
        "label": "首次",
@@ -3086,7 +3050,46 @@
       }
      ],
      "order": {
-      "date": "2026-04-22"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-ai/almai",
+     "title": "almai",
+     "titleEn": "Almide的多提供商LLM客户端,统一接口",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide-ai",
+     "url": "https://github.com/almide-ai/almai",
+     "tags": [
+      "Almide",
+      "ai",
+      "almide",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "41"
+      },
+      {
+       "label": "首次",
+       "value": "2026年4月"
+      },
+      {
+       "label": "标签",
+       "value": "v0.6.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-ai/almai"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -3094,7 +3097,7 @@
      "id": "almide-ai/homullus",
      "title": "homullus",
      "titleEn": "用Almide编写的模块化AI代理CLI运行时",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/homullus",
@@ -3104,7 +3107,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "28"
+       "value": "33"
       },
       {
        "label": "首次",
@@ -3122,7 +3125,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -3166,7 +3169,7 @@
      "id": "almide-ai/manus",
      "title": "manus",
      "titleEn": "用Almide编写的macOS桌面操控智能体",
-     "date": "2026年7月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/manus",
@@ -3176,7 +3179,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1"
+       "value": "4"
       },
       {
        "label": "首次",
@@ -3190,7 +3193,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-07"
+      "date": "2026-11-06"
      }
     }
    ]
@@ -3206,7 +3209,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "108",
+     "value": "209",
      "label": "提交"
     },
     {
@@ -3225,7 +3228,7 @@
     },
     {
      "name": "2026",
-     "count": 92
+     "count": 193
     }
    ],
    "works": [
@@ -3242,7 +3245,7 @@
      "id": "almd-mc/mc-protocol",
      "title": "mc-protocol",
      "titleEn": "用Almide实现的Minecraft协议库",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almd-mc",
      "url": "https://github.com/almd-mc/mc-protocol",
@@ -3252,7 +3255,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "15"
+       "value": "23"
       },
       {
        "label": "首次",
@@ -3270,7 +3273,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
@@ -3278,7 +3281,7 @@
      "id": "almd-mc/mc-bot-cli",
      "title": "mc-bot-cli",
      "titleEn": "Almide Minecraft 机器人的命令行工具",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almd-mc",
      "url": "https://github.com/almd-mc/mc-bot-cli",
@@ -3288,7 +3291,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "5"
+       "value": "11"
       },
       {
        "label": "首次",
@@ -3306,7 +3309,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
@@ -3314,10 +3317,42 @@
      "id": "almd-mc/mc-bot",
      "title": "mc-bot",
      "titleEn": "用Almide编写的Minecraft机器人框架",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almd-mc",
      "url": "https://github.com/almd-mc/mc-bot",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "16"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-bot"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-auth",
+     "title": "mc-auth",
+     "titleEn": "面向Almide的Minecraft认证模块",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-auth",
      "tags": [
       "Almide"
      ],
@@ -3334,29 +3369,29 @@
      "links": [
       {
        "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-bot"
+       "href": "https://github.com/almd-mc/mc-auth"
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
      "image": "",
-     "id": "almd-mc/mc-auth",
-     "title": "mc-auth",
-     "titleEn": "面向Almide的Minecraft认证模块",
-     "date": "2026年5月",
+     "id": "almd-mc/mc-chat",
+     "title": "mc-chat",
+     "titleEn": "面向Almide的Minecraft聊天模块",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-auth",
+     "url": "https://github.com/almd-mc/mc-chat",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "4"
+       "value": "9"
       },
       {
        "label": "首次",
@@ -3366,11 +3401,523 @@
      "links": [
       {
        "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-auth"
+       "href": "https://github.com/almd-mc/mc-chat"
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-chunk",
+     "title": "mc-chunk",
+     "titleEn": "面向Almide的Minecraft区块模块",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-chunk",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "8"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-chunk"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-entity",
+     "title": "mc-entity",
+     "titleEn": "面向Almide的Minecraft实体模块",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-entity",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "8"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-entity"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-item",
+     "title": "mc-item",
+     "titleEn": "面向Almide的Minecraft物品模块",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-item",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "8"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-item"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-nbt",
+     "title": "mc-nbt",
+     "titleEn": "面向Almide的Minecraft NBT模块",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-nbt",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "10"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-nbt"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-pathfinder",
+     "title": "mc-pathfinder",
+     "titleEn": "mineflayer-pathfinder的Almide实现,面向Minecraft机器人的A*寻路",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-pathfinder",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "8"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-pathfinder"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-registry",
+     "title": "mc-registry",
+     "titleEn": "面向Almide的Minecraft注册表模块",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-registry",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "8"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-registry"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-world",
+     "title": "mc-world",
+     "titleEn": "面向Almide的Minecraft世界模块",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-world",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "8"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-world"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/neoforge",
+     "title": "neoforge",
+     "titleEn": "Almide的Minecraft neoforge模块",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/neoforge",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "12"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/neoforge"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-bot-ai",
+     "title": "mc-bot-ai",
+     "titleEn": "面向Minecraft机器人的AI集成层,基于almai",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-bot-ai",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "7"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-bot-ai"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-collect",
+     "title": "mc-collect",
+     "titleEn": "Minecraft机器人的方块收集自动化库",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-collect",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "7"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-collect"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-inventory",
+     "title": "mc-inventory",
+     "titleEn": "面向Minecraft机器人的物品栏窗口管理",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-inventory",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-inventory"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-physics",
+     "title": "mc-physics",
+     "titleEn": "面向Almide的Minecraft物理模拟库",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-physics",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "5"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-physics"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-proxy",
+     "title": "mc-proxy",
+     "titleEn": "用Almide实现prismarine-proxy的Minecraft代理基础",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-proxy",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-proxy"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-pvp",
+     "title": "mc-pvp",
+     "titleEn": "用Almide实现的Minecraft机器人PvP战斗工具",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-pvp",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-pvp"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-server",
+     "title": "mc-server",
+     "titleEn": "用Almide实现的Minecraft服务器协议基础",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-server",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-server"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-server-impl",
+     "title": "mc-server-impl",
+     "titleEn": "用Almide实现flying-squid的轻量Minecraft服务器",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-server-impl",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "6"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almd-mc/mc-server-impl"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -3399,358 +3946,6 @@
       {
        "label": "仓库",
        "href": "https://github.com/almd-mc/mc-block"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-bot-ai",
-     "title": "mc-bot-ai",
-     "titleEn": "面向Minecraft机器人的AI集成层,基于almai",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-bot-ai",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-bot-ai"
-      }
-     ],
-     "order": {
-      "date": "2026-05-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-chat",
-     "title": "mc-chat",
-     "titleEn": "面向Almide的Minecraft聊天模块",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-chat",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "5"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-chat"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-chunk",
-     "title": "mc-chunk",
-     "titleEn": "面向Almide的Minecraft区块模块",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-chunk",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-chunk"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-entity",
-     "title": "mc-entity",
-     "titleEn": "面向Almide的Minecraft实体模块",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-entity",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-entity"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-item",
-     "title": "mc-item",
-     "titleEn": "面向Almide的Minecraft物品模块",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-item",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-item"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-nbt",
-     "title": "mc-nbt",
-     "titleEn": "面向Almide的Minecraft NBT模块",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-nbt",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "5"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-nbt"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-pathfinder",
-     "title": "mc-pathfinder",
-     "titleEn": "mineflayer-pathfinder的Almide实现,面向Minecraft机器人的A*寻路",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-pathfinder",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-pathfinder"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-registry",
-     "title": "mc-registry",
-     "titleEn": "面向Almide的Minecraft注册表模块",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-registry",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-registry"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-world",
-     "title": "mc-world",
-     "titleEn": "面向Almide的Minecraft世界模块",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-world",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-world"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/neoforge",
-     "title": "neoforge",
-     "titleEn": "Almide的Minecraft neoforge模块",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/neoforge",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "5"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/neoforge"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-collect",
-     "title": "mc-collect",
-     "titleEn": "Minecraft机器人的方块收集自动化库",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-collect",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-collect"
       }
      ],
      "order": {
@@ -3791,134 +3986,6 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-inventory",
-     "title": "mc-inventory",
-     "titleEn": "面向Minecraft机器人的物品栏窗口管理",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-inventory",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-inventory"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-physics",
-     "title": "mc-physics",
-     "titleEn": "面向Almide的Minecraft物理模拟库",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-physics",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "1"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-physics"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-proxy",
-     "title": "mc-proxy",
-     "titleEn": "用Almide实现prismarine-proxy的Minecraft代理基础",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-proxy",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-proxy"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-pvp",
-     "title": "mc-pvp",
-     "titleEn": "用Almide实现的Minecraft机器人PvP战斗工具",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-pvp",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-pvp"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
      "id": "almd-mc/mc-recipe",
      "title": "mc-recipe",
      "titleEn": "面向Almide的Minecraft合成配方库,对标prismarine-recipe",
@@ -3943,70 +4010,6 @@
       {
        "label": "仓库",
        "href": "https://github.com/almd-mc/mc-recipe"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-server",
-     "title": "mc-server",
-     "titleEn": "用Almide实现的Minecraft服务器协议基础",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-server",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-server"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-server-impl",
-     "title": "mc-server-impl",
-     "titleEn": "用Almide实现flying-squid的轻量Minecraft服务器",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-server-impl",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almd-mc/mc-server-impl"
       }
      ],
      "order": {
@@ -4059,7 +4062,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "671",
+     "value": "720",
      "label": "提交"
     },
     {
@@ -4074,7 +4077,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 671
+     "count": 720
     }
    ],
    "works": [
@@ -4129,7 +4132,7 @@
      "id": "almide-graphics/nendo",
      "title": "nendo",
      "titleEn": "用于检查、编辑和定制3D头像的工具包",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "HTML",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/nendo",
@@ -4141,7 +4144,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "96"
+       "value": "107"
       },
       {
        "label": "首次",
@@ -4159,7 +4162,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4167,7 +4170,7 @@
      "id": "almide-graphics/nn",
      "title": "nn",
      "titleEn": "面向Almide的Whisper与Qwen推理库",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/nn",
@@ -4180,7 +4183,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "81"
+       "value": "88"
       },
       {
        "label": "首次",
@@ -4188,7 +4191,7 @@
       },
       {
        "label": "标签",
-       "value": "v0.1.0"
+       "value": "v0.2.0"
       }
      ],
      "links": [
@@ -4198,7 +4201,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4206,20 +4209,20 @@
      "id": "almide-graphics/obsid",
      "title": "obsid",
      "titleEn": "面向Almide的图形运行时，通过WASM支持2D、WebGL与3D",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "JavaScript",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/obsid",
      "tags": [
       "JavaScript",
-      "Almide",
       "Rust",
+      "Almide",
       "3d"
      ],
      "stats": [
       {
        "label": "提交",
-       "value": "49"
+       "value": "56"
       },
       {
        "label": "首次",
@@ -4241,7 +4244,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4249,7 +4252,7 @@
      "id": "almide-graphics/lumen",
      "title": "lumen",
      "titleEn": "Almide的纯图形数学基础库",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/lumen",
@@ -4262,7 +4265,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "3"
+       "value": "5"
       },
       {
        "label": "首次",
@@ -4280,7 +4283,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4288,7 +4291,7 @@
      "id": "almide-graphics/snaidhm",
      "title": "snaidhm",
      "titleEn": "基于WebGPU的Almide二维与三维绘制基础",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/snaidhm",
@@ -4300,7 +4303,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "170"
+       "value": "175"
       },
       {
        "label": "首次",
@@ -4314,7 +4317,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-24"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4360,7 +4363,7 @@
      "id": "almide-graphics/almide-shell",
      "title": "almide-shell",
      "titleEn": "用Almide编写的Hyprland桌面外壳",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/almide-shell",
@@ -4372,7 +4375,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "21"
+       "value": "28"
       },
       {
        "label": "首次",
@@ -4386,40 +4389,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-graphics/slabhra",
-     "title": "slabhra",
-     "titleEn": "Almide原生的可微编程库,含反向自动微分",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/slabhra",
-     "tags": [
-      "Almide",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "8"
-      },
-      {
-       "label": "首次",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide-graphics/slabhra"
-      }
-     ],
-     "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4427,7 +4397,7 @@
      "id": "almide-graphics/ceangal-anime",
      "title": "ceangal-anime",
      "titleEn": "受anime.js启发的Almide动画引擎",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/ceangal-anime",
@@ -4438,7 +4408,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "7"
+       "value": "10"
       },
       {
        "label": "首次",
@@ -4452,7 +4422,73 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/cruth",
+     "title": "cruth",
+     "titleEn": "Almide的VRM/glTF角色层，含解析与表情",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/cruth",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "8"
+      },
+      {
+       "label": "首次",
+       "value": "2026年7月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-graphics/cruth"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/slabhra",
+     "title": "slabhra",
+     "titleEn": "Almide原生的可微编程库,含反向自动微分",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/slabhra",
+     "tags": [
+      "Almide",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "10"
+      },
+      {
+       "label": "首次",
+       "value": "2026年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide-graphics/slabhra"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -4517,39 +4553,6 @@
      ],
      "order": {
       "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-graphics/cruth",
-     "title": "cruth",
-     "titleEn": "Almide的VRM/glTF角色层，含解析与表情",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/cruth",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "3"
-      },
-      {
-       "label": "首次",
-       "value": "2026年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide-graphics/cruth"
-      }
-     ],
-     "order": {
-      "date": "2026-09-30"
      }
     }
    ]
@@ -4794,7 +4797,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "327",
+     "value": "330",
      "label": "提交"
     },
     {
@@ -4809,7 +4812,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 327
+     "count": 330
     }
    ],
    "works": [
@@ -4861,6 +4864,42 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/awen",
+     "title": "awen",
+     "titleEn": "基于SM-2间隔重复的Markdown笔记记忆CLI",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/awen",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "14"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      },
+      {
+       "label": "发行版",
+       "value": "v0.0.5"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/awen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/memre",
      "title": "memre",
      "titleEn": "AI驱动的macOS原生间隔重复闪卡应用",
@@ -4896,42 +4935,6 @@
      ],
      "order": {
       "date": "2026-04-27"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/awen",
-     "title": "awen",
-     "titleEn": "基于SM-2间隔重复的Markdown笔记记忆CLI",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/awen",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "11"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      },
-      {
-       "label": "发行版",
-       "value": "v0.0.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/awen"
-      }
-     ],
-     "order": {
-      "date": "2026-05-04"
      }
     },
     {
@@ -4980,7 +4983,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "201",
+     "value": "212",
      "label": "提交"
     },
     {
@@ -4995,7 +4998,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 201
+     "count": 212
     }
    ],
    "works": [
@@ -5012,7 +5015,7 @@
      "id": "O6lvl4/almide-headset-eq",
      "title": "almide-headset-eq",
      "titleEn": "用Almide编写的级联biquad参量均衡器,校正CYBER耳机",
-     "date": "2026年6月",
+     "date": "2026年11月",
      "format": "HTML",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/almide-headset-eq",
@@ -5023,7 +5026,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "4"
+       "value": "7"
       },
       {
        "label": "首次",
@@ -5041,7 +5044,7 @@
       }
      ],
      "order": {
-      "date": "2026-06-19"
+      "date": "2026-11-06"
      }
     },
     {
@@ -5061,7 +5064,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "90"
+       "value": "91"
       },
       {
        "label": "首次",
@@ -5079,7 +5082,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -5099,7 +5102,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "53"
+       "value": "60"
       },
       {
        "label": "首次",
@@ -5117,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -5345,7 +5348,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "201",
+     "value": "212",
      "label": "提交"
     },
     {
@@ -5368,7 +5371,7 @@
     },
     {
      "name": "2026",
-     "count": 164
+     "count": 175
     }
    ],
    "works": [
@@ -5648,6 +5651,38 @@
      }
     },
     {
+     "image": "",
+     "id": "O6lvl4/O6lvl4-vitals",
+     "title": "O6lvl4-vitals",
+     "titleEn": "检查O6lvl4-protocol 14项协议合规的almide命令行工具",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-vitals",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "14"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/O6lvl4-vitals"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
      "image": "plates/zh/O6lvl4/uimodulay.jpg",
      "readme": {
       "lead": "将URL解析为设计师视角模块结构的UI分析器",
@@ -5687,6 +5722,38 @@
      ],
      "order": {
       "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/tocsin-almd",
+     "title": "tocsin-almd",
+     "titleEn": "Tocsin供应链攻击预警的Almide实现",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/tocsin-almd",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "9"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/tocsin-almd"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -5790,38 +5857,6 @@
      ],
      "order": {
       "date": "2026-06-19"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-vitals",
-     "title": "O6lvl4-vitals",
-     "titleEn": "检查O6lvl4-protocol 14项协议合规的almide命令行工具",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-vitals",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "10"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/O6lvl4-vitals"
-      }
-     ],
-     "order": {
-      "date": "2026-05-07"
      }
     },
     {
@@ -6044,38 +6079,6 @@
      ],
      "order": {
       "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/tocsin-almd",
-     "title": "tocsin-almd",
-     "titleEn": "Tocsin供应链攻击预警的Almide实现",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/tocsin-almd",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "2"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/tocsin-almd"
-      }
-     ],
-     "order": {
-      "date": "2026-05-12"
      }
     },
     {
@@ -6662,7 +6665,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "598",
+     "value": "619",
      "label": "提交"
     },
     {
@@ -6693,7 +6696,7 @@
     },
     {
      "name": "2026",
-     "count": 449
+     "count": 470
     }
    ],
    "works": [
@@ -6710,7 +6713,7 @@
      "id": "O6lvl4/sprid",
      "title": "sprid",
      "titleEn": "面向长时间CLI操作的轻量终端",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/sprid",
@@ -6722,7 +6725,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "202"
+       "value": "209"
       },
       {
        "label": "首次",
@@ -6744,7 +6747,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-28"
+      "date": "2026-11-06"
      }
     },
     {
@@ -6794,7 +6797,7 @@
      "id": "O6lvl4/aitrium",
      "title": "aitrium",
      "titleEn": "由内核隔离编程智能体工具的运行环境",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/aitrium",
@@ -6806,7 +6809,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "22"
+       "value": "25"
       },
       {
        "label": "首次",
@@ -6824,7 +6827,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-11-06"
      }
     },
     {
@@ -6844,7 +6847,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "138"
+       "value": "140"
       },
       {
        "label": "首次",
@@ -6858,7 +6861,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -6899,44 +6902,10 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/ogumatic-module-design",
-     "title": "ogumatic-module-design",
-     "titleEn": "以角色边界、卡片和证据为准的模块设计方法",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/ogumatic-module-design",
-     "tags": [
-      "Almide",
-      "Go",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "12"
-      },
-      {
-       "label": "首次",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/ogumatic-module-design"
-      }
-     ],
-     "order": {
-      "date": "2026-09-26"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/almide-otel-demo",
      "title": "almide-otel-demo",
      "titleEn": "纯Almide自研的OpenTelemetry追踪SDK及Jaeger双服务演示",
-     "date": "2026年8月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/almide-otel-demo",
@@ -6946,7 +6915,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "13"
+       "value": "17"
       },
       {
        "label": "首次",
@@ -6960,7 +6929,75 @@
       }
      ],
      "order": {
-      "date": "2026-08-04"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/ogumatic-module-design",
+     "title": "ogumatic-module-design",
+     "titleEn": "以角色边界、卡片和证据为准的模块设计方法",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/ogumatic-module-design",
+     "tags": [
+      "Almide",
+      "Go",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "14"
+      },
+      {
+       "label": "首次",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/ogumatic-module-design"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/go1.27-vs-almide",
+     "title": "go1.27-vs-almide",
+     "titleEn": "对比Go 1.27新特性与almide 0.41的勉强会笔记",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/go1.27-vs-almide",
+     "tags": [
+      "Almide",
+      "Go",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "7"
+      },
+      {
+       "label": "首次",
+       "value": "2026年7月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/go1.27-vs-almide"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -6990,40 +7027,6 @@
       {
        "label": "仓库",
        "href": "https://github.com/O6lvl4/go1.26-vs-go1.27"
-      }
-     ],
-     "order": {
-      "date": "2026-07-31"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/go1.27-vs-almide",
-     "title": "go1.27-vs-almide",
-     "titleEn": "对比Go 1.27新特性与almide 0.41的勉强会笔记",
-     "date": "2026年7月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/go1.27-vs-almide",
-     "tags": [
-      "Go",
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "4"
-      },
-      {
-       "label": "首次",
-       "value": "2026年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/go1.27-vs-almide"
       }
      ],
      "order": {

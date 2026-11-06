@@ -12,12 +12,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 202,
+  "commits": 209,
   "years": {
-   "2026": 202
+   "2026": 209
   },
   "first": "2026-09-30",
-  "last": "2026-10-28",
+  "last": "2026-11-06",
   "tag": "v0.9.25",
   "release": {
    "tag": "v0.9.25",
@@ -32,7 +32,7 @@
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 18
+  "score": 18.2
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -181,9 +181,9 @@
    "C"
   ],
   "stars": 0,
-  "commits": 193,
+  "commits": 196,
   "years": {
-   "2026": 193
+   "2026": 196
   },
   "first": "2026-09-08",
   "last": "2026-11-06",
@@ -327,9 +327,9 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 149,
+  "commits": 152,
   "years": {
-   "2026": 38
+   "2026": 41
   },
   "first": "2026-09-08",
   "last": "2026-11-06",
@@ -342,6 +342,36 @@
    "code": "almide install github.com/O6lvl4/gramide-cli --name gramide      # one native binary → ~/.local/bin/gramide"
   },
   "score": 12
+ },
+ {
+  "full": "O6lvl4/gramide-python",
+  "owner": "O6lvl4",
+  "name": "gramide-python",
+  "url": "https://github.com/O6lvl4/gramide-python",
+  "lead": "Python 3.14 for gramide: lexer, grammar, compiled table, symbol rules and edit-time recovery, checked against CPython",
+  "heading": "gramide-python",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "C"
+  ],
+  "stars": 0,
+  "commits": 138,
+  "years": {
+   "2026": 27
+  },
+  "first": "2026-09-08",
+  "last": "2026-11-06",
+  "tag": "v0.1.14",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "almide build cli/main.almd -o gramide_python       # gramide over .py and .pyi alone\n./gramide_python check $(python3.14 -c 'import sysconfig;print(sysconfig.get_path(\"stdlib\"))')/*.py\n./gramide_python outline inspect.py                # `L2-3 method A.m`; nested: `Outer.Inner.method`\n./gramide_python symbols-recovered editing.py      # declarations untouched by the damage, and where the damage is\n./gramide_python gen-table > src/table.almd        # after any change to the grammar"
+  },
+  "score": 11.8
  },
  {
   "full": "O6lvl4/gramide-almide",
@@ -357,9 +387,9 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 133,
+  "commits": 136,
   "years": {
-   "2026": 22
+   "2026": 25
   },
   "first": "2026-09-08",
   "last": "2026-11-06",
@@ -387,9 +417,9 @@
    "C"
   ],
   "stars": 0,
-  "commits": 133,
+  "commits": 136,
   "years": {
-   "2026": 22
+   "2026": 25
   },
   "first": "2026-09-08",
   "last": "2026-11-06",
@@ -400,36 +430,6 @@
   "sample": {
    "lang": "",
    "code": "almide build cli/main.almd -o gramide_go     # gramide over .go alone\n./gramide_go check $(go env GOROOT)/src/go/parser/*.go\n./gramide_go outline main.go                 # `L5-5 method Shape.Area`: a method named with its receiver\n./gramide_go gen-table > src/table.almd      # after any change to the grammar"
-  },
-  "score": 11.7
- },
- {
-  "full": "O6lvl4/gramide-python",
-  "owner": "O6lvl4",
-  "name": "gramide-python",
-  "url": "https://github.com/O6lvl4/gramide-python",
-  "lead": "Python 3.14 for gramide: lexer, grammar, compiled table, symbol rules and edit-time recovery, checked against CPython",
-  "heading": "gramide-python",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "C"
-  ],
-  "stars": 0,
-  "commits": 135,
-  "years": {
-   "2026": 24
-  },
-  "first": "2026-09-08",
-  "last": "2026-11-06",
-  "tag": "v0.1.14",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "almide build cli/main.almd -o gramide_python       # gramide over .py and .pyi alone\n./gramide_python check $(python3.14 -c 'import sysconfig;print(sysconfig.get_path(\"stdlib\"))')/*.py\n./gramide_python outline inspect.py                # `L2-3 method A.m`; nested: `Outer.Inner.method`\n./gramide_python symbols-recovered editing.py      # declarations untouched by the damage, and where the damage is\n./gramide_python gen-table > src/table.almd        # after any change to the grammar"
   },
   "score": 11.7
  },
@@ -447,9 +447,9 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 134,
+  "commits": 137,
   "years": {
-   "2026": 23
+   "2026": 26
   },
   "first": "2026-09-08",
   "last": "2026-11-06",
@@ -525,12 +525,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 81,
+  "commits": 93,
   "years": {
-   "2026": 81
+   "2026": 93
   },
   "first": "2026-09-08",
-  "last": "2026-09-29",
+  "last": "2026-11-06",
   "tag": "v0.3.0",
   "license": "NOASSERTION",
   "topics": [],
@@ -540,7 +540,7 @@
    "lang": "sh",
    "code": "almide build\n./golemide observe --root ../project"
   },
-  "score": 10.6
+  "score": 10.9
  },
  {
   "full": "O6lvl4/O6lvl4-knowledge",
@@ -579,12 +579,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 59,
+  "commits": 64,
   "years": {
-   "2026": 59
+   "2026": 64
   },
   "first": "2026-09-12",
-  "last": "2026-09-29",
+  "last": "2026-11-06",
   "tag": "v0.5.0",
   "license": "NOASSERTION",
   "topics": [],
@@ -594,7 +594,7 @@
    "lang": "sh",
    "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
   },
-  "score": 10.2
+  "score": 10.3
  },
  {
   "full": "O6lvl4/hew",
@@ -610,9 +610,9 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 57,
+  "commits": 60,
   "years": {
-   "2026": 57
+   "2026": 60
   },
   "first": "2026-09-06",
   "last": "2026-11-06",
@@ -624,6 +624,33 @@
   "sample": {
    "lang": "",
    "code": "hew src/lower.rs --symbol lower_match       one function, found by name\nhew src/lower.rs --grep \"Expr::Match\" --around 4   matches with context, labelled by enclosing fn\nhew src/lower.rs --lines 120-160            a range, numbered\nhew outline src/lower.rs                    the table of contents\nhew grep \"unwrap()\" src                     grep that folds repeats and names the symbol\nhew tree src --depth 2                      a directory, skipping vcs / build / deps"
+  },
+  "score": 10.2
+ },
+ {
+  "full": "O6lvl4/almide-headset-eq",
+  "owner": "O6lvl4",
+  "name": "almide-headset-eq",
+  "url": "https://github.com/O6lvl4/almide-headset-eq",
+  "lead": "Almide-built parametric EQ (cascaded RBJ biquads) for the CYBER CY-P5GMWHS gaming headset — pure-logic DSP compiled to WASM, with a WebAudio demo. Written in the Almide language.",
+  "heading": "headset-eq",
+  "language": "HTML",
+  "languages": [
+   "HTML",
+   "Almide"
+  ],
+  "stars": 1,
+  "commits": 7,
+  "years": {
+   "2026": 7
+  },
+  "first": "2026-06-19",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide test                 # DSP の数式的正しさを検証(6 テスト)\nalmide run                  # デモ: インパルス応答 + 各バンド中心の実測ゲインを表示\nalmide build src/eq.almd --target wasm --release -o dist/headset_eq.wasm"
   },
   "score": 10.1
  },
@@ -723,9 +750,9 @@
    "C"
   ],
   "stars": 0,
-  "commits": 35,
+  "commits": 38,
   "years": {
-   "2026": 35
+   "2026": 38
   },
   "first": "2026-09-16",
   "last": "2026-11-06",
@@ -737,7 +764,7 @@
    "lang": "",
    "code": "gramide_javascript check   src/*.js      exit 0 if it parses, else `file:line:col: unexpected X (expected …)`\ngramide_javascript outline app.js        `L12-40 class Widget`, `  L20-24 method Widget.render`, `L50-61 function main`\ngramide_javascript symbols app.js        versioned JSON names, owners, line and byte ranges\ngramide_javascript tags    app.js        definitions and references: a repo map's input\ngramide_javascript map .   --budget 1024 --task \"fix the retry\""
   },
-  "score": 9.7
+  "score": 9.8
  },
  {
   "full": "O6lvl4/gramide-typescript",
@@ -753,9 +780,9 @@
    "JavaScript"
   ],
   "stars": 0,
-  "commits": 28,
+  "commits": 31,
   "years": {
-   "2026": 28
+   "2026": 31
   },
   "first": "2026-09-16",
   "last": "2026-11-06",
@@ -782,12 +809,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 22,
+  "commits": 25,
   "years": {
-   "2026": 22
+   "2026": 25
   },
   "first": "2026-09-27",
-  "last": "2026-09-29",
+  "last": "2026-11-06",
   "tag": "v0.3.0",
   "release": {
    "tag": "v0.3.0",
@@ -801,33 +828,7 @@
    "lang": "sh",
    "code": "curl -fsSL https://raw.githubusercontent.com/O6lvl4/aitrium/main/install.sh | sh"
   },
-  "score": 9.4
- },
- {
-  "full": "O6lvl4/gramide-json",
-  "owner": "O6lvl4",
-  "name": "gramide-json",
-  "url": "https://github.com/O6lvl4/gramide-json",
-  "lead": "JSON grammar for Gramide",
-  "heading": "gramide-json",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 13,
-  "years": {
-   "2026": 13
-  },
-  "first": "2026-10-05",
-  "last": "2026-11-06",
-  "tag": "v0.1.1",
-  "license": "NOASSERTION",
-  "topics": [],
-  "plate": "code",
-  "score": 9.3
+  "score": 9.5
  },
  {
   "full": "O6lvl4/onomly",
@@ -840,12 +841,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 15,
+  "commits": 19,
   "years": {
-   "2026": 15
+   "2026": 19
   },
   "first": "2026-08-30",
-  "last": "2026-09-06",
+  "last": "2026-11-06",
   "tag": "v0.4.0",
   "release": {
    "tag": "v0.4.0",
@@ -866,25 +867,58 @@
    "lang": "text",
    "code": "$ onomly onomly\n=== onomly ===\nnpm ✅  crates.io ✅  RubyGems ✅  Homebrew ✅  GitHub ✅\n.com ✅  .ai ✅  .io ✅  .dev ✅  .org ✅\nonly PyPI taken\n→ verdict: clear on every registry and every domain"
   },
+  "score": 9.4
+ },
+ {
+  "full": "O6lvl4/awen",
+  "owner": "O6lvl4",
+  "name": "awen",
+  "url": "https://github.com/O6lvl4/awen",
+  "lead": "Awen — knowledge retention CLI for your markdown vault. SM-2 spaced repetition, written in Almide.",
+  "heading": "awen",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 14,
+  "years": {
+   "2026": 14
+  },
+  "first": "2026-05-04",
+  "last": "2026-11-06",
+  "tag": "v0.0.5",
+  "release": {
+   "tag": "v0.0.5",
+   "url": "https://github.com/O6lvl4/awen/releases/tag/v0.0.5",
+   "publishedAt": "2026-05-04T13:22:43Z"
+  },
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "# Install Almide once\ncurl -fsSL https://raw.githubusercontent.com/almide/almide/main/tools/install.sh | sh\n\n# Then install awen\nalmide install github.com/O6lvl4/awen"
+  },
   "score": 9.3
  },
  {
-  "full": "O6lvl4/gramide-java",
+  "full": "O6lvl4/gramide-json",
   "owner": "O6lvl4",
-  "name": "gramide-java",
-  "url": "https://github.com/O6lvl4/gramide-java",
-  "lead": "Java grammar for Gramide",
-  "heading": "gramide-java",
+  "name": "gramide-json",
+  "url": "https://github.com/O6lvl4/gramide-json",
+  "lead": "JSON grammar for Gramide",
+  "heading": "gramide-json",
   "language": "Almide",
   "languages": [
    "Almide",
    "Python",
-   "Java"
+   "Shell"
   ],
   "stars": 0,
-  "commits": 8,
+  "commits": 16,
   "years": {
-   "2026": 8
+   "2026": 16
   },
   "first": "2026-10-05",
   "last": "2026-11-06",
@@ -892,11 +926,41 @@
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "almide build cli/main.almd -o gramide_java\n./gramide_java symbols fixtures/valid/model.java\n./gramide_java outline fixtures/valid/statements.java\n./gramide_java gen-table > src/table.almd\nci/check.sh"
+  "score": 9.3
+ },
+ {
+  "full": "O6lvl4/treesrc",
+  "owner": "O6lvl4",
+  "name": "treesrc",
+  "url": "https://github.com/O6lvl4/treesrc",
+  "lead": "A CLI tool written in TypeScript that displays directory structures and file contents",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 17,
+  "years": {
+   "2025": 14,
+   "2026": 3
   },
-  "score": 9.2
+  "first": "2025-03-19",
+  "last": "2026-11-06",
+  "tag": "v1.0.2",
+  "release": {
+   "tag": "v1.0.2",
+   "url": "https://github.com/O6lvl4/treesrc/releases/tag/v1.0.2",
+   "publishedAt": "2025-03-19T16:24:39Z"
+  },
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide install github.com/O6lvl4/treesrc   # one native binary → ~/.local/bin/treesrc"
+  },
+  "score": 9.3
  },
  {
   "full": "O6lvl4/gramide-c",
@@ -912,9 +976,9 @@
    "C"
   ],
   "stars": 0,
-  "commits": 6,
+  "commits": 9,
   "years": {
-   "2026": 6
+   "2026": 9
   },
   "first": "2026-10-05",
   "last": "2026-11-06",
@@ -922,7 +986,7 @@
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
-  "score": 9.1
+  "score": 9.2
  },
  {
   "full": "O6lvl4/gramide-csharp",
@@ -938,9 +1002,9 @@
    "C#"
   ],
   "stars": 0,
-  "commits": 6,
+  "commits": 9,
   "years": {
-   "2026": 6
+   "2026": 9
   },
   "first": "2026-10-05",
   "last": "2026-11-06",
@@ -952,7 +1016,7 @@
    "lang": "sh",
    "code": "almide build cli/main.almd -o gramide_csharp\n./gramide_csharp symbols fixtures/valid/model.cs\n./gramide_csharp outline fixtures/valid/statements.cs\n./gramide_csharp gen-table > src/table.almd\nci/check.sh"
   },
-  "score": 9.1
+  "score": 9.2
  },
  {
   "full": "O6lvl4/gramide-css",
@@ -968,9 +1032,9 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 6,
+  "commits": 9,
   "years": {
-   "2026": 6
+   "2026": 9
   },
   "first": "2026-10-05",
   "last": "2026-11-06",
@@ -982,7 +1046,37 @@
    "lang": "sh",
    "code": "almide test\nalmide build cli/main.almd -o gramide_css\n./gramide_css gen-table | diff -u src/table.almd -\n./gramide_css symbols fixtures/components.css"
   },
-  "score": 9.1
+  "score": 9.2
+ },
+ {
+  "full": "O6lvl4/gramide-java",
+  "owner": "O6lvl4",
+  "name": "gramide-java",
+  "url": "https://github.com/O6lvl4/gramide-java",
+  "lead": "Java grammar for Gramide",
+  "heading": "gramide-java",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Java"
+  ],
+  "stars": 0,
+  "commits": 11,
+  "years": {
+   "2026": 11
+  },
+  "first": "2026-10-05",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "almide build cli/main.almd -o gramide_java\n./gramide_java symbols fixtures/valid/model.java\n./gramide_java outline fixtures/valid/statements.java\n./gramide_java gen-table > src/table.almd\nci/check.sh"
+  },
+  "score": 9.2
  },
  {
   "full": "O6lvl4/gramide-lua",
@@ -998,9 +1092,9 @@
    "Lua"
   ],
   "stars": 0,
-  "commits": 6,
+  "commits": 9,
   "years": {
-   "2026": 6
+   "2026": 9
   },
   "first": "2026-10-05",
   "last": "2026-11-06",
@@ -1012,7 +1106,7 @@
    "lang": "sh",
    "code": "almide test\nalmide build cli/main.almd -o gramide_lua\n./gramide_lua gen-table | diff -u src/table.almd -\n./gramide_lua symbols fixtures/module.lua"
   },
-  "score": 9.1
+  "score": 9.2
  },
  {
   "full": "O6lvl4/gramide-sql",
@@ -1028,9 +1122,9 @@
    "SQL"
   ],
   "stars": 0,
-  "commits": 6,
+  "commits": 9,
   "years": {
-   "2026": 6
+   "2026": 9
   },
   "first": "2026-10-05",
   "last": "2026-11-06",
@@ -1042,7 +1136,7 @@
    "lang": "sh",
    "code": "almide test\nalmide build cli/main.almd -o gramide_sql\n./gramide_sql gen-table | diff -u src/table.almd -\n./gramide_sql symbols fixtures/schema.sql\npython3 ci/oracle.py ./gramide_sql"
   },
-  "score": 9.1
+  "score": 9.2
  },
  {
   "full": "O6lvl4/gramide-toml",
@@ -1058,9 +1152,9 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 6,
+  "commits": 9,
   "years": {
-   "2026": 6
+   "2026": 9
   },
   "first": "2026-10-05",
   "last": "2026-11-06",
@@ -1068,7 +1162,7 @@
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
-  "score": 9.1
+  "score": 9.2
  },
  {
   "full": "O6lvl4/archgopher",
@@ -1099,33 +1193,6 @@
    "code": "go install github.com/O6lvl4/archgopher/cmd/archgopher@latest\n\narchgopher tf ./infra -o app.scouter.yaml   # Terraform → declaration (no init, no credentials)\narchgopher gaps app.scouter.yaml            # what Terraform cannot know; fill it in\narchgopher review ./infra                   # where the shape departs from known practices\narchgopher scout app.scouter.yaml           # read it (--json for machines)\narchgopher reconcile app.scouter.yaml --bill costs.json  # put the reading next to the bill, service by service\narchgopher export app.scouter.yaml -o app.png # draw it: .svg, .png or .html by extension"
   },
   "score": 8.6
- },
- {
-  "full": "O6lvl4/almide-headset-eq",
-  "owner": "O6lvl4",
-  "name": "almide-headset-eq",
-  "url": "https://github.com/O6lvl4/almide-headset-eq",
-  "lead": "Almide-built parametric EQ (cascaded RBJ biquads) for the CYBER CY-P5GMWHS gaming headset — pure-logic DSP compiled to WASM, with a WebAudio demo. Written in the Almide language.",
-  "heading": "headset-eq",
-  "language": "HTML",
-  "languages": [
-   "HTML",
-   "Almide"
-  ],
-  "stars": 1,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-06-19",
-  "last": "2026-06-19",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide test                 # DSP の数式的正しさを検証(6 テスト)\nalmide run                  # デモ: インパルス応答 + 各バンド中心の実測ゲインを表示\nalmide build src/eq.almd --target wasm --release -o dist/headset_eq.wasm"
-  },
-  "score": 8.1
  },
  {
   "full": "O6lvl4/ccp",
@@ -1195,12 +1262,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 138,
+  "commits": 140,
   "years": {
-   "2026": 138
+   "2026": 140
   },
   "first": "2026-10-07",
-  "last": "2026-11-05",
+  "last": "2026-11-06",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1337,39 +1404,6 @@
    "code": "# Clone + install + link globally\ngit clone https://github.com/O6lvl4/premaid.git\ncd premaid\nnpm install\nnpm run build\nnpm link   # exposes `premaid` on your PATH"
   },
   "score": 7.4
- },
- {
-  "full": "O6lvl4/awen",
-  "owner": "O6lvl4",
-  "name": "awen",
-  "url": "https://github.com/O6lvl4/awen",
-  "lead": "Awen — knowledge retention CLI for your markdown vault. SM-2 spaced repetition, written in Almide.",
-  "heading": "awen",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 11,
-  "years": {
-   "2026": 11
-  },
-  "first": "2026-05-04",
-  "last": "2026-05-04",
-  "tag": "v0.0.5",
-  "release": {
-   "tag": "v0.0.5",
-   "url": "https://github.com/O6lvl4/awen/releases/tag/v0.0.5",
-   "publishedAt": "2026-05-04T13:22:43Z"
-  },
-  "license": "MIT",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "# Install Almide once\ncurl -fsSL https://raw.githubusercontent.com/almide/almide/main/tools/install.sh | sh\n\n# Then install awen\nalmide install github.com/O6lvl4/awen"
-  },
-  "score": 7.2
  },
  {
   "full": "O6lvl4/igloc",
@@ -1549,12 +1583,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 100,
+  "commits": 102,
   "years": {
-   "2026": 100
+   "2026": 102
   },
   "first": "2026-10-05",
-  "last": "2026-10-07",
+  "last": "2026-11-06",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1650,12 +1684,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 90,
+  "commits": 91,
   "years": {
-   "2026": 90
+   "2026": 91
   },
   "first": "2026-09-07",
-  "last": "2026-11-05",
+  "last": "2026-11-06",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1698,35 +1732,33 @@
   "score": 6.5
  },
  {
-  "full": "O6lvl4/treesrc",
+  "full": "O6lvl4/agent-bench-matrix",
   "owner": "O6lvl4",
-  "name": "treesrc",
-  "url": "https://github.com/O6lvl4/treesrc",
-  "lead": "A CLI tool written in TypeScript that displays directory structures and file contents",
-  "language": "TypeScript",
+  "name": "agent-bench-matrix",
+  "url": "https://github.com/O6lvl4/agent-bench-matrix",
+  "site": "https://o6lvl4.github.io/agent-bench-matrix/",
+  "lead": "エージェント向けベンチマークの公開リーダーボードを、モデル・エージェント別に一枚の表へ。数字はすべて各ボードの公開データから取得し、出典付き。",
+  "heading": "Agent Bench Matrix",
+  "language": "HTML",
   "languages": [
-   "TypeScript"
+   "HTML",
+   "JavaScript",
+   "Python"
   ],
   "stars": 0,
-  "commits": 14,
+  "commits": 60,
   "years": {
-   "2025": 14
+   "2026": 60
   },
-  "first": "2025-03-19",
-  "last": "2025-04-01",
-  "tag": "v1.0.2",
-  "release": {
-   "tag": "v1.0.2",
-   "url": "https://github.com/O6lvl4/treesrc/releases/tag/v1.0.2",
-   "publishedAt": "2025-03-19T16:24:39Z"
-  },
+  "first": "2026-09-14",
+  "last": "2026-11-06",
   "topics": [],
-  "plate": "code",
+  "plate": "site",
   "sample": {
-   "lang": "bash",
-   "code": "npm install -g treesrc\n```\n\nor use it temporarily without installing:"
+   "lang": "",
+   "code": "z(表, モデル) ≒ b(表) + s(表) × a(モデル)\n```\n\n`z` は表ごとに標準化した実測値(高いほど良い向きに揃えたもの)、`a` がモデルの実力、`s` はその表が実力差をどれだけ広げて見せるか、`b` はその表の水準です。`a` と `(b, s)` を交互に最小二乗で解き、`a` を平均50・標準偏差10に直したものが「戦闘力」です。分野ごとにも同じ当てはめをします。\n\n- 実測が3モデルに満たない表と、全員が同じ値の表は、順位を語らないので使いません。\n- 実測の少ないモデルは、説明できなかった残差の大きさに応じて真ん中へ寄せます(縮約)。1回の結果だけで上位に来ない代わりに、誤差が大きく出ます。\n- 空きセルの推定値は、その分野の当てはめをその表の目盛りに戻し、そのボードが実際に見た範囲に収めたものです。\n- **これは推定であって実測ではありません。** ページでは書式を分け、データでも `fit` として実測の表とは別に置いています。`data/tables/` に推定値が混ざることはありません。\n\n## データ"
   },
-  "score": 6.3
+  "score": 6.2
  },
  {
   "full": "O6lvl4/homebrew-tap",
@@ -1762,35 +1794,6 @@
   "score": 6.2
  },
  {
-  "full": "O6lvl4/agent-bench-matrix",
-  "owner": "O6lvl4",
-  "name": "agent-bench-matrix",
-  "url": "https://github.com/O6lvl4/agent-bench-matrix",
-  "site": "https://o6lvl4.github.io/agent-bench-matrix/",
-  "lead": "エージェント向けベンチマークの公開リーダーボードを、モデル・エージェント別に一枚の表へ。数字はすべて各ボードの公開データから取得し、出典付き。",
-  "heading": "Agent Bench Matrix",
-  "language": "HTML",
-  "languages": [
-   "HTML",
-   "JavaScript",
-   "Python"
-  ],
-  "stars": 0,
-  "commits": 53,
-  "years": {
-   "2026": 53
-  },
-  "first": "2026-09-14",
-  "last": "2026-11-05",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "",
-   "code": "z(表, モデル) ≒ b(表) + s(表) × a(モデル)\n```\n\n`z` は表ごとに標準化した実測値(高いほど良い向きに揃えたもの)、`a` がモデルの実力、`s` はその表が実力差をどれだけ広げて見せるか、`b` はその表の水準です。`a` と `(b, s)` を交互に最小二乗で解き、`a` を平均50・標準偏差10に直したものが「戦闘力」です。分野ごとにも同じ当てはめをします。\n\n- 実測が3モデルに満たない表と、全員が同じ値の表は、順位を語らないので使いません。\n- 実測の少ないモデルは、説明できなかった残差の大きさに応じて真ん中へ寄せます(縮約)。1回の結果だけで上位に来ない代わりに、誤差が大きく出ます。\n- 空きセルの推定値は、その分野の当てはめをその表の目盛りに戻し、そのボードが実際に見た範囲に収めたものです。\n- **これは推定であって実測ではありません。** ページでは書式を分け、データでも `fit` として実測の表とは別に置いています。`data/tables/` に推定値が混ざることはありません。\n\n## データ"
-  },
-  "score": 6.1
- },
- {
   "full": "O6lvl4/ctxgate",
   "owner": "O6lvl4",
   "name": "ctxgate",
@@ -1804,12 +1807,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 36,
+  "commits": 40,
   "years": {
-   "2026": 36
+   "2026": 40
   },
   "first": "2026-09-06",
-  "last": "2026-09-20",
+  "last": "2026-11-06",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -1817,7 +1820,7 @@
    "lang": "",
    "code": "[ctxgate] cargo test output: 403 lines / 12 KB → vaulted as ctx:9258de38065e (NOT in context).\n  full text: ctxgate show 9258de38065e [--grep RE | --around RE N | --lines A-B | --tail N]\ncargo test: FAILED — 238 passed, 3 failed, 0 ignored\nfailed:\n  parser::match_nested\n  wasm::rc_release\n── parser::match_nested ──\n  thread 'parser::match_nested' panicked at src/parser.rs:412:9:\n  assertion `left == right` failed"
   },
-  "score": 5.7
+  "score": 5.8
  },
  {
   "full": "O6lvl4/assay",
@@ -1833,17 +1836,98 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 17,
+  "commits": 19,
   "years": {
-   "2026": 17
+   "2026": 19
   },
   "first": "2026-09-13",
-  "last": "2026-09-13",
+  "last": "2026-11-06",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "sh",
    "code": "HB=/path/to/hb GOLEMIDE_BINARY=/path/to/golemide bench/tb2.sh pilot   # 10 tasks\nHB=... GOLEMIDE_BINARY=... bench/tb2.sh all                           # all 89"
+  },
+  "score": 5.4
+ },
+ {
+  "full": "O6lvl4/almide-otel-demo",
+  "owner": "O6lvl4",
+  "name": "almide-otel-demo",
+  "url": "https://github.com/O6lvl4/almide-otel-demo",
+  "lead": "A from-scratch OpenTelemetry tracing SDK in pure Almide + a two-service distributed trace in Jaeger",
+  "heading": "almide-otel-demo",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 17,
+  "years": {
+   "2026": 17
+  },
+  "first": "2026-08-03",
+  "last": "2026-11-06",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "almide-checkout    checkout         50.3ms   root\nalmide-checkout    GET /inventory   37.7ms   └─ client span\nalmide-inventory   GET /inventory   30.1ms      └─ server span, linked via traceparent\nalmide-inventory   SELECT items     30.1ms         └─ simulated DB work"
+  },
+  "score": 5.3
+ },
+ {
+  "full": "O6lvl4/O6lvl4-vitals",
+  "owner": "O6lvl4",
+  "name": "O6lvl4-vitals",
+  "url": "https://github.com/O6lvl4/O6lvl4-vitals",
+  "lead": "Quantitative compliance checker for O6lvl4-protocol, written in almide",
+  "heading": "O6lvl4 Vitals",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 14,
+  "years": {
+   "2026": 14
+  },
+  "first": "2026-05-07",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "$ vitals check\nP01 睡眠\n  ✓ INV-1  睡眠時間 ≥ 7h               (7.5h)\n  ✗ INV-2  就寝時刻のずれ ≤ ±15分      (drift: 28m)\n  ✓ VIO-1  入眠潜時 > 30m が3日連続    (no streak)\n\nP04 食事\n  ✓ INV-1  食事時刻ずれ ≤ ±30分\n  ✗ INV-5  加工糖飲料禁止              (1 logged)\n\n総合: 12/14 protocols compliant\n違反: P01-INV-2, P04-INV-5\n推奨復旧手順: protocols/p01-sleep.md#復旧手順, protocols/p04-diet.md#復旧手順"
+  },
+  "score": 5.3
+ },
+ {
+  "full": "O6lvl4/ogumatic-module-design",
+  "owner": "O6lvl4",
+  "name": "ogumatic-module-design",
+  "url": "https://github.com/O6lvl4/ogumatic-module-design",
+  "lead": "モジュールを役割の段で切り、正を札・証拠・資料に置き、コードを生成物として扱う設計術",
+  "heading": "Ogumatic Module Design",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Go",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 14,
+  "years": {
+   "2026": 14
+  },
+  "first": "2026-09-26",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "写してのちに、世に触れよ\n口はせまくて、腹ふかく\n名で断ち切りて、矢は一路\n隣に証、われ黙す\n日ならず書きて、蓋を閉づ"
   },
   "score": 5.3
  },
@@ -1876,34 +1960,6 @@
   "score": 5.3
  },
  {
-  "full": "O6lvl4/ogumatic-module-design",
-  "owner": "O6lvl4",
-  "name": "ogumatic-module-design",
-  "url": "https://github.com/O6lvl4/ogumatic-module-design",
-  "lead": "モジュールを役割の段で切り、正を札・証拠・資料に置き、コードを生成物として扱う設計術",
-  "heading": "Ogumatic Module Design",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Go",
-   "Python"
-  ],
-  "stars": 0,
-  "commits": 12,
-  "years": {
-   "2026": 12
-  },
-  "first": "2026-09-26",
-  "last": "2026-09-26",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "写してのちに、世に触れよ\n口はせまくて、腹ふかく\n名で断ち切りて、矢は一路\n隣に証、われ黙す\n日ならず書きて、蓋を閉づ"
-  },
-  "score": 5.2
- },
- {
   "full": "O6lvl4/onetool",
   "owner": "O6lvl4",
   "name": "onetool",
@@ -1932,6 +1988,54 @@
   "score": 5.2
  },
  {
+  "full": "O6lvl4/tocsin-almd",
+  "owner": "O6lvl4",
+  "name": "tocsin-almd",
+  "url": "https://github.com/O6lvl4/tocsin-almd",
+  "lead": "Tocsin (supply chain attack early warning) — Almide implementation",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 9,
+  "years": {
+   "2026": 9
+  },
+  "first": "2026-05-12",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.2
+ },
+ {
+  "full": "O6lvl4/almide-examples",
+  "owner": "O6lvl4",
+  "name": "almide-examples",
+  "url": "https://github.com/O6lvl4/almide-examples",
+  "lead": "Almide language examples and mini-git benchmark",
+  "heading": "almide-examples",
+  "language": "Shell",
+  "languages": [
+   "Shell",
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 4,
+  "years": {
+   "2026": 4
+  },
+  "first": "2026-03-07",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "# Requires: Almide transpiler (llm-lang-spec repo) + Deno\n\ncd minigit-bench\nbash build.sh          # Transpile .almd → .ts\nbash test-v1.sh        # Run v1 tests (11 tests)\nbash test-v2.sh        # Run v2 tests (30 tests)"
+  },
+  "score": 5.1
+ },
+ {
   "full": "O6lvl4/codopsy-almd",
   "owner": "O6lvl4",
   "name": "codopsy-almd",
@@ -1944,12 +2048,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 4,
+  "commits": 6,
   "years": {
-   "2026": 4
+   "2026": 6
   },
   "first": "2026-09-11",
-  "last": "2026-09-11",
+  "last": "2026-11-06",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
@@ -1985,6 +2089,34 @@
   "sample": {
    "lang": "sh",
    "code": "CONNPASS_API_KEY=... go run ./cmd/connpass-search -group miyazaki-go\nCONNPASS_API_KEY=... go run ./cmd/connpass-search -keyword Go -prefecture miyazaki -json"
+  },
+  "score": 5.1
+ },
+ {
+  "full": "O6lvl4/go1.27-vs-almide",
+  "owner": "O6lvl4",
+  "name": "go1.27-vs-almide",
+  "url": "https://github.com/O6lvl4/go1.27-vs-almide",
+  "lead": "Go 1.27 new features side-by-side with almide 0.41 — notes for Miyazaki.go Go v1.27rc Sneak Peek #5",
+  "heading": "Go 1.27 × almide",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Go",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 7,
+  "years": {
+   "2026": 7
+  },
+  "first": "2026-07-31",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "# Go 側 (go.mod が go 1.27rc2 を指しているので、Go 1.21+ ならツールチェーンが自動取得される)\ngo run ./01-generic-methods\n\n# almide 側 (https://github.com/almide/almide)\nalmide run 01-generic-methods/main.almd\n\n# 全部まとめて\n./demo.sh"
   },
   "score": 5.1
  },
@@ -2095,33 +2227,6 @@
   "topics": [],
   "plate": "code",
   "score": 3.4
- },
- {
-  "full": "O6lvl4/almide-otel-demo",
-  "owner": "O6lvl4",
-  "name": "almide-otel-demo",
-  "url": "https://github.com/O6lvl4/almide-otel-demo",
-  "lead": "A from-scratch OpenTelemetry tracing SDK in pure Almide + a two-service distributed trace in Jaeger",
-  "heading": "almide-otel-demo",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 13,
-  "years": {
-   "2026": 13
-  },
-  "first": "2026-08-03",
-  "last": "2026-08-04",
-  "license": "MIT",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "almide-checkout    checkout         50.3ms   root\nalmide-checkout    GET /inventory   37.7ms   └─ client span\nalmide-inventory   GET /inventory   30.1ms      └─ server span, linked via traceparent\nalmide-inventory   SELECT items     30.1ms         └─ simulated DB work"
-  },
-  "score": 3.3
  },
  {
   "full": "O6lvl4/codopsy-ts",
@@ -2350,32 +2455,6 @@
   "score": 3.2
  },
  {
-  "full": "O6lvl4/O6lvl4-vitals",
-  "owner": "O6lvl4",
-  "name": "O6lvl4-vitals",
-  "url": "https://github.com/O6lvl4/O6lvl4-vitals",
-  "lead": "Quantitative compliance checker for O6lvl4-protocol, written in almide",
-  "heading": "O6lvl4 Vitals",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 10,
-  "years": {
-   "2026": 10
-  },
-  "first": "2026-05-07",
-  "last": "2026-05-07",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "",
-   "code": "$ vitals check\nP01 睡眠\n  ✓ INV-1  睡眠時間 ≥ 7h               (7.5h)\n  ✗ INV-2  就寝時刻のずれ ≤ ±15分      (drift: 28m)\n  ✓ VIO-1  入眠潜時 > 30m が3日連続    (no streak)\n\nP04 食事\n  ✓ INV-1  食事時刻ずれ ≤ ±30分\n  ✗ INV-5  加工糖飲料禁止              (1 logged)\n\n総合: 12/14 protocols compliant\n違反: P01-INV-2, P04-INV-5\n推奨復旧手順: protocols/p01-sleep.md#復旧手順, protocols/p04-diet.md#復旧手順"
-  },
-  "score": 3.2
- },
- {
   "full": "O6lvl4/dns-checker",
   "owner": "O6lvl4",
   "name": "dns-checker",
@@ -2401,34 +2480,6 @@
   "sample": {
    "lang": "bash",
    "code": "git clone git@github.com:O6lvl4/dns-checker.git\ncd dns-checker\nmake install"
-  },
-  "score": 3.1
- },
- {
-  "full": "O6lvl4/go1.27-vs-almide",
-  "owner": "O6lvl4",
-  "name": "go1.27-vs-almide",
-  "url": "https://github.com/O6lvl4/go1.27-vs-almide",
-  "lead": "Go 1.27 new features side-by-side with almide 0.41 — notes for Miyazaki.go Go v1.27rc Sneak Peek #5",
-  "heading": "Go 1.27 × almide",
-  "language": "Go",
-  "languages": [
-   "Go",
-   "Almide",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-07-31",
-  "last": "2026-07-31",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "# Go 側 (go.mod が go 1.27rc2 を指しているので、Go 1.21+ ならツールチェーンが自動取得される)\ngo run ./01-generic-methods\n\n# almide 側 (https://github.com/almide/almide)\nalmide run 01-generic-methods/main.almd\n\n# 全部まとめて\n./demo.sh"
   },
   "score": 3.1
  },
@@ -2596,33 +2647,6 @@
   "score": 3
  },
  {
-  "full": "O6lvl4/almide-examples",
-  "owner": "O6lvl4",
-  "name": "almide-examples",
-  "url": "https://github.com/O6lvl4/almide-examples",
-  "lead": "Almide language examples and mini-git benchmark",
-  "heading": "almide-examples",
-  "language": "Shell",
-  "languages": [
-   "Shell",
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-03-07",
-  "last": "2026-03-07",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "# Requires: Almide transpiler (llm-lang-spec repo) + Deno\n\ncd minigit-bench\nbash build.sh          # Transpile .almd → .ts\nbash test-v1.sh        # Run v1 tests (11 tests)\nbash test-v2.sh        # Run v2 tests (30 tests)"
-  },
-  "score": 3
- },
- {
   "full": "O6lvl4/chropen",
   "owner": "O6lvl4",
   "name": "chropen",
@@ -2772,27 +2796,6 @@
    "lang": "",
    "code": "✈ たびナビ — 旅程最適化\n■ 東京カンファレンス出張\n  A案: 2日目の最終便で帰る  ¥58,300 ◎ 推奨\n    ✈ 8/7(金) KMI→HND  6J54  09:10→10:45  ¥15,200 (ソラシドエア)\n    ...\n  B案: もう1泊して翌朝帰り  ¥71,800 ＋¥13,500\n    ..."
   },
-  "score": 3
- },
- {
-  "full": "O6lvl4/tocsin-almd",
-  "owner": "O6lvl4",
-  "name": "tocsin-almd",
-  "url": "https://github.com/O6lvl4/tocsin-almd",
-  "lead": "Tocsin (supply chain attack early warning) — Almide implementation",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-05-12",
-  "last": "2026-05-12",
-  "topics": [],
-  "plate": "code",
   "score": 3
  },
  {
@@ -3609,9 +3612,9 @@
    "Shell"
   ],
   "stars": 36,
-  "commits": 16026,
+  "commits": 16137,
   "years": {
-   "2026": 16026
+   "2026": 16137
   },
   "first": "2026-03-07",
   "last": "2026-11-06",
@@ -3652,12 +3655,12 @@
    "Almide"
   ],
   "stars": 3,
-  "commits": 283,
+  "commits": 304,
   "years": {
-   "2026": 283
+   "2026": 304
   },
   "first": "2026-04-07",
-  "last": "2026-10-04",
+  "last": "2026-11-06",
   "tag": "v0.6.1",
   "release": {
    "tag": "v0.6.17",
@@ -3682,7 +3685,7 @@
    "lang": "text",
    "code": "$ porta run sh -v ./work --no-net -- -c 'echo ok > out.txt; cat ~/.ssh/id_ed25519; echo x > ~/elsewhere.txt; curl https://example.com'\ncat: /Users/me/.ssh/id_ed25519: Operation not permitted\nsh: /Users/me/elsewhere.txt: Operation not permitted\ncurl: (6) Could not resolve host: example.com\n[porta] the sandbox refused this run 3 times; what each would have needed:\n  file-read-data /Users/me/.ssh/id_ed25519\n    → closed by the preset or --deny-read; no mount reopens it\n  file-write-create /Users/me/elsewhere.txt\n    → -v /Users/me\n  …"
   },
-  "score": 29.7
+  "score": 30
  },
  {
   "full": "almide/als",
@@ -3698,12 +3701,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1923,
+  "commits": 1929,
   "years": {
-   "2026": 1923
+   "2026": 1929
   },
   "first": "2026-03-07",
-  "last": "2026-11-03",
+  "last": "2026-11-06",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3757,6 +3760,39 @@
   "score": 11.7
  },
  {
+  "full": "almide/almide-bindgen",
+  "owner": "almide",
+  "name": "almide-bindgen",
+  "url": "https://github.com/almide/almide-bindgen",
+  "lead": "Universal FFI binding generator for Almide — 20 language targets, written in Almide",
+  "heading": "almide-bindgen",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Shell"
+  ],
+  "stars": 1,
+  "commits": 54,
+  "years": {
+   "2026": 54
+  },
+  "first": "2026-03-28",
+  "last": "2026-11-06",
+  "license": "MIT",
+  "topics": [
+   "almide",
+   "bindgen",
+   "code-generation",
+   "ffi"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import bindgen\n\n// Version + supported languages\nbindgen.version()                    // \"0.1.0\"\nbindgen.supported_languages()        // [\"python\", \"go\", ..., \"powershell\"]\n\n// Generate Rust FFI scaffolding\nlet lib_rs = bindgen.scaffolding.generate(iface_json, rust_source)\nlet cargo  = bindgen.scaffolding.generate_cargo(iface_json)\n\n// Generate language bindings (all return String)\nlet py_code = bindgen.bindings.python.generate(iface_json)\nlet go_code = bindgen.bindings.go.generate(iface_json)\n// ... 20 languages"
+  },
+  "score": 11.1
+ },
+ {
   "full": "almide/almide-dojo",
   "owner": "almide",
   "name": "almide-dojo",
@@ -3771,12 +3807,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 595,
+  "commits": 606,
   "years": {
-   "2026": 595
+   "2026": 606
   },
   "first": "2026-04-12",
-  "last": "2026-11-05",
+  "last": "2026-11-06",
   "license": "MIT",
   "topics": [
    "almide",
@@ -3790,6 +3826,34 @@
    "code": "almide.toml          Package manifest (the harness itself is an Almide package)\nsrc/main.almd        Harness — written in Almide, of course (the daily Almide lane)\nsrc/cellstate.almd   The cell states, the rates and the verdicts BOTH lanes speak\nsrc/msr/             The cross-language lane: neutral task model, language plugins, runner\nmsr/                 Its task set (task-set.json), behavior texts, reference solutions\ntasks/               Task bank (prompts + tests + metadata)\nruns/                Per-day results, committed to git (runs/msr/ for the cross-language lane)\ndashboards/          Static site for visualizing trends (GitHub Pages)\nalmide-pin.toml      Which Almide compiler commit we evaluate against\nmalicious-hints.md   Incident log of hint texts that misled models\nMakefile             `make msr`, `make msr-verify`, `make msr-probe`, `make test`"
   },
   "score": 11
+ },
+ {
+  "full": "almide/bonsai-almide",
+  "owner": "almide",
+  "name": "bonsai-almide",
+  "url": "https://github.com/almide/bonsai-almide",
+  "lead": "Bonsai 1-bit LLM in pure Almide → WASM. Browser demo: almide.github.io/bonsai-almide/",
+  "heading": "bonsai-almide",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript",
+   "HTML"
+  ],
+  "stars": 1,
+  "commits": 37,
+  "years": {
+   "2026": 37
+  },
+  "first": "2026-04-20",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "# One-time: download the model into weights/\n#   huggingface-cli download prism-ml/Bonsai-1.7B-gguf --local-dir weights\n\nnpm install  # pulls @huggingface/transformers for the tokenizer + decode\n\nalmide build --fast --target wasm \\\n  examples/bonsai_wasm_entry.almd -o docs/bonsai.wasm\n\n# Greedy (matches path 1 / path 4 in bench_verify_kv)\nnode bench/bench_wasm_kv_stream.mjs\n\n# Chat-template mode (what the browser uses)\nCHAT=1 TEMP=0.8 TOP_K=40 PENALTY=1.3 DECODE=1 \\\n  node bench/bench_wasm_kv_stream.mjs"
+  },
+  "score": 10.7
  },
  {
   "full": "almide/almide-grammar",
@@ -3834,12 +3898,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 28,
+  "commits": 30,
   "years": {
-   "2026": 28
+   "2026": 30
   },
   "first": "2026-03-09",
-  "last": "2026-09-22",
+  "last": "2026-11-06",
   "tag": "v0.4.1",
   "release": {
    "tag": "v0.4.1",
@@ -3902,6 +3966,34 @@
   "score": 9.5
  },
  {
+  "full": "almide/aes",
+  "owner": "almide",
+  "name": "aes",
+  "url": "https://github.com/almide/aes",
+  "lead": "AES-128-CFB8 encryption for Almide",
+  "heading": "almide/aes",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Rust"
+  ],
+  "stars": 0,
+  "commits": 9,
+  "years": {
+   "2026": 9
+  },
+  "first": "2026-05-21",
+  "last": "2026-11-06",
+  "tag": "v0.2.1",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import aes\nimport bytes\n\nlet key = bytes.from_list([0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,\n                           0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F])\nlet iv = key\nlet state = aes.new_cfb8(key, iv)\n\nlet encrypted = aes.cfb8_encrypt(state, plaintext)\n// encrypted.data   — ciphertext\n// encrypted.state  — updated state for next call\n\nlet decrypted = aes.cfb8_decrypt(encrypted.state, encrypted.data)"
+  },
+  "score": 9.2
+ },
+ {
   "full": "almide/dfa",
   "owner": "almide",
   "name": "dfa",
@@ -3914,52 +4006,20 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 6,
+  "commits": 11,
   "years": {
-   "2026": 6
+   "2026": 11
   },
   "first": "2026-08-16",
-  "last": "2026-08-17",
-  "tag": "v0.1.0",
+  "last": "2026-11-06",
+  "tag": "v0.1.1",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "almide",
    "code": "import dfa\n\n// Compile a pattern set. Index in the list becomes the token id;\n// a length tie goes to the lower id, so list keywords first.\nfn compile(patterns: List[String]) -> Result[Dfa, String]\n\n// Longest pattern matching at `at`, or none. Matches AT the position —\n// it never searches forward; that is the caller's loop.\nfn scan(dfa: Dfa, input: String, at: Int) -> Match?\n\n// Match { id: Int, len: Int }"
   },
-  "score": 9.1
- },
- {
-  "full": "almide/svg",
-  "owner": "almide",
-  "name": "svg",
-  "url": "https://github.com/almide/svg",
-  "lead": "SVG generation library for Almide",
-  "heading": "almide/svg",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 5,
-  "years": {
-   "2026": 5
-  },
-  "first": "2026-04-08",
-  "last": "2026-11-03",
-  "tag": "v0.1.1",
-  "topics": [
-   "almide",
-   "codegen",
-   "svg",
-   "wasm"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide add svg@v0.1.0\n```\n\n## Usage\n\n```almide\nimport svg\nimport svg.path\n\nlet chart = svg.doc(800.0, 600.0, [\n  svg.rect(10.0, 10.0, 200.0, 100.0)\n    |> svg.fill(\"#4A90D9\")\n    |> svg.rx(8.0),\n  svg.circle(400.0, 200.0, 60.0)\n    |> svg.stroke(\"#333\")\n    |> svg.fill(\"none\")\n    |> svg.stroke_width(2.0),\n  svg.text(400.0, 350.0, \"Hello SVG\")\n    |> svg.text_anchor(\"middle\")\n    |> svg.font_size(24.0),\n  svg.path(path.d([\n    path.move_to(500.0, 50.0),\n    path.cubic(550.0, 20.0, 600.0, 80.0, 650.0, 50.0),\n    path.close(),\n  ])) |> svg.fill(\"#E74C3C\"),\n])\n\n// Write to file or serve over HTTP\nfs.write(\"chart.svg\", svg.render(chart))"
-  },
-  "score": 9.1
+  "score": 9.2
  },
  {
   "full": "almide/llm",
@@ -3973,21 +4033,112 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 1,
+  "commits": 9,
   "years": {
-   "2026": 1
+   "2026": 9
   },
   "first": "2026-10-18",
-  "last": "2026-10-18",
-  "tag": "v0.1.0",
+  "last": "2026-11-06",
+  "tag": "v0.2.0",
   "license": "NOASSERTION",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "bash",
-   "code": "almide add almide/llm@v0.1.0\n```\n\nThis adds the dependency to your `almide.toml`:"
+   "code": "almide add almide/llm@v0.2.0\n```\n\nThis adds the dependency to your `almide.toml`:"
   },
-  "score": 9
+  "score": 9.2
+ },
+ {
+  "full": "almide/svg",
+  "owner": "almide",
+  "name": "svg",
+  "url": "https://github.com/almide/svg",
+  "lead": "SVG generation library for Almide",
+  "heading": "almide/svg",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 11,
+  "years": {
+   "2026": 11
+  },
+  "first": "2026-04-08",
+  "last": "2026-11-06",
+  "tag": "v0.2.0",
+  "topics": [
+   "almide",
+   "codegen",
+   "svg",
+   "wasm"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide add svg@v0.2.0\n```\n\nAn application that depends on this package grants it the SVG media type in its `almide.toml` (E118 otherwise):"
+  },
+  "score": 9.2
+ },
+ {
+  "full": "almide/yaml",
+  "owner": "almide",
+  "name": "yaml",
+  "url": "https://github.com/almide/yaml",
+  "lead": "YAML parser and serializer for Almide with Codec integration. 146 tests.",
+  "heading": "almide/yaml",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 12,
+  "years": {
+   "2026": 12
+  },
+  "first": "2026-03-29",
+  "last": "2026-11-06",
+  "tag": "v0.2.1",
+  "topics": [
+   "almide",
+   "parser",
+   "yaml"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide add almide/yaml\n```\n\n## Usage\n\n```almide\nimport yaml\n\n// Parse YAML text\nlet config = yaml.parse(\"\"\"\n  server:\n    host: localhost\n    port: 8080\n  debug: true\n  \"\"\")!\n\n// Stringify Value to YAML\nlet text = yaml.stringify(config)"
+  },
+  "score": 9.2
+ },
+ {
+  "full": "almide/sha1",
+  "owner": "almide",
+  "name": "sha1",
+  "url": "https://github.com/almide/sha1",
+  "lead": "SHA-1 hash for Almide (RFC 3174)",
+  "heading": "almide/sha1",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Rust"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-05-21",
+  "last": "2026-11-06",
+  "tag": "v0.2.1",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import sha1\nimport bytes\n\nlet digest = sha1.hash(bytes.from_string(\"hello\"))\nlet hex = sha1.hex(digest)  // \"aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d\""
+  },
+  "score": 9.1
  },
  {
   "full": "almide/nnlib",
@@ -4017,66 +4168,6 @@
    "code": "almide add almide/nnlib@v0.1.0\n```\n\nwhich adds to `almide.toml`:"
   },
   "score": 9
- },
- {
-  "full": "almide/almide-bindgen",
-  "owner": "almide",
-  "name": "almide-bindgen",
-  "url": "https://github.com/almide/almide-bindgen",
-  "lead": "Universal FFI binding generator for Almide — 20 language targets, written in Almide",
-  "heading": "almide-bindgen",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 1,
-  "commits": 33,
-  "years": {
-   "2026": 33
-  },
-  "first": "2026-03-28",
-  "last": "2026-04-12",
-  "license": "MIT",
-  "topics": [
-   "almide",
-   "bindgen",
-   "code-generation",
-   "ffi"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "almide",
-   "code": "import bindgen\n\n// Version + supported languages\nbindgen.version()                    // \"0.1.0\"\nbindgen.supported_languages()        // [\"python\", \"go\", ..., \"powershell\"]\n\n// Generate Rust FFI scaffolding\nlet lib_rs = bindgen.scaffolding.generate(iface_json, rust_source)\nlet cargo  = bindgen.scaffolding.generate_cargo(iface_json)\n\n// Generate language bindings (all return String)\nlet py_code = bindgen.bindings.python.generate(iface_json)\nlet go_code = bindgen.bindings.go.generate(iface_json)\n// ... 20 languages"
-  },
-  "score": 8.7
- },
- {
-  "full": "almide/bonsai-almide",
-  "owner": "almide",
-  "name": "bonsai-almide",
-  "url": "https://github.com/almide/bonsai-almide",
-  "lead": "Bonsai 1-bit LLM in pure Almide → WASM. Browser demo: almide.github.io/bonsai-almide/",
-  "heading": "bonsai-almide",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript",
-   "HTML"
-  ],
-  "stars": 1,
-  "commits": 35,
-  "years": {
-   "2026": 35
-  },
-  "first": "2026-04-20",
-  "last": "2026-04-22",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "# One-time: download the model into weights/\n#   huggingface-cli download prism-ml/Bonsai-1.7B-gguf --local-dir weights\n\nnpm install  # pulls @huggingface/transformers for the tokenizer + decode\n\nalmide build --fast --target wasm \\\n  examples/bonsai_wasm_entry.almd -o docs/bonsai.wasm\n\n# Greedy (matches path 1 / path 4 in bench_verify_kv)\nnode bench/bench_wasm_kv_stream.mjs\n\n# Chat-template mode (what the browser uses)\nCHAT=1 TEMP=0.8 TOP_K=40 PENALTY=1.3 DECODE=1 \\\n  node bench/bench_wasm_kv_stream.mjs"
-  },
-  "score": 8.7
  },
  {
   "full": "almide/playground",
@@ -4113,93 +4204,6 @@
   "score": 8.6
  },
  {
-  "full": "almide/yaml",
-  "owner": "almide",
-  "name": "yaml",
-  "url": "https://github.com/almide/yaml",
-  "lead": "YAML parser and serializer for Almide with Codec integration. 146 tests.",
-  "heading": "almide/yaml",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 10,
-  "years": {
-   "2026": 10
-  },
-  "first": "2026-03-29",
-  "last": "2026-05-22",
-  "tag": "v0.2.0",
-  "topics": [
-   "almide",
-   "parser",
-   "yaml"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide add almide/yaml\n```\n\n## Usage\n\n```almide\nimport yaml\n\n// Parse YAML text\nlet config = yaml.parse(\"\"\"\n  server:\n    host: localhost\n    port: 8080\n  debug: true\n  \"\"\")!\n\n// Stringify Value to YAML\nlet text = yaml.stringify(config)"
-  },
-  "score": 7.2
- },
- {
-  "full": "almide/aes",
-  "owner": "almide",
-  "name": "aes",
-  "url": "https://github.com/almide/aes",
-  "lead": "AES-128-CFB8 encryption for Almide",
-  "heading": "almide/aes",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Rust"
-  ],
-  "stars": 0,
-  "commits": 7,
-  "years": {
-   "2026": 7
-  },
-  "first": "2026-05-21",
-  "last": "2026-05-23",
-  "tag": "v0.2.0",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "almide",
-   "code": "import aes\nimport bytes\n\nlet key = bytes.from_list([0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,\n                           0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F])\nlet iv = key\nlet state = aes.new_cfb8(key, iv)\n\nlet encrypted = aes.cfb8_encrypt(state, plaintext)\n// encrypted.data   — ciphertext\n// encrypted.state  — updated state for next call\n\nlet decrypted = aes.cfb8_decrypt(encrypted.state, encrypted.data)"
-  },
-  "score": 7.1
- },
- {
-  "full": "almide/sha1",
-  "owner": "almide",
-  "name": "sha1",
-  "url": "https://github.com/almide/sha1",
-  "lead": "SHA-1 hash for Almide (RFC 3174)",
-  "heading": "almide/sha1",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Rust"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-05-21",
-  "last": "2026-05-23",
-  "tag": "v0.2.0",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "almide",
-   "code": "import sha1\nimport bytes\n\nlet digest = sha1.hash(bytes.from_string(\"hello\"))\nlet hex = sha1.hex(digest)  // \"aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d\""
-  },
-  "score": 7.1
- },
- {
   "full": "almide/almide-lander",
   "owner": "almide",
   "name": "almide-lander",
@@ -4211,12 +4215,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 55,
+  "commits": 64,
   "years": {
-   "2026": 55
+   "2026": 64
   },
   "first": "2026-03-28",
-  "last": "2026-10-01",
+  "last": "2026-11-06",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4229,7 +4233,35 @@
    "lang": "bash",
    "code": "# Native FFI — 21 languages via cdylib + byte-buffer protocol\nalmide run src/main.almd -- --lang python mylib.almd\nalmide run src/main.almd -- --lang python,go,swift mylib.almd   # multiple at once\nalmide run src/main.almd -- --list                               # show all 21\nalmide run src/main.almd -- --dry-run --lang ruby mylib.almd     # preview\n\n# WebAssembly + JS/TS — npm-publishable bundle (delegates to almide-wasm-bindgen)\nalmide run src/main.almd -- --target wasm --outdir dist mylib.almd\nalmide run src/main.almd -- --target wasm --outdir dist --pkg-version 1.0.0 mylib.almd\nalmide run src/main.almd -- --target wasm --outdir dist --publish-dry-run mylib.almd\nalmide run src/main.almd -- --target wasm --outdir dist --publish mylib.almd"
   },
-  "score": 6.1
+  "score": 6.3
+ },
+ {
+  "full": "almide/almide-wasm-bindgen",
+  "owner": "almide",
+  "name": "almide-wasm-bindgen",
+  "url": "https://github.com/almide/almide-wasm-bindgen",
+  "lead": "WebAssembly + JS/TS binding generator for Almide (written in Almide)",
+  "heading": "almide-wasm-bindgen",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript",
+   "HTML"
+  ],
+  "stars": 0,
+  "commits": 28,
+  "years": {
+   "2026": 28
+  },
+  "first": "2026-04-14",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "",
+   "code": "almide-bindgen          Native FFI (cdylib + byte-buffer, 21 languages)\nalmide-wasm-bindgen     WASM target (linear memory + __alloc, JS/TS surface)  ← this repo\nalmide-lander           CLI that orchestrates both"
+  },
+  "score": 5.6
  },
  {
   "full": "almide/cloud-examples",
@@ -4245,12 +4277,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 18,
+  "commits": 21,
   "years": {
-   "2026": 18
+   "2026": 21
   },
   "first": "2026-10-04",
-  "last": "2026-10-04",
+  "last": "2026-11-06",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4286,55 +4318,91 @@
   "score": 5.2
  },
  {
-  "full": "almide/parsegen",
+  "full": "almide/almide-sqlite",
   "owner": "almide",
-  "name": "parsegen",
-  "url": "https://github.com/almide/parsegen",
-  "lead": "tree-sitter compatible parser generator for Almide. Reads grammar.json — no C, no dynamic loading, runs in WASM.",
-  "heading": "almide/parsegen",
+  "name": "almide-sqlite",
+  "url": "https://github.com/almide/almide-sqlite",
+  "lead": "SQLite3 database access for Almide",
+  "heading": "almide-sqlite",
   "language": "Almide",
   "languages": [
    "Almide",
-   "Shell"
+   "Rust"
   ],
   "stars": 0,
-  "commits": 3,
+  "commits": 8,
   "years": {
-   "2026": 3
+   "2026": 8
   },
-  "first": "2026-08-16",
-  "last": "2026-08-17",
-  "topics": [],
-  "plate": "code",
-  "score": 5.1
- },
- {
-  "full": "almide/almide-wasm-bindgen",
-  "owner": "almide",
-  "name": "almide-wasm-bindgen",
-  "url": "https://github.com/almide/almide-wasm-bindgen",
-  "lead": "WebAssembly + JS/TS binding generator for Almide (written in Almide)",
-  "heading": "almide-wasm-bindgen",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript",
-   "HTML"
-  ],
-  "stars": 0,
-  "commits": 24,
-  "years": {
-   "2026": 24
-  },
-  "first": "2026-04-14",
-  "last": "2026-04-15",
+  "first": "2026-05-12",
+  "last": "2026-11-06",
   "topics": [],
   "plate": "code",
   "sample": {
-   "lang": "",
-   "code": "almide-bindgen          Native FFI (cdylib + byte-buffer, 21 languages)\nalmide-wasm-bindgen     WASM target (linear memory + __alloc, JS/TS surface)  ← this repo\nalmide-lander           CLI that orchestrates both"
+   "lang": "bash",
+   "code": "almide add almide-sqlite@v0.1.0\n```\n\n## Usage"
   },
-  "score": 3.5
+  "score": 5.2
+ },
+ {
+  "full": "almide/base64",
+  "owner": "almide",
+  "name": "base64",
+  "url": "https://github.com/almide/base64",
+  "lead": "Base64 encoding and decoding for Almide. Standard and URL-safe variants.",
+  "heading": "almide/base64",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-03-29",
+  "last": "2026-11-06",
+  "topics": [
+   "almide",
+   "base64",
+   "encoding"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide add almide/base64\n```\n\n## Usage"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almide/csv",
+  "owner": "almide",
+  "name": "csv",
+  "url": "https://github.com/almide/csv",
+  "lead": "CSV parser and serializer for Almide. Quoted fields, header rows, roundtrip-safe.",
+  "heading": "almide/csv",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-03-29",
+  "last": "2026-11-06",
+  "topics": [
+   "almide",
+   "csv",
+   "parser"
+  ],
+  "plate": "code",
+  "sample": {
+   "lang": "bash",
+   "code": "almide add almide/csv\n```\n\n## Usage\n\n```almide\nimport csv\n\n// Parse CSV text to array of arrays\nlet data = csv.parse(\"name,age\\nAlice,30\\nBob,25\")!\n\n// Parse with header row → array of objects\nlet records = csv.parse_records(\"name,age\\nAlice,30\\nBob,25\")!\n\n// Stringify array of arrays\nlet text = csv.stringify(data)\n\n// Stringify array of objects (auto-generates header)\nlet text = csv.stringify_records(records)"
+  },
+  "score": 5.2
  },
  {
   "full": "almide/toml",
@@ -4348,12 +4416,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 9,
+  "commits": 11,
   "years": {
-   "2026": 9
+   "2026": 11
   },
   "first": "2026-03-29",
-  "last": "2026-04-12",
+  "last": "2026-11-06",
   "topics": [
    "almide",
    "parser",
@@ -4364,34 +4432,7 @@
    "lang": "bash",
    "code": "almide add almide/toml\n```\n\n## Usage\n\n```almide\nimport toml\n\n// Parse TOML text\nlet config = toml.parse(\"\"\"\n[server]\nhost = \"localhost\"\nport = 8080\ndebug = false\n\"\"\")!\n\n// Stringify Value to TOML\nlet text = toml.stringify(config)"
   },
-  "score": 3.2
- },
- {
-  "full": "almide/almide-sqlite",
-  "owner": "almide",
-  "name": "almide-sqlite",
-  "url": "https://github.com/almide/almide-sqlite",
-  "lead": "SQLite3 database access for Almide",
-  "heading": "almide-sqlite",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Rust"
-  ],
-  "stars": 0,
-  "commits": 6,
-  "years": {
-   "2026": 6
-  },
-  "first": "2026-05-12",
-  "last": "2026-08-06",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide add almide-sqlite@v0.1.0\n```\n\n## Usage"
-  },
-  "score": 3.1
+  "score": 5.2
  },
  {
   "full": "almide/almide-web",
@@ -4407,49 +4448,19 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 3,
+  "commits": 6,
   "years": {
-   "2026": 3
+   "2026": 6
   },
   "first": "2026-05-16",
-  "last": "2026-07-25",
+  "last": "2026-11-06",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "almide",
    "code": "import almide-web.dom as dom\nimport almide-web.fetch as fetch\n\nlet url = dom.str(\"https://api.example.com/data\")\nlet req_id = fetch.get(url)"
   },
-  "score": 3.1
- },
- {
-  "full": "almide/base64",
-  "owner": "almide",
-  "name": "base64",
-  "url": "https://github.com/almide/base64",
-  "lead": "Base64 encoding and decoding for Almide. Standard and URL-safe variants.",
-  "heading": "almide/base64",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 6,
-  "years": {
-   "2026": 6
-  },
-  "first": "2026-03-29",
-  "last": "2026-07-25",
-  "topics": [
-   "almide",
-   "base64",
-   "encoding"
-  ],
-  "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide add almide/base64\n```\n\n## Usage"
-  },
-  "score": 3.1
+  "score": 5.1
  },
  {
   "full": "almide/bigint",
@@ -4462,45 +4473,38 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-05-21",
-  "last": "2026-05-21",
-  "topics": [],
-  "plate": "code",
-  "score": 3.1
- },
- {
-  "full": "almide/csv",
-  "owner": "almide",
-  "name": "csv",
-  "url": "https://github.com/almide/csv",
-  "lead": "CSV parser and serializer for Almide. Quoted fields, header rows, roundtrip-safe.",
-  "heading": "almide/csv",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
   "commits": 6,
   "years": {
    "2026": 6
   },
-  "first": "2026-03-29",
-  "last": "2026-04-12",
-  "topics": [
-   "almide",
-   "csv",
-   "parser"
-  ],
+  "first": "2026-05-21",
+  "last": "2026-11-06",
+  "topics": [],
   "plate": "code",
-  "sample": {
-   "lang": "bash",
-   "code": "almide add almide/csv\n```\n\n## Usage\n\n```almide\nimport csv\n\n// Parse CSV text to array of arrays\nlet data = csv.parse(\"name,age\\nAlice,30\\nBob,25\")!\n\n// Parse with header row → array of objects\nlet records = csv.parse_records(\"name,age\\nAlice,30\\nBob,25\")!\n\n// Stringify array of arrays\nlet text = csv.stringify(data)\n\n// Stringify array of objects (auto-generates header)\nlet text = csv.stringify_records(records)"
+  "score": 5.1
+ },
+ {
+  "full": "almide/parsegen",
+  "owner": "almide",
+  "name": "parsegen",
+  "url": "https://github.com/almide/parsegen",
+  "lead": "tree-sitter compatible parser generator for Almide. Reads grammar.json — no C, no dynamic loading, runs in WASM.",
+  "heading": "almide/parsegen",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 5,
+  "years": {
+   "2026": 5
   },
-  "score": 3.1
+  "first": "2026-08-16",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
  },
  {
   "full": "almide/rsa",
@@ -4513,15 +4517,15 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 4,
+  "commits": 6,
   "years": {
-   "2026": 4
+   "2026": 6
   },
   "first": "2026-05-21",
-  "last": "2026-05-21",
+  "last": "2026-11-06",
   "topics": [],
   "plate": "code",
-  "score": 3.1
+  "score": 5.1
  },
  {
   "full": "almide/almide-js",
@@ -4600,12 +4604,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 96,
+  "commits": 107,
   "years": {
-   "2026": 96
+   "2026": 107
   },
   "first": "2026-05-08",
-  "last": "2026-09-30",
+  "last": "2026-11-06",
   "tag": "v0.1.0",
   "release": {
    "tag": "v0.1.0",
@@ -4619,7 +4623,7 @@
    "lang": "bash",
    "code": "git clone https://github.com/O6lvl4/nendo.git\ncd nendo\npip install -e ."
   },
-  "score": 10.9
+  "score": 11.1
  },
  {
   "full": "almide-graphics/nn",
@@ -4635,13 +4639,13 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 81,
+  "commits": 88,
   "years": {
-   "2026": 81
+   "2026": 88
   },
   "first": "2026-04-12",
-  "last": "2026-10-05",
-  "tag": "v0.1.0",
+  "last": "2026-11-06",
+  "tag": "v0.2.0",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4652,10 +4656,10 @@
   ],
   "plate": "code",
   "sample": {
-   "lang": "bash",
-   "code": "almide build src/whisper.almd -o whisper          # native\nalmide build src/whisper.almd -o whisper.wasm --target wasm\nalmide run examples/_bench_attn_f32.almd\nalmide test                                       # nn/src tests"
+   "lang": "toml",
+   "code": "[dependencies]\nnn = { git = \"https://github.com/almide-graphics/nn\", tag = \"v0.2.0\" }\n\n[trust]\nowners = [\"github.com/almide-graphics\"]"
   },
-  "score": 10.6
+  "score": 10.8
  },
  {
   "full": "almide-graphics/obsid",
@@ -4668,16 +4672,16 @@
   "language": "JavaScript",
   "languages": [
    "JavaScript",
-   "Almide",
-   "Rust"
+   "Rust",
+   "Almide"
   ],
   "stars": 0,
-  "commits": 49,
+  "commits": 56,
   "years": {
-   "2026": 49
+   "2026": 56
   },
   "first": "2026-04-09",
-  "last": "2026-09-30",
+  "last": "2026-11-06",
   "tag": "v0.2.0",
   "release": {
    "tag": "v0.2.0",
@@ -4697,7 +4701,7 @@
    "lang": "almide",
    "code": "import obsid.canvas as canvas\n\neffect fn main() -> Unit = {\n  canvas.set_fill_style(\"#4A90D9\")\n  canvas.fill_rect(10.0, 10.0, 200.0, 100.0)\n}"
   },
-  "score": 10
+  "score": 10.1
  },
  {
   "full": "almide-graphics/lumen",
@@ -4711,12 +4715,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 3,
+  "commits": 5,
   "years": {
-   "2026": 3
+   "2026": 5
   },
   "first": "2026-04-12",
-  "last": "2026-09-30",
+  "last": "2026-11-06",
   "tag": "v0.1.0",
   "license": "MIT",
   "topics": [
@@ -4747,12 +4751,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 170,
+  "commits": 175,
   "years": {
-   "2026": 170
+   "2026": 175
   },
   "first": "2026-05-13",
-  "last": "2026-10-24",
+  "last": "2026-11-06",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4760,7 +4764,7 @@
    "lang": "",
    "code": "snaidhm\n├── gpu/       WebGPU abstraction, frame arena, pipeline management\n├── path/      2D path renderer (flatten → tile → sort → fine raster)\n├── mesh/      3D vertex pipeline\n├── text/      Font reader (OpenType/TrueType → glyph outlines → Path)\n└── image/     Texture decode"
   },
-  "score": 8.4
+  "score": 8.5
  },
  {
   "full": "almide-graphics/ceangal",
@@ -4806,12 +4810,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 21,
+  "commits": 28,
   "years": {
-   "2026": 21
+   "2026": 28
   },
   "first": "2026-09-29",
-  "last": "2026-09-30",
+  "last": "2026-11-06",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4819,7 +4823,62 @@
    "lang": "almide",
    "code": "let LEFT: List[Module] = [Workspaces]\nlet CENTER: List[Module] = [Clock(\"%a %b %d  %H:%M\")]\nlet RIGHT: List[Module] = [Volume, Battery]"
   },
-  "score": 5.4
+  "score": 5.6
+ },
+ {
+  "full": "almide-graphics/ceangal-anime",
+  "owner": "almide-graphics",
+  "name": "ceangal-anime",
+  "url": "https://github.com/almide-graphics/ceangal-anime",
+  "lead": "Animation engine for Almide — anime.js-inspired tween/easing/timeline/stagger",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "HTML"
+  ],
+  "stars": 0,
+  "commits": 10,
+  "years": {
+   "2026": 10
+  },
+  "first": "2026-05-18",
+  "last": "2026-11-06",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import ceangal_anime.easing as ease\nimport ceangal_anime.tween as tw\nimport ceangal_anime.timeline as tl\nimport ceangal_anime.stagger as stag\n\n// Single tween\nlet t0 = tw.create(0.0, 100.0, 800.0)\nlet t1 = tw.with_easing(t0, ease.OUT_ELASTIC)\nlet t2 = tw.with_delay(t1, 200.0)\n\n// Tick each frame\nlet t3 = tw.tick(t2, 16.0)\nlet value = tw.value(t3)  // → current interpolated value\n\n// Timeline\nlet timeline = tl.create()\n  |> tl.add(tw.create(0.0, 1.0, 500.0), 0.0)\n  |> tl.sequence(tw.create(0.0, 1.0, 500.0))\n\n// Stagger delays\nlet delay = stag.from_center(index, total, 60.0)"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almide-graphics/cruth",
+  "owner": "almide-graphics",
+  "name": "cruth",
+  "url": "https://github.com/almide-graphics/cruth",
+  "lead": "VRM/glTF character layer for Almide — parse, geometry, morph targets, expressions. Renderer-agnostic (cruth = form, Irish).",
+  "heading": "cruth",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-07-28",
+  "last": "2026-11-06",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "almide",
+   "code": "import cruth\nimport ffi\n\n// Copy the file into cruth's arena, then read it in place.\nlet prims = cruth.open(glb_bytes)\nlet verts = cruth.build_all()\ncruth.compute_bounds()\nlet exprs = cruth.index_expressions()\n\n// Upload however you like — cruth hands out ffi.Regions (base + length).\nupload(cruth.vertex_region(), verts * 32, cruth.index_region(), cruth.built_index_count())\n\n// Drive the face.\ncruth.clear_target_weights()\ncruth.set_expression(mouth_a, 0.8)\ncruth.apply_morphs()"
+  },
+  "score": 5.2
  },
  {
   "full": "almide-graphics/slabhra",
@@ -4834,12 +4893,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 8,
+  "commits": 10,
   "years": {
-   "2026": 8
+   "2026": 10
   },
   "first": "2026-06-15",
-  "last": "2026-09-30",
+  "last": "2026-11-06",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4848,33 +4907,6 @@
    "code": "slabhra/\n  src/\n    tape.almd     reverse-mode autograd tape (flat, in-place O(1) append, depth-ordered backward)\n    ops.almd      ops + their vjp (gradients delegate to the same forward kernels)\n    optim.almd    SGD, Adam\n    nn.almd       layers / modules            (later)\n  examples/\n    mlp/          tiny MLP, verified against PyTorch\n    dlgn/         differentiable logic-gate networks (gate-count / depth Pareto)"
   },
   "score": 5.2
- },
- {
-  "full": "almide-graphics/ceangal-anime",
-  "owner": "almide-graphics",
-  "name": "ceangal-anime",
-  "url": "https://github.com/almide-graphics/ceangal-anime",
-  "lead": "Animation engine for Almide — anime.js-inspired tween/easing/timeline/stagger",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "HTML"
-  ],
-  "stars": 0,
-  "commits": 7,
-  "years": {
-   "2026": 7
-  },
-  "first": "2026-05-18",
-  "last": "2026-09-30",
-  "license": "MIT",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "almide",
-   "code": "import ceangal_anime.easing as ease\nimport ceangal_anime.tween as tw\nimport ceangal_anime.timeline as tl\nimport ceangal_anime.stagger as stag\n\n// Single tween\nlet t0 = tw.create(0.0, 100.0, 800.0)\nlet t1 = tw.with_easing(t0, ease.OUT_ELASTIC)\nlet t2 = tw.with_delay(t1, 200.0)\n\n// Tick each frame\nlet t3 = tw.tick(t2, 16.0)\nlet value = tw.value(t3)  // → current interpolated value\n\n// Timeline\nlet timeline = tl.create()\n  |> tl.add(tw.create(0.0, 1.0, 500.0), 0.0)\n  |> tl.sequence(tw.create(0.0, 1.0, 500.0))\n\n// Stagger delays\nlet delay = stag.from_center(index, total, 60.0)"
-  },
-  "score": 5.1
  },
  {
   "full": "almide-graphics/ceangal-hello",
@@ -4926,34 +4958,6 @@
   "score": 5.1
  },
  {
-  "full": "almide-graphics/cruth",
-  "owner": "almide-graphics",
-  "name": "cruth",
-  "url": "https://github.com/almide-graphics/cruth",
-  "lead": "VRM/glTF character layer for Almide — parse, geometry, morph targets, expressions. Renderer-agnostic (cruth = form, Irish).",
-  "heading": "cruth",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "JavaScript"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-07-28",
-  "last": "2026-09-30",
-  "license": "MIT",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "almide",
-   "code": "import cruth\n\n// Stage the file into cruth's arena, then read it in place.\nlet prims = cruth.open_staged(file_length)\nlet verts = cruth.build_all()\ncruth.compute_bounds()\nlet exprs = cruth.index_expressions()\n\n// Upload however you like — cruth only hands out pointers.\nupload(cruth.vertex_ptr(), verts * 32, cruth.index_ptr(), cruth.built_index_count())\n\n// Drive the face.\ncruth.clear_target_weights()\ncruth.set_expression(mouth_a, 0.8)\ncruth.apply_morphs()"
-  },
-  "score": 5.1
- },
- {
   "full": "almide-ai/almai",
   "owner": "almide-ai",
   "name": "almai",
@@ -4965,13 +4969,13 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 36,
+  "commits": 41,
   "years": {
-   "2026": 36
+   "2026": 41
   },
   "first": "2026-04-12",
-  "last": "2026-10-18",
-  "tag": "v0.5.0",
+  "last": "2026-11-06",
+  "tag": "v0.6.0",
   "topics": [
    "ai",
    "almide",
@@ -4983,9 +4987,9 @@
   "plate": "code",
   "sample": {
    "lang": "toml",
-   "code": "# almide.toml\n[dependencies]\nalmai = { git = \"https://github.com/almide-ai/almai\", tag = \"v0.5.0\" }"
+   "code": "# almide.toml\n[dependencies]\nalmai = { git = \"https://github.com/almide-ai/almai\", tag = \"v0.6.0\" }\n\n# almide >= 0.69.0 fetches a git dependency only from a trusted owner\n[trust]\nowners = [\"github.com/almide-ai\"]"
   },
-  "score": 9.7
+  "score": 9.8
  },
  {
   "full": "almide-ai/homullus",
@@ -4999,12 +5003,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 28,
+  "commits": 33,
   "years": {
-   "2026": 28
+   "2026": 33
   },
   "first": "2026-05-01",
-  "last": "2026-05-18",
+  "last": "2026-11-06",
   "tag": "v0.3.0",
   "release": {
    "tag": "v0.3.0",
@@ -5017,7 +5021,7 @@
    "lang": "bash",
    "code": "# Pick any tool-calling provider (groq is free-tier, OpenAI-compatible)\nexport GROQ_API_KEY=gsk_...\nMODEL=groq/llama-3.3-70b-versatile almide run src/main.almd"
   },
-  "score": 7.6
+  "score": 9.7
  },
  {
   "full": "almide-ai/manus",
@@ -5031,12 +5035,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 1,
+  "commits": 4,
   "years": {
-   "2026": 1
+   "2026": 4
   },
   "first": "2026-07-07",
-  "last": "2026-07-07",
+  "last": "2026-11-06",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -5044,7 +5048,7 @@
    "lang": "sh",
    "code": "almide build src/main.almd -o manus     # compile to a native binary\nexport ANTHROPIC_API_KEY=sk-ant-...\n./manus \"open Safari and search for the Almide language\""
   },
-  "score": 3
+  "score": 5.1
  },
  {
   "full": "almd-mc/mc-protocol",
@@ -5058,12 +5062,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 15,
+  "commits": 23,
   "years": {
-   "2026": 15
+   "2026": 23
   },
   "first": "2026-05-21",
-  "last": "2026-05-23",
+  "last": "2026-11-06",
   "tag": "v0.2.0",
   "topics": [],
   "plate": "code",
@@ -5071,7 +5075,7 @@
    "lang": "almide",
    "code": "import mc_protocol\n\nlet conn = mc_protocol.connection.connect(\"localhost\", 25565)!\nlet conn = mc_protocol.connection.send(conn, 0x00, handshake_data)!\nlet result = mc_protocol.connection.recv(conn)!"
   },
-  "score": 7.3
+  "score": 9.5
  },
  {
   "full": "almd-mc/mc-bot-cli",
@@ -5085,12 +5089,12 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 5,
+  "commits": 11,
   "years": {
-   "2026": 5
+   "2026": 11
   },
   "first": "2026-05-22",
-  "last": "2026-05-23",
+  "last": "2026-11-06",
   "tag": "v0.1.0",
   "topics": [],
   "plate": "code",
@@ -5098,7 +5102,7 @@
    "lang": "bash",
    "code": "mc-bot-cli [host] [port]\nmc-bot-cli --help"
   },
-  "score": 7.1
+  "score": 9.2
  },
  {
   "full": "almd-mc/mc-bot",
@@ -5112,19 +5116,19 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 9,
+  "commits": 16,
   "years": {
-   "2026": 9
+   "2026": 16
   },
   "first": "2026-05-21",
-  "last": "2026-05-23",
+  "last": "2026-11-06",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "almide",
    "code": "import mc_bot\n\neffect fn main() -> Unit =\n  mc_bot.start({ ...mc_bot.DEFAULT_CONFIG, host: \"localhost\", port: 25565 })!"
   },
-  "score": 3.2
+  "score": 5.3
  },
  {
   "full": "almd-mc/mc-auth",
@@ -5138,19 +5142,416 @@
    "Almide"
   ],
   "stars": 0,
-  "commits": 4,
+  "commits": 9,
   "years": {
-   "2026": 4
+   "2026": 9
   },
   "first": "2026-05-21",
-  "last": "2026-05-23",
+  "last": "2026-11-06",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "toml",
    "code": "[dependencies]\nmc-auth = { git = \"https://github.com/almd-mc/mc-auth\" }"
   },
-  "score": 3.1
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/mc-chat",
+  "owner": "almd-mc",
+  "name": "mc-chat",
+  "url": "https://github.com/almd-mc/mc-chat",
+  "lead": "Minecraft chat module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-chat",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 9,
+  "years": {
+   "2026": 9
+  },
+  "first": "2026-05-22",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nmc-chat = { git = \"https://github.com/almd-mc/mc-chat\" }"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/mc-chunk",
+  "owner": "almd-mc",
+  "name": "mc-chunk",
+  "url": "https://github.com/almd-mc/mc-chunk",
+  "lead": "Minecraft chunk module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-chunk",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-05-23",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nmc-chunk = { git = \"https://github.com/almd-mc/mc-chunk\" }"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/mc-entity",
+  "owner": "almd-mc",
+  "name": "mc-entity",
+  "url": "https://github.com/almd-mc/mc-entity",
+  "lead": "Minecraft entity module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-entity",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-05-22",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nmc-entity = { git = \"https://github.com/almd-mc/mc-entity\" }"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/mc-item",
+  "owner": "almd-mc",
+  "name": "mc-item",
+  "url": "https://github.com/almd-mc/mc-item",
+  "lead": "Minecraft item module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-item",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-05-23",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nmc-item = { git = \"https://github.com/almd-mc/mc-item\" }"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/mc-nbt",
+  "owner": "almd-mc",
+  "name": "mc-nbt",
+  "url": "https://github.com/almd-mc/mc-nbt",
+  "lead": "Minecraft nbt module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-nbt",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 10,
+  "years": {
+   "2026": 10
+  },
+  "first": "2026-05-22",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nmc-nbt = { git = \"https://github.com/almd-mc/mc-nbt\" }"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/mc-pathfinder",
+  "owner": "almd-mc",
+  "name": "mc-pathfinder",
+  "url": "https://github.com/almd-mc/mc-pathfinder",
+  "lead": "A* pathfinding for Minecraft bots — Almide implementation of mineflayer-pathfinder",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-05-24",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/mc-registry",
+  "owner": "almd-mc",
+  "name": "mc-registry",
+  "url": "https://github.com/almd-mc/mc-registry",
+  "lead": "Minecraft registry module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-registry",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-05-22",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nmc-registry = { git = \"https://github.com/almd-mc/mc-registry\" }"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/mc-world",
+  "owner": "almd-mc",
+  "name": "mc-world",
+  "url": "https://github.com/almd-mc/mc-world",
+  "lead": "Minecraft world module for [Almide](https://github.com/almide/almide).",
+  "heading": "almd-mc/mc-world",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 8,
+  "years": {
+   "2026": 8
+  },
+  "first": "2026-05-23",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nmc-world = { git = \"https://github.com/almd-mc/mc-world\" }"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/neoforge",
+  "owner": "almd-mc",
+  "name": "neoforge",
+  "url": "https://github.com/almd-mc/neoforge",
+  "lead": "NeoForge server support for Almide Minecraft bots (patcher, CONFIG phase, protocol)",
+  "heading": "almd-mc/neoforge",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 12,
+  "years": {
+   "2026": 12
+  },
+  "first": "2026-05-21",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nneoforge = { git = \"https://github.com/almd-mc/neoforge\" }"
+  },
+  "score": 5.2
+ },
+ {
+  "full": "almd-mc/mc-bot-ai",
+  "owner": "almd-mc",
+  "name": "mc-bot-ai",
+  "url": "https://github.com/almd-mc/mc-bot-ai",
+  "lead": "AI integration layer for Minecraft bots — Phase 5 Intelligence with almai",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 7,
+  "years": {
+   "2026": 7
+  },
+  "first": "2026-05-24",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
+ },
+ {
+  "full": "almd-mc/mc-collect",
+  "owner": "almd-mc",
+  "name": "mc-collect",
+  "url": "https://github.com/almd-mc/mc-collect",
+  "lead": "Block collection automation for Minecraft bots — Almide implementation of mineflayer-collectblock",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 7,
+  "years": {
+   "2026": 7
+  },
+  "first": "2026-05-24",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
+ },
+ {
+  "full": "almd-mc/mc-inventory",
+  "owner": "almd-mc",
+  "name": "mc-inventory",
+  "url": "https://github.com/almd-mc/mc-inventory",
+  "lead": "Inventory window management for Minecraft bots — Almide implementation of prismarine-windows",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-05-24",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
+ },
+ {
+  "full": "almd-mc/mc-physics",
+  "owner": "almd-mc",
+  "name": "mc-physics",
+  "url": "https://github.com/almd-mc/mc-physics",
+  "lead": "Minecraft physics simulation for Almide (prismarine-physics equivalent)",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 5,
+  "years": {
+   "2026": 5
+  },
+  "first": "2026-05-24",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
+ },
+ {
+  "full": "almd-mc/mc-proxy",
+  "owner": "almd-mc",
+  "name": "mc-proxy",
+  "url": "https://github.com/almd-mc/mc-proxy",
+  "lead": "Minecraft proxy foundation — Almide implementation of prismarine-proxy",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-05-24",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
+ },
+ {
+  "full": "almd-mc/mc-pvp",
+  "owner": "almd-mc",
+  "name": "mc-pvp",
+  "url": "https://github.com/almd-mc/mc-pvp",
+  "lead": "PvP combat utilities for Minecraft bots — Almide implementation of mineflayer-pvp",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-05-24",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
+ },
+ {
+  "full": "almd-mc/mc-server",
+  "owner": "almd-mc",
+  "name": "mc-server",
+  "url": "https://github.com/almd-mc/mc-server",
+  "lead": "Server protocol foundation for Minecraft — Almide implementation of node-minecraft-protocol server mode",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-05-24",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
+ },
+ {
+  "full": "almd-mc/mc-server-impl",
+  "owner": "almd-mc",
+  "name": "mc-server-impl",
+  "url": "https://github.com/almd-mc/mc-server-impl",
+  "lead": "Lightweight Minecraft server implementation — Almide implementation of flying-squid",
+  "language": "Almide",
+  "languages": [
+   "Almide"
+  ],
+  "stars": 0,
+  "commits": 6,
+  "years": {
+   "2026": 6
+  },
+  "first": "2026-05-24",
+  "last": "2026-11-06",
+  "topics": [],
+  "plate": "code",
+  "score": 5.1
  },
  {
   "full": "almd-mc/mc-block",
@@ -5179,277 +5580,6 @@
   "score": 3.1
  },
  {
-  "full": "almd-mc/mc-bot-ai",
-  "owner": "almd-mc",
-  "name": "mc-bot-ai",
-  "url": "https://github.com/almd-mc/mc-bot-ai",
-  "lead": "AI integration layer for Minecraft bots — Phase 5 Intelligence with almai",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-25",
-  "topics": [],
-  "plate": "code",
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-chat",
-  "owner": "almd-mc",
-  "name": "mc-chat",
-  "url": "https://github.com/almd-mc/mc-chat",
-  "lead": "Minecraft chat module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-chat",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 5,
-  "years": {
-   "2026": 5
-  },
-  "first": "2026-05-22",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nmc-chat = { git = \"https://github.com/almd-mc/mc-chat\" }"
-  },
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-chunk",
-  "owner": "almd-mc",
-  "name": "mc-chunk",
-  "url": "https://github.com/almd-mc/mc-chunk",
-  "lead": "Minecraft chunk module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-chunk",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-05-23",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nmc-chunk = { git = \"https://github.com/almd-mc/mc-chunk\" }"
-  },
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-entity",
-  "owner": "almd-mc",
-  "name": "mc-entity",
-  "url": "https://github.com/almd-mc/mc-entity",
-  "lead": "Minecraft entity module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-entity",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-05-22",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nmc-entity = { git = \"https://github.com/almd-mc/mc-entity\" }"
-  },
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-item",
-  "owner": "almd-mc",
-  "name": "mc-item",
-  "url": "https://github.com/almd-mc/mc-item",
-  "lead": "Minecraft item module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-item",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-05-23",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nmc-item = { git = \"https://github.com/almd-mc/mc-item\" }"
-  },
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-nbt",
-  "owner": "almd-mc",
-  "name": "mc-nbt",
-  "url": "https://github.com/almd-mc/mc-nbt",
-  "lead": "Minecraft nbt module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-nbt",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 5,
-  "years": {
-   "2026": 5
-  },
-  "first": "2026-05-22",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nmc-nbt = { git = \"https://github.com/almd-mc/mc-nbt\" }"
-  },
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-pathfinder",
-  "owner": "almd-mc",
-  "name": "mc-pathfinder",
-  "url": "https://github.com/almd-mc/mc-pathfinder",
-  "lead": "A* pathfinding for Minecraft bots — Almide implementation of mineflayer-pathfinder",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-registry",
-  "owner": "almd-mc",
-  "name": "mc-registry",
-  "url": "https://github.com/almd-mc/mc-registry",
-  "lead": "Minecraft registry module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-registry",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 3,
-  "years": {
-   "2026": 3
-  },
-  "first": "2026-05-22",
-  "last": "2026-05-23",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nmc-registry = { git = \"https://github.com/almd-mc/mc-registry\" }"
-  },
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-world",
-  "owner": "almd-mc",
-  "name": "mc-world",
-  "url": "https://github.com/almd-mc/mc-world",
-  "lead": "Minecraft world module for [Almide](https://github.com/almide/almide).",
-  "heading": "almd-mc/mc-world",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 4,
-  "years": {
-   "2026": 4
-  },
-  "first": "2026-05-23",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nmc-world = { git = \"https://github.com/almd-mc/mc-world\" }"
-  },
-  "score": 3.1
- },
- {
-  "full": "almd-mc/neoforge",
-  "owner": "almd-mc",
-  "name": "neoforge",
-  "url": "https://github.com/almd-mc/neoforge",
-  "lead": "NeoForge server support for Almide Minecraft bots (patcher, CONFIG phase, protocol)",
-  "heading": "almd-mc/neoforge",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 5,
-  "years": {
-   "2026": 5
-  },
-  "first": "2026-05-21",
-  "last": "2026-05-23",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "toml",
-   "code": "[dependencies]\nneoforge = { git = \"https://github.com/almd-mc/neoforge\" }"
-  },
-  "score": 3.1
- },
- {
-  "full": "almd-mc/mc-collect",
-  "owner": "almd-mc",
-  "name": "mc-collect",
-  "url": "https://github.com/almd-mc/mc-collect",
-  "lead": "Block collection automation for Minecraft bots — Almide implementation of mineflayer-collectblock",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
   "full": "almd-mc/mc-data",
   "owner": "almd-mc",
   "name": "mc-data",
@@ -5471,90 +5601,6 @@
   "score": 3
  },
  {
-  "full": "almd-mc/mc-inventory",
-  "owner": "almd-mc",
-  "name": "mc-inventory",
-  "url": "https://github.com/almd-mc/mc-inventory",
-  "lead": "Inventory window management for Minecraft bots — Almide implementation of prismarine-windows",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
-  "full": "almd-mc/mc-physics",
-  "owner": "almd-mc",
-  "name": "mc-physics",
-  "url": "https://github.com/almd-mc/mc-physics",
-  "lead": "Minecraft physics simulation for Almide (prismarine-physics equivalent)",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 1,
-  "years": {
-   "2026": 1
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
-  "full": "almd-mc/mc-proxy",
-  "owner": "almd-mc",
-  "name": "mc-proxy",
-  "url": "https://github.com/almd-mc/mc-proxy",
-  "lead": "Minecraft proxy foundation — Almide implementation of prismarine-proxy",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
-  "full": "almd-mc/mc-pvp",
-  "owner": "almd-mc",
-  "name": "mc-pvp",
-  "url": "https://github.com/almd-mc/mc-pvp",
-  "lead": "PvP combat utilities for Minecraft bots — Almide implementation of mineflayer-pvp",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
   "full": "almd-mc/mc-recipe",
   "owner": "almd-mc",
   "name": "mc-recipe",
@@ -5568,48 +5614,6 @@
   "commits": 1,
   "years": {
    "2026": 1
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
-  "full": "almd-mc/mc-server",
-  "owner": "almd-mc",
-  "name": "mc-server",
-  "url": "https://github.com/almd-mc/mc-server",
-  "lead": "Server protocol foundation for Minecraft — Almide implementation of node-minecraft-protocol server mode",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
-  },
-  "first": "2026-05-24",
-  "last": "2026-05-24",
-  "topics": [],
-  "plate": "code",
-  "score": 3
- },
- {
-  "full": "almd-mc/mc-server-impl",
-  "owner": "almd-mc",
-  "name": "mc-server-impl",
-  "url": "https://github.com/almd-mc/mc-server-impl",
-  "lead": "Lightweight Minecraft server implementation — Almide implementation of flying-squid",
-  "language": "Almide",
-  "languages": [
-   "Almide"
-  ],
-  "stars": 0,
-  "commits": 2,
-  "years": {
-   "2026": 2
   },
   "first": "2026-05-24",
   "last": "2026-05-24",

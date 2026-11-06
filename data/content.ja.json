@@ -119,11 +119,11 @@
    {
     "heading": "よく書く言語",
     "items": [
-     "Almide（103）",
-     "Python（38）",
-     "TypeScript（33）",
-     "Shell（33）",
-     "JavaScript（33）"
+     "Almide（104）",
+     "Python（39）",
+     "Shell（35）",
+     "JavaScript（33）",
+     "TypeScript（32）"
     ]
    },
    {
@@ -152,8 +152,9 @@
    {
     "period": "2025年",
     "title": "14件を始めた",
-    "lead": "igloc、llmine、treesrc、cct-fennel-sandbox ほか10件",
+    "lead": "treesrc、igloc、llmine、cct-fennel-sandbox ほか10件",
     "tags": [
+     "Almide",
      "Go",
      "TypeScript",
      "Lua"
@@ -217,12 +218,12 @@
    },
    {
     "key": "直近の更新",
-    "value": "gramide · 2026年11月"
+    "value": "sprid · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
-    "value": "45%",
-    "fill": 0.45
+    "value": "46%",
+    "fill": 0.46
    },
    {
     "key": "2026年のコミット",
@@ -236,7 +237,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "23,207",
+    "value": "23,736",
     "label": "コミット"
    },
    {
@@ -251,17 +252,17 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 87,
+    "count": 89,
     "color": "currentColor"
    },
    {
     "name": "TypeScript",
-    "count": 26,
+    "count": 25,
     "color": "#3178c6"
    },
    {
     "name": "Go",
-    "count": 16,
+    "count": 15,
     "color": "#00add8"
    },
    {
@@ -363,27 +364,27 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 19423,
+    "count": 19655,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 2956,
+    "count": 3090,
     "of": 123
    },
    {
     "name": "almide-graphics",
-    "count": 671,
+    "count": 720,
     "of": 13
    },
    {
     "name": "almd-mc",
-    "count": 92,
+    "count": 193,
     "of": 24
    },
    {
     "name": "almide-ai",
-    "count": 65,
+    "count": 78,
     "of": 3
    }
   ],
@@ -406,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 22962
+    "count": 23491
    }
   ]
  },
@@ -422,7 +423,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "19,248",
+     "value": "19,433",
      "label": "コミット"
     },
     {
@@ -437,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 19248
+     "count": 19433
     }
    ],
    "works": [
@@ -467,7 +468,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "16,026"
+       "value": "16,137"
       },
       {
        "label": "初回",
@@ -514,7 +515,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,923"
+       "value": "1,929"
       },
       {
        "label": "初回",
@@ -536,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-03"
+      "date": "2026-11-06"
      }
     },
     {
@@ -626,6 +627,45 @@
     },
     {
      "image": "",
+     "id": "almide/almide-bindgen",
+     "title": "almide-bindgen",
+     "titleEn": "Almide向けの汎用FFIバインディング生成ライブラリ",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-bindgen",
+     "tags": [
+      "Almide",
+      "Shell",
+      "almide",
+      "bindgen"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "54"
+      },
+      {
+       "label": "初回",
+       "value": "2026年3月"
+      },
+      {
+       "label": "星",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/almide-bindgen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/almide-dojo",
      "title": "almide-dojo",
      "titleEn": "LLM生成コードの修正生存率を毎日測るAlmide用の計測基盤",
@@ -642,7 +682,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "595"
+       "value": "606"
       },
       {
        "label": "初回",
@@ -660,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -707,7 +747,7 @@
      "id": "almide/vscode-almide",
      "title": "vscode-almide",
      "titleEn": "Almide言語の.almdファイル向けVS Code拡張",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/vscode-almide",
@@ -720,7 +760,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "28"
+       "value": "30"
       },
       {
        "label": "初回",
@@ -738,7 +778,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-22"
+      "date": "2026-11-06"
      }
     },
     {
@@ -785,7 +825,7 @@
      "id": "almide/llm",
      "title": "llm",
      "titleEn": "Almide向けLLMストリーミングクライアント",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/llm",
@@ -795,7 +835,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1"
+       "value": "9"
       },
       {
        "label": "初回",
@@ -803,7 +843,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.1.0"
+       "value": "v0.2.0"
       }
      ],
      "links": [
@@ -813,7 +853,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -851,45 +891,6 @@
      ],
      "order": {
       "date": "2026-10-27"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-bindgen",
-     "title": "almide-bindgen",
-     "titleEn": "Almide向けの汎用FFIバインディング生成ライブラリ",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-bindgen",
-     "tags": [
-      "Almide",
-      "almide",
-      "bindgen",
-      "code-generation"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "33"
-      },
-      {
-       "label": "初回",
-       "value": "2026年3月"
-      },
-      {
-       "label": "星",
-       "value": "1"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/almide-bindgen"
-      }
-     ],
-     "order": {
-      "date": "2026-04-12"
      }
     },
     {
@@ -936,7 +937,7 @@
      "id": "O6lvl4/arlk",
      "title": "arlk",
      "titleEn": "複数の論理を扱い、証明の前提を追うAlmide製の証明言語",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/arlk",
@@ -948,7 +949,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "100"
+       "value": "102"
       },
       {
        "label": "初回",
@@ -962,7 +963,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-07"
+      "date": "2026-11-06"
      }
     },
     {
@@ -970,7 +971,7 @@
      "id": "almide/almide-lander",
      "title": "almide-lander",
      "titleEn": "AlmideモジュールをネイティブFFIや各言語向けパッケージに出力するエクスポーター",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-lander",
@@ -983,7 +984,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "55"
+       "value": "64"
       },
       {
        "label": "初回",
@@ -997,7 +998,41 @@
       }
      ],
      "order": {
-      "date": "2026-10-01"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-wasm-bindgen",
+     "title": "almide-wasm-bindgen",
+     "titleEn": "AlmideからWASMとJS/TSバインディングを生成するライブラリ",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-wasm-bindgen",
+     "tags": [
+      "Almide",
+      "JavaScript",
+      "HTML"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "28"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/almide-wasm-bindgen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -1005,7 +1040,7 @@
      "id": "almide/cloud-examples",
      "title": "cloud-examples",
      "titleEn": "同じAlmideのJSON APIを複数クラウドで動かす例",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "JavaScript",
      "credit": "almide",
      "url": "https://github.com/almide/cloud-examples",
@@ -1017,7 +1052,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "18"
+       "value": "21"
       },
       {
        "label": "初回",
@@ -1031,7 +1066,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1065,111 +1100,10 @@
     },
     {
      "image": "",
-     "id": "almide/parsegen",
-     "title": "parsegen",
-     "titleEn": "Almide製のtree-sitter互換パーサジェネレータ。grammar.jsonから構文木を生成する",
-     "date": "2026年8月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/parsegen",
-     "tags": [
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/parsegen"
-      }
-     ],
-     "order": {
-      "date": "2026-08-17"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-wasm-bindgen",
-     "title": "almide-wasm-bindgen",
-     "titleEn": "AlmideからWASMとJS/TSバインディングを生成するライブラリ",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-wasm-bindgen",
-     "tags": [
-      "Almide",
-      "JavaScript",
-      "HTML"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "24"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/almide-wasm-bindgen"
-      }
-     ],
-     "order": {
-      "date": "2026-04-15"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide-web",
-     "title": "almide-web",
-     "titleEn": "Almide WASMアプリ向けのブラウザAPIバインディング",
-     "date": "2026年7月",
-     "format": "JavaScript",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide-web",
-     "tags": [
-      "JavaScript",
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/almide-web"
-      }
-     ],
-     "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/almide-examples",
      "title": "almide-examples",
      "titleEn": "Almide言語のサンプルとmini-gitベンチマーク実装集",
-     "date": "2026年3月",
+     "date": "2026年11月",
      "format": "Shell",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/almide-examples",
@@ -1180,7 +1114,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1"
+       "value": "4"
       },
       {
        "label": "初回",
@@ -1194,7 +1128,74 @@
       }
      ],
      "order": {
-      "date": "2026-03-07"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide-web",
+     "title": "almide-web",
+     "titleEn": "Almide WASMアプリ向けのブラウザAPIバインディング",
+     "date": "2026年11月",
+     "format": "JavaScript",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide-web",
+     "tags": [
+      "JavaScript",
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/almide-web"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/parsegen",
+     "title": "parsegen",
+     "titleEn": "Almide製のtree-sitter互換パーサジェネレータ。grammar.jsonから構文木を生成する",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/parsegen",
+     "tags": [
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "5"
+      },
+      {
+       "label": "初回",
+       "value": "2026年8月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/parsegen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -1244,7 +1245,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "67",
+     "value": "96",
      "label": "コミット"
     },
     {
@@ -1259,24 +1260,61 @@
    "years": [
     {
      "name": "2026",
-     "count": 67
+     "count": 96
     }
    ],
    "works": [
     {
-     "image": "plates/ja/almide/dfa.jpg",
+     "image": "plates/ja/almide/aes.jpg",
      "readme": {
-      "lead": "正規表現の集合を単一DFAにまとめ最左最長一致を行うAlmide用ライブラリ",
+      "lead": "Almide向けのAES-128-CFB8暗号化ライブラリ",
       "points": [
-       "最左最長一致を線形時間で実行",
-       "複数パターンを融合した1つのオートマトン",
-       "WASMでも動く純Almide実装"
+       "Rust対象はAES-NIで高速化",
+       "WASM向けは純Almideのフォールバック",
+       "new_cfb8・cfb8_encrypt・cfb8_decrypt API"
       ]
      },
+     "id": "almide/aes",
+     "title": "aes",
+     "titleEn": "Almide向けのAES-128-CFB8暗号化ライブラリ",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/aes",
+     "tags": [
+      "Almide",
+      "Rust"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "9"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.2.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/aes"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/dfa",
      "title": "dfa",
      "titleEn": "正規表現の集合を単一DFAにまとめ最左最長一致を行うAlmide用ライブラリ",
-     "date": "2026年8月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/dfa",
@@ -1287,7 +1325,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "11"
       },
       {
        "label": "初回",
@@ -1295,7 +1333,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.1.0"
+       "value": "v0.1.1"
       }
      ],
      "links": [
@@ -1305,7 +1343,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-17"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1326,7 +1364,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "5"
+       "value": "11"
       },
       {
        "label": "初回",
@@ -1334,7 +1372,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.1.1"
+       "value": "v0.2.0"
       }
      ],
      "links": [
@@ -1344,7 +1382,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-03"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1352,7 +1390,7 @@
      "id": "almide/yaml",
      "title": "yaml",
      "titleEn": "Almide向けの純Almide製YAMLパーサ兼シリアライザ。Codec連携対応",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/yaml",
@@ -1365,7 +1403,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "10"
+       "value": "12"
       },
       {
        "label": "初回",
@@ -1373,7 +1411,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.2.0"
+       "value": "v0.2.1"
       }
      ],
      "links": [
@@ -1383,44 +1421,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/aes",
-     "title": "aes",
-     "titleEn": "Almide向けのAES-128-CFB8暗号化ライブラリ",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/aes",
-     "tags": [
-      "Almide",
-      "Rust"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "7"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      },
-      {
-       "label": "タグ",
-       "value": "v0.2.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/aes"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1428,7 +1429,7 @@
      "id": "almide/sha1",
      "title": "sha1",
      "titleEn": "Almide向けのSHA-1ハッシュライブラリ",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/sha1",
@@ -1439,7 +1440,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "4"
+       "value": "6"
       },
       {
        "label": "初回",
@@ -1447,7 +1448,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.2.0"
+       "value": "v0.2.1"
       }
      ],
      "links": [
@@ -1457,42 +1458,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/toml",
-     "title": "toml",
-     "titleEn": "Almide向けのTOML v1.0パーサ兼シリアライザ、Codec連携付き",
-     "date": "2026年4月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/toml",
-     "tags": [
-      "Almide",
-      "almide",
-      "parser",
-      "toml"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "9"
-      },
-      {
-       "label": "初回",
-       "value": "2026年3月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/toml"
-      }
-     ],
-     "order": {
-      "date": "2026-04-12"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1500,7 +1466,7 @@
      "id": "almide/almide-sqlite",
      "title": "almide-sqlite",
      "titleEn": "Almide向けのSQLite3データベースアクセスライブラリ",
-     "date": "2026年8月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/almide-sqlite",
@@ -1511,7 +1477,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "8"
       },
       {
        "label": "初回",
@@ -1525,7 +1491,7 @@
       }
      ],
      "order": {
-      "date": "2026-08-06"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1533,7 +1499,7 @@
      "id": "almide/base64",
      "title": "base64",
      "titleEn": "Almide向けの純Almide製Base64エンコード・デコードライブラリ",
-     "date": "2026年7月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/base64",
@@ -1546,7 +1512,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "8"
       },
       {
        "label": "初回",
@@ -1560,39 +1526,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/bigint",
-     "title": "bigint",
-     "titleEn": "Almide向けの任意精度な符号なし整数演算ライブラリ",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almide",
-     "url": "https://github.com/almide/bigint",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/bigint"
-      }
-     ],
-     "order": {
-      "date": "2026-05-21"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1600,7 +1534,7 @@
      "id": "almide/csv",
      "title": "csv",
      "titleEn": "RFC 4180対応の、Almide向け純Almide製CSVパーサ兼シリアライザ",
-     "date": "2026年4月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/csv",
@@ -1613,7 +1547,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "8"
       },
       {
        "label": "初回",
@@ -1627,7 +1561,74 @@
       }
      ],
      "order": {
-      "date": "2026-04-12"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/toml",
+     "title": "toml",
+     "titleEn": "Almide向けのTOML v1.0パーサ兼シリアライザ、Codec連携付き",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/toml",
+     "tags": [
+      "Almide",
+      "almide",
+      "parser",
+      "toml"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "11"
+      },
+      {
+       "label": "初回",
+       "value": "2026年3月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/toml"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/bigint",
+     "title": "bigint",
+     "titleEn": "Almide向けの任意精度な符号なし整数演算ライブラリ",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide",
+     "url": "https://github.com/almide/bigint",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/bigint"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -1635,7 +1636,7 @@
      "id": "almide/rsa",
      "title": "rsa",
      "titleEn": "Almide向けのRSA PKCS1v15暗号化とDER鍵解析ライブラリ",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/rsa",
@@ -1645,7 +1646,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "4"
+       "value": "6"
       },
       {
        "label": "初回",
@@ -1659,7 +1660,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-21"
+      "date": "2026-11-06"
      }
     }
    ]
@@ -1675,7 +1676,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "1,182",
+     "value": "1,286",
      "label": "コミット"
     },
     {
@@ -1694,7 +1695,7 @@
     },
     {
      "name": "2026",
-     "count": 1166
+     "count": 1270
     }
    ],
    "works": [
@@ -1711,7 +1712,7 @@
      "id": "almide/porta",
      "title": "porta",
      "titleEn": "許可した権限だけで、エージェントを動かす",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Rust",
      "credit": "almide",
      "url": "https://github.com/almide/porta",
@@ -1724,7 +1725,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "283"
+       "value": "304"
       },
       {
        "label": "初回",
@@ -1746,7 +1747,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-04"
+      "date": "2026-11-06"
      }
     },
     {
@@ -1813,7 +1814,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "193"
+       "value": "196"
       },
       {
        "label": "初回",
@@ -1851,7 +1852,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "149"
+       "value": "152"
       },
       {
        "label": "初回",
@@ -1866,6 +1867,44 @@
       {
        "label": "リポジトリ",
        "href": "https://github.com/O6lvl4/gramide-cli"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-python",
+     "title": "gramide-python",
+     "titleEn": "gramide-cli向けのPython 3.14対応。字句解析から編集中の回復までを担う",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-python",
+     "tags": [
+      "Almide",
+      "Python",
+      "C"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "138"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.14"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-python"
       }
      ],
      "order": {
@@ -1889,7 +1928,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "133"
+       "value": "136"
       },
       {
        "label": "初回",
@@ -1927,7 +1966,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "133"
+       "value": "136"
       },
       {
        "label": "初回",
@@ -1942,44 +1981,6 @@
       {
        "label": "リポジトリ",
        "href": "https://github.com/O6lvl4/gramide-go"
-      }
-     ],
-     "order": {
-      "date": "2026-11-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-python",
-     "title": "gramide-python",
-     "titleEn": "gramide-cli向けのPython 3.14対応。字句解析から編集中の回復までを担う",
-     "date": "2026年11月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-python",
-     "tags": [
-      "Almide",
-      "Python",
-      "C"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "135"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      },
-      {
-       "label": "タグ",
-       "value": "v0.1.14"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-python"
       }
      ],
      "order": {
@@ -2003,7 +2004,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "134"
+       "value": "137"
       },
       {
        "label": "初回",
@@ -2037,7 +2038,7 @@
      "id": "O6lvl4/golemide",
      "title": "golemide",
      "titleEn": "読んで、直して、テストを回す。同じモデルで Aider より多く解くコーディングエージェント",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/golemide",
@@ -2049,7 +2050,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "81"
+       "value": "93"
       },
       {
        "label": "初回",
@@ -2067,7 +2068,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2083,7 +2084,7 @@
      "id": "O6lvl4/comide",
      "title": "comide",
      "titleEn": "ターミナルで対話するコーディングエージェント。Claude Code、Codex、Aider の系譜",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/comide",
@@ -2095,7 +2096,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "59"
+       "value": "64"
       },
       {
        "label": "初回",
@@ -2113,7 +2114,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2141,7 +2142,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "57"
+       "value": "60"
       },
       {
        "label": "初回",
@@ -2226,7 +2227,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "35"
+       "value": "38"
       },
       {
        "label": "初回",
@@ -2264,7 +2265,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "28"
+       "value": "31"
       },
       {
        "label": "初回",
@@ -2279,6 +2280,45 @@
       {
        "label": "リポジトリ",
        "href": "https://github.com/O6lvl4/gramide-typescript"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/onomly",
+     "title": "onomly",
+     "titleEn": "プロダクト名候補の空きと衝突を調べるClaude Codeスキル",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/onomly",
+     "tags": [
+      "Almide",
+      "almide",
+      "claude-code",
+      "claude-skill"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "19"
+      },
+      {
+       "label": "初回",
+       "value": "2026年8月"
+      },
+      {
+       "label": "リリース",
+       "value": "v0.4.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/onomly"
       }
      ],
      "order": {
@@ -2302,7 +2342,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "13"
+       "value": "16"
       },
       {
        "label": "初回",
@@ -2325,75 +2365,36 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/onomly",
-     "title": "onomly",
-     "titleEn": "プロダクト名候補の空きと衝突を調べるClaude Codeスキル",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/onomly",
-     "tags": [
-      "Almide",
-      "almide",
-      "claude-code",
-      "claude-skill"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "15"
-      },
-      {
-       "label": "初回",
-       "value": "2026年8月"
-      },
-      {
-       "label": "リリース",
-       "value": "v0.4.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/onomly"
-      }
-     ],
-     "order": {
-      "date": "2026-09-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/gramide-java",
-     "title": "gramide-java",
-     "titleEn": "gramide向けにJavaの構文サブセットを読み取る",
+     "id": "O6lvl4/treesrc",
+     "title": "treesrc",
+     "titleEn": ".gitignoreを尊重してディレクトリ構造とファイル内容を表示するCLI",
      "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/gramide-java",
+     "url": "https://github.com/O6lvl4/treesrc",
      "tags": [
       "Almide",
       "Python",
-      "Java"
+      "Shell"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "8"
+       "value": "17"
       },
       {
        "label": "初回",
-       "value": "2026年10月"
+       "value": "2025年3月"
       },
       {
-       "label": "タグ",
-       "value": "v0.1.1"
+       "label": "リリース",
+       "value": "v1.0.2"
       }
      ],
      "links": [
       {
        "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/gramide-java"
+       "href": "https://github.com/O6lvl4/treesrc"
       }
      ],
      "order": {
@@ -2417,7 +2418,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "初回",
@@ -2455,7 +2456,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "初回",
@@ -2493,7 +2494,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "初回",
@@ -2508,6 +2509,44 @@
       {
        "label": "リポジトリ",
        "href": "https://github.com/O6lvl4/gramide-css"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/gramide-java",
+     "title": "gramide-java",
+     "titleEn": "gramide向けにJavaの構文サブセットを読み取る",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/gramide-java",
+     "tags": [
+      "Almide",
+      "Python",
+      "Java"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "11"
+      },
+      {
+       "label": "初回",
+       "value": "2026年10月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.1"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/gramide-java"
       }
      ],
      "order": {
@@ -2531,7 +2570,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "初回",
@@ -2569,7 +2608,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "初回",
@@ -2607,7 +2646,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "6"
+       "value": "9"
       },
       {
        "label": "初回",
@@ -2666,46 +2705,10 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/treesrc",
-     "title": "treesrc",
-     "titleEn": ".gitignoreを尊重してディレクトリ構造とファイル内容を表示するCLI",
-     "date": "2025年4月",
-     "format": "TypeScript",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/treesrc",
-     "tags": [
-      "TypeScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "14"
-      },
-      {
-       "label": "初回",
-       "value": "2025年3月"
-      },
-      {
-       "label": "リリース",
-       "value": "v1.0.2"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/treesrc"
-      }
-     ],
-     "order": {
-      "date": "2025-04-01"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/ctxgate",
      "title": "ctxgate",
      "titleEn": "Claude Code向けのコンテキストファイアウォール。ツール出力を保管し圧縮表示する",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/ctxgate",
@@ -2717,7 +2720,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "36"
+       "value": "40"
       },
       {
        "label": "初回",
@@ -2731,7 +2734,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-20"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2739,7 +2742,7 @@
      "id": "O6lvl4/assay",
      "title": "assay",
      "titleEn": "コーディングエージェントのベンチ値を条件付きで保存し測定も行う基盤",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/assay",
@@ -2751,7 +2754,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "17"
+       "value": "19"
       },
       {
        "label": "初回",
@@ -2765,7 +2768,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-13"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2806,7 +2809,7 @@
      "id": "O6lvl4/codopsy-almd",
      "title": "codopsy-almd",
      "titleEn": "gramideの構文解析からAlideの複雑度を測るCLI",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/codopsy-almd",
@@ -2817,7 +2820,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "4"
+       "value": "6"
       },
       {
        "label": "初回",
@@ -2831,7 +2834,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-11"
+      "date": "2026-11-06"
      }
     },
     {
@@ -2981,7 +2984,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "127",
+     "value": "142",
      "label": "コミット"
     },
     {
@@ -3000,63 +3003,24 @@
     },
     {
      "name": "2026",
-     "count": 100
+     "count": 115
     }
    ],
    "works": [
     {
-     "image": "plates/ja/almide-ai/almai.jpg",
+     "image": "plates/ja/almide/bonsai-almide.jpg",
      "readme": {
-      "lead": "Almide用のマルチプロバイダLLMクライアント。単一の窓口で各社に対応",
+      "lead": "Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ",
       "points": [
-       "8種のプロバイダをprefixで切替",
-       "JSONモードとツール呼び出し",
-       "指数バックオフのcall_retry"
+       "Qwen3テンプレートとKVキャッシュ",
+       "温度・top-k・繰り返しペナルティ",
+       "248MBモデルをIndexedDBに保存"
       ]
      },
-     "id": "almide-ai/almai",
-     "title": "almai",
-     "titleEn": "Almide用のマルチプロバイダLLMクライアント。単一の窓口で各社に対応",
-     "date": "2026年10月",
-     "format": "Almide",
-     "credit": "almide-ai",
-     "url": "https://github.com/almide-ai/almai",
-     "tags": [
-      "Almide",
-      "ai",
-      "almide",
-      "anthropic"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "36"
-      },
-      {
-       "label": "初回",
-       "value": "2026年4月"
-      },
-      {
-       "label": "タグ",
-       "value": "v0.5.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide-ai/almai"
-      }
-     ],
-     "order": {
-      "date": "2026-10-18"
-     }
-    },
-    {
-     "image": "",
      "id": "almide/bonsai-almide",
      "title": "bonsai-almide",
      "titleEn": "Almide経由でBonsai 1bit LLMをWASM化するブラウザチャットデモ",
-     "date": "2026年4月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide",
      "url": "https://github.com/almide/bonsai-almide",
@@ -3068,7 +3032,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "35"
+       "value": "37"
       },
       {
        "label": "初回",
@@ -3086,7 +3050,46 @@
       }
      ],
      "order": {
-      "date": "2026-04-22"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-ai/almai",
+     "title": "almai",
+     "titleEn": "Almide用のマルチプロバイダLLMクライアント。単一の窓口で各社に対応",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide-ai",
+     "url": "https://github.com/almide-ai/almai",
+     "tags": [
+      "Almide",
+      "ai",
+      "almide",
+      "anthropic"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "41"
+      },
+      {
+       "label": "初回",
+       "value": "2026年4月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.6.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide-ai/almai"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -3094,7 +3097,7 @@
      "id": "almide-ai/homullus",
      "title": "homullus",
      "titleEn": "Almide製の、モジュール式AIエージェントCLIランタイム",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/homullus",
@@ -3104,7 +3107,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "28"
+       "value": "33"
       },
       {
        "label": "初回",
@@ -3122,7 +3125,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-18"
+      "date": "2026-11-06"
      }
     },
     {
@@ -3166,7 +3169,7 @@
      "id": "almide-ai/manus",
      "title": "manus",
      "titleEn": "macOSの実デスクトップをClaudeに操作させるAlmide製エージェント",
-     "date": "2026年7月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-ai",
      "url": "https://github.com/almide-ai/manus",
@@ -3176,7 +3179,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1"
+       "value": "4"
       },
       {
        "label": "初回",
@@ -3190,7 +3193,7 @@
       }
      ],
      "order": {
-      "date": "2026-07-07"
+      "date": "2026-11-06"
      }
     }
    ]
@@ -3206,7 +3209,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "108",
+     "value": "209",
      "label": "コミット"
     },
     {
@@ -3225,7 +3228,7 @@
     },
     {
      "name": "2026",
-     "count": 92
+     "count": 193
     }
    ],
    "works": [
@@ -3242,7 +3245,7 @@
      "id": "almd-mc/mc-protocol",
      "title": "mc-protocol",
      "titleEn": "AlmideでMinecraftプロトコルを実装したライブラリ",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almd-mc",
      "url": "https://github.com/almd-mc/mc-protocol",
@@ -3252,7 +3255,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "15"
+       "value": "23"
       },
       {
        "label": "初回",
@@ -3270,7 +3273,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
@@ -3278,7 +3281,7 @@
      "id": "almd-mc/mc-bot-cli",
      "title": "mc-bot-cli",
      "titleEn": "Almide製Minecraftボット用のCLI",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almd-mc",
      "url": "https://github.com/almd-mc/mc-bot-cli",
@@ -3288,7 +3291,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "5"
+       "value": "11"
       },
       {
        "label": "初回",
@@ -3306,7 +3309,7 @@
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
@@ -3314,10 +3317,42 @@
      "id": "almd-mc/mc-bot",
      "title": "mc-bot",
      "titleEn": "Almideで書かれたMinecraftボットのフレームワーク",
-     "date": "2026年5月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almd-mc",
      "url": "https://github.com/almd-mc/mc-bot",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "16"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-bot"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-auth",
+     "title": "mc-auth",
+     "titleEn": "Almide向けのMinecraft認証モジュール",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-auth",
      "tags": [
       "Almide"
      ],
@@ -3334,29 +3369,29 @@
      "links": [
       {
        "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-bot"
+       "href": "https://github.com/almd-mc/mc-auth"
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
      }
     },
     {
      "image": "",
-     "id": "almd-mc/mc-auth",
-     "title": "mc-auth",
-     "titleEn": "Almide向けのMinecraft認証モジュール",
-     "date": "2026年5月",
+     "id": "almd-mc/mc-chat",
+     "title": "mc-chat",
+     "titleEn": "Almide向けのMinecraftチャットモジュール",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-auth",
+     "url": "https://github.com/almd-mc/mc-chat",
      "tags": [
       "Almide"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "4"
+       "value": "9"
       },
       {
        "label": "初回",
@@ -3366,11 +3401,523 @@
      "links": [
       {
        "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-auth"
+       "href": "https://github.com/almd-mc/mc-chat"
       }
      ],
      "order": {
-      "date": "2026-05-23"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-chunk",
+     "title": "mc-chunk",
+     "titleEn": "Almide向けのMinecraftチャンク用モジュール",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-chunk",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-chunk"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-entity",
+     "title": "mc-entity",
+     "titleEn": "Almide向けのMinecraftエンティティモジュール",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-entity",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-entity"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-item",
+     "title": "mc-item",
+     "titleEn": "Almide向けのMinecraftアイテムモジュール",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-item",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-item"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-nbt",
+     "title": "mc-nbt",
+     "titleEn": "Almide向けのMinecraft NBTモジュール",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-nbt",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "10"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-nbt"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-pathfinder",
+     "title": "mc-pathfinder",
+     "titleEn": "mineflayer-pathfinderのAlmide実装で、Minecraftボット向けA*経路探索",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-pathfinder",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-pathfinder"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-registry",
+     "title": "mc-registry",
+     "titleEn": "Almide向けのMinecraftレジストリモジュール",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-registry",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-registry"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-world",
+     "title": "mc-world",
+     "titleEn": "Almide向けのMinecraftワールドモジュール",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-world",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-world"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/neoforge",
+     "title": "neoforge",
+     "titleEn": "Almide向けMinecraft neoforgeモジュール",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/neoforge",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "12"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/neoforge"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-bot-ai",
+     "title": "mc-bot-ai",
+     "titleEn": "almaiを用いたMinecraftボット向けAI統合レイヤー(Phase 5 Intelligence)",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-bot-ai",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "7"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-bot-ai"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-collect",
+     "title": "mc-collect",
+     "titleEn": "Minecraft bot向けブロック収集自動化。mineflayer-collectblockのAlmide実装",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-collect",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "7"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-collect"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-inventory",
+     "title": "mc-inventory",
+     "titleEn": "Minecraftボット向けのインベントリウィンドウ管理。prismarine-windowsのAlmide実装",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-inventory",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-inventory"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-physics",
+     "title": "mc-physics",
+     "titleEn": "Almide向けのMinecraft物理シミュレーション(prismarine-physics相当)",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-physics",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "5"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-physics"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-proxy",
+     "title": "mc-proxy",
+     "titleEn": "prismarine-proxyをAlmideで実装したMinecraftプロキシの基盤",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-proxy",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-proxy"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-pvp",
+     "title": "mc-pvp",
+     "titleEn": "mineflayer-pvpをAlmideで実装した、Minecraftボット向けPvP戦闘ユーティリティ",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-pvp",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-pvp"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-server",
+     "title": "mc-server",
+     "titleEn": "node-minecraft-protocolのサーバーモードをAlmideで実装したMinecraftサーバー基盤",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-server",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-server"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almd-mc/mc-server-impl",
+     "title": "mc-server-impl",
+     "titleEn": "flying-squidをAlmideで実装した軽量Minecraftサーバー",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almd-mc",
+     "url": "https://github.com/almd-mc/mc-server-impl",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "6"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almd-mc/mc-server-impl"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -3399,358 +3946,6 @@
       {
        "label": "リポジトリ",
        "href": "https://github.com/almd-mc/mc-block"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-bot-ai",
-     "title": "mc-bot-ai",
-     "titleEn": "almaiを用いたMinecraftボット向けAI統合レイヤー(Phase 5 Intelligence)",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-bot-ai",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-bot-ai"
-      }
-     ],
-     "order": {
-      "date": "2026-05-25"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-chat",
-     "title": "mc-chat",
-     "titleEn": "Almide向けのMinecraftチャットモジュール",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-chat",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "5"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-chat"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-chunk",
-     "title": "mc-chunk",
-     "titleEn": "Almide向けのMinecraftチャンク用モジュール",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-chunk",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-chunk"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-entity",
-     "title": "mc-entity",
-     "titleEn": "Almide向けのMinecraftエンティティモジュール",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-entity",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-entity"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-item",
-     "title": "mc-item",
-     "titleEn": "Almide向けのMinecraftアイテムモジュール",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-item",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-item"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-nbt",
-     "title": "mc-nbt",
-     "titleEn": "Almide向けのMinecraft NBTモジュール",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-nbt",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "5"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-nbt"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-pathfinder",
-     "title": "mc-pathfinder",
-     "titleEn": "mineflayer-pathfinderのAlmide実装で、Minecraftボット向けA*経路探索",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-pathfinder",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-pathfinder"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-registry",
-     "title": "mc-registry",
-     "titleEn": "Almide向けのMinecraftレジストリモジュール",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-registry",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-registry"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-world",
-     "title": "mc-world",
-     "titleEn": "Almide向けのMinecraftワールドモジュール",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-world",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-world"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/neoforge",
-     "title": "neoforge",
-     "titleEn": "Almide向けMinecraft neoforgeモジュール",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/neoforge",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "5"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/neoforge"
-      }
-     ],
-     "order": {
-      "date": "2026-05-23"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-collect",
-     "title": "mc-collect",
-     "titleEn": "Minecraft bot向けブロック収集自動化。mineflayer-collectblockのAlmide実装",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-collect",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-collect"
       }
      ],
      "order": {
@@ -3791,134 +3986,6 @@
     },
     {
      "image": "",
-     "id": "almd-mc/mc-inventory",
-     "title": "mc-inventory",
-     "titleEn": "Minecraftボット向けのインベントリウィンドウ管理。prismarine-windowsのAlmide実装",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-inventory",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-inventory"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-physics",
-     "title": "mc-physics",
-     "titleEn": "Almide向けのMinecraft物理シミュレーション(prismarine-physics相当)",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-physics",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "1"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-physics"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-proxy",
-     "title": "mc-proxy",
-     "titleEn": "prismarine-proxyをAlmideで実装したMinecraftプロキシの基盤",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-proxy",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-proxy"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-pvp",
-     "title": "mc-pvp",
-     "titleEn": "mineflayer-pvpをAlmideで実装した、Minecraftボット向けPvP戦闘ユーティリティ",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-pvp",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-pvp"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
      "id": "almd-mc/mc-recipe",
      "title": "mc-recipe",
      "titleEn": "Almide向けのMinecraftクラフトレシピライブラリ(prismarine-recipe相当)",
@@ -3943,70 +4010,6 @@
       {
        "label": "リポジトリ",
        "href": "https://github.com/almd-mc/mc-recipe"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-server",
-     "title": "mc-server",
-     "titleEn": "node-minecraft-protocolのサーバーモードをAlmideで実装したMinecraftサーバー基盤",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-server",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-server"
-      }
-     ],
-     "order": {
-      "date": "2026-05-24"
-     }
-    },
-    {
-     "image": "",
-     "id": "almd-mc/mc-server-impl",
-     "title": "mc-server-impl",
-     "titleEn": "flying-squidをAlmideで実装した軽量Minecraftサーバー",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "almd-mc",
-     "url": "https://github.com/almd-mc/mc-server-impl",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almd-mc/mc-server-impl"
       }
      ],
      "order": {
@@ -4059,7 +4062,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "671",
+     "value": "720",
      "label": "コミット"
     },
     {
@@ -4074,7 +4077,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 671
+     "count": 720
     }
    ],
    "works": [
@@ -4129,7 +4132,7 @@
      "id": "almide-graphics/nendo",
      "title": "nendo",
      "titleEn": "3Dアバターファイルを検査・編集・カスタマイズするツールキット",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "HTML",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/nendo",
@@ -4141,7 +4144,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "96"
+       "value": "107"
       },
       {
        "label": "初回",
@@ -4159,7 +4162,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4167,7 +4170,7 @@
      "id": "almide-graphics/nn",
      "title": "nn",
      "titleEn": "WhisperとQwenを動かすAlmide向け推論ライブラリ",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/nn",
@@ -4180,7 +4183,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "81"
+       "value": "88"
       },
       {
        "label": "初回",
@@ -4188,7 +4191,7 @@
       },
       {
        "label": "タグ",
-       "value": "v0.1.0"
+       "value": "v0.2.0"
       }
      ],
      "links": [
@@ -4198,7 +4201,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4206,20 +4209,20 @@
      "id": "almide-graphics/obsid",
      "title": "obsid",
      "titleEn": "Almide向けのCanvas 2D・WebGL・3Dメッシュ描画をWASMで行うグラフィックスランタイム",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "JavaScript",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/obsid",
      "tags": [
       "JavaScript",
-      "Almide",
       "Rust",
+      "Almide",
       "3d"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "49"
+       "value": "56"
       },
       {
        "label": "初回",
@@ -4241,7 +4244,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4249,7 +4252,7 @@
      "id": "almide-graphics/lumen",
      "title": "lumen",
      "titleEn": "Almide向けの純粋なグラフィックス数学プリミティブ集",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/lumen",
@@ -4262,7 +4265,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "3"
+       "value": "5"
       },
       {
        "label": "初回",
@@ -4280,7 +4283,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4288,7 +4291,7 @@
      "id": "almide-graphics/snaidhm",
      "title": "snaidhm",
      "titleEn": "WebGPUを軸にしたAlmide向け2D・3D描画基盤",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/snaidhm",
@@ -4300,7 +4303,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "170"
+       "value": "175"
       },
       {
        "label": "初回",
@@ -4314,7 +4317,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-24"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4360,7 +4363,7 @@
      "id": "almide-graphics/almide-shell",
      "title": "almide-shell",
      "titleEn": "Almideで書いたHyprland向けデスクトップシェル",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/almide-shell",
@@ -4372,7 +4375,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "21"
+       "value": "28"
       },
       {
        "label": "初回",
@@ -4386,40 +4389,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-graphics/slabhra",
-     "title": "slabhra",
-     "titleEn": "Almide製の、リバースモードautogradとテンソルを備えた微分可能プログラミング基盤",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/slabhra",
-     "tags": [
-      "Almide",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "8"
-      },
-      {
-       "label": "初回",
-       "value": "2026年6月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide-graphics/slabhra"
-      }
-     ],
-     "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
      }
     },
     {
@@ -4427,7 +4397,7 @@
      "id": "almide-graphics/ceangal-anime",
      "title": "ceangal-anime",
      "titleEn": "anime.js風のtween・easing・timeline・staggerを備えたAlmide用アニメーションエンジン",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/ceangal-anime",
@@ -4438,7 +4408,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "7"
+       "value": "10"
       },
       {
        "label": "初回",
@@ -4452,7 +4422,73 @@
       }
      ],
      "order": {
-      "date": "2026-09-30"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/cruth",
+     "title": "cruth",
+     "titleEn": "Almide向けのVRM/glTFキャラクター層。解析・形状・モーフ・表情を扱う",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/cruth",
+     "tags": [
+      "Almide",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "8"
+      },
+      {
+       "label": "初回",
+       "value": "2026年7月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide-graphics/cruth"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide-graphics/slabhra",
+     "title": "slabhra",
+     "titleEn": "Almide製の、リバースモードautogradとテンソルを備えた微分可能プログラミング基盤",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "almide-graphics",
+     "url": "https://github.com/almide-graphics/slabhra",
+     "tags": [
+      "Almide",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "10"
+      },
+      {
+       "label": "初回",
+       "value": "2026年6月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide-graphics/slabhra"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -4517,39 +4553,6 @@
      ],
      "order": {
       "date": "2026-10-05"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide-graphics/cruth",
-     "title": "cruth",
-     "titleEn": "Almide向けのVRM/glTFキャラクター層。解析・形状・モーフ・表情を扱う",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "almide-graphics",
-     "url": "https://github.com/almide-graphics/cruth",
-     "tags": [
-      "Almide",
-      "JavaScript"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "3"
-      },
-      {
-       "label": "初回",
-       "value": "2026年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide-graphics/cruth"
-      }
-     ],
-     "order": {
-      "date": "2026-09-30"
      }
     }
    ]
@@ -4794,7 +4797,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "327",
+     "value": "330",
      "label": "コミット"
     },
     {
@@ -4809,7 +4812,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 327
+     "count": 330
     }
    ],
    "works": [
@@ -4861,6 +4864,42 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/awen",
+     "title": "awen",
+     "titleEn": "Markdownのvault向けにSM-2間隔反復を行う、Almide製の知識定着CLI",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/awen",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "14"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      },
+      {
+       "label": "リリース",
+       "value": "v0.0.5"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/awen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/memre",
      "title": "memre",
      "titleEn": "AI搭載の間隔反復フラッシュカードを作るmacOSネイティブアプリ",
@@ -4896,42 +4935,6 @@
      ],
      "order": {
       "date": "2026-04-27"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/awen",
-     "title": "awen",
-     "titleEn": "Markdownのvault向けにSM-2間隔反復を行う、Almide製の知識定着CLI",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/awen",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "11"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      },
-      {
-       "label": "リリース",
-       "value": "v0.0.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/awen"
-      }
-     ],
-     "order": {
-      "date": "2026-05-04"
      }
     },
     {
@@ -4980,7 +4983,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "201",
+     "value": "212",
      "label": "コミット"
     },
     {
@@ -4995,7 +4998,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 201
+     "count": 212
     }
    ],
    "works": [
@@ -5012,7 +5015,7 @@
      "id": "O6lvl4/almide-headset-eq",
      "title": "almide-headset-eq",
      "titleEn": "CYBER CY-P5GMWHS用のAlmide製カスケードbiquadパラメトリックEQ",
-     "date": "2026年6月",
+     "date": "2026年11月",
      "format": "HTML",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/almide-headset-eq",
@@ -5023,7 +5026,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "4"
+       "value": "7"
       },
       {
        "label": "初回",
@@ -5041,7 +5044,7 @@
       }
      ],
      "order": {
-      "date": "2026-06-19"
+      "date": "2026-11-06"
      }
     },
     {
@@ -5061,7 +5064,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "90"
+       "value": "91"
       },
       {
        "label": "初回",
@@ -5079,7 +5082,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -5099,7 +5102,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "53"
+       "value": "60"
       },
       {
        "label": "初回",
@@ -5117,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -5345,7 +5348,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "201",
+     "value": "212",
      "label": "コミット"
     },
     {
@@ -5368,7 +5371,7 @@
     },
     {
      "name": "2026",
-     "count": 164
+     "count": 175
     }
    ],
    "works": [
@@ -5648,6 +5651,38 @@
      }
     },
     {
+     "image": "",
+     "id": "O6lvl4/O6lvl4-vitals",
+     "title": "O6lvl4-vitals",
+     "titleEn": "O6lvl4-protocolの14プロトコル準拠を定量検査するalmide製CLI",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/O6lvl4-vitals",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "14"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/O6lvl4-vitals"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
      "image": "plates/ja/O6lvl4/uimodulay.jpg",
      "readme": {
       "lead": "URLをデザイナー視点のモジュール構造に変換するUI構造解析ツール",
@@ -5687,6 +5722,38 @@
      ],
      "order": {
       "date": "2026-09-18"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/tocsin-almd",
+     "title": "tocsin-almd",
+     "titleEn": "サプライチェーン攻撃の早期警戒ツールTocsinのAlmide実装",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/tocsin-almd",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "9"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/tocsin-almd"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -5790,38 +5857,6 @@
      ],
      "order": {
       "date": "2026-06-19"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/O6lvl4-vitals",
-     "title": "O6lvl4-vitals",
-     "titleEn": "O6lvl4-protocolの14プロトコル準拠を定量検査するalmide製CLI",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/O6lvl4-vitals",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "10"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/O6lvl4-vitals"
-      }
-     ],
-     "order": {
-      "date": "2026-05-07"
      }
     },
     {
@@ -6044,38 +6079,6 @@
      ],
      "order": {
       "date": "2026-06-11"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/tocsin-almd",
-     "title": "tocsin-almd",
-     "titleEn": "サプライチェーン攻撃の早期警戒ツールTocsinのAlmide実装",
-     "date": "2026年5月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/tocsin-almd",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "2"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/tocsin-almd"
-      }
-     ],
-     "order": {
-      "date": "2026-05-12"
      }
     },
     {
@@ -6662,7 +6665,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "598",
+     "value": "619",
      "label": "コミット"
     },
     {
@@ -6693,7 +6696,7 @@
     },
     {
      "name": "2026",
-     "count": 449
+     "count": 470
     }
    ],
    "works": [
@@ -6710,7 +6713,7 @@
      "id": "O6lvl4/sprid",
      "title": "sprid",
      "titleEn": "長いCLI作業向けの軽量なmacOS・Linux端末",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/sprid",
@@ -6722,7 +6725,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "202"
+       "value": "209"
       },
       {
        "label": "初回",
@@ -6744,7 +6747,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-28"
+      "date": "2026-11-06"
      }
     },
     {
@@ -6794,7 +6797,7 @@
      "id": "O6lvl4/aitrium",
      "title": "aitrium",
      "titleEn": "コードエージェントの道具をカーネルで隔離する実行環境",
-     "date": "2026年9月",
+     "date": "2026年11月",
      "format": "Python",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/aitrium",
@@ -6806,7 +6809,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "22"
+       "value": "25"
       },
       {
        "label": "初回",
@@ -6824,7 +6827,7 @@
       }
      ],
      "order": {
-      "date": "2026-09-29"
+      "date": "2026-11-06"
      }
     },
     {
@@ -6844,7 +6847,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "138"
+       "value": "140"
       },
       {
        "label": "初回",
@@ -6858,7 +6861,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-05"
+      "date": "2026-11-06"
      }
     },
     {
@@ -6899,44 +6902,10 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/ogumatic-module-design",
-     "title": "ogumatic-module-design",
-     "titleEn": "役割で境界を切り、札と証拠を正とするモジュール設計術",
-     "date": "2026年9月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/ogumatic-module-design",
-     "tags": [
-      "Almide",
-      "Go",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "12"
-      },
-      {
-       "label": "初回",
-       "value": "2026年9月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/ogumatic-module-design"
-      }
-     ],
-     "order": {
-      "date": "2026-09-26"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/almide-otel-demo",
      "title": "almide-otel-demo",
      "titleEn": "純Almideで書かれた自作OpenTelemetryトレーシングSDKと分散トレースデモ",
-     "date": "2026年8月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/almide-otel-demo",
@@ -6946,7 +6915,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "13"
+       "value": "17"
       },
       {
        "label": "初回",
@@ -6960,7 +6929,75 @@
       }
      ],
      "order": {
-      "date": "2026-08-04"
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/ogumatic-module-design",
+     "title": "ogumatic-module-design",
+     "titleEn": "役割で境界を切り、札と証拠を正とするモジュール設計術",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/ogumatic-module-design",
+     "tags": [
+      "Almide",
+      "Go",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "14"
+      },
+      {
+       "label": "初回",
+       "value": "2026年9月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/ogumatic-module-design"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/go1.27-vs-almide",
+     "title": "go1.27-vs-almide",
+     "titleEn": "Go 1.27の新機能を自作言語almide 0.41と並べて比べる勉強会用ノート",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/go1.27-vs-almide",
+     "tags": [
+      "Almide",
+      "Go",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "7"
+      },
+      {
+       "label": "初回",
+       "value": "2026年7月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/go1.27-vs-almide"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
      }
     },
     {
@@ -6990,40 +7027,6 @@
       {
        "label": "リポジトリ",
        "href": "https://github.com/O6lvl4/go1.26-vs-go1.27"
-      }
-     ],
-     "order": {
-      "date": "2026-07-31"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/go1.27-vs-almide",
-     "title": "go1.27-vs-almide",
-     "titleEn": "Go 1.27の新機能を自作言語almide 0.41と並べて比べる勉強会用ノート",
-     "date": "2026年7月",
-     "format": "Go",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/go1.27-vs-almide",
-     "tags": [
-      "Go",
-      "Almide",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "4"
-      },
-      {
-       "label": "初回",
-       "value": "2026年7月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/go1.27-vs-almide"
       }
      ],
      "order": {
