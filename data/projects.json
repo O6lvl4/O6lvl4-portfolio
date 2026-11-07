@@ -1684,12 +1684,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 91,
+  "commits": 92,
   "years": {
-   "2026": 91
+   "2026": 92
   },
   "first": "2026-09-07",
-  "last": "2026-11-06",
+  "last": "2026-11-07",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1746,12 +1746,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 60,
+  "commits": 62,
   "years": {
-   "2026": 60
+   "2026": 62
   },
   "first": "2026-09-14",
-  "last": "2026-11-06",
+  "last": "2026-11-07",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3612,12 +3612,12 @@
    "Shell"
   ],
   "stars": 36,
-  "commits": 16137,
+  "commits": 16456,
   "years": {
-   "2026": 16137
+   "2026": 16456
   },
   "first": "2026-03-07",
-  "last": "2026-11-06",
+  "last": "2026-11-07",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.0",
@@ -3638,7 +3638,7 @@
   "plate": "og",
   "sample": {
    "lang": "almd",
-   "code": "type Shape =\n  | Circle(Float)\n  | Square(Float)\n  | Triangle(Float, Float)   // the edit\n\nfn area(s: Shape) -> Float =\n  match s {\n    Circle(r) => 3.14159 * r * r\n    Square(w) => w * w\n  }"
+   "code": "type Order = { item: String, qty: Int, price: Int }\n\nfn parse(line: String) -> Order? = match line |> string.trim |> string.split(\",\") {\n  [item, qty, price] => match (int.parse(qty), int.parse(price)) {\n    (ok(q), ok(p)) => some({ item: item, qty: q, price: p }),\n    _ => none,\n  },\n  _ => none,\n}\n\nfn main() -> Unit = {\n  let csv = \"\"\"\n    apple,3,120\n    pear,oops,90\n    plum,5,80\n    \"\"\"\n  let orders = csv |> string.lines |> list.filter_map(parse)\n  let total = orders |> list.fold(0, (sum, o) => sum + o.qty * o.price)\n  println(\"${list.len(orders)} orders, total ${total}\")\n}"
   },
   "score": 195
  },
@@ -3807,12 +3807,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 606,
+  "commits": 607,
   "years": {
-   "2026": 606
+   "2026": 607
   },
   "first": "2026-04-12",
-  "last": "2026-11-06",
+  "last": "2026-11-07",
   "license": "MIT",
   "topics": [
    "almide",
