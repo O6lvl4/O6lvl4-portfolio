@@ -218,7 +218,7 @@
    },
    {
     "key": "最近更新",
-    "value": "chip-war-chronicle · 2026年11月"
+    "value": "cyber-incident-chronicle · 2026年11月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -237,7 +237,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "24,059",
+    "value": "24,097",
     "label": "提交"
    },
    {
@@ -364,17 +364,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 19975,
+    "count": 19978,
     "of": 31
    },
    {
     "name": "O6lvl4",
-    "count": 3093,
+    "count": 3098,
     "of": 123
    },
    {
     "name": "almide-graphics",
-    "count": 720,
+    "count": 750,
     "of": 13
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 23814
+    "count": 23852
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "19,753",
+     "value": "19,756",
      "label": "提交"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 19753
+     "count": 19756
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "16,456"
+       "value": "16,459"
       },
       {
        "label": "首次",
@@ -476,7 +476,7 @@
       },
       {
        "label": "发行版",
-       "value": "v0.69.0"
+       "value": "v0.69.1"
       },
       {
        "label": "星标",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-07"
+      "date": "2026-11-08"
      }
     },
     {
@@ -4062,7 +4062,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "720",
+     "value": "750",
      "label": "提交"
     },
     {
@@ -4077,7 +4077,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 720
+     "count": 750
     }
    ],
    "works": [
@@ -4094,7 +4094,7 @@
      "id": "almide-graphics/ceangal2",
      "title": "ceangal2",
      "titleEn": "让同一Almide程序跨Web与原生平台运行的UI框架",
-     "date": "2026年10月",
+     "date": "2026年11月",
      "format": "Almide",
      "credit": "almide-graphics",
      "url": "https://github.com/almide-graphics/ceangal2",
@@ -4106,7 +4106,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "125"
+       "value": "155"
       },
       {
        "label": "首次",
@@ -4124,7 +4124,7 @@
       }
      ],
      "order": {
-      "date": "2026-10-07"
+      "date": "2026-11-08"
      }
     },
     {
@@ -4983,7 +4983,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "215",
+     "value": "216",
      "label": "提交"
     },
     {
@@ -4998,7 +4998,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 215
+     "count": 216
     }
    ],
    "works": [
@@ -5064,7 +5064,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "92"
+       "value": "93"
       },
       {
        "label": "首次",
@@ -5082,7 +5082,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-07"
+      "date": "2026-11-08"
      }
     },
     {
@@ -6665,7 +6665,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "619",
+     "value": "623",
      "label": "提交"
     },
     {
@@ -6696,7 +6696,7 @@
     },
     {
      "name": "2026",
-     "count": 470
+     "count": 474
     }
    ],
    "works": [
@@ -6847,7 +6847,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "140"
+       "value": "144"
       },
       {
        "label": "首次",
@@ -6861,7 +6861,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-09"
      }
     },
     {
