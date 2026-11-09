@@ -1684,12 +1684,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 93,
+  "commits": 94,
   "years": {
-   "2026": 93
+   "2026": 94
   },
   "first": "2026-09-07",
-  "last": "2026-11-08",
+  "last": "2026-11-09",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1746,19 +1746,19 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 62,
+  "commits": 63,
   "years": {
-   "2026": 62
+   "2026": 63
   },
   "first": "2026-09-14",
-  "last": "2026-11-07",
+  "last": "2026-11-09",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "",
    "code": "z(表, モデル) ≒ b(表) + s(表) × a(モデル)\n```\n\n`z` は表ごとに標準化した実測値(高いほど良い向きに揃えたもの)、`a` がモデルの実力、`s` はその表が実力差をどれだけ広げて見せるか、`b` はその表の水準です。`a` と `(b, s)` を交互に最小二乗で解き、`a` を平均50・標準偏差10に直したものが「戦闘力」です。分野ごとにも同じ当てはめをします。\n\n- 実測が3モデルに満たない表と、全員が同じ値の表は、順位を語らないので使いません。\n- 実測の少ないモデルは、説明できなかった残差の大きさに応じて真ん中へ寄せます(縮約)。1回の結果だけで上位に来ない代わりに、誤差が大きく出ます。\n- 空きセルの推定値は、その分野の当てはめをその表の目盛りに戻し、そのボードが実際に見た範囲に収めたものです。\n- **これは推定であって実測ではありません。** ページでは書式を分け、データでも `fit` として実測の表とは別に置いています。`data/tables/` に推定値が混ざることはありません。\n\n## データ"
   },
-  "score": 6.2
+  "score": 6.3
  },
  {
   "full": "O6lvl4/homebrew-tap",
@@ -3611,7 +3611,7 @@
    "Almide",
    "Shell"
   ],
-  "stars": 36,
+  "stars": 37,
   "commits": 16459,
   "years": {
    "2026": 16459
@@ -3640,7 +3640,7 @@
    "lang": "almd",
    "code": "type Order = { item: String, qty: Int, price: Int }\n\nfn parse(line: String) -> Order? = match line |> string.trim |> string.split(\",\") {\n  [item, qty, price] => match (int.parse(qty), int.parse(price)) {\n    (ok(q), ok(p)) => some({ item: item, qty: q, price: p }),\n    _ => none,\n  },\n  _ => none,\n}\n\nfn main() -> Unit = {\n  let csv = \"\"\"\n    apple,3,120\n    pear,oops,90\n    plum,5,80\n    \"\"\"\n  let orders = csv |> string.lines |> list.filter_map(parse)\n  let total = orders |> list.fold(0, (sum, o) => sum + o.qty * o.price)\n  println(\"${list.len(orders)} orders, total ${total}\")\n}"
   },
-  "score": 195
+  "score": 200
  },
  {
   "full": "almide/porta",
@@ -3701,12 +3701,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1929,
+  "commits": 1930,
   "years": {
-   "2026": 1929
+   "2026": 1930
   },
   "first": "2026-03-07",
-  "last": "2026-11-06",
+  "last": "2026-11-09",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3807,12 +3807,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 607,
+  "commits": 608,
   "years": {
-   "2026": 607
+   "2026": 608
   },
   "first": "2026-04-12",
-  "last": "2026-11-07",
+  "last": "2026-11-09",
   "license": "MIT",
   "topics": [
    "almide",
