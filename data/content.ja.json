@@ -12,7 +12,7 @@
   "name": "O6lvl4",
   "realName": "本寺 広海",
   "nameEn": "PUBLIC WORK",
-  "life": "194 repos",
+  "life": "195 repos",
   "avatar": "assets/avatar.png",
   "role": "開発の道具を、言語からつくる。",
   "ogham": {
@@ -105,9 +105,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公開リポジトリ 194 件",
+  "kicker": "公開リポジトリ 195 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
-  "note": "公開リポジトリ 194 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
+  "note": "公開リポジトリ 195 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
   "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。"
  },
  "landing": {
@@ -142,8 +142,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "161件を始めた",
-    "lead": "almide、porta、als、sprid ほか157件",
+    "title": "162件を始めた",
+    "lead": "almide、porta、als、sprid ほか158件",
     "tags": [
      "Rust",
      "Almide"
@@ -218,7 +218,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "cyber-incident-chronicle · 2026年11月"
+    "value": "almide · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
@@ -233,11 +233,11 @@
   ],
   "figures": [
    {
-    "value": "194",
+    "value": "195",
     "label": "公開リポジトリ"
    },
    {
-    "value": "24,101",
+    "value": "24,706",
     "label": "コミット"
    },
    {
@@ -276,14 +276,14 @@
     "color": "#dea584"
    },
    {
+    "name": "HTML",
+    "count": 8,
+    "color": "#e34c26"
+   },
+   {
     "name": "Python",
     "count": 7,
     "color": "#3572a5"
-   },
-   {
-    "name": "HTML",
-    "count": 7,
-    "color": "#e34c26"
    },
    {
     "name": "Lean",
@@ -346,7 +346,7 @@
    },
    {
     "name": "almide",
-    "count": 31
+    "count": 32
    },
    {
     "name": "almide-graphics",
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 19980,
-    "of": 31
+    "count": 20584,
+    "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3100,
+    "count": 3101,
     "of": 123
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 23856
+    "count": 24461
    }
   ]
  },
@@ -419,15 +419,15 @@
    "intro": "静的型付けの言語 Almide 本体と、その周り。規範的な意味論と適合性コーパス（als）、文法の一元管理（almide-grammar）とそこから作るパーサ（parsegen・tree-sitter-almide）、エディタ支援（vscode-almide）、他言語と WASM への書き出し（almide-bindgen・almide-wasm-bindgen・almide-lander）、ドキュメントと playground、そして生成コードが直されても壊れない率を毎日測る場（almide-dojo）。Almideで書いた証明言語Arlkもここに含みます。wyveは、LLVM IRの一層上に静的な意味論を置き、最適化器に契約を書かせるRacket製の言語です。",
    "figures": [
     {
-     "value": "21",
+     "value": "22",
      "label": "公開リポジトリ"
     },
     {
-     "value": "19,758",
+     "value": "20,362",
      "label": "コミット"
     },
     {
-     "value": "6",
+     "value": "7",
      "label": "言語"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 19758
+     "count": 20362
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "16,459"
+       "value": "17,044"
       },
       {
        "label": "初回",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-08"
+      "date": "2026-11-11"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,930"
+       "value": "1,932"
       },
       {
        "label": "初回",
@@ -537,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-10"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "608"
+       "value": "609"
       },
       {
        "label": "初回",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-10"
      }
     },
     {
@@ -1067,6 +1067,43 @@
      ],
      "order": {
       "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide.github.io",
+     "title": "almide.github.io",
+     "titleEn": "Landing page for the Almide programming language",
+     "date": "2026年11月",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide.github.io",
+     "tags": [
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "16"
+      },
+      {
+       "label": "初回",
+       "value": "2026年11月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/almide.github.io"
+      },
+      {
+       "label": "サイト",
+       "href": "https://almide.github.io/"
+      }
+     ],
+     "order": {
+      "date": "2026-11-10"
      }
     },
     {
@@ -4983,7 +5020,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "218",
+     "value": "219",
      "label": "コミット"
     },
     {
@@ -4998,7 +5035,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 218
+     "count": 219
     }
    ],
    "works": [
@@ -5064,7 +5101,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "94"
+       "value": "95"
       },
       {
        "label": "初回",
@@ -5082,7 +5119,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-10"
      }
     },
     {

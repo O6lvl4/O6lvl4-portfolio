@@ -12,7 +12,7 @@
   "name": "O6lvl4",
   "realName": "本寺广海",
   "nameEn": "PUBLIC WORK",
-  "life": "194 repos",
+  "life": "195 repos",
   "avatar": "assets/avatar.png",
   "role": "从语言开始，构建开发工具。",
   "ogham": {
@@ -105,9 +105,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公开仓库 194 个",
+  "kicker": "公开仓库 195 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 194 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
+  "note": "这一页并列了 195 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
   "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
@@ -142,8 +142,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "开始了 161 个",
-    "lead": "almide、porta、als、sprid 等 157 个",
+    "title": "开始了 162 个",
+    "lead": "almide、porta、als、sprid 等 158 个",
     "tags": [
      "Rust",
      "Almide"
@@ -218,7 +218,7 @@
    },
    {
     "key": "最近更新",
-    "value": "cyber-incident-chronicle · 2026年11月"
+    "value": "almide · 2026年11月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -233,11 +233,11 @@
   ],
   "figures": [
    {
-    "value": "194",
+    "value": "195",
     "label": "公开仓库"
    },
    {
-    "value": "24,101",
+    "value": "24,706",
     "label": "提交"
    },
    {
@@ -276,14 +276,14 @@
     "color": "#dea584"
    },
    {
+    "name": "HTML",
+    "count": 8,
+    "color": "#e34c26"
+   },
+   {
     "name": "Python",
     "count": 7,
     "color": "#3572a5"
-   },
-   {
-    "name": "HTML",
-    "count": 7,
-    "color": "#e34c26"
    },
    {
     "name": "Lean",
@@ -346,7 +346,7 @@
    },
    {
     "name": "almide",
-    "count": 31
+    "count": 32
    },
    {
     "name": "almide-graphics",
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 19980,
-    "of": 31
+    "count": 20584,
+    "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3100,
+    "count": 3101,
     "of": 123
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 23856
+    "count": 24461
    }
   ]
  },
@@ -419,15 +419,15 @@
    "intro": "静态类型语言 Almide 本体及其周边：规范语义与一致性语料（als）、统一管理的文法（almide-grammar）与由它生成的解析器（parsegen、tree-sitter-almide）、编辑器支持（vscode-almide）、导出到其他语言与 WASM（almide-bindgen、almide-wasm-bindgen、almide-lander）、文档与 playground，以及每天测量生成代码被改动后存活率的场地（almide-dojo）。Arlk是用Almide编写、追踪定理前提的证明语言。用Racket编写的wyve在LLVM IR之上放置静态语义，让优化器记录契约。",
    "figures": [
     {
-     "value": "21",
+     "value": "22",
      "label": "公开仓库"
     },
     {
-     "value": "19,758",
+     "value": "20,362",
      "label": "提交"
     },
     {
-     "value": "6",
+     "value": "7",
      "label": "语言"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 19758
+     "count": 20362
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "16,459"
+       "value": "17,044"
       },
       {
        "label": "首次",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-08"
+      "date": "2026-11-11"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,930"
+       "value": "1,932"
       },
       {
        "label": "首次",
@@ -537,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-10"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "608"
+       "value": "609"
       },
       {
        "label": "首次",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-10"
      }
     },
     {
@@ -1067,6 +1067,43 @@
      ],
      "order": {
       "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide.github.io",
+     "title": "almide.github.io",
+     "titleEn": "Landing page for the Almide programming language",
+     "date": "2026年11月",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide.github.io",
+     "tags": [
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "16"
+      },
+      {
+       "label": "首次",
+       "value": "2026年11月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/almide.github.io"
+      },
+      {
+       "label": "站点",
+       "href": "https://almide.github.io/"
+      }
+     ],
+     "order": {
+      "date": "2026-11-10"
      }
     },
     {
@@ -4983,7 +5020,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "218",
+     "value": "219",
      "label": "提交"
     },
     {
@@ -4998,7 +5035,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 218
+     "count": 219
     }
    ],
    "works": [
@@ -5064,7 +5101,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "94"
+       "value": "95"
       },
       {
        "label": "首次",
@@ -5082,7 +5119,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-10"
      }
     },
     {

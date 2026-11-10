@@ -12,7 +12,7 @@
   "name": "O6lvl4",
   "realName": "Hiromi Motodera",
   "nameEn": "PUBLIC WORK",
-  "life": "194 repos",
+  "life": "195 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -105,9 +105,9 @@
   "first": true
  },
  "home": {
-  "kicker": "194 public repositories",
+  "kicker": "195 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "194 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "195 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -142,8 +142,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "161 started",
-    "lead": "almide, porta, als, sprid and 157 more",
+    "title": "162 started",
+    "lead": "almide, porta, als, sprid and 158 more",
     "tags": [
      "Rust",
      "Almide"
@@ -218,7 +218,7 @@
    },
    {
     "key": "Last touched",
-    "value": "cyber-incident-chronicle · Nov 2026"
+    "value": "almide · Nov 2026"
    },
    {
     "key": "Written in Almide",
@@ -233,11 +233,11 @@
   ],
   "figures": [
    {
-    "value": "194",
+    "value": "195",
     "label": "Repositories"
    },
    {
-    "value": "24,101",
+    "value": "24,706",
     "label": "Commits"
    },
    {
@@ -276,14 +276,14 @@
     "color": "#dea584"
    },
    {
+    "name": "HTML",
+    "count": 8,
+    "color": "#e34c26"
+   },
+   {
     "name": "Python",
     "count": 7,
     "color": "#3572a5"
-   },
-   {
-    "name": "HTML",
-    "count": 7,
-    "color": "#e34c26"
    },
    {
     "name": "Lean",
@@ -346,7 +346,7 @@
    },
    {
     "name": "almide",
-    "count": 31
+    "count": 32
    },
    {
     "name": "almide-graphics",
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 19980,
-    "of": 31
+    "count": 20584,
+    "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3100,
+    "count": 3101,
     "of": 123
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 23856
+    "count": 24461
    }
   ]
  },
@@ -419,15 +419,15 @@
    "intro": "Almide itself — a statically-typed language — and everything around it: the normative semantics with its conformance corpus (als), one source of truth for the grammar (almide-grammar) and the parsers built from it (parsegen, tree-sitter-almide), editor support (vscode-almide), exports to other languages and to WASM (almide-bindgen, almide-wasm-bindgen, almide-lander), the documentation and the playground, and a ground that measures every day how much generated code survives being modified (almide-dojo). Arlk is a proof language written in Almide that tracks a theorem's assumptions. wyve, written in Racket, puts static semantics above LLVM IR and asks the optimizer to record its contracts.",
    "figures": [
     {
-     "value": "21",
+     "value": "22",
      "label": "Repositories"
     },
     {
-     "value": "19,758",
+     "value": "20,362",
      "label": "Commits"
     },
     {
-     "value": "6",
+     "value": "7",
      "label": "Languages"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 19758
+     "count": 20362
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "16,459"
+       "value": "17,044"
       },
       {
        "label": "Started",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-08"
+      "date": "2026-11-11"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,930"
+       "value": "1,932"
       },
       {
        "label": "Started",
@@ -537,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-10"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "608"
+       "value": "609"
       },
       {
        "label": "Started",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-10"
      }
     },
     {
@@ -1067,6 +1067,43 @@
      ],
      "order": {
       "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "almide/almide.github.io",
+     "title": "almide.github.io",
+     "titleEn": "Landing page for the Almide programming language",
+     "date": "Nov 2026",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide.github.io",
+     "tags": [
+      "HTML",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "16"
+      },
+      {
+       "label": "Started",
+       "value": "Nov 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/almide/almide.github.io"
+      },
+      {
+       "label": "Site",
+       "href": "https://almide.github.io/"
+      }
+     ],
+     "order": {
+      "date": "2026-11-10"
      }
     },
     {
@@ -4983,7 +5020,7 @@
      "label": "Repositories"
     },
     {
-     "value": "218",
+     "value": "219",
      "label": "Commits"
     },
     {
@@ -4998,7 +5035,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 218
+     "count": 219
     }
    ],
    "works": [
@@ -5064,7 +5101,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "94"
+       "value": "95"
       },
       {
        "label": "Started",
@@ -5082,7 +5119,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-10"
      }
     },
     {

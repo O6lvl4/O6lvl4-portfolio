@@ -1684,12 +1684,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 94,
+  "commits": 95,
   "years": {
-   "2026": 94
+   "2026": 95
   },
   "first": "2026-09-07",
-  "last": "2026-11-09",
+  "last": "2026-11-10",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3612,12 +3612,12 @@
    "Shell"
   ],
   "stars": 37,
-  "commits": 16459,
+  "commits": 17044,
   "years": {
-   "2026": 16459
+   "2026": 17044
   },
   "first": "2026-03-07",
-  "last": "2026-11-08",
+  "last": "2026-11-11",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3701,12 +3701,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1930,
+  "commits": 1932,
   "years": {
-   "2026": 1930
+   "2026": 1932
   },
   "first": "2026-03-07",
-  "last": "2026-11-09",
+  "last": "2026-11-10",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3807,12 +3807,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 608,
+  "commits": 609,
   "years": {
-   "2026": 608
+   "2026": 609
   },
   "first": "2026-04-12",
-  "last": "2026-11-09",
+  "last": "2026-11-10",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4291,6 +4291,30 @@
    "code": "./scripts/install-almide.sh  # downloads the pinned release and checks its sha256 (seconds)\nnpm ci\nnpm run build\nnpm test\nPORT=8080 ./build/server"
   },
   "score": 5.4
+ },
+ {
+  "full": "almide/almide.github.io",
+  "owner": "almide",
+  "name": "almide.github.io",
+  "url": "https://github.com/almide/almide.github.io",
+  "site": "https://almide.github.io/",
+  "lead": "Landing page for the Almide programming language",
+  "heading": "almide.github.io",
+  "language": "HTML",
+  "languages": [
+   "HTML",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 16,
+  "years": {
+   "2026": 16
+  },
+  "first": "2026-11-10",
+  "last": "2026-11-10",
+  "topics": [],
+  "plate": "site",
+  "score": 5.3
  },
  {
   "full": "almide/almide-agents",
