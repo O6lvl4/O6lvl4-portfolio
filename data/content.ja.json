@@ -122,7 +122,7 @@
      "Almide（104）",
      "Python（39）",
      "Shell（35）",
-     "JavaScript（33）",
+     "JavaScript（34）",
      "TypeScript（32）"
     ]
    },
@@ -218,7 +218,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "almide · 2026年11月"
+    "value": "cyber-incident-chronicle · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
@@ -237,7 +237,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "24,706",
+    "value": "24,788",
     "label": "コミット"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 20584,
+    "count": 20662,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3101,
+    "count": 3105,
     "of": 123
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 24461
+    "count": 24543
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "20,362",
+     "value": "20,440",
      "label": "コミット"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 20362
+     "count": 20440
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "17,044"
+       "value": "17,112"
       },
       {
        "label": "初回",
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "609"
+       "value": "610"
       },
       {
        "label": "初回",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-10"
+      "date": "2026-11-11"
      }
     },
     {
@@ -1037,6 +1037,44 @@
     },
     {
      "image": "",
+     "id": "almide/almide.github.io",
+     "title": "almide.github.io",
+     "titleEn": "プログラミング言語Almideの紹介サイト",
+     "date": "2026年11月",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide.github.io",
+     "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "25"
+      },
+      {
+       "label": "初回",
+       "value": "2026年11月"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/almide/almide.github.io"
+      },
+      {
+       "label": "サイト",
+       "href": "https://almide.github.io/"
+      }
+     ],
+     "order": {
+      "date": "2026-11-11"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/cloud-examples",
      "title": "cloud-examples",
      "titleEn": "同じAlmideのJSON APIを複数クラウドで動かす例",
@@ -1067,43 +1105,6 @@
      ],
      "order": {
       "date": "2026-11-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide.github.io",
-     "title": "almide.github.io",
-     "titleEn": "Landing page for the Almide programming language",
-     "date": "2026年11月",
-     "format": "HTML",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide.github.io",
-     "tags": [
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "16"
-      },
-      {
-       "label": "初回",
-       "value": "2026年11月"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/almide/almide.github.io"
-      },
-      {
-       "label": "サイト",
-       "href": "https://almide.github.io/"
-      }
-     ],
-     "order": {
-      "date": "2026-11-10"
      }
     },
     {
@@ -5020,7 +5021,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "219",
+     "value": "221",
      "label": "コミット"
     },
     {
@@ -5035,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 219
+     "count": 221
     }
    ],
    "works": [
@@ -5101,7 +5102,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "95"
+       "value": "96"
       },
       {
        "label": "初回",
@@ -5119,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-10"
+      "date": "2026-11-11"
      }
     },
     {
@@ -5139,7 +5140,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "63"
+       "value": "64"
       },
       {
        "label": "初回",
@@ -5157,7 +5158,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-11"
      }
     },
     {
@@ -6702,7 +6703,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "623",
+     "value": "625",
      "label": "コミット"
     },
     {
@@ -6733,7 +6734,7 @@
     },
     {
      "name": "2026",
-     "count": 474
+     "count": 476
     }
    ],
    "works": [
@@ -6884,7 +6885,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "144"
+       "value": "146"
       },
       {
        "label": "初回",
@@ -6898,7 +6899,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-11"
      }
     },
     {

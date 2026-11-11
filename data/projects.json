@@ -1262,12 +1262,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 144,
+  "commits": 146,
   "years": {
-   "2026": 144
+   "2026": 146
   },
   "first": "2026-10-07",
-  "last": "2026-11-09",
+  "last": "2026-11-11",
   "topics": [],
   "plate": "code",
   "sample": {
@@ -1684,12 +1684,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 95,
+  "commits": 96,
   "years": {
-   "2026": 95
+   "2026": 96
   },
   "first": "2026-09-07",
-  "last": "2026-11-10",
+  "last": "2026-11-11",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1746,12 +1746,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 63,
+  "commits": 64,
   "years": {
-   "2026": 63
+   "2026": 64
   },
   "first": "2026-09-14",
-  "last": "2026-11-09",
+  "last": "2026-11-11",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3612,9 +3612,9 @@
    "Shell"
   ],
   "stars": 37,
-  "commits": 17044,
+  "commits": 17112,
   "years": {
-   "2026": 17044
+   "2026": 17112
   },
   "first": "2026-03-07",
   "last": "2026-11-11",
@@ -3807,12 +3807,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 609,
+  "commits": 610,
   "years": {
-   "2026": 609
+   "2026": 610
   },
   "first": "2026-04-12",
-  "last": "2026-11-10",
+  "last": "2026-11-11",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4264,6 +4264,35 @@
   "score": 5.6
  },
  {
+  "full": "almide/almide.github.io",
+  "owner": "almide",
+  "name": "almide.github.io",
+  "url": "https://github.com/almide/almide.github.io",
+  "site": "https://almide.github.io/",
+  "lead": "Landing page for the Almide programming language",
+  "heading": "almide.github.io",
+  "language": "HTML",
+  "languages": [
+   "HTML",
+   "CSS",
+   "JavaScript"
+  ],
+  "stars": 0,
+  "commits": 25,
+  "years": {
+   "2026": 25
+  },
+  "first": "2026-11-10",
+  "last": "2026-11-11",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "sh",
+   "code": "npm ci\nnpm test\nnpx playwright install chromium\nnpm run verify"
+  },
+  "score": 5.5
+ },
+ {
   "full": "almide/cloud-examples",
   "owner": "almide",
   "name": "cloud-examples",
@@ -4291,30 +4320,6 @@
    "code": "./scripts/install-almide.sh  # downloads the pinned release and checks its sha256 (seconds)\nnpm ci\nnpm run build\nnpm test\nPORT=8080 ./build/server"
   },
   "score": 5.4
- },
- {
-  "full": "almide/almide.github.io",
-  "owner": "almide",
-  "name": "almide.github.io",
-  "url": "https://github.com/almide/almide.github.io",
-  "site": "https://almide.github.io/",
-  "lead": "Landing page for the Almide programming language",
-  "heading": "almide.github.io",
-  "language": "HTML",
-  "languages": [
-   "HTML",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 16,
-  "years": {
-   "2026": 16
-  },
-  "first": "2026-11-10",
-  "last": "2026-11-10",
-  "topics": [],
-  "plate": "site",
-  "score": 5.3
  },
  {
   "full": "almide/almide-agents",

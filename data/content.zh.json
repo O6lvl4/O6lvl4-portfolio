@@ -122,7 +122,7 @@
      "Almide（104）",
      "Python（39）",
      "Shell（35）",
-     "JavaScript（33）",
+     "JavaScript（34）",
      "TypeScript（32）"
     ]
    },
@@ -218,7 +218,7 @@
    },
    {
     "key": "最近更新",
-    "value": "almide · 2026年11月"
+    "value": "cyber-incident-chronicle · 2026年11月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -237,7 +237,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "24,706",
+    "value": "24,788",
     "label": "提交"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 20584,
+    "count": 20662,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3101,
+    "count": 3105,
     "of": 123
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 24461
+    "count": 24543
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "20,362",
+     "value": "20,440",
      "label": "提交"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 20362
+     "count": 20440
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "17,044"
+       "value": "17,112"
       },
       {
        "label": "首次",
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "609"
+       "value": "610"
       },
       {
        "label": "首次",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-10"
+      "date": "2026-11-11"
      }
     },
     {
@@ -1037,6 +1037,44 @@
     },
     {
      "image": "",
+     "id": "almide/almide.github.io",
+     "title": "almide.github.io",
+     "titleEn": "介绍Almide编程语言的静态网站",
+     "date": "2026年11月",
+     "format": "HTML",
+     "credit": "almide",
+     "url": "https://github.com/almide/almide.github.io",
+     "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "25"
+      },
+      {
+       "label": "首次",
+       "value": "2026年11月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/almide/almide.github.io"
+      },
+      {
+       "label": "站点",
+       "href": "https://almide.github.io/"
+      }
+     ],
+     "order": {
+      "date": "2026-11-11"
+     }
+    },
+    {
+     "image": "",
      "id": "almide/cloud-examples",
      "title": "cloud-examples",
      "titleEn": "在多种云运行方式下复用Almide API的示例",
@@ -1067,43 +1105,6 @@
      ],
      "order": {
       "date": "2026-11-06"
-     }
-    },
-    {
-     "image": "",
-     "id": "almide/almide.github.io",
-     "title": "almide.github.io",
-     "titleEn": "Landing page for the Almide programming language",
-     "date": "2026年11月",
-     "format": "HTML",
-     "credit": "almide",
-     "url": "https://github.com/almide/almide.github.io",
-     "tags": [
-      "HTML",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "16"
-      },
-      {
-       "label": "首次",
-       "value": "2026年11月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/almide/almide.github.io"
-      },
-      {
-       "label": "站点",
-       "href": "https://almide.github.io/"
-      }
-     ],
-     "order": {
-      "date": "2026-11-10"
      }
     },
     {
@@ -5020,7 +5021,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "219",
+     "value": "221",
      "label": "提交"
     },
     {
@@ -5035,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 219
+     "count": 221
     }
    ],
    "works": [
@@ -5101,7 +5102,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "95"
+       "value": "96"
       },
       {
        "label": "首次",
@@ -5119,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-10"
+      "date": "2026-11-11"
      }
     },
     {
@@ -5139,7 +5140,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "63"
+       "value": "64"
       },
       {
        "label": "首次",
@@ -5157,7 +5158,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-11"
      }
     },
     {
@@ -6702,7 +6703,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "623",
+     "value": "625",
      "label": "提交"
     },
     {
@@ -6733,7 +6734,7 @@
     },
     {
      "name": "2026",
-     "count": 474
+     "count": 476
     }
    ],
    "works": [
@@ -6884,7 +6885,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "144"
+       "value": "146"
       },
       {
        "label": "首次",
@@ -6898,7 +6899,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-09"
+      "date": "2026-11-11"
      }
     },
     {
