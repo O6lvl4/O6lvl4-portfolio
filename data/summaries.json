@@ -5250,5 +5250,31 @@
     "带KV缓存的Qwen3解码层"
    ]
   }
+ },
+ "almide/almide.github.io": {
+  "ja": {
+   "what": "プログラミング言語Almideの紹介サイト",
+   "points": [
+    "英語・日本語の紹介ページ",
+    "ライト・ダークの共通スタイル",
+    "ビルド不要のHTMLとCSS"
+   ]
+  },
+  "en": {
+   "what": "A landing page introducing the Almide programming language.",
+   "points": [
+    "English and Japanese pages",
+    "Shared light and dark styles",
+    "Plain HTML and CSS with no build step"
+   ]
+  },
+  "zh": {
+   "what": "介绍Almide编程语言的静态网站",
+   "points": [
+    "英语与日语页面",
+    "浅色与深色样式",
+    "无需构建的HTML与CSS"
+   ]
+  }
  }
 }
