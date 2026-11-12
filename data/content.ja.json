@@ -218,7 +218,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "cyber-incident-chronicle · 2026年11月"
+    "value": "almide · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
@@ -237,7 +237,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "24,788",
+    "value": "24,881",
     "label": "コミット"
    },
    {
@@ -267,7 +267,7 @@
    },
    {
     "name": "JavaScript",
-    "count": 12,
+    "count": 13,
     "color": "#f1e05a"
    },
    {
@@ -276,14 +276,14 @@
     "color": "#dea584"
    },
    {
-    "name": "HTML",
-    "count": 8,
-    "color": "#e34c26"
-   },
-   {
     "name": "Python",
     "count": 7,
     "color": "#3572a5"
+   },
+   {
+    "name": "HTML",
+    "count": 7,
+    "color": "#e34c26"
    },
    {
     "name": "Lean",
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 20662,
+    "count": 20753,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3105,
+    "count": 3107,
     "of": 123
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 24543
+    "count": 24636
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "20,440",
+     "value": "20,531",
      "label": "コミット"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 20440
+     "count": 20531
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "17,112"
+       "value": "17,202"
       },
       {
        "label": "初回",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-11"
+      "date": "2026-11-13"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "610"
+       "value": "611"
       },
       {
        "label": "初回",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-11"
+      "date": "2026-11-12"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "221",
+     "value": "223",
      "label": "コミット"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 221
+     "count": 223
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "96"
+       "value": "97"
       },
       {
        "label": "初回",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-11"
+      "date": "2026-11-12"
      }
     },
     {
@@ -5129,18 +5129,18 @@
      "title": "agent-bench-matrix",
      "titleEn": "エージェント向けベンチマークの公開リーダーボードを、モデル別に一枚の表へまとめたもの",
      "date": "2026年11月",
-     "format": "HTML",
+     "format": "JavaScript",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/agent-bench-matrix",
      "tags": [
-      "HTML",
       "JavaScript",
+      "HTML",
       "Python"
      ],
      "stats": [
       {
        "label": "コミット",
-       "value": "64"
+       "value": "65"
       },
       {
        "label": "初回",
@@ -5158,7 +5158,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-11"
+      "date": "2026-11-12"
      }
     },
     {

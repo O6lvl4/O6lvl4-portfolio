@@ -1684,12 +1684,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 96,
+  "commits": 97,
   "years": {
-   "2026": 96
+   "2026": 97
   },
   "first": "2026-09-07",
-  "last": "2026-11-11",
+  "last": "2026-11-12",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1739,19 +1739,19 @@
   "site": "https://o6lvl4.github.io/agent-bench-matrix/",
   "lead": "エージェント向けベンチマークの公開リーダーボードを、モデル・エージェント別に一枚の表へ。数字はすべて各ボードの公開データから取得し、出典付き。",
   "heading": "Agent Bench Matrix",
-  "language": "HTML",
+  "language": "JavaScript",
   "languages": [
-   "HTML",
    "JavaScript",
+   "HTML",
    "Python"
   ],
   "stars": 0,
-  "commits": 64,
+  "commits": 65,
   "years": {
-   "2026": 64
+   "2026": 65
   },
   "first": "2026-09-14",
-  "last": "2026-11-11",
+  "last": "2026-11-12",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3612,12 +3612,12 @@
    "Shell"
   ],
   "stars": 37,
-  "commits": 17112,
+  "commits": 17202,
   "years": {
-   "2026": 17112
+   "2026": 17202
   },
   "first": "2026-03-07",
-  "last": "2026-11-11",
+  "last": "2026-11-13",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3807,12 +3807,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 610,
+  "commits": 611,
   "years": {
-   "2026": 610
+   "2026": 611
   },
   "first": "2026-04-12",
-  "last": "2026-11-11",
+  "last": "2026-11-12",
   "license": "MIT",
   "topics": [
    "almide",

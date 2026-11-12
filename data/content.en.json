@@ -218,7 +218,7 @@
    },
    {
     "key": "Last touched",
-    "value": "cyber-incident-chronicle · Nov 2026"
+    "value": "almide · Nov 2026"
    },
    {
     "key": "Written in Almide",
@@ -237,7 +237,7 @@
     "label": "Repositories"
    },
    {
-    "value": "24,788",
+    "value": "24,881",
     "label": "Commits"
    },
    {
@@ -267,7 +267,7 @@
    },
    {
     "name": "JavaScript",
-    "count": 12,
+    "count": 13,
     "color": "#f1e05a"
    },
    {
@@ -276,14 +276,14 @@
     "color": "#dea584"
    },
    {
-    "name": "HTML",
-    "count": 8,
-    "color": "#e34c26"
-   },
-   {
     "name": "Python",
     "count": 7,
     "color": "#3572a5"
+   },
+   {
+    "name": "HTML",
+    "count": 7,
+    "color": "#e34c26"
    },
    {
     "name": "Lean",
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 20662,
+    "count": 20753,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3105,
+    "count": 3107,
     "of": 123
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 24543
+    "count": 24636
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "Repositories"
     },
     {
-     "value": "20,440",
+     "value": "20,531",
      "label": "Commits"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 20440
+     "count": 20531
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "17,112"
+       "value": "17,202"
       },
       {
        "label": "Started",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-11"
+      "date": "2026-11-13"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "610"
+       "value": "611"
       },
       {
        "label": "Started",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-11"
+      "date": "2026-11-12"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "Repositories"
     },
     {
-     "value": "221",
+     "value": "223",
      "label": "Commits"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 221
+     "count": 223
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "96"
+       "value": "97"
       },
       {
        "label": "Started",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-11"
+      "date": "2026-11-12"
      }
     },
     {
@@ -5129,18 +5129,18 @@
      "title": "agent-bench-matrix",
      "titleEn": "A single table gathering public agent-benchmark leaderboards by model, with every number sourced.",
      "date": "Nov 2026",
-     "format": "HTML",
+     "format": "JavaScript",
      "credit": "O6lvl4",
      "url": "https://github.com/O6lvl4/agent-bench-matrix",
      "tags": [
-      "HTML",
       "JavaScript",
+      "HTML",
       "Python"
      ],
      "stats": [
       {
        "label": "Commits",
-       "value": "64"
+       "value": "65"
       },
       {
        "label": "Started",
@@ -5158,7 +5158,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-11"
+      "date": "2026-11-12"
      }
     },
     {
