@@ -1262,19 +1262,19 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 146,
+  "commits": 148,
   "years": {
-   "2026": 146
+   "2026": 148
   },
   "first": "2026-10-07",
-  "last": "2026-11-11",
+  "last": "2026-11-14",
   "topics": [],
   "plate": "code",
   "sample": {
    "lang": "sh",
    "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
-  "score": 7.9
+  "score": 8
  },
  {
   "full": "O6lvl4/gv",
@@ -1612,12 +1612,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 98,
+  "commits": 99,
   "years": {
-   "2026": 98
+   "2026": 99
   },
   "first": "2026-09-07",
-  "last": "2026-11-13",
+  "last": "2026-11-14",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3612,12 +3612,12 @@
    "Shell"
   ],
   "stars": 37,
-  "commits": 17471,
+  "commits": 17577,
   "years": {
-   "2026": 17471
+   "2026": 17577
   },
   "first": "2026-03-07",
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3807,12 +3807,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 612,
+  "commits": 613,
   "years": {
-   "2026": 612
+   "2026": 613
   },
   "first": "2026-04-12",
-  "last": "2026-11-13",
+  "last": "2026-11-14",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4278,19 +4278,19 @@
    "JavaScript"
   ],
   "stars": 0,
-  "commits": 25,
+  "commits": 28,
   "years": {
-   "2026": 25
+   "2026": 28
   },
   "first": "2026-11-10",
-  "last": "2026-11-11",
+  "last": "2026-11-14",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "sh",
    "code": "npm ci\nnpm test\nnpx playwright install chromium\nnpm run verify"
   },
-  "score": 5.5
+  "score": 5.6
  },
  {
   "full": "almide/cloud-examples",
