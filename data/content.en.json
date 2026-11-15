@@ -218,7 +218,7 @@
    },
    {
     "key": "Last touched",
-    "value": "almide · Nov 2026"
+    "value": "cyber-incident-chronicle · Nov 2026"
    },
    {
     "key": "Written in Almide",
@@ -237,7 +237,7 @@
     "label": "Repositories"
    },
    {
-    "value": "25,267",
+    "value": "25,372",
     "label": "Commits"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21133,
+    "count": 21233,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3113,
+    "count": 3118,
     "of": 123
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25022
+    "count": 25127
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "Repositories"
     },
     {
-     "value": "20,911",
+     "value": "21,004",
      "label": "Commits"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 20911
+     "count": 21004
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "17,577"
+       "value": "17,669"
       },
       {
        "label": "Started",
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "613"
+       "value": "614"
       },
       {
        "label": "Started",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-14"
+      "date": "2026-11-15"
      }
     },
     {
@@ -1714,7 +1714,7 @@
      "label": "Repositories"
     },
     {
-     "value": "1,286",
+     "value": "1,293",
      "label": "Commits"
     },
     {
@@ -1733,7 +1733,7 @@
     },
     {
      "name": "2026",
-     "count": 1270
+     "count": 1277
     }
    ],
    "works": [
@@ -1763,7 +1763,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "304"
+       "value": "311"
       },
       {
        "label": "Started",
@@ -1785,7 +1785,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-15"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "Repositories"
     },
     {
-     "value": "227",
+     "value": "228",
      "label": "Commits"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 227
+     "count": 228
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "99"
+       "value": "100"
       },
       {
        "label": "Started",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-14"
+      "date": "2026-11-15"
      }
     },
     {
@@ -6703,7 +6703,7 @@
      "label": "Repositories"
     },
     {
-     "value": "627",
+     "value": "631",
      "label": "Commits"
     },
     {
@@ -6734,7 +6734,7 @@
     },
     {
      "name": "2026",
-     "count": 478
+     "count": 482
     }
    ],
    "works": [
@@ -6885,7 +6885,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "148"
+       "value": "152"
       },
       {
        "label": "Started",
@@ -6899,7 +6899,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-14"
+      "date": "2026-11-15"
      }
     },
     {
