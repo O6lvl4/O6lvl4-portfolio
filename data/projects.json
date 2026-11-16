@@ -12,17 +12,17 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 209,
+  "commits": 218,
   "years": {
-   "2026": 209
+   "2026": 218
   },
   "first": "2026-09-30",
-  "last": "2026-11-06",
-  "tag": "v0.9.25",
+  "last": "2026-11-16",
+  "tag": "v0.9.27",
   "release": {
-   "tag": "v0.9.25",
-   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.25",
-   "publishedAt": "2026-10-27T23:58:44Z"
+   "tag": "v0.9.27",
+   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.27",
+   "publishedAt": "2026-11-16T06:54:34Z"
   },
   "license": "MIT",
   "topics": [],
@@ -32,7 +32,7 @@
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 18.2
+  "score": 18.4
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -1165,6 +1165,35 @@
   "score": 9.2
  },
  {
+  "full": "O6lvl4/sigv4",
+  "owner": "O6lvl4",
+  "name": "sigv4",
+  "url": "https://github.com/O6lvl4/sigv4",
+  "lead": "AWS Signature Version 4 request signing for Almide. Pure Almide, runs native and in WASM.",
+  "heading": "sigv4",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 2,
+  "years": {
+   "2026": 2
+  },
+  "first": "2026-11-16",
+  "last": "2026-11-16",
+  "tag": "v0.1.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "toml",
+   "code": "[dependencies]\nsigv4 = { git = \"https://github.com/O6lvl4/sigv4\", tag = \"v0.1.0\" }\n\n[trust]\nowners = [\"github.com/o6lvl4\"]"
+  },
+  "score": 9
+ },
+ {
   "full": "O6lvl4/archgopher",
   "owner": "O6lvl4",
   "name": "archgopher",
@@ -1221,6 +1250,34 @@
   "score": 8.1
  },
  {
+  "full": "O6lvl4/cyber-incident-chronicle",
+  "owner": "O6lvl4",
+  "name": "cyber-incident-chronicle",
+  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+  "heading": "Cyber Incident Chronicle",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 154,
+  "years": {
+   "2026": 154
+  },
+  "first": "2026-10-07",
+  "last": "2026-11-16",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
+  },
+  "score": 8.1
+ },
+ {
   "full": "O6lvl4/tocsin",
   "owner": "O6lvl4",
   "name": "tocsin",
@@ -1247,34 +1304,6 @@
    "code": "GitHub Issues ──┐\nHackerNews ─────┤                  ┌──────────┐    ┌──────────┐    ┌────────┐\nGHSA ───────────┼─→ Pre-filter ──→ │ LLM      │──→ │ Scorer   │──→ │ Notify │\nOSV.dev ────────┘   (96% reject)   │ Analysis │    │ (vs deps)│    │        │\n                                   └──────────┘    └──────────┘    └────────┘"
   },
   "score": 8.1
- },
- {
-  "full": "O6lvl4/cyber-incident-chronicle",
-  "owner": "O6lvl4",
-  "name": "cyber-incident-chronicle",
-  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
-  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
-  "heading": "Cyber Incident Chronicle",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 152,
-  "years": {
-   "2026": 152
-  },
-  "first": "2026-10-07",
-  "last": "2026-11-15",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
-  },
-  "score": 8
  },
  {
   "full": "O6lvl4/gv",
@@ -1612,12 +1641,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 100,
+  "commits": 101,
   "years": {
-   "2026": 100
+   "2026": 101
   },
   "first": "2026-09-07",
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -1746,19 +1775,19 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 67,
+  "commits": 68,
   "years": {
-   "2026": 67
+   "2026": 68
   },
   "first": "2026-09-14",
-  "last": "2026-11-13",
+  "last": "2026-11-16",
   "topics": [],
   "plate": "site",
   "sample": {
    "lang": "",
    "code": "z(表, モデル) ≒ b(表) + s(表) × a(モデル)\n```\n\n`z` は表ごとに標準化した実測値(高いほど良い向きに揃えたもの)、`a` がモデルの実力、`s` はその表が実力差をどれだけ広げて見せるか、`b` はその表の水準です。`a` と `(b, s)` を交互に最小二乗で解き、`a` を平均50・標準偏差10に直したものが「戦闘力」です。分野ごとにも同じ当てはめをします。\n\n- 実測が3モデルに満たない表と、全員が同じ値の表は、順位を語らないので使いません。\n- 実測の少ないモデルは、説明できなかった残差の大きさに応じて真ん中へ寄せます(縮約)。1回の結果だけで上位に来ない代わりに、誤差が大きく出ます。\n- 空きセルの推定値は、その分野の当てはめをその表の目盛りに戻し、そのボードが実際に見た範囲に収めたものです。\n- **これは推定であって実測ではありません。** ページでは書式を分け、データでも `fit` として実測の表とは別に置いています。`data/tables/` に推定値が混ざることはありません。\n\n## データ"
   },
-  "score": 6.3
+  "score": 6.4
  },
  {
   "full": "O6lvl4/homebrew-tap",
@@ -3612,12 +3641,12 @@
    "Shell"
   ],
   "stars": 37,
-  "commits": 17669,
+  "commits": 17688,
   "years": {
-   "2026": 17669
+   "2026": 17688
   },
   "first": "2026-03-07",
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3701,12 +3730,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1932,
+  "commits": 1933,
   "years": {
-   "2026": 1932
+   "2026": 1933
   },
   "first": "2026-03-07",
-  "last": "2026-11-10",
+  "last": "2026-11-17",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3807,12 +3836,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 614,
+  "commits": 615,
   "years": {
-   "2026": 614
+   "2026": 615
   },
   "first": "2026-04-12",
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4780,12 +4809,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 175,
+  "commits": 177,
   "years": {
-   "2026": 175
+   "2026": 177
   },
   "first": "2026-05-13",
-  "last": "2026-11-06",
+  "last": "2026-11-16",
   "license": "MIT",
   "topics": [],
   "plate": "code",

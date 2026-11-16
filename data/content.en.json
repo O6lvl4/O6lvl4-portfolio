@@ -12,7 +12,7 @@
   "name": "O6lvl4",
   "realName": "Hiromi Motodera",
   "nameEn": "PUBLIC WORK",
-  "life": "195 repos",
+  "life": "196 repos",
   "avatar": "assets/avatar.png",
   "role": "Building developer tools, from the language up.",
   "ogham": {
@@ -105,9 +105,9 @@
   "first": true
  },
  "home": {
-  "kicker": "195 public repositories",
+  "kicker": "196 public repositories",
   "lead": "I build Almide and tools for the people and agents writing code.",
-  "note": "195 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
+  "note": "196 public repositories, side by side. Each plate is drawn from the project itself: the preview its author set for it, its site as it renders, its command as it answers, or what its README says it does.",
   "description": "I build the tools I work with, starting with the language itself — Almide, and the code readers, agent runtimes and LLM groundwork that run on it."
  },
  "landing": {
@@ -119,9 +119,9 @@
    {
     "heading": "Most written",
     "items": [
-     "Almide（104）",
+     "Almide（105）",
      "Python（39）",
-     "Shell（35）",
+     "Shell（36）",
      "JavaScript（34）",
      "TypeScript（32）"
     ]
@@ -142,8 +142,8 @@
   "timeline": [
    {
     "period": "2026",
-    "title": "162 started",
-    "lead": "almide, porta, als, sprid and 158 more",
+    "title": "163 started",
+    "lead": "almide, porta, als, sprid and 159 more",
     "tags": [
      "Rust",
      "Almide"
@@ -218,7 +218,7 @@
    },
    {
     "key": "Last touched",
-    "value": "cyber-incident-chronicle · Nov 2026"
+    "value": "als · Nov 2026"
    },
    {
     "key": "Written in Almide",
@@ -233,11 +233,11 @@
   ],
   "figures": [
    {
-    "value": "195",
+    "value": "196",
     "label": "Repositories"
    },
    {
-    "value": "25,372",
+    "value": "25,410",
     "label": "Commits"
    },
    {
@@ -252,7 +252,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 89,
+    "count": 90,
     "color": "currentColor"
    },
    {
@@ -342,7 +342,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 123
+    "count": 124
    },
    {
     "name": "almide",
@@ -364,17 +364,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21233,
+    "count": 21254,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3118,
-    "of": 123
+    "count": 3133,
+    "of": 124
    },
    {
     "name": "almide-graphics",
-    "count": 750,
+    "count": 752,
     "of": 13
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25127
+    "count": 25165
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "Repositories"
     },
     {
-     "value": "21,004",
+     "value": "21,025",
      "label": "Commits"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21004
+     "count": 21025
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "17,669"
+       "value": "17,688"
       },
       {
        "label": "Started",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,932"
+       "value": "1,933"
       },
       {
        "label": "Started",
@@ -537,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-10"
+      "date": "2026-11-17"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "614"
+       "value": "615"
       },
       {
        "label": "Started",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
@@ -4100,7 +4100,7 @@
      "label": "Repositories"
     },
     {
-     "value": "750",
+     "value": "752",
      "label": "Commits"
     },
     {
@@ -4115,7 +4115,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 750
+     "count": 752
     }
    ],
    "works": [
@@ -4341,7 +4341,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "175"
+       "value": "177"
       },
       {
        "label": "Started",
@@ -4355,7 +4355,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-16"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "Repositories"
     },
     {
-     "value": "228",
+     "value": "230",
      "label": "Commits"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 228
+     "count": 230
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "100"
+       "value": "101"
       },
       {
        "label": "Started",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
@@ -5140,7 +5140,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "67"
+       "value": "68"
       },
       {
        "label": "Started",
@@ -5158,7 +5158,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-13"
+      "date": "2026-11-16"
      }
     },
     {
@@ -6699,11 +6699,11 @@
    "intro": "Touched, compared and left standing: sound made with my own language (almide-audio-poc) and tracing written in it (almide-otel-demo), the way Go reads from version to version (go1.26-vs-go1.27, go1.27-vs-almide), and a template or a study per language and per framework. They are kept because the next time the same wall comes up, the record helps.",
    "figures": [
     {
-     "value": "33",
+     "value": "34",
      "label": "Repositories"
     },
     {
-     "value": "631",
+     "value": "644",
      "label": "Commits"
     },
     {
@@ -6734,7 +6734,7 @@
     },
     {
      "name": "2026",
-     "count": 482
+     "count": 495
     }
    ],
    "works": [
@@ -6763,7 +6763,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "209"
+       "value": "218"
       },
       {
        "label": "Started",
@@ -6771,7 +6771,7 @@
       },
       {
        "label": "Release",
-       "value": "v0.9.25"
+       "value": "v0.9.27"
       },
       {
        "label": "Stars",
@@ -6785,7 +6785,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-16"
      }
     },
     {
@@ -6870,6 +6870,43 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/sigv4",
+     "title": "sigv4",
+     "titleEn": "AWS Signature Version 4 request signing for Almide. Pure Almide, runs native and in WASM.",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/sigv4",
+     "tags": [
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "2"
+      },
+      {
+       "label": "Started",
+       "value": "Nov 2026"
+      },
+      {
+       "label": "Tag",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/sigv4"
+      }
+     ],
+     "order": {
+      "date": "2026-11-16"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/cyber-incident-chronicle",
      "title": "cyber-incident-chronicle",
      "titleEn": "Timelines of corporate cyber incidents and library vulnerabilities, using primary sources.",
@@ -6885,7 +6922,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "152"
+       "value": "154"
       },
       {
        "label": "Started",
@@ -6899,7 +6936,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {

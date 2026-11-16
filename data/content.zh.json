@@ -12,7 +12,7 @@
   "name": "O6lvl4",
   "realName": "本寺广海",
   "nameEn": "PUBLIC WORK",
-  "life": "195 repos",
+  "life": "196 repos",
   "avatar": "assets/avatar.png",
   "role": "从语言开始，构建开发工具。",
   "ogham": {
@@ -105,9 +105,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公开仓库 195 个",
+  "kicker": "公开仓库 196 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 195 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
+  "note": "这一页并列了 196 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
   "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
@@ -119,9 +119,9 @@
    {
     "heading": "常写的语言",
     "items": [
-     "Almide（104）",
+     "Almide（105）",
      "Python（39）",
-     "Shell（35）",
+     "Shell（36）",
      "JavaScript（34）",
      "TypeScript（32）"
     ]
@@ -142,8 +142,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "开始了 162 个",
-    "lead": "almide、porta、als、sprid 等 158 个",
+    "title": "开始了 163 个",
+    "lead": "almide、porta、als、sprid 等 159 个",
     "tags": [
      "Rust",
      "Almide"
@@ -218,7 +218,7 @@
    },
    {
     "key": "最近更新",
-    "value": "cyber-incident-chronicle · 2026年11月"
+    "value": "als · 2026年11月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -233,11 +233,11 @@
   ],
   "figures": [
    {
-    "value": "195",
+    "value": "196",
     "label": "公开仓库"
    },
    {
-    "value": "25,372",
+    "value": "25,410",
     "label": "提交"
    },
    {
@@ -252,7 +252,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 89,
+    "count": 90,
     "color": "currentColor"
    },
    {
@@ -342,7 +342,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 123
+    "count": 124
    },
    {
     "name": "almide",
@@ -364,17 +364,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21233,
+    "count": 21254,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3118,
-    "of": 123
+    "count": 3133,
+    "of": 124
    },
    {
     "name": "almide-graphics",
-    "count": 750,
+    "count": 752,
     "of": 13
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25127
+    "count": 25165
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "21,004",
+     "value": "21,025",
      "label": "提交"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21004
+     "count": 21025
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "17,669"
+       "value": "17,688"
       },
       {
        "label": "首次",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,932"
+       "value": "1,933"
       },
       {
        "label": "首次",
@@ -537,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-10"
+      "date": "2026-11-17"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "614"
+       "value": "615"
       },
       {
        "label": "首次",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
@@ -4100,7 +4100,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "750",
+     "value": "752",
      "label": "提交"
     },
     {
@@ -4115,7 +4115,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 750
+     "count": 752
     }
    ],
    "works": [
@@ -4341,7 +4341,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "175"
+       "value": "177"
       },
       {
        "label": "首次",
@@ -4355,7 +4355,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-16"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "228",
+     "value": "230",
      "label": "提交"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 228
+     "count": 230
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "100"
+       "value": "101"
       },
       {
        "label": "首次",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
@@ -5140,7 +5140,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "67"
+       "value": "68"
       },
       {
        "label": "首次",
@@ -5158,7 +5158,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-13"
+      "date": "2026-11-16"
      }
     },
     {
@@ -6699,11 +6699,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "33",
+     "value": "34",
      "label": "公开仓库"
     },
     {
-     "value": "631",
+     "value": "644",
      "label": "提交"
     },
     {
@@ -6734,7 +6734,7 @@
     },
     {
      "name": "2026",
-     "count": 482
+     "count": 495
     }
    ],
    "works": [
@@ -6763,7 +6763,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "209"
+       "value": "218"
       },
       {
        "label": "首次",
@@ -6771,7 +6771,7 @@
       },
       {
        "label": "发行版",
-       "value": "v0.9.25"
+       "value": "v0.9.27"
       },
       {
        "label": "星标",
@@ -6785,7 +6785,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-16"
      }
     },
     {
@@ -6870,6 +6870,43 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/sigv4",
+     "title": "sigv4",
+     "titleEn": "AWS Signature Version 4 request signing for Almide. Pure Almide, runs native and in WASM.",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/sigv4",
+     "tags": [
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "2"
+      },
+      {
+       "label": "首次",
+       "value": "2026年11月"
+      },
+      {
+       "label": "标签",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/sigv4"
+      }
+     ],
+     "order": {
+      "date": "2026-11-16"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/cyber-incident-chronicle",
      "title": "cyber-incident-chronicle",
      "titleEn": "以一手资料追踪企业网络事件与库漏洞的时间线",
@@ -6885,7 +6922,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "152"
+       "value": "154"
       },
       {
        "label": "首次",
@@ -6899,7 +6936,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {

@@ -12,7 +12,7 @@
   "name": "O6lvl4",
   "realName": "本寺 広海",
   "nameEn": "PUBLIC WORK",
-  "life": "195 repos",
+  "life": "196 repos",
   "avatar": "assets/avatar.png",
   "role": "開発の道具を、言語からつくる。",
   "ogham": {
@@ -105,9 +105,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公開リポジトリ 195 件",
+  "kicker": "公開リポジトリ 196 件",
   "lead": "Almideと、コードを書く人やエージェントのための道具を開発しています。",
-  "note": "公開リポジトリ 195 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
+  "note": "公開リポジトリ 196 件を並べた頁です。各プロジェクトの図版は、作者が設定したプレビュー画像・そのサイトの画面・コマンドの出力・README の要約から作りました。",
   "description": "必要な道具を、言語からつくるプログラマーです。静的型付け言語 Almide を設計し、その上でコードを読む道具からエージェントの実行環境までつくっています。"
  },
  "landing": {
@@ -119,9 +119,9 @@
    {
     "heading": "よく書く言語",
     "items": [
-     "Almide（104）",
+     "Almide（105）",
      "Python（39）",
-     "Shell（35）",
+     "Shell（36）",
      "JavaScript（34）",
      "TypeScript（32）"
     ]
@@ -142,8 +142,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "162件を始めた",
-    "lead": "almide、porta、als、sprid ほか158件",
+    "title": "163件を始めた",
+    "lead": "almide、porta、als、sprid ほか159件",
     "tags": [
      "Rust",
      "Almide"
@@ -218,7 +218,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "cyber-incident-chronicle · 2026年11月"
+    "value": "als · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
@@ -233,11 +233,11 @@
   ],
   "figures": [
    {
-    "value": "195",
+    "value": "196",
     "label": "公開リポジトリ"
    },
    {
-    "value": "25,372",
+    "value": "25,410",
     "label": "コミット"
    },
    {
@@ -252,7 +252,7 @@
   "langs": [
    {
     "name": "Almide",
-    "count": 89,
+    "count": 90,
     "color": "currentColor"
    },
    {
@@ -342,7 +342,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 123
+    "count": 124
    },
    {
     "name": "almide",
@@ -364,17 +364,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21233,
+    "count": 21254,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3118,
-    "of": 123
+    "count": 3133,
+    "of": 124
    },
    {
     "name": "almide-graphics",
-    "count": 750,
+    "count": 752,
     "of": 13
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25127
+    "count": 25165
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "21,004",
+     "value": "21,025",
      "label": "コミット"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21004
+     "count": 21025
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "17,669"
+       "value": "17,688"
       },
       {
        "label": "初回",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,932"
+       "value": "1,933"
       },
       {
        "label": "初回",
@@ -537,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-10"
+      "date": "2026-11-17"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "614"
+       "value": "615"
       },
       {
        "label": "初回",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
@@ -4100,7 +4100,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "750",
+     "value": "752",
      "label": "コミット"
     },
     {
@@ -4115,7 +4115,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 750
+     "count": 752
     }
    ],
    "works": [
@@ -4341,7 +4341,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "175"
+       "value": "177"
       },
       {
        "label": "初回",
@@ -4355,7 +4355,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-16"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "228",
+     "value": "230",
      "label": "コミット"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 228
+     "count": 230
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "100"
+       "value": "101"
       },
       {
        "label": "初回",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
@@ -5140,7 +5140,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "67"
+       "value": "68"
       },
       {
        "label": "初回",
@@ -5158,7 +5158,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-13"
+      "date": "2026-11-16"
      }
     },
     {
@@ -6699,11 +6699,11 @@
    "intro": "触って、比べて、置いてあるもの。自作言語で鳴らした音（almide-audio-poc）と書いたトレーシング（almide-otel-demo）、Go の版ごとの書き方くらべ（go1.26-vs-go1.27・go1.27-vs-almide）、そして言語・フレームワークごとの雛形と習作。捨てずに残してあるのは、次に同じ壁に当たったときの記録として役に立つからです。",
    "figures": [
     {
-     "value": "33",
+     "value": "34",
      "label": "公開リポジトリ"
     },
     {
-     "value": "631",
+     "value": "644",
      "label": "コミット"
     },
     {
@@ -6734,7 +6734,7 @@
     },
     {
      "name": "2026",
-     "count": 482
+     "count": 495
     }
    ],
    "works": [
@@ -6763,7 +6763,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "209"
+       "value": "218"
       },
       {
        "label": "初回",
@@ -6771,7 +6771,7 @@
       },
       {
        "label": "リリース",
-       "value": "v0.9.25"
+       "value": "v0.9.27"
       },
       {
        "label": "星",
@@ -6785,7 +6785,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-16"
      }
     },
     {
@@ -6870,6 +6870,43 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/sigv4",
+     "title": "sigv4",
+     "titleEn": "AWS Signature Version 4 request signing for Almide. Pure Almide, runs native and in WASM.",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/sigv4",
+     "tags": [
+      "Almide",
+      "Shell"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "2"
+      },
+      {
+       "label": "初回",
+       "value": "2026年11月"
+      },
+      {
+       "label": "タグ",
+       "value": "v0.1.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/sigv4"
+      }
+     ],
+     "order": {
+      "date": "2026-11-16"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/cyber-incident-chronicle",
      "title": "cyber-incident-chronicle",
      "titleEn": "企業のサイバー被害とライブラリの脆弱性を一次資料でたどるタイムライン",
@@ -6885,7 +6922,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "152"
+       "value": "154"
       },
       {
        "label": "初回",
@@ -6899,7 +6936,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-15"
+      "date": "2026-11-16"
      }
     },
     {
