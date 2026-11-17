@@ -218,7 +218,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "als · 2026年11月"
+    "value": "chip-war-chronicle · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
@@ -237,7 +237,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "25,410",
+    "value": "25,413",
     "label": "コミット"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21254,
+    "count": 21256,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3133,
+    "count": 3134,
     "of": 124
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25165
+    "count": 25168
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "21,025",
+     "value": "21,027",
      "label": "コミット"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21025
+     "count": 21027
     }
    ],
    "works": [
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,933"
+       "value": "1,934"
       },
       {
        "label": "初回",
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "615"
+       "value": "616"
       },
       {
        "label": "初回",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-16"
+      "date": "2026-11-17"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "230",
+     "value": "231",
      "label": "コミット"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 230
+     "count": 231
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "101"
+       "value": "102"
       },
       {
        "label": "初回",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-16"
+      "date": "2026-11-17"
      }
     },
     {
@@ -6872,7 +6872,7 @@
      "image": "",
      "id": "O6lvl4/sigv4",
      "title": "sigv4",
-     "titleEn": "AWS Signature Version 4 request signing for Almide. Pure Almide, runs native and in WASM.",
+     "titleEn": "AWSリクエストの署名と署名付きURLを生成するAlmideライブラリ",
      "date": "2026年11月",
      "format": "Almide",
      "credit": "O6lvl4",

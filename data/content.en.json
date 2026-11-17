@@ -218,7 +218,7 @@
    },
    {
     "key": "Last touched",
-    "value": "als · Nov 2026"
+    "value": "chip-war-chronicle · Nov 2026"
    },
    {
     "key": "Written in Almide",
@@ -237,7 +237,7 @@
     "label": "Repositories"
    },
    {
-    "value": "25,410",
+    "value": "25,413",
     "label": "Commits"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21254,
+    "count": 21256,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3133,
+    "count": 3134,
     "of": 124
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25165
+    "count": 25168
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "Repositories"
     },
     {
-     "value": "21,025",
+     "value": "21,027",
      "label": "Commits"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21025
+     "count": 21027
     }
    ],
    "works": [
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,933"
+       "value": "1,934"
       },
       {
        "label": "Started",
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "615"
+       "value": "616"
       },
       {
        "label": "Started",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-16"
+      "date": "2026-11-17"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "Repositories"
     },
     {
-     "value": "230",
+     "value": "231",
      "label": "Commits"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 230
+     "count": 231
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "101"
+       "value": "102"
       },
       {
        "label": "Started",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-16"
+      "date": "2026-11-17"
      }
     },
     {
@@ -6872,7 +6872,7 @@
      "image": "",
      "id": "O6lvl4/sigv4",
      "title": "sigv4",
-     "titleEn": "AWS Signature Version 4 request signing for Almide. Pure Almide, runs native and in WASM.",
+     "titleEn": "An Almide library for AWS SigV4 request signing and presigned URLs.",
      "date": "Nov 2026",
      "format": "Almide",
      "credit": "O6lvl4",
