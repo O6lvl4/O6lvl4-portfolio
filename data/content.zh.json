@@ -12,7 +12,7 @@
   "name": "O6lvl4",
   "realName": "本寺广海",
   "nameEn": "PUBLIC WORK",
-  "life": "196 repos",
+  "life": "197 repos",
   "avatar": "assets/avatar.png",
   "role": "从语言开始，构建开发工具。",
   "ogham": {
@@ -105,9 +105,9 @@
   "first": true
  },
  "home": {
-  "kicker": "公开仓库 196 个",
+  "kicker": "公开仓库 197 个",
   "lead": "我开发Almide，以及供开发者和编程智能体使用的工具。",
-  "note": "这一页并列了 196 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
+  "note": "这一页并列了 197 个公开仓库。每个图版都取自项目本身：作者设置的预览图、站点的画面、命令的输出，或 README 的摘要。",
   "description": "需要的工具，我从语言开始造。设计静态类型语言 Almide，并在它之上构建读代码的工具、智能体的运行环境和 LLM 的底层设施。"
  },
  "landing": {
@@ -120,7 +120,7 @@
     "heading": "常写的语言",
     "items": [
      "Almide（105）",
-     "Python（39）",
+     "Python（40）",
      "Shell（36）",
      "JavaScript（34）",
      "TypeScript（32）"
@@ -142,8 +142,8 @@
   "timeline": [
    {
     "period": "2026年",
-    "title": "开始了 163 个",
-    "lead": "almide、porta、als、sprid 等 159 个",
+    "title": "开始了 164 个",
+    "lead": "almide、porta、als、sprid 等 160 个",
     "tags": [
      "Rust",
      "Almide"
@@ -218,7 +218,7 @@
    },
    {
     "key": "最近更新",
-    "value": "chip-war-chronicle · 2026年11月"
+    "value": "sprid · 2026年11月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -233,11 +233,11 @@
   ],
   "figures": [
    {
-    "value": "196",
+    "value": "197",
     "label": "公开仓库"
    },
    {
-    "value": "25,413",
+    "value": "25,607",
     "label": "提交"
    },
    {
@@ -277,7 +277,7 @@
    },
    {
     "name": "Python",
-    "count": 7,
+    "count": 8,
     "color": "#3572a5"
    },
    {
@@ -342,7 +342,7 @@
   "orgs": [
    {
     "name": "O6lvl4",
-    "count": 124
+    "count": 125
    },
    {
     "name": "almide",
@@ -364,13 +364,13 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21256,
+    "count": 21412,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3134,
-    "of": 124
+    "count": 3172,
+    "of": 125
    },
    {
     "name": "almide-graphics",
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25168
+    "count": 25362
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "21,027",
+     "value": "21,183",
      "label": "提交"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21027
+     "count": 21183
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "17,688"
+       "value": "17,839"
       },
       {
        "label": "首次",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-16"
+      "date": "2026-11-18"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,934"
+       "value": "1,938"
       },
       {
        "label": "首次",
@@ -537,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-17"
+      "date": "2026-11-18"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "616"
+       "value": "617"
       },
       {
        "label": "首次",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-17"
+      "date": "2026-11-18"
      }
     },
     {
@@ -1714,7 +1714,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "1,293",
+     "value": "1,320",
      "label": "提交"
     },
     {
@@ -1733,7 +1733,7 @@
     },
     {
      "name": "2026",
-     "count": 1277
+     "count": 1304
     }
    ],
    "works": [
@@ -2134,7 +2134,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "64"
+       "value": "91"
       },
       {
        "label": "首次",
@@ -2152,7 +2152,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-18"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "231",
+     "value": "232",
      "label": "提交"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 231
+     "count": 232
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "102"
+       "value": "103"
       },
       {
        "label": "首次",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-17"
+      "date": "2026-11-18"
      }
     },
     {
@@ -6699,11 +6699,11 @@
    "intro": "碰过、比过、留着的东西：用自制语言发出的声音（almide-audio-poc）与用它写的追踪（almide-otel-demo）、Go 各版本写法的对照（go1.26-vs-go1.27、go1.27-vs-almide），以及按语言、按框架留下的模板与练习。留着是因为下次撞到同一面墙时，这些记录有用",
    "figures": [
     {
-     "value": "34",
+     "value": "35",
      "label": "公开仓库"
     },
     {
-     "value": "644",
+     "value": "654",
      "label": "提交"
     },
     {
@@ -6734,7 +6734,7 @@
     },
     {
      "name": "2026",
-     "count": 495
+     "count": 505
     }
    ],
    "works": [
@@ -6763,7 +6763,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "218"
+       "value": "225"
       },
       {
        "label": "首次",
@@ -6771,7 +6771,7 @@
       },
       {
        "label": "发行版",
-       "value": "v0.9.27"
+       "value": "v0.9.29"
       },
       {
        "label": "星标",
@@ -6785,7 +6785,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-16"
+      "date": "2026-11-18"
      }
     },
     {
@@ -6847,7 +6847,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "25"
+       "value": "27"
       },
       {
        "label": "首次",
@@ -6865,7 +6865,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-18"
      }
     },
     {
@@ -7073,6 +7073,38 @@
      ],
      "order": {
       "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/harnessmith",
+     "title": "harnessmith",
+     "titleEn": "Claude Code skills for building a harness around an unattended agent: it works without the answer, is scored, and the setup grows by the score.",
+     "date": "2026年11月",
+     "format": "Python",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/harnessmith",
+     "tags": [
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "1"
+      },
+      {
+       "label": "首次",
+       "value": "2026年11月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/harnessmith"
+      }
+     ],
+     "order": {
+      "date": "2026-11-18"
      }
     },
     {

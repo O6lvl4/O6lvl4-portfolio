@@ -12,17 +12,17 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 218,
+  "commits": 225,
   "years": {
-   "2026": 218
+   "2026": 225
   },
   "first": "2026-09-30",
-  "last": "2026-11-16",
-  "tag": "v0.9.27",
+  "last": "2026-11-18",
+  "tag": "v0.9.29",
   "release": {
-   "tag": "v0.9.27",
-   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.27",
-   "publishedAt": "2026-11-16T06:54:34Z"
+   "tag": "v0.9.29",
+   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.29",
+   "publishedAt": "2026-11-18T02:09:57Z"
   },
   "license": "MIT",
   "topics": [],
@@ -32,7 +32,7 @@
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 18.4
+  "score": 18.5
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -543,6 +543,36 @@
   "score": 10.9
  },
  {
+  "full": "O6lvl4/comide",
+  "owner": "O6lvl4",
+  "name": "comide",
+  "url": "https://github.com/O6lvl4/comide",
+  "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Python",
+   "Shell"
+  ],
+  "stars": 0,
+  "commits": 91,
+  "years": {
+   "2026": 91
+  },
+  "first": "2026-09-12",
+  "last": "2026-11-18",
+  "tag": "v0.5.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
+  },
+  "score": 10.8
+ },
+ {
   "full": "O6lvl4/O6lvl4-knowledge",
   "owner": "O6lvl4",
   "name": "O6lvl4-knowledge",
@@ -565,36 +595,6 @@
   "topics": [],
   "plate": "site",
   "score": 10.5
- },
- {
-  "full": "O6lvl4/comide",
-  "owner": "O6lvl4",
-  "name": "comide",
-  "url": "https://github.com/O6lvl4/comide",
-  "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Python",
-   "Shell"
-  ],
-  "stars": 0,
-  "commits": 64,
-  "years": {
-   "2026": 64
-  },
-  "first": "2026-09-12",
-  "last": "2026-11-06",
-  "tag": "v0.5.0",
-  "license": "NOASSERTION",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
-  "plate": "og",
-  "sample": {
-   "lang": "sh",
-   "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
-  },
-  "score": 10.3
  },
  {
   "full": "O6lvl4/hew",
@@ -809,12 +809,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 25,
+  "commits": 27,
   "years": {
-   "2026": 25
+   "2026": 27
   },
   "first": "2026-09-27",
-  "last": "2026-11-06",
+  "last": "2026-11-18",
   "tag": "v0.3.0",
   "release": {
    "tag": "v0.3.0",
@@ -1535,6 +1535,35 @@
   "score": 7.1
  },
  {
+  "full": "O6lvl4/chip-war-chronicle",
+  "owner": "O6lvl4",
+  "name": "chip-war-chronicle",
+  "url": "https://github.com/O6lvl4/chip-war-chronicle",
+  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
+  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
+  "heading": "Chip War Chronicle — 半導体と世界情勢",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 103,
+  "years": {
+   "2026": 103
+  },
+  "first": "2026-09-07",
+  "last": "2026-11-18",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "ts",
+   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
+  },
+  "score": 7.1
+ },
+ {
   "full": "O6lvl4/line-bot-private",
   "owner": "O6lvl4",
   "name": "line-bot-private",
@@ -1623,35 +1652,6 @@
   "sample": {
    "lang": "sh",
    "code": "almide build src/main.almd -o arlk\n./arlk qed examples/logic.arlk"
-  },
-  "score": 7
- },
- {
-  "full": "O6lvl4/chip-war-chronicle",
-  "owner": "O6lvl4",
-  "name": "chip-war-chronicle",
-  "url": "https://github.com/O6lvl4/chip-war-chronicle",
-  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
-  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
-  "heading": "Chip War Chronicle — 半導体と世界情勢",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 102,
-  "years": {
-   "2026": 102
-  },
-  "first": "2026-09-07",
-  "last": "2026-11-17",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "ts",
-   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
   },
   "score": 7
  },
@@ -2148,6 +2148,33 @@
    "code": "# Go 側 (go.mod が go 1.27rc2 を指しているので、Go 1.21+ ならツールチェーンが自動取得される)\ngo run ./01-generic-methods\n\n# almide 側 (https://github.com/almide/almide)\nalmide run 01-generic-methods/main.almd\n\n# 全部まとめて\n./demo.sh"
   },
   "score": 5.1
+ },
+ {
+  "full": "O6lvl4/harnessmith",
+  "owner": "O6lvl4",
+  "name": "harnessmith",
+  "url": "https://github.com/O6lvl4/harnessmith",
+  "lead": "Claude Code skills for building a harness around an unattended agent: it works without the answer, is scored, and the setup grows by the score.",
+  "heading": "harnessmith",
+  "language": "Python",
+  "languages": [
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 1,
+  "years": {
+   "2026": 1
+  },
+  "first": "2026-11-18",
+  "last": "2026-11-18",
+  "license": "MIT",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "git clone https://github.com/O6lvl4/harnessmith\ncd harnessmith\nfor s in setup run status; do ln -s \"$PWD/skills/harnessmith-$s\" ~/.claude/skills/harnessmith-$s; done\n\n# 一度だけ: 作業エージェント用の、隔離した設定でログインする\nCLAUDE_CONFIG_DIR=~/.harnessmith/config claude   # /login して抜ける"
+  },
+  "score": 5
  },
  {
   "full": "O6lvl4/hokusai-portfolio",
@@ -3641,12 +3668,12 @@
    "Shell"
   ],
   "stars": 37,
-  "commits": 17688,
+  "commits": 17839,
   "years": {
-   "2026": 17688
+   "2026": 17839
   },
   "first": "2026-03-07",
-  "last": "2026-11-16",
+  "last": "2026-11-18",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3730,12 +3757,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1934,
+  "commits": 1938,
   "years": {
-   "2026": 1934
+   "2026": 1938
   },
   "first": "2026-03-07",
-  "last": "2026-11-17",
+  "last": "2026-11-18",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3836,12 +3863,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 616,
+  "commits": 617,
   "years": {
-   "2026": 616
+   "2026": 617
   },
   "first": "2026-04-12",
-  "last": "2026-11-17",
+  "last": "2026-11-18",
   "license": "MIT",
   "topics": [
    "almide",
