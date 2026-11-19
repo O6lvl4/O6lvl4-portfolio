@@ -5302,5 +5302,31 @@
     "检查规范请求与待签名字符串"
    ]
   }
+ },
+ "O6lvl4/harnessmith": {
+  "ja": {
+   "what": "Claude Codeの指示・権限を試行と採点で改善するツール。",
+   "points": [
+    "解答を分離して作業結果を採点",
+    "反復試行の平均とばらつきを比較",
+    "試行・採否・費用を台帳に記録"
+   ]
+  },
+  "en": {
+   "what": "Claude Code skills for evaluating and improving agent prompts and permissions.",
+   "points": [
+    "Score agent work with answers kept separate",
+    "Compare repeated trials and score variation",
+    "Record trials, decisions and costs in a ledger"
+   ]
+  },
+  "zh": {
+   "what": "通过试验与评分改进Claude Code指令和权限。",
+   "points": [
+    "分离答案并对任务结果评分",
+    "比较多次试验的均值与波动",
+    "记录试验、采纳决定和费用"
+   ]
+  }
  }
 }
