@@ -1549,12 +1549,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 103,
+  "commits": 104,
   "years": {
-   "2026": 103
+   "2026": 104
   },
   "first": "2026-09-07",
-  "last": "2026-11-18",
+  "last": "2026-11-19",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3667,13 +3667,13 @@
    "Almide",
    "Shell"
   ],
-  "stars": 37,
-  "commits": 17839,
+  "stars": 36,
+  "commits": 17848,
   "years": {
-   "2026": 17839
+   "2026": 17848
   },
   "first": "2026-03-07",
-  "last": "2026-11-18",
+  "last": "2026-11-19",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3696,7 +3696,7 @@
    "lang": "almd",
    "code": "type Order = { item: String, qty: Int, price: Int }\n\nfn parse(line: String) -> Order? = match line |> string.trim |> string.split(\",\") {\n  [item, qty, price] => match (int.parse(qty), int.parse(price)) {\n    (ok(q), ok(p)) => some({ item: item, qty: q, price: p }),\n    _ => none,\n  },\n  _ => none,\n}\n\nfn main() -> Unit = {\n  let csv = \"\"\"\n    apple,3,120\n    pear,oops,90\n    plum,5,80\n    \"\"\"\n  let orders = csv |> string.lines |> list.filter_map(parse)\n  let total = orders |> list.fold(0, (sum, o) => sum + o.qty * o.price)\n  println(\"${list.len(orders)} orders, total ${total}\")\n}"
   },
-  "score": 200
+  "score": 195
  },
  {
   "full": "almide/porta",
@@ -3757,12 +3757,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1938,
+  "commits": 1945,
   "years": {
-   "2026": 1938
+   "2026": 1945
   },
   "first": "2026-03-07",
-  "last": "2026-11-18",
+  "last": "2026-11-20",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3863,12 +3863,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 617,
+  "commits": 618,
   "years": {
-   "2026": 617
+   "2026": 618
   },
   "first": "2026-04-12",
-  "last": "2026-11-18",
+  "last": "2026-11-19",
   "license": "MIT",
   "topics": [
    "almide",
