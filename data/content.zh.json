@@ -218,7 +218,7 @@
    },
    {
     "key": "最近更新",
-    "value": "als · 2026年11月"
+    "value": "sprid · 2026年11月"
    },
    {
     "key": "用 Almide 写的比例",
@@ -237,7 +237,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "25,625",
+    "value": "25,778",
     "label": "提交"
    },
    {
@@ -364,17 +364,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21429,
+    "count": 21576,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3173,
+    "count": 3177,
     "of": 125
    },
    {
     "name": "almide-graphics",
-    "count": 752,
+    "count": 754,
     "of": 13
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25380
+    "count": 25533
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "21,200",
+     "value": "21,347",
      "label": "提交"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21200
+     "count": 21347
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "17,848"
+       "value": "17,991"
       },
       {
        "label": "首次",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-19"
+      "date": "2026-11-20"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "1,945"
+       "value": "1,948"
       },
       {
        "label": "首次",
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "618"
+       "value": "619"
       },
       {
        "label": "首次",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-19"
+      "date": "2026-11-20"
      }
     },
     {
@@ -4100,7 +4100,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "752",
+     "value": "754",
      "label": "提交"
     },
     {
@@ -4115,7 +4115,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 752
+     "count": 754
     }
    ],
    "works": [
@@ -4341,7 +4341,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "177"
+       "value": "179"
       },
       {
        "label": "首次",
@@ -4355,7 +4355,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-16"
+      "date": "2026-11-20"
      }
     },
     {
@@ -4855,15 +4855,51 @@
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/O6lvl4-knowledge.jpg",
+     "image": "plates/zh/O6lvl4/awen.jpg",
      "readme": {
-      "lead": "基于Obsidian和Git LFS的知识库及图谱查看器",
+      "lead": "基于SM-2间隔重复的Markdown笔记记忆CLI",
       "points": [
-       "Obsidian知识库",
-       "Git LFS管理大文件",
-       "图谱查看器"
+       "add、review、stats命令",
+       "0–5质量评分的SM-2调度",
+       "卡片以JSON存于.srs目录"
       ]
      },
+     "id": "O6lvl4/awen",
+     "title": "awen",
+     "titleEn": "基于SM-2间隔重复的Markdown笔记记忆CLI",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/awen",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "14"
+      },
+      {
+       "label": "首次",
+       "value": "2026年5月"
+      },
+      {
+       "label": "发行版",
+       "value": "v0.0.5"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/awen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/O6lvl4-knowledge",
      "title": "O6lvl4-knowledge",
      "titleEn": "基于Obsidian和Git LFS的知识库及图谱查看器",
@@ -4898,42 +4934,6 @@
      ],
      "order": {
       "date": "2026-08-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/awen",
-     "title": "awen",
-     "titleEn": "基于SM-2间隔重复的Markdown笔记记忆CLI",
-     "date": "2026年11月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/awen",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "14"
-      },
-      {
-       "label": "首次",
-       "value": "2026年5月"
-      },
-      {
-       "label": "发行版",
-       "value": "v0.0.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/awen"
-      }
-     ],
-     "order": {
-      "date": "2026-11-06"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "233",
+     "value": "234",
      "label": "提交"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 233
+     "count": 234
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "104"
+       "value": "105"
       },
       {
        "label": "首次",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-19"
+      "date": "2026-11-20"
      }
     },
     {
@@ -6703,7 +6703,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "654",
+     "value": "657",
      "label": "提交"
     },
     {
@@ -6734,7 +6734,7 @@
     },
     {
      "name": "2026",
-     "count": 505
+     "count": 508
     }
    ],
    "works": [
@@ -6763,7 +6763,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "225"
+       "value": "228"
       },
       {
        "label": "首次",
@@ -6771,7 +6771,7 @@
       },
       {
        "label": "发行版",
-       "value": "v0.9.29"
+       "value": "v0.9.30"
       },
       {
        "label": "星标",
@@ -6785,7 +6785,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-18"
+      "date": "2026-11-20"
      }
     },
     {

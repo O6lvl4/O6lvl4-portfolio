@@ -218,7 +218,7 @@
    },
    {
     "key": "直近の更新",
-    "value": "als · 2026年11月"
+    "value": "sprid · 2026年11月"
    },
    {
     "key": "Almide で書いた割合",
@@ -237,7 +237,7 @@
     "label": "公開リポジトリ"
    },
    {
-    "value": "25,625",
+    "value": "25,778",
     "label": "コミット"
    },
    {
@@ -364,17 +364,17 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21429,
+    "count": 21576,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3173,
+    "count": 3177,
     "of": 125
    },
    {
     "name": "almide-graphics",
-    "count": 752,
+    "count": 754,
     "of": 13
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25380
+    "count": 25533
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "21,200",
+     "value": "21,347",
      "label": "コミット"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21200
+     "count": 21347
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "17,848"
+       "value": "17,991"
       },
       {
        "label": "初回",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-19"
+      "date": "2026-11-20"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "1,945"
+       "value": "1,948"
       },
       {
        "label": "初回",
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "618"
+       "value": "619"
       },
       {
        "label": "初回",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-19"
+      "date": "2026-11-20"
      }
     },
     {
@@ -4100,7 +4100,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "752",
+     "value": "754",
      "label": "コミット"
     },
     {
@@ -4115,7 +4115,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 752
+     "count": 754
     }
    ],
    "works": [
@@ -4341,7 +4341,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "177"
+       "value": "179"
       },
       {
        "label": "初回",
@@ -4355,7 +4355,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-16"
+      "date": "2026-11-20"
      }
     },
     {
@@ -4855,15 +4855,51 @@
    ],
    "works": [
     {
-     "image": "plates/shared/O6lvl4/O6lvl4-knowledge.jpg",
+     "image": "plates/ja/O6lvl4/awen.jpg",
      "readme": {
-      "lead": "Obsidianと Git LFSによる知識ベースとグラフビューア",
+      "lead": "Markdownのvault向けにSM-2間隔反復を行う、Almide製の知識定着CLI",
       "points": [
-       "Obsidianのナレッジベース",
-       "Git LFSによる大容量ファイル管理",
-       "グラフビューア"
+       "add・review・statsコマンド",
+       "品質0〜5評価によるSM-2スケジュール",
+       "vault内.srsにJSONでカード保存"
       ]
      },
+     "id": "O6lvl4/awen",
+     "title": "awen",
+     "titleEn": "Markdownのvault向けにSM-2間隔反復を行う、Almide製の知識定着CLI",
+     "date": "2026年11月",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/awen",
+     "tags": [
+      "Almide"
+     ],
+     "stats": [
+      {
+       "label": "コミット",
+       "value": "14"
+      },
+      {
+       "label": "初回",
+       "value": "2026年5月"
+      },
+      {
+       "label": "リリース",
+       "value": "v0.0.5"
+      }
+     ],
+     "links": [
+      {
+       "label": "リポジトリ",
+       "href": "https://github.com/O6lvl4/awen"
+      }
+     ],
+     "order": {
+      "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/O6lvl4-knowledge",
      "title": "O6lvl4-knowledge",
      "titleEn": "Obsidianと Git LFSによる知識ベースとグラフビューア",
@@ -4898,42 +4934,6 @@
      ],
      "order": {
       "date": "2026-08-22"
-     }
-    },
-    {
-     "image": "",
-     "id": "O6lvl4/awen",
-     "title": "awen",
-     "titleEn": "Markdownのvault向けにSM-2間隔反復を行う、Almide製の知識定着CLI",
-     "date": "2026年11月",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/awen",
-     "tags": [
-      "Almide"
-     ],
-     "stats": [
-      {
-       "label": "コミット",
-       "value": "14"
-      },
-      {
-       "label": "初回",
-       "value": "2026年5月"
-      },
-      {
-       "label": "リリース",
-       "value": "v0.0.5"
-      }
-     ],
-     "links": [
-      {
-       "label": "リポジトリ",
-       "href": "https://github.com/O6lvl4/awen"
-      }
-     ],
-     "order": {
-      "date": "2026-11-06"
      }
     },
     {
@@ -5021,7 +5021,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "233",
+     "value": "234",
      "label": "コミット"
     },
     {
@@ -5036,7 +5036,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 233
+     "count": 234
     }
    ],
    "works": [
@@ -5102,7 +5102,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "104"
+       "value": "105"
       },
       {
        "label": "初回",
@@ -5120,7 +5120,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-19"
+      "date": "2026-11-20"
      }
     },
     {
@@ -6703,7 +6703,7 @@
      "label": "公開リポジトリ"
     },
     {
-     "value": "654",
+     "value": "657",
      "label": "コミット"
     },
     {
@@ -6734,7 +6734,7 @@
     },
     {
      "name": "2026",
-     "count": 505
+     "count": 508
     }
    ],
    "works": [
@@ -6763,7 +6763,7 @@
      "stats": [
       {
        "label": "コミット",
-       "value": "225"
+       "value": "228"
       },
       {
        "label": "初回",
@@ -6771,7 +6771,7 @@
       },
       {
        "label": "リリース",
-       "value": "v0.9.29"
+       "value": "v0.9.30"
       },
       {
        "label": "星",
@@ -6785,7 +6785,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-18"
+      "date": "2026-11-20"
      }
     },
     {

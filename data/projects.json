@@ -12,17 +12,17 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 225,
+  "commits": 228,
   "years": {
-   "2026": 225
+   "2026": 228
   },
   "first": "2026-09-30",
-  "last": "2026-11-18",
-  "tag": "v0.9.29",
+  "last": "2026-11-20",
+  "tag": "v0.9.30",
   "release": {
-   "tag": "v0.9.29",
-   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.29",
-   "publishedAt": "2026-11-18T02:09:57Z"
+   "tag": "v0.9.30",
+   "url": "https://github.com/O6lvl4/sprid/releases/tag/v0.9.30",
+   "publishedAt": "2026-11-20T07:51:08Z"
   },
   "license": "MIT",
   "topics": [],
@@ -32,7 +32,7 @@
    "lang": "",
    "code": "xattr -dr com.apple.quarantine /Applications/Sprid.app"
   },
-  "score": 18.5
+  "score": 18.6
  },
  {
   "full": "O6lvl4/ccgrid",
@@ -571,30 +571,6 @@
    "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking"
   },
   "score": 10.8
- },
- {
-  "full": "O6lvl4/O6lvl4-knowledge",
-  "owner": "O6lvl4",
-  "name": "O6lvl4-knowledge",
-  "url": "https://github.com/O6lvl4/O6lvl4-knowledge",
-  "site": "https://o6lvl4.github.io/O6lvl4-knowledge/",
-  "lead": "Obsidian + Git LFS knowledge base with graph viewer",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 275,
-  "years": {
-   "2026": 275
-  },
-  "first": "2026-04-30",
-  "last": "2026-08-22",
-  "topics": [],
-  "plate": "site",
-  "score": 10.5
  },
  {
   "full": "O6lvl4/hew",
@@ -1224,6 +1200,30 @@
   "score": 8.6
  },
  {
+  "full": "O6lvl4/O6lvl4-knowledge",
+  "owner": "O6lvl4",
+  "name": "O6lvl4-knowledge",
+  "url": "https://github.com/O6lvl4/O6lvl4-knowledge",
+  "site": "https://o6lvl4.github.io/O6lvl4-knowledge/",
+  "lead": "Obsidian + Git LFS knowledge base with graph viewer",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 275,
+  "years": {
+   "2026": 275
+  },
+  "first": "2026-04-30",
+  "last": "2026-08-22",
+  "topics": [],
+  "plate": "site",
+  "score": 8.5
+ },
+ {
   "full": "O6lvl4/ccp",
   "owner": "O6lvl4",
   "name": "ccp",
@@ -1549,12 +1549,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 104,
+  "commits": 105,
   "years": {
-   "2026": 104
+   "2026": 105
   },
   "first": "2026-09-07",
-  "last": "2026-11-19",
+  "last": "2026-11-20",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3668,12 +3668,12 @@
    "Shell"
   ],
   "stars": 36,
-  "commits": 17848,
+  "commits": 17991,
   "years": {
-   "2026": 17848
+   "2026": 17991
   },
   "first": "2026-03-07",
-  "last": "2026-11-19",
+  "last": "2026-11-20",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3757,9 +3757,9 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1945,
+  "commits": 1948,
   "years": {
-   "2026": 1945
+   "2026": 1948
   },
   "first": "2026-03-07",
   "last": "2026-11-20",
@@ -3863,12 +3863,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 618,
+  "commits": 619,
   "years": {
-   "2026": 618
+   "2026": 619
   },
   "first": "2026-04-12",
-  "last": "2026-11-19",
+  "last": "2026-11-20",
   "license": "MIT",
   "topics": [
    "almide",
@@ -4836,12 +4836,12 @@
    "Rust"
   ],
   "stars": 0,
-  "commits": 177,
+  "commits": 179,
   "years": {
-   "2026": 177
+   "2026": 179
   },
   "first": "2026-05-13",
-  "last": "2026-11-16",
+  "last": "2026-11-20",
   "license": "MIT",
   "topics": [],
   "plate": "code",
@@ -4849,7 +4849,7 @@
    "lang": "",
    "code": "snaidhm\n├── gpu/       WebGPU abstraction, frame arena, pipeline management\n├── path/      2D path renderer (flatten → tile → sort → fine raster)\n├── mesh/      3D vertex pipeline\n├── text/      Font reader (OpenType/TrueType → glyph outlines → Path)\n└── image/     Texture decode"
   },
-  "score": 8.5
+  "score": 8.6
  },
  {
   "full": "almide-graphics/ceangal",
