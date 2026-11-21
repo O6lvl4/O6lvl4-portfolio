@@ -218,7 +218,7 @@
    },
    {
     "key": "Last touched",
-    "value": "sprid · Nov 2026"
+    "value": "cyber-incident-chronicle · Nov 2026"
    },
    {
     "key": "Written in Almide",
@@ -237,7 +237,7 @@
     "label": "Repositories"
    },
    {
-    "value": "25,778",
+    "value": "26,018",
     "label": "Commits"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21576,
+    "count": 21751,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3177,
+    "count": 3242,
     "of": 125
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25533
+    "count": 25773
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "Repositories"
     },
     {
-     "value": "21,347",
+     "value": "21,522",
      "label": "Commits"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21347
+     "count": 21522
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "17,991"
+       "value": "18,163"
       },
       {
        "label": "Started",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-20"
+      "date": "2026-11-21"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,948"
+       "value": "1,950"
       },
       {
        "label": "Started",
@@ -537,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-20"
+      "date": "2026-11-21"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "619"
+       "value": "620"
       },
       {
        "label": "Started",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-20"
+      "date": "2026-11-21"
      }
     },
     {
@@ -1714,7 +1714,7 @@
      "label": "Repositories"
     },
     {
-     "value": "1,320",
+     "value": "1,381",
      "label": "Commits"
     },
     {
@@ -1733,7 +1733,7 @@
     },
     {
      "name": "2026",
-     "count": 1304
+     "count": 1365
     }
    ],
    "works": [
@@ -1786,6 +1786,57 @@
      ],
      "order": {
       "date": "2026-11-15"
+     }
+    },
+    {
+     "image": "plates/shared/O6lvl4/codopsy.jpg",
+     "readme": {
+      "lead": "Static analysis that scores 35 languages on one scale",
+      "points": [
+       "182 rules and complexity, summed up as a grade from A to F",
+       "Never runs your code: one binary, no compilers or language servers",
+       "Checks only the diff, and fails CI when quality drops"
+      ]
+     },
+     "id": "O6lvl4/codopsy",
+     "title": "codopsy",
+     "titleEn": "Static analysis that scores 35 languages on one scale",
+     "date": "Sep 2026",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/codopsy",
+     "tags": [
+      "Rust",
+      "Almide",
+      "Lean",
+      "cli"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "50"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      },
+      {
+       "label": "Release",
+       "value": "v2.3.1"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/codopsy"
+      }
+     ],
+     "order": {
+      "date": "2026-09-26"
      }
     },
     {
@@ -1852,7 +1903,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "196"
+       "value": "198"
       },
       {
        "label": "Started",
@@ -1870,7 +1921,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
+      "date": "2026-11-21"
      }
     },
     {
@@ -1947,6 +1998,52 @@
      ],
      "order": {
       "date": "2026-11-06"
+     }
+    },
+    {
+     "image": "plates/shared/O6lvl4/comide.jpg",
+     "readme": {
+      "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
+      "points": [
+       "Decides what to look at and what to change; golemide makes the edit and runs the tests",
+       "Its tools are programs that already exist: hew, gramide, golemide, ctxgate",
+       "Runs on Cloudflare, any OpenAI-compatible service, Anthropic, Gemini, a local server or your Claude login"
+      ]
+     },
+     "id": "O6lvl4/comide",
+     "title": "comide",
+     "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/comide",
+     "tags": [
+      "Almide",
+      "Shell",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "136"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      },
+      {
+       "label": "Tag",
+       "value": "v0.5.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/comide"
+      }
+     ],
+     "order": {
+      "date": "2026-11-21"
      }
     },
     {
@@ -2088,7 +2185,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "93"
+       "value": "103"
       },
       {
        "label": "Started",
@@ -2106,53 +2203,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
-     }
-    },
-    {
-     "image": "plates/shared/O6lvl4/comide.jpg",
-     "readme": {
-      "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
-      "points": [
-       "Decides what to look at and what to change; golemide makes the edit and runs the tests",
-       "Its tools are programs that already exist: hew, gramide, golemide, ctxgate",
-       "Runs on Cloudflare, any OpenAI-compatible service, Anthropic, Gemini, a local server or your Claude login"
-      ]
-     },
-     "id": "O6lvl4/comide",
-     "title": "comide",
-     "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
-     "date": "Nov 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/comide",
-     "tags": [
-      "Almide",
-      "Python",
-      "Shell"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "91"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      },
-      {
-       "label": "Tag",
-       "value": "v0.5.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/comide"
-      }
-     ],
-     "order": {
-      "date": "2026-11-18"
+      "date": "2026-11-21"
      }
     },
     {
@@ -2180,7 +2231,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "60"
+       "value": "64"
       },
       {
        "label": "Started",
@@ -2198,54 +2249,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-06"
-     }
-    },
-    {
-     "image": "plates/shared/O6lvl4/codopsy.jpg",
-     "readme": {
-      "lead": "Static analysis that scores 35 languages on one scale",
-      "points": [
-       "182 rules and complexity, summed up as a grade from A to F",
-       "Never runs your code: one binary, no compilers or language servers",
-       "Checks only the diff, and fails CI when quality drops"
-      ]
-     },
-     "id": "O6lvl4/codopsy",
-     "title": "codopsy",
-     "titleEn": "Static analysis that scores 35 languages on one scale",
-     "date": "Sep 2026",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/codopsy",
-     "tags": [
-      "Rust",
-      "Almide",
-      "Lean",
-      "cli"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "50"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      },
-      {
-       "label": "Release",
-       "value": "v2.3.1"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/codopsy"
-      }
-     ],
-     "order": {
-      "date": "2026-09-26"
+      "date": "2026-11-21"
      }
     },
     {
@@ -5021,7 +5025,7 @@
      "label": "Repositories"
     },
     {
-     "value": "234",
+     "value": "235",
      "label": "Commits"
     },
     {
@@ -5036,7 +5040,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 234
+     "count": 235
     }
    ],
    "works": [
@@ -5102,7 +5106,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "105"
+       "value": "106"
       },
       {
        "label": "Started",
@@ -5120,7 +5124,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-20"
+      "date": "2026-11-21"
      }
     },
     {
@@ -6495,6 +6499,43 @@
     },
     {
      "image": "",
+     "id": "O6lvl4/lean4-rust-backend",
+     "title": "lean4-rust-backend",
+     "titleEn": "A Lean 4 to Rust backend that generates Rust code from Lean's IR, with a runtime and WASM support.",
+     "date": "Mar 2026",
+     "format": "Rust",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/lean4-rust-backend",
+     "tags": [
+      "Rust",
+      "Lean"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "1"
+      },
+      {
+       "label": "Started",
+       "value": "Mar 2026"
+      },
+      {
+       "label": "Stars",
+       "value": "1"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/lean4-rust-backend"
+      }
+     ],
+     "order": {
+      "date": "2026-03-07"
+     }
+    },
+    {
+     "image": "",
      "id": "O6lvl4/hello-lean4",
      "title": "hello-lean4",
      "titleEn": "A Hello World CLI app written in Lean 4, with prebuilt binaries for Linux and macOS.",
@@ -6598,39 +6639,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/lean4-rust-backend",
-     "title": "lean4-rust-backend",
-     "titleEn": "A Lean 4 to Rust backend that generates Rust code from Lean's IR, with a runtime and WASM support.",
-     "date": "Mar 2026",
-     "format": "Rust",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/lean4-rust-backend",
-     "tags": [
-      "Rust",
-      "Lean"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "1"
-      },
-      {
-       "label": "Started",
-       "value": "Mar 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/lean4-rust-backend"
-      }
-     ],
-     "order": {
-      "date": "2026-03-07"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/lean4-practice",
      "title": "lean4-practice",
      "titleEn": "A Claude Code plugin providing best practices for generating Lean 4 code.",
@@ -6703,7 +6711,7 @@
      "label": "Repositories"
     },
     {
-     "value": "657",
+     "value": "660",
      "label": "Commits"
     },
     {
@@ -6734,7 +6742,7 @@
     },
     {
      "name": "2026",
-     "count": 508
+     "count": 511
     }
    ],
    "works": [
@@ -6922,7 +6930,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "154"
+       "value": "157"
       },
       {
        "label": "Started",
@@ -6936,7 +6944,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-16"
+      "date": "2026-11-22"
      }
     },
     {
