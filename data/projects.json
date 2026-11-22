@@ -391,6 +391,36 @@
   "score": 12
  },
  {
+  "full": "O6lvl4/comide",
+  "owner": "O6lvl4",
+  "name": "comide",
+  "url": "https://github.com/O6lvl4/comide",
+  "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
+  "language": "Almide",
+  "languages": [
+   "Almide",
+   "Shell",
+   "Python"
+  ],
+  "stars": 0,
+  "commits": 139,
+  "years": {
+   "2026": 139
+  },
+  "first": "2026-09-12",
+  "last": "2026-11-22",
+  "tag": "v0.5.0",
+  "license": "NOASSERTION",
+  "topics": [],
+  "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
+  "plate": "og",
+  "sample": {
+   "lang": "sh",
+   "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking\ncomide errand \"make the build pass\"   # one task worked to the end in a terminal, unattended"
+  },
+  "score": 11.8
+ },
+ {
   "full": "O6lvl4/gramide-python",
   "owner": "O6lvl4",
   "name": "gramide-python",
@@ -419,36 +449,6 @@
    "code": "almide build cli/main.almd -o gramide_python       # gramide over .py and .pyi alone\n./gramide_python check $(python3.14 -c 'import sysconfig;print(sysconfig.get_path(\"stdlib\"))')/*.py\n./gramide_python outline inspect.py                # `L2-3 method A.m`; nested: `Outer.Inner.method`\n./gramide_python symbols-recovered editing.py      # declarations untouched by the damage, and where the damage is\n./gramide_python gen-table > src/table.almd        # after any change to the grammar"
   },
   "score": 11.8
- },
- {
-  "full": "O6lvl4/comide",
-  "owner": "O6lvl4",
-  "name": "comide",
-  "url": "https://github.com/O6lvl4/comide",
-  "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider, that hands its code changes to golemide. Written in Almide.",
-  "language": "Almide",
-  "languages": [
-   "Almide",
-   "Shell",
-   "Python"
-  ],
-  "stars": 0,
-  "commits": 136,
-  "years": {
-   "2026": 136
-  },
-  "first": "2026-09-12",
-  "last": "2026-11-21",
-  "tag": "v0.5.0",
-  "license": "NOASSERTION",
-  "topics": [],
-  "og": "https://repository-images.githubusercontent.com/1367251930/f2ab7a00-0410-481a-b1f4-015143856385",
-  "plate": "og",
-  "sample": {
-   "lang": "sh",
-   "code": "comide                                # a conversation in this directory; /exit to leave\ncomide run \"fix the flaky tests\"      # one request, answered, then exit\ncomide --yes --root ../project        # run shell and verify commands without asking\ncomide errand \"make the build pass\"   # one task worked to the end in a terminal, unattended"
-  },
-  "score": 11.7
  },
  {
   "full": "O6lvl4/gramide-almide",
@@ -554,12 +554,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 103,
+  "commits": 105,
   "years": {
-   "2026": 103
+   "2026": 105
   },
   "first": "2026-09-08",
-  "last": "2026-11-21",
+  "last": "2026-11-22",
   "tag": "v0.3.0",
   "license": "NOASSERTION",
   "topics": [],
@@ -1571,12 +1571,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 106,
+  "commits": 107,
   "years": {
-   "2026": 106
+   "2026": 107
   },
   "first": "2026-09-07",
-  "last": "2026-11-21",
+  "last": "2026-11-22",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3668,12 +3668,12 @@
    "Shell"
   ],
   "stars": 36,
-  "commits": 18163,
+  "commits": 18213,
   "years": {
-   "2026": 18163
+   "2026": 18213
   },
   "first": "2026-03-07",
-  "last": "2026-11-21",
+  "last": "2026-11-22",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3863,12 +3863,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 620,
+  "commits": 621,
   "years": {
-   "2026": 620
+   "2026": 621
   },
   "first": "2026-04-12",
-  "last": "2026-11-21",
+  "last": "2026-11-22",
   "license": "MIT",
   "topics": [
    "almide",

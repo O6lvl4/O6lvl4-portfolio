@@ -218,7 +218,7 @@
    },
    {
     "key": "Last touched",
-    "value": "cyber-incident-chronicle · Nov 2026"
+    "value": "comide · Nov 2026"
    },
    {
     "key": "Written in Almide",
@@ -237,7 +237,7 @@
     "label": "Repositories"
    },
    {
-    "value": "26,018",
+    "value": "26,075",
     "label": "Commits"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21751,
+    "count": 21802,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3242,
+    "count": 3248,
     "of": 125
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25773
+    "count": 25830
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "Repositories"
     },
     {
-     "value": "21,522",
+     "value": "21,573",
      "label": "Commits"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21522
+     "count": 21573
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "18,163"
+       "value": "18,213"
       },
       {
        "label": "Started",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-21"
+      "date": "2026-11-22"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "620"
+       "value": "621"
       },
       {
        "label": "Started",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-21"
+      "date": "2026-11-22"
      }
     },
     {
@@ -1714,7 +1714,7 @@
      "label": "Repositories"
     },
     {
-     "value": "1,381",
+     "value": "1,386",
      "label": "Commits"
     },
     {
@@ -1733,7 +1733,7 @@
     },
     {
      "name": "2026",
-     "count": 1365
+     "count": 1370
     }
    ],
    "works": [
@@ -1963,6 +1963,52 @@
      }
     },
     {
+     "image": "plates/shared/O6lvl4/comide.jpg",
+     "readme": {
+      "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
+      "points": [
+       "Decides what to look at and what to change; golemide makes the edit and runs the tests",
+       "Its tools are programs that already exist: hew, gramide, golemide, ctxgate",
+       "Runs on Cloudflare, any OpenAI-compatible service, Anthropic, Gemini, a local server or your Claude login"
+      ]
+     },
+     "id": "O6lvl4/comide",
+     "title": "comide",
+     "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
+     "date": "Nov 2026",
+     "format": "Almide",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/comide",
+     "tags": [
+      "Almide",
+      "Shell",
+      "Python"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "139"
+      },
+      {
+       "label": "Started",
+       "value": "Sep 2026"
+      },
+      {
+       "label": "Tag",
+       "value": "v0.5.0"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/comide"
+      }
+     ],
+     "order": {
+      "date": "2026-11-22"
+     }
+    },
+    {
      "image": "",
      "id": "O6lvl4/gramide-python",
      "title": "gramide-python",
@@ -1998,52 +2044,6 @@
      ],
      "order": {
       "date": "2026-11-06"
-     }
-    },
-    {
-     "image": "plates/shared/O6lvl4/comide.jpg",
-     "readme": {
-      "lead": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
-      "points": [
-       "Decides what to look at and what to change; golemide makes the edit and runs the tests",
-       "Its tools are programs that already exist: hew, gramide, golemide, ctxgate",
-       "Runs on Cloudflare, any OpenAI-compatible service, Anthropic, Gemini, a local server or your Claude login"
-      ]
-     },
-     "id": "O6lvl4/comide",
-     "title": "comide",
-     "titleEn": "A coding agent in the terminal, in the line of Claude Code, Codex and Aider",
-     "date": "Nov 2026",
-     "format": "Almide",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/comide",
-     "tags": [
-      "Almide",
-      "Shell",
-      "Python"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "136"
-      },
-      {
-       "label": "Started",
-       "value": "Sep 2026"
-      },
-      {
-       "label": "Tag",
-       "value": "v0.5.0"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/comide"
-      }
-     ],
-     "order": {
-      "date": "2026-11-21"
      }
     },
     {
@@ -2185,7 +2185,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "103"
+       "value": "105"
       },
       {
        "label": "Started",
@@ -2203,7 +2203,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-21"
+      "date": "2026-11-22"
      }
     },
     {
@@ -5025,7 +5025,7 @@
      "label": "Repositories"
     },
     {
-     "value": "235",
+     "value": "236",
      "label": "Commits"
     },
     {
@@ -5040,7 +5040,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 235
+     "count": 236
     }
    ],
    "works": [
@@ -5106,7 +5106,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "106"
+       "value": "107"
       },
       {
        "label": "Started",
@@ -5124,7 +5124,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-21"
+      "date": "2026-11-22"
      }
     },
     {
