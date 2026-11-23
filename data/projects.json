@@ -403,12 +403,12 @@
    "Python"
   ],
   "stars": 0,
-  "commits": 139,
+  "commits": 142,
   "years": {
-   "2026": 139
+   "2026": 142
   },
   "first": "2026-09-12",
-  "last": "2026-11-22",
+  "last": "2026-11-23",
   "tag": "v0.5.0",
   "license": "NOASSERTION",
   "topics": [],
@@ -1457,6 +1457,35 @@
   "score": 7.4
  },
  {
+  "full": "O6lvl4/chip-war-chronicle",
+  "owner": "O6lvl4",
+  "name": "chip-war-chronicle",
+  "url": "https://github.com/O6lvl4/chip-war-chronicle",
+  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
+  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
+  "heading": "Chip War Chronicle — 半導体と世界情勢",
+  "language": "TypeScript",
+  "languages": [
+   "TypeScript",
+   "JavaScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 108,
+  "years": {
+   "2026": 108
+  },
+  "first": "2026-09-07",
+  "last": "2026-11-23",
+  "topics": [],
+  "plate": "site",
+  "sample": {
+   "lang": "ts",
+   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
+  },
+  "score": 7.2
+ },
+ {
   "full": "O6lvl4/igloc",
   "owner": "O6lvl4",
   "name": "igloc",
@@ -1553,35 +1582,6 @@
   "sample": {
    "lang": "",
    "code": "nv/\n├── Cargo.toml          # workspace, members = [crates/nv-core, crates/nv-cli]\n└── crates/\n    ├── nv-core/\n    │   ├── Cargo.toml  # depends on anyv-core\n    │   └── src/\n    │       ├── lib.rs\n    │       ├── paths.rs       # 6 lines — see below\n    │       ├── manifest.rs    # parses package.json `engines.node`, .nvmrc\n    │       ├── resolve.rs     # the resolution chain\n    │       ├── install.rs     # downloads from nodejs.org\n    │       ├── registry.rs    # name → npm package map\n    │       ├── npm.rs         # npm registry client\n    │       ├── lock.rs        # nv.lock schema\n    │       └── tool.rs        # global npm-tool installs\n    └── nv-cli/\n        ├── Cargo.toml  # depends on nv-core + anyv-core\n        └── src/main.rs"
-  },
-  "score": 7.1
- },
- {
-  "full": "O6lvl4/chip-war-chronicle",
-  "owner": "O6lvl4",
-  "name": "chip-war-chronicle",
-  "url": "https://github.com/O6lvl4/chip-war-chronicle",
-  "site": "https://o6lvl4.github.io/chip-war-chronicle/",
-  "lead": "半導体と世界情勢のスイムレーン・タイムライン。5系列97件の出来事を一次情報URL付きで収録、因果リンクと断面ビュー、DuckDB-WASM の SQL コンソール",
-  "heading": "Chip War Chronicle — 半導体と世界情勢",
-  "language": "TypeScript",
-  "languages": [
-   "TypeScript",
-   "JavaScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 107,
-  "years": {
-   "2026": 107
-  },
-  "first": "2026-09-07",
-  "last": "2026-11-22",
-  "topics": [],
-  "plate": "site",
-  "sample": {
-   "lang": "ts",
-   "code": "// src/data/events/2024/si.ts\n{\n  id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,\n  title: 'TSMC熊本 JASM第1工場 開所式',\n  body: '…',\n  source: 'TSMC プレスリリース',\n  sourceUrl: 'https://pr.tsmc.com/...',\n  sourceTier: 'primary',\n}"
   },
   "score": 7.1
  },
@@ -3668,12 +3668,12 @@
    "Shell"
   ],
   "stars": 36,
-  "commits": 18213,
+  "commits": 18366,
   "years": {
-   "2026": 18213
+   "2026": 18366
   },
   "first": "2026-03-07",
-  "last": "2026-11-22",
+  "last": "2026-11-23",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3757,12 +3757,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1950,
+  "commits": 1953,
   "years": {
-   "2026": 1950
+   "2026": 1953
   },
   "first": "2026-03-07",
-  "last": "2026-11-21",
+  "last": "2026-11-23",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3863,12 +3863,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 621,
+  "commits": 622,
   "years": {
-   "2026": 621
+   "2026": 622
   },
   "first": "2026-04-12",
-  "last": "2026-11-22",
+  "last": "2026-11-23",
   "license": "MIT",
   "topics": [
    "almide",
