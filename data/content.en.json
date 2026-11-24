@@ -218,7 +218,7 @@
    },
    {
     "key": "Last touched",
-    "value": "comide · Nov 2026"
+    "value": "chip-war-chronicle · Nov 2026"
    },
    {
     "key": "Written in Almide",
@@ -237,7 +237,7 @@
     "label": "Repositories"
    },
    {
-    "value": "26,236",
+    "value": "26,309",
     "label": "Commits"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 21959,
+    "count": 22031,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3252,
+    "count": 3253,
     "of": 125
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 25991
+    "count": 26064
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "Repositories"
     },
     {
-     "value": "21,730",
+     "value": "21,802",
      "label": "Commits"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 21730
+     "count": 21802
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "18,366"
+       "value": "18,431"
       },
       {
        "label": "Started",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-23"
+      "date": "2026-11-24"
      }
     },
     {
@@ -515,7 +515,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "1,953"
+       "value": "1,959"
       },
       {
        "label": "Started",
@@ -537,7 +537,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-23"
+      "date": "2026-11-24"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "622"
+       "value": "623"
       },
       {
        "label": "Started",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-23"
+      "date": "2026-11-24"
      }
     },
     {
@@ -5025,7 +5025,7 @@
      "label": "Repositories"
     },
     {
-     "value": "237",
+     "value": "238",
      "label": "Commits"
     },
     {
@@ -5040,7 +5040,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 237
+     "count": 238
     }
    ],
    "works": [
@@ -5106,7 +5106,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "108"
+       "value": "109"
       },
       {
        "label": "Started",
@@ -5124,7 +5124,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-23"
+      "date": "2026-11-24"
      }
     },
     {
