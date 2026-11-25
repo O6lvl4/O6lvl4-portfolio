@@ -1224,6 +1224,34 @@
   "score": 8.5
  },
  {
+  "full": "O6lvl4/cyber-incident-chronicle",
+  "owner": "O6lvl4",
+  "name": "cyber-incident-chronicle",
+  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
+  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
+  "heading": "Cyber Incident Chronicle",
+  "language": "JavaScript",
+  "languages": [
+   "JavaScript",
+   "TypeScript",
+   "CSS"
+  ],
+  "stars": 0,
+  "commits": 159,
+  "years": {
+   "2026": 159
+  },
+  "first": "2026-10-07",
+  "last": "2026-11-25",
+  "topics": [],
+  "plate": "code",
+  "sample": {
+   "lang": "sh",
+   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
+  },
+  "score": 8.2
+ },
+ {
   "full": "O6lvl4/ccp",
   "owner": "O6lvl4",
   "name": "ccp",
@@ -1246,34 +1274,6 @@
   "sample": {
    "lang": "",
    "code": "~/.claude/                          # base (shared)\n~/.claude-profiles/work/\n  CLAUDE.md          → ~/.claude/CLAUDE.md         # shared (symlink)\n  settings.json      (real file)                    # overridden\n  keybindings.json   → ~/.claude/keybindings.json   # shared (symlink)\n  projects/          → ~/.claude/projects/           # shared (symlink)"
-  },
-  "score": 8.1
- },
- {
-  "full": "O6lvl4/cyber-incident-chronicle",
-  "owner": "O6lvl4",
-  "name": "cyber-incident-chronicle",
-  "url": "https://github.com/O6lvl4/cyber-incident-chronicle",
-  "lead": "企業・組織の公式発表に基づくサイバーインシデントの日本語タイムライン",
-  "heading": "Cyber Incident Chronicle",
-  "language": "JavaScript",
-  "languages": [
-   "JavaScript",
-   "TypeScript",
-   "CSS"
-  ],
-  "stars": 0,
-  "commits": 157,
-  "years": {
-   "2026": 157
-  },
-  "first": "2026-10-07",
-  "last": "2026-11-22",
-  "topics": [],
-  "plate": "code",
-  "sample": {
-   "lang": "sh",
-   "code": "pnpm install --frozen-lockfile\npnpm data:prepare    # 初回は固定公開ソースを取得・再生成し、ハッシュと全件分母を検証\npnpm dev\npnpm check           # データ検証、単体テスト、型チェック、production build\npnpm quality         # codopsyによる品質検査（codopsyの導入が必要）\npnpm exec playwright install --with-deps chromium webkit\npnpm preview --host 127.0.0.1 --port 4173\npnpm test:ui         # 別ターミナルで実行\npnpm perf            # Pixel 5相当のフリック性能予算"
   },
   "score": 8.1
  },
@@ -1471,12 +1471,12 @@
    "CSS"
   ],
   "stars": 0,
-  "commits": 109,
+  "commits": 110,
   "years": {
-   "2026": 109
+   "2026": 110
   },
   "first": "2026-09-07",
-  "last": "2026-11-24",
+  "last": "2026-11-25",
   "topics": [],
   "plate": "site",
   "sample": {
@@ -3668,12 +3668,12 @@
    "Shell"
   ],
   "stars": 36,
-  "commits": 18431,
+  "commits": 18541,
   "years": {
-   "2026": 18431
+   "2026": 18541
   },
   "first": "2026-03-07",
-  "last": "2026-11-24",
+  "last": "2026-11-25",
   "tag": "v0.60.0-rc3",
   "release": {
    "tag": "v0.69.1",
@@ -3757,12 +3757,12 @@
    "Python"
   ],
   "stars": 1,
-  "commits": 1959,
+  "commits": 1961,
   "years": {
-   "2026": 1959
+   "2026": 1961
   },
   "first": "2026-03-07",
-  "last": "2026-11-24",
+  "last": "2026-11-25",
   "tag": "v1.0.0",
   "release": {
    "tag": "v1.0.0",
@@ -3863,12 +3863,12 @@
    "Shell"
   ],
   "stars": 0,
-  "commits": 623,
+  "commits": 624,
   "years": {
-   "2026": 623
+   "2026": 624
   },
   "first": "2026-04-12",
-  "last": "2026-11-24",
+  "last": "2026-11-25",
   "license": "MIT",
   "topics": [
    "almide",
