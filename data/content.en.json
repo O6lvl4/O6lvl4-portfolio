@@ -237,7 +237,7 @@
     "label": "Repositories"
    },
    {
-    "value": "26,615",
+    "value": "26,624",
     "label": "Commits"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 22331,
+    "count": 22338,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3259,
+    "count": 3261,
     "of": 125
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 26370
+    "count": 26379
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "Repositories"
     },
     {
-     "value": "22,102",
+     "value": "22,109",
      "label": "Commits"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 22102
+     "count": 22109
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "18,727"
+       "value": "18,733"
       },
       {
        "label": "Started",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-26"
+      "date": "2026-11-27"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "625"
+       "value": "626"
       },
       {
        "label": "Started",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-26"
+      "date": "2026-11-27"
      }
     },
     {
@@ -5025,7 +5025,7 @@
      "label": "Repositories"
     },
     {
-     "value": "241",
+     "value": "242",
      "label": "Commits"
     },
     {
@@ -5040,7 +5040,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 241
+     "count": 242
     }
    ],
    "works": [
@@ -5106,7 +5106,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "111"
+       "value": "112"
       },
       {
        "label": "Started",
@@ -5124,7 +5124,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-26"
+      "date": "2026-11-27"
      }
     },
     {
@@ -5800,40 +5800,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/connpass-discord-bot",
-     "title": "connpass-discord-bot",
-     "titleEn": "Discord bot for connpass API v2 events, written in Go 1.27 to showcase its new features",
-     "date": "Aug 2026",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/connpass-discord-bot",
-     "tags": [
-      "HTML",
-      "Go",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "Commits",
-       "value": "5"
-      },
-      {
-       "label": "Started",
-       "value": "Aug 2026"
-      }
-     ],
-     "links": [
-      {
-       "label": "Repository",
-       "href": "https://github.com/O6lvl4/connpass-discord-bot"
-      }
-     ],
-     "order": {
-      "date": "2026-08-29"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/pagina",
      "title": "pagina",
      "titleEn": "Rust engine that converts HTML with CSS Paged Media into PDF, built on Servo components",
@@ -5899,6 +5865,40 @@
      ],
      "order": {
       "date": "2026-06-19"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/connpass-discord-bot",
+     "title": "connpass-discord-bot",
+     "titleEn": "Discord bot for connpass API v2 events, written in Go 1.27 to showcase its new features",
+     "date": "Aug 2026",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/connpass-discord-bot",
+     "tags": [
+      "HTML",
+      "Go",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "Commits",
+       "value": "5"
+      },
+      {
+       "label": "Started",
+       "value": "Aug 2026"
+      }
+     ],
+     "links": [
+      {
+       "label": "Repository",
+       "href": "https://github.com/O6lvl4/connpass-discord-bot"
+      }
+     ],
+     "order": {
+      "date": "2026-08-29"
      }
     },
     {
@@ -6711,7 +6711,7 @@
      "label": "Repositories"
     },
     {
-     "value": "663",
+     "value": "664",
      "label": "Commits"
     },
     {
@@ -6742,7 +6742,7 @@
     },
     {
      "name": "2026",
-     "count": 514
+     "count": 515
     }
    ],
    "works": [
@@ -6930,7 +6930,7 @@
      "stats": [
       {
        "label": "Commits",
-       "value": "160"
+       "value": "161"
       },
       {
        "label": "Started",
@@ -6944,7 +6944,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-26"
+      "date": "2026-11-27"
      }
     },
     {

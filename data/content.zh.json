@@ -237,7 +237,7 @@
     "label": "公开仓库"
    },
    {
-    "value": "26,615",
+    "value": "26,624",
     "label": "提交"
    },
    {
@@ -364,12 +364,12 @@
   "orgCommits": [
    {
     "name": "almide",
-    "count": 22331,
+    "count": 22338,
     "of": 32
    },
    {
     "name": "O6lvl4",
-    "count": 3259,
+    "count": 3261,
     "of": 125
    },
    {
@@ -407,7 +407,7 @@
    },
    {
     "name": "2026",
-    "count": 26370
+    "count": 26379
    }
   ]
  },
@@ -423,7 +423,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "22,102",
+     "value": "22,109",
      "label": "提交"
     },
     {
@@ -438,7 +438,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 22102
+     "count": 22109
     }
    ],
    "works": [
@@ -468,7 +468,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "18,727"
+       "value": "18,733"
       },
       {
        "label": "首次",
@@ -494,7 +494,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-26"
+      "date": "2026-11-27"
      }
     },
     {
@@ -682,7 +682,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "625"
+       "value": "626"
       },
       {
        "label": "首次",
@@ -700,7 +700,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-26"
+      "date": "2026-11-27"
      }
     },
     {
@@ -5025,7 +5025,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "241",
+     "value": "242",
      "label": "提交"
     },
     {
@@ -5040,7 +5040,7 @@
    "years": [
     {
      "name": "2026",
-     "count": 241
+     "count": 242
     }
    ],
    "works": [
@@ -5106,7 +5106,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "111"
+       "value": "112"
       },
       {
        "label": "首次",
@@ -5124,7 +5124,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-26"
+      "date": "2026-11-27"
      }
     },
     {
@@ -5800,40 +5800,6 @@
     },
     {
      "image": "",
-     "id": "O6lvl4/connpass-discord-bot",
-     "title": "connpass-discord-bot",
-     "titleEn": "用 Go 1.27 编写、推送 connpass 活动的 Discord Bot",
-     "date": "2026年8月",
-     "format": "HTML",
-     "credit": "O6lvl4",
-     "url": "https://github.com/O6lvl4/connpass-discord-bot",
-     "tags": [
-      "HTML",
-      "Go",
-      "CSS"
-     ],
-     "stats": [
-      {
-       "label": "提交",
-       "value": "5"
-      },
-      {
-       "label": "首次",
-       "value": "2026年8月"
-      }
-     ],
-     "links": [
-      {
-       "label": "仓库",
-       "href": "https://github.com/O6lvl4/connpass-discord-bot"
-      }
-     ],
-     "order": {
-      "date": "2026-08-29"
-     }
-    },
-    {
-     "image": "",
      "id": "O6lvl4/pagina",
      "title": "pagina",
      "titleEn": "将HTML与CSS分页媒体转为PDF的Rust引擎",
@@ -5899,6 +5865,40 @@
      ],
      "order": {
       "date": "2026-06-19"
+     }
+    },
+    {
+     "image": "",
+     "id": "O6lvl4/connpass-discord-bot",
+     "title": "connpass-discord-bot",
+     "titleEn": "用 Go 1.27 编写、推送 connpass 活动的 Discord Bot",
+     "date": "2026年8月",
+     "format": "HTML",
+     "credit": "O6lvl4",
+     "url": "https://github.com/O6lvl4/connpass-discord-bot",
+     "tags": [
+      "HTML",
+      "Go",
+      "CSS"
+     ],
+     "stats": [
+      {
+       "label": "提交",
+       "value": "5"
+      },
+      {
+       "label": "首次",
+       "value": "2026年8月"
+      }
+     ],
+     "links": [
+      {
+       "label": "仓库",
+       "href": "https://github.com/O6lvl4/connpass-discord-bot"
+      }
+     ],
+     "order": {
+      "date": "2026-08-29"
      }
     },
     {
@@ -6711,7 +6711,7 @@
      "label": "公开仓库"
     },
     {
-     "value": "663",
+     "value": "664",
      "label": "提交"
     },
     {
@@ -6742,7 +6742,7 @@
     },
     {
      "name": "2026",
-     "count": 514
+     "count": 515
     }
    ],
    "works": [
@@ -6930,7 +6930,7 @@
      "stats": [
       {
        "label": "提交",
-       "value": "160"
+       "value": "161"
       },
       {
        "label": "首次",
@@ -6944,7 +6944,7 @@
       }
      ],
      "order": {
-      "date": "2026-11-26"
+      "date": "2026-11-27"
      }
     },
     {
